@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Точка — подготовка к ОГЭ и ЕГЭ",
   description:
     "Маленькие шаги к большой цели. Спокойная подготовка к экзаменам: теория, задания и твой прогресс.",
-  icons: { icon: "/icon.svg" },
+  icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/icon.svg` },
 };
 
 export const viewport: Viewport = {
