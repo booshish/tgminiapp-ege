@@ -45,6 +45,7 @@ export type LearningState = {
   legacyRecords: ProgressRecord[];
   fontScale: "standard" | "large";
   theme: "light" | "dark" | "system";
+  themeExplicit: boolean;
   focusMode: boolean;
   game: GameState;
 };
@@ -59,7 +60,8 @@ export const emptyLearningState: LearningState = {
   events: [],
   legacyRecords: [],
   fontScale: "standard",
-  theme: "system",
+  theme: "light",
+  themeExplicit: false,
   focusMode: false,
   game: emptyGameState(),
 };
@@ -274,7 +276,11 @@ export function parseLearningState(
     theme:
       modern?.theme === "light" || modern?.theme === "dark"
         ? modern.theme
-        : "system",
+        : modern?.theme === "system" && modern?.themeExplicit === true
+          ? "system"
+          : "light",
+    // Older v3 defaulted to system without an explicit choice. Restore the brand's light palette.
+    themeExplicit: modern?.themeExplicit === true,
     focusMode: modern?.focusMode === true,
     game: parseGameState(modern?.game, events),
   };

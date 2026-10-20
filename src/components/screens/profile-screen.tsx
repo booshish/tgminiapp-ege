@@ -88,7 +88,7 @@ export function ProfileScreen({
         <div className="setting-row appearance-setting">
           <div>
             <h3>Оформление</h3>
-            <p>Системная тема следует настройкам устройства.</p>
+            <p>По умолчанию — светлая тема. Системная включается по твоему выбору.</p>
           </div>
           <div className="segmented theme-options" role="group" aria-label="Тема оформления">
             {([

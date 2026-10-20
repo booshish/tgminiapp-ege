@@ -99,7 +99,7 @@ export function useDemoProgress() {
   );
   const setTheme = useCallback(
     (theme: LearningState["theme"]) =>
-      updateState((previous) => ({ ...previous, theme })),
+      updateState((previous) => ({ ...previous, theme, themeExplicit: true })),
     [updateState],
   );
   const setFocusMode = useCallback(

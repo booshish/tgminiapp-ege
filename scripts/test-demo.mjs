@@ -1285,7 +1285,7 @@ test("Схема v2 мигрирует в v3 с настройками по ум
   assert.equal(restored.exam, "ОГЭ");
   assert.equal(restored.fontScale, "large");
   assert.equal(restored.lastTaskIndex, 3);
-  assert.equal(restored.theme, "system");
+  assert.equal(restored.theme, "light");
   assert.equal(restored.focusMode, false);
   assert.deepEqual(restored.events, v2.events);
   assert.deepEqual(restored.legacyRecords, v2.legacyRecords);
@@ -1296,13 +1296,17 @@ test("Схема v2 мигрирует в v3 с настройками по ум
 test("Тема и концентрация сохраняются, повреждённые настройки не мешают учебной истории", () => {
   const answer = answerEvent("settings-answer", linear, "6", true);
   for (const theme of ["light", "dark", "system"]) {
-    const saved = stateWith([answer], { theme, focusMode: true, fontScale: "large" });
+    const saved = stateWith([answer], { theme, themeExplicit: true, focusMode: true, fontScale: "large" });
     assert.deepEqual(parseLearningState(JSON.stringify(saved)), saved);
   }
   const restored = restore([answer], { theme: "neon", focusMode: "true" });
-  assert.equal(restored.theme, "system");
+  assert.equal(restored.theme, "light");
   assert.equal(restored.focusMode, false);
   assert.deepEqual(restored.events, [answer]);
+  const priorAutomaticTheme = restore([answer], { theme: "system", themeExplicit: undefined });
+  assert.equal(priorAutomaticTheme.theme, "light");
+  assert.deepEqual(priorAutomaticTheme.events, [answer]);
+  assert.equal(restore([answer], { theme: "dark", themeExplicit: undefined }).theme, "dark");
 });
 
 test("Версия экзамена и формат новых событий проверяются, прежние события не теряются", () => {
