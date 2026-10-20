@@ -1,202 +1,279 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
-  Check,
-  ChevronRight,
+  ChartNoAxesCombined,
   CircleCheck,
   ListChecks,
-  RotateCcw,
   ShieldCheck,
   Sprout,
   Target,
 } from "lucide-react";
 import { Meter, PageIntro } from "@/components/ui";
-import { tasks, type DemoProgress } from "@/lib/demo";
+import { getAnalytics, type LearningState } from "@/lib/learning-events";
+import { tasks } from "@/lib/tasks";
+import { theoryTopics } from "@/lib/theory";
 
 type ProgressScreenProps = {
-  progress: DemoProgress;
-  onStart: (index?: number) => void;
-  onReset: () => void;
+  state: LearningState;
+  isPremium: boolean;
+  onPremium: () => void;
+  onStart: (topicId?: string) => void;
 };
 
-export function ProgressScreen({
-  progress,
-  onStart,
-  onReset,
-}: ProgressScreenProps) {
-  const [resetConfirm, setResetConfirm] = useState(false);
-  const resetButtonRef = useRef<HTMLButtonElement>(null);
-  const cancelButtonRef = useRef<HTMLButtonElement>(null);
-  const solved = new Set(
-    progress.records
-      .filter((record) => record.correct)
-      .map((record) => record.taskId),
-  ).size;
-  const attempts = progress.records.reduce(
-    (sum, record) => sum + record.attempts,
-    0,
+function topicTitle(topicId: string) {
+  return (
+    theoryTopics.find((topic) => topic.id === topicId)?.title ?? "Другая тема"
   );
-  const accuracy = attempts ? Math.round((solved / attempts) * 100) : 0;
+}
 
-  useEffect(() => {
-    if (resetConfirm) cancelButtonRef.current?.focus();
-  }, [resetConfirm]);
+function formatDate(value: string, includeTime = false) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Дата недоступна";
+  return new Intl.DateTimeFormat("ru-RU", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+    ...(includeTime ? ({ hour: "2-digit", minute: "2-digit" } as const) : {}),
+  }).format(date);
+}
 
-  function cancelReset() {
-    setResetConfirm(false);
-    resetButtonRef.current?.focus();
+export function ProgressScreen({
+  state,
+  isPremium,
+  onPremium,
+  onStart,
+}: ProgressScreenProps) {
+  if (!isPremium) {
+    return (
+      <>
+        <PageIntro eyebrow="РЕЗУЛЬТАТЫ ПРАКТИКИ" title="Мои результаты">
+          Статистика ответов, история ошибок и динамика занятий доступны в
+          Premium.
+        </PageIntro>
+        <section className="premium-gate">
+          <span className="feature-icon">
+            <ChartNoAxesCombined size={28} aria-hidden="true" />
+          </span>
+          <span className="tag">Возможности Premium</span>
+          <h2>Статистика ответов в Premium</h2>
+          <p>
+            Подробные результаты, история ошибок и динамика занятий доступны в
+            Premium. Здесь можно будет увидеть, как меняется твоя практика, и
+            вернуться к темам, которые требуют внимания.
+          </p>
+          <button className="button button-primary" onClick={onPremium}>
+            Подробнее о Premium <ArrowRight size={18} aria-hidden="true" />
+          </button>
+        </section>
+      </>
+    );
   }
+
+  const analytics = getAnalytics(state);
+  const recentErrors = [...analytics.errors].sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+  );
 
   return (
     <>
-      <PageIntro eyebrow="КАЖДЫЙ ШАГ ИМЕЕТ ЗНАЧЕНИЕ" title="Твой прогресс">
-        Здесь только твои результаты в этой демоверсии.
+      <PageIntro eyebrow="ДЕМОНСТРАЦИОННЫЙ PREMIUM" title="Мои результаты">
+        Реальные ответы из этого браузера. Без примерных процентов и оценок
+        готовности к экзамену.
       </PageIntro>
       <div className="stats-grid">
         <section className="stat-card">
           <span className="feature-icon">
-            <CircleCheck size={22} />
+            <CircleCheck size={22} aria-hidden="true" />
+          </span>
+          <strong>{analytics.solved}</strong>
+          <h2>Решено заданий</h2>
+          <p>Уникальные задания, на которые дан хотя бы один верный ответ</p>
+        </section>
+        <section className="stat-card">
+          <span className="feature-icon">
+            <Target size={22} aria-hidden="true" />
           </span>
           <strong>
-            {solved}
-            <small> / 5</small>
+            {analytics.accuracy === null ? "—" : `${analytics.accuracy}%`}
           </strong>
-          <h2>Решено задач</h2>
-          <p>Уникальные задачи с верным ответом</p>
-        </section>
-        <section className="stat-card">
-          <span className="feature-icon">
-            <Target size={22} />
-          </span>
-          <strong>{attempts ? `${accuracy}%` : "—"}</strong>
-          <h2>Верных ответов</h2>
+          <h2>Точность ответов</h2>
           <p>
-            {attempts
-              ? `${solved} верных из ${attempts} проверенных попыток`
-              : "Появится после первой проверки"}
+            {analytics.attempts
+              ? `${analytics.correctAnswers} верных из ${analytics.attempts} проверенных ответов`
+              : "Появится после первой проверки ответа"}
           </p>
         </section>
         <section className="stat-card">
           <span className="feature-icon">
-            <ListChecks size={22} />
+            <ListChecks size={22} aria-hidden="true" />
           </span>
-          <strong>{attempts}</strong>
-          <h2>Попыток</h2>
-          <p>Ошибаться и пробовать снова — нормально</p>
+          <strong>{analytics.attempts}</strong>
+          <h2>Всего попыток</h2>
+          <p>Каждая проверка числового ответа считается отдельной попыткой</p>
         </section>
       </div>
-      <section className="results-card">
-        <div className="section-title">
-          <h2>Твоя практика</h2>
-          <span>{solved} из 5 решено</span>
-        </div>
-        <Meter
-          value={(solved / tasks.length) * 100}
-          label="Решённые задачи демоверсии"
-        />
-        {attempts === 0 ? (
-          <div className="empty-state">
-            <span className="empty-icon">
-              <Sprout size={36} strokeWidth={1.3} />
-            </span>
-            <h3>Всё начинается с первого шага</h3>
-            <p>Реши первую задачу — и здесь появится твой прогресс.</p>
-            <button
-              className="button button-primary"
-              onClick={() => onStart(0)}
-            >
-              К первой задаче <ArrowRight size={18} />
-            </button>
-          </div>
-        ) : (
-          <div className="result-list">
-            {tasks.map((task, index) => {
-              const record = progress.records.find(
-                (item) => item.taskId === task.id,
-              );
-              return (
-                <button key={task.id} onClick={() => onStart(index)}>
-                  <span
-                    className={`result-icon ${record?.correct ? "done" : ""}`}
-                  >
-                    {record?.correct ? (
-                      <Check size={19} />
-                    ) : (
-                      <span>{index + 1}</span>
-                    )}
-                  </span>
-                  <span>
-                    <strong>{task.title}</strong>
-                    <small>
-                      {task.topic} ·{" "}
-                      {record?.correct
-                        ? "Решено верно"
-                        : record
-                          ? "Можно попробовать ещё"
-                          : "Ещё не начато"}
-                    </small>
-                  </span>
-                  <ChevronRight size={18} />
-                </button>
-              );
-            })}
-          </div>
-        )}
-      </section>
-      <div className="progress-storage">
-        <span>
-          <ShieldCheck size={17} /> Сохраняется в этом браузере на этом
-          устройстве
-        </span>
-        {attempts > 0 && (
-          <button
-            ref={resetButtonRef}
-            className="subtle-button"
-            onClick={() => setResetConfirm(true)}
-          >
-            <RotateCcw size={14} /> Сбросить
-          </button>
-        )}
-      </div>
-      {resetConfirm && (
-        <div
-          className="reset-confirm"
-          role="alertdialog"
-          aria-labelledby="reset-confirm-title"
-          aria-describedby="reset-confirm-description"
-          onKeyDown={(event) => {
-            if (event.key === "Escape") cancelReset();
-          }}
-        >
-          <p id="reset-confirm-title">
-            Сбросить все результаты демозадач на этом устройстве?
+      {state.legacyRecords.length > 0 && (
+        <div className="info-note">
+          <ShieldCheck size={20} aria-hidden="true" />
+          <p>
+            Итоги прежней демоверсии включены в общие счётчики и результаты по
+            темам. У них нет точных дат и истории ответов, поэтому динамика и
+            история ошибок содержат только новые проверки. В старых итогах
+            известен один успешный ответ на каждую решённую задачу.
           </p>
-          <span id="reset-confirm-description" className="sr-only">
-            Все проверенные попытки и решённые задачи будут удалены из этого
-            браузера.
-          </span>
-          <div>
-            <button
-              ref={cancelButtonRef}
-              className="button button-secondary"
-              onClick={cancelReset}
-            >
-              Отмена
-            </button>
-            <button
-              className="button button-primary"
-              onClick={() => {
-                onReset();
-                setResetConfirm(false);
-              }}
-            >
-              Да, сбросить
-            </button>
-          </div>
         </div>
       )}
+
+      {analytics.attempts === 0 ? (
+        <section className="results-card">
+          <div className="empty-state">
+            <span className="empty-icon">
+              <Sprout size={36} strokeWidth={1.3} aria-hidden="true" />
+            </span>
+            <h2>Результатов пока нет</h2>
+            <p>
+              Проверь ответ на задание. После этого здесь появятся результаты по
+              темам и история занятий.
+            </p>
+            <button className="button button-primary" onClick={() => onStart()}>
+              Перейти к заданиям <ArrowRight size={18} aria-hidden="true" />
+            </button>
+          </div>
+        </section>
+      ) : (
+        <>
+          <section className="analytics-section">
+            <div className="section-title">
+              <h2>Результаты по темам</h2>
+            </div>
+            <p className="muted">
+              Доля верных ответов в каждой теме. Это результаты практики, а не
+              оценка освоения всей темы.
+            </p>
+            <div className="topic-results">
+              {analytics.topics
+                .filter((topic) => topic.attempts > 0)
+                .map((topic) => (
+                  <article className="topic-item" key={topic.topicId}>
+                    <div>
+                      <strong>{topicTitle(topic.topicId)}</strong>
+                      <span>
+                        {topic.accuracy === null ? "—" : `${topic.accuracy}%`}
+                      </span>
+                    </div>
+                    <Meter
+                      value={topic.accuracy ?? 0}
+                      label={`Доля верных ответов: ${topicTitle(topic.topicId)}`}
+                    />
+                    <small>
+                      {topic.correctAnswers} верных из {topic.attempts} ответов
+                    </small>
+                    <button
+                      className="text-button"
+                      onClick={() => onStart(topic.topicId)}
+                    >
+                      Потренироваться{" "}
+                      <ArrowRight size={16} aria-hidden="true" />
+                    </button>
+                  </article>
+                ))}
+            </div>
+          </section>
+          <section className="analytics-section">
+            <div className="section-title">
+              <h2>Динамика занятий</h2>
+            </div>
+            <p className="muted">
+              Только дни, в которые ты проверял ответы. Даты и время указаны по
+              всемирному времени (UTC). Пропущенные дни не дополняются
+              примерными значениями.
+            </p>
+            {analytics.timeline.length === 0 ? (
+              <p className="muted">
+                Новых проверок с сохранёнными датами пока нет.
+              </p>
+            ) : (
+              <div className="analytics-timeline">
+                <table>
+                  <caption className="sr-only">
+                    Проверенные и верные ответы по датам
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Дата</th>
+                      <th scope="col">Ответов</th>
+                      <th scope="col">Верных</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {analytics.timeline.map((day) => (
+                      <tr key={day.date}>
+                        <th scope="row">{formatDate(day.date)}</th>
+                        <td>{day.attempts}</td>
+                        <td>{day.correctAnswers}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </section>
+          <section className="analytics-section">
+            <div className="section-title">
+              <h2>История ошибок</h2>
+            </div>
+            {recentErrors.length === 0 ? (
+              <p className="muted">
+                Среди новых сохранённых ответов пока нет ошибок. История ответов
+                прежней демоверсии не восстанавливается.
+              </p>
+            ) : (
+              <ol className="error-list">
+                {recentErrors.map((event) => (
+                  <li key={event.id}>
+                    <div>
+                      <strong>
+                        {tasks.find((task) => task.id === event.taskId)
+                          ?.title ?? "Задание по теме"}
+                      </strong>
+                      <p>
+                        {topicTitle(event.topicId)} · {event.examType}
+                      </p>
+                      <p>
+                        Твой ответ: <strong>{event.answer}</strong>
+                      </p>
+                      <time dateTime={event.createdAt}>
+                        {formatDate(event.createdAt, true)}
+                      </time>
+                    </div>
+                    <button
+                      className="text-button"
+                      onClick={() => onStart(event.topicId)}
+                    >
+                      Практика по теме{" "}
+                      <ArrowRight size={16} aria-hidden="true" />
+                    </button>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </section>
+        </>
+      )}
+      <div className="progress-storage">
+        <span>
+          <ShieldCheck size={17} aria-hidden="true" /> Результаты хранятся в
+          этом браузере на этом устройстве
+        </span>
+        <span>Просмотров решений: {analytics.solutionViews}</span>
+      </div>
+      <p className="quiet-note">
+        Уникальные решённые задания и количество верных ответов — разные
+        показатели. Повторные проверки входят в попытки и долю верных ответов.
+        Просмотр решения сам по себе не считается верным ответом.
+      </p>
     </>
   );
 }

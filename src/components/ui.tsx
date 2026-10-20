@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check, ChevronDown, Flower2 } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Flower2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import type { Exam } from "@/lib/navigation";
@@ -85,9 +85,6 @@ export function ExamPicker({
           <ChevronDown size={16} aria-hidden="true" />
         </span>
       </label>
-      <span className="picker-note">
-        <Check size={14} aria-hidden="true" /> Всё для уверенного старта
-      </span>
     </div>
   );
 }

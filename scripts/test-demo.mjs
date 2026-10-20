@@ -3,81 +3,293 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import ts from "typescript";
 
-// Use the project's existing TypeScript dependency so this also runs on Node 20.9.
-// No generated files, browser, or additional test dependencies are needed.
-const source = await readFile(
-  new URL("../src/lib/demo.ts", import.meta.url),
-  "utf8",
-);
-const { outputText, diagnostics = [] } = ts.transpileModule(source, {
-  compilerOptions: {
-    module: ts.ModuleKind.ESNext,
-    target: ts.ScriptTarget.ES2020,
-  },
-  reportDiagnostics: true,
-  fileName: "demo.ts",
-});
-assert.equal(
-  diagnostics.filter(
-    (diagnostic) => diagnostic.category === ts.DiagnosticCategory.Error,
-  ).length,
-  0,
-  "Исходный модуль должен компилироваться без синтаксических ошибок",
-);
+// Compile the existing source in memory. This also works on Node 20.9,
+// without native TypeScript support, build output, or extra dependencies.
+const projectRoot = new URL("../", import.meta.url);
+const moduleUrls = new Map();
 
+async function loadSourceModule(fileUrl) {
+  const key = fileUrl.href;
+  if (moduleUrls.has(key)) return moduleUrls.get(key);
+  const loading = (async () => {
+    const source = await readFile(fileUrl, "utf8");
+    const { outputText, diagnostics = [] } = ts.transpileModule(source, {
+      compilerOptions: {
+        module: ts.ModuleKind.ESNext,
+        target: ts.ScriptTarget.ES2020,
+      },
+      reportDiagnostics: true,
+      fileName: fileUrl.pathname,
+    });
+    assert.equal(
+      diagnostics.filter(
+        (entry) => entry.category === ts.DiagnosticCategory.Error,
+      ).length,
+      0,
+      `Синтаксические ошибки в ${fileUrl.pathname}`,
+    );
+
+    const parsed = ts.createSourceFile(
+      "module.js",
+      outputText,
+      ts.ScriptTarget.ES2020,
+      true,
+    );
+    const replacements = [];
+    for (const statement of parsed.statements) {
+      if (
+        !ts.isImportDeclaration(statement) &&
+        !ts.isExportDeclaration(statement)
+      )
+        continue;
+      const specifier = statement.moduleSpecifier;
+      if (!specifier || !ts.isStringLiteral(specifier)) continue;
+      const path = specifier.text;
+      if (!path.startsWith(".") && !path.startsWith("@/")) continue;
+      const sourcePath = /\.[cm]?[jt]s$/.test(path) ? path : `${path}.ts`;
+      const dependency = path.startsWith("@/")
+        ? new URL(`src/${sourcePath.slice(2)}`, projectRoot)
+        : new URL(sourcePath, fileUrl);
+      replacements.push({
+        start: specifier.getStart(parsed),
+        end: specifier.end,
+        value: JSON.stringify(await loadSourceModule(dependency)),
+      });
+    }
+    let output = outputText;
+    for (const replacement of replacements.sort((a, b) => b.start - a.start)) {
+      output =
+        output.slice(0, replacement.start) +
+        replacement.value +
+        output.slice(replacement.end);
+    }
+    return `data:text/javascript;base64,${Buffer.from(output).toString("base64")}`;
+  })();
+  moduleUrls.set(key, loading);
+  return loading;
+}
+
+const { tasks, prototypes, getPracticeTasks, checkTaskAnswer } = await import(
+  await loadSourceModule(new URL("src/lib/tasks.ts", projectRoot))
+);
 const {
-  tasks,
-  normalizeAnswer,
-  isCorrectAnswer,
-  parseProgress,
-  emptyProgress,
+  storageKey,
+  legacyStorageKey,
+  emptyLearningState,
+  parseLearningState,
+  getAnalytics,
 } = await import(
-  `data:text/javascript;base64,${Buffer.from(outputText).toString("base64")}`
+  await loadSourceModule(new URL("src/lib/learning-events.ts", projectRoot))
 );
 
-const firstTaskId = tasks[0].id;
-const secondTaskId = tasks[1].id;
-const freshProgress = () => ({ records: [], exam: "ЕГЭ", lastTaskIndex: 0 });
+const taskById = (id) => {
+  const task = tasks.find((entry) => entry.id === id);
+  assert.ok(task, `В банке отсутствует ${id}`);
+  return task;
+};
+const triangle = taskById("triangle-sine");
+const linear = taskById("linear-equation");
+const dateOne = "2026-10-20T10:00:00.000Z";
+const dateTwo = "2026-10-21T10:00:00.000Z";
+const numberRule = (value) => ({ type: "number", value });
+const setRule = (...values) => ({ type: "set", values });
 
-test("Пять разных задач имеют математически верные ответы", () => {
-  const expectedByKind = {
-    triangle: 8 / Math.hypot(6, 8),
-    equation: (11 + 7) / 3,
-    fraction: 1 / 4 + 3 / 8,
-    probability: 3 / (3 + 7),
-    percentage: 200 - (200 * 15) / 100,
+function answerEvent(id, task, answer, correct, overrides = {}) {
+  return {
+    kind: "answer_checked",
+    id,
+    taskId: task.id,
+    topicId: task.topicId,
+    prototypeId: task.prototypeId,
+    examType: task.examType.includes("ЕГЭ") ? "ЕГЭ" : task.examType[0],
+    subjectId: "math",
+    createdAt: dateOne,
+    answer,
+    correct,
+    ...overrides,
   };
+}
 
-  assert.equal(tasks.length, 5);
-  assert.equal(new Set(tasks.map((task) => task.id)).size, 5);
-  assert.deepEqual(
-    tasks.map((task) => task.kind).sort(),
-    Object.keys(expectedByKind).sort(),
+function solutionEvent(id, answer, overrides = {}) {
+  const { taskId, topicId, prototypeId, examType, subjectId, createdAt } =
+    answer;
+  return {
+    kind: "solution_viewed",
+    id,
+    taskId,
+    topicId,
+    prototypeId,
+    examType,
+    subjectId,
+    createdAt,
+    attemptId: answer.id,
+    ...overrides,
+  };
+}
+
+function stateWith(events, overrides = {}) {
+  return {
+    version: 2,
+    exam: "ЕГЭ",
+    lastTaskIndex: 0,
+    events,
+    legacyRecords: [],
+    fontScale: "standard",
+    ...overrides,
+  };
+}
+
+function restore(events, overrides = {}) {
+  return parseLearningState(JSON.stringify(stateWith(events, overrides)));
+}
+
+function assertCheck(input, rule, valid, correct) {
+  const result = checkTaskAnswer(input, rule);
+  assert.equal(result.valid, valid, `Валидность ${JSON.stringify(input)}`);
+  assert.equal(
+    result.correct,
+    correct,
+    `Правильность ${JSON.stringify(input)}`,
   );
-  assert.equal(tasks[0].kind, "triangle");
+}
 
+test("Банк покрывает восемь тем и даёт несколько задач каждого прототипа", () => {
+  const topicIds = [
+    "fractions",
+    "decimals",
+    "percentages",
+    "linear-equations",
+    "quadratic-equations",
+    "powers-roots",
+    "geometry",
+    "probability",
+  ];
+  assert.ok(tasks.length >= 24);
+  assert.equal(new Set(tasks.map((task) => task.id)).size, tasks.length);
+  assert.equal(
+    new Set(prototypes.map((prototype) => prototype.id)).size,
+    prototypes.length,
+  );
+  assert.deepEqual(
+    [...new Set(tasks.map((task) => task.topicId))].sort(),
+    topicIds.sort(),
+  );
+  for (const topicId of topicIds) {
+    assert.ok(
+      tasks.filter((task) => task.topicId === topicId).length >= 3,
+      topicId,
+    );
+  }
+  for (const prototype of prototypes) {
+    assert.ok(
+      tasks.filter((task) => task.prototypeId === prototype.id).length >= 2,
+      `Недостаточно заданий: ${prototype.title}`,
+    );
+  }
   for (const task of tasks) {
-    assert.equal(task.answer, expectedByKind[task.kind], task.title);
-    assert.ok(isCorrectAnswer(String(task.answer), task.answer), task.title);
-    assert.ok(task.solution.trim(), `Для «${task.title}» нужно объяснение`);
+    const prototype = prototypes.find((entry) => entry.id === task.prototypeId);
+    assert.ok(prototype, task.id);
+    assert.equal(prototype.topicId, task.topicId, task.id);
+    assert.equal(task.subjectId, "math");
+    assert.ok(task.examType.length > 0);
+    assert.ok(task.examType.every((exam) => exam === "ЕГЭ" || exam === "ОГЭ"));
+    assert.ok(task.solution.length > 0);
+    assert.ok(task.solution.every((step) => step.text.trim()));
+    assert.equal(
+      "hint" in task,
+      false,
+      "Подсказка не должна выдаваться вместе с условием",
+    );
+    assertCheck(task.answerDisplay, task.answerRule, true, true);
   }
 });
 
-test("Запятая, точка и эквивалентные дроби дают один ответ", () => {
+test("Старые пять задач сохраняют идентификаторы и верные ответы", () => {
+  const expectedAnswers = {
+    "triangle-sine": "4/5",
+    "linear-equation": "6",
+    "fraction-addition": "5/8",
+    "probability-balls": "3/10",
+    "percentage-discount": "170",
+  };
+  for (const [id, answer] of Object.entries(expectedAnswers)) {
+    assertCheck(answer, taskById(id).answerRule, true, true);
+  }
+  assert.equal(triangle.diagram.type, "right-triangle");
+  assert.equal(triangle.diagram.adjacent, 6);
+  assert.equal(triangle.diagram.opposite, 8);
+  assert.equal("conditionLatex" in taskById("percentage-discount"), false);
+  assert.equal("conditionLatex" in taskById("probability-balls"), false);
+});
+
+test("Практика фильтруется по экзамену, теме и прототипу одновременно", () => {
+  for (const examType of ["ЕГЭ", "ОГЭ"]) {
+    const all = getPracticeTasks({ examType });
+    assert.ok(all.length > 0);
+    assert.deepEqual(
+      all,
+      tasks.filter((task) => task.examType.includes(examType)),
+    );
+    const filtered = getPracticeTasks({
+      examType,
+      topicId: triangle.topicId,
+      prototypeId: triangle.prototypeId,
+    });
+    assert.ok(filtered.length >= 2);
+    assert.ok(
+      filtered.every(
+        (task) =>
+          task.examType.includes(examType) &&
+          task.topicId === triangle.topicId &&
+          task.prototypeId === triangle.prototypeId,
+      ),
+    );
+  }
+  assert.deepEqual(
+    getPracticeTasks({ examType: "ЕГЭ", topicId: "unknown" }),
+    [],
+  );
+  assert.deepEqual(
+    getPracticeTasks({ examType: "ЕГЭ", prototypeId: "unknown" }),
+    [],
+  );
+  assert.deepEqual(
+    getPracticeTasks({
+      examType: "ЕГЭ",
+      topicId: linear.topicId,
+      prototypeId: triangle.prototypeId,
+    }),
+    [],
+  );
+});
+
+test("Рациональные числа принимают запятую, точку, дробь и знак минуса", () => {
   for (const input of ["0,8", "0.8", ".8", ",8", "4/5", " 4 / 5 ", "\t0,8\n"]) {
-    assert.equal(normalizeAnswer(input), 0.8, input);
-    assert.equal(isCorrectAnswer(input, tasks[0].answer), true, input);
+    assertCheck(input, numberRule("0.8"), true, true);
   }
-
-  assert.equal(normalizeAnswer("−3/4"), -0.75);
-  assert.equal(normalizeAnswer("3/-4"), -0.75);
-  assert.equal(normalizeAnswer("+6"), 6);
-  assert.equal(normalizeAnswer("0/5"), 0);
-  assert.equal(normalizeAnswer("0"), 0);
+  assertCheck("−3/4", numberRule("-0.75"), true, true);
+  assertCheck("3/-4", numberRule("-0.75"), true, true);
+  assertCheck("+6", numberRule("6"), true, true);
+  assertCheck("0/5", numberRule("0"), true, true);
+  assertCheck("-0", numberRule("0"), true, true);
+  assertCheck("2/6", numberRule("1/3"), true, true);
 });
 
-test("Пустой, неполный и неоднозначный ввод не считается числом", () => {
-  const invalidInputs = [
+test("Проверка точная: близкое число и округлённая периодическая дробь неверны", () => {
+  assertCheck("0.30000000000000004", numberRule("0.3"), true, false);
+  assertCheck(
+    "0.799999999999999999999999999999",
+    numberRule("0.8"),
+    true,
+    false,
+  );
+  assertCheck("0.3333333333", numberRule("1/3"), true, false);
+  assertCheck("9007199254740993", numberRule("9007199254740992"), true, false);
+  assertCheck("9007199254740993/3", numberRule("3002399751580331"), true, true);
+});
+
+test("Пустой, смешанный и неполный ввод не записывается как проверенный ответ", () => {
+  for (const input of [
     "",
     "   ",
     ".",
@@ -96,25 +308,29 @@ test("Пустой, неполный и неоднозначный ввод не
     "1/0",
     "0/0",
     "4/−0",
-    "9".repeat(400),
-  ];
-
-  for (const input of invalidInputs) {
-    assert.equal(normalizeAnswer(input), null, JSON.stringify(input));
-    assert.equal(isCorrectAnswer(input, 0), false, JSON.stringify(input));
+    "1;2",
+  ]) {
+    assertCheck(input, numberRule("0"), false, false);
   }
 });
 
-test("Проверка различает неверные ответы и допускает погрешность вычислений", () => {
-  assert.equal(isCorrectAnswer("0,6", 0.8), false);
-  assert.equal(isCorrectAnswer("8", 0.8), false);
-  assert.equal(isCorrectAnswer("0.30000000000000004", 0.3), true);
-  assert.equal(isCorrectAnswer("0.30001", 0.3), false);
-  assert.equal(isCorrectAnswer("0", Number.NaN), false);
-  assert.equal(isCorrectAnswer("0", Number.POSITIVE_INFINITY), false);
+test("Набор корней проверяется независимо от порядка с десятичной запятой", () => {
+  const rule = setRule("-0.5", "2");
+  assertCheck("2; −0,5", rule, true, true);
+  assertCheck("-1/2; 2,0", rule, true, true);
+  assertCheck("2; -0.4", rule, true, false);
+  assertCheck("2", rule, true, false);
+  assertCheck("2; -0.5; 3", rule, true, false);
+  assertCheck("2; 2", rule, false, false);
+  assertCheck("2; 4/2", rule, false, false);
+  assertCheck("2;", rule, false, false);
+  assertCheck(";2", rule, false, false);
+  assertCheck("2;;-0.5", rule, false, false);
 });
 
-test("Отсутствующее, повреждённое и неподходящее сохранение открывает чистое демо", () => {
+test("Новый ключ хранения отделён от старого, пустые данные безопасны", () => {
+  assert.equal(storageKey, "tochka-learning-v2");
+  assert.equal(legacyStorageKey, "tochka-demo-progress-v1");
   for (const raw of [
     null,
     "",
@@ -125,109 +341,252 @@ test("Отсутствующее, повреждённое и неподходя
     '"строка"',
     "true",
   ]) {
-    assert.deepEqual(parseProgress(raw), freshProgress(), String(raw));
+    const restored = parseLearningState(raw);
+    assert.equal(restored.version, 2);
+    assert.deepEqual(restored.events, []);
+    assert.deepEqual(restored.legacyRecords, []);
   }
+  const stats = getAnalytics(parseLearningState(null));
+  assert.equal(stats.solved, 0);
+  assert.equal(stats.attempts, 0);
+  assert.equal(stats.correctAnswers, 0);
+  assert.equal(stats.accuracy, null);
+  assert.equal(stats.solutionViews, 0);
+  assert.deepEqual(stats.timeline, []);
 });
 
-test("Сохранение переживает JSON-перезагрузку без потери попыток и настроек", () => {
-  const saved = {
-    records: [
-      { taskId: firstTaskId, correct: true, attempts: 3 },
-      { taskId: secondTaskId, correct: false, attempts: 2 },
-    ],
+test("История и настройки переживают JSON-перезагрузку", () => {
+  const wrong = answerEvent("a1", triangle, "0.6", false);
+  const right = answerEvent("a2", triangle, "4/5", true, {
+    createdAt: dateTwo,
+  });
+  const saved = stateWith([wrong, right], {
     exam: "ОГЭ",
+    fontScale: "large",
     lastTaskIndex: tasks.length - 1,
-  };
-
-  const restored = parseProgress(JSON.stringify(saved));
+  });
+  const restored = parseLearningState(JSON.stringify(saved));
   assert.deepEqual(restored, saved);
-  assert.deepEqual(parseProgress(JSON.stringify(restored)), saved);
+  assert.deepEqual(parseLearningState(JSON.stringify(restored)), saved);
+});
 
-  const solved = restored.records.filter((record) => record.correct).length;
-  const attempts = restored.records.reduce(
-    (total, record) => total + record.attempts,
-    0,
+test("Новые попытки одной задачи остаются отдельными событиями", () => {
+  const events = [
+    answerEvent("a1", triangle, "0.6", false),
+    answerEvent("a2", triangle, "0.8", true),
+    answerEvent("a3", triangle, "4/5", true),
+    answerEvent("a4", linear, "7", false),
+  ];
+  const state = restore(events);
+  assert.equal(state.events.length, 4);
+  const stats = getAnalytics(state);
+  assert.equal(stats.solved, 1);
+  assert.equal(stats.attempts, 4);
+  assert.equal(stats.correctAnswers, 2);
+  assert.equal(stats.accuracy, 50);
+  assert.deepEqual(stats.errors.map((event) => event.id).sort(), ["a1", "a4"]);
+  const geometry = stats.topics.find(
+    (topic) => topic.topicId === triangle.topicId,
+  );
+  assert.equal(geometry.attempts, 3);
+  assert.equal(geometry.correctAnswers, 2);
+  assert.equal(geometry.accuracy, 67);
+});
+
+test("Разбор связан с конкретной попыткой и не улучшает точность ответа", () => {
+  const wrong = answerEvent("a1", triangle, "0.6", false);
+  const view = solutionEvent("s1", wrong);
+  const state = restore([wrong, view]);
+  assert.equal(state.events.length, 2);
+  const stats = getAnalytics(state);
+  assert.equal(stats.solved, 0);
+  assert.equal(stats.attempts, 1);
+  assert.equal(stats.correctAnswers, 0);
+  assert.equal(stats.accuracy, 0);
+  assert.equal(stats.solutionViews, 1);
+  const secondView = solutionEvent("s2", wrong);
+  const repeated = getAnalytics(
+    restore([wrong, view, { ...view }, secondView]),
   );
   assert.equal(
-    solved,
-    1,
-    "Три попытки одной задачи не превращаются в три решённые задачи",
+    repeated.solutionViews,
+    2,
+    "Два открытия — два события; повторный ID не удваивает их",
   );
-  assert.equal(attempts, 5);
-  assert.equal(Math.round((solved / attempts) * 100), 20);
+  assert.equal(repeated.attempts, 1);
 });
 
-test("Повреждённые записи отбрасываются, исправные записи сохраняются", () => {
-  const validRecord = { taskId: firstTaskId, correct: true, attempts: 2 };
-  const invalidRecords = [
+test("События с неизвестными ID, неверной темой, форматом и датой отбрасываются", () => {
+  const good = answerEvent("good", triangle, "0.8", true);
+  const invalid = [
     null,
     [],
     {},
-    { ...validRecord, taskId: "deleted-task" },
-    { ...validRecord, taskId: 1 },
-    { ...validRecord, correct: "true" },
-    { ...validRecord, correct: 1 },
-    { ...validRecord, attempts: "2" },
-    { ...validRecord, attempts: 0 },
-    { ...validRecord, attempts: -1 },
-    { ...validRecord, attempts: 1.5 },
-    { ...validRecord, attempts: Number.MAX_SAFE_INTEGER + 1 },
+    { ...good, id: "" },
+    { ...good, kind: "unknown" },
+    { ...good, taskId: "deleted-task" },
+    { ...good, topicId: linear.topicId },
+    { ...good, prototypeId: "unknown" },
+    { ...good, examType: "ГИА" },
+    { ...good, subjectId: "physics" },
+    { ...good, createdAt: "not-a-date" },
+    { ...good, createdAt: "2026-99-99T10:00:00.000Z" },
+    { ...good, createdAt: "2026-02-30T10:00:00.000Z" },
+    { ...good, createdAt: 123 },
+    { ...good, answer: 0.8 },
+    { ...good, answer: "not-a-number" },
+    { ...good, correct: "true" },
+    { ...good, correct: false },
   ];
+  const restored = restore([...invalid, good]);
+  assert.deepEqual(restored.events, [good]);
+});
 
-  const restored = parseProgress(
-    JSON.stringify({
-      records: [...invalidRecords, validRecord],
-      exam: "ОГЭ",
-      lastTaskIndex: 1,
-    }),
-  );
+test("Повторный ID события не увеличивает статистику", () => {
+  const answer = answerEvent("a1", triangle, "0.8", true);
+  const restored = restore([answer, { ...answer }, { ...answer }]);
+  assert.deepEqual(restored.events, [answer]);
+  assert.equal(getAnalytics(restored).attempts, 1);
+});
 
-  assert.deepEqual(restored, {
-    records: [validRecord],
-    exam: "ОГЭ",
-    lastTaskIndex: 1,
+test("Отвергнутый разбор не занимает ID последующего корректного события", () => {
+  const answer = answerEvent("a1", triangle, "0.8", true);
+  const orphan = solutionEvent("a1", answer, { attemptId: "missing" });
+  const invalidView = solutionEvent("v1", answer, { attemptId: "missing" });
+  const validView = solutionEvent("v1", answer);
+  const restored = restore([orphan, answer, invalidView, validView]);
+
+  assert.deepEqual(restored.events, [answer, validView]);
+  const stats = getAnalytics(restored);
+  assert.equal(stats.attempts, 1);
+  assert.equal(stats.correctAnswers, 1);
+  assert.equal(stats.solutionViews, 1);
+});
+
+test("Разбор без существующей попытки или для другой задачи отбрасывается", () => {
+  const answer = answerEvent("a1", triangle, "0.8", true);
+  const orphan = solutionEvent("s1", answer, { attemptId: "missing" });
+  const otherTask = solutionEvent("s2", answer, {
+    taskId: linear.id,
+    topicId: linear.topicId,
+    prototypeId: linear.prototypeId,
   });
-  assert.deepEqual(parseProgress('{"records":{}}').records, []);
-});
-
-test("Дубликаты не увеличивают число задач и не отменяют уже верный ответ", () => {
-  const duplicates = [
-    { taskId: firstTaskId, correct: true, attempts: 2 },
-    { taskId: firstTaskId, correct: false, attempts: 4 },
-    { taskId: firstTaskId, correct: false, attempts: 1 },
-  ];
-  const expected = [{ taskId: firstTaskId, correct: true, attempts: 4 }];
-
-  for (const records of [duplicates, [...duplicates].reverse()]) {
-    assert.deepEqual(
-      parseProgress(JSON.stringify({ records })).records,
-      expected,
-    );
-  }
-});
-
-test("Неизвестный экзамен и индекс за пределами пяти задач безопасно сбрасываются", () => {
-  for (const lastTaskIndex of [-1, tasks.length, 1.5, "2", null]) {
-    assert.deepEqual(
-      parseProgress(JSON.stringify({ exam: "другой", lastTaskIndex })),
-      freshProgress(),
-    );
-  }
-
-  assert.equal(parseProgress('{"exam":"ОГЭ","lastTaskIndex":0}').exam, "ОГЭ");
+  const beforeAttempt = solutionEvent("s3", answer, {
+    createdAt: "2026-10-19T10:00:00.000Z",
+  });
+  assert.deepEqual(restore([answer, orphan, otherTask, beforeAttempt]).events, [
+    answer,
+  ]);
+  const linked = solutionEvent("linked", answer);
   assert.equal(
-    parseProgress('{"exam":"ЕГЭ","lastTaskIndex":4}').lastTaskIndex,
-    4,
+    getAnalytics(restore([linked, answer])).solutionViews,
+    1,
+    "Ссылка определяется ID попытки, а не порядком объектов в JSON",
   );
 });
 
-test("Изменение одного результата чтения не меняет следующее пустое сохранение", () => {
-  const first = parseProgress(null);
-  first.records.push({ taskId: firstTaskId, correct: true, attempts: 1 });
-  first.exam = "ОГЭ";
-  first.lastTaskIndex = 3;
+test("Старый прогресс мигрирует отдельно без выдуманной истории", () => {
+  const legacy = {
+    exam: "ОГЭ",
+    lastTaskIndex: 3,
+    records: [
+      { taskId: triangle.id, correct: true, attempts: 3 },
+      { taskId: linear.id, correct: false, attempts: 2 },
+    ],
+  };
+  const restored = parseLearningState(null, JSON.stringify(legacy));
+  assert.equal(restored.exam, "ОГЭ");
+  assert.deepEqual(restored.events, []);
+  assert.deepEqual(restored.legacyRecords, legacy.records);
+  const stats = getAnalytics(restored);
+  assert.equal(stats.solved, 1);
+  assert.equal(stats.attempts, 5);
+  assert.equal(stats.correctAnswers, 1);
+  assert.equal(stats.accuracy, 20);
+  assert.deepEqual(stats.timeline, []);
+  assert.deepEqual(stats.errors, []);
+  assert.equal(stats.solutionViews, 0);
+  assert.deepEqual(
+    parseLearningState(JSON.stringify(restored), JSON.stringify(legacy)),
+    restored,
+  );
+});
 
-  assert.deepEqual(parseProgress(null), freshProgress());
-  assert.deepEqual(parseProgress("broken"), freshProgress());
-  assert.deepEqual(emptyProgress, freshProgress());
+test("Миграция убирает испорченные дубликаты и не отменяет прежний успех", () => {
+  const legacy = {
+    exam: "ОГЭ",
+    records: [
+      { taskId: triangle.id, correct: true, attempts: 2 },
+      { taskId: triangle.id, correct: false, attempts: 4 },
+      { taskId: "removed", correct: true, attempts: 1 },
+      { taskId: linear.id, correct: "true", attempts: 1 },
+      { taskId: linear.id, correct: true, attempts: 0 },
+      { taskId: linear.id, correct: true, attempts: 1.5 },
+    ],
+  };
+  const state = parseLearningState(null, JSON.stringify(legacy));
+  assert.deepEqual(state.legacyRecords, [
+    { taskId: triangle.id, correct: true, attempts: 4 },
+  ]);
+  assert.equal(state.exam, "ОГЭ");
+  assert.deepEqual(state.events, []);
+});
+
+test("Сброс нового прогресса не воскрешает оставшийся старый ключ", () => {
+  const legacy = JSON.stringify({
+    exam: "ОГЭ",
+    records: [{ taskId: triangle.id, correct: true, attempts: 2 }],
+  });
+  const reset = parseLearningState(JSON.stringify(stateWith([])), legacy);
+  assert.deepEqual(reset.events, []);
+  assert.deepEqual(reset.legacyRecords, []);
+  assert.equal(
+    reset.exam,
+    "ЕГЭ",
+    "Новые настройки имеют приоритет перед старым ключом",
+  );
+  const recovered = parseLearningState("{broken", legacy);
+  assert.equal(recovered.exam, "ОГЭ");
+  assert.equal(getAnalytics(recovered).solved, 1);
+});
+
+test("Старый и новый успех одной задачи считаются одной решённой задачей", () => {
+  const legacyRecords = [{ taskId: triangle.id, correct: true, attempts: 2 }];
+  const answer = answerEvent("new", triangle, "0.8", true);
+  const stats = getAnalytics(restore([answer], { legacyRecords }));
+  assert.equal(stats.solved, 1);
+  assert.equal(stats.attempts, 3);
+  assert.equal(stats.correctAnswers, 2);
+  assert.equal(stats.accuracy, 67);
+});
+
+test("График группирует только настоящие попытки по календарной дате", () => {
+  const events = [
+    answerEvent("d1-wrong", triangle, "0.6", false),
+    answerEvent("d1-right", triangle, "0.8", true),
+    answerEvent("d2-right", linear, "6", true, { createdAt: dateTwo }),
+  ];
+  const stats = getAnalytics(restore(events));
+  assert.deepEqual(stats.timeline, [
+    { date: "2026-10-20", attempts: 2, correctAnswers: 1 },
+    { date: "2026-10-21", attempts: 1, correctAnswers: 1 },
+  ]);
+});
+
+test("Повреждённые настройки сбрасываются, а пустые состояния не разделяют массивы", () => {
+  const restored = restore([], {
+    exam: "другой",
+    fontScale: "huge",
+    lastTaskIndex: -1,
+  });
+  assert.equal(restored.exam, "ЕГЭ");
+  assert.equal(restored.fontScale, "standard");
+  assert.equal(restored.lastTaskIndex, 0);
+  const first = parseLearningState(null);
+  first.events.push(answerEvent("mutated", triangle, "0.8", true));
+  first.legacyRecords.push({ taskId: triangle.id, correct: true, attempts: 1 });
+  assert.deepEqual(parseLearningState(null).events, []);
+  assert.deepEqual(parseLearningState(null).legacyRecords, []);
+  assert.deepEqual(emptyLearningState.events, []);
+  assert.deepEqual(emptyLearningState.legacyRecords, []);
 });

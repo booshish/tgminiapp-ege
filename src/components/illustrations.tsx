@@ -250,10 +250,24 @@ export function CoachIllustration({ className }: IllustrationProps) {
   );
 }
 
-export function TriangleDiagram() {
+export function TriangleDiagram({
+  adjacent = 6,
+  opposite = 8,
+}: {
+  adjacent?: number;
+  opposite?: number;
+}) {
+  const scale = Math.min(180 / adjacent, 165 / opposite);
+  const width = adjacent * scale;
+  const height = opposite * scale;
+  const left = (300 - width) / 2;
+  const right = left + width;
+  const bottom = 185;
+  const top = bottom - height;
+  const triangle = `M${left} ${bottom}H${right}V${top}Z`;
   return (
     <svg
-      viewBox="0 0 320 220"
+      viewBox="0 0 320 225"
       role="img"
       aria-labelledby="triangle-diagram-title triangle-diagram-description"
       className="triangle-diagram"
@@ -261,63 +275,45 @@ export function TriangleDiagram() {
     >
       <title id="triangle-diagram-title">Прямоугольный треугольник ABC</title>
       <desc id="triangle-diagram-description">
-        Угол B прямой. Катет AB равен 6, катет BC равен 8, гипотенуза AC равна
-        10. Угол A находится внизу слева, напротив катета BC.
+        Угол B прямой. Катет AB равен {adjacent}, катет BC равен {opposite}.
+        Угол A находится внизу слева, напротив катета BC.
       </desc>
-      <path d="M82 188H208V20L82 188Z" fill="#EDF2E7" fillOpacity=".6" />
-      <path d="M82 188H117A35 35 0 0 0 103 160L82 188Z" fill="#D6E3CC" />
       <path
-        d="M117 188A35 35 0 0 0 103 160"
-        stroke="#91AA83"
-        strokeWidth="1.4"
-      />
-      <path
-        d="M82 188H208V20L82 188Z"
+        d={triangle}
+        fill="#EDF2E7"
         stroke="#52775B"
         strokeWidth="2.2"
         strokeLinejoin="round"
       />
-      <path d="M190 188V170H208" stroke="#52775B" strokeWidth="1.5" />
-      <circle cx="82" cy="188" r="2.8" fill="#52775B" />
-      <circle cx="208" cy="188" r="2.8" fill="#52775B" />
-      <circle cx="208" cy="20" r="2.8" fill="#52775B" />
+      <path
+        d={`M${right - 14} ${bottom}V${bottom - 14}H${right}`}
+        stroke="#52775B"
+        strokeWidth="1.5"
+      />
       <g
         fill="#344B36"
-        fontFamily="Georgia, 'Times New Roman', serif"
-        fontSize="17"
+        fontFamily="Georgia,serif"
+        fontSize="18"
         fontStyle="italic"
       >
-        <text x="60" y="207">
+        <text x={left - 16} y={bottom + 24}>
           A
         </text>
-        <text x="219" y="207">
+        <text x={right + 8} y={bottom + 24}>
           B
         </text>
-        <text x="220" y="24">
+        <text x={right + 8} y={top - 1}>
           C
         </text>
       </g>
-      <g fill="#52775B" fontFamily="inherit" fontSize="17" fontWeight="500">
-        <text x="145" y="212" textAnchor="middle">
-          6
+      <g fill="#52775B" fontFamily="inherit" fontSize="18" fontWeight="500">
+        <text x={(left + right) / 2} y={bottom + 28} textAnchor="middle">
+          {adjacent}
         </text>
-        <text x="229" y="110">
-          8
-        </text>
-        <text x="125" y="91" textAnchor="middle">
-          10
+        <text x={right + 16} y={(top + bottom) / 2 + 5}>
+          {opposite}
         </text>
       </g>
-      <text
-        x="111"
-        y="179"
-        fill="#6B865F"
-        fontFamily="Georgia, serif"
-        fontSize="13"
-        fontStyle="italic"
-      >
-        A
-      </text>
     </svg>
   );
 }

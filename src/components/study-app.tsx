@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
+  BookOpen,
   ChevronRight,
-  Flower2,
   Grid2X2,
   House,
+  ListChecks,
+  Menu,
   ShieldCheck,
   Sparkles,
   TrendingUp,
@@ -21,45 +23,123 @@ import { TheoryScreen } from "@/components/screens/theory-screen";
 import { TrainerScreen } from "@/components/screens/trainer-screen";
 import { ProgressScreen } from "@/components/screens/progress-screen";
 import { ProfileScreen } from "@/components/screens/profile-screen";
+import { PremiumScreen } from "@/components/screens/premium-screen";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
+import { getPracticeTasks, tasks } from "@/lib/tasks";
 import { viewTitles, type View } from "@/lib/navigation";
 
-const navItems: { view: View; label: string; icon: LucideIcon }[] = [
+const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "home", label: "Главная", icon: House },
-  { view: "catalog", label: "Каталог", icon: Grid2X2 },
+  { view: "theory", label: "Теория", icon: BookOpen },
+  { view: "catalog", label: "Задания", icon: ListChecks },
   { view: "progress", label: "Прогресс", icon: TrendingUp },
+  { view: "trainer", label: "Мой тренер", icon: Sparkles },
   { view: "profile", label: "Профиль", icon: UserRound },
 ];
+const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
 
 export function StudyApp() {
   const { route, navigate, back } = useStudyNavigation();
   const {
-    progress,
+    state,
     ready,
     storageWarning,
     dismissStorageWarning,
     setExam,
+    setFontScale,
     rememberTask,
     recordAnswer,
-    resetProgress,
+    recordSolutionViewed,
+    clearLocalData,
   } = useDemoProgress();
-  const activeView =
-    route.view === "tasks" || route.view === "theory" ? "catalog" : route.view;
-  const start = (index = progress.lastTaskIndex) => navigate("tasks", index);
+  const [demoPremium, setDemoPremium] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const menuDialog = useRef<HTMLDialogElement>(null);
+  const isPremium = demoAllowed && demoPremium;
+  const activeView = route.view === "tasks" ? "catalog" : route.view;
+  const pool = getPracticeTasks({
+    examType: state.exam,
+    topicId: route.topicId,
+    prototypeId: route.prototypeId,
+  });
+  const currentTask =
+    pool.find((task) => task.id === tasks[route.taskIndex]?.id) ?? pool[0];
+  const currentIndex = currentTask
+    ? tasks.findIndex((task) => task.id === currentTask.id)
+    : 0;
+  const pageKey =
+    route.view === "catalog"
+      ? "catalog"
+      : `${route.view}:${currentIndex}:${route.topicId ?? ""}:${route.materialId ?? ""}`;
 
   useEffect(() => {
-    if (ready && route.view === "tasks") rememberTask(route.taskIndex);
-  }, [ready, route.view, route.taskIndex, rememberTask]);
-
+    if (ready && route.view === "tasks" && currentTask)
+      rememberTask(currentIndex);
+  }, [ready, route.view, currentIndex, currentTask, rememberTask]);
   useEffect(() => {
     if (!ready) return;
     window.scrollTo({ top: 0, behavior: "auto" });
     document.getElementById("main-content")?.focus({ preventScroll: true });
-  }, [route.view, route.taskIndex, ready]);
+  }, [pageKey, ready]);
+  useEffect(() => {
+    const dialog = menuDialog.current;
+    if (!dialog) return;
+    if (moreOpen && !dialog.open) dialog.showModal();
+    if (!moreOpen && dialog.open) dialog.close();
+  }, [moreOpen]);
+
+  function open(view: View) {
+    // Remove the modal's inert state before the next screen receives focus.
+    if (menuDialog.current?.open) menuDialog.current.close();
+    setMoreOpen(false);
+    navigate(view);
+  }
+  function startPractice(topicId?: string, prototypeId?: string) {
+    const selected = getPracticeTasks({
+      examType: state.exam,
+      topicId,
+      prototypeId,
+    });
+    if (!selected.length) {
+      navigate("catalog", { topicId, prototypeId });
+      return;
+    }
+    navigate("tasks", {
+      taskIndex: tasks.findIndex((task) => task.id === selected[0].id),
+      topicId,
+      prototypeId,
+    });
+  }
+  function continuePractice() {
+    const remembered = tasks[state.lastTaskIndex];
+    if (remembered?.examType.includes(state.exam))
+      navigate("tasks", { taskIndex: state.lastTaskIndex });
+    else startPractice();
+  }
+  function nextTask() {
+    if (!currentTask || pool.length < 2) {
+      navigate("catalog", {
+        topicId: route.topicId,
+        prototypeId: route.prototypeId,
+      });
+      return;
+    }
+    const next =
+      pool[
+        (pool.findIndex((task) => task.id === currentTask.id) + 1) % pool.length
+      ];
+    navigate("tasks", {
+      taskIndex: tasks.findIndex((task) => task.id === next.id),
+      topicId: route.topicId,
+      prototypeId: route.prototypeId,
+    });
+  }
+  const openPremium = () => navigate("premium");
+  const openTheory = (topicId?: string) => navigate("theory", { topicId });
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell font-${state.fontScale}`}>
       <a
         className="skip-link"
         href="#main-content"
@@ -73,94 +153,54 @@ export function StudyApp() {
       <aside className="sidebar">
         <button
           className="brand-button"
-          onClick={() => navigate("home")}
-          aria-label="Точка — на главную"
+          onClick={() => open("home")}
+          aria-label="Точка — главная"
         >
           <Brand />
         </button>
-        <p className="brand-caption">
-          Маленькие шаги.
-          <br />
-          Большие возможности.
-        </p>
-        <span className="sidebar-label">ТВОЁ ОБУЧЕНИЕ</span>
         <nav className="desktop-nav" aria-label="Основная навигация">
-          {navItems
-            .filter((item) => item.view !== "profile")
-            .map(({ view, label, icon: Icon }) => (
-              <button
-                key={view}
-                className={activeView === view ? "active" : ""}
-                aria-current={activeView === view ? "page" : undefined}
-                onClick={() => navigate(view)}
-              >
-                <Icon size={21} strokeWidth={1.7} />
-                {label}
-                {activeView === view && <span className="active-dot" />}
-              </button>
-            ))}
-          <button
-            className={route.view === "trainer" ? "active" : ""}
-            aria-current={route.view === "trainer" ? "page" : undefined}
-            onClick={() => navigate("trainer")}
-          >
-            <Sparkles size={21} strokeWidth={1.7} />
-            Мой тренер<span className="mini-new">ДЕМО</span>
-          </button>
+          {navigation.map(({ view, label, icon: Icon }) => (
+            <button
+              key={view}
+              className={activeView === view ? "active" : ""}
+              aria-current={activeView === view ? "page" : undefined}
+              onClick={() => open(view)}
+            >
+              <Icon size={21} aria-hidden="true" />
+              {label}
+              {activeView === view && <span className="active-dot" />}
+            </button>
+          ))}
         </nav>
         <div className="sidebar-bottom">
-          <div className="sidebar-encouragement">
-            <span className="sidebar-flower">
-              <Flower2 size={38} strokeWidth={1.1} />
-            </span>
-            <p>
-              Не сравнивай себя с другими.
-              <br />
-              <strong>Сравнивай с собой вчера.</strong>
-            </p>
-          </div>
-          <button
-            className={`sidebar-profile ${route.view === "profile" ? "active" : ""}`}
-            onClick={() => navigate("profile")}
-            aria-current={route.view === "profile" ? "page" : undefined}
-          >
-            <span className="avatar">
-              <UserRound size={20} strokeWidth={1.5} />
-            </span>
+          <button className="sidebar-plan" onClick={openPremium}>
+            <Sparkles size={21} />
             <span>
-              <strong>Мой профиль</strong>
-              <small>Приятно учиться вместе</small>
+              <strong>{isPremium ? "Демо Premium" : "Free"}</strong>
+              <small>Возможности тарифа</small>
             </span>
-            <ChevronRight size={16} />
+            <ChevronRight size={18} />
           </button>
-          <span className="sidebar-version">Точка · Первая демоверсия</span>
         </div>
       </aside>
       <div className="workspace">
         <header className="topbar">
-          <div className="desktop-breadcrumb">
-            <span>Моё пространство</span>
-            <ChevronRight size={13} />
-            <strong>{viewTitles[route.view]}</strong>
-          </div>
           <button
             className="mobile-brand brand-button"
-            onClick={() => navigate("home")}
-            aria-label="Точка — на главную"
+            onClick={() => open("home")}
+            aria-label="Точка — главная"
           >
             <Brand />
           </button>
+          <span className="desktop-breadcrumb">{viewTitles[route.view]}</span>
           <div className="topbar-right">
-            <span className="demo-badge">
-              <span /> Демо-версия
-            </span>
-            <span className="topbar-divider" />
+            <span className="course-label">{state.exam} · Математика</span>
             <button
               className="avatar"
-              onClick={() => navigate("profile")}
+              onClick={() => open("profile")}
               aria-label="Открыть профиль"
             >
-              <UserRound size={19} strokeWidth={1.6} />
+              <UserRound size={22} />
             </button>
           </div>
         </header>
@@ -169,87 +209,197 @@ export function StudyApp() {
           tabIndex={-1}
           className={`main-content view-${route.view}`}
         >
+          {demoAllowed && (
+            <div className="developer-notice" role="note">
+              <ShieldCheck size={20} />
+              <span>
+                Режим разработки ·{" "}
+                {isPremium ? "Демонстрационный Premium" : "Free"}. Серверной
+                проверки подписки нет. Переключение — в профиле.
+              </span>
+            </div>
+          )}
           {storageWarning && (
             <div className="storage-warning" role="status">
-              <ShieldCheck size={18} />
+              <ShieldCheck size={20} />
               <span>
-                Браузер не разрешил сохранить данные. Прогресс доступен до
-                закрытия страницы.
+                Браузер не разрешил сохранить данные. После закрытия страницы
+                они могут быть потеряны.
               </span>
               <button
-                onClick={() => dismissStorageWarning()}
-                aria-label="Скрыть уведомление"
+                onClick={dismissStorageWarning}
+                aria-label="Закрыть уведомление"
               >
-                <X size={17} />
+                <X size={20} />
               </button>
             </div>
           )}
           {route.view === "home" && (
             <HomeScreen
-              exam={progress.exam}
+              exam={state.exam}
               onExamChange={setExam}
-              onStart={start}
-              onNavigate={navigate}
+              onStart={continuePractice}
+              onNavigate={open}
             />
           )}
           {route.view === "catalog" && (
             <CatalogScreen
-              exam={progress.exam}
+              exam={state.exam}
+              topicId={route.topicId}
+              prototypeId={route.prototypeId}
               onExamChange={setExam}
-              onStart={start}
-              onNavigate={navigate}
+              onSelectionChange={(topicId, prototypeId) =>
+                navigate("catalog", { topicId, prototypeId })
+              }
+              onStart={startPractice}
+              onTheory={openTheory}
             />
           )}
           {route.view === "theory" && (
-            <TheoryScreen exam={progress.exam} onStart={start} onBack={back} />
+            <TheoryScreen
+              exam={state.exam}
+              topicId={route.topicId}
+              materialId={route.materialId}
+              onExamChange={setExam}
+              onOpenTopic={(topicId) => navigate("theory", { topicId })}
+              onOpenMaterial={(topicId, materialId) =>
+                navigate("theory", { topicId, materialId })
+              }
+              onPractice={startPractice}
+              onBack={() => {
+                if (route.topicId) {
+                  navigate(
+                    "theory",
+                    route.materialId ? { topicId: route.topicId } : {},
+                  );
+                } else back();
+              }}
+            />
           )}
-          {route.view === "trainer" && (
-            <TrainerScreen onStart={start} onNavigate={navigate} />
-          )}
+          {route.view === "tasks" &&
+            (currentTask ? (
+              <TaskScreen
+                key={`${currentTask.id}:${state.exam}`}
+                task={currentTask}
+                exam={state.exam}
+                onAnswer={recordAnswer}
+                onSolutionViewed={recordSolutionViewed}
+                onNext={nextTask}
+                onBack={back}
+              />
+            ) : (
+              <section className="empty-state">
+                <h1>Задания пока не опубликованы</h1>
+                <p>
+                  Выбери другую тему или тип задания из демонстрационного банка.
+                </p>
+                <button
+                  className="button button-primary"
+                  onClick={() => navigate("catalog")}
+                >
+                  Выбрать задания
+                </button>
+              </section>
+            ))}
           {route.view === "progress" && (
             <ProgressScreen
-              progress={progress}
-              onStart={start}
-              onReset={resetProgress}
+              state={state}
+              isPremium={isPremium}
+              onPremium={openPremium}
+              onStart={startPractice}
+            />
+          )}
+          {route.view === "trainer" && (
+            <TrainerScreen
+              state={state}
+              isPremium={isPremium}
+              onPremium={openPremium}
+              onTheory={openTheory}
+              onStart={startPractice}
             />
           )}
           {route.view === "profile" && (
-            <ProfileScreen progress={progress} onNavigate={navigate} />
-          )}
-          {route.view === "tasks" && (
-            <TaskScreen
-              key={route.taskIndex}
-              taskIndex={route.taskIndex}
-              records={progress.records}
-              exam={progress.exam}
-              onAnswer={recordAnswer}
-              onNext={(index) => start(index)}
-              onFinish={() => navigate("progress")}
-              onBack={back}
+            <ProfileScreen
+              state={state}
+              isPremium={isPremium}
+              demoAllowed={demoAllowed}
+              onToggleDemo={() => setDemoPremium((value) => !value)}
+              onExamChange={setExam}
+              onFontScale={setFontScale}
+              onClear={() => {
+                const success = clearLocalData();
+                if (success) setDemoPremium(false);
+                return success;
+              }}
+              onPremium={openPremium}
             />
           )}
+          {route.view === "premium" && <PremiumScreen onBack={back} />}
         </main>
-        <footer className="desktop-footer">
-          <span>Создаём уверенность в знаниях</span>
-          <span>
-            Точка, с которой всё начинается <Flower2 size={13} />
-          </span>
-        </footer>
       </div>
       <nav className="mobile-nav" aria-label="Нижняя навигация">
-        {navItems.map(({ view, label, icon: Icon }) => (
+        {navigation.slice(0, 4).map(({ view, label, icon: Icon }) => (
           <button
             key={view}
             className={activeView === view ? "active" : ""}
             aria-current={activeView === view ? "page" : undefined}
-            onClick={() => navigate(view)}
+            onClick={() => open(view)}
           >
-            <Icon size={21} strokeWidth={activeView === view ? 2 : 1.6} />
+            <Icon size={22} aria-hidden="true" />
             <span>{label}</span>
-            <i />
           </button>
         ))}
+        <button
+          className={
+            activeView === "trainer" ||
+            activeView === "profile" ||
+            activeView === "premium"
+              ? "active"
+              : ""
+          }
+          aria-haspopup="dialog"
+          aria-expanded={moreOpen}
+          onClick={() => setMoreOpen(true)}
+        >
+          <Menu size={22} />
+          <span>Ещё</span>
+        </button>
       </nav>
+      <dialog
+        ref={menuDialog}
+        className="navigation-dialog"
+        aria-labelledby="menu-title"
+        onClose={() => setMoreOpen(false)}
+        onCancel={() => setMoreOpen(false)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setMoreOpen(false);
+        }}
+      >
+        <div className="dialog-title">
+          <h2 id="menu-title">Разделы</h2>
+          <button
+            className="icon-button"
+            onClick={() => setMoreOpen(false)}
+            aria-label="Закрыть меню"
+          >
+            <X size={22} />
+          </button>
+        </div>
+        <nav aria-label="Дополнительные разделы">
+          {navigation.slice(4).map(({ view, label, icon: Icon }) => (
+            <button key={view} onClick={() => open(view)}>
+              <Icon size={23} />
+              {label}
+              <ChevronRight size={18} />
+            </button>
+          ))}
+          <button onClick={() => open("premium")}>
+            <Grid2X2 size={23} />
+            Premium
+            <ChevronRight size={18} />
+          </button>
+        </nav>
+      </dialog>
     </div>
   );
 }

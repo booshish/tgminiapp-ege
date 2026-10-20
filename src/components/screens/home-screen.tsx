@@ -2,171 +2,98 @@
 
 import {
   ArrowRight,
-  ArrowUpRight,
   BookOpen,
-  Clock3,
-  Leaf,
   ListChecks,
   Sparkles,
-  Sprout,
   TrendingUp,
 } from "lucide-react";
-import {
-  CoachIllustration,
-  LearningIllustration,
-} from "@/components/illustrations";
-import { ExamPicker, FeatureCard, Meter } from "@/components/ui";
+import { LearningIllustration } from "@/components/illustrations";
+import { ExamPicker, FeatureCard, PageIntro } from "@/components/ui";
 import type { Exam, View } from "@/lib/navigation";
 
-type HomeScreenProps = {
+type Props = {
   exam: Exam;
   onExamChange: (exam: Exam) => void;
-  onStart: (index?: number) => void;
+  onStart: () => void;
   onNavigate: (view: View) => void;
 };
 
-export function HomeScreen({
-  exam,
-  onExamChange,
-  onStart,
-  onNavigate,
-}: HomeScreenProps) {
+export function HomeScreen({ exam, onExamChange, onStart, onNavigate }: Props) {
   return (
     <>
-      <header className="home-intro">
-        <div>
-          <div className="greeting-topline">
-            <span className="eyebrow">ТВОЁ МЕСТО ДЛЯ РОСТА</span>
-            <span className="tiny-leaf">
-              <Leaf size={16} /> В своём темпе
-            </span>
-          </div>
-          <h1>
-            Привет!{" "}
-            <span className="greeting-spark">
-              <Sparkles size={27} strokeWidth={1.4} />
-            </span>
-          </h1>
-          <p>Каждый маленький шаг приближает к большой цели.</p>
-        </div>
-      </header>
-      <div className="home-hero-grid">
-        <section className="course-hero" aria-labelledby="course-title">
-          <div className="hero-copy">
-            <span className="hero-tag">
-              <span /> ТВОЙ УЧЕБНЫЙ МАРШРУТ
-            </span>
-            <h2 id="course-title">
-              {exam} <span>•</span> Математика
-            </h2>
-            <p className="hero-subtitle">Всё получится. Давай шаг за шагом.</p>
-            <div className="hero-progress">
-              <div className="hero-progress-label">
-                <span>Пример прогресса</span>
-                <strong>
-                  68<span>%</span>
-                </strong>
-              </div>
-              <Meter
-                value={68}
-                label="Пример учебного прогресса — 68 процентов"
-              />
-            </div>
+      <PageIntro eyebrow="ТОЧКА · МАТЕМАТИКА" title="Твоя подготовка">
+        Разбирай темы и решай задания в удобном порядке.
+      </PageIntro>
+      <section className="course-hero" aria-labelledby="course-title">
+        <div className="hero-copy">
+          <span className="tag">Теория и практика</span>
+          <h2 id="course-title">{exam} · Математика</h2>
+          <p>
+            Выбери тему для повторения или продолжи самостоятельную практику.
+          </p>
+          <div className="hero-actions">
+            <button className="button button-primary" onClick={onStart}>
+              Продолжить подготовку <ArrowRight size={18} />
+            </button>
             <button
-              className="button button-primary continue-button"
-              onClick={() => onStart()}
+              className="button button-secondary"
+              onClick={() => onNavigate("theory")}
             >
-              Продолжить обучение <ArrowRight size={18} />
+              Открыть теорию
             </button>
           </div>
-          <LearningIllustration className="hero-illustration" />
-          <span className="hero-orbit" />
-        </section>
-        <section className="daily-card">
-          <div className="daily-top">
-            <span className="daily-icon">
-              <Sprout size={22} strokeWidth={1.6} />
-            </span>
-            <span className="eyebrow">НЕМНОГО КАЖДЫЙ ДЕНЬ</span>
-          </div>
-          <h2>
-            Хороший день,
-            <br />
-            чтобы стать увереннее
-          </h2>
-          <p>
-            Не нужно знать всё сразу.
-            <br />
-            Начни с пяти небольших задач.
-          </p>
-          <div className="daily-meta">
-            <span>
-              <ListChecks size={16} /> 5 заданий
-            </span>
-            <span>
-              <Clock3 size={15} /> ≈ 10 минут
-            </span>
-          </div>
-          <button className="text-button" onClick={() => onStart(0)}>
-            Начать практику <ArrowUpRight size={17} />
-          </button>
-        </section>
-      </div>
+        </div>
+        <LearningIllustration className="hero-illustration" />
+      </section>
       <ExamPicker exam={exam} onChange={onExamChange} />
-      <section className="feature-section" aria-labelledby="start-title">
+      <section className="feature-section" aria-labelledby="sections-title">
         <div className="section-title">
-          <h2 id="start-title">С чего начнём?</h2>
-          <span>Всё нужное — под рукой</span>
+          <h2 id="sections-title">Материалы и возможности</h2>
         </div>
         <div className="feature-grid">
           <FeatureCard
             icon={BookOpen}
             label="Теория"
-            description="Сложное — простыми словами"
+            description="Объяснения, формулы и разобранные примеры"
             onClick={() => onNavigate("theory")}
           />
           <FeatureCard
             icon={ListChecks}
             label="Задания"
-            description="От знаний к практике"
-            onClick={() => onStart()}
+            description="Выбор темы, проверка ответа и разбор решения"
+            onClick={() => onNavigate("catalog")}
           />
           <FeatureCard
             icon={TrendingUp}
             label="Прогресс"
-            description="Замечай свои маленькие победы"
+            description="Результаты и история ответов в Premium"
             onClick={() => onNavigate("progress")}
           />
           <FeatureCard
             icon={Sparkles}
-            label="Персональный тренер"
-            description="Найди точку для роста"
+            label="Мой тренер"
+            description="Интерфейс повторения тем для Premium"
             onClick={() => onNavigate("trainer")}
             tone="feature-trainer"
           />
         </div>
       </section>
-      <section className="trainer-banner">
-        <div className="banner-illustration">
-          <CoachIllustration />
-        </div>
-        <div className="trainer-banner-copy">
-          <span className="eyebrow">УЧИТЬСЯ ЛЕГЧЕ С ПОДДЕРЖКОЙ</span>
-          <h2>У каждого свой путь. Найдём твой.</h2>
-          <p>Знакомься с персональным тренером — пока в деморежиме.</p>
+      <section className="premium-summary">
+        <div>
+          <span className="eyebrow">PREMIUM</span>
+          <h2>Больше информации о подготовке</h2>
+          <p>
+            Результаты, история ошибок и инструменты повторения. Бесплатная
+            теория и доступные задания остаются открытыми.
+          </p>
         </div>
         <button
           className="button button-secondary"
-          onClick={() => onNavigate("trainer")}
+          onClick={() => onNavigate("premium")}
         >
-          Познакомиться <ArrowRight size={17} />
+          Подробнее о Premium <ArrowRight size={18} />
         </button>
       </section>
-      <div className="home-footnote">
-        <Leaf size={14} />
-        <span>Без спешки и сравнений. Только ты и твой прогресс.</span>
-        <span className="footnote-line" />
-      </div>
     </>
   );
 }

@@ -1,81 +1,191 @@
 "use client";
 
-import {
-  ArrowRight,
-  CircleCheck,
-  GraduationCap,
-  LockKeyhole,
-  Sparkles,
-  UserRound,
-} from "lucide-react";
-import { PageIntro } from "@/components/ui";
-import type { DemoProgress } from "@/lib/demo";
-import type { View } from "@/lib/navigation";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight, ShieldCheck, UserRound } from "lucide-react";
+import { ExamPicker, PageIntro } from "@/components/ui";
+import type { LearningState } from "@/lib/learning-events";
+import type { Exam } from "@/lib/navigation";
 
-type ProfileScreenProps = {
-  progress: DemoProgress;
-  onNavigate: (view: View) => void;
+type Props = {
+  state: LearningState;
+  isPremium: boolean;
+  demoAllowed: boolean;
+  onToggleDemo: () => void;
+  onExamChange: (exam: Exam) => void;
+  onFontScale: (scale: LearningState["fontScale"]) => void;
+  onClear: () => boolean;
+  onPremium: () => void;
 };
 
-export function ProfileScreen({ progress, onNavigate }: ProfileScreenProps) {
-  const solved = new Set(
-    progress.records
-      .filter((record) => record.correct)
-      .map((record) => record.taskId),
-  ).size;
-
+export function ProfileScreen({
+  state,
+  isPremium,
+  demoAllowed,
+  onToggleDemo,
+  onExamChange,
+  onFontScale,
+  onClear,
+  onPremium,
+}: Props) {
+  const [confirm, setConfirm] = useState(false);
+  const [deleted, setDeleted] = useState(false);
+  const [deleteError, setDeleteError] = useState(false);
+  const cancel = useRef<HTMLButtonElement>(null);
+  const deleteButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (confirm) cancel.current?.focus();
+  }, [confirm]);
+  const cancelDeletion = () => {
+    setConfirm(false);
+    deleteButton.current?.focus();
+  };
   return (
     <>
-      <PageIntro eyebrow="ТВОЁ ПРОСТРАНСТВО" title="Профиль ученика">
-        Здесь начинается твоя история подготовки.
+      <PageIntro eyebrow="ЛИЧНОЕ ПРОСТРАНСТВО" title="Мой профиль">
+        Подготовка и настройки на этом устройстве.
       </PageIntro>
       <section className="profile-card">
-        <div className="profile-avatar">
-          <UserRound size={35} strokeWidth={1.5} />
+        <div className="profile-heading">
+          <span className="profile-avatar">
+            <UserRound size={30} />
+          </span>
+          <div>
+            <h2>Гостевой профиль</h2>
+            <p>Авторизация и синхронизация ещё не подключены.</p>
+          </div>
         </div>
-        <h2>Будем знакомы, ученик!</h2>
-        <span className="tag">Гостевой демопрофиль</span>
+        <h2>Моя подготовка</h2>
+        <ExamPicker exam={state.exam} onChange={onExamChange} />
+      </section>
+      <section className="settings-card">
+        <h2>Настройки</h2>
+        <div className="setting-row">
+          <div>
+            <h3>Размер текста</h3>
+            <p>Выбери удобный размер для чтения.</p>
+          </div>
+          <div className="segmented" role="group" aria-label="Размер текста">
+            <button
+              aria-pressed={state.fontScale === "standard"}
+              className={state.fontScale === "standard" ? "selected" : ""}
+              onClick={() => onFontScale("standard")}
+            >
+              Стандартный
+            </button>
+            <button
+              aria-pressed={state.fontScale === "large"}
+              className={state.fontScale === "large" ? "selected" : ""}
+              onClick={() => onFontScale("large")}
+            >
+              Крупный
+            </button>
+          </div>
+        </div>
+        <div className="setting-row">
+          <h3>Оформление</h3>
+          <span>Светлое</span>
+        </div>
+      </section>
+      <section className="settings-card">
+        <div className="section-title">
+          <h2>Подписка</h2>
+          <span className="tag">
+            {isPremium ? "Демонстрационный Premium" : "Free"}
+          </span>
+        </div>
         <p>
-          Пока можно заниматься без регистрации. Авторизация появится позже —
-          тогда твой прогресс сможет быть с тобой на разных устройствах.
+          {isPremium
+            ? "Открыт интерфейс Premium для разработки. Реальной подписки нет."
+            : "Теория, доступные задания, проверка и разбор после ответа открыты бесплатно."}
         </p>
-        <div className="profile-details">
-          <span>
-            <GraduationCap size={19} /> Твой экзамен
-          </span>
-          <strong>{progress.exam} · Математика</strong>
-        </div>
-        <div className="profile-details">
-          <span>
-            <CircleCheck size={19} /> Решено в демоверсии
-          </span>
-          <strong>{solved} из 5</strong>
-        </div>
-        <button
-          className="button button-primary"
-          onClick={() => onNavigate("catalog")}
-        >
-          Продолжить свой путь <ArrowRight size={18} />
+        <button className="text-button" onClick={onPremium}>
+          Подробнее о Premium <ArrowRight size={18} />
         </button>
       </section>
-      <section className="premium-card">
-        <span className="premium-icon">
-          <Sparkles size={24} />
-        </span>
-        <div>
-          <h2>
-            Premium <span className="tag">Скоро</span>
-          </h2>
-          <p>
-            Анализ ошибок, персональный план и повторение основ — в будущих
-            версиях. Тарифы пока не определены.
+      <section className="settings-card">
+        <h2>
+          <ShieldCheck size={22} /> Данные на устройстве
+        </h2>
+        <p>
+          Ответы, время проверки и факт просмотра решения хранятся в этом
+          браузере для будущего анализа. Имя, контакты и платёжные данные не
+          запрашиваются. На сервер эти события не отправляются.
+        </p>
+        <p>
+          Очистка браузера может удалить данные. Перенос между устройствами и
+          надёжная серверная сохранность пока недоступны.
+        </p>
+        <button
+          ref={deleteButton}
+          className="subtle-button"
+          onClick={() => {
+            setConfirm(true);
+            setDeleted(false);
+            setDeleteError(false);
+          }}
+        >
+          Удалить локальные данные
+        </button>
+        {confirm && (
+          <div
+            className="reset-confirm"
+            role="alertdialog"
+            aria-labelledby="delete-title"
+            aria-describedby="delete-description"
+            onKeyDown={(event) => {
+              if (event.key === "Escape") cancelDeletion();
+            }}
+          >
+            <h3 id="delete-title">Удалить данные этого браузера?</h3>
+            <p id="delete-description">
+              Ответы и выбранные настройки будут удалены с этого устройства.
+            </p>
+            <div>
+              <button
+                ref={cancel}
+                className="button button-secondary"
+                onClick={cancelDeletion}
+              >
+                Отмена
+              </button>
+              <button
+                className="button button-primary"
+                onClick={() => {
+                  const success = onClear();
+                  setConfirm(false);
+                  setDeleted(success);
+                  setDeleteError(!success);
+                  deleteButton.current?.focus();
+                }}
+              >
+                Удалить данные
+              </button>
+            </div>
+          </div>
+        )}
+        {deleted && <p role="status">Локальные данные удалены.</p>}
+        {deleteError && (
+          <p role="alert">
+            Браузер не разрешил удалить данные. Попробуй ещё раз или очисти
+            данные сайта в настройках браузера.
           </p>
-        </div>
-        <LockKeyhole size={19} className="muted" />
+        )}
       </section>
-      <p className="quiet-note">
-        Все разделы этой демоверсии открыты. Оплаты и подписок пока нет.
-      </p>
+      {demoAllowed && (
+        <section className="developer-panel">
+          <h2>Режим для разработчика</h2>
+          <p>
+            Переключатель показывает интерфейс Premium без покупки. Доступ
+            управляется в браузере и не защищён сервером. После перезагрузки
+            снова включается Free.
+          </p>
+          <button className="button button-secondary" onClick={onToggleDemo}>
+            {isPremium
+              ? "Вернуться в Free"
+              : "Включить демонстрационный Premium"}
+          </button>
+        </section>
+      )}
     </>
   );
 }

@@ -1,0 +1,73 @@
+name: Публикация Точки
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+  NEXT_PUBLIC_ENABLE_PREMIUM_DEMO: "false"
+
+jobs:
+  build:
+    name: Проверка и сборка
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Получить исходники
+        uses: actions/checkout@v7
+
+      - name: Настроить Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Проверить настройки GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Установить зависимости
+        run: npm ci
+
+      - name: Проверить код
+        run: npm run lint
+
+      - name: Проверить типы
+        run: npm run typecheck
+
+      - name: Проверить задания и сохранения
+        run: npm test
+
+      - name: Собрать сайт
+        run: npm run build:pages
+
+      - name: Подготовить сайт к публикации
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./out
+          include-hidden-files: true
+
+  deploy:
+    name: Обновить сайт
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Опубликовать сайт
+        id: deployment
+        uses: actions/deploy-pages@v5
