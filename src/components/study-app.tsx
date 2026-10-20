@@ -28,7 +28,8 @@ import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
 import { usePracticeSession } from "@/hooks/use-practice-session";
 import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
-import { tasks } from "@/lib/tasks";
+import { tasks, taskTopicLabels } from "@/lib/tasks";
+import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import {
   catalogListKey,
   emptyTaskState,
@@ -37,7 +38,7 @@ import {
 import { getExamLevelLabel } from "@/lib/exams";
 import { theoryTopics } from "@/lib/theory";
 import { viewTitles, type View } from "@/lib/navigation";
-import { getGameSummary } from "@/lib/gamification";
+import { getGameSummary, getSelfAssessment } from "@/lib/gamification";
 import "./appearance.css";
 
 const navigation: { view: View; label: string; icon: LucideIcon }[] = [
@@ -63,6 +64,7 @@ export function StudyApp() {
     setFocusMode,
     rememberTask,
     recordAnswer,
+    confirmSelfAssessment,
     recordSolutionViewed,
     clearLocalData,
   } = useDemoProgress();
@@ -360,11 +362,14 @@ export function StudyApp() {
                 examNumber={currentTask.examNumber}
                 topicTitle={
                   theoryTopics.find((topic) => topic.id === currentTask.topicId)
-                    ?.title ?? "Математика"
+                    ?.title ?? taskTopicLabels[currentTask.topicId] ?? "Математика"
                 }
                 value={session.states[currentTask.id] ?? emptyTaskState()}
                 onChange={practice.changeTask}
                 onAnswer={recordAnswer}
+                maxPrimaryScore={getTaskXPScoringRule(currentTask)?.maxPrimaryScore ?? null}
+                selfAssessment={getSelfAssessment(state.game, currentTask.id)}
+                onSelfAssessment={confirmSelfAssessment}
                 onSolutionViewed={recordSolutionViewed}
                 onNext={() => practice.move(1)}
                 canNext={

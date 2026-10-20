@@ -1,7 +1,13 @@
 import type { Exam, SubjectId } from "./tasks";
 import { checkTaskAnswer, prototypes, tasks } from "./tasks";
 import type { ExamLevel } from "./exams";
-import { emptyGameState, parseGameState, type GameState } from "./gamification";
+import {
+  emptyGameState,
+  parseGameState,
+  reconcileUnrewardedAttempts,
+  type GameState,
+} from "./gamification";
+import { getTaskXPScoringRule } from "./exam-scores";
 
 type EventContext = {
   id: string;
@@ -14,6 +20,7 @@ type EventContext = {
   level?: ExamLevel | null;
   examNumber?: number | null;
   examVersionId?: string;
+  examYear?: number;
   part?: 1 | 2 | null;
   answerFormat?: "short" | "extended";
 };
@@ -22,6 +29,7 @@ export type AnswerEvent = EventContext & {
   kind: "answer_checked";
   answer: string;
   correct: boolean;
+  solutionSeenBeforeCheck?: boolean;
 };
 
 export type SolutionEvent = EventContext & {
@@ -29,7 +37,13 @@ export type SolutionEvent = EventContext & {
   attemptId: string;
 };
 
-export type LearningEvent = AnswerEvent | SolutionEvent;
+export type SelfAssessmentEvent = EventContext & {
+  kind: "self_assessed";
+  score: number;
+  maxScore: number;
+};
+
+export type LearningEvent = AnswerEvent | SolutionEvent | SelfAssessmentEvent;
 
 export type ProgressRecord = {
   taskId: string;
@@ -146,7 +160,11 @@ function parseEventContext(
 ): EventContext | null {
   const task = tasks.find((candidate) => candidate.id === value.taskId);
   const hasExamMetadata = "level" in value || "examNumber" in value;
-  const hasScoringMetadata = "examVersionId" in value || "part" in value || "answerFormat" in value;
+  const hasScoringMetadata =
+    "examVersionId" in value ||
+    "part" in value ||
+    "answerFormat" in value ||
+    "examYear" in value;
   if (
     !task ||
     !isId(value.id) ||
@@ -157,13 +175,17 @@ function parseEventContext(
     (value.examType !== "ОГЭ" && value.examType !== "ЕГЭ") ||
     !(
       task.examType.includes(value.examType) ||
-      (!hasExamMetadata && !hasScoringMetadata && task.legacyExamTypes?.includes(value.examType))
+      (!hasExamMetadata &&
+        !hasScoringMetadata &&
+        task.legacyExamTypes?.includes(value.examType))
     ) ||
     (hasExamMetadata &&
       (value.level !== task.level || value.examNumber !== task.examNumber)) ||
     (hasScoringMetadata &&
-      (value.examVersionId !== task.examVersionId || value.part !== task.part ||
-       value.answerFormat !== (task.part === 2 ? "extended" : "short")))
+      (value.examVersionId !== task.examVersionId ||
+        value.part !== task.part ||
+        value.answerFormat !== (task.part === 2 ? "extended" : "short") ||
+        (value.examYear !== undefined && value.examYear !== task.examYear)))
   )
     return null;
   return {
@@ -177,11 +199,15 @@ function parseEventContext(
     ...(hasExamMetadata
       ? { level: task.level, examNumber: task.examNumber }
       : {}),
-    ...(hasScoringMetadata ? {
-      examVersionId: task.examVersionId,
-      part: task.part,
-      answerFormat: task.part === 2 ? "extended" as const : "short" as const,
-    } : {}),
+    ...(hasScoringMetadata
+      ? {
+          examVersionId: task.examVersionId,
+          part: task.part,
+          answerFormat:
+            task.part === 2 ? ("extended" as const) : ("short" as const),
+          ...(value.examYear !== undefined ? { examYear: task.examYear } : {}),
+        }
+      : {}),
   };
 }
 
@@ -206,6 +232,9 @@ function parseEvents(value: unknown): LearningEvent[] {
         kind: "answer_checked",
         answer: event.answer,
         correct: event.correct,
+        ...(event.solutionSeenBeforeCheck === true
+          ? { solutionSeenBeforeCheck: true }
+          : {}),
       });
     } else if (event.kind === "solution_viewed") {
       if (!isId(event.attemptId)) continue;
@@ -213,6 +242,30 @@ function parseEvents(value: unknown): LearningEvent[] {
         ...context,
         kind: "solution_viewed",
         attemptId: event.attemptId,
+      });
+    } else if (event.kind === "self_assessed") {
+      const task = tasks.find((candidate) => candidate.id === context.taskId)!;
+      const rule = getTaskXPScoringRule(task);
+      if (
+        task.part !== 2 ||
+        !rule ||
+        rule.part !== 2 ||
+        context.examVersionId !== task.examVersionId ||
+        context.examYear !== task.examYear ||
+        context.examNumber !== task.examNumber ||
+        context.level !== task.level ||
+        typeof event.score !== "number" ||
+        !Number.isInteger(event.score) ||
+        event.score < 0 ||
+        event.score > rule.maxPrimaryScore ||
+        event.maxScore !== rule.maxPrimaryScore
+      )
+        continue;
+      candidates.push({
+        ...context,
+        kind: "self_assessed",
+        score: event.score,
+        maxScore: event.maxScore as number,
       });
     } else continue;
   }
@@ -225,6 +278,11 @@ function parseEvents(value: unknown): LearningEvent[] {
   }
   const accepted = new Set<LearningEvent>(answers.values());
   const ids = new Set(answers.keys());
+  for (const event of candidates) {
+    if (event.kind !== "self_assessed" || ids.has(event.id)) continue;
+    accepted.add(event);
+    ids.add(event.id);
+  }
   for (const event of candidates) {
     if (event.kind !== "solution_viewed" || ids.has(event.id)) continue;
     const attempt = answers.get(event.attemptId);
@@ -282,7 +340,14 @@ export function parseLearningState(
     // Older v3 defaulted to system without an explicit choice. Restore the brand's light palette.
     themeExplicit: modern?.themeExplicit === true,
     focusMode: modern?.focusMode === true,
-    game: parseGameState(modern?.game, events),
+    game: reconcileUnrewardedAttempts(
+      parseGameState(modern?.game, events),
+      events,
+      (event) => {
+        const task = tasks.find((candidate) => candidate.id === event.taskId);
+        return task ? getTaskXPScoringRule(task) : null;
+      },
+    ),
   };
 }
 
@@ -343,6 +408,8 @@ export function getAnalytics(state: LearningState): LearningAnalytics {
       solutionViews += 1;
       continue;
     }
+    // Self-assessment is never an objectively checked answer or a recorded error.
+    if (event.kind !== "answer_checked") continue;
     attempts += 1;
     const topic = topicMap.get(event.topicId)!;
     topic.attempts += 1;

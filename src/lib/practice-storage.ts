@@ -8,6 +8,7 @@ import {
   type PracticeTaskState,
 } from "./practice";
 import { checkTaskAnswer, tasks } from "./tasks";
+import { getTaskXPScoringRule } from "./exam-scores";
 
 export const practiceStorageKey = "tochka-practice-v1";
 export const catalogScrollStorageKey = "tochka-catalog-scroll-v1";
@@ -78,6 +79,24 @@ function taskState(value: unknown, taskId: string): PracticeTaskState | null {
   if (!input || !task || typeof input.answer !== "string" || input.answer.length > 1024)
     return null;
   const restored = { ...emptyTaskState(), answer: input.answer };
+  if (task.part === 2) {
+    // The confirmed grade belongs to the game ledger. Only restore this screen's draft.
+    if (typeof input.selfSolutionVisible === "boolean")
+      restored.selfSolutionVisible = input.selfSolutionVisible;
+    if (typeof input.selfWork === "string" && input.selfWork.length <= 20_000)
+      restored.selfWork = input.selfWork;
+    const maximum = getTaskXPScoringRule(task)?.maxPrimaryScore;
+    if (
+      maximum !== undefined &&
+      typeof input.selfDraftScore === "number" &&
+      Number.isInteger(input.selfDraftScore) &&
+      input.selfDraftScore >= 0 && input.selfDraftScore <= maximum
+    )
+      restored.selfDraftScore = input.selfDraftScore;
+    return restored;
+  }
+  // Editing a wrong answer clears its current verdict, but cannot undo viewing the solution.
+  if (input.attempt === null) restored.solutionViewed = input.solutionViewed === true;
   const attempt = object(input.attempt);
   if (
     attempt &&
@@ -116,8 +135,15 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
       const record = object(value);
       const selected = selection(record?.selection);
       if (!record || !selected || record.id !== id || !Array.isArray(record.taskIds)) continue;
-      const available = new Set(practiceTasks(selected).map((task) => task.id));
-      const taskIds = [...new Set(record.taskIds.filter((taskId): taskId is string => typeof taskId === "string" && available.has(taskId)))];
+      const availableIds = practiceTasks(selected).map((task) => task.id);
+      const available = new Set(availableIds);
+      const savedIds = record.taskIds.filter((taskId): taskId is string =>
+        typeof taskId === "string" && available.has(taskId),
+      );
+      // Content updates can fill a formerly empty number. Keep saved order and append new variants.
+      const taskIds = record.invalidContext === true
+        ? []
+        : [...new Set([...savedIds, ...availableIds])];
       const sourceStates = object(record.states);
       const states: Record<string, PracticeTaskState> = {};
       for (const taskId of taskIds) {
@@ -127,12 +153,18 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
       const previousPosition = typeof record.lastPosition === "number" && Number.isInteger(record.lastPosition)
         ? record.lastPosition
         : 0;
+      const previousTaskId = record.taskIds[previousPosition];
+      const restoredPosition = typeof previousTaskId === "string"
+        ? taskIds.indexOf(previousTaskId)
+        : -1;
       sessions[id] = {
         id,
         selection: selected,
-        taskIds: record.invalidContext ? [] : taskIds,
+        taskIds,
         states,
-        lastPosition: Math.max(0, Math.min(previousPosition, taskIds.length - 1)),
+        lastPosition: restoredPosition >= 0
+          ? restoredPosition
+          : Math.max(0, Math.min(previousPosition, taskIds.length - 1)),
         ...(record.invalidContext === true ? { invalidContext: true } : {}),
       };
     }

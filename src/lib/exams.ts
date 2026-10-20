@@ -1,4 +1,5 @@
 import type { Exam } from "./navigation";
+import { getExamNumberXPScoringRule } from "./exam-scores";
 
 export type ExamLevel = "base" | "profile";
 export type SubjectId = "math";
@@ -13,8 +14,8 @@ export type ExamNumberDefinition = {
   title: string;
   part: ExamPart;
   answerFormat: "short" | "extended";
-  /** No primary score is asserted until the versioned official specification is reviewed. */
-  maxPrimaryScore: null;
+  maxPrimaryScore: number | null;
+  scoringStatus: "project-config" | "verified" | "not-configured";
 };
 export type ExamDefinition = {
   id: string;
@@ -33,7 +34,7 @@ export type ExamDefinition = {
 };
 
 const verificationNote =
-  "Предварительная структура 2026 года. Онлайн-сверка ФИПИ недоступна; нумерация, баллы и соответствие структуре 2027 года не подтверждены. Это авторские учебные примеры, а не официальный банк.";
+  "Предварительная структура 2026 года. Балльная сетка задана в настройках проекта; онлайн-сверка ФИПИ недоступна. Соответствие структуре 2027 года не подтверждено. Это авторские учебные примеры, а не официальный банк.";
 const ogeSource = {
   title: "ФИПИ: демоверсии, спецификации и кодификаторы ОГЭ",
   url: "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
@@ -44,6 +45,7 @@ const egeSource = {
 };
 
 function numbers(
+  examVersionId: string,
   count: number,
   firstPartEnd: number,
   labels: Record<number, string>,
@@ -53,7 +55,8 @@ function numbers(
     title: labels[index + 1] ?? `Задание №${index + 1}`,
     part: index < firstPartEnd ? 1 : 2,
     answerFormat: index < firstPartEnd ? "short" : "extended",
-    maxPrimaryScore: null,
+    maxPrimaryScore: getExamNumberXPScoringRule(examVersionId, index + 1)?.maxPrimaryScore ?? null,
+    scoringStatus: getExamNumberXPScoringRule(examVersionId, index + 1)?.status ?? "not-configured",
   }));
 }
 
@@ -68,7 +71,7 @@ export const examDefinitions: ExamDefinition[] = [
     versionId: "oge-math-2026",
     available: true,
     title: "ОГЭ · Математика",
-    numbers: numbers(25, 19, {
+    numbers: numbers("oge-math-2026", 25, 19, {
       1: "Практические задачи",
       2: "Практические задачи",
       3: "Практические задачи",
@@ -110,7 +113,7 @@ export const examDefinitions: ExamDefinition[] = [
     availabilityNote:
       "Базовый уровень временно недоступен: сначала проверим структуру и подготовим проверенный контент. Старые локальные события сохраняются.",
     title: "ЕГЭ · Математика · Базовый уровень",
-    numbers: numbers(21, 21, {
+    numbers: numbers("ege-math-base-2026", 21, 21, {
       5: "Вероятность",
       13: "Числовые вычисления",
       14: "Степени и корни",
@@ -130,7 +133,7 @@ export const examDefinitions: ExamDefinition[] = [
     versionId: "ege-math-profile-2026",
     available: true,
     title: "ЕГЭ · Математика · Профильный уровень",
-    numbers: numbers(19, 12, {
+    numbers: numbers("ege-math-profile-2026", 19, 12, {
       1: "Планиметрия",
       2: "Векторы",
       3: "Стереометрия",

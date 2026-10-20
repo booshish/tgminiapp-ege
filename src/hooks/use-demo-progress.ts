@@ -9,9 +9,17 @@ import {
   type LearningState,
   type AnswerEvent,
   type SolutionEvent,
+  type SelfAssessmentEvent,
 } from "@/lib/learning-events";
 import { checkTaskAnswer, type Task } from "@/lib/tasks";
-import { emptyGameState, recordGameAttempt } from "@/lib/gamification";
+import {
+  emptyGameState,
+  recordGameAttempt,
+  recordSelfAssessment,
+  getSelfAssessment,
+  getAttemptXPAward,
+  getGameSummary,
+} from "@/lib/gamification";
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import type { Exam } from "@/lib/navigation";
 
@@ -28,17 +36,42 @@ export function useDemoProgress() {
   const [storageWarning, setStorageWarning] = useState(false);
   const initialReadAttempted = useRef(false);
   const canPersist = useRef(false);
+  const pendingWrite = useRef(false);
   const stateRef = useRef(state);
   const updateState = useCallback(
     (update: (previous: LearningState) => LearningState) => {
+      // Refresh the canonical local ledger before a mutation; other tabs may have changed it.
+      if (canPersist.current && !pendingWrite.current) {
+        try {
+          const raw = window.localStorage.getItem(storageKey);
+          if (raw) {
+            const value: unknown = JSON.parse(raw);
+            if (
+              value &&
+              typeof value === "object" &&
+              "version" in value &&
+              (value.version === 2 || value.version === 3)
+            ) {
+              stateRef.current = parseLearningState(raw);
+            }
+          }
+        } catch {
+          setStorageWarning(true);
+        }
+      }
       const next = update(stateRef.current);
-      if (next === stateRef.current) return;
+      if (next === stateRef.current) {
+        setState(next);
+        return;
+      }
       stateRef.current = next;
       // Commit events and their XP ledger together before the user can reload.
       if (canPersist.current) {
         try {
           window.localStorage.setItem(storageKey, JSON.stringify(next));
+          pendingWrite.current = false;
         } catch {
+          pendingWrite.current = true;
           setStorageWarning(true);
         }
       }
@@ -70,6 +103,12 @@ export function useDemoProgress() {
       stateRef.current = restored;
       setState(restored);
       canPersist.current = true;
+      try {
+        window.localStorage.setItem(storageKey, JSON.stringify(restored));
+      } catch {
+        pendingWrite.current = true;
+        setStorageWarning(true);
+      }
     } catch {
       canPersist.current = false;
       setStorageWarning(true);
@@ -77,13 +116,41 @@ export function useDemoProgress() {
     setReady(true);
   }, []);
   useEffect(() => {
-    if (!ready || !canPersist.current) return;
-    try {
-      window.localStorage.setItem(storageKey, JSON.stringify(state));
-    } catch {
-      setStorageWarning(true);
-    }
-  }, [state, ready]);
+    const sync = (event: StorageEvent) => {
+      if (
+        (event.key !== storageKey && event.key !== null) ||
+        !canPersist.current ||
+        pendingWrite.current
+      )
+        return;
+      try {
+        if (event.newValue) {
+          const value: unknown = JSON.parse(event.newValue);
+          if (
+            !value ||
+            typeof value !== "object" ||
+            !("version" in value) ||
+            (value.version !== 2 && value.version !== 3)
+          )
+            throw new Error("Invalid shared state");
+        }
+        const restored = event.newValue
+          ? parseLearningState(event.newValue)
+          : {
+              ...emptyLearningState,
+              events: [],
+              legacyRecords: [],
+              game: emptyGameState(),
+            };
+        stateRef.current = restored;
+        setState(restored);
+      } catch {
+        setStorageWarning(true);
+      }
+    };
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
+  }, []);
 
   const setExam = useCallback(
     (exam: Exam) =>
@@ -117,8 +184,14 @@ export function useDemoProgress() {
     [updateState],
   );
   const recordAnswer = useCallback(
-    (task: Task, answer: string, correct: boolean) => {
+    (
+      task: Task,
+      answer: string,
+      correct: boolean,
+      solutionSeenBeforeCheck = false,
+    ) => {
       const id = eventId();
+      let xpAwarded = 0;
       const checked = checkTaskAnswer(answer, task.answerRule);
       if (!checked.valid || checked.correct !== correct)
         throw new Error("Invalid checked answer");
@@ -134,24 +207,81 @@ export function useDemoProgress() {
           level: task.level,
           examNumber: task.examNumber,
           examVersionId: task.examVersionId,
+          examYear: task.examYear,
           part: task.part,
           answerFormat: task.part === 2 ? "extended" : "short",
           createdAt: new Date().toISOString(),
           answer: answer.trim(),
           correct,
+          ...(solutionSeenBeforeCheck ? { solutionSeenBeforeCheck: true } : {}),
         };
+        const game = recordGameAttempt(
+          previous.game,
+          event,
+          previous.events,
+          getTaskXPScoringRule(task),
+        );
+        xpAwarded = getAttemptXPAward(game, id);
         return {
           ...previous,
           events: [...previous.events, event],
-          game: recordGameAttempt(
-            previous.game,
-            event,
-            previous.events,
-            getTaskXPScoringRule(task),
-          ),
+          game,
         };
       });
-      return id;
+      return { id, xpAwarded };
+    },
+    [updateState],
+  );
+  const confirmSelfAssessment = useCallback(
+    (task: Task, score: number) => {
+      const rule = getTaskXPScoringRule(task);
+      if (
+        !rule ||
+        task.part !== 2 ||
+        !Number.isInteger(score) ||
+        score < 0 ||
+        score > rule.maxPrimaryScore
+      )
+        throw new Error("Invalid self-assessment");
+      let result = { score, maxScore: rule.maxPrimaryScore, deltaXP: 0 };
+      updateState((previous) => {
+        const current = getSelfAssessment(previous.game, task.id);
+        if (current?.score === score) return previous;
+        const event: SelfAssessmentEvent = {
+          kind: "self_assessed",
+          id: eventId(),
+          taskId: task.id,
+          topicId: task.topicId,
+          prototypeId: task.prototypeId,
+          examType: task.examType[0],
+          subjectId: task.subjectId,
+          level: task.level,
+          examNumber: task.examNumber,
+          examVersionId: task.examVersionId,
+          examYear: task.examYear,
+          part: 2,
+          answerFormat: "extended",
+          createdAt: new Date().toISOString(),
+          score,
+          maxScore: rule.maxPrimaryScore,
+        };
+        const game = recordSelfAssessment(
+          previous.game,
+          event,
+          previous.events,
+          rule,
+        );
+        if (game === previous.game)
+          throw new Error("Self-assessment could not be recorded");
+        result = {
+          ...result,
+          deltaXP:
+            getGameSummary(game).totalXP -
+            getGameSummary(previous.game).totalXP,
+        };
+        return { ...previous, events: [...previous.events, event], game };
+      });
+      return result;
     },
     [updateState],
   );
@@ -183,6 +313,9 @@ export function useDemoProgress() {
           ...(attempt.examVersionId
             ? {
                 examVersionId: attempt.examVersionId,
+                ...(attempt.examYear !== undefined
+                  ? { examYear: attempt.examYear }
+                  : {}),
                 part: attempt.part,
                 answerFormat: attempt.answerFormat,
               }
@@ -217,6 +350,15 @@ export function useDemoProgress() {
       game: emptyGameState(),
     };
     stateRef.current = cleared;
+    pendingWrite.current = false;
+    try {
+      window.localStorage.setItem(storageKey, JSON.stringify(cleared));
+    } catch {
+      pendingWrite.current = true;
+      setStorageWarning(true);
+      setState(cleared);
+      return false;
+    }
     setState(cleared);
     return true;
   }, []);
@@ -231,6 +373,7 @@ export function useDemoProgress() {
     setFocusMode,
     rememberTask,
     recordAnswer,
+    confirmSelfAssessment,
     recordSolutionViewed,
     clearLocalData,
   };

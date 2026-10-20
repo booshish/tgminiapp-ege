@@ -18,6 +18,10 @@ export type PracticeTaskState = {
   attempt: { id: string; correct: boolean } | null;
   solutionVisible: boolean;
   solutionViewed: boolean;
+  /** Extended-response drafts never represent an automatically checked result. */
+  selfSolutionVisible?: boolean;
+  selfDraftScore?: number;
+  selfWork?: string;
 };
 
 export type PracticeSession = {

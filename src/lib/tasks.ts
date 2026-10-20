@@ -1,10 +1,11 @@
 import type { Exam } from "./navigation";
 import { getExamDefinition, type ExamLevel, type ExamPart } from "./exams";
+import { getExamNumberXPScoringRule } from "./exam-scores";
 
 export type { Exam } from "./navigation";
 export type SubjectId = "math";
 export type AnswerRule =
-  { type: "number"; value: string } | { type: "set"; values: string[] };
+  { type: "number"; value: string } | { type: "set"; values: string[] } | { type: "self" };
 
 export type Task = {
   id: string;
@@ -19,15 +20,15 @@ export type Task = {
   /** null means a fundamental school example, not an official numbered prototype. */
   part: ExamPart | null;
   difficulty: "foundation" | "standard" | "advanced";
-  answerFormat: "number" | "set";
+  answerFormat: "number" | "set" | "extended";
   source: {
     kind: "author";
     label: string;
     revision: number;
   };
   scoring: {
-    status: "pending-official-verification" | "not-applicable";
-    maxPrimaryScore: null;
+    status: "project-config" | "verified" | "pending-official-verification" | "not-applicable";
+    maxPrimaryScore: number | null;
   };
   /** Historical event compatibility only; never used for selecting tasks. */
   legacyExamTypes?: Exam[];
@@ -38,6 +39,15 @@ export type Task = {
   answerRule: AnswerRule;
   solution: { text: string; latex?: string }[];
   answerDisplay: string;
+  /** Author-written check list, never labelled as official assessment criteria. */
+  selfCheckNotes?: string[];
+  criteriaSourceUrl?: string;
+};
+
+/** Task topics may exist before a corresponding theory article is published. */
+export const taskTopicLabels: Record<string, string> = {
+  "trigonometric-equations": "Тригонометрические уравнения",
+  "number-theory": "Теория чисел",
 };
 
 export const prototypes = [
@@ -86,6 +96,10 @@ export const prototypes = [
     topicId: "probability",
     title: "Равновозможные исходы",
   },
+  { id: "quadratic-extended", topicId: "quadratic-equations", title: "Уравнение с развёрнутым решением" },
+  { id: "trig-extended", topicId: "trigonometric-equations", title: "Тригонометрическое уравнение и отбор корней" },
+  { id: "geometry-extended", topicId: "geometry", title: "Геометрическое доказательство и вычисление" },
+  { id: "integer-pairs-extended", topicId: "number-theory", title: "Уравнение в натуральных числах" },
 ];
 
 type DerivedTaskMetadata =
@@ -108,6 +122,9 @@ function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
   const number = definition.numbers.find(
     (entry) => entry.number === data.examNumber,
   );
+  const scoringRule = number
+    ? getExamNumberXPScoringRule(definition.versionId, number.number)
+    : null;
   return {
     ...data,
     subjectId: "math",
@@ -115,11 +132,11 @@ function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
     examVersionId: definition.versionId,
     part: number?.part ?? null,
     difficulty: number ? (number.part === 1 ? "standard" : "advanced") : "foundation",
-    answerFormat: data.answerRule.type,
+    answerFormat: data.answerRule.type === "self" ? "extended" : data.answerRule.type,
     source: { kind: "author", label: "Авторская демозадача", revision: 1 },
     scoring: {
-      status: number ? "pending-official-verification" : "not-applicable",
-      maxPrimaryScore: null,
+      status: scoringRule?.status ?? (number ? "pending-official-verification" : "not-applicable"),
+      maxPrimaryScore: scoringRule?.maxPrimaryScore ?? null,
     },
   };
 }
@@ -1074,6 +1091,105 @@ export const tasks: Task[] = [
       },
     ],
   }),
+  defineTask({
+    id: "oge20-quadratic-self",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 20,
+    topicId: "quadratic-equations",
+    prototypeId: "quadratic-extended",
+    title: "Квадратное уравнение с обоснованием",
+    prompt: "Решите уравнение. Запишите преобразования и объясните, почему найдены все корни.",
+    conditionLatex: "x^2-5x+6=0",
+    answerRule: { type: "self" },
+    answerDisplay: "2; 3",
+    solution: [
+      { text: "Разложим квадратный трёхчлен на множители: нужны числа, сумма которых равна 5, а произведение — 6.", latex: "x^2-5x+6=(x-2)(x-3)" },
+      { text: "Произведение равно нулю тогда и только тогда, когда хотя бы один из множителей равен нулю.", latex: "(x-2)(x-3)=0\\iff x=2\\;\\text{или}\\;x=3" },
+      { text: "Оба значения подходят при подстановке. Разложение равносильно исходному уравнению, поэтому других корней нет.", latex: "2^2-5\\cdot2+6=0,\\qquad3^2-5\\cdot3+6=0" },
+    ],
+    selfCheckNotes: [
+      "Сверь разложение на множители или другой корректный способ решения.",
+      "Проверь, что записаны оба корня и объяснено отсутствие других.",
+      "Оцени полноту своего решения самостоятельно. Это авторские ориентиры, а не официальная таблица критериев.",
+    ],
+    criteriaSourceUrl: "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+  }),
+  defineTask({
+    id: "ege13-trigonometric-self",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 13,
+    topicId: "trigonometric-equations",
+    prototypeId: "trig-extended",
+    title: "Тригонометрическое уравнение и отбор корней",
+    prompt: "а) Решите уравнение. б) Найдите все его корни, принадлежащие отрезку [0; π]. Запишите полное решение.",
+    conditionLatex: "2\\sin^2x-3\\sin x+1=0",
+    answerRule: { type: "self" },
+    answerDisplay: "На [0; π]: π/6; π/2; 5π/6",
+    solution: [
+      { text: "Разложим выражение как квадратный трёхчлен относительно синуса.", latex: "(2\\sin x-1)(\\sin x-1)=0" },
+      { text: "Первый множитель даёт две серии корней.", latex: "\\sin x=\\frac12\\iff x=\\frac\\pi6+2\\pi n\\;\\text{или}\\;x=\\frac{5\\pi}6+2\\pi n,\\quad n\\in\\mathbb Z" },
+      { text: "Второй множитель даёт ещё одну серию.", latex: "\\sin x=1\\iff x=\\frac\\pi2+2\\pi n,\\quad n\\in\\mathbb Z" },
+      { text: "На отрезке от 0 до π из каждой серии подходит только значение при n = 0. При n ≥ 1 значения больше π, а при n ≤ −1 — меньше 0.", latex: "x\\in\\left\\{\\frac\\pi6;\\frac\\pi2;\\frac{5\\pi}6\\right\\}" },
+    ],
+    selfCheckNotes: [
+      "Сверь все три серии корней общего решения и указание целого параметра.",
+      "Проверь отбор на заданном отрезке и обоснование того, что другие значения не подходят.",
+      "Оцени своё оформление самостоятельно. Эти ориентиры авторские и не заменяют проверенные критерии ФИПИ.",
+    ],
+    criteriaSourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+  }),
+  defineTask({
+    id: "ege17-triangle-proof-self",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 17,
+    topicId: "geometry",
+    prototypeId: "geometry-extended",
+    title: "Доказательство и площадь треугольника",
+    prompt: "В равнобедренном треугольнике ABC стороны AB и AC равны 13, а BC = 10. Точка M — середина BC. а) Докажите, что AM перпендикулярна BC. б) Найдите площадь треугольника ABC.",
+    answerRule: { type: "self" },
+    answerDisplay: "а) AM ⟂ BC; б) 60",
+    solution: [
+      { text: "Треугольники ABM и ACM равны по трём сторонам: AB = AC по условию, BM = MC по определению середины, AM — общая сторона." },
+      { text: "Поэтому углы BMA и AMC равны. Эти углы смежные, так что каждый равен 90°. Значит, AM перпендикулярна BC." },
+      { text: "Из того, что M — середина BC, находим BM. В прямоугольном треугольнике ABM применим теорему Пифагора.", latex: "BM=5,\\qquad AM=\\sqrt{13^2-5^2}=\\sqrt{144}=12" },
+      { text: "AM — высота к основанию BC. Найдём площадь.", latex: "S_{ABC}=\\frac12\\cdot BC\\cdot AM=\\frac12\\cdot10\\cdot12=60" },
+    ],
+    selfCheckNotes: [
+      "Сверь доказательство перпендикулярности: ссылка на свойство равнобедренного треугольника тоже допустима при корректном обосновании.",
+      "Проверь вычисление высоты и применение формулы площади.",
+      "Выбери самооценку по полноте собственного решения; это не объективная проверка и не официальный разбор критериев.",
+    ],
+    criteriaSourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+  }),
+  defineTask({
+    id: "ege19-integer-pairs-self",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 19,
+    topicId: "number-theory",
+    prototypeId: "integer-pairs-extended",
+    title: "Пары натуральных чисел",
+    prompt: "Найдите все пары натуральных чисел x и y, где x ≤ y, удовлетворяющие уравнению. Могут ли x и y быть равными? Обоснуйте полноту ответа.",
+    conditionLatex: "xy=x+y+11",
+    answerRule: { type: "self" },
+    answerDisplay: "(2; 13), (3; 7), (4; 5); равных чисел нет",
+    solution: [
+      { text: "Если x = 1, то исходное равенство превращается в y = y + 12, что невозможно. Аналогично y ≠ 1. Поэтому оба числа не меньше 2." },
+      { text: "Перенесём линейные слагаемые влево и прибавим 1 к обеим частям, чтобы получить произведение.", latex: "xy-x-y=11\\iff(x-1)(y-1)=12" },
+      { text: "Положительные целые множители x − 1 и y − 1 расположены по возрастанию. Первому достаточно перебрать значения не больше √12, то есть 1, 2, 3.", latex: "(x-1;y-1)\\in\\{(1;12),(2;6),(3;4)\\}" },
+      { text: "Прибавим единицу к каждому множителю. Получаем все пары; преобразования равносильны, поэтому потерянных решений нет.", latex: "(x;y)\\in\\{(2;13),(3;7),(4;5)\\}" },
+      { text: "При x = y квадрат целого числа должен был бы равняться 12. Но 12 находится строго между 9 и 16, так что это невозможно.", latex: "(x-1)^2=12,\\qquad3^2<12<4^2" },
+    ],
+    selfCheckNotes: [
+      "Проверь переход к произведению и объяснение положительности множителей.",
+      "Сверь перебор делителей, все три пары и доказательство того, что других пар нет.",
+      "Проверь отдельный ответ о равных числах. Выбранные баллы — твоя самооценка; эти пояснения авторские, а не официальные критерии.",
+    ],
+    criteriaSourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+  }),
 ];
 
 export type PracticeTaskFilter = {
@@ -1162,6 +1278,9 @@ export function checkTaskAnswer(
   input: string,
   rule: AnswerRule,
 ): { valid: boolean; correct: boolean; message?: string } {
+  if (rule.type === "self") {
+    return { valid: false, correct: false, message: "Развёрнутое решение оценивается самостоятельно, без автоматической проверки." };
+  }
   if (typeof input !== "string" || input.length > 1024) {
     return {
       valid: false,

@@ -4,7 +4,7 @@ import { ArrowRight, BookOpen, Hash, ListFilter } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import { getExamDefinition } from "@/lib/exams";
 import type { CatalogSelection } from "@/lib/practice";
-import { getPracticeTasks, prototypes } from "@/lib/tasks";
+import { getPracticeTasks, prototypes, taskTopicLabels } from "@/lib/tasks";
 import { theoryTopics } from "@/lib/theory";
 import "@/components/catalog-screen.css";
 
@@ -31,9 +31,25 @@ export function CatalogScreen({
     subjectId: selection.subjectId,
     level: selection.level,
   };
-  const availableTopics = theoryTopics.filter((topic) =>
-    topic.examType.includes(selection.exam),
-  );
+  const availableTasks = getPracticeTasks(filter);
+  const availableTopics = theoryTopics
+    .filter((topic) => topic.examType.includes(selection.exam))
+    .map((topic) => ({
+      id: topic.id,
+      title: topic.title,
+      description: topic.description,
+      hasTheory: true,
+    }));
+  // Published practice can precede a theory article; keep those topics discoverable.
+  for (const task of availableTasks) {
+    if (availableTopics.some((topic) => topic.id === task.topicId)) continue;
+    availableTopics.push({
+      id: task.topicId,
+      title: taskTopicLabels[task.topicId] ?? task.title,
+      description: "Авторские задания · Самопроверка по образцу решения.",
+      hasTheory: false,
+    });
+  }
   const availablePrototypes = prototypes.filter(
     (prototype) =>
       getPracticeTasks({ ...filter, prototypeId: prototype.id }).length > 0,
@@ -212,7 +228,9 @@ export function CatalogScreen({
                         </span>
                         <span className="catalog-card-title">{item.title}</span>
                         <span className="catalog-card-status">
-                          {hasTasks ? "Открыть практику" : "Задания скоро появятся"}
+                          {hasTasks
+                            ? item.part === 2 ? "Самопроверка" : "Открыть практику"
+                            : "Задания скоро появятся"}
                         </span>
                       </button>
                     );
@@ -220,9 +238,8 @@ export function CatalogScreen({
                 </div>
                 {part === 2 && (
                   <p className="catalog-part-note">
-                    Проверка развёрнутых решений в разработке. Пока здесь
-                    обозначены предварительные номера; задачи появятся после
-                    подготовки материалов.
+                    Развёрнутые решения проверяешь самостоятельно по образцу.
+                    Самооценка не является автоматической оценкой экзамена.
                   </p>
                 )}
               </section>
@@ -280,7 +297,9 @@ export function CatalogScreen({
                     {topic.description}
                   </span>
                   <span className="catalog-card-status">
-                    {hasTasks ? "Открыть практику" : "Задания скоро появятся"}
+                    {hasTasks
+                      ? topic.hasTheory ? "Открыть практику" : "Самопроверка"
+                      : "Задания скоро появятся"}
                   </span>
                 </button>
               );
@@ -299,7 +318,12 @@ export function CatalogScreen({
           type="button"
           className="button button-secondary"
           onClick={() =>
-            onTheory(selection.mode === "topic" ? selection.topicId : undefined)
+            onTheory(
+              selection.mode === "topic" &&
+              theoryTopics.some((topic) => topic.id === selection.topicId)
+                ? selection.topicId
+                : undefined,
+            )
           }
         >
           <BookOpen size={19} aria-hidden="true" /> Открыть теорию

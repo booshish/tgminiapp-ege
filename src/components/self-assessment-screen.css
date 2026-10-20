@@ -1,0 +1,171 @@
+.self-work-field > label {
+  display: block;
+  margin-bottom: 11px;
+  color: var(--ink);
+}
+
+.self-work-field textarea {
+  display: block;
+  width: 100%;
+  min-height: 145px;
+  padding: 14px 16px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface, #fff);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.self-work-field textarea:focus-visible {
+  outline: 3px solid var(--sage);
+  outline-offset: 3px;
+}
+
+.self-work-field textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.self-saved-grade {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 13px;
+  background: var(--light-green);
+  color: var(--ink);
+}
+
+.self-saved-grade svg {
+  margin-top: 3px;
+  color: var(--sage-dark);
+}
+
+.self-saved-grade strong {
+  font-weight: 650;
+}
+
+.self-saved-grade p,
+.self-author-note,
+.self-check-notes > p,
+.self-score-explanation,
+.self-criteria-link > span,
+.self-local-note {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.self-author-note {
+  margin: -10px 0 24px;
+}
+
+.self-check-notes {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.self-check-notes h3 {
+  margin-bottom: 7px;
+}
+
+.self-check-notes ul {
+  padding-left: 22px;
+  color: var(--ink);
+}
+
+.self-check-notes li + li {
+  margin-top: 10px;
+}
+
+.self-criteria-link {
+  margin-top: 20px;
+  overflow-wrap: anywhere;
+}
+
+.self-criteria-link > span {
+  display: block;
+  margin-top: 7px;
+}
+
+.self-score-picker {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.self-score-picker legend {
+  margin-bottom: 13px;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.self-score-picker > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.self-score-picker button {
+  min-width: 49px;
+  min-height: 50px;
+  padding: 10px 13px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--surface, #fff);
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.self-score-picker button.selected {
+  border-color: var(--sage);
+  background: var(--light-green);
+  color: var(--sage-dark);
+  box-shadow: 0 0 0 1px var(--sage);
+}
+
+.self-score-preview {
+  margin-top: 22px;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.self-score-explanation {
+  margin: 10px 0 20px;
+}
+
+.self-assessment-feedback {
+  min-height: 1.6em;
+  margin-top: 15px;
+  color: var(--sage-dark);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.self-sequence-navigation {
+  display: grid;
+  gap: 12px;
+}
+
+.self-local-note {
+  margin-top: 19px;
+}
+
+@media (max-width: 380px) {
+  .self-score-picker > div {
+    gap: 5px;
+  }
+
+  .self-score-picker button {
+    min-width: 44px;
+    padding-inline: 10px;
+  }
+}

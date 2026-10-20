@@ -1,21 +1,34 @@
 import { gameConfig, getGameLevel, getGameRank } from "./game-config";
+import type { XPScoringRule } from "./scoring-types";
 
-/** Deliberately generic subject IDs: future subjects need no changes to the XP engine. */
-export type GameAttempt = {
-  kind: "answer_checked";
+export type { XPScoringRule } from "./scoring-types";
+/** Compatibility name for previously stored, officially reviewed rule snapshots. */
+export type VerifiedXPScoringRule = XPScoringRule;
+
+type GameContext = {
   id: string;
   taskId: string;
   subjectId: string;
   createdAt: string;
-  correct: boolean;
   examType?: string;
   examNumber?: number | null;
   level?: string | null;
   examVersionId?: string;
+  examYear?: number;
   part?: 1 | 2 | null;
   answerFormat?: "short" | "extended";
 };
-export type GameLearningEvent = GameAttempt | {
+export type GameAttempt = GameContext & {
+  kind: "answer_checked";
+  correct: boolean;
+  solutionSeenBeforeCheck?: boolean;
+};
+export type GameSelfAssessment = GameContext & {
+  kind: "self_assessed";
+  score: number;
+  maxScore: number;
+};
+export type GameLearningEvent = GameAttempt | GameSelfAssessment | {
   kind: "solution_viewed";
   id: string;
   taskId: string;
@@ -24,32 +37,26 @@ export type GameLearningEvent = GameAttempt | {
   attemptId: string;
 };
 
-/** No production rule is verified until the actual official document has been checked. */
-export type VerifiedXPScoringRule = {
-  status: "verified";
-  ruleId: string;
-  examVersionId: string;
-  subjectId: string;
-  examType: string;
-  examNumber: number;
-  level: string | null;
-  part: 1;
-  answerFormat: "short";
-  maxPrimaryScore: number;
-  sourceUrl: string;
-  verifiedAt: string;
-};
-export type XPEvent = {
+type XPEventContext = {
   id: string;
   attemptId: string;
   taskId: string;
   subjectId: string;
+  /** Signed change to the one actual balance, not two separate subject/global awards. */
   xp: number;
   createdAt: string;
+  /** Corrections to self-assessment stay on the original positive credit's local day. */
   localDay: string;
   timezoneOffsetMinutes: number;
-  scoring: VerifiedXPScoringRule;
+  scoring: XPScoringRule;
 };
+export type AutomaticXPEvent = XPEventContext & { kind: "automatic" };
+export type SelfAssessmentXPEvent = XPEventContext & {
+  kind: "self_assessment";
+  score: number;
+  previousScore: number;
+};
+export type XPEvent = AutomaticXPEvent | SelfAssessmentXPEvent;
 export type GameCheck = {
   attemptId: string;
   taskId: string;
@@ -57,11 +64,7 @@ export type GameCheck = {
   correct: boolean;
   createdAt: string;
 };
-export type GameState = {
-  version: 1;
-  xpEvents: XPEvent[];
-  checks: GameCheck[];
-};
+export type GameState = { version: 2; xpEvents: XPEvent[]; checks: GameCheck[] };
 export type GameLevel = ReturnType<typeof getGameLevel>;
 export type SubjectGameSummary = {
   subjectId: string;
@@ -75,10 +78,12 @@ export type SubjectGameSummary = {
 export type GameSummary = Omit<SubjectGameSummary, "subjectId"> & {
   subjects: SubjectGameSummary[];
 };
+type DayOptions = { timezoneOffsetMinutes?: number };
 
+// Kept for source compatibility; the actual ledger is stored atomically inside LearningState.
 export const gameStorageKey = "tochka-game-v1";
 export function emptyGameState(): GameState {
-  return { version: 1, xpEvents: [], checks: [] };
+  return { version: 2, xpEvents: [], checks: [] };
 }
 function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -88,156 +93,297 @@ function isId(value: unknown): value is string {
 }
 function isDate(value: unknown): value is string {
   if (typeof value !== "string") return false;
-  // Only canonical UTC timestamps, as emitted by Date.toISOString().
   const date = new Date(value);
   return Number.isFinite(date.getTime()) && date.toISOString() === value;
 }
-function isPositiveInteger(value: unknown): value is number {
-  return typeof value === "number" && Number.isSafeInteger(value) && value > 0;
+function integer(value: unknown, minimum = 0, maximum = 100): value is number {
+  return typeof value === "number" && Number.isSafeInteger(value)
+    && value >= minimum && value <= maximum;
 }
-function validRule(value: unknown): value is VerifiedXPScoringRule {
+function validRule(value: unknown): value is XPScoringRule {
   if (!isObject(value)) return false;
-  return value.status === "verified" && isId(value.ruleId) && isId(value.examVersionId) && isId(value.subjectId)
-    && isId(value.examType) && isPositiveInteger(value.examNumber)
-    && (value.level === null || isId(value.level))
-    && value.part === 1 && value.answerFormat === "short"
-    && isPositiveInteger(value.maxPrimaryScore)
-    && value.maxPrimaryScore <= 100
-    && typeof value.sourceUrl === "string" && /^https:\/\/(?:[^/]+\.)?fipi\.ru\//.test(value.sourceUrl)
-    && isDate(value.verifiedAt);
+  return (value.status === "verified" || value.status === "project-config")
+    && isId(value.ruleId) && isId(value.examVersionId) && isId(value.subjectId)
+    && isId(value.examType) && integer(value.examYear, 2000, 2200)
+    && integer(value.examNumber, 1, 100) && (value.level === null || isId(value.level))
+    && ((value.part === 1 && value.answerFormat === "short")
+      || (value.part === 2 && value.answerFormat === "extended"))
+    && integer(value.maxPrimaryScore, 1, 100)
+    && typeof value.sourceUrl === "string"
+    && /^https:\/\/(?:[^/]+\.)?fipi\.ru\//.test(value.sourceUrl)
+    && (value.status !== "verified" || isDate(value.verifiedAt));
 }
-function ruleMatchesAttempt(rule: VerifiedXPScoringRule, attempt: GameAttempt) {
-  return validRule(rule) && rule.examType === attempt.examType
-    && rule.examNumber === attempt.examNumber && rule.level === (attempt.level ?? null)
-    && rule.examVersionId === attempt.examVersionId && rule.subjectId === attempt.subjectId
-    && attempt.part === 1 && attempt.answerFormat === "short"
-    && Date.parse(rule.verifiedAt) <= Date.parse(attempt.createdAt);
+function ruleMatchesContext(rule: XPScoringRule, context: GameContext) {
+  // Old events have the versioned ID but no separate year field.
+  const year = context.examYear ?? Number(context.examVersionId?.match(/-(\d{4})$/)?.[1]);
+  return validRule(rule) && rule.examType === context.examType
+    && rule.examNumber === context.examNumber && rule.level === (context.level ?? null)
+    && rule.examVersionId === context.examVersionId && rule.subjectId === context.subjectId
+    && rule.examYear === year && rule.part === context.part
+    && rule.answerFormat === context.answerFormat
+    && (rule.status !== "verified" || Date.parse(rule.verifiedAt!) <= Date.parse(context.createdAt));
 }
 
-/** Capture the local day at the time of earning; changing zones cannot rewrite history. */
 export function localDayKey(date: Date, timezoneOffsetMinutes = date.getTimezoneOffset()) {
   if (!Number.isFinite(date.getTime()) || !Number.isInteger(timezoneOffsetMinutes)
     || Math.abs(timezoneOffsetMinutes) > 14 * 60) return "";
   return new Date(date.getTime() - timezoneOffsetMinutes * 60_000).toISOString().slice(0, 10);
 }
+function validContext(context: GameContext) {
+  return isId(context.id) && isId(context.taskId) && isId(context.subjectId)
+    && isDate(context.createdAt);
+}
 function validAttempt(attempt: GameAttempt) {
-  return attempt.kind === "answer_checked" && isId(attempt.id) && isId(attempt.taskId)
-    && isId(attempt.subjectId) && typeof attempt.correct === "boolean" && isDate(attempt.createdAt);
+  return attempt.kind === "answer_checked" && validContext(attempt)
+    && typeof attempt.correct === "boolean";
+}
+function automaticContext(attempt: GameAttempt) {
+  return validAttempt(attempt) && attempt.part === 1 && attempt.answerFormat === "short";
+}
+function validSelfAssessment(assessment: GameSelfAssessment) {
+  return assessment.kind === "self_assessed" && validContext(assessment)
+    && assessment.part === 2 && assessment.answerFormat === "extended"
+    && integer(assessment.maxScore, 1, 100) && integer(assessment.score, 0, assessment.maxScore);
+}
+function dayFor(context: GameContext, options?: DayOptions) {
+  const date = new Date(context.createdAt);
+  const timezoneOffsetMinutes = options?.timezoneOffsetMinutes ?? date.getTimezoneOffset();
+  const localDay = localDayKey(date, timezoneOffsetMinutes);
+  return localDay ? { localDay, timezoneOffsetMinutes } : null;
+}
+export function getAttemptXPAward(game: GameState, attemptId: string): number {
+  return game.xpEvents.find((event) => event.kind === "automatic" && event.attemptId === attemptId)?.xp ?? 0;
+}
+export function getSelfAssessment(
+  game: GameState,
+  taskId: string,
+): (SelfAssessmentXPEvent & { maxScore: number }) | null {
+  const saved = [...game.xpEvents].reverse().find((event): event is SelfAssessmentXPEvent =>
+    event.kind === "self_assessment" && event.taskId === taskId);
+  return saved ? { ...saved, maxScore: saved.scoring.maxPrimaryScore } : null;
+}
+function selfCreditDay(game: GameState, taskId: string, currentDay: { localDay: string; timezoneOffsetMinutes: number }) {
+  const firstPositive = game.xpEvents.find((event) =>
+    event.kind === "self_assessment" && event.taskId === taskId && event.score > 0);
+  return firstPositive
+    ? { localDay: firstPositive.localDay, timezoneOffsetMinutes: firstPositive.timezoneOffsetMinutes }
+    : currentDay;
 }
 
-/**
- * Call only when a NEW, objectively checked answer is recorded, never while hydrating.
- * No subscription input exists: Free and Premium have precisely the same policy.
- * priorEvents is the history BEFORE the new answer. Legacy history earns no retroactive XP.
- */
+/** Called only for an actual new automatic check. Subscription never changes the policy. */
 export function recordGameAttempt(
   game: GameState,
   attempt: GameAttempt,
   priorEvents: readonly GameLearningEvent[],
-  rule: VerifiedXPScoringRule | null,
-  options?: { timezoneOffsetMinutes?: number },
+  rule: XPScoringRule | null,
+  options?: DayOptions,
 ): GameState {
-  if (!validAttempt(attempt)
-    || game.checks.some((check) => check.attemptId === attempt.id)
+  if (!validAttempt(attempt) || game.checks.some((check) => check.attemptId === attempt.id)
     || priorEvents.some((event) => event.id === attempt.id)) return game;
-
-  const previousChecks = priorEvents.filter((event): event is GameAttempt =>
+  const previousAnswers = priorEvents.filter((event): event is GameAttempt =>
     event.kind === "answer_checked" && event.taskId === attempt.taskId);
-  const isFirstTaskCheck = !game.checks.some((check) => check.taskId === attempt.taskId)
-    && previousChecks.length === 0;
-  const checks = isFirstTaskCheck ? [...game.checks, {
+  const alreadyCorrect = previousAnswers.some((event) => event.correct)
+    || game.checks.some((check) => check.taskId === attempt.taskId && check.correct);
+  // Genuine wrong checks reset the streak. A corrected unique answer grows it once;
+  // returning to, or correctly checking, an already-correct task cannot farm a streak.
+  const contributesCheck = automaticContext(attempt) && (!attempt.correct || !alreadyCorrect);
+  const checks = contributesCheck ? [...game.checks, {
     attemptId: attempt.id,
     taskId: attempt.taskId,
     subjectId: attempt.subjectId,
     correct: attempt.correct,
     createdAt: attempt.createdAt,
   }] : game.checks;
-  const independentlyCorrect = attempt.correct
-    && !previousChecks.some((event) => event.correct)
-    && !priorEvents.some((event) => event.kind === "solution_viewed" && event.taskId === attempt.taskId);
-  if (!independentlyCorrect || !rule || !ruleMatchesAttempt(rule, attempt)
+  const viewedSolution = priorEvents.some((event) =>
+    event.kind === "solution_viewed" && event.taskId === attempt.taskId);
+  if (!attempt.correct || attempt.solutionSeenBeforeCheck === true || alreadyCorrect || viewedSolution || !rule
+    || !ruleMatchesContext(rule, attempt) || rule.part !== 1
     || game.xpEvents.some((event) => event.taskId === attempt.taskId)) {
     return checks === game.checks ? game : { ...game, checks };
   }
-  const date = new Date(attempt.createdAt);
-  const timezoneOffsetMinutes = options?.timezoneOffsetMinutes ?? date.getTimezoneOffset();
-  const localDay = localDayKey(date, timezoneOffsetMinutes);
-  if (!localDay) return checks === game.checks ? game : { ...game, checks };
+  const day = dayFor(attempt, options);
+  if (!day) return checks === game.checks ? game : { ...game, checks };
   return {
-    version: 1,
+    version: 2,
     checks,
     xpEvents: [...game.xpEvents, {
+      kind: "automatic",
       id: `xp:${attempt.id}`,
       attemptId: attempt.id,
       taskId: attempt.taskId,
       subjectId: attempt.subjectId,
       xp: rule.maxPrimaryScore,
       createdAt: attempt.createdAt,
-      localDay,
-      timezoneOffsetMinutes,
+      ...day,
       scoring: { ...rule },
     }],
   };
 }
 
 /**
- * Safely read a versioned ledger. Existing learning events are its source of truth.
- * Broken entries are dropped, not regenerated; an unknown schema never creates XP.
- * Previously awarded amounts survive later score/rank configuration changes.
- * Browser storage is editable by its owner and is not a security boundary.
+ * Repair the former empty scoring registry and rebuild interrupted self-assessment chains
+ * from validated confirmations. Known snapshots preserve original amounts and local days.
+ * No new check or confirmation is invented during repair.
  */
+export function reconcileUnrewardedAttempts(
+  previous: GameState,
+  learningEvents: readonly GameLearningEvent[],
+  resolveRule: (event: GameAttempt | GameSelfAssessment) => XPScoringRule | null,
+): GameState {
+  let repaired: GameState = {
+    version: 2,
+    checks: [],
+    xpEvents: previous.xpEvents.filter((event) => event.kind === "automatic"),
+  };
+  const earlier: GameLearningEvent[] = [];
+  for (const event of learningEvents) {
+    if (event.kind === "answer_checked") {
+      repaired = recordGameAttempt(repaired, event, earlier, resolveRule(event));
+    } else if (event.kind === "self_assessed") {
+      const stored = previous.xpEvents.find((award): award is SelfAssessmentXPEvent =>
+        award.kind === "self_assessment" && award.attemptId === event.id);
+      repaired = recordSelfAssessment(repaired, event, earlier,
+        stored?.scoring ?? resolveRule(event),
+        stored ? { timezoneOffsetMinutes: stored.timezoneOffsetMinutes } : undefined);
+    }
+    earlier.push(event);
+  }
+  const order = new Map(learningEvents.map((event, index) => [event.id, index]));
+  return {
+    ...repaired,
+    xpEvents: [...repaired.xpEvents].sort((a, b) =>
+      (order.get(a.attemptId) ?? Infinity) - (order.get(b.attemptId) ?? Infinity)),
+  };
+}
+
+/** A self-assessment changes the saved score, rather than awarding that whole score again. */
+export function recordSelfAssessment(
+  game: GameState,
+  assessment: GameSelfAssessment,
+  priorEvents: readonly GameLearningEvent[],
+  rule: XPScoringRule | null,
+  options?: DayOptions,
+): GameState {
+  if (!validSelfAssessment(assessment) || !rule || rule.part !== 2
+    || !ruleMatchesContext(rule, assessment) || rule.maxPrimaryScore !== assessment.maxScore
+    || game.xpEvents.some((event) => event.attemptId === assessment.id)
+    || priorEvents.some((event) => event.id === assessment.id)) return game;
+  const previous = getSelfAssessment(game, assessment.taskId);
+  if (previous?.score === assessment.score) return game;
+  // Never create a new full award when an independently damaged ledger lost its history.
+  if (!previous && priorEvents.some((event) =>
+    event.kind === "self_assessed" && event.taskId === assessment.taskId)) return game;
+  const day = dayFor(assessment, options);
+  if (!day) return game;
+  const previousScore = previous?.score ?? 0;
+  return {
+    ...game,
+    xpEvents: [...game.xpEvents, {
+      kind: "self_assessment",
+      id: `xp:${assessment.id}`,
+      attemptId: assessment.id,
+      taskId: assessment.taskId,
+      subjectId: assessment.subjectId,
+      xp: assessment.score - previousScore,
+      score: assessment.score,
+      previousScore,
+      createdAt: assessment.createdAt,
+      ...selfCreditDay(game, assessment.taskId, day),
+      scoring: { ...rule },
+    }],
+  };
+}
+
+function parseRule(value: unknown, legacy: boolean): XPScoringRule | null {
+  if (!isObject(value)) return null;
+  const candidate = legacy && value.examYear === undefined
+    ? { ...value, examYear: Number(String(value.examVersionId).match(/-(\d{4})$/)?.[1]) }
+    : value;
+  return validRule(candidate) ? candidate : null;
+}
+
+/** The linked learning journal validates every amount and every self-assessment revision. */
 export function parseGameState(value: unknown, learningEvents: readonly GameLearningEvent[]): GameState {
   let candidate = value;
-  if (typeof value === "string") {
-    try { candidate = JSON.parse(value); } catch { return emptyGameState(); }
+  if (typeof candidate === "string") {
+    try { candidate = JSON.parse(candidate); } catch { return emptyGameState(); }
   }
-  if (!isObject(candidate) || candidate.version !== 1) return emptyGameState();
-  const answers = new Map<string, GameAttempt>();
-  for (const event of learningEvents) {
-    if (event.kind === "answer_checked" && validAttempt(event) && !answers.has(event.id)) answers.set(event.id, event);
-  }
+  if (!isObject(candidate) || (candidate.version !== 1 && candidate.version !== 2)) return emptyGameState();
+  const legacy = candidate.version === 1;
+  const events = new Map<string, GameLearningEvent>();
+  const order = new Map<string, number>();
+  learningEvents.forEach((event, index) => {
+    if (!events.has(event.id) && isDate(event.createdAt)) {
+      events.set(event.id, event);
+      order.set(event.id, index);
+    }
+  });
   const checks: GameCheck[] = [];
-  const checkedTasks = new Set<string>();
-  if (Array.isArray(candidate.checks)) for (const entry of candidate.checks) {
-    if (!isObject(entry) || !isId(entry.attemptId)) continue;
-    const answer = answers.get(entry.attemptId);
-    if (!answer || checkedTasks.has(answer.taskId) || entry.taskId !== answer.taskId
-      || entry.subjectId !== answer.subjectId || entry.correct !== answer.correct
-      || entry.createdAt !== answer.createdAt) continue;
-    // A later repeat cannot become the first checked task in the streak ledger.
-    const first = learningEvents.find((event) => event.kind === "answer_checked" && event.taskId === answer.taskId);
-    if (first?.id !== answer.id) continue;
-    checkedTasks.add(answer.taskId);
-    checks.push({ attemptId: answer.id, taskId: answer.taskId, subjectId: answer.subjectId,
-      correct: answer.correct, createdAt: answer.createdAt });
+  const acceptedChecks = new Set<string>();
+  const alreadyCorrect = new Set<string>();
+  const candidateChecks = Array.isArray(candidate.checks) ? candidate.checks : [];
+  for (const event of events.values()) {
+    if (event.kind !== "answer_checked" || !automaticContext(event)) continue;
+    const stored = candidateChecks.find((entry) => isObject(entry)
+      && entry.attemptId === event.id && entry.taskId === event.taskId
+      && entry.subjectId === event.subjectId && entry.correct === event.correct
+      && entry.createdAt === event.createdAt);
+    if (stored && !acceptedChecks.has(event.id) && (!event.correct || !alreadyCorrect.has(event.taskId))) {
+      acceptedChecks.add(event.id);
+      checks.push({ attemptId: event.id, taskId: event.taskId, subjectId: event.subjectId,
+        correct: event.correct, createdAt: event.createdAt });
+    }
+    if (event.correct) alreadyCorrect.add(event.taskId);
   }
-  const xpEvents: XPEvent[] = [];
-  const rewardedTasks = new Set<string>();
-  if (Array.isArray(candidate.xpEvents)) for (const entry of candidate.xpEvents) {
-    if (!isObject(entry) || !isId(entry.attemptId)) continue;
-    const answer = answers.get(entry.attemptId);
-    if (!answer || !answer.correct || rewardedTasks.has(answer.taskId)
-      || entry.id !== `xp:${answer.id}` || entry.taskId !== answer.taskId
-      || entry.subjectId !== answer.subjectId || entry.createdAt !== answer.createdAt
-      || !validRule(entry.scoring) || !ruleMatchesAttempt(entry.scoring, answer)
-      || entry.xp !== entry.scoring.maxPrimaryScore
-      || typeof entry.timezoneOffsetMinutes !== "number"
+  const game: GameState = { version: 2, checks, xpEvents: [] };
+  const entries = (Array.isArray(candidate.xpEvents) ? candidate.xpEvents : [])
+    .filter(isObject).sort((left, right) =>
+      (order.get(String(left.attemptId)) ?? Infinity) - (order.get(String(right.attemptId)) ?? Infinity));
+  const acceptedAwards = new Set<string>();
+  for (const entry of entries) {
+    if (!isId(entry.attemptId) || acceptedAwards.has(entry.attemptId)) continue;
+    const event = events.get(entry.attemptId);
+    if (!event || event.kind === "solution_viewed" || !validContext(event)) continue;
+    const rule = parseRule(entry.scoring, legacy);
+    if (!rule || !ruleMatchesContext(rule, event) || entry.id !== `xp:${event.id}`
+      || entry.taskId !== event.taskId || entry.subjectId !== event.subjectId
+      || entry.createdAt !== event.createdAt || typeof entry.timezoneOffsetMinutes !== "number"
       || typeof entry.localDay !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(entry.localDay)
-      || entry.localDay !== localDayKey(new Date(answer.createdAt), entry.timezoneOffsetMinutes)) continue;
-    const answerIndex = learningEvents.findIndex((event) => event.id === answer.id);
-    const earlier = learningEvents.slice(0, answerIndex);
-    if (earlier.some((event) => event.taskId === answer.taskId &&
-      (event.kind === "solution_viewed" || (event.kind === "answer_checked" && event.correct)))) continue;
-    rewardedTasks.add(answer.taskId);
-    xpEvents.push({ id: `xp:${answer.id}`, attemptId: answer.id, taskId: answer.taskId,
-      subjectId: answer.subjectId, xp: entry.xp as number, createdAt: answer.createdAt,
-      localDay: entry.localDay as string, timezoneOffsetMinutes: entry.timezoneOffsetMinutes,
-      scoring: { ...entry.scoring } });
+      || !integer(entry.timezoneOffsetMinutes, -14 * 60, 14 * 60)) continue;
+    const index = order.get(event.id)!;
+    const earlier = learningEvents.slice(0, index);
+    const kind = legacy && entry.kind === undefined ? "automatic" : entry.kind;
+    if (kind === "automatic" && event.kind === "answer_checked") {
+      if (!automaticContext(event) || !event.correct || event.solutionSeenBeforeCheck === true || rule.part !== 1
+        || entry.xp !== rule.maxPrimaryScore
+        || game.xpEvents.some((award) => award.taskId === event.taskId)
+        || earlier.some((previous) => previous.taskId === event.taskId
+          && (previous.kind === "solution_viewed"
+            || (previous.kind === "answer_checked" && previous.correct)))
+        || entry.localDay !== localDayKey(new Date(event.createdAt), entry.timezoneOffsetMinutes)) continue;
+      game.xpEvents.push({ kind: "automatic", id: `xp:${event.id}`, attemptId: event.id,
+        taskId: event.taskId, subjectId: event.subjectId, xp: rule.maxPrimaryScore,
+        createdAt: event.createdAt, localDay: entry.localDay,
+        timezoneOffsetMinutes: entry.timezoneOffsetMinutes, scoring: { ...rule } });
+    } else if (kind === "self_assessment" && event.kind === "self_assessed") {
+      if (!validSelfAssessment(event) || rule.part !== 2 || rule.maxPrimaryScore !== event.maxScore) continue;
+      const previous = getSelfAssessment(game, event.taskId);
+      const priorScore = previous?.score ?? 0;
+      if (entry.score !== event.score || entry.previousScore !== priorScore
+        || entry.xp !== event.score - priorScore
+        || (!previous && earlier.some((past) => past.kind === "self_assessed" && past.taskId === event.taskId))) continue;
+      const currentDay = dayFor(event, { timezoneOffsetMinutes: entry.timezoneOffsetMinutes });
+      if (!currentDay) continue;
+      const day = selfCreditDay(game, event.taskId, currentDay);
+      if (entry.localDay !== day.localDay || entry.timezoneOffsetMinutes !== day.timezoneOffsetMinutes) continue;
+      game.xpEvents.push({ kind: "self_assessment", id: `xp:${event.id}`, attemptId: event.id,
+        taskId: event.taskId, subjectId: event.subjectId, xp: event.score - priorScore,
+        score: event.score, previousScore: priorScore, createdAt: event.createdAt,
+        ...day, scoring: { ...rule } });
+    } else continue;
+    acceptedAwards.add(event.id);
   }
-  const answerOrder = new Map(learningEvents.map((event, index) => [event.id, index]));
-  checks.sort((a, b) => answerOrder.get(a.attemptId)! - answerOrder.get(b.attemptId)!);
-  xpEvents.sort((a, b) => answerOrder.get(a.attemptId)! - answerOrder.get(b.attemptId)!);
-  return { version: 1, checks, xpEvents };
+  return game;
 }
 
 export function getGameSummary(game: GameState, now = new Date()): GameSummary {
@@ -255,9 +401,11 @@ export function getGameSummary(game: GameState, now = new Date()): GameSummary {
     }
   }
   const subjects = [...subjectIds].map((subjectId) => {
-    const totalXP = game.xpEvents.filter((event) => event.subjectId === subjectId).reduce((sum, event) => sum + event.xp, 0);
-    const todayXP = game.xpEvents.filter((event) => event.subjectId === subjectId && event.localDay === today).reduce((sum, event) => sum + event.xp, 0);
-    return { subjectId, totalXP, todayXP, dailyScaleValue: Math.min(todayXP, gameConfig.dailyVisualMaxXP),
+    const awards = game.xpEvents.filter((event) => event.subjectId === subjectId);
+    const totalXP = Math.max(0, awards.reduce((sum, event) => sum + event.xp, 0));
+    const todayXP = Math.max(0, awards.filter((event) => event.localDay === today).reduce((sum, event) => sum + event.xp, 0));
+    return { subjectId, totalXP, todayXP,
+      dailyScaleValue: Math.min(todayXP, gameConfig.dailyVisualMaxXP),
       level: getGameLevel(totalXP), rank: getGameRank(todayXP), winStreak: subjectStreaks[subjectId] ?? 0 };
   });
   const totalXP = subjects.reduce((sum, subject) => sum + subject.totalXP, 0);

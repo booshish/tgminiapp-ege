@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -14,9 +14,10 @@ import { MathFormula } from "@/components/math-formula";
 import { checkTaskAnswer, type Task } from "@/lib/tasks";
 import type { Exam } from "@/lib/navigation";
 import type { PracticeTaskState } from "@/lib/practice";
+import { SelfAssessmentScreen } from "./self-assessment-screen";
 import "./task-screen.css";
 
-type TaskScreenProps = {
+export type TaskScreenProps = {
   task: Task;
   exam: Exam;
   levelLabel?: string;
@@ -24,8 +25,18 @@ type TaskScreenProps = {
   topicTitle: string;
   value: PracticeTaskState;
   onChange: (value: PracticeTaskState) => void;
-  onAnswer: (task: Task, input: string, correct: boolean) => string;
+  onAnswer: (task: Task, input: string, correct: boolean, solutionSeen?: boolean) => {
+    id: string;
+    xpAwarded: number;
+  };
   onSolutionViewed: (task: Task, attemptId: string) => void;
+  maxPrimaryScore?: number | null;
+  selfAssessment?: { score: number; maxScore: number } | null;
+  onSelfAssessment?: (task: Task, score: number) => {
+    score: number;
+    maxScore: number;
+    deltaXP: number;
+  };
   onNext: () => void;
   canNext: boolean;
   onPrevious: () => void;
@@ -35,6 +46,9 @@ type TaskScreenProps = {
 
 /** Drafts belong to the practice session; revisiting a task never checks it again. */
 export function TaskScreen(props: TaskScreenProps) {
+  if (props.task.part === 2) {
+    return <SelfAssessmentScreen key={props.task.id} {...props} />;
+  }
   return <TaskAttempt key={props.task.id} {...props} />;
 }
 
@@ -48,6 +62,7 @@ function TaskAttempt({
   onChange,
   onAnswer,
   onSolutionViewed,
+  maxPrimaryScore,
   onNext,
   canNext,
   onPrevious,
@@ -58,7 +73,12 @@ function TaskAttempt({
   const solutionVisible = attempt !== null && value.solutionVisible;
   const submittedAttemptRef = useRef(value.attempt);
   const solutionViewedRef = useRef(value.solutionViewed);
+  const [awardedXP, setAwardedXP] = useState(0);
   const isSetAnswer = task.answerRule.type === "set";
+  const maxScore =
+    typeof maxPrimaryScore === "number" && Number.isSafeInteger(maxPrimaryScore) && maxPrimaryScore > 0
+      ? maxPrimaryScore
+      : null;
 
   function checkAnswer(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -74,15 +94,21 @@ function TaskAttempt({
       return;
     }
 
-    const id = onAnswer(task, answer, result.correct);
-    const checkedAttempt = { id, correct: result.correct };
+    const recorded = onAnswer(
+      task,
+      answer,
+      result.correct,
+      value.solutionViewed || solutionViewedRef.current,
+    );
+    const checkedAttempt = { id: recorded.id, correct: result.correct };
     submittedAttemptRef.current = checkedAttempt;
+    setAwardedXP(recorded.xpAwarded);
     onChange({
       ...value,
       validationMessage: "",
       attempt: checkedAttempt,
       solutionVisible: false,
-      solutionViewed: false,
+      solutionViewed: value.solutionViewed || solutionViewedRef.current,
     });
   }
 
@@ -166,13 +192,18 @@ function TaskAttempt({
               spellCheck={false}
               maxLength={256}
               value={answer}
-              readOnly={attempt !== null}
+              readOnly={attempt?.correct === true}
               onChange={(event) => {
-                if (attempt) return;
+                if (attempt?.correct || event.target.value === answer) return;
+                submittedAttemptRef.current = null;
+                setAwardedXP(0);
                 onChange({
                   ...value,
                   answer: event.target.value,
                   validationMessage: "",
+                  attempt: null,
+                  solutionVisible: false,
+                  solutionViewed: value.solutionViewed || solutionViewedRef.current,
                 });
               }}
               placeholder="Введите ответ"
@@ -208,16 +239,37 @@ function TaskAttempt({
           aria-atomic="true"
         >
           {attempt && (
-            <p
-              className={`task-verdict ${attempt.correct ? "task-verdict-correct" : "task-verdict-incorrect"}`}
-            >
-              {attempt.correct ? (
-                <CheckCircle2 size={23} aria-hidden="true" />
-              ) : (
-                <CircleX size={23} aria-hidden="true" />
-              )}
-              <strong>{attempt.correct ? "Верно" : "Неверно"}</strong>
-            </p>
+            <>
+              <p
+                className={`task-verdict ${attempt.correct ? "task-verdict-correct" : "task-verdict-incorrect"}`}
+              >
+                {attempt.correct ? (
+                  <CheckCircle2 size={23} aria-hidden="true" />
+                ) : (
+                  <CircleX size={23} aria-hidden="true" />
+                )}
+                <strong>
+                  {attempt.correct ? "Верно!" : "Неверно"}
+                  {attempt.correct && awardedXP > 0 && (
+                    <span className="task-xp-award"> +{awardedXP} XP</span>
+                  )}
+                </strong>
+              </p>
+              <div className="task-primary-score" role="note">
+                {maxScore !== null ? (
+                  <>
+                    <p>Проверка ответа: {attempt.correct ? maxScore : 0} из {maxScore} баллов</p>
+                    <p>Учебная проверка, не официальный результат экзамена.</p>
+                  </>
+                ) : (
+                  <p>
+                    {examNumber
+                      ? "Для этого задания баллы ещё не настроены. XP не начисляются."
+                      : "Это упражнение по базовой теме без экзаменационного номера. XP за него не начисляются."}
+                  </p>
+                )}
+              </div>
+            </>
           )}
         </div>
 

@@ -8,7 +8,7 @@ export const gameConfig = {
     status: "proposed",
     resetOverallOnWrong: true,
     resetSubjectOnWrong: true,
-    countOnlyFirstTaskCheck: true,
+    countOnlyFirstCorrectTaskCheck: true,
   },
   ranks: [
     { id: "start", label: "Старт", minXP: 0, color: "#59665B", background: "#EDF0EB" },
