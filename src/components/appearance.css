@@ -197,30 +197,38 @@
   align-items: center;
   gap: 8px;
 }
-.study-controls :is(.theme-toggle, .focus-toggle) {
+.study-control-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  min-width: 44px;
-  min-height: 44px;
-  padding: 9px;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 58px;
+  min-height: 52px;
+  padding: 5px 8px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--surface);
   color: var(--sage-dark);
   box-shadow: 0 2px 10px #20302408;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
 }
-.study-controls :is(.theme-toggle, .focus-toggle):hover {
+.study-control-button:hover {
   background: var(--light-green);
 }
+.study-controls .focus-toggle {
+  min-width: 64px;
+}
 .study-controls .focus-toggle[aria-pressed="true"] {
-  padding-inline: 13px;
   border-color: var(--sage);
   background: var(--light-green);
+}
+.dialog-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .break-reminder {
   position: fixed;
@@ -266,6 +274,9 @@
 }
 .app-shell .topbar {
   padding-right: 140px;
+}
+.app-shell[data-can-concentrate="true"] .topbar {
+  padding-right: 180px;
 }
 
 /* This mode is available while reading theory and solving the current task. */
@@ -322,7 +333,10 @@
     right: max(16px, env(safe-area-inset-right));
   }
   .app-shell .topbar {
-    padding-right: 128px;
+    padding-right: 100px;
+  }
+  .app-shell[data-can-concentrate="true"] .topbar {
+    padding-right: 170px;
   }
   .app-shell .topbar-right {
     display: none;

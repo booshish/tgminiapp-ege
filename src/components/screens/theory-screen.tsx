@@ -22,6 +22,7 @@ type TheoryScreenProps = {
   exam: Exam;
   topicId?: string;
   materialId?: string;
+  focusMode?: boolean;
   onExamChange: (exam: Exam) => void;
   onOpenTopic: (topicId: string) => void;
   onOpenMaterial: (topicId: string, materialId: string) => void;
@@ -33,6 +34,7 @@ export function TheoryScreen({
   exam,
   topicId,
   materialId,
+  focusMode = false,
   onExamChange,
   onOpenTopic,
   onOpenMaterial,
@@ -101,7 +103,9 @@ export function TheoryScreen({
   }
 
   return (
-    <section className="theory-page">
+    <section
+      className={`theory-page${focusMode && topic ? " theory-reading-focus" : ""}`}
+    >
       <button type="button" className="back-link" onClick={onBack}>
         <ArrowLeft size={17} aria-hidden="true" />
         {isMaterial ? "К теме" : topic ? "К списку тем" : "Назад"}

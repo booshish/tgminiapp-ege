@@ -7,8 +7,7 @@ import {
   Grid2X2,
   House,
   Focus,
-  Moon,
-  Sun,
+  CircleHelp,
   Coffee,
   ListChecks,
   Menu,
@@ -29,6 +28,7 @@ import { ProgressScreen } from "@/components/screens/progress-screen";
 import { ProfileScreen } from "@/components/screens/profile-screen";
 import { PremiumScreen } from "@/components/screens/premium-screen";
 import { HelpScreen } from "@/components/screens/help-screen";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
 import { usePracticeSession } from "@/hooks/use-practice-session";
@@ -39,6 +39,11 @@ import {
   restoreViewportPosition,
   type ViewportPosition,
 } from "@/lib/viewport-position";
+import {
+  saveHelpOrigin,
+  loadHelpOrigin,
+  clearHelpOrigin,
+} from "@/lib/help-navigation";
 import { tasks, taskTopicLabels } from "@/lib/tasks";
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import {
@@ -106,7 +111,8 @@ export function StudyApp() {
     rootRef: catalogRef,
   });
   const isPremium = demoAllowed && demoPremium;
-  const canConcentrate = route.view === "tasks" || route.view === "theory";
+  const canConcentrate = route.view === "tasks"
+    || (route.view === "theory" && Boolean(route.topicId));
   const concentrating = state.focusMode && canConcentrate;
   const activeView = route.view === "tasks" ? "catalog" : route.view;
   const { currentTask, session } = practice;
@@ -157,9 +163,11 @@ export function StudyApp() {
     const returningFromHelp =
       previousView.current === "help" && route.view !== "help";
     previousView.current = route.view;
-    if (returningFromHelp && helpReturn.current?.hash === window.location.hash) {
-      restoreViewportPosition(helpReturn.current.position);
-      helpReturn.current = null;
+    const helpOrigin = returningFromHelp
+      ? helpReturn.current ?? loadHelpOrigin()
+      : null;
+    if (helpOrigin && helpOrigin.hash === window.location.hash) {
+      restoreViewportPosition(helpOrigin.position);
     } else if (route.view !== "catalog") {
       window.scrollTo({ top: 0, behavior: "auto" });
       for (
@@ -172,6 +180,10 @@ export function StudyApp() {
           container.scrollTo({ top: 0, left: 0, behavior: "auto" });
         }
       }
+    }
+    if (returningFromHelp) {
+      helpReturn.current = null;
+      clearHelpOrigin();
     }
     document.getElementById("main-content")?.focus({ preventScroll: true });
   }, [pageKey, ready, route.view]);
@@ -236,11 +248,32 @@ export function StudyApp() {
     navigate("theory", { topicId });
   };
   function openHelp() {
+    if (route.view === "help") {
+      menuDialog.current?.close();
+      setMoreOpen(false);
+      return;
+    }
     helpReturn.current = {
       hash: window.location.hash,
       position: captureViewportPosition(),
     };
+    saveHelpOrigin(helpReturn.current);
     open("help");
+  }
+  function returnFromHelp() {
+    const origin = helpReturn.current ?? loadHelpOrigin();
+    if (Number(window.history.state?.tochkaDepth) > 0 || !origin) {
+      back();
+      return;
+    }
+    // A reload starts a new router depth; retain the actual origin instead of going home.
+    helpReturn.current = origin;
+    window.history.replaceState(
+      { ...window.history.state, tochkaDepth: 0 },
+      "",
+      origin.hash || `${window.location.pathname}${window.location.search}`,
+    );
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
   }
   function toggleConcentration() {
     focusPosition.current = captureViewportPosition();
@@ -251,22 +284,24 @@ export function StudyApp() {
     <div
       className={`app-shell font-${state.fontScale}${concentrating ? " focus-mode" : ""}`}
       data-view={route.view}
+      data-can-concentrate={canConcentrate}
     >
       <div
         className="study-controls"
-        role="group"
+        role="region"
         aria-label="Оформление и концентрация"
       >
         {canConcentrate && (
           <button
             type="button"
-            className="focus-toggle"
+            className="focus-toggle study-control-button"
             aria-pressed={concentrating}
             aria-label={
               concentrating
                 ? "Выйти из режима концентрации"
-                : "Включить режим концентрации"
+                : "Фокус: включить режим концентрации"
             }
+            title={concentrating ? "Выйти из режима концентрации" : "Режим концентрации"}
             onClick={toggleConcentration}
           >
             {concentrating ? (
@@ -274,25 +309,15 @@ export function StudyApp() {
             ) : (
               <Focus size={21} aria-hidden="true" />
             )}
-            {concentrating && <span>Выйти</span>}
+            <span>{concentrating ? "Выйти" : "Фокус"}</span>
           </button>
         )}
-        <button
-          type="button"
-          className="theme-toggle"
-          aria-label={
-            state.theme === "light"
-              ? "Включить тёмную тему"
-              : "Включить светлую тему"
-          }
-          onClick={() => setTheme(state.theme === "light" ? "dark" : "light")}
-        >
-          {state.theme === "light" ? (
-            <Moon size={21} aria-hidden="true" />
-          ) : (
-            <Sun size={21} aria-hidden="true" />
-          )}
-        </button>
+        {!moreOpen && (
+          <ThemeToggle
+            theme={state.theme}
+            onToggle={() => setTheme(state.theme === "light" ? "dark" : "light")}
+          />
+        )}
       </div>
       <a
         className="skip-link"
@@ -419,6 +444,7 @@ export function StudyApp() {
           {route.view === "theory" && (
             <TheoryScreen
               exam={state.exam}
+              focusMode={concentrating}
               topicId={route.topicId}
               materialId={route.materialId}
               onExamChange={practice.changeExam}
@@ -553,7 +579,7 @@ export function StudyApp() {
             />
           )}
           {route.view === "premium" && <PremiumScreen onBack={back} />}
-          {route.view === "help" && <HelpScreen onBack={back} />}
+          {route.view === "help" && <HelpScreen onBack={returnFromHelp} />}
           {reminder.visible && (
             <aside
               className="break-reminder"
@@ -618,13 +644,21 @@ export function StudyApp() {
       >
         <div className="dialog-title">
           <h2 id="menu-title">Разделы</h2>
-          <button
-            className="icon-button"
-            onClick={() => setMoreOpen(false)}
-            aria-label="Закрыть меню"
-          >
-            <X size={22} />
-          </button>
+          <div className="dialog-actions">
+            <button
+              className="icon-button"
+              onClick={() => setMoreOpen(false)}
+              aria-label="Закрыть меню"
+            >
+              <X size={22} aria-hidden="true" />
+            </button>
+            {moreOpen && (
+              <ThemeToggle
+                theme={state.theme}
+                onToggle={() => setTheme(state.theme === "light" ? "dark" : "light")}
+              />
+            )}
+          </div>
         </div>
         <nav aria-label="Дополнительные разделы">
           {navigation.slice(4).map(({ view, label, icon: Icon }) => (
@@ -634,6 +668,11 @@ export function StudyApp() {
               <ChevronRight size={18} />
             </button>
           ))}
+          <button onClick={openHelp}>
+            <CircleHelp size={23} aria-hidden="true" />
+            Помощь и объяснения
+            <ChevronRight size={18} aria-hidden="true" />
+          </button>
           <button onClick={() => open("premium")}>
             <Grid2X2 size={23} />
             Premium

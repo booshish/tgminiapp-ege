@@ -52,6 +52,13 @@ export function ProfileScreen({
       <PageIntro eyebrow="ЛИЧНОЕ ПРОСТРАНСТВО" title="Мой профиль">
         Подготовка и настройки на этом устройстве.
       </PageIntro>
+      <section className="settings-card">
+        <h2><CircleHelp size={22} aria-hidden="true" /> Помощь и объяснения</h2>
+        <p>Ответы о начислении XP, цвете шкал, сериях и самооценке.</p>
+        <button type="button" className="text-button" onClick={onHelp}>
+          Открыть справку <ArrowRight size={18} aria-hidden="true" />
+        </button>
+      </section>
       <section className="profile-card">
         <div className="profile-heading">
           <span className="profile-avatar">
@@ -165,13 +172,6 @@ export function ProfileScreen({
             ))}
           </div>
         </div>
-      </section>
-      <section className="settings-card">
-        <h2><CircleHelp size={22} aria-hidden="true" /> Помощь и объяснения</h2>
-        <p>Ответы о начислении XP, цвете шкал, сериях и самооценке.</p>
-        <button type="button" className="text-button" onClick={onHelp}>
-          Открыть справку <ArrowRight size={18} aria-hidden="true" />
-        </button>
       </section>
       <section className="settings-card">
         <div className="section-title">
