@@ -26,7 +26,16 @@ import { ProfileScreen } from "@/components/screens/profile-screen";
 import { PremiumScreen } from "@/components/screens/premium-screen";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
-import { getPracticeTasks, tasks } from "@/lib/tasks";
+import { usePracticeSession } from "@/hooks/use-practice-session";
+import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
+import { tasks } from "@/lib/tasks";
+import {
+  catalogListKey,
+  emptyTaskState,
+  type CatalogSelection,
+} from "@/lib/practice";
+import { getExamLevelLabel } from "@/lib/exams";
+import { theoryTopics } from "@/lib/theory";
 import { viewTitles, type View } from "@/lib/navigation";
 
 const navigation: { view: View; label: string; icon: LucideIcon }[] = [
@@ -56,15 +65,23 @@ export function StudyApp() {
   const [demoPremium, setDemoPremium] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const menuDialog = useRef<HTMLDialogElement>(null);
+  const catalogRef = useRef<HTMLDivElement>(null);
+  const practice = usePracticeSession({
+    route,
+    navigate,
+    ready,
+    exam: state.exam,
+    setExam,
+  });
+  const catalogScroll = useCatalogScroll({
+    visible: route.view === "catalog",
+    listKey: catalogListKey(practice.catalog),
+    ready: ready && practice.initialized,
+    rootRef: catalogRef,
+  });
   const isPremium = demoAllowed && demoPremium;
   const activeView = route.view === "tasks" ? "catalog" : route.view;
-  const pool = getPracticeTasks({
-    examType: state.exam,
-    topicId: route.topicId,
-    prototypeId: route.prototypeId,
-  });
-  const currentTask =
-    pool.find((task) => task.id === tasks[route.taskIndex]?.id) ?? pool[0];
+  const { currentTask, session } = practice;
   const currentIndex = currentTask
     ? tasks.findIndex((task) => task.id === currentTask.id)
     : 0;
@@ -79,9 +96,21 @@ export function StudyApp() {
   }, [ready, route.view, currentIndex, currentTask, rememberTask]);
   useEffect(() => {
     if (!ready) return;
-    window.scrollTo({ top: 0, behavior: "auto" });
+    if (route.view !== "catalog") {
+      window.scrollTo({ top: 0, behavior: "auto" });
+      for (
+        let container: HTMLElement | null =
+          document.getElementById("main-content");
+        container;
+        container = container.parentElement
+      ) {
+        if (container.scrollTop || container.scrollLeft) {
+          container.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        }
+      }
+    }
     document.getElementById("main-content")?.focus({ preventScroll: true });
-  }, [pageKey, ready]);
+  }, [pageKey, ready, route.view]);
   useEffect(() => {
     const dialog = menuDialog.current;
     if (!dialog) return;
@@ -90,53 +119,53 @@ export function StudyApp() {
   }, [moreOpen]);
 
   function open(view: View) {
+    if (route.view === "catalog") catalogScroll.capture();
     // Remove the modal's inert state before the next screen receives focus.
     if (menuDialog.current?.open) menuDialog.current.close();
     setMoreOpen(false);
-    navigate(view);
+    if (view === "catalog") practice.openCatalog();
+    else navigate(view);
   }
   function startPractice(topicId?: string, prototypeId?: string) {
-    const selected = getPracticeTasks({
-      examType: state.exam,
-      topicId,
-      prototypeId,
-    });
-    if (!selected.length) {
-      navigate("catalog", { topicId, prototypeId });
-      return;
-    }
-    navigate("tasks", {
-      taskIndex: tasks.findIndex((task) => task.id === selected[0].id),
+    if (route.view === "catalog") catalogScroll.capture();
+    practice.start({
+      ...practice.catalog,
+      exam: state.exam,
+      mode: "topic",
+      examNumber: undefined,
       topicId,
       prototypeId,
     });
   }
   function continuePractice() {
+    if (practice.resume()) return;
     const remembered = tasks[state.lastTaskIndex];
-    if (remembered?.examType.includes(state.exam))
-      navigate("tasks", { taskIndex: state.lastTaskIndex });
-    else startPractice();
+    if (
+      remembered?.examType.includes(state.exam) &&
+      (state.exam === "ОГЭ" || remembered.level === practice.catalog.level)
+    ) {
+      practice.start(
+        {
+          ...practice.catalog,
+          exam: state.exam,
+          mode: "topic",
+          examNumber: undefined,
+          topicId: undefined,
+          prototypeId: undefined,
+        },
+        remembered.id,
+      );
+    } else startPractice();
   }
-  function nextTask() {
-    if (!currentTask || pool.length < 2) {
-      navigate("catalog", {
-        topicId: route.topicId,
-        prototypeId: route.prototypeId,
-      });
-      return;
-    }
-    const next =
-      pool[
-        (pool.findIndex((task) => task.id === currentTask.id) + 1) % pool.length
-      ];
-    navigate("tasks", {
-      taskIndex: tasks.findIndex((task) => task.id === next.id),
-      topicId: route.topicId,
-      prototypeId: route.prototypeId,
-    });
+  function startFromCatalog(selection: CatalogSelection) {
+    catalogScroll.capture();
+    practice.start(selection);
   }
-  const openPremium = () => navigate("premium");
-  const openTheory = (topicId?: string) => navigate("theory", { topicId });
+  const openPremium = () => open("premium");
+  const openTheory = (topicId?: string) => {
+    if (route.view === "catalog") catalogScroll.capture();
+    navigate("theory", { topicId });
+  };
 
   return (
     <div className={`app-shell font-${state.fontScale}`}>
@@ -237,30 +266,28 @@ export function StudyApp() {
           {route.view === "home" && (
             <HomeScreen
               exam={state.exam}
-              onExamChange={setExam}
+              onExamChange={practice.changeExam}
               onStart={continuePractice}
               onNavigate={open}
             />
           )}
-          {route.view === "catalog" && (
+          <div
+            ref={catalogRef}
+            hidden={route.view !== "catalog" || !practice.initialized}
+          >
             <CatalogScreen
-              exam={state.exam}
-              topicId={route.topicId}
-              prototypeId={route.prototypeId}
-              onExamChange={setExam}
-              onSelectionChange={(topicId, prototypeId) =>
-                navigate("catalog", { topicId, prototypeId })
-              }
-              onStart={startPractice}
+              selection={practice.catalog}
+              onChange={practice.changeCatalog}
+              onStart={startFromCatalog}
               onTheory={openTheory}
             />
-          )}
+          </div>
           {route.view === "theory" && (
             <TheoryScreen
               exam={state.exam}
               topicId={route.topicId}
               materialId={route.materialId}
-              onExamChange={setExam}
+              onExamChange={practice.changeExam}
               onOpenTopic={(topicId) => navigate("theory", { topicId })}
               onOpenMaterial={(topicId, materialId) =>
                 navigate("theory", { topicId, materialId })
@@ -277,27 +304,66 @@ export function StudyApp() {
             />
           )}
           {route.view === "tasks" &&
-            (currentTask ? (
+            (!session ? (
+              <section className="empty-state" role="status">
+                <h1>Открываем подборку</h1>
+              </section>
+            ) : currentTask ? (
               <TaskScreen
-                key={`${currentTask.id}:${state.exam}`}
+                key={`${session.id}:${currentTask.id}`}
                 task={currentTask}
-                exam={state.exam}
+                exam={session.selection.exam}
+                levelLabel={
+                  session.selection.exam === "ЕГЭ"
+                    ? getExamLevelLabel(session.selection.level)
+                    : undefined
+                }
+                examNumber={currentTask.examNumber}
+                topicTitle={
+                  theoryTopics.find((topic) => topic.id === currentTask.topicId)
+                    ?.title ?? "Математика"
+                }
+                value={session.states[currentTask.id] ?? emptyTaskState()}
+                onChange={practice.changeTask}
                 onAnswer={recordAnswer}
                 onSolutionViewed={recordSolutionViewed}
-                onNext={nextTask}
-                onBack={back}
+                onNext={() => practice.move(1)}
+                canNext={
+                  practice.position >= 0 &&
+                  practice.position + 1 < session.taskIds.length
+                }
+                onPrevious={() => practice.move(-1)}
+                canPrevious={practice.position > 0}
+                onBack={practice.returnToCatalog}
               />
             ) : (
               <section className="empty-state">
-                <h1>Задания пока не опубликованы</h1>
+                <h1>
+                  {session.invalidContext
+                    ? "Подборка недоступна"
+                    : "Задания скоро появятся"}
+                </h1>
+                {!session.invalidContext && (
+                  <p>
+                    {session.selection.exam} · Математика
+                    {session.selection.level
+                      ? ` · ${getExamLevelLabel(session.selection.level)}`
+                      : ""}
+                    {session.selection.examNumber
+                      ? ` · Задание №${session.selection.examNumber}`
+                      : ""}
+                  </p>
+                )}
                 <p>
-                  Выбери другую тему или тип задания из демонстрационного банка.
+                  {session.invalidContext
+                    ? "В ссылке указан неподдерживаемый экзамен, предмет или уровень. Выбери доступную подборку в каталоге."
+                    : "Выбери другую тему или тип задания из демонстрационного банка."}
                 </p>
                 <button
                   className="button button-primary"
-                  onClick={() => navigate("catalog")}
+                  onClick={practice.returnToCatalog}
                 >
-                  Выбрать задания
+                  К выбору заданий
                 </button>
               </section>
             ))}
@@ -324,11 +390,15 @@ export function StudyApp() {
               isPremium={isPremium}
               demoAllowed={demoAllowed}
               onToggleDemo={() => setDemoPremium((value) => !value)}
-              onExamChange={setExam}
+              onExamChange={practice.changeExam}
               onFontScale={setFontScale}
               onClear={() => {
                 const success = clearLocalData();
-                if (success) setDemoPremium(false);
+                if (success) {
+                  setDemoPremium(false);
+                  practice.reset();
+                  catalogScroll.reset();
+                }
                 return success;
               }}
               onPremium={openPremium}

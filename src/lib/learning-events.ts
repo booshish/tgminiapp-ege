@@ -1,5 +1,6 @@
 import type { Exam, SubjectId } from "./tasks";
 import { checkTaskAnswer, prototypes, tasks } from "./tasks";
+import type { ExamLevel } from "./exams";
 
 type EventContext = {
   id: string;
@@ -9,6 +10,8 @@ type EventContext = {
   examType: Exam;
   subjectId: SubjectId;
   createdAt: string;
+  level?: ExamLevel | null;
+  examNumber?: number | null;
 };
 
 export type AnswerEvent = EventContext & {
@@ -130,6 +133,7 @@ function parseEventContext(
   value: Record<string, unknown>,
 ): EventContext | null {
   const task = tasks.find((candidate) => candidate.id === value.taskId);
+  const hasExamMetadata = "level" in value || "examNumber" in value;
   if (
     !task ||
     !isId(value.id) ||
@@ -138,7 +142,12 @@ function parseEventContext(
     value.prototypeId !== task.prototypeId ||
     value.subjectId !== "math" ||
     (value.examType !== "ОГЭ" && value.examType !== "ЕГЭ") ||
-    !task.examType.includes(value.examType)
+    !(
+      task.examType.includes(value.examType) ||
+      (!hasExamMetadata && task.legacyExamTypes?.includes(value.examType))
+    ) ||
+    (hasExamMetadata &&
+      (value.level !== task.level || value.examNumber !== task.examNumber))
   )
     return null;
   return {
@@ -149,6 +158,9 @@ function parseEventContext(
     subjectId: "math",
     examType: value.examType,
     createdAt: value.createdAt,
+    ...(hasExamMetadata
+      ? { level: task.level, examNumber: task.examNumber }
+      : {}),
   };
 }
 
@@ -199,6 +211,8 @@ function parseEvents(value: unknown): LearningEvent[] {
       attempt !== undefined &&
       attempt.taskId === event.taskId &&
       attempt.examType === event.examType &&
+      attempt.level === event.level &&
+      attempt.examNumber === event.examNumber &&
       Date.parse(event.createdAt) >= Date.parse(attempt.createdAt)
     ) {
       accepted.add(event);

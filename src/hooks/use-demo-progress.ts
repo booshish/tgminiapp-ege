@@ -82,8 +82,10 @@ export function useDemoProgress() {
           taskId: task.id,
           topicId: task.topicId,
           prototypeId: task.prototypeId,
-          examType: previous.exam,
+          examType: task.examType[0],
           subjectId: "math",
+          level: task.level,
+          examNumber: task.examNumber,
           createdAt: new Date().toISOString(),
           answer: answer.trim(),
           correct,
@@ -96,15 +98,13 @@ export function useDemoProgress() {
   );
   const recordSolutionViewed = useCallback((task: Task, attemptId: string) => {
     setState((previous) => {
-      if (
-        !previous.events.some(
-          (event) =>
-            event.kind === "answer_checked" &&
-            event.id === attemptId &&
-            event.taskId === task.id,
-        )
-      )
-        return previous;
+      const attempt = previous.events.find(
+        (event) =>
+          event.kind === "answer_checked" &&
+          event.id === attemptId &&
+          event.taskId === task.id,
+      );
+      if (!attempt) return previous;
       if (
         previous.events.some(
           (event) =>
@@ -118,8 +118,11 @@ export function useDemoProgress() {
         taskId: task.id,
         topicId: task.topicId,
         prototypeId: task.prototypeId,
-        examType: previous.exam,
+        examType: attempt.examType,
         subjectId: "math",
+        ...(attempt.level !== undefined || attempt.examNumber !== undefined
+          ? { level: attempt.level, examNumber: attempt.examNumber }
+          : {}),
         createdAt: new Date().toISOString(),
         attemptId,
       };

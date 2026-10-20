@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { useRef, type FormEvent } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -13,23 +13,27 @@ import { TriangleDiagram } from "@/components/illustrations";
 import { MathFormula } from "@/components/math-formula";
 import { checkTaskAnswer, type Task } from "@/lib/tasks";
 import type { Exam } from "@/lib/navigation";
+import type { PracticeTaskState } from "@/lib/practice";
 import "./task-screen.css";
 
 type TaskScreenProps = {
   task: Task;
   exam: Exam;
+  levelLabel?: string;
+  examNumber?: number | null;
+  topicTitle: string;
+  value: PracticeTaskState;
+  onChange: (value: PracticeTaskState) => void;
   onAnswer: (task: Task, input: string, correct: boolean) => string;
   onSolutionViewed: (task: Task, attemptId: string) => void;
   onNext: () => void;
+  canNext: boolean;
+  onPrevious: () => void;
+  canPrevious: boolean;
   onBack: () => void;
 };
 
-type CheckedAttempt = {
-  id: string;
-  correct: boolean;
-};
-
-/** A new task always starts with a blank answer and a closed solution. */
+/** Drafts belong to the practice session; revisiting a task never checks it again. */
 export function TaskScreen(props: TaskScreenProps) {
   return <TaskAttempt key={props.task.id} {...props} />;
 }
@@ -37,60 +41,84 @@ export function TaskScreen(props: TaskScreenProps) {
 function TaskAttempt({
   task,
   exam,
+  levelLabel,
+  examNumber,
+  topicTitle,
+  value,
+  onChange,
   onAnswer,
   onSolutionViewed,
   onNext,
+  canNext,
+  onPrevious,
+  canPrevious,
   onBack,
 }: TaskScreenProps) {
-  const [answer, setAnswer] = useState("");
-  const [validationMessage, setValidationMessage] = useState("");
-  const [attempt, setAttempt] = useState<CheckedAttempt | null>(null);
-  const [solutionVisible, setSolutionVisible] = useState(false);
-  const submittedAttemptRef = useRef<CheckedAttempt | null>(null);
-  const solutionViewedRef = useRef(false);
+  const { answer, validationMessage, attempt } = value;
+  const solutionVisible = attempt !== null && value.solutionVisible;
+  const submittedAttemptRef = useRef(value.attempt);
+  const solutionViewedRef = useRef(value.solutionViewed);
   const isSetAnswer = task.answerRule.type === "set";
 
   function checkAnswer(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (submittedAttemptRef.current) return;
+    if (attempt || submittedAttemptRef.current) return;
 
     const result = checkTaskAnswer(answer, task.answerRule);
     if (!result.valid) {
-      setValidationMessage(
-        result.message ?? "Введите ответ в указанном формате.",
-      );
+      onChange({
+        ...value,
+        validationMessage:
+          result.message ?? "Введите ответ в указанном формате.",
+      });
       return;
     }
 
-    setValidationMessage("");
     const id = onAnswer(task, answer, result.correct);
     const checkedAttempt = { id, correct: result.correct };
     submittedAttemptRef.current = checkedAttempt;
-    setAttempt(checkedAttempt);
+    onChange({
+      ...value,
+      validationMessage: "",
+      attempt: checkedAttempt,
+      solutionVisible: false,
+      solutionViewed: false,
+    });
   }
 
   function toggleSolution() {
     if (!attempt) return;
 
-    if (!solutionVisible && !solutionViewedRef.current) {
+    const firstView =
+      !solutionVisible && !value.solutionViewed && !solutionViewedRef.current;
+    if (firstView) {
       solutionViewedRef.current = true;
       onSolutionViewed(task, attempt.id);
     }
-    setSolutionVisible((visible) => !visible);
+    onChange({
+      ...value,
+      solutionVisible: !solutionVisible,
+      solutionViewed: value.solutionViewed || firstView,
+    });
   }
 
   return (
     <section className="task-screen" aria-labelledby="task-heading">
       <div className="task-topbar">
         <button type="button" className="back-link" onClick={onBack}>
-          <ArrowLeft size={20} aria-hidden="true" />
-          Назад
+          <ArrowLeft size={20} aria-hidden="true" />К выбору заданий
         </button>
       </div>
 
       <header className="task-heading-block">
-        <p className="eyebrow">Математика · {exam}</p>
-        <h1 id="task-heading">{task.title}</h1>
+        <p className="eyebrow">
+          {exam} · Математика{levelLabel ? ` · ${levelLabel}` : ""}
+        </p>
+        <h1 id="task-heading">
+          {examNumber ? `Задание №${examNumber}` : "Учебное задание"}
+        </h1>
+        <p className="task-topic">Тема: {topicTitle}</p>
+        {!examNumber && <p className="task-title">{task.title}</p>}
       </header>
 
       <div className="task-card">
@@ -132,11 +160,16 @@ function TaskAttempt({
               autoCapitalize="off"
               autoCorrect="off"
               spellCheck={false}
+              maxLength={256}
               value={answer}
               readOnly={attempt !== null}
               onChange={(event) => {
-                setAnswer(event.target.value);
-                setValidationMessage("");
+                if (attempt) return;
+                onChange({
+                  ...value,
+                  answer: event.target.value,
+                  validationMessage: "",
+                });
               }}
               placeholder="Введите ответ"
               aria-invalid={Boolean(validationMessage)}
@@ -179,7 +212,7 @@ function TaskAttempt({
               ) : (
                 <CircleX size={23} aria-hidden="true" />
               )}
-              <strong>{attempt.correct ? "Верно!" : "Неверно"}</strong>
+              <strong>{attempt.correct ? "Верно" : "Неверно"}</strong>
             </p>
           )}
         </div>
@@ -200,6 +233,7 @@ function TaskAttempt({
               type="button"
               className="button button-primary task-next-button"
               onClick={onNext}
+              disabled={!canNext}
             >
               Следующее задание
               <ArrowRight size={20} aria-hidden="true" />
@@ -207,6 +241,21 @@ function TaskAttempt({
           </div>
         )}
       </div>
+
+      <nav
+        className="task-sequence-navigation"
+        aria-label="Переходы между заданиями"
+      >
+        <button
+          type="button"
+          className="button button-secondary task-previous-button"
+          onClick={onPrevious}
+          disabled={!canPrevious}
+        >
+          <ArrowLeft size={20} aria-hidden="true" />
+          Предыдущее задание
+        </button>
+      </nav>
 
       {solutionVisible && (
         <section

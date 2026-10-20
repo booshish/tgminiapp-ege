@@ -3,27 +3,14 @@
 import { useCallback, useEffect, useState } from "react";
 import { tasks } from "@/lib/tasks";
 import {
-  viewTitles,
+  parseStudyRoute,
   type Route,
   type Selection,
   type View,
 } from "@/lib/navigation";
 
 function readRoute(): Route {
-  const [path, query] = window.location.hash.replace(/^#\/?/, "").split("?");
-  const [view, index] = path.split("/");
-  const params = new URLSearchParams(query);
-  const taskIndex = Number(index);
-  return {
-    view: Object.hasOwn(viewTitles, view) ? (view as View) : "home",
-    taskIndex:
-      Number.isInteger(taskIndex) && taskIndex >= 0 && taskIndex < tasks.length
-        ? taskIndex
-        : 0,
-    topicId: params.get("topic") || undefined,
-    prototypeId: params.get("prototype") || undefined,
-    materialId: params.get("material") || undefined,
-  };
+  return parseStudyRoute(window.location.hash, tasks.length);
 }
 
 export function useStudyNavigation() {
@@ -51,11 +38,20 @@ export function useStudyNavigation() {
       const safeIndex =
         Number.isInteger(index) && index >= 0 && index < tasks.length
           ? index
-          : 0;
+          : view === "tasks"
+            ? -1
+            : 0;
       const params = new URLSearchParams();
       if (selected.topicId) params.set("topic", selected.topicId);
       if (selected.prototypeId) params.set("prototype", selected.prototypeId);
       if (selected.materialId) params.set("material", selected.materialId);
+      if (selected.exam) params.set("exam", selected.exam);
+      if (selected.subjectId) params.set("subject", selected.subjectId);
+      if (selected.level) params.set("level", selected.level);
+      if (selected.catalogMode) params.set("mode", selected.catalogMode);
+      if (selected.examNumber)
+        params.set("number", String(selected.examNumber));
+      if (selected.sessionId) params.set("session", selected.sessionId);
       const query = params.toString();
       const hash = `#/${view}${view === "tasks" ? `/${safeIndex}` : ""}${query ? `?${query}` : ""}`;
       if (window.location.hash === hash) return;
@@ -65,11 +61,9 @@ export function useStudyNavigation() {
         hash,
       );
       setRoute({
+        ...selected,
         view,
         taskIndex: safeIndex,
-        topicId: selected.topicId,
-        prototypeId: selected.prototypeId,
-        materialId: selected.materialId,
       });
     },
     [],

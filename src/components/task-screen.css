@@ -40,6 +40,20 @@
   overflow-wrap: anywhere;
 }
 
+.task-topic {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.task-title {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 .task-card,
 .task-solution-panel {
   min-width: 0;
@@ -239,6 +253,27 @@
 
 .task-next-button svg {
   flex-shrink: 0;
+}
+
+.task-sequence-navigation {
+  margin-top: 18px;
+}
+
+.task-previous-button {
+  width: 100%;
+}
+
+.task-previous-button svg {
+  flex-shrink: 0;
+}
+
+.task-screen .button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.task-screen .button:disabled:hover {
+  background: #f4f6f0;
 }
 
 .task-solution-panel {

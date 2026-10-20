@@ -82,6 +82,29 @@ const {
   await loadSourceModule(new URL("src/lib/learning-events.ts", projectRoot))
 );
 
+const { examDefinitions, getExamDefinition } = await import(
+  await loadSourceModule(new URL("src/lib/exams.ts", projectRoot))
+);
+const { theoryTopics } = await import(
+  await loadSourceModule(new URL("src/lib/theory.ts", projectRoot))
+);
+
+const {
+  normalizeCatalogSelection,
+  defaultCatalogSelection,
+  catalogListKey,
+  createPracticeSession,
+  updateSessionTask,
+  emptyTaskState,
+  practiceTasks,
+} = await import(
+  await loadSourceModule(new URL("src/lib/practice.ts", projectRoot))
+);
+
+const { parseStudyRoute } = await import(
+  await loadSourceModule(new URL("src/lib/navigation.ts", projectRoot))
+);
+
 const taskById = (id) => {
   const task = tasks.find((entry) => entry.id === id);
   assert.ok(task, `В банке отсутствует ${id}`);
@@ -129,6 +152,7 @@ function solutionEvent(id, answer, overrides = {}) {
 
 function stateWith(events, overrides = {}) {
   return {
+    ...emptyLearningState,
     version: 2,
     exam: "ЕГЭ",
     lastTaskIndex: 0,
@@ -191,8 +215,13 @@ test("Банк покрывает восемь тем и даёт несколь
     assert.ok(prototype, task.id);
     assert.equal(prototype.topicId, task.topicId, task.id);
     assert.equal(task.subjectId, "math");
-    assert.ok(task.examType.length > 0);
+    assert.equal(
+      task.examType.length,
+      1,
+      "Одна задача принадлежит одному экзамену",
+    );
     assert.ok(task.examType.every((exam) => exam === "ЕГЭ" || exam === "ОГЭ"));
+    assert.equal(task.level === null, task.examType[0] === "ОГЭ", task.id);
     assert.ok(task.solution.length > 0);
     assert.ok(task.solution.every((step) => step.text.trim()));
     assert.equal(
@@ -222,45 +251,203 @@ test("Старые пять задач сохраняют идентификат
   assert.equal("conditionLatex" in taskById("probability-balls"), false);
 });
 
-test("Практика фильтруется по экзамену, теме и прототипу одновременно", () => {
-  for (const examType of ["ЕГЭ", "ОГЭ"]) {
-    const all = getPracticeTasks({ examType });
-    assert.ok(all.length > 0);
+test("Практика строго разделена по экзамену, уровню, номеру, теме и прототипу", () => {
+  for (const definition of examDefinitions) {
+    const { examType, subjectId, level } = definition;
+    const all = getPracticeTasks({ examType, subjectId, level });
+    assert.ok(all.length > 0, definition.id);
     assert.deepEqual(
       all,
-      tasks.filter((task) => task.examType.includes(examType)),
-    );
-    const filtered = getPracticeTasks({
-      examType,
-      topicId: triangle.topicId,
-      prototypeId: triangle.prototypeId,
-    });
-    assert.ok(filtered.length >= 2);
-    assert.ok(
-      filtered.every(
+      tasks.filter(
         (task) =>
-          task.examType.includes(examType) &&
-          task.topicId === triangle.topicId &&
-          task.prototypeId === triangle.prototypeId,
+          task.examType[0] === examType &&
+          task.level === level &&
+          task.subjectId === subjectId,
       ),
+    );
+    const selected = all.find((task) => task.examNumber !== null);
+    const filter = {
+      examType,
+      subjectId,
+      level,
+      examNumber: selected.examNumber,
+      topicId: selected.topicId,
+      prototypeId: selected.prototypeId,
+    };
+    assert.deepEqual(
+      getPracticeTasks(filter),
+      all.filter(
+        (task) =>
+          task.examNumber === selected.examNumber &&
+          task.topicId === selected.topicId &&
+          task.prototypeId === selected.prototypeId,
+      ),
+    );
+    assert.deepEqual(
+      getPracticeTasks({ examType, subjectId, level, topicId: "unknown" }),
+      [],
+    );
+    assert.deepEqual(
+      getPracticeTasks({ examType, subjectId, level, prototypeId: "unknown" }),
+      [],
+    );
+    assert.deepEqual(
+      getPracticeTasks({ examType, subjectId, level, examNumber: 99 }),
+      [],
+    );
+    assert.deepEqual(
+      getPracticeTasks({ examType, subjectId, level, examNumber: 19 }),
+      [],
+      "Не подставлять другой номер в пустую подборку",
     );
   }
   assert.deepEqual(
-    getPracticeTasks({ examType: "ЕГЭ", topicId: "unknown" }),
+    getPracticeTasks({ examType: "ЕГЭ", level: "profile", examNumber: 21 }),
     [],
   );
+  assert.deepEqual(getPracticeTasks({ examType: "ОГЭ", level: "base" }), []);
+  assert.deepEqual(getPracticeTasks({ examType: "ЕГЭ", level: null }), []);
+  assert.deepEqual(getPracticeTasks({ examType: "ЕГЭ", level: "wrong" }), []);
   assert.deepEqual(
-    getPracticeTasks({ examType: "ЕГЭ", prototypeId: "unknown" }),
+    getPracticeTasks({ examType: "ОГЭ", subjectId: "physics" }),
     [],
   );
+  assert.deepEqual(getPracticeTasks({ examType: "ГИА" }), []);
+  assert.ok(
+    getPracticeTasks({ examType: "ЕГЭ" }).every(
+      (task) => task.level === "profile",
+    ),
+  );
+  const ogeIds = new Set(
+    getPracticeTasks({ examType: "ОГЭ" }).map((task) => task.id),
+  );
+  const baseIds = new Set(
+    getPracticeTasks({ examType: "ЕГЭ", level: "base" }).map((task) => task.id),
+  );
+  for (const task of getPracticeTasks({ examType: "ЕГЭ", level: "profile" })) {
+    assert.equal(ogeIds.has(task.id), false);
+    assert.equal(baseIds.has(task.id), false);
+  }
+});
+
+test("Каталоги разделены, а ограничение официальной сверки явно сохранено", () => {
   assert.deepEqual(
-    getPracticeTasks({
-      examType: "ЕГЭ",
-      topicId: linear.topicId,
-      prototypeId: triangle.prototypeId,
-    }),
-    [],
+    examDefinitions.map((entry) => [
+      entry.examType,
+      entry.level,
+      entry.numbers.length,
+    ]),
+    [
+      ["ОГЭ", null, 25],
+      ["ЕГЭ", "base", 21],
+      ["ЕГЭ", "profile", 19],
+    ],
   );
+  assert.equal(getExamDefinition({ examType: "ЕГЭ" }).level, "profile");
+  assert.equal(
+    getExamDefinition({ examType: "ОГЭ", level: "base" }),
+    undefined,
+  );
+  for (const definition of examDefinitions) {
+    assert.deepEqual(
+      definition.numbers.map((entry) => entry.number),
+      Array.from(
+        { length: definition.numbers.length },
+        (_, index) => index + 1,
+      ),
+    );
+    assert.equal(definition.year, 2026);
+    assert.equal(definition.verificationStatus, "not-verified-online");
+    assert.ok(definition.verificationNote.includes("недоступна"));
+    assert.ok(
+      definition.sources.every(
+        (source) => new URL(source.url).hostname === "fipi.ru",
+      ),
+    );
+    for (const entry of definition.numbers) {
+      const pool = getPracticeTasks({
+        examType: definition.examType,
+        subjectId: definition.subjectId,
+        level: definition.level,
+        examNumber: entry.number,
+      });
+      assert.ok(
+        pool.length === 0 || pool.length >= 2,
+        `${definition.id} №${entry.number}: Next должен открывать другую задачу`,
+      );
+    }
+  }
+});
+
+test("Один экзаменационный номер может содержать разные темы и прототипы", () => {
+  const ogeSix = getPracticeTasks({ examType: "ОГЭ", examNumber: 6 });
+  assert.ok(new Set(ogeSix.map((task) => task.topicId)).has("fractions"));
+  assert.ok(new Set(ogeSix.map((task) => task.topicId)).has("decimals"));
+  const ogeNine = getPracticeTasks({ examType: "ОГЭ", examNumber: 9 });
+  assert.ok(
+    new Set(ogeNine.map((task) => task.topicId)).has("linear-equations"),
+  );
+  assert.ok(
+    new Set(ogeNine.map((task) => task.topicId)).has("quadratic-equations"),
+  );
+  assert.ok(new Set(ogeNine.map((task) => task.prototypeId)).size > 1);
+  assert.ok(
+    getPracticeTasks({ examType: "ЕГЭ", level: "base", examNumber: 13 }).every(
+      (task) => task.examNumber === 13,
+    ),
+  );
+});
+
+test("Фундаментальные упражнения без номера не выдаются за экзаменационный формат", () => {
+  const fundamentalIds = [
+    "fraction-subtraction",
+    "fraction-signed",
+    "quadratic-two-roots",
+    "quadratic-opposite-roots",
+    "quadratic-fractional-roots",
+    "triangle-sine-five-twelve",
+    "triangle-sine-eight-fifteen",
+    "probability-die",
+  ];
+  for (const id of fundamentalIds)
+    assert.equal(taskById(id).examNumber, null, id);
+  for (const task of tasks) {
+    const definition = getExamDefinition({
+      examType: task.examType[0],
+      level: task.level,
+      subjectId: task.subjectId,
+    });
+    assert.ok(definition, task.id);
+    assert.equal(task.examYear, definition.year, task.id);
+    if (task.examNumber === null) continue;
+    assert.ok(
+      definition.numbers.some((entry) => entry.number === task.examNumber),
+      task.id,
+    );
+    assert.equal(
+      task.answerRule.type,
+      "number",
+      "Нумерованные примеры требуют один числовой ответ",
+    );
+    assert.ok(
+      Number.isFinite(
+        Number(task.answerDisplay.replace(",", ".").replace("−", "-")),
+      ),
+      `Конечная десятичная запись: ${task.id}`,
+    );
+  }
+});
+
+test("Теория и зависимости остаются связаны с реальными темами банка", () => {
+  const topicIds = new Set(theoryTopics.map((topic) => topic.id));
+  assert.equal(topicIds.size, theoryTopics.length);
+  for (const task of tasks) assert.ok(topicIds.has(task.topicId), task.id);
+  for (const topic of theoryTopics) {
+    assert.ok(topic.sections.length > 0);
+    assert.ok(topic.examples.length >= 2);
+    for (const prerequisite of topic.prerequisites)
+      assert.ok(topicIds.has(prerequisite), prerequisite);
+  }
 });
 
 test("Рациональные числа принимают запятую, точку, дробь и знак минуса", () => {
@@ -589,4 +776,416 @@ test("Повреждённые настройки сбрасываются, а �
   assert.deepEqual(parseLearningState(null).legacyRecords, []);
   assert.deepEqual(emptyLearningState.events, []);
   assert.deepEqual(emptyLearningState.legacyRecords, []);
+});
+
+test("Настройки каталога нормализуются без смешивания экзаменов, уровней и режимов", () => {
+  assert.deepEqual(defaultCatalogSelection(), {
+    exam: "ЕГЭ",
+    subjectId: "math",
+    level: "profile",
+    mode: "number",
+  });
+  const oge = normalizeCatalogSelection({
+    exam: "ОГЭ",
+    subjectId: "physics",
+    level: "base",
+    mode: "number",
+    examNumber: 9,
+    topicId: "fractions",
+    prototypeId: "linear-basic",
+  });
+  assert.equal(oge.exam, "ОГЭ");
+  assert.equal(oge.subjectId, "math");
+  assert.equal(oge.level, undefined);
+  assert.equal(oge.examNumber, 9);
+  assert.equal(oge.topicId, undefined);
+  assert.equal(oge.prototypeId, "linear-basic");
+  const topic = normalizeCatalogSelection({
+    exam: "ЕГЭ",
+    level: "base",
+    mode: "topic",
+    examNumber: 5,
+    topicId: "probability",
+  });
+  assert.equal(topic.level, "base");
+  assert.equal(topic.examNumber, undefined);
+  assert.equal(topic.topicId, "probability");
+  for (const invalid of [-1, 0, 1.5, "9", NaN, 100]) {
+    assert.equal(
+      normalizeCatalogSelection({ exam: "ОГЭ", examNumber: invalid })
+        .examNumber,
+      undefined,
+    );
+  }
+  assert.equal(
+    normalizeCatalogSelection({
+      topicId: "bad id",
+      prototypeId: "<script>",
+      mode: "topic",
+    }).topicId,
+    undefined,
+  );
+  assert.equal(
+    normalizeCatalogSelection({
+      topicId: "bad id",
+      prototypeId: "<script>",
+      mode: "topic",
+    }).prototypeId,
+    undefined,
+  );
+  assert.equal(
+    normalizeCatalogSelection({ exam: "unknown" }, "ОГЭ").exam,
+    "ОГЭ",
+  );
+});
+
+test("Позиция списка имеет отдельный ключ для экзамена, уровня, режима и фильтра", () => {
+  const initial = {
+    exam: "ОГЭ",
+    subjectId: "math",
+    mode: "number",
+    examNumber: 6,
+  };
+  const key = catalogListKey(initial);
+  assert.equal(
+    catalogListKey({ ...initial, examNumber: 19 }),
+    key,
+    "Выбор карточки не сбрасывает прокрутку списка",
+  );
+  const topic = {
+    ...initial,
+    mode: "topic",
+    topicId: "fractions",
+    examNumber: undefined,
+  };
+  assert.equal(
+    catalogListKey(topic),
+    catalogListKey({ ...topic, topicId: "geometry" }),
+  );
+  for (const change of [
+    { exam: "ЕГЭ", level: "profile" },
+    { mode: "topic" },
+    { prototypeId: "linear-basic" },
+  ]) {
+    assert.notEqual(catalogListKey({ ...initial, ...change }), key);
+  }
+  assert.notEqual(
+    catalogListKey({ ...initial, exam: "ЕГЭ", level: "base" }),
+    catalogListKey({ ...initial, exam: "ЕГЭ", level: "profile" }),
+  );
+});
+
+test("Практика сохраняет исходную подборку, а пустой номер не подменяется другим", () => {
+  const selection = {
+    exam: "ОГЭ",
+    subjectId: "math",
+    mode: "number",
+    examNumber: 9,
+  };
+  const expected = getPracticeTasks({ examType: "ОГЭ", examNumber: 9 });
+  const initialId = expected[1].id;
+  const session = createPracticeSession("session-1", selection, initialId);
+  assert.deepEqual(
+    session.taskIds,
+    expected.map((task) => task.id),
+  );
+  assert.equal(session.lastPosition, 1);
+  assert.deepEqual(session.selection, selection);
+  assert.notEqual(session.selection, selection);
+  assert.deepEqual(session.states, {});
+  const empty = createPracticeSession("empty-session", {
+    ...selection,
+    examNumber: 19,
+  });
+  assert.deepEqual(empty.taskIds, []);
+  assert.equal(empty.lastPosition, 0);
+  assert.equal(empty.selection.examNumber, 19);
+  const filteredTopic = {
+    exam: "ЕГЭ",
+    level: "base",
+    subjectId: "math",
+    mode: "topic",
+    topicId: "probability",
+    prototypeId: "classical-probability",
+  };
+  assert.ok(
+    practiceTasks(filteredTopic).every(
+      (task) =>
+        task.examType[0] === "ЕГЭ" &&
+        task.level === "base" &&
+        task.topicId === "probability" &&
+        task.prototypeId === "classical-probability",
+    ),
+  );
+  assert.equal(
+    createPracticeSession("bad-initial", selection, "not-in-bank").lastPosition,
+    0,
+  );
+});
+
+test("Состояния задач сессии сохраняют ответ, проверку и просмотр без новой попытки", () => {
+  const original = createPracticeSession("session-state", {
+    exam: "ОГЭ",
+    subjectId: "math",
+    mode: "number",
+    examNumber: 9,
+  });
+  const [firstId, secondId] = original.taskIds;
+  const draft = { ...emptyTaskState(), answer: "6" };
+  const withDraft = updateSessionTask(original, firstId, draft);
+  assert.deepEqual(original.states, {});
+  const checked = {
+    ...draft,
+    attempt: { id: "attempt-one", correct: true },
+    solutionVisible: true,
+    solutionViewed: true,
+  };
+  const withChecked = updateSessionTask(withDraft, firstId, checked);
+  assert.equal(withDraft.states[firstId].attempt, null);
+  const withSecond = updateSessionTask(withChecked, secondId, {
+    ...emptyTaskState(),
+    answer: "-",
+  });
+  assert.deepEqual(withSecond.states[firstId], checked);
+  assert.deepEqual(withChecked.states[firstId], checked);
+  assert.equal(withSecond.states[firstId].attempt.id, "attempt-one");
+  assert.equal(withSecond.states[firstId].solutionVisible, true);
+  assert.equal(withSecond.states[secondId].answer, "-");
+  assert.equal(withSecond.states[secondId].attempt, null);
+  const viewedAgain = updateSessionTask(withSecond, firstId, {
+    ...checked,
+    solutionVisible: false,
+  });
+  assert.equal(viewedAgain.states[firstId].attempt.id, "attempt-one");
+  assert.equal(viewedAgain.states[firstId].solutionViewed, true);
+  assert.equal(
+    "events" in viewedAgain,
+    false,
+    "Просмотр состояния сессии не записывает события обучения",
+  );
+  assert.equal(
+    updateSessionTask(original, "not-in-session", checked),
+    original,
+  );
+  const blank = emptyTaskState();
+  blank.answer = "mutated";
+  assert.equal(emptyTaskState().answer, "");
+});
+
+test("Старые события общих задач сохраняются, новые строго проверяют экзамен, уровень и номер", () => {
+  const legacy = answerEvent("legacy-ege", triangle, "0,8", true, {
+    examType: "ЕГЭ",
+  });
+  const legacyRestored = restore([legacy]);
+  assert.equal(legacyRestored.events.length, 1);
+  assert.equal(legacyRestored.events[0].examType, "ЕГЭ");
+  const profileTask = taskById("ege-profile-exponential-two");
+  const modern = answerEvent("modern", profileTask, "3", true, {
+    level: "profile",
+    examNumber: 6,
+  });
+  const ogeModern = answerEvent("modern-oge", triangle, "0,8", true, {
+    level: null,
+    examNumber: 15,
+  });
+  const invalid = [
+    { ...modern, id: "wrong-level", level: "base" },
+    { ...modern, id: "wrong-number", examNumber: 4 },
+    { ...modern, id: "missing-number", examNumber: undefined },
+    { ...modern, id: "missing-level", level: undefined },
+    { ...ogeModern, id: "wrong-oge-level", level: "base" },
+    { ...ogeModern, id: "wrong-oge-number", examNumber: 10 },
+    {
+      ...ogeModern,
+      id: "modern-wrong-exam",
+      examType: "ЕГЭ",
+      level: "profile",
+    },
+  ];
+  const state = restore([...invalid, modern, ogeModern]);
+  assert.deepEqual(
+    state.events.map((event) => event.id),
+    ["modern", "modern-oge"],
+  );
+  assert.equal(state.events[0].level, "profile");
+  assert.equal(state.events[0].examNumber, 6);
+  assert.equal(state.events[1].level, null);
+  assert.equal(state.events[1].examNumber, 15);
+});
+
+test("Прямые и прежние ссылки практики сохраняют индекс, а неверный индекс не становится первой задачей", () => {
+  const legacy = parseStudyRoute("#/tasks/0", tasks.length);
+  assert.equal(legacy.view, "tasks");
+  assert.equal(legacy.taskIndex, 0);
+  assert.equal(legacy.invalidContext, false);
+  assert.equal(legacy.exam, undefined);
+  assert.equal(legacy.level, undefined);
+  const last = parseStudyRoute(`#/tasks/${tasks.length - 1}`, tasks.length);
+  assert.equal(last.taskIndex, tasks.length - 1);
+  for (const path of [
+    "#/tasks/-1",
+    `#/tasks/${tasks.length}`,
+    "#/tasks/99999",
+    "#/tasks/1.5",
+    "#/tasks/not-a-number",
+    "#/tasks",
+  ]) {
+    const route = parseStudyRoute(path, tasks.length);
+    assert.equal(route.view, "tasks", path);
+    assert.equal(route.taskIndex, -1, path);
+  }
+  assert.equal(parseStudyRoute("#/tasks/0", 0).taskIndex, -1);
+  assert.equal(parseStudyRoute("#/unknown", tasks.length).view, "home");
+});
+
+test("Парсер помечает неподдерживаемые экзамен, предмет, уровень и режим вместо подмены контекста", () => {
+  for (const query of [
+    "exam=ГИА",
+    "exam=",
+    "subject=physics",
+    "subject=",
+    "level=advanced",
+    "level=",
+    "mode=list",
+    "mode=",
+    "exam=ОГЭ&level=base",
+    "exam=ОГЭ&level=profile",
+  ]) {
+    const route = parseStudyRoute(`#/tasks/0?${query}`, tasks.length);
+    assert.equal(route.invalidContext, true, query);
+  }
+  for (const query of [
+    "exam=ОГЭ&subject=math&mode=number",
+    "exam=ЕГЭ&level=base&subject=math",
+    "exam=ЕГЭ&level=profile&mode=topic",
+  ]) {
+    assert.equal(
+      parseStudyRoute(`#/catalog?${query}`, tasks.length).invalidContext,
+      false,
+      query,
+    );
+  }
+});
+
+test("Неверные номера и повреждённые ID фильтров отклоняются отдельно от корректных пустых подборок", () => {
+  for (const value of ["-1", "0", "1.5", "100", "not-a-number", ""]) {
+    assert.equal(
+      parseStudyRoute(
+        `#/catalog?number=${encodeURIComponent(value)}`,
+        tasks.length,
+      ).invalidContext,
+      true,
+      value,
+    );
+  }
+  for (const field of ["topic", "prototype"]) {
+    for (const value of ["", "bad id", "<script>", "bad/id", "a".repeat(101)]) {
+      const route = parseStudyRoute(
+        `#/tasks/0?${field}=${encodeURIComponent(value)}`,
+        tasks.length,
+      );
+      assert.equal(route.invalidContext, true, `${field}: ${value}`);
+    }
+  }
+  const route = parseStudyRoute(
+    "#/tasks/0?exam=ОГЭ&subject=math&mode=topic&topic=not-published-topic&prototype=not-published-prototype",
+    tasks.length,
+  );
+  assert.equal(
+    route.invalidContext,
+    false,
+    "Корректные по форме ID не обязаны существовать в демобанке",
+  );
+  assert.equal(route.topicId, "not-published-topic");
+  assert.equal(route.prototypeId, "not-published-prototype");
+  assert.deepEqual(
+    getPracticeTasks({
+      examType: route.exam,
+      subjectId: route.subjectId,
+      topicId: route.topicId,
+      prototypeId: route.prototypeId,
+    }),
+    [],
+  );
+  const emptyNumber = parseStudyRoute(
+    "#/tasks/0?exam=ОГЭ&mode=number&number=19",
+    tasks.length,
+  );
+  assert.equal(emptyNumber.invalidContext, false);
+  assert.deepEqual(
+    getPracticeTasks({
+      examType: emptyNumber.exam,
+      examNumber: emptyNumber.examNumber,
+    }),
+    [],
+  );
+});
+
+test("Кодированная ссылка ЕГЭ базы сохраняет уровень, номер и сессию без смешивания с профилем", () => {
+  const params = new URLSearchParams({
+    exam: "ЕГЭ",
+    subject: "math",
+    level: "base",
+    mode: "number",
+    number: "13",
+    prototype: "decimal-arithmetic",
+    session: "Session-2026-alpha",
+  });
+  const route = parseStudyRoute(`#/tasks/7?${params}`, tasks.length);
+  assert.equal(route.view, "tasks");
+  assert.equal(route.taskIndex, 7);
+  assert.equal(route.invalidContext, false);
+  assert.equal(route.exam, "ЕГЭ");
+  assert.equal(route.subjectId, "math");
+  assert.equal(route.level, "base");
+  assert.equal(route.catalogMode, "number");
+  assert.equal(route.examNumber, 13);
+  assert.equal(route.prototypeId, "decimal-arithmetic");
+  assert.equal(route.sessionId, "Session-2026-alpha");
+  const pool = getPracticeTasks({
+    examType: route.exam,
+    subjectId: route.subjectId,
+    level: route.level,
+    examNumber: route.examNumber,
+    prototypeId: route.prototypeId,
+  });
+  assert.ok(pool.length > 0);
+  assert.ok(
+    pool.every(
+      (task) =>
+        task.examType[0] === "ЕГЭ" &&
+        task.level === "base" &&
+        task.examNumber === 13,
+    ),
+  );
+});
+
+test("Ссылка каталога читает режим, выбранную карточку и фильтры, небезопасный ID сессии не используется", () => {
+  const byNumber = parseStudyRoute(
+    "#/catalog?exam=ОГЭ&subject=math&mode=number&number=9&prototype=quadratic-roots&session=previous-session",
+    tasks.length,
+  );
+  assert.equal(byNumber.view, "catalog");
+  assert.equal(byNumber.invalidContext, false);
+  assert.equal(byNumber.catalogMode, "number");
+  assert.equal(byNumber.examNumber, 9);
+  assert.equal(byNumber.prototypeId, "quadratic-roots");
+  assert.equal(byNumber.sessionId, "previous-session");
+  const byTopic = parseStudyRoute(
+    "#/catalog?exam=ЕГЭ&subject=math&level=profile&mode=topic&topic=powers-roots&prototype=exponential-equation",
+    tasks.length,
+  );
+  assert.equal(byTopic.invalidContext, false);
+  assert.equal(byTopic.catalogMode, "topic");
+  assert.equal(byTopic.topicId, "powers-roots");
+  assert.equal(byTopic.prototypeId, "exponential-equation");
+  for (const value of ["bad/session", "bad id", "<script>", "a".repeat(101)]) {
+    assert.equal(
+      parseStudyRoute(
+        `#/tasks/0?session=${encodeURIComponent(value)}`,
+        tasks.length,
+      ).sessionId,
+      undefined,
+    );
+  }
 });

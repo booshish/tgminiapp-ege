@@ -1,4 +1,5 @@
 import type { Exam } from "./navigation";
+import { getExamDefinition, type ExamLevel } from "./exams";
 
 export type { Exam } from "./navigation";
 export type SubjectId = "math";
@@ -9,8 +10,13 @@ export type Task = {
   id: string;
   topicId: string;
   prototypeId: string;
-  examType: Exam[];
+  examType: [Exam];
   subjectId: SubjectId;
+  level: ExamLevel | null;
+  examNumber: number | null;
+  examYear: number;
+  /** Historical event compatibility only; never used for selecting tasks. */
+  legacyExamTypes?: Exam[];
   title: string;
   prompt: string;
   conditionLatex?: string;
@@ -57,26 +63,29 @@ export const prototypes = [
     title: "Синус в прямоугольном треугольнике",
   },
   {
+    id: "exponential-equation",
+    topicId: "powers-roots",
+    title: "Простейшие показательные уравнения",
+  },
+  {
     id: "classical-probability",
     topicId: "probability",
     title: "Равновозможные исходы",
   },
 ];
 
-function defineTask(
-  data: Omit<Task, "examType" | "subjectId"> & { examType?: Exam[] },
-): Task {
-  return {
-    ...data,
-    examType: data.examType ?? ["ОГЭ", "ЕГЭ"],
-    subjectId: "math",
-  };
+function defineTask(data: Omit<Task, "subjectId" | "examYear">): Task {
+  return { ...data, subjectId: "math", examYear: 2026 };
 }
 
-/** Basic practice examples, not official exam variants. The first five IDs remain migration-compatible. */
+/** Author-written examples. Original 24 IDs and indexes stay stable for old local records. */
 export const tasks: Task[] = [
   defineTask({
     id: "triangle-sine",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 15,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "geometry",
     prototypeId: "triangle-sine",
     title: "Синус острого угла",
@@ -98,6 +107,10 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "linear-equation",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 9,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "linear-equations",
     prototypeId: "linear-basic",
     title: "Найдите неизвестное",
@@ -113,6 +126,10 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "fraction-addition",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 6,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "fractions",
     prototypeId: "fraction-arithmetic",
     title: "Сложение дробей",
@@ -133,6 +150,10 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "probability-balls",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 10,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "probability",
     prototypeId: "classical-probability",
     title: "Случайный выбор",
@@ -150,6 +171,10 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "percentage-discount",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: null,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "percentages",
     prototypeId: "percentage-price",
     title: "Цена со скидкой",
@@ -167,9 +192,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "fraction-subtraction",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: null,
     topicId: "fractions",
     prototypeId: "fraction-arithmetic",
-    examType: ["ОГЭ"],
     title: "Вычитание дробей",
     prompt: "Вычислите значение выражения.",
     conditionLatex: "\\frac56-\\frac14",
@@ -188,9 +215,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "fraction-signed",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: null,
     topicId: "fractions",
     prototypeId: "fraction-arithmetic",
-    examType: ["ЕГЭ"],
     title: "Дроби со знаком",
     prompt: "Вычислите значение выражения.",
     conditionLatex: "-\\frac23+\\frac56",
@@ -209,6 +238,10 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "decimal-addition",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 6,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "decimals",
     prototypeId: "decimal-arithmetic",
     title: "Десятичные дроби",
@@ -225,9 +258,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "decimal-product",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 6,
     topicId: "decimals",
     prototypeId: "decimal-arithmetic",
-    examType: ["ОГЭ"],
     title: "Умножение десятичных дробей",
     prompt: "Вычислите значение выражения.",
     conditionLatex: "1{,}2\\cdot0{,}5",
@@ -242,9 +277,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "decimal-division",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 13,
     topicId: "decimals",
     prototypeId: "decimal-arithmetic",
-    examType: ["ЕГЭ"],
     title: "Деление десятичных дробей",
     prompt: "Вычислите значение выражения.",
     conditionLatex: "4{,}2:0{,}07",
@@ -260,9 +297,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "percentage-jacket",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: null,
     topicId: "percentages",
     prototypeId: "percentage-price",
-    examType: ["ОГЭ"],
     title: "Скидка на покупку",
     prompt:
       "Куртка стоила 1500 рублей. Её цену снизили на 20%. Найдите новую цену в рублях.",
@@ -275,9 +314,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "percentage-increase",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 15,
     topicId: "percentages",
     prototypeId: "percentage-price",
-    examType: ["ЕГЭ"],
     title: "Изменение цены",
     prompt:
       "Цена книги 800 рублей. После подорожания на 12% сколько рублей стоит книга?",
@@ -293,9 +334,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "linear-negative",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 9,
     topicId: "linear-equations",
     prototypeId: "linear-basic",
-    examType: ["ОГЭ"],
     title: "Линейное уравнение",
     prompt: "Решите уравнение. Запишите значение x.",
     conditionLatex: "5x+9=-6",
@@ -308,9 +351,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "linear-brackets",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 17,
     topicId: "linear-equations",
     prototypeId: "linear-basic",
-    examType: ["ЕГЭ"],
     title: "Уравнение со скобками",
     prompt: "Решите уравнение. Запишите значение x.",
     conditionLatex: "2(x-3)=x+5",
@@ -323,6 +368,10 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "quadratic-two-roots",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: null,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "quadratic-equations",
     prototypeId: "quadratic-roots",
     title: "Корни уравнения",
@@ -343,9 +392,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "quadratic-opposite-roots",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: null,
     topicId: "quadratic-equations",
     prototypeId: "quadratic-roots",
-    examType: ["ОГЭ"],
     title: "Квадрат неизвестного",
     prompt: "Решите уравнение. Запишите все корни через точку с запятой.",
     conditionLatex: "x^2=16",
@@ -360,9 +411,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "quadratic-fractional-roots",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: null,
     topicId: "quadratic-equations",
     prototypeId: "quadratic-roots",
-    examType: ["ЕГЭ"],
     title: "Квадратное уравнение",
     prompt: "Решите уравнение. Запишите все корни через точку с запятой.",
     conditionLatex: "2x^2+x-1=0",
@@ -378,6 +431,10 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "powers-quotient",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 8,
+    legacyExamTypes: ["ОГЭ", "ЕГЭ"],
     topicId: "powers-roots",
     prototypeId: "powers-and-roots",
     title: "Степени с одинаковым основанием",
@@ -394,9 +451,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "roots-sum",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 8,
     topicId: "powers-roots",
     prototypeId: "powers-and-roots",
-    examType: ["ОГЭ"],
     title: "Квадратные корни",
     prompt: "Вычислите значение выражения.",
     conditionLatex: "\\sqrt{81}+\\sqrt{49}",
@@ -411,9 +470,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "roots-product",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 14,
     topicId: "powers-roots",
     prototypeId: "powers-and-roots",
-    examType: ["ЕГЭ"],
     title: "Произведение корней",
     prompt: "Вычислите значение выражения.",
     conditionLatex: "\\sqrt{12}\\cdot\\sqrt3",
@@ -428,9 +489,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "triangle-sine-five-twelve",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: null,
     topicId: "geometry",
     prototypeId: "triangle-sine",
-    examType: ["ОГЭ"],
     title: "Синус в треугольнике",
     prompt:
       "В прямоугольном треугольнике ABC угол B равен 90°, AB = 5, BC = 12. Найдите sin A. Можно записать ответ обыкновенной дробью.",
@@ -447,9 +510,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "triangle-sine-eight-fifteen",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: null,
     topicId: "geometry",
     prototypeId: "triangle-sine",
-    examType: ["ЕГЭ"],
     title: "Тригонометрия треугольника",
     prompt:
       "В прямоугольном треугольнике ABC угол B равен 90°, AB = 8, BC = 15. Найдите sin A. Можно записать ответ обыкновенной дробью.",
@@ -469,9 +534,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "probability-die",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: null,
     topicId: "probability",
     prototypeId: "classical-probability",
-    examType: ["ОГЭ"],
     title: "Бросок кубика",
     prompt:
       "Бросают обычный честный шестигранный кубик с числами от 1 до 6. Найдите вероятность того, что выпадет число больше 4.",
@@ -487,9 +554,11 @@ export const tasks: Task[] = [
   }),
   defineTask({
     id: "probability-cards",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 5,
     topicId: "probability",
     prototypeId: "classical-probability",
-    examType: ["ЕГЭ"],
     title: "Карточки с числами",
     prompt:
       "Из 20 одинаковых на ощупь карточек с числами от 1 до 20 наугад выбирают одну. Найдите вероятность того, что число на ней делится на 5.",
@@ -502,16 +571,490 @@ export const tasks: Task[] = [
       { text: "Вычислим вероятность.", latex: "P=\\frac4{20}=\\frac15=0{,}2" },
     ],
   }),
+  defineTask({
+    id: "oge-fraction-sum-terminating",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 6,
+    topicId: "fractions",
+    prototypeId: "fraction-arithmetic",
+    title: "Сумма дробей",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "\\frac14+\\frac3{10}",
+    answerRule: { type: "number", value: "11/20" },
+    answerDisplay: "0,55",
+    solution: [
+      {
+        text: "Приведём обе дроби к знаменателю 20.",
+        latex: "\\frac14+\\frac3{10}=\\frac5{20}+\\frac6{20}",
+      },
+      {
+        text: "Сложим числители и переведём результат в десятичную запись.",
+        latex: "\\frac{11}{20}=0{,}55",
+      },
+    ],
+  }),
+  defineTask({
+    id: "oge-quadratic-larger-root",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 9,
+    topicId: "quadratic-equations",
+    prototypeId: "quadratic-roots",
+    title: "Корень квадратного уравнения",
+    prompt: "Решите уравнение. Если корней несколько, запишите больший корень.",
+    conditionLatex: "x^2-5x+6=0",
+    answerRule: { type: "number", value: "3" },
+    answerDisplay: "3",
+    solution: [
+      {
+        text: "Разложим левую часть на множители.",
+        latex: "x^2-5x+6=(x-2)(x-3)",
+      },
+      {
+        text: "Каждый множитель приравниваем к нулю и выбираем больший корень.",
+        latex: "x=2\\quad\\text{или}\\quad x=3;\\qquad3>2",
+      },
+    ],
+  }),
+  defineTask({
+    id: "oge-probability-even-die",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 10,
+    topicId: "probability",
+    prototypeId: "classical-probability",
+    title: "Вероятность при броске кубика",
+    prompt:
+      "Бросают обычный честный шестигранный кубик с числами от 1 до 6. Найдите вероятность того, что выпадет чётное число.",
+    answerRule: { type: "number", value: "1/2" },
+    answerDisplay: "0,5",
+    solution: [
+      {
+        text: "Подходят три исхода: 2, 4 и 6. Всего равновозможных исходов шесть.",
+      },
+      {
+        text: "Разделим число подходящих исходов на общее число исходов.",
+        latex: "P=\\frac36=\\frac12=0{,}5",
+      },
+    ],
+  }),
+  defineTask({
+    id: "oge-triangle-three-four",
+    examType: ["ОГЭ"],
+    level: null,
+    examNumber: 15,
+    topicId: "geometry",
+    prototypeId: "triangle-sine",
+    title: "Синус острого угла",
+    prompt:
+      "В прямоугольном треугольнике ABC угол B равен 90°, AB = 4, BC = 3. Найдите sin A.",
+    diagram: { type: "right-triangle", adjacent: 4, opposite: 3 },
+    answerRule: { type: "number", value: "3/5" },
+    answerDisplay: "0,6",
+    solution: [
+      {
+        text: "По теореме Пифагора найдём гипотенузу.",
+        latex: "AC=\\sqrt{4^2+3^2}=5",
+      },
+      {
+        text: "Катет BC лежит напротив угла A. Разделим его длину на гипотенузу.",
+        latex: "\\sin A=\\frac35=0{,}6",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-fraction-sum",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 13,
+    topicId: "fractions",
+    prototypeId: "fraction-arithmetic",
+    title: "Действия с дробями",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "\\frac15+\\frac3{10}",
+    answerRule: { type: "number", value: "1/2" },
+    answerDisplay: "0,5",
+    solution: [
+      {
+        text: "Приведём первую дробь к знаменателю 10.",
+        latex: "\\frac15+\\frac3{10}=\\frac2{10}+\\frac3{10}",
+      },
+      {
+        text: "Сложим числители и сократим дробь.",
+        latex: "\\frac5{10}=\\frac12=0{,}5",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-decimal-difference",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 13,
+    topicId: "decimals",
+    prototypeId: "decimal-arithmetic",
+    title: "Разность десятичных дробей",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "1{,}75-0{,}6",
+    answerRule: { type: "number", value: "1.15" },
+    answerDisplay: "1,15",
+    solution: [
+      {
+        text: "Запишем 0,6 как 0,60, чтобы вычитать числа по разрядам.",
+        latex: "1{,}75-0{,}60=1{,}15",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-discount",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 15,
+    topicId: "percentages",
+    prototypeId: "percentage-price",
+    title: "Стоимость со скидкой",
+    prompt:
+      "Рюкзак стоил 1000 рублей. Во время распродажи цена снизилась на 15%. Сколько рублей стоит рюкзак после скидки?",
+    answerRule: { type: "number", value: "850" },
+    answerDisplay: "850",
+    solution: [
+      { text: "Найдём размер скидки.", latex: "1000\\cdot0{,}15=150" },
+      { text: "Вычтем скидку из прежней цены.", latex: "1000-150=850" },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-linear-equation",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 17,
+    topicId: "linear-equations",
+    prototypeId: "linear-basic",
+    title: "Линейное уравнение",
+    prompt: "Решите уравнение. Запишите значение x.",
+    conditionLatex: "4x-3=17",
+    answerRule: { type: "number", value: "5" },
+    answerDisplay: "5",
+    solution: [
+      { text: "Прибавим 3 к обеим частям уравнения.", latex: "4x=20" },
+      { text: "Разделим обе части на 4.", latex: "x=5" },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-quadratic-roots",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: null,
+    topicId: "quadratic-equations",
+    prototypeId: "quadratic-roots",
+    title: "Корни квадратного уравнения",
+    prompt: "Решите уравнение. Запишите все корни через точку с запятой.",
+    conditionLatex: "x^2-7x+12=0",
+    answerRule: { type: "set", values: ["3", "4"] },
+    answerDisplay: "3; 4",
+    solution: [
+      {
+        text: "Разложим левую часть на множители.",
+        latex: "x^2-7x+12=(x-3)(x-4)",
+      },
+      {
+        text: "Произведение равно нулю, если один из множителей равен нулю.",
+        latex: "x=3\\quad\\text{или}\\quad x=4",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-powers-quotient",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 14,
+    topicId: "powers-roots",
+    prototypeId: "powers-and-roots",
+    title: "Частное степеней",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "\\frac{3^4}{3^2}",
+    answerRule: { type: "number", value: "9" },
+    answerDisplay: "9",
+    solution: [
+      {
+        text: "При делении степеней с одним ненулевым основанием вычтем показатели.",
+        latex: "\\frac{3^4}{3^2}=3^{4-2}=3^2=9",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-triangle-sine",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: null,
+    topicId: "geometry",
+    prototypeId: "triangle-sine",
+    title: "Синус в прямоугольном треугольнике",
+    prompt:
+      "В прямоугольном треугольнике ABC угол B равен 90°, AB = 8, BC = 6. Найдите sin A.",
+    diagram: { type: "right-triangle", adjacent: 8, opposite: 6 },
+    answerRule: { type: "number", value: "3/5" },
+    answerDisplay: "0,6",
+    solution: [
+      {
+        text: "Вычислим гипотенузу по теореме Пифагора.",
+        latex: "AC=\\sqrt{8^2+6^2}=10",
+      },
+      {
+        text: "Разделим противолежащий катет на гипотенузу.",
+        latex: "\\sin A=\\frac6{10}=0{,}6",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-base-probability-balls",
+    examType: ["ЕГЭ"],
+    level: "base",
+    examNumber: 5,
+    topicId: "probability",
+    prototypeId: "classical-probability",
+    title: "Выбор шара",
+    prompt:
+      "В коробке 5 синих и 15 белых шаров, одинаковых на ощупь. Наугад выбирают один шар. Найдите вероятность того, что он синий.",
+    answerRule: { type: "number", value: "1/4" },
+    answerDisplay: "0,25",
+    solution: [
+      { text: "Всего шаров 20; подходят 5 синих." },
+      {
+        text: "Разделим число подходящих исходов на число всех равновозможных исходов.",
+        latex: "P=\\frac5{20}=\\frac14=0{,}25",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-triangle-twelve-nine",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 1,
+    topicId: "geometry",
+    prototypeId: "triangle-sine",
+    title: "Синус в треугольнике",
+    prompt:
+      "В прямоугольном треугольнике ABC угол B равен 90°, AB = 12, BC = 9. Найдите sin A.",
+    diagram: { type: "right-triangle", adjacent: 12, opposite: 9 },
+    answerRule: { type: "number", value: "3/5" },
+    answerDisplay: "0,6",
+    solution: [
+      { text: "Найдём гипотенузу.", latex: "AC=\\sqrt{12^2+9^2}=15" },
+      {
+        text: "Для угла A противолежащим является катет BC.",
+        latex: "\\sin A=\\frac9{15}=0{,}6",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-triangle-nine-twelve",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 1,
+    topicId: "geometry",
+    prototypeId: "triangle-sine",
+    title: "Прямоугольный треугольник",
+    prompt:
+      "В прямоугольном треугольнике ABC угол B равен 90°, AB = 9, BC = 12. Найдите sin A.",
+    diagram: { type: "right-triangle", adjacent: 9, opposite: 12 },
+    answerRule: { type: "number", value: "4/5" },
+    answerDisplay: "0,8",
+    solution: [
+      {
+        text: "По теореме Пифагора найдём гипотенузу.",
+        latex: "AC=\\sqrt{9^2+12^2}=15",
+      },
+      {
+        text: "Разделим противолежащий катет на гипотенузу.",
+        latex: "\\sin A=\\frac{12}{15}=0{,}8",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-probability-balls",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 4,
+    topicId: "probability",
+    prototypeId: "classical-probability",
+    title: "Случайный выбор шара",
+    prompt:
+      "В мешке 2 красных и 8 белых шаров, одинаковых на ощупь. Наугад вынимают один шар. Найдите вероятность того, что он красный.",
+    answerRule: { type: "number", value: "1/5" },
+    answerDisplay: "0,2",
+    solution: [
+      { text: "Всего 10 шаров, из них 2 красных." },
+      {
+        text: "Найдём долю подходящих равновозможных исходов.",
+        latex: "P=\\frac2{10}=0{,}2",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-probability-cards",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 4,
+    topicId: "probability",
+    prototypeId: "classical-probability",
+    title: "Случайная карточка",
+    prompt:
+      "Из 25 одинаковых на ощупь карточек с числами от 1 до 25 наугад выбирают одну. Найдите вероятность того, что число на ней делится на 5.",
+    answerRule: { type: "number", value: "1/5" },
+    answerDisplay: "0,2",
+    solution: [
+      {
+        text: "Подходят числа 5, 10, 15, 20 и 25: всего 5 из 25 равновозможных исходов.",
+      },
+      { text: "Вычислим вероятность.", latex: "P=\\frac5{25}=\\frac15=0{,}2" },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-exponential-two",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 6,
+    topicId: "powers-roots",
+    prototypeId: "exponential-equation",
+    title: "Показательное уравнение",
+    prompt: "Решите уравнение. Запишите значение x.",
+    conditionLatex: "2^{x+1}=16",
+    answerRule: { type: "number", value: "3" },
+    answerDisplay: "3",
+    solution: [
+      {
+        text: "Запишем правую часть как степень числа 2.",
+        latex: "2^{x+1}=2^4",
+      },
+      {
+        text: "Степенная функция с основанием 2 принимает каждое значение один раз, поэтому показатели равны.",
+        latex: "x+1=4;\\qquad x=3",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-exponential-three",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 6,
+    topicId: "powers-roots",
+    prototypeId: "exponential-equation",
+    title: "Уравнение со степенью",
+    prompt: "Решите уравнение. Запишите значение x.",
+    conditionLatex: "3^{2x-1}=27",
+    answerRule: { type: "number", value: "2" },
+    answerDisplay: "2",
+    solution: [
+      { text: "Представим 27 как степень числа 3.", latex: "3^{2x-1}=3^3" },
+      {
+        text: "При одинаковом основании 3 равенство степеней означает равенство показателей.",
+        latex: "2x-1=3;\\quad2x=4;\\quad x=2",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-roots-product",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 7,
+    topicId: "powers-roots",
+    prototypeId: "powers-and-roots",
+    title: "Произведение квадратных корней",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "\\sqrt{32}\\cdot\\sqrt2",
+    answerRule: { type: "number", value: "8" },
+    answerDisplay: "8",
+    solution: [
+      {
+        text: "Оба подкоренных числа неотрицательны. Корни можно перемножить под одним знаком корня.",
+        latex: "\\sqrt{32}\\cdot\\sqrt2=\\sqrt{64}=8",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-powers-quotient",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 7,
+    topicId: "powers-roots",
+    prototypeId: "powers-and-roots",
+    title: "Вычисление со степенями",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "\\frac{3^5}{3^3}",
+    answerRule: { type: "number", value: "9" },
+    answerDisplay: "9",
+    solution: [
+      {
+        text: "Вычтем показатели степеней с одним ненулевым основанием.",
+        latex: "\\frac{3^5}{3^3}=3^{5-3}=3^2=9",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-fraction-difference",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 7,
+    topicId: "fractions",
+    prototypeId: "fraction-arithmetic",
+    title: "Вычисление дробного выражения",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "\\frac34-\\frac18",
+    answerRule: { type: "number", value: "5/8" },
+    answerDisplay: "0,625",
+    solution: [
+      {
+        text: "Приведём первую дробь к знаменателю 8.",
+        latex: "\\frac34-\\frac18=\\frac68-\\frac18=\\frac58=0{,}625",
+      },
+    ],
+  }),
+  defineTask({
+    id: "ege-profile-fraction-product",
+    examType: ["ЕГЭ"],
+    level: "profile",
+    examNumber: 7,
+    topicId: "fractions",
+    prototypeId: "fraction-arithmetic",
+    title: "Произведение дробей",
+    prompt: "Вычислите значение выражения.",
+    conditionLatex: "\\frac35\\cdot\\frac54",
+    answerRule: { type: "number", value: "3/4" },
+    answerDisplay: "0,75",
+    solution: [
+      {
+        text: "Перемножим числители и знаменатели и сократим общий множитель 5.",
+        latex: "\\frac35\\cdot\\frac54=\\frac{15}{20}=\\frac34=0{,}75",
+      },
+    ],
+  }),
 ];
 
-export function getPracticeTasks(filter: {
+export type PracticeTaskFilter = {
   examType: Exam;
+  subjectId?: SubjectId;
+  level?: ExamLevel | null;
+  examNumber?: number;
   topicId?: string;
   prototypeId?: string;
-}): Task[] {
+};
+
+/** Never replace an empty selection with another exam, level, number or topic. */
+export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
+  const definition = getExamDefinition(filter);
+  if (!definition) return [];
+  if (
+    filter.examNumber !== undefined &&
+    !definition.numbers.some((entry) => entry.number === filter.examNumber)
+  )
+    return [];
   return tasks.filter(
     (task) =>
-      task.examType.includes(filter.examType) &&
+      task.examType[0] === definition.examType &&
+      task.subjectId === definition.subjectId &&
+      task.level === definition.level &&
+      (filter.examNumber === undefined ||
+        task.examNumber === filter.examNumber) &&
       (!filter.topicId || task.topicId === filter.topicId) &&
       (!filter.prototypeId || task.prototypeId === filter.prototypeId),
   );

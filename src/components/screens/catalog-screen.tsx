@@ -1,157 +1,326 @@
 "use client";
 
-import { ArrowRight, BookOpen, SlidersHorizontal } from "lucide-react";
+import { ArrowRight, BookOpen, Hash, ListFilter } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
+import { getExamDefinition, type ExamLevel } from "@/lib/exams";
+import type { CatalogSelection } from "@/lib/practice";
 import { getPracticeTasks, prototypes } from "@/lib/tasks";
 import { theoryTopics } from "@/lib/theory";
-import type { Exam } from "@/lib/navigation";
+import "@/components/catalog-screen.css";
 
 type CatalogScreenProps = {
-  exam: Exam;
-  topicId?: string;
-  prototypeId?: string;
-  onExamChange: (exam: Exam) => void;
-  onSelectionChange: (topicId?: string, prototypeId?: string) => void;
-  onStart: (topicId?: string, prototypeId?: string) => void;
+  selection: CatalogSelection;
+  onChange: (selection: CatalogSelection) => void;
+  onStart: (selection: CatalogSelection) => void;
   onTheory: (topicId?: string) => void;
 };
 
 export function CatalogScreen({
-  exam,
-  topicId,
-  prototypeId,
-  onExamChange,
-  onSelectionChange,
+  selection,
+  onChange,
   onStart,
   onTheory,
 }: CatalogScreenProps) {
+  const definition = getExamDefinition({
+    examType: selection.exam,
+    subjectId: selection.subjectId,
+    level: selection.level,
+  });
+  const filter = {
+    examType: selection.exam,
+    subjectId: selection.subjectId,
+    level: selection.level,
+  };
   const availableTopics = theoryTopics.filter((topic) =>
-    topic.examType.includes(exam),
+    topic.examType.includes(selection.exam),
   );
-  const selectedTopic = availableTopics.find((topic) => topic.id === topicId);
   const availablePrototypes = prototypes.filter(
     (prototype) =>
-      (!selectedTopic || prototype.topicId === selectedTopic.id) &&
-      getPracticeTasks({ examType: exam, prototypeId: prototype.id }).length >
-        0,
+      getPracticeTasks({ ...filter, prototypeId: prototype.id }).length > 0,
   );
-  const selectedPrototype = availablePrototypes.find(
-    (prototype) => prototype.id === prototypeId,
+  const chosenPrototype = availablePrototypes.find(
+    (prototype) => prototype.id === selection.prototypeId,
   );
-  const selectedTasks = getPracticeTasks({
-    examType: exam,
-    topicId: selectedTopic?.id,
-    prototypeId: selectedPrototype?.id,
-  });
 
-  function selectTopic(value: string) {
-    onSelectionChange(value || undefined, undefined);
+  function changeExam(exam: CatalogSelection["exam"]) {
+    if (exam === selection.exam) return;
+    onChange({
+      exam,
+      subjectId: "math",
+      level: exam === "ЕГЭ" ? "profile" : undefined,
+      mode: selection.mode,
+    });
   }
 
-  function selectPrototype(value: string) {
-    const prototype = availablePrototypes.find((item) => item.id === value);
-    onSelectionChange(prototype?.topicId ?? selectedTopic?.id, prototype?.id);
+  function changeLevel(level: ExamLevel) {
+    if (level === selection.level) return;
+    onChange({
+      exam: selection.exam,
+      subjectId: selection.subjectId,
+      level,
+      mode: selection.mode,
+    });
+  }
+
+  function changeMode(mode: CatalogSelection["mode"]) {
+    if (mode === selection.mode) return;
+    onChange({
+      ...selection,
+      mode,
+      examNumber: undefined,
+      topicId: undefined,
+      prototypeId: undefined,
+    });
   }
 
   return (
-    <>
-      <PageIntro eyebrow="ТЕОРИЯ И ПРАКТИКА" title="Задания">
-        Выбери экзамен, тему и тип задания для самостоятельной практики.
+    <section className="exam-catalog" aria-label="Каталог заданий">
+      <PageIntro eyebrow="САМОСТОЯТЕЛЬНАЯ ПРАКТИКА" title="Задания">
+        Выбери экзамен, затем номер задания или учебную тему.
       </PageIntro>
 
-      <ExamPicker exam={exam} onChange={onExamChange} />
+      <ExamPicker exam={selection.exam} onChange={changeExam} />
 
-      <section
-        className="practice-picker-card"
-        aria-labelledby="practice-picker-title"
-      >
-        <div className="practice-picker-heading">
-          <span className="feature-icon">
-            <SlidersHorizontal size={24} aria-hidden="true" />
-          </span>
-          <div>
-            <h2 id="practice-picker-title">Что потренируем?</h2>
-            <p>Можно выбрать одну тему или практиковаться по всем.</p>
+      {selection.exam === "ЕГЭ" && (
+        <section
+          className="catalog-level-card"
+          aria-labelledby="catalog-level-title"
+        >
+          <h2 id="catalog-level-title">Уровень математики</h2>
+          <div
+            className="segmented catalog-level-switch"
+            role="group"
+            aria-label="Уровень ЕГЭ"
+          >
+            {(
+              [
+                ["base", "Базовый"],
+                ["profile", "Профильный"],
+              ] as const
+            ).map(([level, label]) => (
+              <button
+                type="button"
+                key={level}
+                className={selection.level === level ? "selected" : ""}
+                aria-pressed={selection.level === level}
+                onClick={() => changeLevel(level)}
+              >
+                {label}
+              </button>
+            ))}
           </div>
+          <p>Номера и подборки базового и профильного уровней разделены.</p>
+        </section>
+      )}
+
+      <div
+        className="segmented catalog-mode-switch"
+        role="group"
+        aria-label="Способ выбора заданий"
+      >
+        <button
+          type="button"
+          className={selection.mode === "number" ? "selected" : ""}
+          aria-pressed={selection.mode === "number"}
+          onClick={() => changeMode("number")}
+        >
+          <Hash size={19} aria-hidden="true" /> По номеру
+        </button>
+        <button
+          type="button"
+          className={selection.mode === "topic" ? "selected" : ""}
+          aria-pressed={selection.mode === "topic"}
+          onClick={() => changeMode("topic")}
+        >
+          <ListFilter size={19} aria-hidden="true" /> По теме
+        </button>
+      </div>
+
+      <div className="catalog-list-heading">
+        <span className="eyebrow">
+          {definition?.title ?? `${selection.exam} · Математика`}
+        </span>
+        <h2>
+          {selection.mode === "number" ? "Номера заданий" : "Учебные темы"}
+        </h2>
+        <p>
+          {selection.mode === "number"
+            ? "У одного номера могут быть разные темы. В практике будет указана тема каждой задачи."
+            : "Общие школьные темы с заданиями выбранного экзамена и уровня."}
+        </p>
+      </div>
+
+      {selection.mode === "topic" && (
+        <label className="catalog-prototype-filter" htmlFor="catalog-prototype">
+          <span>Тип задания</span>
+          <select
+            id="catalog-prototype"
+            className="practice-filter-select"
+            value={chosenPrototype?.id ?? ""}
+            onChange={(event) => {
+              const prototype = availablePrototypes.find(
+                (item) => item.id === event.target.value,
+              );
+              onChange({
+                ...selection,
+                prototypeId: prototype?.id,
+                topicId: prototype?.topicId,
+                examNumber: undefined,
+              });
+            }}
+          >
+            <option value="">Все типы заданий</option>
+            {availablePrototypes.map((prototype) => (
+              <option key={prototype.id} value={prototype.id}>
+                {prototype.title}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+
+      {selection.mode === "number" ? (
+        definition ? (
+          <div className="catalog-number-grid">
+            {definition.numbers.map((item) => {
+              const cardSelection: CatalogSelection = {
+                ...selection,
+                examNumber: item.number,
+                topicId: undefined,
+                prototypeId: undefined,
+              };
+              const hasTasks =
+                getPracticeTasks({ ...filter, examNumber: item.number })
+                  .length > 0;
+              return (
+                <button
+                  type="button"
+                  key={item.number}
+                  data-catalog-number={item.number}
+                  className={`catalog-number-card${selection.examNumber === item.number ? " catalog-card-selected" : ""}`}
+                  aria-pressed={selection.examNumber === item.number}
+                  onClick={() => onStart(cardSelection)}
+                >
+                  <span className="catalog-card-top">
+                    <span className="catalog-number-badge">№{item.number}</span>
+                    <ArrowRight size={19} aria-hidden="true" />
+                  </span>
+                  <span className="catalog-card-title">{item.title}</span>
+                  <span className="catalog-card-status">
+                    {hasTasks ? "Открыть практику" : "Задания скоро появятся"}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="catalog-empty" role="status">
+            <h3>Каталог пока недоступен</h3>
+            <p>
+              Выбери другой экзамен или уровень. Подборки здесь не подменяются
+              заданиями другого экзамена.
+            </p>
+          </div>
+        )
+      ) : (
+        <div className="catalog-topic-grid">
+          {availableTopics
+            .filter(
+              (topic) =>
+                !chosenPrototype || topic.id === chosenPrototype.topicId,
+            )
+            .map((topic) => {
+              const cardSelection: CatalogSelection = {
+                ...selection,
+                topicId: topic.id,
+                examNumber: undefined,
+                prototypeId:
+                  chosenPrototype?.topicId === topic.id
+                    ? chosenPrototype.id
+                    : undefined,
+              };
+              const hasTasks =
+                getPracticeTasks({
+                  ...filter,
+                  topicId: topic.id,
+                  prototypeId: cardSelection.prototypeId,
+                }).length > 0;
+              return (
+                <button
+                  type="button"
+                  key={topic.id}
+                  data-catalog-topic={topic.id}
+                  className={`catalog-topic-card${selection.topicId === topic.id ? " catalog-card-selected" : ""}`}
+                  aria-pressed={selection.topicId === topic.id}
+                  onClick={() => onStart(cardSelection)}
+                >
+                  <span className="catalog-card-top">
+                    <span className="feature-icon">
+                      <BookOpen size={23} aria-hidden="true" />
+                    </span>
+                    <ArrowRight size={19} aria-hidden="true" />
+                  </span>
+                  <span className="catalog-card-title">{topic.title}</span>
+                  <span className="catalog-card-description">
+                    {topic.description}
+                  </span>
+                  <span className="catalog-card-status">
+                    {hasTasks ? "Открыть практику" : "Задания скоро появятся"}
+                  </span>
+                </button>
+              );
+            })}
         </div>
+      )}
 
-        <div className="practice-filter-grid">
-          <label className="practice-filter-field" htmlFor="practice-topic">
-            <span>Тема</span>
-            <select
-              className="practice-filter-select"
-              id="practice-topic"
-              value={selectedTopic?.id ?? ""}
-              onChange={(event) => selectTopic(event.target.value)}
-            >
-              <option value="">Все темы</option>
-              {availableTopics.map((topic) => (
-                <option key={topic.id} value={topic.id}>
-                  {topic.title}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          <label className="practice-filter-field" htmlFor="practice-prototype">
-            <span>Тип задания</span>
-            <select
-              className="practice-filter-select"
-              id="practice-prototype"
-              value={selectedPrototype?.id ?? ""}
-              onChange={(event) => selectPrototype(event.target.value)}
-            >
-              <option value="">Все типы заданий</option>
-              {availablePrototypes.map((prototype) => (
-                <option key={prototype.id} value={prototype.id}>
-                  {prototype.title}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-
-        <div className="practice-selection-summary">
-          <span>{exam} · Математика</span>
+      <section className="catalog-theory-link">
+        <div>
+          <h2>Сначала разобраться в теме</h2>
           <p>
-            {selectedTopic?.title ?? "Все темы"}
-            {selectedPrototype
-              ? ` · ${selectedPrototype.title}`
-              : " · Все типы заданий"}
+            Правила, формулы и пошаговые примеры доступны в бесплатной теории.
           </p>
         </div>
-
-        {selectedTasks.length === 0 && (
-          <p className="practice-empty-note" role="status">
-            Для этого выбора пока нет заданий. Выбери другую тему или тип
-            задания.
-          </p>
-        )}
-
-        <div className="practice-picker-actions">
-          <button
-            type="button"
-            className="button button-primary"
-            disabled={selectedTasks.length === 0}
-            onClick={() => onStart(selectedTopic?.id, selectedPrototype?.id)}
-          >
-            Начать практику
-            <ArrowRight size={20} aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            className="button button-secondary"
-            onClick={() => onTheory(selectedTopic?.id)}
-          >
-            <BookOpen size={20} aria-hidden="true" />
-            Открыть теорию
-          </button>
-        </div>
+        <button
+          type="button"
+          className="button button-secondary"
+          onClick={() =>
+            onTheory(selection.mode === "topic" ? selection.topicId : undefined)
+          }
+        >
+          <BookOpen size={19} aria-hidden="true" /> Открыть теорию
+        </button>
       </section>
-      <p className="quiet-note">
-        Это учебная демоподборка. После прохождения выбранных заданий они
-        повторяются. Ограничений на практику нет.
-      </p>
-    </>
+
+      {definition && (
+        <aside
+          className="catalog-scope-note"
+          aria-label="О демонстрационном каталоге"
+        >
+          <p>
+            Демонстрационная структура {definition.year} года, а не полный банк
+            экзамена. Ограничений на практику нет.
+          </p>
+          {definition.verificationStatus === "not-verified-online" && (
+            <p>{definition.verificationNote}</p>
+          )}
+          <details>
+            <summary>Материалы ФИПИ</summary>
+            <ul>
+              {definition.sources.map((source) => (
+                <li key={source.url}>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {source.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </aside>
+      )}
+    </section>
   );
 }
