@@ -68,6 +68,9 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
       (level !== null && level !== "base" && level !== "profile") ||
       (exam === "ОГЭ" && level !== null) ||
       (mode !== null && mode !== "number" && mode !== "topic") ||
+      (mode === "number" && params.has("topic")) ||
+      (mode === "topic" && params.has("number")) ||
+      (params.has("number") && params.has("topic")) ||
       (params.has("number") &&
         (!Number.isInteger(examNumber) ||
           examNumber <= 0 ||

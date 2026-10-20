@@ -1050,6 +1050,9 @@ test("Парсер помечает неподдерживаемые экзам�
     "mode=",
     "exam=ОГЭ&level=base",
     "exam=ОГЭ&level=profile",
+    "mode=number&topic=fractions",
+    "mode=topic&number=6",
+    "number=6&topic=fractions",
   ]) {
     const route = parseStudyRoute(`#/tasks/0?${query}`, tasks.length);
     assert.equal(route.invalidContext, true, query);
