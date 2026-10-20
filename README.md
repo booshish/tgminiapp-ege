@@ -84,6 +84,8 @@ npm start
 
 ## Открыть и обновлять сайт только через GitHub
 
+**Сайт уже настроен на ветку `gh-pages`?** Для просмотра готовой версии достаточно открыть **https://booshish.github.io/tgminiapp-ege/**. Сохрани **Settings → Pages → Source: Deploy from a branch → gh-pages → /(root)**. Смена Source не нужна для обновления готовой сборки в этой ветке. Инструкция ниже — отдельный вариант, чтобы GitHub автоматически собирал сайт при изменениях `main`.
+
 На iPad открой GitHub в Safari. Настройка выполняется один раз, бесплатный публичный репозиторий подходит.
 
 1. Открой [настройки Pages проекта](https://github.com/booshish/tgminiapp-ege/settings/pages). В разделе **Build and deployment → Source** выбери **GitHub Actions**. Старую ветку `gh-pages` удалять не нужно.
