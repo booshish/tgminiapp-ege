@@ -187,13 +187,21 @@
   outline-color: #bbd6ae;
 }
 
-/* The shell keeps these controls outside the navigation hidden by focus mode. */
-.study-controls {
-  position: fixed;
-  z-index: 45;
-  top: calc(14px + env(safe-area-inset-top));
-  right: max(24px, env(safe-area-inset-right));
+/* Controls belong to the header flow and scroll away with it on every screen. */
+.app-shell .topbar {
+  padding-top: calc(14px + env(safe-area-inset-top));
+  padding-right: max(40px, env(safe-area-inset-right));
+  padding-left: max(40px, env(safe-area-inset-left));
+}
+.topbar-actions {
   display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+.study-controls {
+  display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 8px;
 }
@@ -272,20 +280,24 @@
 .focus-mode .break-reminder {
   bottom: max(20px, env(safe-area-inset-bottom));
 }
-.app-shell .topbar {
-  padding-right: 140px;
-}
-.app-shell[data-can-concentrate="true"] .topbar {
-  padding-right: 180px;
-}
-
 /* This mode is available while reading theory and solving the current task. */
 .app-shell.focus-mode {
   display: block;
   padding-bottom: 0;
 }
-.app-shell.focus-mode :is(.sidebar, .topbar, .mobile-nav, .developer-notice, .game-section) {
+.app-shell.focus-mode :is(.sidebar, .mobile-nav, .developer-notice, .game-section) {
   display: none;
+}
+.app-shell.focus-mode .topbar :is(.mobile-brand, .desktop-breadcrumb, .topbar-right) {
+  display: none;
+}
+.app-shell.focus-mode .topbar {
+  width: 100%;
+  max-width: 856px;
+  margin-inline: auto;
+  padding: calc(14px + env(safe-area-inset-top)) 32px 14px;
+  border-bottom: 0;
+  background: var(--cream);
 }
 .app-shell.focus-mode .workspace {
   margin-left: 0;
@@ -296,7 +308,7 @@
   width: 100%;
   max-width: 856px;
   margin: 0 auto;
-  padding: calc(84px + env(safe-area-inset-top)) 32px max(32px, env(safe-area-inset-bottom));
+  padding: 10px 32px max(32px, env(safe-area-inset-bottom));
 }
 .app-shell.focus-mode .task-xp-award {
   display: none;
@@ -305,7 +317,19 @@
   display: none;
 }
 
+@media (min-width: 701px) and (max-width: 1100px) {
+  .app-shell .topbar {
+    padding-right: max(28px, env(safe-area-inset-right));
+    padding-left: max(28px, env(safe-area-inset-left));
+  }
+}
+
 @media (max-width: 700px) {
+  .app-shell .topbar {
+    padding-top: calc(12px + env(safe-area-inset-top));
+    padding-right: max(20px, env(safe-area-inset-right));
+    padding-left: max(20px, env(safe-area-inset-left));
+  }
   .theme-options {
     display: flex;
   }
@@ -326,17 +350,10 @@
     min-width: 156px;
   }
   .app-shell.focus-mode .main-content {
-    padding: calc(84px + env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom));
+    padding: 10px 18px max(28px, env(safe-area-inset-bottom));
   }
-  .study-controls {
-    top: calc(14px + env(safe-area-inset-top));
-    right: max(16px, env(safe-area-inset-right));
-  }
-  .app-shell .topbar {
-    padding-right: 100px;
-  }
-  .app-shell[data-can-concentrate="true"] .topbar {
-    padding-right: 170px;
+  .app-shell.focus-mode .topbar {
+    padding-inline: 18px;
   }
   .app-shell .topbar-right {
     display: none;

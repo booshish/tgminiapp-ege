@@ -98,6 +98,88 @@
 ) {
   display: none;
 }
+
+/* Keep future wide tables inside the lesson instead of widening the page. */
+.theory-reading-page table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+/* Only opened theory receives a reading column; catalogs and phones keep their layout. */
+@media (min-width: 768px) {
+  .app-shell .theory-reading-page {
+    --theory-reading-size: 20px;
+  }
+  .app-shell.font-large .theory-reading-page {
+    --theory-reading-size: 22px;
+  }
+  .app-shell.font-huge .theory-reading-page {
+    --theory-reading-size: 24px;
+  }
+
+  .app-shell .theory-reading-page > :is(.topic-lesson, .topic-overview) {
+    width: 100%;
+    max-width: 706px; /* 640 px of text + two 32 px paddings + borders. */
+    margin-inline: auto;
+  }
+  .app-shell .theory-reading-page :is(.topic-lesson, .topic-overview-card, .topic-prerequisites) {
+    padding: 32px;
+  }
+  .app-shell .theory-reading-page > :is(.page-intro, .lesson-breadcrumbs) {
+    width: 100%;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+  .app-shell .theory-reading-page > .back-link {
+    margin-left: max(0px, calc((100% - 640px) / 2));
+  }
+
+  .app-shell .theory-reading-page :is(
+    .topic-lesson, .topic-overview-card, .lesson-section,
+    .lesson-examples, .lesson-difficulties
+  ) {
+    font-size: var(--theory-reading-size);
+    font-weight: 500;
+    line-height: 1.65;
+    text-align: left;
+  }
+  .app-shell .theory-reading-page :is(
+    .lesson-section p, .example-steps p, .lesson-difficulties li,
+    .topic-outline li, .topic-overview-card > p
+  ) {
+    max-width: 640px;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.65;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  .app-shell .theory-reading-page :is(.lesson-section, .topic-overview-card) p + p {
+    margin-top: 20px;
+  }
+  .app-shell .theory-reading-page .topic-overview-card > p {
+    margin-block: 20px;
+  }
+  .app-shell .theory-reading-page :is(.lesson-section, .lesson-examples, .lesson-difficulties, .topic-overview-card) h2 {
+    font-size: calc(var(--theory-reading-size) + 4px);
+    line-height: 1.4;
+  }
+  .app-shell .theory-reading-page .lesson-example h3 {
+    font-size: calc(var(--theory-reading-size) + 2px);
+    line-height: 1.45;
+  }
+  .app-shell .theory-reading-page .example-steps > li {
+    margin-block: 20px;
+  }
+  .app-shell .theory-reading-page .math-block {
+    font-size: var(--theory-reading-size);
+    margin-block: 20px;
+  }
+}
+
 @media (max-width: 600px) {
   .theory-tools { padding: 19px; gap: 18px; }
   .theory-search-field { gap: 7px; padding: 0 9px; }

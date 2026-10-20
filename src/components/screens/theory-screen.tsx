@@ -104,7 +104,7 @@ export function TheoryScreen({
 
   return (
     <section
-      className={`theory-page${focusMode && topic ? " theory-reading-focus" : ""}`}
+      className={`theory-page${topic ? " theory-reading-page" : ""}${focusMode && topic ? " theory-reading-focus" : ""}`}
     >
       <button type="button" className="back-link" onClick={onBack}>
         <ArrowLeft size={17} aria-hidden="true" />
