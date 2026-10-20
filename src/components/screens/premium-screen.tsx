@@ -3,12 +3,14 @@
 import { ArrowLeft, ArrowRight, Check, Leaf, Sparkles } from "lucide-react";
 import { CoachIllustration } from "@/components/illustrations";
 import { PageIntro } from "@/components/ui";
+import { proposedMonthlyPrices } from "@/lib/subscription-config";
 
 type PremiumScreenProps = { onBack: () => void };
 
 const comparison = [
   { label: "Короткие конспекты по математике", free: true },
   { label: "Задания с проверкой и решениями", free: true },
+  { label: "Игровые XP, уровни и серии", free: true },
   { label: "Подробная статистика ответов", free: false },
   { label: "Результаты по темам и история ошибок", free: false },
   { label: "Динамика занятий по датам", free: false },
@@ -56,7 +58,7 @@ export function PremiumScreen({ onBack }: PremiumScreenProps) {
             </caption>
             <thead>
               <tr>
-                <th scope="col">Возможности</th>
+                <th scope="col">Функции</th>
                 <th scope="col">Бесплатно</th>
                 <th scope="col">Premium</th>
               </tr>
@@ -108,6 +110,39 @@ export function PremiumScreen({ onBack }: PremiumScreenProps) {
             функции пока не подключены и не входят в работающую демонстрацию.
           </p>
         </div>
+      </section>
+      <section
+        className="analytics-section"
+        aria-labelledby="planned-prices-title"
+      >
+        <div className="section-title">
+          <h2 id="planned-prices-title">Подписка · планируется</h2>
+        </div>
+        <div className="premium-comparison">
+          <table>
+            <caption className="sr-only">
+              Предварительные месячные тарифы Premium
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Предметы</th>
+                <th scope="col">Проектная цена</th>
+              </tr>
+            </thead>
+            <tbody>
+              {proposedMonthlyPrices.map((price) => (
+                <tr key={price.label}>
+                  <th scope="row">{price.label}</th>
+                  <td>{price.rubles} ₽/мес.</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="quiet-note">
+          Это предварительная концепция тарифов. Сейчас доступна только математика.
+          Оплата и оформление подписки не подключены; XP одинаковы для Free и Premium.
+        </p>
       </section>
       <button className="button button-primary" onClick={onBack}>
         Вернуться к обучению <ArrowRight size={18} aria-hidden="true" />

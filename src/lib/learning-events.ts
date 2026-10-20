@@ -1,6 +1,7 @@
 import type { Exam, SubjectId } from "./tasks";
 import { checkTaskAnswer, prototypes, tasks } from "./tasks";
 import type { ExamLevel } from "./exams";
+import { emptyGameState, parseGameState, type GameState } from "./gamification";
 
 type EventContext = {
   id: string;
@@ -12,6 +13,9 @@ type EventContext = {
   createdAt: string;
   level?: ExamLevel | null;
   examNumber?: number | null;
+  examVersionId?: string;
+  part?: 1 | 2 | null;
+  answerFormat?: "short" | "extended";
 };
 
 export type AnswerEvent = EventContext & {
@@ -34,24 +38,30 @@ export type ProgressRecord = {
 };
 
 export type LearningState = {
-  version: 2;
+  version: 3;
   exam: Exam;
   lastTaskIndex: number;
   events: LearningEvent[];
   legacyRecords: ProgressRecord[];
   fontScale: "standard" | "large";
+  theme: "light" | "dark" | "system";
+  focusMode: boolean;
+  game: GameState;
 };
 
 export const storageKey = "tochka-learning-v2";
 export const legacyStorageKey = "tochka-demo-progress-v1";
 
 export const emptyLearningState: LearningState = {
-  version: 2,
+  version: 3,
   exam: "ЕГЭ",
   lastTaskIndex: 0,
   events: [],
   legacyRecords: [],
   fontScale: "standard",
+  theme: "system",
+  focusMode: false,
+  game: emptyGameState(),
 };
 
 function isObject(value: unknown): value is Record<string, unknown> {
@@ -134,6 +144,7 @@ function parseEventContext(
 ): EventContext | null {
   const task = tasks.find((candidate) => candidate.id === value.taskId);
   const hasExamMetadata = "level" in value || "examNumber" in value;
+  const hasScoringMetadata = "examVersionId" in value || "part" in value || "answerFormat" in value;
   if (
     !task ||
     !isId(value.id) ||
@@ -144,10 +155,13 @@ function parseEventContext(
     (value.examType !== "ОГЭ" && value.examType !== "ЕГЭ") ||
     !(
       task.examType.includes(value.examType) ||
-      (!hasExamMetadata && task.legacyExamTypes?.includes(value.examType))
+      (!hasExamMetadata && !hasScoringMetadata && task.legacyExamTypes?.includes(value.examType))
     ) ||
     (hasExamMetadata &&
-      (value.level !== task.level || value.examNumber !== task.examNumber))
+      (value.level !== task.level || value.examNumber !== task.examNumber)) ||
+    (hasScoringMetadata &&
+      (value.examVersionId !== task.examVersionId || value.part !== task.part ||
+       value.answerFormat !== (task.part === 2 ? "extended" : "short")))
   )
     return null;
   return {
@@ -161,6 +175,11 @@ function parseEventContext(
     ...(hasExamMetadata
       ? { level: task.level, examNumber: task.examNumber }
       : {}),
+    ...(hasScoringMetadata ? {
+      examVersionId: task.examVersionId,
+      part: task.part,
+      answerFormat: task.part === 2 ? "extended" as const : "short" as const,
+    } : {}),
   };
 }
 
@@ -222,13 +241,13 @@ function parseEvents(value: unknown): LearningEvent[] {
   return candidates.filter((event) => accepted.has(event));
 }
 
-/** Migrate only when v2 is absent; a deliberate reset must not resurrect the old key. */
+/** Keep the existing key; migrate v2 in place without replaying old answers for XP. */
 export function parseLearningState(
   raw: string | null,
   legacyRaw?: string | null,
 ): LearningState {
   const parsed = parseObject(raw);
-  const modern = parsed?.version === 2 ? parsed : null;
+  const modern = parsed?.version === 2 || parsed?.version === 3 ? parsed : null;
   const legacy = modern
     ? null
     : (parseObject(legacyRaw) ??
@@ -242,15 +261,22 @@ export function parseLearningState(
     source.lastTaskIndex < (modern ? tasks.length : 5)
       ? source.lastTaskIndex
       : 0;
+  const events = modern ? parseEvents(modern.events) : [];
   return {
-    version: 2,
+    version: 3,
     exam: source?.exam === "ОГЭ" ? "ОГЭ" : "ЕГЭ",
     lastTaskIndex,
-    events: modern ? parseEvents(modern.events) : [],
+    events,
     legacyRecords: parseLegacyRecords(
       modern ? modern.legacyRecords : legacy?.records,
     ),
     fontScale: modern?.fontScale === "large" ? "large" : "standard",
+    theme:
+      modern?.theme === "light" || modern?.theme === "dark"
+        ? modern.theme
+        : "system",
+    focusMode: modern?.focusMode === true,
+    game: parseGameState(modern?.game, events),
   };
 }
 

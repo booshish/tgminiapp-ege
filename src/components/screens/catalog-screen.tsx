@@ -2,7 +2,7 @@
 
 import { ArrowRight, BookOpen, Hash, ListFilter } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
-import { getExamDefinition, type ExamLevel } from "@/lib/exams";
+import { getExamDefinition } from "@/lib/exams";
 import type { CatalogSelection } from "@/lib/practice";
 import { getPracticeTasks, prototypes } from "@/lib/tasks";
 import { theoryTopics } from "@/lib/theory";
@@ -52,16 +52,6 @@ export function CatalogScreen({
     });
   }
 
-  function changeLevel(level: ExamLevel) {
-    if (level === selection.level) return;
-    onChange({
-      exam: selection.exam,
-      subjectId: selection.subjectId,
-      level,
-      mode: selection.mode,
-    });
-  }
-
   function changeMode(mode: CatalogSelection["mode"]) {
     if (mode === selection.mode) return;
     onChange({
@@ -86,30 +76,28 @@ export function CatalogScreen({
           className="catalog-level-card"
           aria-labelledby="catalog-level-title"
         >
-          <h2 id="catalog-level-title">Уровень математики</h2>
-          <div
-            className="segmented catalog-level-switch"
-            role="group"
-            aria-label="Уровень ЕГЭ"
-          >
-            {(
-              [
-                ["base", "Базовый"],
-                ["profile", "Профильный"],
-              ] as const
-            ).map(([level, label]) => (
-              <button
-                type="button"
-                key={level}
-                className={selection.level === level ? "selected" : ""}
-                aria-pressed={selection.level === level}
-                onClick={() => changeLevel(level)}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-          <p>Номера и подборки базового и профильного уровней разделены.</p>
+          <h2 id="catalog-level-title">Математика · Профильный уровень</h2>
+          <p>
+            В этой версии готовимся к профильной математике. Базовый уровень
+            появится после проверки структуры и материалов.
+          </p>
+          {selection.level === "base" && (
+            <button
+              type="button"
+              className="button button-secondary"
+              onClick={() =>
+                onChange({
+                  ...selection,
+                  level: "profile",
+                  examNumber: undefined,
+                  topicId: undefined,
+                  prototypeId: undefined,
+                })
+              }
+            >
+              Выбрать профильный уровень
+            </button>
+          )}
         </section>
       )}
 
@@ -180,38 +168,65 @@ export function CatalogScreen({
       )}
 
       {selection.mode === "number" ? (
-        definition ? (
-          <div className="catalog-number-grid">
-            {definition.numbers.map((item) => {
-              const cardSelection: CatalogSelection = {
-                ...selection,
-                examNumber: item.number,
-                topicId: undefined,
-                prototypeId: undefined,
-              };
-              const hasTasks =
-                getPracticeTasks({ ...filter, examNumber: item.number })
-                  .length > 0;
-              return (
-                <button
-                  type="button"
-                  key={item.number}
-                  data-catalog-number={item.number}
-                  className={`catalog-number-card${selection.examNumber === item.number ? " catalog-card-selected" : ""}`}
-                  aria-pressed={selection.examNumber === item.number}
-                  onClick={() => onStart(cardSelection)}
-                >
-                  <span className="catalog-card-top">
-                    <span className="catalog-number-badge">№{item.number}</span>
-                    <ArrowRight size={19} aria-hidden="true" />
-                  </span>
-                  <span className="catalog-card-title">{item.title}</span>
-                  <span className="catalog-card-status">
-                    {hasTasks ? "Открыть практику" : "Задания скоро появятся"}
-                  </span>
-                </button>
-              );
-            })}
+        definition && definition.available !== false ? (
+          <div className="catalog-parts">
+            {([1, 2] as const).map((part) => (
+              <section
+                key={part}
+                className="catalog-part"
+                aria-labelledby={`catalog-part-${part}`}
+              >
+                <div className="catalog-part-heading">
+                  <h3 id={`catalog-part-${part}`}>Часть {part}</h3>
+                  <p>
+                    {part === 1
+                      ? "Задания с коротким ответом"
+                      : "Задания с развёрнутым решением"}
+                  </p>
+                </div>
+                <div className="catalog-number-grid">
+                  {definition.numbers
+                    .filter((item) => item.part === part)
+                    .map((item) => {
+                    const cardSelection: CatalogSelection = {
+                      ...selection,
+                      examNumber: item.number,
+                      topicId: undefined,
+                      prototypeId: undefined,
+                    };
+                    const hasTasks =
+                      getPracticeTasks({ ...filter, examNumber: item.number })
+                        .length > 0;
+                    return (
+                      <button
+                        type="button"
+                        key={item.number}
+                        data-catalog-number={item.number}
+                        className={`catalog-number-card${selection.examNumber === item.number ? " catalog-card-selected" : ""}`}
+                        aria-pressed={selection.examNumber === item.number}
+                        onClick={() => onStart(cardSelection)}
+                      >
+                        <span className="catalog-card-top">
+                          <span className="catalog-number-badge">№{item.number}</span>
+                          <ArrowRight size={19} aria-hidden="true" />
+                        </span>
+                        <span className="catalog-card-title">{item.title}</span>
+                        <span className="catalog-card-status">
+                          {hasTasks ? "Открыть практику" : "Задания скоро появятся"}
+                        </span>
+                      </button>
+                    );
+                    })}
+                </div>
+                {part === 2 && (
+                  <p className="catalog-part-note">
+                    Проверка развёрнутых решений в разработке. Пока здесь
+                    обозначены предварительные номера; задачи появятся после
+                    подготовки материалов.
+                  </p>
+                )}
+              </section>
+            ))}
           </div>
         ) : (
           <div className="catalog-empty" role="status">
@@ -297,8 +312,8 @@ export function CatalogScreen({
           aria-label="О демонстрационном каталоге"
         >
           <p>
-            Демонстрационная структура {definition.year} года, а не полный банк
-            экзамена. Ограничений на практику нет.
+            Авторские учебные задания. Практика бесплатная и без дневных
+            ограничений.
           </p>
           {definition.verificationStatus === "not-verified-online" && (
             <p>{definition.verificationNote}</p>

@@ -3,6 +3,10 @@ import type { Exam } from "@/lib/navigation";
 export type TheoryTopic = {
   id: string;
   subjectId: "math";
+  part: 1;
+  coverage: "foundation";
+  source: { kind: "author"; label: string };
+  readMinutes: number;
   examType: Exam[];
   title: string;
   description: string;
@@ -22,6 +26,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "fractions",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Обыкновенные дроби",
     description:
@@ -100,6 +108,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "decimals",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Десятичные дроби",
     description: "Работаем с запятой, разрядами и переводом дробей.",
@@ -170,6 +182,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "percentages",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Проценты",
     description: "Находим часть и целое, считаем скидки и изменения цены.",
@@ -243,6 +259,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "linear-equations",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Линейные уравнения",
     description: "Раскрываем скобки, собираем слагаемые и находим неизвестное.",
@@ -315,6 +335,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "quadratic-equations",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Квадратные уравнения",
     description:
@@ -400,6 +424,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "powers-roots",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Степени и корни",
     description:
@@ -480,6 +508,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "geometry",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Базовая геометрия",
     description:
@@ -555,6 +587,10 @@ export const theoryTopics: TheoryTopic[] = [
   {
     id: "probability",
     subjectId: "math",
+    part: 1,
+    coverage: "foundation",
+    source: { kind: "author", label: "Авторский демонстрационный конспект" },
+    readMinutes: 5,
     examType: ["ОГЭ", "ЕГЭ"],
     title: "Вероятность",
     description: "Считаем равновозможные исходы и проверяем разумность ответа.",

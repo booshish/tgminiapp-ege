@@ -118,6 +118,10 @@ function TaskAttempt({
           {examNumber ? `Задание №${examNumber}` : "Учебное задание"}
         </h1>
         <p className="task-topic">Тема: {topicTitle}</p>
+        <p className="task-source">
+          {task.source.label} · {task.examYear}
+          {task.part ? ` · Часть ${task.part}` : " · Базовая тема"}
+        </p>
         {!examNumber && <p className="task-title">{task.title}</p>}
       </header>
 

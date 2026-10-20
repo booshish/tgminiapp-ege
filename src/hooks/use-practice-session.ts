@@ -12,6 +12,11 @@ import {
   type PracticeSession,
   type PracticeTaskState,
 } from "@/lib/practice";
+import {
+  parseStoredPractice,
+  practiceStorageKey,
+  type StoredPractice,
+} from "@/lib/practice-storage";
 
 type Props = {
   route: Route;
@@ -56,7 +61,7 @@ function newSessionId() {
   return `practice-${Date.now().toString(36)}-${sessionCounter}`;
 }
 
-/** Drafts live in this tab's running app. Only explicit checks create learning events. */
+/** Hydrating drafts and checked states never creates learning or XP events. */
 export function usePracticeSession({
   route,
   navigate,
@@ -70,15 +75,58 @@ export function usePracticeSession({
   const [sessions, setSessions] = useState<Record<string, PracticeSession>>({});
   const [activeId, setActiveId] = useState<string | null>(null);
   const [initialized, setInitialized] = useState(false);
+  const [storageWarning, setStorageWarning] = useState(false);
   const initialRead = useRef(false);
+  const canPersist = useRef(false);
+  const latest = useRef<StoredPractice | null>(null);
+  latest.current = { version: 1, catalog, sessions, activeId };
 
   useEffect(() => {
     if (!ready || initialRead.current) return;
     initialRead.current = true;
-    const initial = selectionFromRoute(route, defaultCatalogSelection(exam));
+    let fallback = defaultCatalogSelection(exam);
+    try {
+      const raw = window.localStorage.getItem(practiceStorageKey);
+      if (raw) {
+        const restored = parseStoredPractice(raw);
+        fallback = restored.catalog;
+        setSessions(restored.sessions);
+        setActiveId(restored.activeId);
+      }
+      canPersist.current = true;
+    } catch {
+      // Never replace unread data with empty defaults after a storage exception.
+      canPersist.current = false;
+      setStorageWarning(true);
+    }
+    const hasRouteSelection = route.exam || route.catalogMode || route.topicId || route.examNumber || route.prototypeId || route.level;
+    const initial = hasRouteSelection ? selectionFromRoute(route, fallback) : fallback;
     setCatalog(initial);
+    if (exam !== initial.exam) setExam(initial.exam);
     setInitialized(true);
-  }, [ready, exam, route]);
+  }, [ready, exam, route, setExam]);
+
+  useEffect(() => {
+    if (!initialized || !canPersist.current || !latest.current) return;
+    try {
+      window.localStorage.setItem(practiceStorageKey, JSON.stringify(latest.current));
+    } catch {
+      setStorageWarning(true);
+    }
+  }, [initialized, catalog, sessions, activeId]);
+
+  useEffect(() => {
+    const persist = () => {
+      if (!initialized || !canPersist.current || !latest.current) return;
+      try {
+        window.localStorage.setItem(practiceStorageKey, JSON.stringify(latest.current));
+      } catch {
+        setStorageWarning(true);
+      }
+    };
+    window.addEventListener("pagehide", persist);
+    return () => window.removeEventListener("pagehide", persist);
+  }, [initialized]);
 
   useEffect(() => {
     if (!initialized || route.view !== "catalog" || !route.exam) return;
@@ -102,7 +150,9 @@ export function usePracticeSession({
       route.level &&
       (route.exam ?? routeTask?.examType[0]) === "ОГЭ"),
   );
-  const cachedSession = requestedId ? sessions[requestedId] : undefined;
+  const cachedSession = requestedId && Object.hasOwn(sessions, requestedId)
+    ? sessions[requestedId]
+    : undefined;
   const selectionMatches =
     !cachedSession ||
     ((!route.exam || route.exam === cachedSession.selection.exam) &&
@@ -336,14 +386,32 @@ export function usePracticeSession({
   }, [activeId, sessions, exam, catalog.level, navigate]);
 
   const reset = useCallback(() => {
+    try {
+      window.localStorage.removeItem(practiceStorageKey);
+      canPersist.current = true;
+      setStorageWarning(false);
+    } catch {
+      setStorageWarning(true);
+      return false;
+    }
+    latest.current = {
+      version: 1,
+      catalog: defaultCatalogSelection(),
+      sessions: {},
+      activeId: null,
+    };
     setSessions({});
     setActiveId(null);
     setCatalog(defaultCatalogSelection());
+    return true;
   }, []);
+  const dismissStorageWarning = useCallback(() => setStorageWarning(false), []);
 
   return {
     catalog,
     initialized,
+    storageWarning,
+    dismissStorageWarning,
     session,
     currentTask,
     position,

@@ -1,5 +1,5 @@
 import type { Exam } from "./navigation";
-import { getExamDefinition, type ExamLevel } from "./exams";
+import { getExamDefinition, type ExamLevel, type ExamPart } from "./exams";
 
 export type { Exam } from "./navigation";
 export type SubjectId = "math";
@@ -15,6 +15,20 @@ export type Task = {
   level: ExamLevel | null;
   examNumber: number | null;
   examYear: number;
+  examVersionId: string;
+  /** null means a fundamental school example, not an official numbered prototype. */
+  part: ExamPart | null;
+  difficulty: "foundation" | "standard" | "advanced";
+  answerFormat: "number" | "set";
+  source: {
+    kind: "author";
+    label: string;
+    revision: number;
+  };
+  scoring: {
+    status: "pending-official-verification" | "not-applicable";
+    maxPrimaryScore: null;
+  };
   /** Historical event compatibility only; never used for selecting tasks. */
   legacyExamTypes?: Exam[];
   title: string;
@@ -74,8 +88,40 @@ export const prototypes = [
   },
 ];
 
-function defineTask(data: Omit<Task, "subjectId" | "examYear">): Task {
-  return { ...data, subjectId: "math", examYear: 2026 };
+type DerivedTaskMetadata =
+  | "subjectId"
+  | "examYear"
+  | "examVersionId"
+  | "part"
+  | "difficulty"
+  | "answerFormat"
+  | "source"
+  | "scoring";
+
+function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
+  const definition = getExamDefinition({
+    examType: data.examType[0],
+    subjectId: "math",
+    level: data.level,
+  });
+  if (!definition) throw new Error(`Unknown exam version for ${data.id}`);
+  const number = definition.numbers.find(
+    (entry) => entry.number === data.examNumber,
+  );
+  return {
+    ...data,
+    subjectId: "math",
+    examYear: definition.year,
+    examVersionId: definition.versionId,
+    part: number?.part ?? null,
+    difficulty: number ? (number.part === 1 ? "standard" : "advanced") : "foundation",
+    answerFormat: data.answerRule.type,
+    source: { kind: "author", label: "Авторская демозадача", revision: 1 },
+    scoring: {
+      status: number ? "pending-official-verification" : "not-applicable",
+      maxPrimaryScore: null,
+    },
+  };
 }
 
 /** Author-written examples. Original 24 IDs and indexes stay stable for old local records. */
@@ -1042,7 +1088,7 @@ export type PracticeTaskFilter = {
 /** Never replace an empty selection with another exam, level, number or topic. */
 export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
   const definition = getExamDefinition(filter);
-  if (!definition) return [];
+  if (!definition?.available) return [];
   if (
     filter.examNumber !== undefined &&
     !definition.numbers.some((entry) => entry.number === filter.examNumber)

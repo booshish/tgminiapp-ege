@@ -37,6 +37,8 @@ import {
 import { getExamLevelLabel } from "@/lib/exams";
 import { theoryTopics } from "@/lib/theory";
 import { viewTitles, type View } from "@/lib/navigation";
+import { getGameSummary } from "@/lib/gamification";
+import "./appearance.css";
 
 const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "home", label: "Главная", icon: House },
@@ -57,6 +59,8 @@ export function StudyApp() {
     dismissStorageWarning,
     setExam,
     setFontScale,
+    setTheme,
+    setFocusMode,
     rememberTask,
     recordAnswer,
     recordSolutionViewed,
@@ -64,6 +68,8 @@ export function StudyApp() {
   } = useDemoProgress();
   const [demoPremium, setDemoPremium] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [now, setNow] = useState(() => new Date());
+  const game = getGameSummary(state.game, now);
   const menuDialog = useRef<HTMLDialogElement>(null);
   const catalogRef = useRef<HTMLDivElement>(null);
   const practice = usePracticeSession({
@@ -89,6 +95,34 @@ export function StudyApp() {
     route.view === "catalog"
       ? "catalog"
       : `${route.view}:${currentIndex}:${route.topicId ?? ""}:${route.materialId ?? ""}`;
+
+  useEffect(() => {
+    if (!ready) return;
+    const query = window.matchMedia("(prefers-color-scheme: dark)");
+    const update = () => {
+      const theme = state.theme === "system"
+        ? (query.matches ? "dark" : "light")
+        : state.theme;
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute(
+        "content", theme === "dark" ? "#1b211c" : "#f8f6f0",
+      );
+    };
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, [state.theme, ready]);
+  useEffect(() => {
+    const update = () => setNow(new Date());
+    const timer = window.setInterval(update, 30_000);
+    window.addEventListener("focus", update);
+    document.addEventListener("visibilitychange", update);
+    return () => {
+      window.clearInterval(timer);
+      window.removeEventListener("focus", update);
+      document.removeEventListener("visibilitychange", update);
+    };
+  }, []);
 
   useEffect(() => {
     if (ready && route.view === "tasks" && currentTask)
@@ -168,7 +202,7 @@ export function StudyApp() {
   };
 
   return (
-    <div className={`app-shell font-${state.fontScale}`}>
+    <div className={`app-shell font-${state.fontScale}${state.focusMode && route.view === "tasks" ? " focus-mode" : ""}`}>
       <a
         className="skip-link"
         href="#main-content"
@@ -248,15 +282,19 @@ export function StudyApp() {
               </span>
             </div>
           )}
-          {storageWarning && (
+          {(storageWarning || practice.storageWarning || catalogScroll.storageWarning) && (
             <div className="storage-warning" role="status">
               <ShieldCheck size={20} />
               <span>
-                Браузер не разрешил сохранить данные. После закрытия страницы
-                они могут быть потеряны.
+                Не удалось полностью сохранить или восстановить данные этого браузера.
+                После закрытия страницы последние изменения могут быть потеряны.
               </span>
               <button
-                onClick={dismissStorageWarning}
+                onClick={() => {
+                  dismissStorageWarning();
+                  practice.dismissStorageWarning();
+                  catalogScroll.dismissStorageWarning();
+                }}
                 aria-label="Закрыть уведомление"
               >
                 <X size={20} />
@@ -269,6 +307,7 @@ export function StudyApp() {
               onExamChange={practice.changeExam}
               onStart={continuePractice}
               onNavigate={open}
+              game={game}
             />
           )}
           <div
@@ -392,12 +431,14 @@ export function StudyApp() {
               onToggleDemo={() => setDemoPremium((value) => !value)}
               onExamChange={practice.changeExam}
               onFontScale={setFontScale}
+              onThemeChange={setTheme}
+              onFocusModeChange={setFocusMode}
               onClear={() => {
-                const success = clearLocalData();
+                const practiceCleared = practice.reset();
+                const scrollCleared = catalogScroll.reset();
+                const success = clearLocalData() && practiceCleared && scrollCleared;
                 if (success) {
                   setDemoPremium(false);
-                  practice.reset();
-                  catalogScroll.reset();
                 }
                 return success;
               }}

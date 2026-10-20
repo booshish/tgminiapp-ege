@@ -10,15 +10,18 @@ import {
 import { LearningIllustration } from "@/components/illustrations";
 import { ExamPicker, FeatureCard, PageIntro } from "@/components/ui";
 import type { Exam, View } from "@/lib/navigation";
+import { GameMotivation } from "@/components/game-motivation";
+import type { GameSummary } from "@/lib/gamification";
 
 type Props = {
   exam: Exam;
   onExamChange: (exam: Exam) => void;
   onStart: () => void;
   onNavigate: (view: View) => void;
+  game: GameSummary;
 };
 
-export function HomeScreen({ exam, onExamChange, onStart, onNavigate }: Props) {
+export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game }: Props) {
   return (
     <>
       <PageIntro eyebrow="ТОЧКА · МАТЕМАТИКА" title="Твоя подготовка">
@@ -46,6 +49,7 @@ export function HomeScreen({ exam, onExamChange, onStart, onNavigate }: Props) {
         <LearningIllustration className="hero-illustration" />
       </section>
       <ExamPicker exam={exam} onChange={onExamChange} />
+      <GameMotivation summary={game} />
       <section className="feature-section" aria-labelledby="sections-title">
         <div className="section-title">
           <h2 id="sections-title">Материалы и возможности</h2>

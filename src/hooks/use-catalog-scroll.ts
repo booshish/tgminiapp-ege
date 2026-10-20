@@ -5,8 +5,14 @@ import {
   useEffect,
   useLayoutEffect,
   useRef,
+  useState,
   type RefObject,
 } from "react";
+import {
+  catalogScrollStorageKey,
+  parseStoredScroll,
+  type StoredScrollSnapshot,
+} from "@/lib/practice-storage";
 
 type ScrollEntry = {
   element: HTMLElement;
@@ -19,6 +25,8 @@ type ScrollSnapshot = {
   windowTop: number;
   windowLeft: number;
   entries: ScrollEntry[];
+  root?: HTMLElement;
+  pendingEntries?: StoredScrollSnapshot["entries"];
 };
 
 type CatalogScrollOptions = {
@@ -86,7 +94,60 @@ function readSnapshot(
   };
 }
 
+function locatorFor(root: HTMLElement, element: HTMLElement): string | null {
+  if (element.id && /^[a-zA-Z][\w-]*$/.test(element.id)) return `id:${element.id}`;
+  let ancestor: HTMLElement | null = root;
+  for (let distance = 0; ancestor && distance < 100; distance += 1) {
+    if (ancestor === element) return `parent:${distance}`;
+    ancestor = ancestor.parentElement;
+  }
+  if (!root.contains(element)) return null;
+  const path: number[] = [];
+  let current: HTMLElement | null = element;
+  while (current && current !== root) {
+    const parent: HTMLElement | null = current.parentElement;
+    if (!parent) return null;
+    path.unshift(Array.from(parent.children).indexOf(current));
+    current = parent;
+  }
+  return path.length ? `child:${path.join("/")}` : null;
+}
+
+function resolveLocator(root: HTMLElement, locator: string): HTMLElement | null {
+  const [kind, path] = locator.split(":");
+  if (kind === "id") {
+    const element = document.getElementById(path);
+    return element && (root.contains(element) || element.contains(root)) ? element : null;
+  }
+  let element: Element | null = root;
+  if (kind === "parent") {
+    for (let index = 0; element && index < Number(path); index += 1) element = element.parentElement;
+  } else if (kind === "child") {
+    for (const index of path.split("/")) element = element?.children.item(Number(index)) ?? null;
+  } else return null;
+  return element instanceof HTMLElement ? element : null;
+}
+
+function hydrateSnapshot(root: HTMLElement, stored: StoredScrollSnapshot): ScrollSnapshot {
+  return {
+    key: stored.key,
+    windowTop: stored.windowTop,
+    windowLeft: stored.windowLeft,
+    root,
+    entries: [],
+    pendingEntries: [...stored.entries],
+  };
+}
+
 function applySnapshot(snapshot: ScrollSnapshot): boolean {
+  if (snapshot.root && snapshot.pendingEntries?.length) {
+    snapshot.pendingEntries = snapshot.pendingEntries.filter(({ locator, top, left }) => {
+      const element = resolveLocator(snapshot.root!, locator);
+      if (!element) return true;
+      snapshot.entries.push({ element, top, left });
+      return false;
+    });
+  }
   for (const { element, top, left } of snapshot.entries) {
     if (!element.isConnected) continue;
     if (
@@ -115,6 +176,7 @@ function applySnapshot(snapshot: ScrollSnapshot): boolean {
   }
 
   return (
+    !snapshot.pendingEntries?.length &&
     Math.abs(window.scrollY - snapshot.windowTop) <= 0.5 &&
     Math.abs(window.scrollX - snapshot.windowLeft) <= 0.5 &&
     snapshot.entries.every(
@@ -136,6 +198,30 @@ export function useCatalogScroll({
   const snapshotRef = useRef<ScrollSnapshot | null>(null);
   const listKeyRef = useRef(listKey);
   const cancelRestoreRef = useRef<(() => void) | null>(null);
+  const initialRead = useRef(false);
+  const canPersist = useRef(false);
+  const persistTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [storageWarning, setStorageWarning] = useState(false);
+
+  const persistSnapshot = useCallback((snapshot: ScrollSnapshot | null) => {
+    const root = rootRef.current;
+    if (!canPersist.current || !snapshot || !root) return;
+    const stored: StoredScrollSnapshot = {
+      version: 1,
+      key: snapshot.key,
+      windowTop: snapshot.windowTop,
+      windowLeft: snapshot.windowLeft,
+      entries: [...snapshot.entries.flatMap(({ element, top, left }) => {
+        const locator = locatorFor(root, element);
+        return locator ? [{ locator, top, left }] : [];
+      }), ...(snapshot.pendingEntries ?? [])],
+    };
+    try {
+      window.localStorage.setItem(catalogScrollStorageKey, JSON.stringify(stored));
+    } catch {
+      setStorageWarning(true);
+    }
+  }, [rootRef]);
 
   useEffect(() => {
     const previous = window.history.scrollRestoration;
@@ -149,16 +235,38 @@ export function useCatalogScroll({
     if (!visible || !ready || !rootRef.current) return;
     cancelRestoreRef.current?.();
     snapshotRef.current = readSnapshot(rootRef.current, listKey);
-  }, [visible, ready, rootRef, listKey]);
+    persistSnapshot(snapshotRef.current);
+  }, [visible, ready, rootRef, listKey, persistSnapshot]);
 
   const reset = useCallback(() => {
     cancelRestoreRef.current?.();
+    if (persistTimer.current !== null) clearTimeout(persistTimer.current);
+    persistTimer.current = null;
+    try {
+      window.localStorage.removeItem(catalogScrollStorageKey);
+      canPersist.current = true;
+      setStorageWarning(false);
+    } catch {
+      setStorageWarning(true);
+      return false;
+    }
     snapshotRef.current = null;
-    if (!visible || !ready || !rootRef.current) return;
+    if (!visible || !ready || !rootRef.current) return true;
     const snapshot = readSnapshot(rootRef.current, listKey, true);
     snapshotRef.current = snapshot;
     applySnapshot(snapshot);
+    return true;
   }, [visible, ready, rootRef, listKey]);
+
+  useEffect(() => {
+    const persist = () => persistSnapshot(snapshotRef.current);
+    window.addEventListener("pagehide", persist);
+    return () => {
+      window.removeEventListener("pagehide", persist);
+      if (persistTimer.current !== null) clearTimeout(persistTimer.current);
+      persist();
+    };
+  }, [persistSnapshot]);
 
   useLayoutEffect(() => {
     if (listKeyRef.current !== listKey) {
@@ -166,6 +274,17 @@ export function useCatalogScroll({
       listKeyRef.current = listKey;
     }
     const root = rootRef.current;
+    if (ready && root && !initialRead.current) {
+      initialRead.current = true;
+      try {
+        const stored = parseStoredScroll(window.localStorage.getItem(catalogScrollStorageKey));
+        if (stored?.key === listKey) snapshotRef.current = hydrateSnapshot(root, stored);
+        canPersist.current = true;
+      } catch {
+        canPersist.current = false;
+        setStorageWarning(true);
+      }
+    }
     if (!visible || !ready || !root) return;
 
     const snapshot =
@@ -173,6 +292,7 @@ export function useCatalogScroll({
         ? snapshotRef.current
         : readSnapshot(root, listKey, true);
     snapshotRef.current = snapshot;
+    persistSnapshot(snapshot);
     let restoring = true;
     let disposed = false;
     let frame: number | null = null;
@@ -208,6 +328,11 @@ export function useCatalogScroll({
           left: element.scrollLeft,
         })),
       };
+      if (persistTimer.current !== null) clearTimeout(persistTimer.current);
+      persistTimer.current = setTimeout(() => {
+        persistTimer.current = null;
+        persistSnapshot(snapshotRef.current);
+      }, 120);
     };
     const cancelRestore = () => {
       if (!restoring) return;
@@ -292,7 +417,8 @@ export function useCatalogScroll({
       if (cancelRestoreRef.current === cancelRestore)
         cancelRestoreRef.current = null;
     };
-  }, [visible, ready, listKey, rootRef]);
+  }, [visible, ready, listKey, rootRef, persistSnapshot]);
 
-  return { capture, reset };
+  const dismissStorageWarning = useCallback(() => setStorageWarning(false), []);
+  return { capture, reset, storageWarning, dismissStorageWarning };
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, ShieldCheck, UserRound } from "lucide-react";
+import { ArrowRight, Focus, Monitor, Moon, ShieldCheck, Sun, UserRound } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import type { LearningState } from "@/lib/learning-events";
 import type { Exam } from "@/lib/navigation";
@@ -13,6 +13,8 @@ type Props = {
   onToggleDemo: () => void;
   onExamChange: (exam: Exam) => void;
   onFontScale: (scale: LearningState["fontScale"]) => void;
+  onThemeChange: (theme: "light" | "dark" | "system") => void;
+  onFocusModeChange: (enabled: boolean) => void;
   onClear: () => boolean;
   onPremium: () => void;
 };
@@ -24,6 +26,8 @@ export function ProfileScreen({
   onToggleDemo,
   onExamChange,
   onFontScale,
+  onThemeChange,
+  onFocusModeChange,
   onClear,
   onPremium,
 }: Props) {
@@ -81,9 +85,49 @@ export function ProfileScreen({
             </button>
           </div>
         </div>
-        <div className="setting-row">
-          <h3>Оформление</h3>
-          <span>Светлое</span>
+        <div className="setting-row appearance-setting">
+          <div>
+            <h3>Оформление</h3>
+            <p>Системная тема следует настройкам устройства.</p>
+          </div>
+          <div className="segmented theme-options" role="group" aria-label="Тема оформления">
+            {([
+              { value: "light", label: "Светлая", icon: Sun },
+              { value: "dark", label: "Тёмная", icon: Moon },
+              { value: "system", label: "Системная", icon: Monitor },
+            ] as const).map(({ value, label, icon: Icon }) => (
+              <button
+                key={value}
+                type="button"
+                className={state.theme === value ? "selected" : ""}
+                aria-pressed={state.theme === value}
+                onClick={() => onThemeChange(value)}
+              >
+                <Icon size={18} aria-hidden="true" />
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="setting-row focus-setting">
+          <div>
+            <h3><Focus size={19} aria-hidden="true" /> Режим концентрации</h3>
+            <p id="focus-description">
+              Скрывает основное меню во время решения. Кнопка возврата к заданиям остаётся.
+            </p>
+          </div>
+          <button
+            type="button"
+            className="focus-switch"
+            role="switch"
+            aria-checked={state.focusMode}
+            aria-label="Режим концентрации"
+            aria-describedby="focus-description"
+            onClick={() => onFocusModeChange(!state.focusMode)}
+          >
+            <span className="focus-switch-track" aria-hidden="true"><span /></span>
+            <span>{state.focusMode ? "Включён" : "Выключен"}</span>
+          </button>
         </div>
       </section>
       <section className="settings-card">
@@ -107,7 +151,7 @@ export function ProfileScreen({
           <ShieldCheck size={22} /> Данные на устройстве
         </h2>
         <p>
-          Ответы, время проверки и факт просмотра решения хранятся в этом
+          Ответы, опыт XP, настройки, черновики, время проверки и факт просмотра решения хранятся в этом
           браузере для будущего анализа. Имя, контакты и платёжные данные не
           запрашиваются. На сервер эти события не отправляются.
         </p>
@@ -138,7 +182,7 @@ export function ProfileScreen({
           >
             <h3 id="delete-title">Удалить данные этого браузера?</h3>
             <p id="delete-description">
-              Ответы и выбранные настройки будут удалены с этого устройства.
+              Ответы, черновики, опыт XP, уровни, серии и выбранные настройки будут удалены с этого устройства. Восстановить их без резервной копии не получится.
             </p>
             <div>
               <button

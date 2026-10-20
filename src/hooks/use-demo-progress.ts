@@ -10,7 +10,9 @@ import {
   type AnswerEvent,
   type SolutionEvent,
 } from "@/lib/learning-events";
-import type { Task } from "@/lib/tasks";
+import { checkTaskAnswer, type Task } from "@/lib/tasks";
+import { emptyGameState, recordGameAttempt } from "@/lib/gamification";
+import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import type { Exam } from "@/lib/navigation";
 
 function eventId() {
@@ -26,18 +28,47 @@ export function useDemoProgress() {
   const [storageWarning, setStorageWarning] = useState(false);
   const initialReadAttempted = useRef(false);
   const canPersist = useRef(false);
+  const stateRef = useRef(state);
+  const updateState = useCallback(
+    (update: (previous: LearningState) => LearningState) => {
+      const next = update(stateRef.current);
+      if (next === stateRef.current) return;
+      stateRef.current = next;
+      // Commit events and their XP ledger together before the user can reload.
+      if (canPersist.current) {
+        try {
+          window.localStorage.setItem(storageKey, JSON.stringify(next));
+        } catch {
+          setStorageWarning(true);
+        }
+      }
+      setState(next);
+    },
+    [],
+  );
   useEffect(() => {
     // A failed read must never be followed by writing an empty replacement.
     // Keep this decision stable when Strict Mode repeats mount effects.
     if (initialReadAttempted.current) return;
     initialReadAttempted.current = true;
     try {
-      setState(
-        parseLearningState(
-          window.localStorage.getItem(storageKey),
-          window.localStorage.getItem(legacyStorageKey),
-        ),
+      const raw = window.localStorage.getItem(storageKey);
+      if (raw) {
+        const stored: unknown = JSON.parse(raw);
+        if (
+          !stored ||
+          typeof stored !== "object" ||
+          !("version" in stored) ||
+          ![2, 3].includes(Number(stored.version))
+        )
+          throw new Error("Unsupported learning data");
+      }
+      const restored = parseLearningState(
+        raw,
+        window.localStorage.getItem(legacyStorageKey),
       );
+      stateRef.current = restored;
+      setState(restored);
       canPersist.current = true;
     } catch {
       canPersist.current = false;
@@ -55,27 +86,43 @@ export function useDemoProgress() {
   }, [state, ready]);
 
   const setExam = useCallback(
-    (exam: Exam) => setState((previous) => ({ ...previous, exam })),
-    [],
+    (exam: Exam) =>
+      updateState((previous) =>
+        previous.exam === exam ? previous : { ...previous, exam },
+      ),
+    [updateState],
   );
   const setFontScale = useCallback(
     (fontScale: LearningState["fontScale"]) =>
-      setState((previous) => ({ ...previous, fontScale })),
-    [],
+      updateState((previous) => ({ ...previous, fontScale })),
+    [updateState],
+  );
+  const setTheme = useCallback(
+    (theme: LearningState["theme"]) =>
+      updateState((previous) => ({ ...previous, theme })),
+    [updateState],
+  );
+  const setFocusMode = useCallback(
+    (focusMode: boolean) =>
+      updateState((previous) => ({ ...previous, focusMode })),
+    [updateState],
   );
   const rememberTask = useCallback(
     (lastTaskIndex: number) =>
-      setState((previous) =>
+      updateState((previous) =>
         previous.lastTaskIndex === lastTaskIndex
           ? previous
           : { ...previous, lastTaskIndex },
       ),
-    [],
+    [updateState],
   );
   const recordAnswer = useCallback(
     (task: Task, answer: string, correct: boolean) => {
       const id = eventId();
-      setState((previous) => {
+      const checked = checkTaskAnswer(answer, task.answerRule);
+      if (!checked.valid || checked.correct !== correct)
+        throw new Error("Invalid checked answer");
+      updateState((previous) => {
         const event: AnswerEvent = {
           kind: "answer_checked",
           id,
@@ -86,49 +133,71 @@ export function useDemoProgress() {
           subjectId: "math",
           level: task.level,
           examNumber: task.examNumber,
+          examVersionId: task.examVersionId,
+          part: task.part,
+          answerFormat: task.part === 2 ? "extended" : "short",
           createdAt: new Date().toISOString(),
           answer: answer.trim(),
           correct,
         };
-        return { ...previous, events: [...previous.events, event] };
+        return {
+          ...previous,
+          events: [...previous.events, event],
+          game: recordGameAttempt(
+            previous.game,
+            event,
+            previous.events,
+            getTaskXPScoringRule(task),
+          ),
+        };
       });
       return id;
     },
-    [],
+    [updateState],
   );
-  const recordSolutionViewed = useCallback((task: Task, attemptId: string) => {
-    setState((previous) => {
-      const attempt = previous.events.find(
-        (event) =>
-          event.kind === "answer_checked" &&
-          event.id === attemptId &&
-          event.taskId === task.id,
-      );
-      if (!attempt) return previous;
-      if (
-        previous.events.some(
+  const recordSolutionViewed = useCallback(
+    (task: Task, attemptId: string) => {
+      updateState((previous) => {
+        const attempt = previous.events.find(
           (event) =>
-            event.kind === "solution_viewed" && event.attemptId === attemptId,
+            event.kind === "answer_checked" &&
+            event.id === attemptId &&
+            event.taskId === task.id,
+        );
+        if (!attempt) return previous;
+        if (
+          previous.events.some(
+            (event) =>
+              event.kind === "solution_viewed" && event.attemptId === attemptId,
+          )
         )
-      )
-        return previous;
-      const event: SolutionEvent = {
-        kind: "solution_viewed",
-        id: eventId(),
-        taskId: task.id,
-        topicId: task.topicId,
-        prototypeId: task.prototypeId,
-        examType: attempt.examType,
-        subjectId: "math",
-        ...(attempt.level !== undefined || attempt.examNumber !== undefined
-          ? { level: attempt.level, examNumber: attempt.examNumber }
-          : {}),
-        createdAt: new Date().toISOString(),
-        attemptId,
-      };
-      return { ...previous, events: [...previous.events, event] };
-    });
-  }, []);
+          return previous;
+        const event: SolutionEvent = {
+          kind: "solution_viewed",
+          id: eventId(),
+          taskId: task.id,
+          topicId: task.topicId,
+          prototypeId: task.prototypeId,
+          examType: attempt.examType,
+          subjectId: "math",
+          ...(attempt.examVersionId
+            ? {
+                examVersionId: attempt.examVersionId,
+                part: attempt.part,
+                answerFormat: attempt.answerFormat,
+              }
+            : {}),
+          ...(attempt.level !== undefined || attempt.examNumber !== undefined
+            ? { level: attempt.level, examNumber: attempt.examNumber }
+            : {}),
+          createdAt: new Date().toISOString(),
+          attemptId,
+        };
+        return { ...previous, events: [...previous.events, event] };
+      });
+    },
+    [updateState],
+  );
   const clearLocalData = useCallback(() => {
     // Only an explicit successful reset may re-enable persistence after a read failure.
     canPersist.current = false;
@@ -141,7 +210,14 @@ export function useDemoProgress() {
       setStorageWarning(true);
       return false;
     }
-    setState({ ...emptyLearningState, events: [], legacyRecords: [] });
+    const cleared = {
+      ...emptyLearningState,
+      events: [],
+      legacyRecords: [],
+      game: emptyGameState(),
+    };
+    stateRef.current = cleared;
+    setState(cleared);
     return true;
   }, []);
   return {
@@ -151,6 +227,8 @@ export function useDemoProgress() {
     dismissStorageWarning: () => setStorageWarning(false),
     setExam,
     setFontScale,
+    setTheme,
+    setFocusMode,
     rememberTask,
     recordAnswer,
     recordSolutionViewed,

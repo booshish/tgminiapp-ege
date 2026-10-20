@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import {
+  Search,
   ArrowLeft,
   ArrowRight,
   BookOpen,
@@ -12,6 +14,9 @@ import { MathFormula } from "@/components/math-formula";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import type { Exam } from "@/lib/navigation";
 import { getTheoryTopic, theoryTopics } from "@/lib/theory";
+import { getExamDefinition } from "@/lib/exams";
+import { getPracticeTasks } from "@/lib/tasks";
+import "@/components/theory-screen.css";
 
 type TheoryScreenProps = {
   exam: Exam;
@@ -34,6 +39,38 @@ export function TheoryScreen({
   onPractice,
   onBack,
 }: TheoryScreenProps) {
+  const [query, setQuery] = useState("");
+  const [part, setPart] = useState<1 | 2>(1);
+  const [number, setNumber] = useState("");
+  const definition = getExamDefinition({
+    examType: exam,
+    level: exam === "ЕГЭ" ? "profile" : undefined,
+  });
+  const normalizedQuery = query
+    .trim()
+    .toLocaleLowerCase("ru")
+    .replaceAll("ё", "е");
+  const matchingTaskTopics = number
+    ? new Set(
+        getPracticeTasks({
+          examType: exam,
+          level: exam === "ЕГЭ" ? "profile" : undefined,
+          examNumber: Number(number),
+        }).map((task) => task.topicId),
+      )
+    : undefined;
+  const visibleTopics = theoryTopics.filter(
+    (item) =>
+      item.examType.includes(exam) &&
+      item.part === part &&
+      (!matchingTaskTopics || matchingTaskTopics.has(item.id)) &&
+      (!normalizedQuery ||
+        [item.title, item.description, ...item.sections.map((section) => section.title)]
+          .join(" ")
+          .toLocaleLowerCase("ru")
+          .replaceAll("ё", "е")
+          .includes(normalizedQuery)),
+  );
   const topic = topicId ? getTheoryTopic(topicId) : undefined;
   const isMaterial = Boolean(topic && materialId === topic.materialId);
   const unavailable = Boolean(
@@ -75,19 +112,77 @@ export function TheoryScreen({
           <PageIntro eyebrow="БИБЛИОТЕКА ЗНАНИЙ" title="Теория">
             Основные правила, формулы и пошаговые примеры по математике.
           </PageIntro>
-          <ExamPicker exam={exam} onChange={onExamChange} />
+          <ExamPicker
+            exam={exam}
+            onChange={(value) => {
+              setNumber("");
+              setPart(1);
+              onExamChange(value);
+            }}
+          />
+          <div className="theory-tools">
+            <label className="theory-search">
+              <span>Найти тему</span>
+              <span className="theory-search-field">
+                <Search size={20} aria-hidden="true" />
+                <input
+                  type="search"
+                  placeholder="Например, дроби или уравнения"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                />
+              </span>
+            </label>
+            <div
+              className="segmented theory-part-switch"
+              role="group"
+              aria-label="Часть экзамена"
+            >
+              {([1, 2] as const).map((value) => (
+                <button
+                  key={value}
+                  type="button"
+                  className={part === value ? "selected" : ""}
+                  aria-pressed={part === value}
+                  onClick={() => {
+                    setPart(value);
+                    setNumber("");
+                  }}
+                >
+                  Часть {value}
+                </button>
+              ))}
+            </div>
+            <label className="theory-number-filter">
+              <span>Материалы к номеру</span>
+              <select
+                value={number}
+                onChange={(event) => setNumber(event.target.value)}
+              >
+                <option value="">Все темы части {part}</option>
+                {definition?.numbers
+                  .filter((item) => item.part === part)
+                  .map((item) => (
+                    <option key={item.number} value={item.number}>
+                      №{item.number} · {item.title}
+                    </option>
+                  ))}
+              </select>
+            </label>
+          </div>
           <div className="theory-section-heading">
-            <span className="eyebrow">{exam} · МАТЕМАТИКА</span>
+            <span className="eyebrow">
+              {exam} · МАТЕМАТИКА{exam === "ЕГЭ" ? " · ПРОФИЛЬ" : ""} · ЧАСТЬ {part}
+            </span>
             <h2>Выберите тему</h2>
             <p>
-              Восемь конспектов по общей базе для ОГЭ и ЕГЭ. Это демобиблиотека,
-              а не полный экзаменационный курс.
+              Авторские конспекты по школьной базе для ОГЭ и ЕГЭ. Связь с
+              номерами предварительная: это демобиблиотека, а не полный
+              экзаменационный курс.
             </p>
           </div>
           <div className="topic-grid">
-            {theoryTopics
-              .filter((item) => item.examType.includes(exam))
-              .map((item, index) => (
+            {visibleTopics.map((item, index) => (
                 <button
                   type="button"
                   className="theory-topic-card"
@@ -106,18 +201,48 @@ export function TheoryScreen({
                   </span>
                   <span className="theory-topic-meta">
                     <BookOpen size={15} aria-hidden="true" /> Конспект и{" "}
-                    {item.examples.length} разбора
+                    {item.examples.length} разбора · ≈{item.readMinutes} мин
                   </span>
                 </button>
               ))}
           </div>
+          {visibleTopics.length === 0 && (
+            <section className="theory-empty" role="status">
+              <BookOpen size={26} aria-hidden="true" />
+              <h2>
+                {part === 2
+                  ? "Глубокие материалы ещё готовятся"
+                  : "Подходящий материал пока не найден"}
+              </h2>
+              <p>
+                {part === 2
+                  ? "Для второй части нужны отдельные методы, примеры оформления и проверенные источники. Общую базу можно повторить в первой части; официальные критерии пока не опубликованы в приложении."
+                  : number
+                    ? "В демобиблиотеке пока нет связанного конспекта к этому номеру. Открой все темы или измени поиск."
+                    : "Попробуй более короткий запрос или открой все темы."}
+              </p>
+              <button
+                type="button"
+                className="button button-secondary"
+                onClick={() => {
+                  setPart(1);
+                  setNumber("");
+                  setQuery("");
+                }}
+              >
+                К базовым темам
+              </button>
+            </section>
+          )}
         </>
       ) : (
         <>
           <nav className="lesson-breadcrumbs" aria-label="Путь к материалу">
             <span>{exam}</span>
             <ChevronRight size={13} aria-hidden="true" />
-            <span>Математика</span>
+            <span>Математика{exam === "ЕГЭ" ? " · профиль" : ""}</span>
+            <ChevronRight size={13} aria-hidden="true" />
+            <span>Школьная база · часть {topic.part}</span>
             <ChevronRight size={13} aria-hidden="true" />
             <span aria-current={!isMaterial ? "page" : undefined}>
               {topic.title}
@@ -146,8 +271,8 @@ export function TheoryScreen({
               <div className="lesson-intro-note">
                 <BookOpen size={19} aria-hidden="true" />
                 <p>
-                  Общая база для ОГЭ и ЕГЭ. Читайте в своём темпе, затем
-                  попробуйте задания по этой теме.
+                  {topic.source.label} · около {topic.readMinutes} минут.
+                  Школьная база для ОГЭ и ЕГЭ; это не официальный материал ФИПИ.
                 </p>
               </div>
               {topic.sections.map((section, index) => (
@@ -209,6 +334,7 @@ export function TheoryScreen({
                   </ul>
                 </div>
               </section>
+              <TheoryPrerequisites ids={topic.prerequisites} onOpenTopic={onOpenTopic} />
               <div className="lesson-practice">
                 <div>
                   <h2>Теперь твоя очередь</h2>
@@ -229,7 +355,14 @@ export function TheoryScreen({
                 <span className="feature-icon">
                   <BookOpen size={25} aria-hidden="true" />
                 </span>
-                <h2>Разобраться по шагам</h2>
+                <span className="theory-author-label">
+                  Авторский конспект · школьная база · ≈{topic.readMinutes} мин
+                </span>
+                <h2>Коротко о главном</h2>
+                <p>{topic.sections[0]?.body[0]}</p>
+                {topic.sections[0]?.formulas?.slice(0, 1).map((latex) => (
+                  <MathFormula key={latex} latex={latex} />
+                ))}
                 <p>
                   Внутри — основные правила, {topic.examples.length} разобранных
                   примера и частые затруднения.
@@ -247,34 +380,10 @@ export function TheoryScreen({
                   className="primary-button"
                   onClick={() => onOpenMaterial(topic.id, topic.materialId)}
                 >
-                  Открыть материал <ArrowRight size={18} aria-hidden="true" />
+                  Разобрать подробнее <ArrowRight size={18} aria-hidden="true" />
                 </button>
               </section>
-              {topic.prerequisites.length > 0 && (
-                <section
-                  className="topic-prerequisites"
-                  aria-labelledby="prerequisites-title"
-                >
-                  <span className="eyebrow">ЕСЛИ НУЖНО ОСВЕЖИТЬ БАЗУ</span>
-                  <h2 id="prerequisites-title">Что пригодится</h2>
-                  <div className="prerequisite-links">
-                    {topic.prerequisites.map((id) => {
-                      const prerequisite = getTheoryTopic(id);
-                      return prerequisite ? (
-                        <button
-                          type="button"
-                          className="text-button"
-                          key={id}
-                          onClick={() => onOpenTopic(id)}
-                        >
-                          {prerequisite.title}
-                          <ArrowRight size={16} aria-hidden="true" />
-                        </button>
-                      ) : null;
-                    })}
-                  </div>
-                </section>
-              )}
+              <TheoryPrerequisites ids={topic.prerequisites} onOpenTopic={onOpenTopic} />
               <div className="info-note">
                 <Lightbulb size={20} aria-hidden="true" />
                 <p>
@@ -294,6 +403,39 @@ export function TheoryScreen({
           )}
         </>
       )}
+    </section>
+  );
+}
+
+
+function TheoryPrerequisites({
+  ids,
+  onOpenTopic,
+}: {
+  ids: string[];
+  onOpenTopic: (id: string) => void;
+}) {
+  if (ids.length === 0) return null;
+  return (
+    <section className="topic-prerequisites" aria-label="Темы для повторения базы">
+      <span className="eyebrow">ЕСЛИ НУЖНО ОСВЕЖИТЬ БАЗУ</span>
+      <h2>Что пригодится</h2>
+      <div className="prerequisite-links">
+        {ids.map((id) => {
+          const prerequisite = getTheoryTopic(id);
+          return prerequisite ? (
+            <button
+              type="button"
+              className="text-button"
+              key={id}
+              onClick={() => onOpenTopic(id)}
+            >
+              {prerequisite.title}
+              <ArrowRight size={16} aria-hidden="true" />
+            </button>
+          ) : null;
+        })}
+      </div>
     </section>
   );
 }

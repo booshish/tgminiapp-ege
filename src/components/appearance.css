@@ -1,0 +1,257 @@
+/* Theme surfaces are shared with new screens; no network font or image dependency. */
+:root {
+  color-scheme: light;
+  --surface: #fff;
+  --surface-soft: #edf2e6;
+  --surface-raised: #fdfcf9;
+}
+
+.appearance-setting {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.theme-options {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.theme-options > button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  min-height: 48px;
+}
+.focus-setting h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.focus-switch {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.focus-switch-track {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 24px;
+  padding: 3px;
+  background: #d4dbd0;
+  border-radius: 20px;
+}
+.focus-switch-track > span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px #23352026;
+}
+.focus-switch[aria-checked="true"] .focus-switch-track {
+  justify-content: flex-end;
+  background: #52785b;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --sage: #8eae8d;
+  --sage-dark: #b3d0ae;
+  --ink: #edf1e8;
+  --muted: #bac6b7;
+  --line: #465344;
+  --cream: #1b211c;
+  --light-green: #304333;
+  --shadow: 0 5px 24px #00000012;
+  --surface: #252e26;
+  --surface-soft: #2d3b2e;
+  --surface-raised: #202922;
+}
+[data-theme="dark"] body {
+  background: var(--cream);
+  color: var(--ink);
+}
+[data-theme="dark"] :is(.sidebar, .topbar, .mobile-nav, .navigation-dialog) {
+  background: var(--surface-raised);
+  border-color: var(--line);
+}
+[data-theme="dark"] :is(
+  .course-picker, .feature-card, .practice-picker-card, .topic-lesson,
+  .topic-overview-card, .settings-card, .profile-card, .analytics-section,
+  .premium-panel, .topic-card, .results-card, .recommendation-card,
+  .theory-topic-card, .premium-gate, .stat-card, .catalog-level-card,
+  .catalog-number-card, .catalog-topic-card, .catalog-empty,
+  .task-card, .task-solution-panel, .skip-link, .task-input-wrap
+) {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+}
+[data-theme="dark"] :is(
+  .course-hero, .premium-summary, .feature-trainer, .trainer-hero,
+  .topic-prerequisites, .lesson-intro-note, .reset-confirm, .developer-panel,
+  .catalog-theory-link, .storage-warning, .developer-notice, .demo-notice,
+  .feature-icon, .profile-avatar, .empty-icon, .avatar
+) {
+  color: var(--ink);
+  background: var(--surface-soft);
+  border-color: var(--line);
+}
+[data-theme="dark"] :is(.select-wrap > select, .practice-filter-select, .theory-search input) {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+}
+[data-theme="dark"] :is(.segmented, .task-input-checked, .task-verdict) {
+  background: var(--surface-raised);
+}
+[data-theme="dark"] :is(.segmented > button.selected, .desktop-nav > button.active, .mobile-nav > button.active) {
+  color: #e4f0de;
+  background: #38503a;
+}
+[data-theme="dark"] :is(.desktop-nav > button:hover, .navigation-dialog nav > button:hover, .icon-button:hover) {
+  background: #354436;
+}
+[data-theme="dark"] :is(.feature-card:hover, .theory-topic-card:hover, .catalog-number-card:hover, .catalog-topic-card:hover) {
+  background: #2b382d;
+  border-color: #7a9675;
+}
+[data-theme="dark"] .catalog-card-selected {
+  background: #314535;
+  border-color: #9cbd94;
+}
+[data-theme="dark"] :is(.button-primary, .primary-button) {
+  color: #162118;
+  background: #a0c298;
+}
+[data-theme="dark"] :is(.button-primary:hover, .primary-button:hover) {
+  background: #b5d1ac;
+}
+[data-theme="dark"] .button-secondary {
+  background: var(--surface);
+  border-color: #71866b;
+  color: #c4ddbc;
+}
+[data-theme="dark"] .button-secondary:hover {
+  background: #344536;
+}
+[data-theme="dark"] :is(.button:disabled, .primary-button:disabled, .task-screen .button:disabled:hover) {
+  color: #afbcaa;
+  background: #333e33;
+  border-color: #596653;
+}
+[data-theme="dark"] :is(.tag, .catalog-number-badge) {
+  background: #334b36;
+  color: #d4e8cb;
+}
+[data-theme="dark"] :is(.math-block, .task-formula, .task-solution-formula, .task-diagram-wrap) {
+  background: #293b2d;
+  color: #e1eddb;
+}
+[data-theme="dark"] :is(.task-solution-steps li, .task-final-answer) {
+  color: #d0dfc9;
+}
+[data-theme="dark"] .task-verdict-correct {
+  background: #304432;
+}
+[data-theme="dark"] .task-verdict-incorrect svg,
+[data-theme="dark"] .task-input-error {
+  color: #edab97;
+}
+[data-theme="dark"] .task-input-invalid {
+  border-color: #c98c7b;
+}
+[data-theme="dark"] .task-input-wrap input::placeholder {
+  color: #afbcaa;
+}
+[data-theme="dark"] .meter {
+  background: #414f3b;
+}
+[data-theme="dark"] .navigation-dialog::backdrop {
+  background: #0c160fcc;
+}
+[data-theme="dark"] ::selection {
+  color: #f5fff0;
+  background: #496644;
+}
+[data-theme="dark"] :is(button, a, input, select, summary):focus-visible {
+  outline-color: #bbd6ae;
+}
+
+/* Applied by the shell only while the practice screen is active. */
+.app-shell.focus-mode {
+  display: block;
+  padding-bottom: 0;
+}
+.app-shell.focus-mode :is(.sidebar, .topbar, .mobile-nav) {
+  display: none;
+}
+.app-shell.focus-mode .workspace {
+  margin-left: 0;
+  padding-bottom: 0;
+  min-height: 100dvh;
+}
+.app-shell.focus-mode .main-content {
+  width: 100%;
+  max-width: 856px;
+  margin: 0 auto;
+  padding: max(24px, env(safe-area-inset-top)) 32px max(32px, env(safe-area-inset-bottom));
+}
+
+@media (max-width: 700px) {
+  .theme-options {
+    display: flex;
+  }
+  .settings-card .theme-options > button {
+    flex: 1 1 85px;
+    min-width: 0;
+    padding: 9px 7px;
+    font-size: 14px;
+  }
+  .theme-options > button > svg {
+    display: none;
+  }
+  .focus-setting {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .focus-switch {
+    min-width: 156px;
+  }
+  .app-shell.focus-mode .main-content {
+    padding: max(16px, env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom));
+  }
+}
+
+[data-theme="dark"] .triangle-diagram text {
+  fill: #e0ecd9;
+}
+[data-theme="dark"] .triangle-diagram path {
+  stroke: #a7c39e;
+}
+[data-theme="dark"] .triangle-diagram path[fill] {
+  fill: #334b37;
+}
+
+.font-large .theme-options > button,
+.font-large .focus-switch {
+  font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .premium-comparison thead th {
+    padding-inline: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+}
