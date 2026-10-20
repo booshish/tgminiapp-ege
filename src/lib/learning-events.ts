@@ -57,10 +57,10 @@ export type LearningState = {
   lastTaskIndex: number;
   events: LearningEvent[];
   legacyRecords: ProgressRecord[];
-  fontScale: "standard" | "large";
-  theme: "light" | "dark" | "system";
-  themeExplicit: boolean;
+  fontScale: "standard" | "large" | "huge";
+  theme: "light" | "dark";
   focusMode: boolean;
+  breakReminderMinutes: 0 | 90 | 120;
   game: GameState;
 };
 
@@ -75,8 +75,8 @@ export const emptyLearningState: LearningState = {
   legacyRecords: [],
   fontScale: "standard",
   theme: "light",
-  themeExplicit: false,
   focusMode: false,
+  breakReminderMinutes: 120,
   game: emptyGameState(),
 };
 
@@ -322,6 +322,17 @@ export function parseLearningState(
       ? source.lastTaskIndex
       : 0;
   const events = modern ? parseEvents(modern.events) : [];
+  // Early histories lacked part metadata. Restore only a known matching numbered
+  // first-part context for the game projection; retain the original learning events.
+  // No scoring version is invented, so ambiguous old events cannot mint XP.
+  const gameEvents = events.map((event) => {
+    if (event.kind !== "answer_checked" || event.part !== undefined ||
+        event.answerFormat !== undefined || event.examVersionId !== undefined) return event;
+    const task = tasks.find((candidate) => candidate.id === event.taskId);
+    if (!task || task.part !== 1 || task.examNumber === null ||
+        !task.examType.includes(event.examType)) return event;
+    return { ...event, part: 1 as const, answerFormat: "short" as const };
+  });
   return {
     version: 3,
     exam: source?.exam === "ОГЭ" ? "ОГЭ" : "ЕГЭ",
@@ -330,19 +341,16 @@ export function parseLearningState(
     legacyRecords: parseLegacyRecords(
       modern ? modern.legacyRecords : legacy?.records,
     ),
-    fontScale: modern?.fontScale === "large" ? "large" : "standard",
-    theme:
-      modern?.theme === "light" || modern?.theme === "dark"
-        ? modern.theme
-        : modern?.theme === "system" && modern?.themeExplicit === true
-          ? "system"
-          : "light",
-    // Older v3 defaulted to system without an explicit choice. Restore the brand's light palette.
-    themeExplicit: modern?.themeExplicit === true,
+    fontScale: modern?.fontScale === "large" || modern?.fontScale === "huge"
+      ? modern.fontScale : "standard",
+    // Removed system/comfort options migrate to the original light theme.
+    theme: modern?.theme === "dark" ? "dark" : "light",
     focusMode: modern?.focusMode === true,
+    breakReminderMinutes: modern?.breakReminderMinutes === 0 || modern?.breakReminderMinutes === 90
+      ? modern.breakReminderMinutes : 120,
     game: reconcileUnrewardedAttempts(
-      parseGameState(modern?.game, events),
-      events,
+      parseGameState(modern?.game, gameEvents),
+      gameEvents,
       (event) => {
         const task = tasks.find((candidate) => candidate.id === event.taskId);
         return task ? getTaskXPScoringRule(task) : null;

@@ -33,7 +33,7 @@ async function loadModule(fileUrl) {
   moduleUrls.set(fileUrl.href, loading);
   return loading;
 }
-const { gameConfig, getGameLevel, getGameRank } = await import(await loadModule(new URL("src/lib/game-config.ts", root)));
+const { gameConfig, getGameLevel, getGameRank, getStreakFlame } = await import(await loadModule(new URL("src/lib/game-config.ts", root)));
 const { emptyGameState, recordGameAttempt, parseGameState, getGameSummary, localDayKey, recordSelfAssessment, getSelfAssessment, getAttemptXPAward, reconcileUnrewardedAttempts } = await import(await loadModule(new URL("src/lib/gamification.ts", root)));
 const date = "2026-10-20T12:00:00.000Z";
 // Deliberately synthetic verified fixtures; these are NOT production FIPI confirmations.
@@ -59,7 +59,12 @@ test("game policy has no subscription multiplier or earning cap; thresholds are 
   assert.equal(gameConfig.streak.status, "proposed");
   assert.equal("freeLimitXP" in gameConfig, false);
   assert.equal("premiumMultiplier" in gameConfig, false);
-  assert.deepEqual(gameConfig.ranks.map((rank) => rank.minXP), [0, 5, 10, 15, 20, 30, 50, 80, 110, 150]);
+  assert.deepEqual(gameConfig.ranks.map((rank) => rank.minXP), [0, 5, 10, 20, 30, 50, 80, 110, 150]);
+  assert.deepEqual(gameConfig.ranks.map((rank) => rank.color), [
+    "#D0D4D0", "#B1B4B7", "#A9A5B5", "#B8A6D3", "#A087D0",
+    "#8663CE", "#7545D8", "#6728E0", "#5719E6",
+  ]);
+  assert.ok(gameConfig.ranks.every((rank) => !("label" in rank)));
 });
 
 test("only a new independent correct answer with explicitly verified matching scoring earns XP", () => {
@@ -120,7 +125,7 @@ test("187 XP remains 187, even though the visual daily scale ends at 150", () =>
   assert.equal(view.todayXP, 187);
   assert.equal(view.totalXP, 187);
   assert.equal(view.dailyScaleValue, 150);
-  assert.equal(view.rank.id, "rainbow");
+  assert.equal(view.rank.color, "#5719E6");
   assert.equal(view.level.number, 2);
   assert.equal(view.level.xpIntoLevel, 87);
   assert.equal(view.subjects[0].totalXP, 187);
@@ -186,9 +191,9 @@ test("historical awards keep their original score snapshot and rank/level config
   assert.equal(summary(restored).totalXP, 2);
   assert.equal(getGameLevel(0).number, 1);
   assert.equal(getGameLevel(100).number, 2);
-  assert.equal(getGameRank(149).id, "gold");
-  assert.equal(getGameRank(150).id, "rainbow");
-  assert.equal(getGameRank(999).id, "rainbow");
+  assert.equal(getGameRank(149).color, "#6728E0");
+  assert.equal(getGameRank(150).color, "#5719E6");
+  assert.equal(getGameRank(999).color, "#5719E6");
 });
 
 function projectRule(overrides = {}) {
@@ -220,7 +225,7 @@ test("A: the supplied project scoring policy enables real automatic awards witho
   assert.equal(summary(record(emptyGameState(), answer, [], null)).totalXP, 0);
 });
 
-test("B: a genuine wrong answer earns zero, a corrected independent answer earns once and restores the streak", () => {
+test("B: a corrected independent answer earns XP once without restoring the series broken by its wrong first attempt", () => {
   const wrong = attempt("correctable-wrong", { correct: false });
   const corrected = attempt("corrected-right", { taskId: wrong.taskId });
   const start = record(emptyGameState(), wrong, [], projectRule());
@@ -228,8 +233,8 @@ test("B: a genuine wrong answer earns zero, a corrected independent answer earns
   assert.equal(summary(start).winStreak, 0);
   const won = record(start, corrected, [wrong], projectRule());
   assert.equal(summary(won).totalXP, 1);
-  assert.equal(summary(won).winStreak, 1);
-  assert.equal(won.checks.length, 2);
+  assert.equal(summary(won).winStreak, 0);
+  assert.equal(won.checks.length, 1);
   assert.deepEqual(parseGameState(won, [wrong, corrected]), won);
   const view = { kind: "solution_viewed", id: "seen-before-correction", taskId: wrong.taskId,
     subjectId: "math", createdAt: date, attemptId: wrong.id };
@@ -302,7 +307,7 @@ test("E/H: mixed subjects share one balance, and self-assessment does not alter 
   assert.equal(summary(game).winStreak, before.winStreak);
 });
 
-test("F: 149→150→151 reaches rainbow while the counter and actual balance continue growing", () => {
+test("F: 149→150→151 reaches the last purple stage while the counter and actual balance continue growing", () => {
   let game = emptyGameState();
   const history = [];
   for (let index = 0; index < 151; index++) {
@@ -311,9 +316,9 @@ test("F: 149→150→151 reaches rainbow while the counter and actual balance co
     history.push(event);
     if (index === 148) {
       assert.equal(summary(game).todayXP, 149);
-      assert.equal(summary(game).rank.id, "gold");
+      assert.equal(summary(game).rank.color, "#6728E0");
     }
-    if (index === 149) assert.equal(summary(game).rank.id, "rainbow");
+    if (index === 149) assert.equal(summary(game).rank.color, "#5719E6");
   }
   assert.equal(summary(game).totalXP, 151);
   assert.equal(summary(game).todayXP, 151);
@@ -386,7 +391,7 @@ test("the explicit repair recovers formerly blocked eligible awards once, with t
   const historical = record(record(emptyGameState(), wrong, [], null), right, [wrong], null);
   const fixed = reconcileUnrewardedAttempts(historical, [wrong, right, view], () => projectRule());
   assert.equal(summary(fixed).totalXP, 1);
-  assert.equal(summary(fixed).winStreak, 1);
+  assert.equal(summary(fixed).winStreak, 0);
   assert.equal(fixed.xpEvents[0].createdAt, right.createdAt);
   assert.deepEqual(reconcileUnrewardedAttempts(fixed, [wrong, right, view], () => projectRule()), fixed);
   assert.equal(summary(reconcileUnrewardedAttempts(historical, [wrong, view, right], () => projectRule())).totalXP, 0);
@@ -420,4 +425,111 @@ test("the repair reconstructs missing or interrupted self-assessment ledgers fro
   assert.deepEqual(recovered, complete);
   assert.deepEqual(reconcileUnrewardedAttempts(recovered, history, () => selfRule()), recovered);
   assert.equal(summary(reconcileUnrewardedAttempts(emptyGameState(), history, () => null)).totalXP, 0);
+});
+
+test("two new correct first attempts grow both series to two and survive reload and journal reconciliation", () => {
+  const first = attempt("series-first");
+  const second = attempt("series-second");
+  const history = [first, second];
+  const game = record(record(emptyGameState(), first), second, [first]);
+  assert.equal(summary(game).winStreak, 2);
+  assert.equal(summary(game).subjects[0].winStreak, 2);
+  assert.equal(summary(game).totalXP, 2);
+  const restored = parseGameState(JSON.stringify(game), history);
+  assert.equal(summary(restored).winStreak, 2);
+  assert.deepEqual(reconcileUnrewardedAttempts(restored, history, () => rule()), restored);
+});
+
+test("an error breaks the series; its correction earns XP but a different new correct task starts the next series", () => {
+  const first = attempt("series-before-error");
+  const wrong = attempt("series-error", { correct: false });
+  const correction = attempt("series-correction", { taskId: wrong.taskId });
+  const next = attempt("series-next-new");
+  const history = [first, wrong, correction, next];
+  let game = record(emptyGameState(), first);
+  game = record(game, wrong, [first]);
+  assert.equal(summary(game).winStreak, 0);
+  game = record(game, correction, [first, wrong]);
+  assert.equal(summary(game).totalXP, 2);
+  assert.equal(summary(game).winStreak, 0);
+  game = record(game, next, [first, wrong, correction]);
+  assert.equal(summary(game).winStreak, 1);
+  assert.equal(summary(game).subjects[0].winStreak, 1);
+  assert.deepEqual(parseGameState(game, history), game);
+  assert.deepEqual(reconcileUnrewardedAttempts(game, history, () => rule()), game);
+  // A previous schema may still contain a positive correction check. It is no longer counted.
+  const old = { ...game, checks: [game.checks[0], game.checks[1], {
+    attemptId: correction.id, taskId: correction.taskId, subjectId: correction.subjectId,
+    correct: true, createdAt: correction.createdAt,
+  }, game.checks[2]] };
+  assert.deepEqual(parseGameState(old, history), game);
+  assert.equal(summary(old).winStreak, 1);
+});
+
+test("a viewed solution and repeated variants never add to either correct-answer series", () => {
+  const original = attempt("series-independent");
+  const viewed = { kind: "solution_viewed", id: "series-view", taskId: "task-series-copied",
+    subjectId: "math", createdAt: date, attemptId: "older-attempt" };
+  const copied = attempt("series-copied", { solutionSeenBeforeCheck: true });
+  const game = record(record(emptyGameState(), original), copied, [original, viewed]);
+  assert.equal(summary(game).winStreak, 1);
+  assert.equal(summary(game).subjects[0].winStreak, 1);
+  const repeated = attempt("series-repeat", { taskId: original.taskId });
+  assert.equal(summary(record(game, repeated, [original, viewed, copied])).winStreak, 1);
+});
+
+test("a wrong answer in another subject resets only that subject and the overall series", () => {
+  const mathOne = attempt("series-math-one");
+  const mathTwo = attempt("series-math-two");
+  const russian = attempt("series-russian", { subjectId: "russian" });
+  const wrongRussian = attempt("series-russian-wrong", { subjectId: "russian", correct: false });
+  let game = record(record(emptyGameState(), mathOne), mathTwo, [mathOne]);
+  game = record(game, russian, [mathOne, mathTwo], rule({ subjectId: "russian" }));
+  game = record(game, wrongRussian, [mathOne, mathTwo, russian], rule({ subjectId: "russian" }));
+  const result = summary(game);
+  assert.equal(result.winStreak, 0);
+  assert.equal(result.subjects.find((subject) => subject.subjectId === "math").winStreak, 2);
+  assert.equal(result.subjects.find((subject) => subject.subjectId === "russian").winStreak, 0);
+});
+
+test("self-assessment 3→4 adds one XP while keeping confirmed correct-answer series unchanged", () => {
+  const first = attempt("series-before-self-one");
+  const second = attempt("series-before-self-two");
+  const three = selfAssessment("series-self-three", 3);
+  const four = selfAssessment("series-self-four", 4, { taskId: three.taskId });
+  let game = record(record(emptyGameState(), first), second, [first]);
+  game = recordSelf(game, three, [first, second]);
+  const before = summary(game);
+  game = recordSelf(game, four, [first, second, three]);
+  assert.equal(summary(game).totalXP - before.totalXP, 1);
+  assert.equal(summary(game).winStreak, 2);
+  assert.equal(summary(game).subjects[0].winStreak, 2);
+  assert.equal(summary(parseGameState(game, [first, second, three, four])).winStreak, 2);
+});
+
+test("flame size and color depend only on the correct-answer series and remain visually capped after fifty", () => {
+  const expected = [
+    [0, "#AEB3AE", 18], [1, "#B5A09F", 19], [5, "#C28D85", 21],
+    [10, "#D47962", 23], [20, "#E35C45", 26], [30, "#EF4438", 29],
+    [40, "#F12F2F", 32], [50, "#FF2929", 34],
+  ];
+  for (let index = 0; index < expected.length; index++) {
+    const [threshold, color, size] = expected[index];
+    assert.equal(getStreakFlame(threshold).color, color);
+    assert.equal(getStreakFlame(threshold).size, size);
+    const lastBeforeNext = expected[index + 1]?.[0] - 1;
+    if (Number.isFinite(lastBeforeNext)) {
+      assert.equal(getStreakFlame(lastBeforeNext).color, color);
+      assert.equal(getStreakFlame(lastBeforeNext).size, size);
+    }
+  }
+  assert.deepEqual(getStreakFlame(500), getStreakFlame(50));
+  let game = emptyGameState();
+  const history = [];
+  for (let index = 0; index < 60; index++) {
+    const checked = attempt(`uncapped-series-${index}`);
+    game = record(game, checked, history);
+    history.push(checked);
+  }
+  assert.equal(summary(game).winStreak, 60);
 });

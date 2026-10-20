@@ -1,11 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   BookOpen,
   ChevronRight,
   Grid2X2,
   House,
+  Focus,
+  Moon,
+  Sun,
+  Coffee,
   ListChecks,
   Menu,
   ShieldCheck,
@@ -24,10 +28,17 @@ import { TrainerScreen } from "@/components/screens/trainer-screen";
 import { ProgressScreen } from "@/components/screens/progress-screen";
 import { ProfileScreen } from "@/components/screens/profile-screen";
 import { PremiumScreen } from "@/components/screens/premium-screen";
+import { HelpScreen } from "@/components/screens/help-screen";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
 import { usePracticeSession } from "@/hooks/use-practice-session";
 import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
+import { useBreakReminder } from "@/hooks/use-break-reminder";
+import {
+  captureViewportPosition,
+  restoreViewportPosition,
+  type ViewportPosition,
+} from "@/lib/viewport-position";
 import { tasks, taskTopicLabels } from "@/lib/tasks";
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import {
@@ -62,6 +73,7 @@ export function StudyApp() {
     setFontScale,
     setTheme,
     setFocusMode,
+    setBreakReminderMinutes,
     rememberTask,
     recordAnswer,
     confirmSelfAssessment,
@@ -74,6 +86,12 @@ export function StudyApp() {
   const game = getGameSummary(state.game, now);
   const menuDialog = useRef<HTMLDialogElement>(null);
   const catalogRef = useRef<HTMLDivElement>(null);
+  const helpReturn = useRef<{
+    hash: string;
+    position: ViewportPosition;
+  } | null>(null);
+  const focusPosition = useRef<ViewportPosition | null>(null);
+  const previousView = useRef(route.view);
   const practice = usePracticeSession({
     route,
     navigate,
@@ -88,6 +106,8 @@ export function StudyApp() {
     rootRef: catalogRef,
   });
   const isPremium = demoAllowed && demoPremium;
+  const canConcentrate = route.view === "tasks" || route.view === "theory";
+  const concentrating = state.focusMode && canConcentrate;
   const activeView = route.view === "tasks" ? "catalog" : route.view;
   const { currentTask, session } = practice;
   const currentIndex = currentTask
@@ -97,22 +117,24 @@ export function StudyApp() {
     route.view === "catalog"
       ? "catalog"
       : `${route.view}:${currentIndex}:${route.topicId ?? ""}:${route.materialId ?? ""}`;
+  const latestCheck = [...state.events]
+    .reverse()
+    .find((event) => event.kind !== "solution_viewed");
+  const reminder = useBreakReminder({
+    minutes: state.breakReminderMinutes,
+    safePointKey: `${pageKey}:${latestCheck?.id ?? ""}`,
+    ready,
+  });
 
   useEffect(() => {
     if (!ready) return;
-    const query = window.matchMedia("(prefers-color-scheme: dark)");
-    const update = () => {
-      const theme = state.theme === "system"
-        ? (query.matches ? "dark" : "light")
-        : state.theme;
-      document.documentElement.dataset.theme = theme;
-      document.querySelector('meta[name="theme-color"]')?.setAttribute(
-        "content", theme === "dark" ? "#1b211c" : "#f8f6f0",
+    document.documentElement.dataset.theme = state.theme;
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute(
+        "content",
+        state.theme === "dark" ? "#1d2420" : "#f7f8f4",
       );
-    };
-    update();
-    query.addEventListener("change", update);
-    return () => query.removeEventListener("change", update);
   }, [state.theme, ready]);
   useEffect(() => {
     const update = () => setNow(new Date());
@@ -130,9 +152,15 @@ export function StudyApp() {
     if (ready && route.view === "tasks" && currentTask)
       rememberTask(currentIndex);
   }, [ready, route.view, currentIndex, currentTask, rememberTask]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!ready) return;
-    if (route.view !== "catalog") {
+    const returningFromHelp =
+      previousView.current === "help" && route.view !== "help";
+    previousView.current = route.view;
+    if (returningFromHelp && helpReturn.current?.hash === window.location.hash) {
+      restoreViewportPosition(helpReturn.current.position);
+      helpReturn.current = null;
+    } else if (route.view !== "catalog") {
       window.scrollTo({ top: 0, behavior: "auto" });
       for (
         let container: HTMLElement | null =
@@ -147,6 +175,11 @@ export function StudyApp() {
     }
     document.getElementById("main-content")?.focus({ preventScroll: true });
   }, [pageKey, ready, route.view]);
+  useLayoutEffect(() => {
+    if (!focusPosition.current) return;
+    restoreViewportPosition(focusPosition.current);
+    focusPosition.current = null;
+  }, [state.focusMode]);
   useEffect(() => {
     const dialog = menuDialog.current;
     if (!dialog) return;
@@ -202,9 +235,65 @@ export function StudyApp() {
     if (route.view === "catalog") catalogScroll.capture();
     navigate("theory", { topicId });
   };
+  function openHelp() {
+    helpReturn.current = {
+      hash: window.location.hash,
+      position: captureViewportPosition(),
+    };
+    open("help");
+  }
+  function toggleConcentration() {
+    focusPosition.current = captureViewportPosition();
+    setFocusMode(!state.focusMode);
+  }
 
   return (
-    <div className={`app-shell font-${state.fontScale}${state.focusMode && route.view === "tasks" ? " focus-mode" : ""}`}>
+    <div
+      className={`app-shell font-${state.fontScale}${concentrating ? " focus-mode" : ""}`}
+      data-view={route.view}
+    >
+      <div
+        className="study-controls"
+        role="group"
+        aria-label="Оформление и концентрация"
+      >
+        {canConcentrate && (
+          <button
+            type="button"
+            className="focus-toggle"
+            aria-pressed={concentrating}
+            aria-label={
+              concentrating
+                ? "Выйти из режима концентрации"
+                : "Включить режим концентрации"
+            }
+            onClick={toggleConcentration}
+          >
+            {concentrating ? (
+              <X size={21} aria-hidden="true" />
+            ) : (
+              <Focus size={21} aria-hidden="true" />
+            )}
+            {concentrating && <span>Выйти</span>}
+          </button>
+        )}
+        <button
+          type="button"
+          className="theme-toggle"
+          aria-label={
+            state.theme === "light"
+              ? "Включить тёмную тему"
+              : "Включить светлую тему"
+          }
+          onClick={() => setTheme(state.theme === "light" ? "dark" : "light")}
+        >
+          {state.theme === "light" ? (
+            <Moon size={21} aria-hidden="true" />
+          ) : (
+            <Sun size={21} aria-hidden="true" />
+          )}
+        </button>
+      </div>
       <a
         className="skip-link"
         href="#main-content"
@@ -271,6 +360,7 @@ export function StudyApp() {
         </header>
         <main
           id="main-content"
+          aria-busy={!ready || !practice.initialized}
           tabIndex={-1}
           className={`main-content view-${route.view}`}
         >
@@ -284,7 +374,9 @@ export function StudyApp() {
               </span>
             </div>
           )}
-          {(storageWarning || practice.storageWarning || catalogScroll.storageWarning) && (
+          {(storageWarning ||
+            practice.storageWarning ||
+            catalogScroll.storageWarning) && (
             <div className="storage-warning" role="status">
               <ShieldCheck size={20} />
               <span>
@@ -310,6 +402,7 @@ export function StudyApp() {
               onStart={continuePractice}
               onNavigate={open}
               game={game}
+              onHelp={openHelp}
             />
           )}
           <div
@@ -362,15 +455,20 @@ export function StudyApp() {
                 examNumber={currentTask.examNumber}
                 topicTitle={
                   theoryTopics.find((topic) => topic.id === currentTask.topicId)
-                    ?.title ?? taskTopicLabels[currentTask.topicId] ?? "Математика"
+                    ?.title ??
+                  taskTopicLabels[currentTask.topicId] ??
+                  "Математика"
                 }
                 value={session.states[currentTask.id] ?? emptyTaskState()}
                 onChange={practice.changeTask}
                 onAnswer={recordAnswer}
-                maxPrimaryScore={getTaskXPScoringRule(currentTask)?.maxPrimaryScore ?? null}
+                maxPrimaryScore={
+                  getTaskXPScoringRule(currentTask)?.maxPrimaryScore ?? null
+                }
                 selfAssessment={getSelfAssessment(state.game, currentTask.id)}
                 onSelfAssessment={confirmSelfAssessment}
                 onSolutionViewed={recordSolutionViewed}
+                focusMode={concentrating}
                 onNext={() => practice.move(1)}
                 canNext={
                   practice.position >= 0 &&
@@ -438,12 +536,16 @@ export function StudyApp() {
               onFontScale={setFontScale}
               onThemeChange={setTheme}
               onFocusModeChange={setFocusMode}
+              onBreakReminderChange={setBreakReminderMinutes}
+              onHelp={openHelp}
               onClear={() => {
                 const practiceCleared = practice.reset();
                 const scrollCleared = catalogScroll.reset();
-                const success = clearLocalData() && practiceCleared && scrollCleared;
+                const success =
+                  clearLocalData() && practiceCleared && scrollCleared;
                 if (success) {
                   setDemoPremium(false);
+                  reminder.reset();
                 }
                 return success;
               }}
@@ -451,6 +553,28 @@ export function StudyApp() {
             />
           )}
           {route.view === "premium" && <PremiumScreen onBack={back} />}
+          {route.view === "help" && <HelpScreen onBack={back} />}
+          {reminder.visible && (
+            <aside
+              className="break-reminder"
+              role="status"
+              aria-label="Напоминание о перерыве"
+            >
+              <Coffee size={22} aria-hidden="true" />
+              <div>
+                <strong>Можно сделать небольшой перерыв</strong>
+                <p>Отдохни от экрана и разомнись. К заданию можно вернуться в любое время.</p>
+              </div>
+              <button
+                type="button"
+                className="icon-button"
+                aria-label="Закрыть напоминание"
+                onClick={reminder.dismiss}
+              >
+                <X size={20} aria-hidden="true" />
+              </button>
+            </aside>
+          )}
         </main>
       </div>
       <nav className="mobile-nav" aria-label="Нижняя навигация">
@@ -469,7 +593,8 @@ export function StudyApp() {
           className={
             activeView === "trainer" ||
             activeView === "profile" ||
-            activeView === "premium"
+            activeView === "premium" ||
+            activeView === "help"
               ? "active"
               : ""
           }

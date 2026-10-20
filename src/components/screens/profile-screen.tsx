@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Focus, Monitor, Moon, ShieldCheck, Sun, UserRound } from "lucide-react";
+import { ArrowRight, CircleHelp, Focus, Moon, ShieldCheck, Sun, UserRound } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import type { LearningState } from "@/lib/learning-events";
 import type { Exam } from "@/lib/navigation";
@@ -13,8 +13,10 @@ type Props = {
   onToggleDemo: () => void;
   onExamChange: (exam: Exam) => void;
   onFontScale: (scale: LearningState["fontScale"]) => void;
-  onThemeChange: (theme: "light" | "dark" | "system") => void;
+  onThemeChange: (theme: "light" | "dark") => void;
   onFocusModeChange: (enabled: boolean) => void;
+  onBreakReminderChange: (minutes: 90 | 120 | 0) => void;
+  onHelp: () => void;
   onClear: () => boolean;
   onPremium: () => void;
 };
@@ -28,6 +30,8 @@ export function ProfileScreen({
   onFontScale,
   onThemeChange,
   onFocusModeChange,
+  onBreakReminderChange,
+  onHelp,
   onClear,
   onPremium,
 }: Props) {
@@ -68,13 +72,13 @@ export function ProfileScreen({
             <h3>Размер текста</h3>
             <p>Выбери удобный размер для чтения.</p>
           </div>
-          <div className="segmented" role="group" aria-label="Размер текста">
+          <div className="segmented font-options" role="group" aria-label="Размер текста">
             <button
               aria-pressed={state.fontScale === "standard"}
               className={state.fontScale === "standard" ? "selected" : ""}
               onClick={() => onFontScale("standard")}
             >
-              Стандартный
+              Обычный
             </button>
             <button
               aria-pressed={state.fontScale === "large"}
@@ -83,18 +87,24 @@ export function ProfileScreen({
             >
               Крупный
             </button>
+            <button
+              aria-pressed={state.fontScale === "huge"}
+              className={state.fontScale === "huge" ? "selected" : ""}
+              onClick={() => onFontScale("huge")}
+            >
+              Очень крупный
+            </button>
           </div>
         </div>
         <div className="setting-row appearance-setting">
           <div>
             <h3>Оформление</h3>
-            <p>По умолчанию — светлая тема. Системная включается по твоему выбору.</p>
+            <p>Светлая по умолчанию. Выбранная тема сохраняется в этом браузере.</p>
           </div>
           <div className="segmented theme-options" role="group" aria-label="Тема оформления">
             {([
               { value: "light", label: "Светлая", icon: Sun },
               { value: "dark", label: "Тёмная", icon: Moon },
-              { value: "system", label: "Системная", icon: Monitor },
             ] as const).map(({ value, label, icon: Icon }) => (
               <button
                 key={value}
@@ -113,7 +123,7 @@ export function ProfileScreen({
           <div>
             <h3><Focus size={19} aria-hidden="true" /> Режим концентрации</h3>
             <p id="focus-description">
-              Скрывает основное меню во время решения. Кнопка возврата к заданиям остаётся.
+              Убирает лишние панели в заданиях и теории. Выход и смена темы остаются справа сверху.
             </p>
           </div>
           <button
@@ -129,6 +139,39 @@ export function ProfileScreen({
             <span>{state.focusMode ? "Включён" : "Выключен"}</span>
           </button>
         </div>
+        <div className="setting-row appearance-setting">
+          <div>
+            <h3>Напоминания о перерыве</h3>
+            <p id="break-description">
+              После непрерывной работы, без прерывания решения. После 15 минут
+              неактивности отсчёт начинается заново.
+            </p>
+          </div>
+          <div className="segmented reminder-options" role="group" aria-label="Интервал напоминания о перерыве" aria-describedby="break-description">
+            {([
+              { value: 90, label: "1,5 часа" },
+              { value: 120, label: "2 часа" },
+              { value: 0, label: "Выкл." },
+            ] as const).map((option) => (
+              <button
+                key={option.value}
+                type="button"
+                aria-pressed={state.breakReminderMinutes === option.value}
+                className={state.breakReminderMinutes === option.value ? "selected" : ""}
+                onClick={() => onBreakReminderChange(option.value)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="settings-card">
+        <h2><CircleHelp size={22} aria-hidden="true" /> Помощь и объяснения</h2>
+        <p>Ответы о начислении XP, цвете шкал, сериях и самооценке.</p>
+        <button type="button" className="text-button" onClick={onHelp}>
+          Открыть справку <ArrowRight size={18} aria-hidden="true" />
+        </button>
       </section>
       <section className="settings-card">
         <div className="section-title">

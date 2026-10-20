@@ -19,9 +19,10 @@ type Props = {
   onStart: () => void;
   onNavigate: (view: View) => void;
   game: GameSummary;
+  onHelp: () => void;
 };
 
-export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game }: Props) {
+export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHelp }: Props) {
   return (
     <>
       <PageIntro eyebrow="ТОЧКА · МАТЕМАТИКА" title="Твоя подготовка">
@@ -49,7 +50,7 @@ export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game }: Pr
         <LearningIllustration className="hero-illustration" />
       </section>
       <ExamPicker exam={exam} onChange={onExamChange} />
-      <GameMotivation summary={game} />
+      <GameMotivation summary={game} onHelp={onHelp} />
       <section className="feature-section" aria-labelledby="sections-title">
         <div className="section-title">
           <h2 id="sections-title">Материалы и возможности</h2>

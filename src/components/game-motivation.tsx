@@ -1,7 +1,7 @@
 "use client";
 
-import { Flame, Leaf, Sparkles } from "lucide-react";
-import { gameConfig } from "@/lib/game-config";
+import { ArrowRight, Flame, Sparkles } from "lucide-react";
+import { gameConfig, getStreakFlame } from "@/lib/game-config";
 import type { GameSummary, SubjectGameSummary } from "@/lib/gamification";
 import "./game-motivation.css";
 
@@ -21,12 +21,10 @@ function XPScale({
         aria-valuemin={0}
         aria-valuemax={gameConfig.dailyVisualMaxXP}
         aria-valuenow={value.dailyScaleValue}
-        aria-valuetext={`${value.todayXP} XP сегодня. Ранг: ${value.rank.label}. Шкала до 150 XP, заработок не ограничен.`}
+        aria-valuetext={`${value.todayXP} XP сегодня. Цветовая шкала до 150 XP, заработок не ограничен.`}
       >
         <span
-          className={
-            value.rank.id === "rainbow" ? "xp-fill xp-rainbow" : "xp-fill"
-          }
+          className="xp-fill"
           style={{
             width: `${value.dailyScaleValue / gameConfig.dailyVisualMaxXP * 100}%`,
             backgroundColor: value.rank.color,
@@ -34,14 +32,37 @@ function XPScale({
         />
       </div>
       <div className="xp-scale-labels">
-        <span>0 XP</span>
-        <span>150 XP · последний ранг</span>
+        <span>150 XP</span>
       </div>
     </div>
   );
 }
 
-export function GameMotivation({ summary }: { summary: GameSummary }) {
+function WinStreak({ value }: { value: number }) {
+  const flame = getStreakFlame(value);
+  return (
+    <span className="game-streak">
+      <span className="game-flame-slot" aria-hidden="true">
+        <Flame
+          className="game-flame"
+          size={flame.size}
+          color={flame.color}
+          fill={flame.color}
+          strokeWidth={1.5}
+        />
+      </span>
+      <span>Серия верных: {value}</span>
+    </span>
+  );
+}
+
+export function GameMotivation({
+  summary,
+  onHelp,
+}: {
+  summary: GameSummary;
+  onHelp: () => void;
+}) {
   return (
     <section className="game-section" aria-labelledby="game-heading">
       <div className="section-title game-heading">
@@ -54,90 +75,64 @@ export function GameMotivation({ summary }: { summary: GameSummary }) {
         </span>
       </div>
       <div className="game-grid">
-        <article className="game-card game-overall">
-          <div className="game-card-top">
-            <span className="game-card-label">Общий опыт за день</span>
-            <span
-              className="game-rank"
-              style={{
-                color: summary.rank.color,
-                background: summary.rank.background,
-              }}
-            >
-              <Leaf size={14} aria-hidden="true" />
-              {summary.rank.label}
-            </span>
-          </div>
-          <p className="game-xp">
-            <strong>{summary.todayXP}</strong> XP <span>сегодня</span>
-          </p>
-          <XPScale value={summary} label="Общая дневная шкала XP" />
-          <div className="game-card-bottom">
-            <span>Всего {summary.totalXP} XP</span>
-            <span className="game-streak">
-              <Flame size={17} aria-hidden="true" />
-              Серия верных: {summary.winStreak}
-            </span>
-          </div>
-        </article>
-        {summary.subjects.map((subject) => (
-          <article className="game-card game-subject" key={subject.subjectId}>
+        <div className="game-overall-group">
+          <article className="game-card game-overall">
             <div className="game-card-top">
-              <span className="game-card-label">
-                {subject.subjectId === "math" ? "Математика" : subject.subjectId}
-              </span>
-              <span className="game-subject-level">
-                Уровень {subject.level.number}
-              </span>
+              <span className="game-card-label">Общий опыт за день</span>
             </div>
             <p className="game-xp">
-              <strong>{subject.todayXP}</strong> XP <span>сегодня</span>
+              <strong>{summary.todayXP}</strong> XP <span>сегодня</span>
             </p>
-            <XPScale value={subject} label="Дневная шкала XP по математике" />
+            <XPScale value={summary} label="Общая дневная шкала XP" />
             <div className="game-card-bottom">
-              <span>Всего {subject.totalXP} XP</span>
-              <span>Серия верных: {subject.winStreak}</span>
+              <span>Всего {summary.totalXP} XP</span>
+              <WinStreak value={summary.winStreak} />
             </div>
           </article>
-        ))}
-      </div>
-      <div className="game-verification-note" role="note">
-        <Sparkles size={19} aria-hidden="true" />
-        <p>
-          XP — игровой опыт за самостоятельные ответы и подтверждённую самооценку.
-          Это локальная демоверсия: опыт сохраняется в этом браузере, без аккаунта
-          и синхронизации между устройствами.
-        </p>
-      </div>
-      <details className="game-rules">
-        <summary>Как работают опыт и серии</summary>
-        <div>
-          <p>
-            XP — игровая мотивация, а не баллы экзамена и не оценка готовности.
-            Одна общая шкала складывается из предметных. После 150 XP шкала
-            заполнена, но опыт продолжает накапливаться.
-          </p>
-          <p>
-            Рабочие настройки: новый уровень за каждые 100 XP; цвета и пороги
-            рангов предварительные. Серия растёт после автоматически проверенного верного
-            ответа первой части, включая исправление ошибки. Ошибка сбрасывает
-            общую серию и серию этого предмета. Повторный просмотр и самооценка
-            второй части серию не меняют.
-          </p>
-          <p>
-            За первое самостоятельное верное решение номерного задания начисляется
-            XP по сетке математики 2026 года из конфигурации проекта. Её онлайн-сверка
-            ФИПИ недоступна. Просмотр готового решения до верного ответа исключает
-            XP за эту задачу; повторная проверка дополнительных очков не даёт.
-          </p>
-          <p>
-            Самооценка второй части даёт столько XP, сколько баллов ты подтвердил.
-            Исправление оценки меняет только разницу, в том числе уменьшает опыт.
-            Коррекция относится к исходному дню начисления, чтобы дневной баланс
-            не становился отрицательным.
+          <p className="game-help-note">
+            Не знаешь, как начисляются XP?{" "}
+            <a
+              className="game-help-link"
+              href="#/help"
+              onClick={(event) => {
+                event.preventDefault();
+                onHelp();
+              }}
+            >
+              Узнать подробнее <ArrowRight size={16} aria-hidden="true" />
+            </a>
           </p>
         </div>
-      </details>
+        {summary.subjects.map((subject) => {
+          const subjectTitle = subject.subjectId === "math"
+            ? "Математика"
+            : subject.subjectId;
+          return (
+            <article className="game-card game-subject" key={subject.subjectId}>
+              <div className="game-card-top">
+                <span className="game-card-label">{subjectTitle}</span>
+                <span className="game-subject-level">
+                  Уровень {subject.level.number}
+                </span>
+              </div>
+              <p className="game-xp">
+                <strong>{subject.todayXP}</strong> XP <span>сегодня</span>
+              </p>
+              <XPScale
+                value={subject}
+                label={`Дневная шкала XP: ${subjectTitle}`}
+              />
+              <div className="game-card-bottom">
+                <span>Всего {subject.totalXP} XP</span>
+                <WinStreak value={subject.winStreak} />
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      <p className="game-local-note">
+        XP сохраняются в этом браузере. Это игровой опыт, а не прогноз баллов экзамена.
+      </p>
     </section>
   );
 }

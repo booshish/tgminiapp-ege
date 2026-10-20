@@ -166,12 +166,17 @@ export function useDemoProgress() {
   );
   const setTheme = useCallback(
     (theme: LearningState["theme"]) =>
-      updateState((previous) => ({ ...previous, theme, themeExplicit: true })),
+      updateState((previous) => ({ ...previous, theme })),
     [updateState],
   );
   const setFocusMode = useCallback(
     (focusMode: boolean) =>
       updateState((previous) => ({ ...previous, focusMode })),
+    [updateState],
+  );
+  const setBreakReminderMinutes = useCallback(
+    (breakReminderMinutes: LearningState["breakReminderMinutes"]) =>
+      updateState((previous) => ({ ...previous, breakReminderMinutes })),
     [updateState],
   );
   const rememberTask = useCallback(
@@ -371,6 +376,7 @@ export function useDemoProgress() {
     setFontScale,
     setTheme,
     setFocusMode,
+    setBreakReminderMinutes,
     rememberTask,
     recordAnswer,
     confirmSelfAssessment,

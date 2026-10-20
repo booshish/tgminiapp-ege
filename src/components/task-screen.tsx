@@ -42,6 +42,7 @@ export type TaskScreenProps = {
   onPrevious: () => void;
   canPrevious: boolean;
   onBack: () => void;
+  focusMode?: boolean;
 };
 
 /** Drafts belong to the practice session; revisiting a task never checks it again. */
@@ -68,6 +69,7 @@ function TaskAttempt({
   onPrevious,
   canPrevious,
   onBack,
+  focusMode = false,
 }: TaskScreenProps) {
   const { answer, validationMessage, attempt } = value;
   const solutionVisible = attempt !== null && value.solutionVisible;
@@ -250,7 +252,7 @@ function TaskAttempt({
                 )}
                 <strong>
                   {attempt.correct ? "Верно!" : "Неверно"}
-                  {attempt.correct && awardedXP > 0 && (
+                  {attempt.correct && awardedXP > 0 && !focusMode && (
                     <span className="task-xp-award"> +{awardedXP} XP</span>
                   )}
                 </strong>

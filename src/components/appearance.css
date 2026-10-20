@@ -3,7 +3,7 @@
   color-scheme: light;
   --surface: #fff;
   --surface-soft: #edf2e6;
-  --surface-raised: #fdfcf9;
+  --surface-raised: #f7f8f4;
 }
 
 .appearance-setting {
@@ -64,17 +64,17 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --sage: #8eae8d;
-  --sage-dark: #b3d0ae;
-  --ink: #edf1e8;
-  --muted: #bac6b7;
-  --line: #465344;
-  --cream: #1b211c;
+  --sage: #91b59a;
+  --sage-dark: #bad4c0;
+  --ink: #e6eae3;
+  --muted: #b4c0b5;
+  --line: #536256;
+  --cream: #1d2420;
   --light-green: #304333;
   --shadow: 0 5px 24px #00000012;
-  --surface: #252e26;
-  --surface-soft: #2d3b2e;
-  --surface-raised: #202922;
+  --surface: #29332c;
+  --surface-soft: #334237;
+  --surface-raised: #222c25;
 }
 [data-theme="dark"] body {
   background: var(--cream);
@@ -131,10 +131,10 @@
 }
 [data-theme="dark"] :is(.button-primary, .primary-button) {
   color: #162118;
-  background: #a0c298;
+  background: var(--sage);
 }
 [data-theme="dark"] :is(.button-primary:hover, .primary-button:hover) {
-  background: #b5d1ac;
+  background: #b5cfbd;
 }
 [data-theme="dark"] .button-secondary {
   background: var(--surface);
@@ -187,12 +187,93 @@
   outline-color: #bbd6ae;
 }
 
-/* Applied by the shell only while the practice screen is active. */
+/* The shell keeps these controls outside the navigation hidden by focus mode. */
+.study-controls {
+  position: fixed;
+  z-index: 45;
+  top: calc(14px + env(safe-area-inset-top));
+  right: max(24px, env(safe-area-inset-right));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.study-controls :is(.theme-toggle, .focus-toggle) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--sage-dark);
+  box-shadow: 0 2px 10px #20302408;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.study-controls :is(.theme-toggle, .focus-toggle):hover {
+  background: var(--light-green);
+}
+.study-controls .focus-toggle[aria-pressed="true"] {
+  padding-inline: 13px;
+  border-color: var(--sage);
+  background: var(--light-green);
+}
+.break-reminder {
+  position: fixed;
+  z-index: 40;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: calc(96px + env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 44px;
+  align-items: start;
+  gap: 12px;
+  width: min(520px, calc(100% - 32px));
+  max-height: min(50vh, 380px);
+  overflow-y: auto;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 6px 26px #20302412;
+}
+.break-reminder > svg {
+  margin-top: 4px;
+  color: var(--sage-dark);
+}
+.break-reminder strong {
+  display: block;
+  font-size: var(--body-size);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.break-reminder p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: var(--secondary-size);
+  line-height: 1.6;
+}
+.break-reminder .icon-button {
+  width: 44px;
+  height: 44px;
+}
+.focus-mode .break-reminder {
+  bottom: max(20px, env(safe-area-inset-bottom));
+}
+.app-shell .topbar {
+  padding-right: 140px;
+}
+
+/* This mode is available while reading theory and solving the current task. */
 .app-shell.focus-mode {
   display: block;
   padding-bottom: 0;
 }
-.app-shell.focus-mode :is(.sidebar, .topbar, .mobile-nav) {
+.app-shell.focus-mode :is(.sidebar, .topbar, .mobile-nav, .developer-notice, .game-section) {
   display: none;
 }
 .app-shell.focus-mode .workspace {
@@ -204,7 +285,13 @@
   width: 100%;
   max-width: 856px;
   margin: 0 auto;
-  padding: max(24px, env(safe-area-inset-top)) 32px max(32px, env(safe-area-inset-bottom));
+  padding: calc(84px + env(safe-area-inset-top)) 32px max(32px, env(safe-area-inset-bottom));
+}
+.app-shell.focus-mode .task-xp-award {
+  display: none;
+}
+.app-shell.focus-mode :is(.task-primary-score, .task-source, .self-score-explanation, .self-local-note) {
+  display: none;
 }
 
 @media (max-width: 700px) {
@@ -215,7 +302,7 @@
     flex: 1 1 85px;
     min-width: 0;
     padding: 9px 7px;
-    font-size: 14px;
+    font-size: var(--button-size);
   }
   .theme-options > button > svg {
     display: none;
@@ -228,7 +315,17 @@
     min-width: 156px;
   }
   .app-shell.focus-mode .main-content {
-    padding: max(16px, env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom));
+    padding: calc(84px + env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom));
+  }
+  .study-controls {
+    top: calc(14px + env(safe-area-inset-top));
+    right: max(16px, env(safe-area-inset-right));
+  }
+  .app-shell .topbar {
+    padding-right: 128px;
+  }
+  .app-shell .topbar-right {
+    display: none;
   }
 }
 
@@ -243,8 +340,10 @@
 }
 
 .font-large .theme-options > button,
-.font-large .focus-switch {
-  font-size: 17px;
+.font-large .focus-switch,
+.font-huge .theme-options > button,
+.font-huge .focus-switch {
+  font-size: var(--button-size);
 }
 
 @media (max-width: 600px) {
@@ -253,5 +352,114 @@
     font-size: 14px;
     white-space: nowrap;
     overflow-wrap: normal;
+  }
+}
+
+/* A small set of shared reading sizes overrides older compact screen rules. */
+.app-shell :is(.button, .primary-button, .text-button, .subtle-button, .back-link) {
+  font-size: var(--button-size);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.app-shell :is(.desktop-nav > button, .navigation-dialog nav > button) {
+  font-size: 17px;
+}
+.app-shell .segmented > button {
+  min-height: 48px;
+  font-size: var(--button-size);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.app-shell :is(.select-wrap > select, .practice-filter-select) {
+  max-width: 100%;
+  font-size: var(--button-size);
+  line-height: 1.5;
+}
+.app-shell .mobile-nav > button {
+  font-size: 16px;
+  font-weight: 600;
+}
+.app-shell .mobile-nav > button > span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.app-shell :is(
+  .feature-description, .picker-caption, .course-label, .desktop-breadcrumb,
+  .theory-topic-meta, .lesson-example-label, .task-source, .task-input-help,
+  .task-diagram-caption, .task-check-score-note, .self-author-note,
+  .self-check-notes > p, .self-score-explanation, .self-criteria-link > span,
+  .self-local-note, .sidebar-plan small
+) {
+  font-size: var(--secondary-size);
+  line-height: 1.6;
+}
+.app-shell :is(.eyebrow, .tag) {
+  font-size: var(--secondary-size);
+}
+.app-shell .task-screen {
+  font-size: var(--body-size);
+}
+.app-shell .task-screen .task-heading-block h1 {
+  font-size: 28px;
+}
+.app-shell .task-screen .task-prompt {
+  font-size: var(--task-size);
+  font-weight: 500;
+  line-height: 1.6;
+}
+.app-shell .task-screen :is(.task-topic, .task-title) {
+  font-size: var(--secondary-size);
+  line-height: 1.6;
+}
+.app-shell .task-screen :is(.task-answer-form input, .self-work-field textarea) {
+  font-size: var(--reading-size);
+  font-weight: 500;
+  line-height: 1.55;
+}
+.app-shell :is(
+  .topic-lesson, .topic-overview-card, .lesson-section, .lesson-examples,
+  .lesson-difficulties, .task-solution-panel
+) {
+  font-size: var(--reading-size);
+  line-height: 1.6;
+}
+.app-shell :is(.lesson-section p, .task-solution-panel p, .topic-overview-card > p) {
+  font-size: inherit;
+  line-height: 1.6;
+}
+.app-shell .task-screen :is(.task-solution-steps p, .task-solution-steps li) {
+  font-size: var(--reading-size);
+  line-height: 1.6;
+}
+.app-shell .task-screen .math-block {
+  font-size: var(--reading-size);
+}
+.app-shell :is(.segmented, .setting-row, .section-title) {
+  min-width: 0;
+}
+.app-shell .settings-card .segmented {
+  flex-wrap: wrap;
+}
+.app-shell .settings-card .segmented > button {
+  min-width: 0;
+  min-height: 48px;
+  font-size: var(--button-size);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.font-huge :is(.feature-grid, .topic-grid) {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 700px) {
+  .app-shell .task-screen :is(.task-card, .task-solution-panel) {
+    padding-inline: 20px;
+  }
+  .font-huge .hero-actions .button,
+  .font-huge .task-actions .button {
+    padding-inline: 12px;
+  }
+  .font-huge .segmented > button {
+    padding-inline: 10px;
   }
 }

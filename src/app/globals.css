@@ -7,11 +7,14 @@
   --ink: #252c26;
   --muted: #59665b;
   --line: #dadfd5;
-  --cream: #f8f6f0;
+  --cream: #f7f8f4;
   --light-green: #eaf1e7;
   --shadow: 0 5px 24px #273b2705;
-  --body-size: 16px;
-  --secondary-size: 15px;
+  --body-size: 17px;
+  --secondary-size: 15.5px;
+  --reading-size: 18px;
+  --task-size: 20px;
+  --button-size: 17px;
 }
 * {
   box-sizing: border-box;
@@ -32,7 +35,7 @@ body {
     sans-serif;
   font-size: var(--body-size);
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 button,
@@ -82,20 +85,20 @@ p {
   margin: 0;
 }
 h1 {
-  font-size: clamp(28px, 3vw, 34px);
+  font-size: 28px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.8px;
   overflow-wrap: anywhere;
 }
 h2 {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.35px;
 }
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.45;
 }
@@ -109,10 +112,21 @@ svg {
   background: #d8e6d0;
 }
 .font-large {
-  --body-size: 18px;
+  --body-size: 19px;
   --secondary-size: 17px;
+  --reading-size: 20px;
+  --task-size: 21px;
+  --button-size: 18px;
 }
-.font-large .main-content {
+.font-huge {
+  --body-size: 21px;
+  --secondary-size: 18px;
+  --reading-size: 22px;
+  --task-size: 23px;
+  --button-size: 20px;
+}
+.font-large .main-content,
+.font-huge .main-content {
   font-size: var(--body-size);
 }
 .font-large .page-intro p,
@@ -121,7 +135,7 @@ svg {
 .font-large .settings-card p,
 .font-large .task-prompt,
 .font-large .task-solution-panel p {
-  font-size: 19px;
+  font-size: var(--reading-size);
 }
 .muted,
 .quiet-note {
@@ -160,7 +174,7 @@ svg {
   padding: 12px 20px;
   border: 1px solid transparent;
   border-radius: 11px;
-  font-size: 16px;
+  font-size: var(--button-size);
   font-weight: 650;
   line-height: 1.4;
   text-decoration: none;

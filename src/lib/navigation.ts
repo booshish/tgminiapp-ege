@@ -9,7 +9,8 @@ export type View =
   | "trainer"
   | "progress"
   | "profile"
-  | "premium";
+  | "premium"
+  | "help";
 
 export type Selection = {
   taskIndex?: number;
@@ -38,6 +39,7 @@ export const viewTitles: Record<View, string> = {
   progress: "Мои результаты",
   profile: "Мой профиль",
   premium: "Premium",
+  help: "Помощь и объяснения",
 };
 
 export function parseStudyRoute(hash: string, taskCount: number): Route {

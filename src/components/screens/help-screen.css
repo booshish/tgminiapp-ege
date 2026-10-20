@@ -1,0 +1,136 @@
+.help-screen {
+  min-width: 0;
+  max-width: 900px;
+}
+.help-contents {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 26px;
+  padding: 17px 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface, #fff);
+}
+.help-contents > a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 0;
+  color: var(--sage-dark);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.help-sections {
+  display: grid;
+  gap: 22px;
+}
+.help-section {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface, #fff);
+  box-shadow: var(--shadow);
+  scroll-margin-top: 90px;
+}
+.help-section:focus {
+  outline: none;
+}
+.help-section:focus-visible {
+  outline: 3px solid var(--sage);
+  outline-offset: 4px;
+}
+.help-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-bottom: 15px;
+}
+.help-section-heading > svg {
+  margin-top: 5px;
+  color: var(--sage-dark);
+}
+.help-section-heading h2 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+.help-section-heading p {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.help-question + .help-question {
+  border-top: 1px solid var(--line);
+}
+.help-question > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  min-height: 56px;
+  padding: 15px 0;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.help-question > summary::-webkit-details-marker {
+  display: none;
+}
+.help-question > summary > svg {
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+.help-question[open] > summary > svg {
+  transform: rotate(180deg);
+}
+.help-answer {
+  display: grid;
+  gap: 14px;
+  padding: 1px 0 21px;
+}
+.help-answer p,
+.help-answer li {
+  max-width: 66ch;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.help-answer ul {
+  margin: 0;
+  padding-left: 22px;
+}
+.help-local-note {
+  margin-top: 23px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.font-large .help-answer p,
+.font-large .help-answer li,
+.font-large .help-question > summary {
+  font-size: 20px;
+}
+.font-huge .help-answer p,
+.font-huge .help-answer li,
+.font-huge .help-question > summary {
+  font-size: 22px;
+}
+@media (max-width: 600px) {
+  .help-section {
+    padding: 20px;
+  }
+  .help-section-heading {
+    gap: 9px;
+  }
+  .help-section-heading h2 {
+    font-size: 21px;
+  }
+}

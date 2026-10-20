@@ -1,4 +1,4 @@
-/** Product proposals, intentionally independent from subscription and exam scoring. */
+/** Game presentation is independent from subscription and exam scoring. */
 export const gameConfig = {
   version: 1,
   dailyVisualMaxXP: 150,
@@ -11,16 +11,26 @@ export const gameConfig = {
     countOnlyFirstCorrectTaskCheck: true,
   },
   ranks: [
-    { id: "start", label: "Старт", minXP: 0, color: "#59665B", background: "#EDF0EB" },
-    { id: "spark", label: "Искра", minXP: 5, color: "#A24F50", background: "#F8ECEB" },
-    { id: "motion", label: "Разгон", minXP: 10, color: "#A16029", background: "#FAEDDF" },
-    { id: "rhythm", label: "Ритм", minXP: 15, color: "#836C1C", background: "#F8F2D8" },
-    { id: "growth", label: "Рост", minXP: 20, color: "#52785B", background: "#EAF1E7" },
-    { id: "focus", label: "Фокус", minXP: 30, color: "#77558E", background: "#F1EAF6" },
-    { id: "flow", label: "Поток", minXP: 50, color: "#466E98", background: "#E8EFF7" },
-    { id: "inspiration", label: "Вдохновение", minXP: 80, color: "#9B537C", background: "#F8EAF1" },
-    { id: "gold", label: "Золото", minXP: 110, color: "#8B7028", background: "#F8F0D5" },
-    { id: "rainbow", label: "Радуга", minXP: 150, color: "#52785B", background: "#EAF1E7" },
+    // Stable internal IDs are retained for compatibility; there are no visible rank names.
+    { id: "start", minXP: 0, color: "#D0D4D0" },
+    { id: "spark", minXP: 5, color: "#B1B4B7" },
+    { id: "motion", minXP: 10, color: "#A9A5B5" },
+    { id: "growth", minXP: 20, color: "#B8A6D3" },
+    { id: "focus", minXP: 30, color: "#A087D0" },
+    { id: "flow", minXP: 50, color: "#8663CE" },
+    { id: "inspiration", minXP: 80, color: "#7545D8" },
+    { id: "gold", minXP: 110, color: "#6728E0" },
+    { id: "rainbow", minXP: 150, color: "#5719E6" },
+  ],
+  streakFlames: [
+    { minStreak: 0, color: "#AEB3AE", size: 18 },
+    { minStreak: 1, color: "#B5A09F", size: 19 },
+    { minStreak: 5, color: "#C28D85", size: 21 },
+    { minStreak: 10, color: "#D47962", size: 23 },
+    { minStreak: 20, color: "#E35C45", size: 26 },
+    { minStreak: 30, color: "#EF4438", size: 29 },
+    { minStreak: 40, color: "#F12F2F", size: 32 },
+    { minStreak: 50, color: "#FF2929", size: 34 },
   ],
 } as const;
 
@@ -29,6 +39,14 @@ export type GameRank = (typeof gameConfig.ranks)[number];
 export function getGameRank(xp: number): GameRank {
   const safeXP = Number.isFinite(xp) ? Math.max(0, xp) : 0;
   return [...gameConfig.ranks].reverse().find((rank) => safeXP >= rank.minXP)!;
+}
+
+/** Fire depends only on the corresponding streak, never on XP or subscription. */
+export function getStreakFlame(streak: number) {
+  const safeStreak = Number.isSafeInteger(streak) ? Math.max(0, streak) : 0;
+  return [...gameConfig.streakFlames]
+    .reverse()
+    .find((flame) => safeStreak >= flame.minStreak)!;
 }
 
 /** Working proposal: one level per 100 XP, with level 1 at zero. */

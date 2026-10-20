@@ -20,7 +20,7 @@
   border-radius: 12px;
   background: var(--light-green);
   color: var(--sage-dark);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -28,6 +28,11 @@
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 18px;
+  align-items: start;
+}
+
+.game-overall-group {
+  min-width: 0;
 }
 
 .game-card {
@@ -57,19 +62,9 @@
   font-size: 17px;
 }
 
-.game-rank {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 13px;
-  padding: 4px 9px;
-  border-radius: 9px;
-  font-weight: 600;
-}
-
 .game-subject-level {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .game-xp {
@@ -102,77 +97,71 @@
   display: block;
   height: 100%;
   border-radius: inherit;
-}
-
-.xp-rainbow {
-  background-image: linear-gradient(
-    90deg,
-    #b77983,
-    #c6a86c,
-    #6b9678,
-    #6d90ac,
-    #a78bad
-  );
+  transition: background-color 300ms ease;
 }
 
 .xp-scale-labels {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 8px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 15px;
   margin-top: 7px;
 }
 
 .game-card-bottom {
-  padding-top: 15px;
-  margin-top: 16px;
+  padding-top: 8px;
+  margin-top: 8px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
+  gap: 6px;
+  line-height: 1.6;
 }
 
 .game-streak {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 2px;
+  white-space: nowrap;
 }
 
-.game-verification-note {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-  align-items: flex-start;
-  color: var(--muted);
-  font-size: 14px;
-  padding: 14px 16px;
-  background: var(--light-green);
-  border-radius: 13px;
+.game-flame-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
 }
 
-.game-verification-note svg {
-  margin-top: 3px;
-  color: var(--sage-dark);
+.game-flame {
+  transition: stroke 300ms ease, fill 300ms ease;
 }
 
-.game-rules {
-  color: var(--muted);
-  font-size: 14px;
+.game-help-note {
   margin-top: 9px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.game-rules > summary {
-  padding: 11px 0;
+.game-help-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   min-height: 44px;
-  cursor: pointer;
   color: var(--sage-dark);
   font-weight: 600;
+  text-underline-offset: 3px;
+  text-decoration: underline;
 }
 
-.game-rules > div {
-  display: grid;
-  gap: 10px;
-  padding: 5px 0 8px;
+.game-local-note {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 13px;
 }
 
 @media (max-width: 650px) {
@@ -191,5 +180,12 @@
 
   .game-section {
     margin-top: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xp-fill,
+  .game-flame {
+    transition: none;
   }
 }

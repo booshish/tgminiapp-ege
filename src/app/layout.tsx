@@ -13,14 +13,17 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#f8f6f0",
+  themeColor: "#f7f8f4",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ru">
+    <html lang="ru" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var p=JSON.parse(localStorage.getItem('tochka-learning-v2')||'{}');document.documentElement.dataset.theme=p.theme==='dark'?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}` }} />
+      </head>
       <body>{children}</body>
     </html>
   );

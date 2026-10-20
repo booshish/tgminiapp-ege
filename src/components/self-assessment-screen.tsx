@@ -23,6 +23,7 @@ export function SelfAssessmentScreen({
   onPrevious,
   canPrevious,
   onBack,
+  focusMode = false,
 }: TaskScreenProps) {
   const [feedback, setFeedback] = useState("");
   const confirmedScore = useRef<number | null>(null);
@@ -67,7 +68,10 @@ export function SelfAssessmentScreen({
   }
 
   return (
-    <section className="task-screen self-assessment-screen" aria-labelledby="task-heading">
+    <section
+      className="task-screen self-assessment-screen"
+      aria-labelledby="task-heading"
+    >
       <div className="task-topbar">
         <button type="button" className="back-link" onClick={onBack}>
           <ArrowLeft size={20} aria-hidden="true" />К выбору заданий
@@ -99,7 +103,9 @@ export function SelfAssessmentScreen({
             rows={5}
             maxLength={20_000}
             value={value.selfWork ?? ""}
-            onChange={(event) => onChange({ ...value, selfWork: event.target.value })}
+            onChange={(event) =>
+              onChange({ ...value, selfWork: event.target.value })
+            }
             placeholder="Можно записать ход решения здесь или решить на бумаге"
             aria-describedby="self-work-help"
           />
@@ -122,8 +128,14 @@ export function SelfAssessmentScreen({
           <div className="self-saved-grade" role="note">
             <ClipboardCheck size={21} aria-hidden="true" />
             <div>
-              <strong>Самооценка: {selfAssessment.score} из {selfAssessment.maxScore} баллов</strong>
-              <p>Игровой опыт за эту задачу: {selfAssessment.score} XP. Это не результат проверки экзаменатором.</p>
+              <strong>
+                Самооценка: {selfAssessment.score} из {selfAssessment.maxScore} баллов
+              </strong>
+              <p>
+                {focusMode
+                  ? "Это самооценка, не автоматическая проверка."
+                  : `Игровой опыт за эту задачу: ${selfAssessment.score} XP. Это не результат проверки экзаменатором.`}
+              </p>
             </div>
           </div>
         )}
@@ -154,26 +166,38 @@ export function SelfAssessmentScreen({
               ))}
             </ol>
             <div className="task-final-answer">
-              <span>Ответ</span><strong>{task.answerDisplay}</strong>
+              <span>Ответ</span>
+              <strong>{task.answerDisplay}</strong>
             </div>
             {!!task.selfCheckNotes?.length && (
               <div className="self-check-notes">
                 <h3>Ориентиры для самооценки</h3>
                 <p>Авторские рекомендации, не официальная шкала критериев.</p>
-                <ul>{task.selfCheckNotes.map((note) => <li key={note}>{note}</li>)}</ul>
+                <ul>
+                  {task.selfCheckNotes.map((note) => <li key={note}>{note}</li>)}
+                </ul>
               </div>
             )}
             {task.criteriaSourceUrl && (
               <p className="self-criteria-link">
-                <a href={task.criteriaSourceUrl} target="_blank" rel="noreferrer noopener">
+                <a
+                  href={task.criteriaSourceUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   Материалы ФИПИ: спецификации и критерии
                 </a>
-                <span>Ссылка откроется в новой вкладке. Критерии нужно сверить для своего экзамена и года.</span>
+                <span>
+                  Ссылка откроется в новой вкладке. Критерии нужно сверить для своего экзамена и года.
+                </span>
               </p>
             )}
           </section>
 
-          <section className="task-solution-panel self-score-panel" aria-labelledby="self-score-heading">
+          <section
+            className="task-solution-panel self-score-panel"
+            aria-labelledby="self-score-heading"
+          >
             <h2 id="self-score-heading">Оцени своё решение</h2>
             {maxScore === null ? (
               <p className="self-author-note">
@@ -203,7 +227,9 @@ export function SelfAssessmentScreen({
                     ))}
                   </div>
                 </fieldset>
-                <p className="self-score-preview">Самооценка: {draftScore} из {maxScore} баллов</p>
+                <p className="self-score-preview">
+                  Самооценка: {draftScore} из {maxScore} баллов
+                </p>
                 <p className="self-score-explanation">
                   1 балл самооценки = 1 игровой XP. При исправлении оценки меняется
                   только разница. Самооценка не влияет на серию верных ответов.
@@ -223,17 +249,38 @@ export function SelfAssessmentScreen({
                 )}
               </>
             )}
-            <p className="self-assessment-feedback" role="status" aria-live="polite">{feedback}</p>
+            <p
+              className="self-assessment-feedback"
+              role="status"
+              aria-live="polite"
+            >
+              {focusMode && feedback && !feedback.startsWith("Не удалось")
+                ? `${feedback.split(".")[0]}.`
+                : feedback}
+            </p>
           </section>
         </>
       )}
 
-      <nav className="task-sequence-navigation self-sequence-navigation" aria-label="Переходы между заданиями">
-        <button type="button" className="button button-secondary task-previous-button" onClick={onPrevious} disabled={!canPrevious}>
+      <nav
+        className="task-sequence-navigation self-sequence-navigation"
+        aria-label="Переходы между заданиями"
+      >
+        <button
+          type="button"
+          className="button button-secondary task-previous-button"
+          onClick={onPrevious}
+          disabled={!canPrevious}
+        >
           <ArrowLeft size={20} aria-hidden="true" />Предыдущее задание
         </button>
         {sampleVisible && (
-          <button type="button" className="button button-primary task-next-button" onClick={onNext} disabled={!canNext}>
+          <button
+            type="button"
+            className="button button-primary task-next-button"
+            onClick={onNext}
+            disabled={!canNext}
+          >
             Следующее задание<ArrowRight size={20} aria-hidden="true" />
           </button>
         )}

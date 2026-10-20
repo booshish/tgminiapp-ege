@@ -606,8 +606,24 @@ test("История и настройки переживают JSON-перез�
     lastTaskIndex: tasks.length - 1,
   });
   const restored = parseLearningState(JSON.stringify(saved));
-  assert.deepEqual(restored, saved);
-  assert.deepEqual(parseLearningState(JSON.stringify(restored)), saved);
+  const expected = {
+    ...saved,
+    game: {
+      version: 2,
+      xpEvents: [],
+      checks: [{
+        attemptId: wrong.id,
+        taskId: wrong.taskId,
+        subjectId: wrong.subjectId,
+        correct: false,
+        createdAt: wrong.createdAt,
+      }],
+    },
+  };
+  assert.deepEqual(restored, expected);
+  assert.equal(getGameSummary(restored.game).winStreak, 0,
+    "Исправление ошибки сохраняется, но не восстанавливает серию");
+  assert.deepEqual(parseLearningState(JSON.stringify(restored)), expected);
 });
 
 test("Новые попытки одной задачи остаются отдельными событиями", () => {
@@ -816,7 +832,7 @@ test("График группирует только настоящие попы
 test("Повреждённые настройки сбрасываются, а пустые состояния не разделяют массивы", () => {
   const restored = restore([], {
     exam: "другой",
-    fontScale: "huge",
+    fontScale: "oversized",
     lastTaskIndex: -1,
   });
   assert.equal(restored.exam, "ЕГЭ");
@@ -1376,24 +1392,137 @@ test("Схема v2 мигрирует в v3 с настройками по ум
   assert.equal(restored.focusMode, false);
   assert.deepEqual(restored.events, v2.events);
   assert.deepEqual(restored.legacyRecords, v2.legacyRecords);
-  assert.deepEqual(restored.game, { version: 2, xpEvents: [], checks: [] });
+  assert.deepEqual(restored.game.xpEvents, [], "Старым записям без версии баллов не придумываются XP");
+  assert.equal(getGameSummary(restored.game).winStreak, 1,
+    "Известная первая часть получает восстановленную серию без изменения исходного события");
+  assert.deepEqual(restored.game.checks, [{
+    attemptId: oldAnswer.id,
+    taskId: oldAnswer.taskId,
+    subjectId: oldAnswer.subjectId,
+    correct: true,
+    createdAt: oldAnswer.createdAt,
+  }]);
   assert.deepEqual(parseLearningState(JSON.stringify(restored)), restored);
 });
 
 test("Тема и концентрация сохраняются, повреждённые настройки не мешают учебной истории", () => {
   const answer = answerEvent("settings-answer", linear, "6", true);
-  for (const theme of ["light", "dark", "system"]) {
-    const saved = stateWith([answer], { theme, themeExplicit: true, focusMode: true, fontScale: "large" });
+  const baseline = restore([answer]);
+  for (const theme of ["light", "dark"]) {
+    const saved = { ...baseline, theme, focusMode: true, fontScale: "large" };
     assert.deepEqual(parseLearningState(JSON.stringify(saved)), saved);
   }
   const restored = restore([answer], { theme: "neon", focusMode: "true" });
   assert.equal(restored.theme, "light");
   assert.equal(restored.focusMode, false);
   assert.deepEqual(restored.events, [answer]);
-  const priorAutomaticTheme = restore([answer], { theme: "system", themeExplicit: undefined });
+  const priorAutomaticTheme = restore([answer], { theme: "system", themeExplicit: true });
   assert.equal(priorAutomaticTheme.theme, "light");
   assert.deepEqual(priorAutomaticTheme.events, [answer]);
   assert.equal(restore([answer], { theme: "dark", themeExplicit: undefined }).theme, "dark");
+});
+
+test("Три размера текста и настройки перерыва сохраняются вместе с учебным журналом и XP", () => {
+  const answer = answerEvent("settings-paid-answer", triangle, "0,8", true, {
+    level: triangle.level,
+    examNumber: triangle.examNumber,
+    examVersionId: triangle.examVersionId,
+    examYear: triangle.examYear,
+    part: 1,
+    answerFormat: "short",
+  });
+  const baseline = restore([answer]);
+  assert.equal(getGameSummary(baseline.game, new Date(dateOne)).totalXP, 1);
+  for (const fontScale of ["standard", "large", "huge"]) {
+    for (const theme of ["light", "dark"]) {
+      for (const breakReminderMinutes of [0, 90, 120]) {
+        const saved = { ...baseline, fontScale, theme, breakReminderMinutes, focusMode: true };
+        const restored = parseLearningState(JSON.stringify(saved));
+        assert.deepEqual(restored, saved);
+        assert.deepEqual(restored.events, [answer]);
+        assert.equal(getGameSummary(restored.game, new Date(dateOne)).totalXP, 1);
+      }
+    }
+  }
+});
+
+test("Удалённые темы и повреждённые настройки переходят к безопасным значениям без потери событий", () => {
+  const answer = answerEvent("invalid-settings-answer", linear, "6", true);
+  for (const theme of ["system", "comfort", "comfortable", "neon", null, 42]) {
+    const restored = restore([answer], {
+      theme,
+      themeExplicit: true,
+      fontScale: "giant",
+      breakReminderMinutes: "90",
+    });
+    assert.equal(restored.theme, "light", String(theme));
+    assert.equal(Object.hasOwn(restored, "themeExplicit"), false);
+    assert.equal(restored.fontScale, "standard");
+    assert.equal(restored.breakReminderMinutes, 120);
+    assert.deepEqual(restored.events, [answer]);
+  }
+  for (const breakReminderMinutes of [-1, 1, 60, 180, 90.5, null, false]) {
+    assert.equal(restore([], { breakReminderMinutes }).breakReminderMinutes, 120);
+  }
+  assert.equal(parseLearningState(null).theme, "light");
+  assert.equal(parseLearningState(null).fontScale, "standard");
+  assert.equal(parseLearningState(null).breakReminderMinutes, 120);
+});
+
+test("Две первые верные старые проверки восстанавливают серию 2 без выдуманной версии или XP", () => {
+  const first = answerEvent("legacy-streak-first", triangle, "0,8", true);
+  const second = answerEvent("legacy-streak-second", linear, "6", true, { createdAt: dateTwo });
+  const events = [first, second];
+  const restored = restore(events);
+  assert.deepEqual(restored.events, events);
+  for (const event of restored.events) {
+    assert.equal(Object.hasOwn(event, "part"), false);
+    assert.equal(Object.hasOwn(event, "examVersionId"), false);
+  }
+  const summary = getGameSummary(restored.game, new Date(dateTwo));
+  assert.equal(summary.winStreak, 2);
+  assert.equal(summary.subjects.find((subject) => subject.subjectId === "math").winStreak, 2);
+  assert.equal(summary.totalXP, 0);
+  assert.deepEqual(restored.game.checks.map((entry) => entry.attemptId), [first.id, second.id]);
+  assert.deepEqual(parseLearningState(JSON.stringify(restored)), restored);
+});
+
+test("Неоднозначная история другого экзамена и базовые упражнения не превращаются в серию первой части", () => {
+  const ambiguous = answerEvent("ambiguous-legacy-exam", triangle, "0,8", true, { examType: "ЕГЭ" });
+  const foundation = tasks.find((task) => task.part === null && task.answerRule.type === "number");
+  assert.ok(foundation);
+  const foundationAnswer = answerEvent("foundation-legacy", foundation, foundation.answerRule.value, true);
+  const restored = restore([ambiguous, foundationAnswer]);
+  assert.deepEqual(restored.events, [ambiguous, foundationAnswer]);
+  assert.deepEqual(restored.game.checks, []);
+  assert.deepEqual(restored.game.xpEvents, []);
+  assert.equal(getGameSummary(restored.game).winStreak, 0);
+});
+
+test("Восстановленная ошибка сбрасывает серию, исправление не возвращает её, новая задача начинает следующую", () => {
+  const wrong = answerEvent("legacy-streak-wrong", triangle, "0,6", false);
+  const fixed = answerEvent("legacy-streak-fixed", triangle, "0,8", true);
+  const next = answerEvent("legacy-streak-next", linear, "6", true);
+  const afterCorrection = restore([wrong, fixed]);
+  assert.equal(getGameSummary(afterCorrection.game).winStreak, 0);
+  assert.deepEqual(afterCorrection.game.checks.map((entry) => entry.attemptId), [wrong.id]);
+  const afterNext = restore([wrong, fixed, next]);
+  assert.equal(getGameSummary(afterNext.game).winStreak, 1);
+  assert.deepEqual(afterNext.events, [wrong, fixed, next]);
+  assert.deepEqual(afterNext.game.checks.map((entry) => entry.attemptId), [wrong.id, next.id]);
+  assert.deepEqual(afterNext.game.xpEvents, []);
+});
+
+test("Справка открывается отдельным допустимым маршрутом без подмены экрана", () => {
+  for (const hash of ["#/help", "#/help?section=xp", "#/help?section=streak"]) {
+    const route = parseStudyRoute(hash, tasks.length);
+    assert.equal(route.view, "help");
+    assert.equal(route.taskIndex, 0);
+    assert.equal(route.invalidContext, false);
+  }
+  assert.equal(parseStudyRoute("#/profile", tasks.length).view, "profile");
+  assert.equal(parseStudyRoute("#/home", tasks.length).view, "home");
+  assert.equal(parseStudyRoute("#/help-unknown", tasks.length).view, "home");
 });
 
 test("Версия экзамена и формат новых событий проверяются, прежние события не теряются", () => {

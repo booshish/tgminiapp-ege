@@ -140,6 +140,20 @@ function validAttempt(attempt: GameAttempt) {
 function automaticContext(attempt: GameAttempt) {
   return validAttempt(attempt) && attempt.part === 1 && attempt.answerFormat === "short";
 }
+function contributesToStreak(
+  attempt: GameAttempt,
+  priorEvents: readonly GameLearningEvent[],
+  checks: readonly GameCheck[],
+) {
+  if (!automaticContext(attempt)) return false;
+  // Every genuine wrong check breaks the series. A later correction may earn XP,
+  // but only a new task answered correctly on its first attempt grows the series.
+  if (!attempt.correct) return true;
+  return attempt.solutionSeenBeforeCheck !== true
+    && !checks.some((check) => check.taskId === attempt.taskId)
+    && !priorEvents.some((event) => event.taskId === attempt.taskId
+      && (event.kind === "answer_checked" || event.kind === "solution_viewed"));
+}
 function validSelfAssessment(assessment: GameSelfAssessment) {
   return assessment.kind === "self_assessed" && validContext(assessment)
     && assessment.part === 2 && assessment.answerFormat === "extended"
@@ -184,9 +198,7 @@ export function recordGameAttempt(
     event.kind === "answer_checked" && event.taskId === attempt.taskId);
   const alreadyCorrect = previousAnswers.some((event) => event.correct)
     || game.checks.some((check) => check.taskId === attempt.taskId && check.correct);
-  // Genuine wrong checks reset the streak. A corrected unique answer grows it once;
-  // returning to, or correctly checking, an already-correct task cannot farm a streak.
-  const contributesCheck = automaticContext(attempt) && (!attempt.correct || !alreadyCorrect);
+  const contributesCheck = contributesToStreak(attempt, priorEvents, game.checks);
   const checks = contributesCheck ? [...game.checks, {
     attemptId: attempt.id,
     taskId: attempt.taskId,
@@ -320,20 +332,22 @@ export function parseGameState(value: unknown, learningEvents: readonly GameLear
   });
   const checks: GameCheck[] = [];
   const acceptedChecks = new Set<string>();
-  const alreadyCorrect = new Set<string>();
   const candidateChecks = Array.isArray(candidate.checks) ? candidate.checks : [];
+  const earlierChecks: GameLearningEvent[] = [];
   for (const event of events.values()) {
-    if (event.kind !== "answer_checked" || !automaticContext(event)) continue;
-    const stored = candidateChecks.find((entry) => isObject(entry)
-      && entry.attemptId === event.id && entry.taskId === event.taskId
-      && entry.subjectId === event.subjectId && entry.correct === event.correct
-      && entry.createdAt === event.createdAt);
-    if (stored && !acceptedChecks.has(event.id) && (!event.correct || !alreadyCorrect.has(event.taskId))) {
-      acceptedChecks.add(event.id);
-      checks.push({ attemptId: event.id, taskId: event.taskId, subjectId: event.subjectId,
-        correct: event.correct, createdAt: event.createdAt });
+    if (event.kind === "answer_checked") {
+      const stored = candidateChecks.find((entry) => isObject(entry)
+        && entry.attemptId === event.id && entry.taskId === event.taskId
+        && entry.subjectId === event.subjectId && entry.correct === event.correct
+        && entry.createdAt === event.createdAt);
+      if (stored && !acceptedChecks.has(event.id)
+        && contributesToStreak(event, earlierChecks, checks)) {
+        acceptedChecks.add(event.id);
+        checks.push({ attemptId: event.id, taskId: event.taskId, subjectId: event.subjectId,
+          correct: event.correct, createdAt: event.createdAt });
+      }
     }
-    if (event.correct) alreadyCorrect.add(event.taskId);
+    earlierChecks.push(event);
   }
   const game: GameState = { version: 2, checks, xpEvents: [] };
   const entries = (Array.isArray(candidate.xpEvents) ? candidate.xpEvents : [])
@@ -391,14 +405,16 @@ export function getGameSummary(game: GameState, now = new Date()): GameSummary {
   const subjectIds = new Set(["math", ...game.checks.map((event) => event.subjectId), ...game.xpEvents.map((event) => event.subjectId)]);
   let winStreak = 0;
   const subjectStreaks: Record<string, number> = {};
+  const checkedTasks = new Set<string>();
   for (const check of game.checks) {
-    if (check.correct) {
+    if (check.correct && !checkedTasks.has(check.taskId)) {
       winStreak++;
       subjectStreaks[check.subjectId] = (subjectStreaks[check.subjectId] ?? 0) + 1;
-    } else {
+    } else if (!check.correct) {
       if (gameConfig.streak.resetOverallOnWrong) winStreak = 0;
       if (gameConfig.streak.resetSubjectOnWrong) subjectStreaks[check.subjectId] = 0;
     }
+    checkedTasks.add(check.taskId);
   }
   const subjects = [...subjectIds].map((subjectId) => {
     const awards = game.xpEvents.filter((event) => event.subjectId === subjectId);
