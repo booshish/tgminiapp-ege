@@ -1,9 +1,9 @@
-# Точка — готовый сайт для GitHub Pages
+# Точка — готовая сборка для GitHub Pages
 
-В этой ветке находится собранный сайт. Исходники приложения доступны в ветке [codex/tochka-github-pages](https://github.com/booshish/tgminiapp-ege/tree/codex/tochka-github-pages).
+46 учебных задач, отдельные каталоги ОГЭ, ЕГЭ базового и профильного уровней, выбор по номеру и теме, сохранение черновиков и прокрутки в текущей сессии. Справочная структура 2026 года; онлайн-сверка актуальных материалов ФИПИ не выполнена.
 
-Открыть приложение: **https://booshish.github.io/tgminiapp-ege/**.
+Исходники и описание проверок: [codex/tochka-github-pages](https://github.com/booshish/tgminiapp-ege/tree/codex/tochka-github-pages).
 
-Если Pages ещё не настроен, откройте Settings → Pages → Source: Deploy from a branch → gh-pages → /(root) → Save. Дождитесь успешной публикации в Actions, затем откройте Visit site.
+Адрес сайта: **https://booshish.github.io/tgminiapp-ege/**.
 
-Загрузка файлов в эту ветку сама по себе не подтверждает завершение публикации GitHub Pages.
+Настройка: Settings → Pages → Source: Deploy from a branch → gh-pages → /(root) → Save. Завершение публикации проверяется в Actions; загрузка файлов в ветку сама по себе не подтверждает, что обновление уже доступно по публичному адресу.
