@@ -106,9 +106,16 @@ export function ProfileScreen({
         <div className="setting-row appearance-setting">
           <div>
             <h3>Оформление</h3>
-            <p>Светлая по умолчанию. Выбранная тема сохраняется в этом браузере.</p>
+            <p id="appearance-description">
+              Для всех страниц, включая концентрацию. Выбор сохраняется в этом браузере.
+            </p>
           </div>
-          <div className="segmented theme-options" role="group" aria-label="Тема оформления">
+          <div
+            className="segmented theme-options"
+            role="group"
+            aria-label="Тема оформления"
+            aria-describedby="appearance-description"
+          >
             {([
               { value: "light", label: "Светлая", icon: Sun },
               { value: "dark", label: "Тёмная", icon: Moon },
@@ -130,7 +137,7 @@ export function ProfileScreen({
           <div>
             <h3><Focus size={19} aria-hidden="true" /> Режим концентрации</h3>
             <p id="focus-description">
-              Убирает лишние панели в заданиях и теории. Выход и смена темы остаются справа сверху.
+              Убирает лишние панели в заданиях и теории. Кнопка «Выйти» остаётся вверху страницы.
             </p>
           </div>
           <button

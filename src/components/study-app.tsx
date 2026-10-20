@@ -28,7 +28,6 @@ import { ProgressScreen } from "@/components/screens/progress-screen";
 import { ProfileScreen } from "@/components/screens/profile-screen";
 import { PremiumScreen } from "@/components/screens/premium-screen";
 import { HelpScreen } from "@/components/screens/help-screen";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
 import { usePracticeSession } from "@/hooks/use-practice-session";
@@ -339,51 +338,37 @@ export function StudyApp() {
             <Brand />
           </button>
           <span className="desktop-breadcrumb">{viewTitles[route.view]}</span>
-          <div className="topbar-actions">
-            <div className="topbar-right">
-              <span className="course-label">{state.exam} · Математика</span>
-              <button
-                className="avatar"
-                onClick={() => open("profile")}
-                aria-label="Открыть профиль"
-              >
-                <UserRound size={22} />
-              </button>
-            </div>
-            <div
-              className="study-controls"
-              role="group"
-              aria-label="Оформление и концентрация"
+          <div className="topbar-right">
+            <span className="course-label">{state.exam} · Математика</span>
+            <button
+              className="avatar"
+              onClick={() => open("profile")}
+              aria-label="Открыть профиль"
             >
-              {canConcentrate && (
-                <button
-                  type="button"
-                  className="focus-toggle study-control-button"
-                  aria-pressed={concentrating}
-                  aria-label={
-                    concentrating
-                      ? "Выйти из режима концентрации"
-                      : "Фокус: включить режим концентрации"
-                  }
-                  title={concentrating ? "Выйти из режима концентрации" : "Режим концентрации"}
-                  onClick={toggleConcentration}
-                >
-                  {concentrating ? (
-                    <X size={21} aria-hidden="true" />
-                  ) : (
-                    <Focus size={21} aria-hidden="true" />
-                  )}
-                  <span>{concentrating ? "Выйти" : "Фокус"}</span>
-                </button>
-              )}
-              {!moreOpen && (
-                <ThemeToggle
-                  theme={state.theme}
-                  onToggle={() => setTheme(state.theme === "light" ? "dark" : "light")}
-                />
-              )}
-            </div>
+              <UserRound size={22} />
+            </button>
           </div>
+          {canConcentrate && (
+            <button
+              type="button"
+              className="focus-toggle"
+              aria-pressed={concentrating}
+              aria-label={
+                concentrating
+                  ? "Выйти из режима концентрации"
+                  : "Фокус: включить режим концентрации"
+              }
+              title={concentrating ? "Выйти из режима концентрации" : "Режим концентрации"}
+              onClick={toggleConcentration}
+            >
+              {concentrating ? (
+                <X size={21} aria-hidden="true" />
+              ) : (
+                <Focus size={21} aria-hidden="true" />
+              )}
+              <span>{concentrating ? "Выйти" : "Фокус"}</span>
+            </button>
+          )}
         </header>
         <main
           id="main-content"
@@ -646,21 +631,13 @@ export function StudyApp() {
       >
         <div className="dialog-title">
           <h2 id="menu-title">Разделы</h2>
-          <div className="dialog-actions">
-            <button
-              className="icon-button"
-              onClick={() => setMoreOpen(false)}
-              aria-label="Закрыть меню"
-            >
-              <X size={22} aria-hidden="true" />
-            </button>
-            {moreOpen && (
-              <ThemeToggle
-                theme={state.theme}
-                onToggle={() => setTheme(state.theme === "light" ? "dark" : "light")}
-              />
-            )}
-          </div>
+          <button
+            className="icon-button"
+            onClick={() => setMoreOpen(false)}
+            aria-label="Закрыть меню"
+          >
+            <X size={22} aria-hidden="true" />
+          </button>
         </div>
         <nav aria-label="Дополнительные разделы">
           {navigation.slice(4).map(({ view, label, icon: Icon }) => (

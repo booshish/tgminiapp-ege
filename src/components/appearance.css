@@ -187,31 +187,23 @@
   outline-color: #bbd6ae;
 }
 
-/* Controls belong to the header flow and scroll away with it on every screen. */
+/* Only concentration controls remain in the header; appearance lives in Profile. */
 .app-shell .topbar {
   padding-top: calc(14px + env(safe-area-inset-top));
   padding-right: max(40px, env(safe-area-inset-right));
   padding-left: max(40px, env(safe-area-inset-left));
 }
-.topbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 18px;
+.app-shell .topbar-right {
   margin-left: auto;
 }
-.study-controls {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 8px;
-}
-.study-control-button {
+.focus-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   flex-direction: column;
   gap: 2px;
-  min-width: 58px;
+  min-width: 64px;
   min-height: 52px;
   padding: 5px 8px;
   border: 1px solid var(--line);
@@ -223,20 +215,12 @@
   font-weight: 600;
   line-height: 1.4;
 }
-.study-control-button:hover {
+.focus-toggle:hover {
   background: var(--light-green);
 }
-.study-controls .focus-toggle {
-  min-width: 64px;
-}
-.study-controls .focus-toggle[aria-pressed="true"] {
+.focus-toggle[aria-pressed="true"] {
   border-color: var(--sage);
   background: var(--light-green);
-}
-.dialog-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 .break-reminder {
   position: fixed;
@@ -292,6 +276,7 @@
   display: none;
 }
 .app-shell.focus-mode .topbar {
+  justify-content: flex-end;
   width: 100%;
   max-width: 856px;
   margin-inline: auto;
