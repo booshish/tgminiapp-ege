@@ -159,6 +159,63 @@
   margin-top: 19px;
 }
 
+@media (max-width: 600px) {
+  .self-work-field > label {
+    margin-bottom: 8px;
+  }
+  .self-work-field textarea {
+    min-height: 130px;
+    padding: 12px;
+  }
+  .self-saved-grade {
+    margin-top: 14px;
+    padding: 12px;
+    gap: 8px;
+  }
+  .self-author-note {
+    margin-block: -4px 16px;
+  }
+  .self-check-notes {
+    margin-top: var(--mobile-section-gap, 18px);
+    padding-top: 16px;
+  }
+  .self-check-notes ul {
+    padding-left: 20px;
+    font-size: var(--reading-size);
+    line-height: 1.6;
+  }
+  .self-criteria-link {
+    margin-top: 16px;
+  }
+  .self-criteria-link > a {
+    display: inline-block;
+    min-height: 44px;
+    padding-block: 10px;
+  }
+  .self-score-picker legend {
+    margin-bottom: 10px;
+  }
+  .self-score-picker button {
+    min-width: 46px;
+    min-height: 46px;
+    padding: 8px 10px;
+    font-size: 17px;
+  }
+  .self-score-preview {
+    margin-top: 16px;
+    font-size: var(--reading-size);
+  }
+  .self-score-explanation {
+    margin-block: 8px 16px;
+  }
+  .self-sequence-navigation {
+    gap: var(--mobile-item-gap, 10px);
+  }
+  .self-local-note {
+    margin-top: 16px;
+  }
+}
+
 @media (max-width: 380px) {
   .self-score-picker > div {
     gap: 5px;

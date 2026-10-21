@@ -18,8 +18,17 @@
 .study-tools-checkbox input { width: 21px; height: 21px; flex: 0 0 auto; accent-color: var(--sage); }
 .study-tools-section-title { margin: 32px 0 18px; font-size: 23px; }
 @media (max-width: 600px) {
-  .study-tool-card { padding: 20px; }
+  .study-tools-local-note { margin-bottom: var(--mobile-section-gap); }
+  .study-tools-warning { padding: 14px; margin-bottom: 16px; }
+  .study-tools-filters { gap: 10px; margin-bottom: var(--mobile-section-gap); }
   .study-tools-filters label { flex-basis: 100%; }
-  .study-tool-actions { align-items: stretch; width: 100%; }
+  .study-tools-filters select { min-height: 44px; padding: 9px 12px; font-size: max(16px, var(--button-size)); }
+  .study-tools-list { gap: 14px; }
+  .study-tool-card { padding: var(--mobile-card-padding); gap: 10px; }
+  .study-tool-card h2, .study-tool-card h3 { font-size: var(--mobile-card-title-size); }
+  .study-tool-actions { align-items: stretch; width: 100%; gap: 8px 12px; }
   .study-tool-actions .button { width: 100%; }
+  .study-tools-checkbox { min-height: 44px; margin-bottom: 14px; }
+  .study-tools-section-title { margin: var(--mobile-section-gap) 0 12px; font-size: var(--mobile-card-title-size); }
+  .study-review-explanation p { font-size: var(--reading-size); font-weight: 400; line-height: 1.6; }
 }

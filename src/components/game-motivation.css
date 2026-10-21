@@ -211,6 +211,24 @@
   }
 }
 
+@media (max-width: 600px) {
+  .game-section { margin-top: var(--mobile-section-gap); }
+  .game-card { padding: var(--mobile-card-padding); }
+  .game-card-label { font-size: var(--body-size); }
+  .game-xp { margin-block: 12px; }
+  /* Preserve the prominent XP number, 9px scale and all 36px flame slots. */
+  .game-xp > span,
+  .game-subject-level,
+  .xp-scale-labels,
+  .game-card-bottom,
+  .game-help-note,
+  .game-local-note { font-size: var(--secondary-size); line-height: 1.5; }
+  .game-level { font-size: var(--secondary-size); padding: 6px 10px; }
+  .streak-summary { gap: 8px; margin-block: 14px 18px; padding: 10px 14px; }
+  .streak-summary-item { font-size: var(--body-size); gap: 4px 10px; }
+  .game-streak { white-space: normal; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .xp-fill,
   .game-flame {

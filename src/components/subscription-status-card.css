@@ -8,3 +8,10 @@
 .subscription-account-facts dt { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: var(--secondary-size); }
 .subscription-account-facts dd { margin: 0; overflow-wrap: anywhere; font-weight: 500; }
 .subscription-status-card .subscription-developer-note { border-left: 3px solid var(--sage); padding-left: 14px; }
+
+@media (max-width: 600px) {
+  .subscription-status-card .section-title { gap: 8px; }
+  .subscription-status-card .subscription-account-note { gap: 10px; margin-block: 12px; padding: 12px; }
+  .subscription-account-facts { margin-block: 14px; gap: 10px; }
+  .subscription-account-facts > div { gap: 4px; padding-bottom: 10px; }
+}

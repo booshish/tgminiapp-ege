@@ -343,38 +343,121 @@
   overflow-wrap: anywhere;
 }
 
+/* Compact phone spacing without changing task content or checking behavior. */
 @media (max-width: 600px) {
-  .task-topbar {
-    margin-bottom: 18px;
+  .task-screen {
+    padding-bottom: 16px;
   }
-
+  .task-screen .back-link {
+    min-height: 44px;
+  }
+  .task-topbar {
+    margin-bottom: 12px;
+  }
+  .task-heading-block {
+    margin-bottom: 16px;
+  }
+  .task-heading-block .eyebrow {
+    margin-bottom: 8px;
+  }
+  .task-topic {
+    margin-top: 8px;
+  }
+  .task-title {
+    margin-top: 4px;
+  }
   .task-card,
   .task-solution-panel {
-    padding: 22px 20px;
-    border-radius: 22px;
+    padding: var(--mobile-card-padding, 16px);
+    border-radius: 18px;
   }
-
   .task-prompt {
-    font-size: 16px;
-    line-height: 1.8;
+    margin-bottom: var(--mobile-section-gap, 18px);
+    font-size: var(--reading-size);
+    line-height: 1.6;
   }
-
+  .task-diagram-wrap {
+    gap: 8px;
+    margin-bottom: var(--mobile-section-gap, 18px);
+    padding: 12px;
+  }
   .task-diagram-wrap .triangle-diagram {
-    height: 210px;
+    height: 180px;
   }
-
   .task-formula {
-    padding: 23px 12px;
-    font-size: 21px;
+    display: block;
+    min-height: 0;
+    margin-bottom: var(--mobile-section-gap, 18px);
+    padding: 12px;
   }
-
+  /* The formula already has an outer panel: avoid a second padded panel. */
+  .task-screen :is(.task-formula, .task-solution-formula) .math-block {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  .task-answer-form > label {
+    margin-bottom: 8px;
+  }
+  .task-input-wrap {
+    min-height: 50px;
+    padding-inline: 12px;
+    gap: 10px;
+  }
+  .task-input-wrap input {
+    height: 48px;
+  }
+  .task-input-help,
+  .task-input-error {
+    margin-block: 8px 14px;
+  }
+  .task-screen .button {
+    min-height: 46px;
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  .task-verdict {
+    margin-bottom: 14px;
+    padding: 12px;
+    font-size: var(--reading-size);
+  }
+  .task-actions {
+    gap: var(--mobile-item-gap, 10px);
+  }
+  .task-sequence-navigation,
+  .task-solution-panel {
+    margin-top: var(--mobile-section-gap, 18px);
+  }
+  .task-solution-panel h2 {
+    margin-bottom: 16px;
+    font-size: var(--mobile-card-title-size, 18px);
+    font-weight: 700;
+  }
+  .task-solution-steps {
+    padding-left: 20px;
+  }
   .task-solution-steps li {
-    font-size: 16px;
+    padding-left: 3px;
+    font-size: var(--reading-size);
+    line-height: 1.6;
   }
-
+  .task-solution-steps li + li {
+    margin-top: 16px;
+  }
   .task-solution-formula {
-    padding: 16px 10px;
-    font-size: 17px;
+    margin-top: 10px;
+    padding: 12px 10px;
+  }
+  .task-final-answer {
+    margin-top: var(--mobile-section-gap, 18px);
+    padding-top: 14px;
+    gap: 8px;
+    font-size: var(--reading-size);
+  }
+  .task-final-answer strong {
+    font-size: 20px;
   }
 }
 

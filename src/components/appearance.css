@@ -479,3 +479,158 @@
     padding-inline: 10px;
   }
 }
+
+/* Phone-only scale. Keep the existing 601px+ reading/layout rules intact.
+   rem units also respect a larger browser default font; fields stay >=16px
+   to avoid Safari's automatic input zoom. Screen-specific spacing lives with
+   its component, while these tokens and shared controls have one owner. */
+@media (max-width: 600px) {
+  :root {
+    --body-size: 0.9375rem;
+    --secondary-size: 0.8125rem;
+    --reading-size: 1rem;
+    --task-size: 1rem;
+    --button-size: 0.9375rem;
+    --mobile-reading-size: 1rem;
+    --mobile-heading-size: 1.375rem;
+    --mobile-card-title-size: 1.125rem;
+    --mobile-subheading-size: 1rem;
+    --mobile-math-size: 1.0625rem;
+    --mobile-card-padding: 16px;
+    --mobile-section-gap: 18px;
+    --mobile-item-gap: 10px;
+  }
+  .font-large {
+    --body-size: 1.0625rem;
+    --secondary-size: 0.9375rem;
+    --reading-size: 1.125rem;
+    --task-size: 1.125rem;
+    --button-size: 1.0625rem;
+    --mobile-reading-size: 1.125rem;
+    --mobile-math-size: 1.1875rem;
+  }
+  .font-huge {
+    --body-size: 1.1875rem;
+    --secondary-size: 1rem;
+    --reading-size: 1.25rem;
+    --task-size: 1.25rem;
+    --button-size: 1.1875rem;
+    --mobile-reading-size: 1.25rem;
+    --mobile-math-size: 1.3125rem;
+  }
+  body { line-height: 1.5; }
+  h1 { font-size: var(--mobile-heading-size); letter-spacing: -0.4px; }
+  h2 { font-size: var(--mobile-card-title-size); }
+  h3 { font-size: var(--mobile-subheading-size); }
+
+  .app-shell .main-content { padding: 18px 16px 32px; overflow-wrap: anywhere; }
+  .skip-link { max-width: calc(100% - 32px); overflow-wrap: anywhere; }
+  .app-shell .topbar {
+    flex-wrap: wrap;
+    min-height: 64px;
+    padding: calc(8px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 8px max(16px, env(safe-area-inset-left));
+  }
+  .app-shell.focus-mode .main-content { padding: 10px 16px max(24px, env(safe-area-inset-bottom)); }
+  .app-shell.focus-mode .topbar { padding-inline: 16px; }
+  .app-shell .page-intro { margin-bottom: var(--mobile-section-gap); }
+  .app-shell .page-intro :is(.eyebrow, h1) { margin-bottom: 8px; }
+  .app-shell .page-intro p { font-size: var(--body-size); line-height: 1.5; }
+  .app-shell :is(.eyebrow, .tag) { letter-spacing: 0.02em; }
+  .app-shell :is(.feature-description, .picker-caption, .course-label) { line-height: 1.5; }
+  .app-shell .section-title { gap: var(--mobile-item-gap); margin-bottom: 14px; }
+
+  .app-shell :is(.button, .primary-button) {
+    min-height: 44px;
+    padding: 10px 14px;
+    gap: 8px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .app-shell :is(.text-button, .subtle-button, .back-link, summary) { min-height: 44px; }
+  .app-shell .icon-button { width: 44px; height: 44px; }
+  .app-shell .storage-warning > button { min-width: 44px; min-height: 44px; }
+  .app-shell :is(.segmented > button, .settings-card .segmented > button) {
+    min-height: 44px;
+    padding: 8px 10px;
+  }
+  .app-shell :is(.select-wrap > select, .practice-filter-select) {
+    min-height: 44px;
+    font-size: var(--reading-size);
+  }
+  .app-shell .mobile-nav > button { min-height: 48px; font-size: var(--secondary-size); gap: 3px; }
+  .app-shell .navigation-dialog { padding: var(--mobile-card-padding); }
+  .app-shell .navigation-dialog nav { gap: 4px; margin-top: 10px; }
+  .app-shell .navigation-dialog nav > button { min-height: 44px; font-size: var(--button-size); padding: 8px; }
+  .app-shell .bookmark-button { min-height: 44px; padding: 8px 10px; font-size: var(--button-size); }
+  .app-shell .focus-switch { min-height: 44px; font-size: var(--button-size); }
+  .app-shell .focus-toggle { font-size: var(--secondary-size); min-height: 44px; }
+
+  /* Shared home, account and Premium-gated panels. No learning content is hidden. */
+  .app-shell :is(
+    .course-hero, .premium-summary, .practice-picker-card, .settings-card,
+    .profile-card, .analytics-section, .premium-panel, .topic-card,
+    .results-card, .recommendation-card, .premium-gate, .trainer-hero, .stat-card
+  ) { padding: var(--mobile-card-padding); }
+  .app-shell :is(.course-hero, .course-picker, .profile-card, .settings-card, .premium-panel, .trainer-hero) {
+    margin-bottom: var(--mobile-section-gap);
+  }
+  .app-shell .hero-copy h2 { font-size: var(--mobile-card-title-size); margin: 12px 0 8px; }
+  .app-shell .hero-actions { margin-top: 16px; gap: var(--mobile-item-gap); }
+  .app-shell .course-picker { padding: 12px; gap: 12px; }
+  .app-shell .feature-section { margin-top: var(--mobile-section-gap); }
+  .app-shell .feature-grid {
+    gap: 12px;
+    /* Keep two columns normally; enlarged text can request one instead. */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, max(8em, calc((100% - 12px) / 2))), 1fr));
+  }
+  .app-shell .feature-card { min-height: 0; padding: 14px; }
+  .app-shell .feature-top { margin-bottom: 12px; }
+  .app-shell .feature-title { font-size: var(--mobile-card-title-size); margin-bottom: 6px; }
+  .app-shell .premium-summary { margin-top: var(--mobile-section-gap); gap: 14px; }
+  .app-shell .profile-heading { padding-bottom: 16px; margin-bottom: 16px; }
+  .app-shell .profile-heading h2 { font-size: var(--mobile-card-title-size); }
+  .app-shell .profile-card .course-picker { margin-top: 16px; margin-bottom: 0; }
+  .app-shell .setting-row { padding: 14px 0; gap: var(--mobile-item-gap); }
+  .app-shell .settings-card > h2 { margin-bottom: 12px; }
+  .app-shell .settings-card p { line-height: 1.5; }
+  .app-shell :is(.reset-confirm, .developer-panel) { padding: 14px; }
+  .app-shell .premium-gate h2 { margin: 14px 0 10px; }
+  .app-shell .premium-gate :is(p, ul) { margin-bottom: 16px; }
+  .app-shell .trainer-gate .premium-coach { width: 140px; }
+  .app-shell .trainer-layout { gap: var(--mobile-section-gap); }
+  .app-shell :is(.analytics-section, .stats-grid) { margin-block: var(--mobile-section-gap); }
+  .app-shell .analytics-section h2 { margin-bottom: 12px; }
+  .app-shell :is(.topic-item, .topic-results > li, .error-list > li, .topic-result-row) { padding-block: 14px; }
+  .app-shell .empty-state { padding: 20px 0; }
+  .app-shell .empty-state p { margin: 12px auto 16px; }
+  .app-shell .empty-icon { width: 54px; height: 54px; margin-bottom: 14px; }
+  .app-shell :is(.info-note, .progress-storage) { margin-block: var(--mobile-section-gap); }
+  .app-shell :is(.storage-warning, .developer-notice, .demo-notice) {
+    padding: 12px;
+    margin-bottom: 16px;
+    font-size: var(--secondary-size);
+  }
+  .app-shell .random-practice-action { margin-bottom: var(--mobile-section-gap); gap: 8px; }
+  .app-shell .quiet-note { margin-top: 16px; }
+
+  /* Override the older high-specificity shared task rules, not their tablet values. */
+  .app-shell .task-screen .task-heading-block h1 { font-size: var(--mobile-heading-size); }
+  .app-shell .task-screen :is(.task-card, .task-solution-panel) { padding: var(--mobile-card-padding); }
+  .app-shell .task-screen :is(.task-input-help, .task-source, .task-topic, .task-title) { line-height: 1.5; }
+
+  /* Intrinsic, left-anchored display math makes BOTH ends reachable locally.
+     Do not scale KaTeX or clip the page to conceal an overflowing expression. */
+  .app-shell .math-block,
+  .app-shell .task-screen .math-block {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    font-size: var(--mobile-math-size);
+    padding: 12px;
+    margin-block: 14px;
+  }
+  .app-shell .math-block .katex { font-size: 1.05em; }
+  .app-shell .math-block .katex-display { width: max-content; min-width: 100%; margin: 0; text-align: left; }
+  .app-shell .math-block .katex-display > .katex { text-align: left; }
+}

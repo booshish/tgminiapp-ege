@@ -312,10 +312,68 @@
 }
 
 @media (max-width: 600px) {
-  .theory-tools { padding: 19px; gap: 18px; }
+  /* Phone density only: keep the existing 601–767 px and tablet reading scales. */
+  .theory-tools { padding: var(--mobile-card-padding, 16px); gap: 12px; margin-bottom: 18px; }
+  .theory-search,
+  .theory-number-filter { gap: 8px; }
   .theory-search-field { gap: 7px; padding: 0 9px; }
-  .theory-search-field input { font-size: var(--body-size); }
-  .theory-search-field input::placeholder { font-size: 15px; }
-  .theory-empty { padding: 22px; }
-  .theory-number-filter select { text-overflow: ellipsis; }
+  /* Keep editable controls at 16 px to avoid Safari's automatic input zoom. */
+  .theory-search-field input { min-height: 44px; font-size: max(16px, var(--body-size)); }
+  .theory-search-field input::placeholder { font-size: inherit; }
+  .app-shell .theory-part-switch > button { min-height: 44px; }
+  .theory-number-filter select {
+    height: auto;
+    min-height: 46px;
+    padding: 9px 42px 9px 12px;
+    background-position: right 12px center;
+    background-size: 22px 22px;
+    font-size: max(16px, var(--body-size));
+    text-overflow: ellipsis;
+  }
+  .theory-number-filter select option { font-size: inherit; }
+  .theory-empty { padding: var(--mobile-card-padding, 16px); gap: 12px; }
+  .theory-section-heading { margin: 18px 0 14px; }
+  .theory-page .topic-grid { gap: 12px; }
+  .theory-topic-card { padding: var(--mobile-card-padding, 16px); gap: 10px; }
+  .theory-topic-card :is(h3, strong) { font-size: var(--mobile-card-title-size, 18px); line-height: 1.4; }
+  .theory-topic-top { gap: 10px; }
+  .theory-topic-meta { flex-wrap: wrap; gap: 6px; }
+
+  .app-shell .theory-reading-page,
+  .app-shell.font-large .theory-reading-page,
+  .app-shell.font-huge .theory-reading-page { --theory-mobile-size: var(--mobile-reading-size, 1rem); }
+  .app-shell .theory-reading-page :is(.topic-lesson, .topic-overview-card, .topic-prerequisites) {
+    padding: var(--mobile-card-padding, 16px);
+  }
+  .theory-reading-page > .back-link { margin-bottom: 8px; }
+  .theory-reading-page > .lesson-breadcrumbs { margin-bottom: 10px; }
+  .theory-reading-page > .page-intro { margin-bottom: 16px; }
+  .theory-reading-page .theory-card-header { gap: 8px 12px; margin-bottom: 14px; }
+  .theory-reading-page .theory-card-meta { flex-basis: 124px; gap: 8px; }
+  .theory-reading-page .theory-card-meta,
+  .theory-reading-page .theory-card-meta small { font-size: var(--secondary-size); }
+  .app-shell .theory-reading-page :is(.lesson-section, .lesson-examples, .lesson-difficulties, .topic-overview-card) h2 {
+    font-size: calc(var(--theory-mobile-size) + 4px);
+    margin-block: 8px 12px;
+  }
+  .app-shell .theory-reading-page .lesson-example h3 { font-size: calc(var(--theory-mobile-size) + 2px); }
+  .theory-reading-page :is(.lesson-section + .lesson-section, .lesson-examples, .lesson-difficulties, .lesson-practice) {
+    padding-top: 18px;
+    margin-top: 20px;
+  }
+  .theory-reading-page .lesson-example { padding-block: 16px; }
+  .theory-reading-page .example-steps { margin-block: 14px; }
+  .theory-reading-page :is(.example-steps > li, .lesson-difficulties li) { margin-block: 12px; }
+  .theory-reading-page .topic-outline { margin-block: 14px 18px; }
+  .theory-reading-page .topic-prerequisites { margin-top: 16px; }
+  .theory-reading-page .lesson-practice { gap: 12px; }
+  .app-shell .theory-reading-page .lesson-source-details { padding: 0; margin-bottom: 16px; }
+  .lesson-source-details summary { min-height: 44px; padding: 8px 12px; }
+  .lesson-source-details > p { padding: 0 12px 12px; }
+  .app-shell .theory-reading-page .math-block { padding: 14px 10px; margin-block: 14px; }
+  .app-shell .theory-reading-page .theory-formula > .theory-formula-scroll-note {
+    margin-top: -6px;
+    margin-bottom: 14px;
+    font-size: var(--secondary-size);
+  }
 }
