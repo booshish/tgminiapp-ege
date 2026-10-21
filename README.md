@@ -2,14 +2,16 @@
 
 Сайт: https://booshish.github.io/tgminiapp-ege/
 
-Исходники: https://github.com/booshish/tgminiapp-ege/tree/0591080b77bfae2acba89ff583ddcdd6918251ac
+Тарифы: https://booshish.github.io/tgminiapp-ege/?v=152dcd8#/premium
+
+Исходники: https://github.com/booshish/tgminiapp-ege/tree/152dcd863c25f21bff3940aa56a1c44ecad06955
 
 Сборка: `npm run build:pages`, Premium developer flag выключен.
 
 Инструкция: https://github.com/booshish/tgminiapp-ege/blob/main/README.md
 
-Таблица покрытия: https://github.com/booshish/tgminiapp-ege/blob/main/docs/content-coverage.md
+Модель подписок: https://github.com/booshish/tgminiapp-ege/blob/main/docs/subscription-model.md
 
-Проверки: https://github.com/booshish/tgminiapp-ege/blob/main/docs/verification.md
+Проверки тарифов: https://github.com/booshish/tgminiapp-ege/blob/main/docs/subscription-verification.md
 
-Эта ветка содержит скомпилированные файлы. Исходный коммит: `0591080b77bfae2acba89ff583ddcdd6918251ac`.
+Эта ветка содержит скомпилированные файлы. Исходный коммит: `152dcd863c25f21bff3940aa56a1c44ecad06955`.
