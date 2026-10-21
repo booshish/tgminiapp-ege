@@ -1,8 +1,9 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
+import { existsSync, mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from "node:fs";
+import { dirname, relative, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { createHash } from "node:crypto";
-import { loadContent, projectRoot } from "./content-source-loader.mjs";
+import { createContentLoader, loadContent, projectRoot } from "./content-source-loader.mjs";
+import { contentReviewIssues, readContentReviewManifest } from "./content-review-evidence.mjs";
 
 const baselinePath = resolve(projectRoot, "docs/content-baseline.json");
 export const officialSourceReview = {
@@ -79,7 +80,25 @@ export function buildCoverage(content) {
 }
 
 export function contentIntegrityIssues(content, coverage = buildCoverage(content)) {
-  const issues = [...coverage.missingLinks];
+  const issues = [...coverage.missingLinks, ...contentReviewIssues(content)];
+  const { getPublicationDecision } = createContentLoader()("src/lib/content-publication.ts");
+  for (const material of [...content.tasks, ...content.theoryTopics]) {
+    const decision = getPublicationDecision(material.publication);
+    if (material.publication?.id !== material.id) issues.push(`publication identity mismatch: ${material.id}`);
+    for (const reason of decision.reasons) issues.push(`publication blocked: ${material.id}: ${reason.code}`);
+    if (decision.allowed) {
+      for (const file of [...material.publication.provenance.sourceFiles, ...material.publication.validation.evidence]) {
+        if (!/^(src|scripts|docs)\//.test(file) || file.includes("\\") || file.split("/").includes("..")) {
+          issues.push(`invalid repository evidence: ${material.id}: ${file}`);
+        } else if (!existsSync(resolve(projectRoot, file))) {
+          issues.push(`missing repository evidence: ${material.id}: ${file}`);
+        } else {
+          const path = realpathSync(resolve(projectRoot, file));
+          if (relative(projectRoot, path).startsWith("..") || !statSync(path).isFile()) issues.push(`invalid repository evidence: ${material.id}: ${file}`);
+        }
+      }
+    }
+  }
   for (const [label, values] of [
     ["task", content.tasks.map((task) => task.id)],
     ["prototype", content.prototypes.map((prototype) => prototype.id)],
@@ -129,7 +148,7 @@ function markdown(baseline, current) {
   lines.push("", `Уникальных опубликованных материалов: **${baseline.totals.uniqueTheory} → ${current.totals.uniqueTheory}**. Общие фундаментальные материалы учитываются в обоих экзаменах, поэтому суммы по экзаменам не равны числу уникальных статей. Активных задач: **${baseline.totals.activeTasks} → ${current.totals.activeTasks}**, включая ${current.totals.unnumberedActiveTasks} фундаментальных упражнений без экзаменационного номера. В данных также сохранены ${current.totals.inactiveTasks} недоступных старых задач базы для совместимости истории.`, "", "## По каждому номеру", "", "Теория до учитывает доступный материал той же части, связанный через тему задачи; после дополнительно учитываются явные связи `examNumbers`. Столбец «решения» относится к текущему банку.", "", "| Экзамен / предмет | № / часть | Раздел; связанные темы | Задачи до → после | Теория до → после | Решения | Проверка |", "| --- | --- | --- | ---: | ---: | ---: | --- |");
   for (const row of current.rows) {
     const before = baseline.rows.find((item) => item.examId === row.examId && item.number === row.number);
-    const mode = row.automaticCount && row.selfAssessmentCount ? `авто ${row.automaticCount}; самооценка ${row.selfAssessmentCount}` : row.automaticCount ? "автоматическая" : row.selfAssessmentCount ? "самооценка; авторские ориентиры" : "нет задач";
+    const mode = row.automaticCount && row.selfAssessmentCount ? `авто ${row.automaticCount}; самопроверка ${row.selfAssessmentCount}` : row.automaticCount ? "автоматическая" : row.selfAssessmentCount ? "самопроверка; авторские ориентиры" : "нет задач";
     lines.push(`| ${row.exam}${row.level ? " профиль" : ""} / математика | ${row.number} / ${row.part} | ${row.title}; ${row.topics.join(", ") || "—"} | ${before?.taskCount ?? 0} → ${row.taskCount} | ${before?.theoryCount ?? 0} → ${row.theoryCount} | ${row.solutionCount}/${row.taskCount} | ${mode} |`);
   }
   lines.push("", "## Темы и доступные прототипы внутри номеров", "", "Количество ниже относится к конкретной теме и прототипу; одинаковые числовые варианты не считаются новыми прототипами.", "", "| Экзамен / предмет | № | Тема | Задачи | Материалы | Прототипы (задач) |", "| --- | ---: | --- | ---: | ---: | --- |");
@@ -145,7 +164,7 @@ function markdown(baseline, current) {
     "- Точное соответствие структуре, сложности, времени и критериям ФИПИ за нужный год не подтверждено из-за недоступных источников.",
     "- Параметрические варианты одного прототипа не заменяют разнообразие всех подтипов. Требуются дальнейшая методическая рецензия и задачи с иными условиями/чертежами, особенно для №1–5 ОГЭ и развёрнутой части.",
     "- Конкретные ограничения нового банка: ОГЭ №1–5 — один тип общего условия (участок), без шин/квартир/тарифов; №20–23 и25 — по одному новому семейству. ЕГЭ №14 — один прямой параллелепипед, №17 — касательные, №18 — квадратное уравнение с положительными корнями, №19 — одно семейство диофантовых уравнений. Другие конфигурации этих разделов ещё предстоит наполнить и проверить.",
-    "- Официально согласованных критериев развёрнутых ответов нет. Доступны авторский образец и явно обозначенная самооценка; это не объективная оценка экзаменатора.",
+    "- Официально согласованных критериев развёрнутых ответов нет. Доступны авторский образец и явно обозначенная самопроверка; это не объективная оценка экзаменатора.",
     "- Базовый ЕГЭ и другие предметы недоступны. Старые задачи базы сохранены только ради совместимости.",
     "- Сервер, БД и аккаунты отсутствуют; закладки, попытки и результаты остаются в браузере. Перенос между устройствами не обещается.",
     "",
@@ -160,9 +179,13 @@ function markdown(baseline, current) {
 }
 
 export function exportSeed(content) {
+  const issues = contentIntegrityIssues(content);
+  if (issues.length) throw new Error(`Seed blocked: ${issues.join("; ")}`);
   const data = {
-    schemaVersion: 1, contentVersion: "2026-10-author-bank-v1",
+    schemaVersion: 2, contentVersion: "2026-10-author-bank-reviewed-v2",
     officialSourceReview,
+    sourceRegistry: createContentLoader()("src/lib/source-registry.ts").sourceRegistry,
+    contentReview: readContentReviewManifest(),
     exams: content.examDefinitions, prototypes: content.prototypes,
     tasks: content.tasks, theory: content.theoryTopics, theoryTopicAliases: content.theoryTopicAliases ?? {},
   };
@@ -185,9 +208,11 @@ function main() {
   const content = loadContent();
   const current = buildCoverage(content);
   const issues = contentIntegrityIssues(content, current);
-  if (args.includes("--check") && issues.length) throw new Error(`Content issues: ${issues.join("; ")}`);
-  writeFileSync(resolve(projectRoot, "docs/content-coverage.md"), markdown(baseline, current));
-  writeFileSync(resolve(projectRoot, "docs/content-coverage.json"), `${JSON.stringify({ officialSourceReview, before: baseline, after: current }, null, 2)}\n`);
+  if (issues.length) throw new Error(`Content issues: ${issues.join("; ")}`);
+  if (!args.includes("--check")) {
+    writeFileSync(resolve(projectRoot, "docs/content-coverage.md"), markdown(baseline, current));
+    writeFileSync(resolve(projectRoot, "docs/content-coverage.json"), `${JSON.stringify({ officialSourceReview, before: baseline, after: current }, null, 2)}\n`);
+  }
   if (args.includes("--seed")) {
     const target = args[args.indexOf("--seed") + 1];
     if (!target || target.startsWith("--")) throw new Error("Provide an output filename after --seed");

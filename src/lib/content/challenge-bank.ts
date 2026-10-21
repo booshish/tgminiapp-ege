@@ -32,7 +32,7 @@ function add(
     examType: [oge ? "ОГЭ" : "ЕГЭ"], level: oge ? null : "profile", examNumber: number,
     difficulty: "advanced", title: prototype.title,
     ...data, answerRule: { type: "number", value },
-  });
+  }, "challenge-bank");
   challengeTasks.push({ ...task, source: {
     ...task.source,
     label: "Авторское задание · повышенная сложность, предварительная оценка без калибровки",

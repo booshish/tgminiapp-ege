@@ -1,15 +1,16 @@
+import { originalPublication, type OriginalCollection } from "./original-publication";
 import type { Task } from "../tasks";
 import { getExamDefinition } from "../exams";
 import { getExamNumberXPScoringRule } from "../exam-scores";
 
 type Derived = "subjectId" | "examYear" | "examVersionId" | "part" |
-  "difficulty" | "answerFormat" | "source" | "scoring";
+  "difficulty" | "answerFormat" | "source" | "scoring" | "publication";
 export type OriginalTaskInput = Omit<Task, Derived> & {
   difficulty?: Task["difficulty"];
 };
 
 /** Deterministic author content uses the same versioned scoring registry as practice. */
-export function makeOriginalTask(data: OriginalTaskInput): Task {
+export function makeOriginalTask(data: OriginalTaskInput, collection: OriginalCollection): Task {
   const exam = getExamDefinition({ examType: data.examType[0], subjectId: "math", level: data.level });
   const number = exam?.numbers.find((entry) => entry.number === data.examNumber);
   if (!exam?.available || !number) throw new Error(`Unsupported original task: ${data.id}`);
@@ -18,6 +19,7 @@ export function makeOriginalTask(data: OriginalTaskInput): Task {
   const scoring = getExamNumberXPScoringRule(exam.versionId, number.number);
   return {
     ...data,
+    publication: originalPublication(data.id, collection),
     subjectId: "math",
     examYear: exam.year,
     examVersionId: exam.versionId,

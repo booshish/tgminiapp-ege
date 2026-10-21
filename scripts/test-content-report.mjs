@@ -43,6 +43,9 @@ test("catalog seed is deterministic, complete and contains no learner events", (
   assert.equal(first.json, second.json);
   assert.equal(first.sha256, second.sha256);
   const exported = JSON.parse(first.json);
+  assert.equal(exported.schemaVersion, 2);
+  assert.equal(exported.sourceRegistry.find((source) => source.id === "tochka-project-original").licenseType, "project-original");
+  assert.equal(exported.contentReview.records.length, 500);
   assert.equal(exported.tasks.length, content.tasks.length);
   assert.equal(exported.theory.length, content.theoryTopics.length);
   assert.equal(exported.theoryTopicAliases["number-theory"], "ege-profile-number-19");

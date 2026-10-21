@@ -171,7 +171,7 @@ export function ProfileScreen({
   const helpSection = (
     <section key="help" className="settings-card profile-help">
       <h2><CircleHelp size={22} aria-hidden="true" /> Помощь и объяснения</h2>
-      <p>Ответы о начислении XP, цвете шкал, сериях и самооценке.</p>
+      <p>Ответы о начислении XP, цвете шкал, сериях и самопроверке.</p>
       <button type="button" className="text-button" onClick={onHelp}>
         Открыть справку <ArrowRight size={18} aria-hidden="true" />
       </button>

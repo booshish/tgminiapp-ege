@@ -65,7 +65,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
   const reviewExplanation = (
         <div className="study-tool-card study-review-explanation">
           <h2>Как выбирается повторение</h2>
-          <p>После ошибки навык возвращается через день. Верный первый ответ на новый вариант увеличивает интервал до 3, 7, 14 и 30 дней; новая ошибка возвращает его к одному дню. Самооценка, повторные проверки и ответы после просмотра решения не меняют интервалы.</p>
+          <p>После ошибки навык возвращается через день. Верный первый ответ на новый вариант увеличивает интервал до 3, 7, 14 и 30 дней; новая ошибка возвращает его к одному дню. Самопроверка, повторные проверки и ответы после просмотра решения не меняют интервалы.</p>
           <p>Это прозрачное учебное правило, а не диагноз. Банк конечный: если новых аналогичных задач нет, предлагаем теорию и прямо сообщаем об ограничении.</p>
         </div>
   );
@@ -110,7 +110,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
 
       {mode === "mistakes" && <>
         <label className="study-tools-checkbox"><input type="checkbox" checked={unresolvedOnly} onChange={(event) => setUnresolvedOnly(event.target.checked)} /> Только ещё не исправленные</label>
-        {mistakes.length === 0 ? <div className="study-tool-card study-tools-empty"><Check size={28} aria-hidden="true" /><h2>Подходящих ошибок пока нет</h2><p>Здесь появятся задания после неверной автоматической проверки. Самооценка второй части в этот список не входит.</p></div>
+        {mistakes.length === 0 ? <div className="study-tool-card study-tools-empty"><Check size={28} aria-hidden="true" /><h2>Подходящих ошибок пока нет</h2><p>Здесь появятся задания после неверной автоматической проверки. Самопроверка второй части в этот список не входит.</p></div>
           : <div className="study-tools-list">{mistakes.map(({ task, corrected }) => <article className="study-tool-card" key={task.id}>
             <span className="study-tool-meta">{examLabel(task.examType[0])} · {numberLabel(task)}</span>
             <h2>{task.title}</h2><p>{titleForTopic(task.topicId)}</p>

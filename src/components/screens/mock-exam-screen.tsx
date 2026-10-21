@@ -54,7 +54,7 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
       {session.taskIds.map((id, index) => {
         const entry = tasks.find((item) => item.id === id)!;
         const result = session.results[id];
-        const status = finished ? entry.part === 2 ? session.selfScores[id] !== undefined ? "самооценка сохранена" : "нужна самооценка" : result?.correct ? "верно" : result?.valid ? "неверно" : "ответ не засчитан" : session.answers[id]?.trim() ? "есть ответ" : "без ответа";
+        const status = finished ? entry.part === 2 ? session.selfScores[id] !== undefined ? "самопроверка сохранена" : "нужна самопроверка" : result?.correct ? "верно" : result?.valid ? "неверно" : "ответ не засчитан" : session.answers[id]?.trim() ? "есть ответ" : "без ответа";
         const badge = !finished ? null : entry.part === 2
           ? session.selfScores[id] === undefined ? "Оценить" : `${session.selfScores[id]}/${entry.scoring.maxPrimaryScore}`
           : `${result?.primaryScore ?? 0}/${entry.scoring.maxPrimaryScore}`;
@@ -106,7 +106,7 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
               {(showAllHistory ? history : history.slice(0, 10)).map((entry) => {
                 const title = definitions.find((item) => item.versionId === entry.examVersionId)?.title;
                 const score = mockScoreSummary(entry, tasks);
-                return <li key={entry.id}><button type="button" onClick={() => mock.open(entry.id)}><span><strong>{title}</strong><span>{new Date(entry.startedAt).toLocaleString("ru-RU")}</span></span><span>{score.automatic} автоматически{score.self ? ` + ${score.self} самооценка` : ""}<ArrowRight size={18} aria-hidden="true" /></span></button></li>;
+                return <li key={entry.id}><button type="button" onClick={() => mock.open(entry.id)}><span><strong>{title}</strong><span>{new Date(entry.startedAt).toLocaleString("ru-RU")}</span></span><span>{score.automatic} автоматически{score.self ? ` + ${score.self} самопроверка` : ""}<ArrowRight size={18} aria-hidden="true" /></span></button></li>;
               })}
             </ul>}
             {!showAllHistory && history.length > 10 && <button type="button" className="text-button" onClick={() => setShowAllHistory(true)}>Показать всю историю</button>}
@@ -119,8 +119,8 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
             <p className="mock-clock"><Clock3 size={21} aria-hidden="true" />{finished ? `Время работы: ${duration(elapsedMockMilliseconds(session, mock.now))}` : `Осталось ${duration(remainingMockMilliseconds(session, mock.now))}`}</p>
             {finished ? <>
               <p role="status">{session.finishReason === "timeout" ? "Учебное время истекло. Ответы сохранены." : "Вариант завершён. Ответы сохранены."}</p>
-              <p>Первичные баллы за автопроверку: <strong>{summary.automatic}</strong> · самооценка второй части: <strong>{summary.self}</strong>.</p>
-              <p>Сумма: {summary.total} из {summary.maximum} по предварительной сетке. {summary.pendingSelf > 0 ? `Осталось оценить заданий второй части: ${summary.pendingSelf}.` : "Вторая часть отмечена как самооценка."} Это не тестовые баллы и не прогноз экзамена.</p>
+              <p>Первичные баллы за автопроверку: <strong>{summary.automatic}</strong> · самопроверка второй части: <strong>{summary.self}</strong>.</p>
+              <p>Сумма: {summary.total} из {summary.maximum} по предварительной сетке. {summary.pendingSelf > 0 ? `Осталось оценить заданий второй части: ${summary.pendingSelf}.` : "Вторая часть отмечена как самопроверка."} Это не тестовые баллы и не прогноз экзамена.</p>
             </> : <p>Введено ответов: {session.taskIds.filter((id) => session.answers[id]?.trim()).length} из {session.taskIds.length}. Переключение номеров сохраняет ввод.</p>}
             {phoneLayout ? (
               <details className="mock-number-disclosure">
@@ -145,12 +145,12 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
               {task.part === 1 && <p className="mock-verdict" role="status">{session.results[task.id]?.correct ? "Верно" : session.results[task.id]?.valid ? "Неверно" : session.answers[task.id]?.trim() ? "Ответ не засчитан: неподходящий формат" : "Ответ не дан"} · {session.results[task.id]?.primaryScore ?? 0} из {task.scoring.maxPrimaryScore} первичных баллов</p>}
               {!session.revealedTaskIds.includes(task.id) ? <button type="button" className="button button-secondary" onClick={() => mock.reveal(task)}><ClipboardCheck size={19} aria-hidden="true" />{task.part === 2 ? "Проверить самостоятельно" : "Посмотреть решение"}</button> : <Solution task={task} />}
               {session.revealedTaskIds.includes(task.id) && task.part === 2 && task.scoring.maxPrimaryScore !== null && <div className="mock-self-assessment">
-                <h3>Самооценка</h3>
+                <h3>Самопроверка</h3>
                 <p>Авторские ориентиры помогают сравнить ход решения. Они не заменяют официальные критерии или проверку преподавателем.</p>
                 <fieldset><legend>Выбери баллы за своё решение</legend><div className="mock-score-options">{Array.from({ length: task.scoring.maxPrimaryScore + 1 }, (_, score) => <label key={score}><input type="radio" name={`self-${task.id}`} value={score} checked={(selfDrafts[`${session.id}-${task.id}`] ?? session.selfScores[task.id] ?? 0) === score} onChange={() => setSelfDrafts((prior) => ({ ...prior, [`${session.id}-${task.id}`]: score }))} /><span>{score}</span></label>)}</div></fieldset>
-                <p>Самооценка: {selfDrafts[`${session.id}-${task.id}`] ?? session.selfScores[task.id] ?? 0} из {task.scoring.maxPrimaryScore} баллов.</p>
-                <button type="button" className="button button-primary" onClick={() => mock.assess(task, selfDrafts[`${session.id}-${task.id}`] ?? session.selfScores[task.id] ?? 0)}><Check size={18} aria-hidden="true" />Подтвердить самооценку</button>
-                {session.selfScores[task.id] !== undefined && <p role="status">Сохранена самооценка: {session.selfScores[task.id]} из {task.scoring.maxPrimaryScore}. При исправлении XP меняются только на разницу.</p>}
+                <p>Самопроверка: {selfDrafts[`${session.id}-${task.id}`] ?? session.selfScores[task.id] ?? 0} из {task.scoring.maxPrimaryScore} баллов.</p>
+                <button type="button" className="button button-primary" onClick={() => mock.assess(task, selfDrafts[`${session.id}-${task.id}`] ?? session.selfScores[task.id] ?? 0)}><Check size={18} aria-hidden="true" />Подтвердить самопроверку</button>
+                {session.selfScores[task.id] !== undefined && <p role="status">Сохранена самопроверка: {session.selfScores[task.id]} из {task.scoring.maxPrimaryScore}. При исправлении XP меняются только на разницу.</p>}
               </div>}
               {session.revealedTaskIds.includes(task.id) && <button type="button" className="text-button" onClick={() => onOpenTheory(task.topicId)}><BookOpen size={18} aria-hidden="true" />Повторить связанную теорию</button>}
             </>}
@@ -177,5 +177,5 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
 }
 
 function Solution({ task }: { task: Task }) {
-  return <section className="mock-solution"><h3>Авторский образец решения</h3><ol>{task.solution.map((step, index) => <li key={index}><p>{step.text}</p>{step.latex && <MathFormula latex={step.latex} />}</li>)}</ol><p><strong>Ответ:</strong> {task.answerDisplay}</p>{task.selfCheckNotes && <><h3>На что обратить внимание при самооценке</h3><ul>{task.selfCheckNotes.map((note) => <li key={note}>{note}</li>)}</ul></>}{task.criteriaSourceUrl && <p><a className="text-button" href={task.criteriaSourceUrl} target="_blank" rel="noreferrer">Материалы ФИПИ</a> · официальные критерии этого авторского задания не опубликованы.</p>}</section>;
+  return <section className="mock-solution"><h3>Авторский образец решения</h3><ol>{task.solution.map((step, index) => <li key={index}><p>{step.text}</p>{step.latex && <MathFormula latex={step.latex} />}</li>)}</ol><p><strong>Ответ:</strong> {task.answerDisplay}</p>{task.selfCheckNotes && <><h3>На что обратить внимание при самопроверке</h3><ul>{task.selfCheckNotes.map((note) => <li key={note}>{note}</li>)}</ul></>}{task.criteriaSourceUrl && <p><a className="text-button" href={task.criteriaSourceUrl} target="_blank" rel="noreferrer">Материалы ФИПИ</a> · официальные критерии этого авторского задания не опубликованы.</p>}</section>;
 }

@@ -1,0 +1,4 @@
+# Locally reviewed source documents are evidence, not licensed release assets.
+# Explicitly review rights before committing any downloaded file.
+*
+!.gitignore

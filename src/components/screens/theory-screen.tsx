@@ -16,7 +16,7 @@ import { MathFormula } from "@/components/math-formula";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import type { Exam } from "@/lib/navigation";
-import { getTheoryTopic, theoryTopics } from "@/lib/theory";
+import { getPublishedTheoryTopics, getTheoryTopic } from "@/lib/theory";
 import { getExamDefinition } from "@/lib/exams";
 import { getPracticeTasks } from "@/lib/tasks";
 import "@/components/theory-screen.css";
@@ -69,7 +69,7 @@ export function TheoryScreen({
         }).map((task) => getTheoryTopic(task.topicId)?.id ?? task.topicId),
       )
     : undefined;
-  const visibleTopics = theoryTopics.filter(
+  const visibleTopics = getPublishedTheoryTopics().filter(
     (item) =>
       item.examType.includes(exam) &&
       item.part === part &&
@@ -409,6 +409,27 @@ export function TheoryScreen({
                   </ul>
                 </div>
               </section>
+              {topic.learningChecks && (
+                <section className="lesson-section lesson-learning-checks" aria-labelledby="lesson-checks-title">
+                  <h2 id="lesson-checks-title">Проверь себя</h2>
+                  <p>{topic.learningChecks.summary}</p>
+                  <h3>Порядок действий</h3>
+                  <ol className="example-steps">
+                    {topic.learningChecks.algorithm.map((step) => <li key={step}><p>{step}</p></li>)}
+                  </ol>
+                  {topic.learningChecks.checks.map((check) => (
+                    <div className="lesson-learning-check" key={check.id}>
+                      <p>{check.question}</p>
+                      <details>
+                        <summary>Сверить объяснение</summary>
+                        <p><strong>{check.answer}</strong></p>
+                        {check.latex && <TheoryFormula latex={check.latex} />}
+                        <p>{check.explanation}</p>
+                      </details>
+                    </div>
+                  ))}
+                </section>
+              )}
               <TheoryPrerequisites ids={topic.prerequisites} onOpenTopic={onOpenTopic} />
               <div className="lesson-practice">
                 <div>

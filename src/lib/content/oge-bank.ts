@@ -31,7 +31,7 @@ function add(
   ogeTasks.push(makeOriginalTask({
     id, examType: ["ОГЭ"], level: null, examNumber: number,
     topicId, prototypeId, title, ...content,
-  }));
+  }, "oge-bank"));
   ogeGeneratorCases.push({ taskId: id, number, variant, parameters });
 }
 

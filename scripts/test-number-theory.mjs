@@ -1,23 +1,11 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
 import test from "node:test";
-import ts from "typescript";
 import katex from "katex";
+import { createContentLoader } from "./content-source-loader.mjs";
 
-async function moduleURL(path, replacements = {}) {
-  const source = await readFile(new URL(path, import.meta.url), "utf8");
-  const { outputText, diagnostics = [] } = ts.transpileModule(source, {
-    compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2020 },
-    reportDiagnostics: true,
-  });
-  assert.equal(diagnostics.filter((item) => item.category === ts.DiagnosticCategory.Error).length, 0);
-  let output = outputText;
-  for (const [specifier, url] of Object.entries(replacements)) output = output.replace(`"${specifier}"`, `"${url}"`);
-  return `data:text/javascript;base64,${Buffer.from(output).toString("base64")}`;
-}
-const numberURL = await moduleURL("../src/lib/content/number-theory.ts");
-const { numberTheoryTopics } = await import(numberURL);
-const { theoryTopics, getTheoryTopic } = await import(await moduleURL("../src/lib/theory.ts", { "./content/number-theory": numberURL }));
+const load = createContentLoader();
+const { numberTheoryTopics } = load("src/lib/content/number-theory.ts");
+const { theoryTopics, getTheoryTopic } = load("src/lib/theory.ts");
 
 test("Every supported exam number has its own original article and worked examples", () => {
   assert.equal(numberTheoryTopics.length, 44);

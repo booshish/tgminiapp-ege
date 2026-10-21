@@ -1,0 +1,4569 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "sha256-canonical-content-v1",
+  "checkedAt": "2026-10-21",
+  "baselineRevision": "ca6389adcb94c126b356e6e15fdf24743af15a59",
+  "scope": "Existing author-declared bank; no external imports or official/expert endorsement. Frozen legacy content with collection tests; 8 foundation articles include 16 new examples and 16 control questions independently recalculated in this batch. Full official exam review remains blocked.",
+  "taskCount": 448,
+  "theoryCount": 52,
+  "records": [
+    {
+      "kind": "task",
+      "id": "triangle-sine",
+      "contentSha256": "005607ad2030c1635a22ffe25d0e55847e3f571e335aa53a930233c6dbc31e81",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "linear-equation",
+      "contentSha256": "d376bfbd30d16fe4973749d52ff7fd0a6041a24f679f02380252c19286dcabaf",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "fraction-addition",
+      "contentSha256": "9aa983eae99be221cafe819ab993d23b05e985ed4566f9ad07ff2c03733f7da8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "probability-balls",
+      "contentSha256": "b3ab2b9072287e73996f0209dee387007ccf88f39da3c2f47d0922bb2217b5cc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "percentage-discount",
+      "contentSha256": "35e09f0520502a253a0b7f668e29fe1b167400da18045d7a53fb6de716d8880f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "fraction-subtraction",
+      "contentSha256": "56a7e4ca5d7488a1ceeaddf89f5626db22a5adf06fc7f58c3d513de26986d68c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "fraction-signed",
+      "contentSha256": "2260752c1991f9b2919081cd49b90701073eccd3bf585cfd701a831148c2dc1a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "decimal-addition",
+      "contentSha256": "c430a385b30dc2995d018b27220603cdcb444eb3baf2e298408f7a55b901f775",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "decimal-product",
+      "contentSha256": "82a5fd0ce2e4941c574fa032bb46645be87b741288d13e78fe7aa2d94374e071",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "decimal-division",
+      "contentSha256": "80ee4b1836336f034aaed58f46d03e7ac9c620a653be684af7db6eef36641403",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "percentage-jacket",
+      "contentSha256": "2431c9372e89fa0c793f54615e34f8b0de75e6d01635cb49b7e10f9a4f524182",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "percentage-increase",
+      "contentSha256": "f54918a04b3589dca1d3d6f44708806bf83bd290c6d50bae6f1105053dab2ba8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "linear-negative",
+      "contentSha256": "395bcbded392fe3abb72076811b80787dd0259dbdc2aa81c206e3bf24f8122d3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "linear-brackets",
+      "contentSha256": "c27515f3342644890a8826c5c4b3d2ae8cefa75fa10a435ebca65df0a8a2c0fd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "quadratic-two-roots",
+      "contentSha256": "e7b7552f9592cd0ebd2fe8bd69639906914ebeada6aa8602bb2cd9da8df197bc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "quadratic-opposite-roots",
+      "contentSha256": "7104d47e935f68bf70a3d59dea4c925e94ad2cd91cc693938e22cc858d653847",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "quadratic-fractional-roots",
+      "contentSha256": "011614a1d8d06e666db65df6fda52dd85e37328f9be8bc7b91154f8c55086f9a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "powers-quotient",
+      "contentSha256": "8727d71606bf778e1f4b391ef72224095f6cb84aa89825e31ec99ec2856c52df",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "roots-sum",
+      "contentSha256": "62fdb1006fe0920373ff6ef5ab8c51f96a85aa3bc7cff8865dfc89ac23804e38",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "roots-product",
+      "contentSha256": "0b44bcd68b0171e2c3fde8f0b5303c0236c3a105f878f959ab45ef0d6960c0be",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "triangle-sine-five-twelve",
+      "contentSha256": "f88afad8e5dbf9b5e58f8f44bee3489a25c9ddd5693fefc00320f2f473f5291a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "triangle-sine-eight-fifteen",
+      "contentSha256": "6e09ca3f12ce7b48c35460711b02771c5bd221d996b5f63977b7a76060dbd282",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "probability-die",
+      "contentSha256": "18d4abcdd009474eaef50d0dbb3130f3c71cebcaf5f86dbb35de00e58668a0d6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "probability-cards",
+      "contentSha256": "728f1858e3dc4a1bed61770de1e489469165ae5d0bd18b3008025f506120d5da",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-fraction-sum-terminating",
+      "contentSha256": "ac580343ae1117efd5bf3b2f0a98e6db668944bd9f14568de4af0f2b0a124be6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-quadratic-larger-root",
+      "contentSha256": "59910e00e3b5ef8f00269bb5b4e330cf5c15bffd876a5b75def0977500211e8d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-probability-even-die",
+      "contentSha256": "7c65caba2449cbdb9ad4cd61eae74afc175307bb50db278db70f55d9de8edf44",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-triangle-three-four",
+      "contentSha256": "9db56f5b33f1637ff6d068b12d84eefdc0ae1739220637c3d230fd774b9b1999",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-fraction-sum",
+      "contentSha256": "90fde0e8a682a9c5305a02dd2db91367408ccc1cf910d5f89ee7bbb4edbd54bd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-decimal-difference",
+      "contentSha256": "87ba6ad59ec499e29a6654d59ba47127cb44ec07eb197a4d0e3c8511693ea694",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-discount",
+      "contentSha256": "4a4dde02e798ed6e02f1bd86148b52d3cd4d50cdde0f87e9c48a26784a16881a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-linear-equation",
+      "contentSha256": "0caf5ac35cf2513cceca3bf7b4648e66deb4e62852ce3370b12c8b5fd309e824",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-quadratic-roots",
+      "contentSha256": "0fe9d71178209429fcd6e3b0f3c30e3852524002d5146e8681a51cb6046c502c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-powers-quotient",
+      "contentSha256": "70d24d05c7794774172db8a537e2890a90a10a2187173bb2c498acb483c2c369",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-triangle-sine",
+      "contentSha256": "afed822012aa712f89fb4184c4caccd159dbadcbcbf4a15ac73a2edb55507bd7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-base-probability-balls",
+      "contentSha256": "db0fab4f8649128b715a50faaa9f13c5d34ac3b9b62b7b79dfb8bc20039d25e8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-triangle-twelve-nine",
+      "contentSha256": "d470b274c6bf90292589be8451056e9c33bb8cbf8391ce476af14200340a6136",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-triangle-nine-twelve",
+      "contentSha256": "bc2006151f21f144cc6f163d1fd8255b50949a553ae91cdc73f497e426e06a54",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-probability-balls",
+      "contentSha256": "2837d83a337aa3627629a4990e8541c56bf57a596f74118c6865603a3d2cd323",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-probability-cards",
+      "contentSha256": "94b31686fe0c9c5e43e44dd9b19c34155fd349fe0d8de37c2134de24cd3cebef",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-exponential-two",
+      "contentSha256": "6ca84b5ee31fe5e1277848703640bb255a91e2ca3747b5d4066e3673aadbc2f2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-exponential-three",
+      "contentSha256": "0f3e932a278193388974e2fa407aa87c0ccdd4ab10469bdd78e375dda3d16637",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-roots-product",
+      "contentSha256": "98083dcbe16ee867bb1daf4c9ae711f4bde72b8c0187b578c0d6fc290c71c872",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-powers-quotient",
+      "contentSha256": "cf63b2c5e12333de27983419a5cdb51c7789449a9316148b2b7ea5e53fcd9c3c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-fraction-difference",
+      "contentSha256": "4f1ea37ef392a0ef91a6d69f73880e07792cc4c3abc5b7871270b9160a860191",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-profile-fraction-product",
+      "contentSha256": "caf7128628c27a0b11fb50636159a1d5350a45e5177c86ca3eb15d1ce0aed516",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge20-quadratic-self",
+      "contentSha256": "9a2e47d6ef64b3b03168a3974c3392ba48f241fac2b692633a97633af219150c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege13-trigonometric-self",
+      "contentSha256": "945ef3528a9e71df3467a961ccfe2bfdd1e3c7893602818372b62a768b4e5984",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege17-triangle-proof-self",
+      "contentSha256": "5eb230ca909b8b1b62426bd6e04577c96eda673111cc5656c162f2868816b712",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege19-integer-pairs-self",
+      "contentSha256": "7093c4cbeb8beac078eeedc97a8d50b216047af9f7d12a04917d2fccf8877952",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-demo.mjs",
+        "scripts/test-gamification.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v1-r1",
+      "contentSha256": "224e066484153d725752c30d9a1532e6f162f4bafdbd95fdfed4af365e0645d4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v1-r1",
+      "contentSha256": "5ec488c361d2602cf75670721612b0400b834a58b08f06cf15de517d898a6343",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v1-r1",
+      "contentSha256": "a8ad9c568636effe7a913b7c1e12eafefacf755f2bebdf3b7082b0014fa1fe25",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v1-r1",
+      "contentSha256": "936399eed3b302043ede3facc3975141d1d11f6120b444b06b6f7a0cc00d0596",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v1-r1",
+      "contentSha256": "7494f333d8c281f2dd78e745bb221bafb227eeb7f198912328bf3180327aceea",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v1-r1",
+      "contentSha256": "c69f8a11315059d993646a592edd44f461377ea55de132a8a3858c71a242b2aa",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v1-r1",
+      "contentSha256": "0fb58bb69effd5a8493154002a0a7be266c22d8429f929b56e57a753f999598f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v1-r1",
+      "contentSha256": "a12d7d18e2ab9789f91c180ee9bf7df23d8d114cccfa819a6fc297afcaa59827",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v1-r1",
+      "contentSha256": "e67fd711de0d67606e9c5ee2b4f6deaf27a056394644128be9a2e9d66cb8925f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v1-r1",
+      "contentSha256": "8a59a971e09786ec6ebd5ed45afcb5d416ed19b604c3ca01cba20424b71951e3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v1-r1",
+      "contentSha256": "d54f18c0cf02ba26b082515e216fae58196c5b46b5347fefa20d6a6a5480a81e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v1-r1",
+      "contentSha256": "669972b97e938422063c785688bf0dc81831e3fa96e03ab06c4c9d0bafbaa3dd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v1-r1",
+      "contentSha256": "00ff7be8c4d67b595efc2f4f5860e3dce6b17634504ecf5c573212704f60998f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v1-r1",
+      "contentSha256": "c1dc9c4f3c79809c968186355ca925468b20c1d32e37876a01b40a915f8c1308",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v1-r1",
+      "contentSha256": "bd895c9be4082df21f1ef0e0b3357e899fca4f2e9214e5397ae987c297ea03ec",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v1-r1",
+      "contentSha256": "eb2f87c2e64fe615c3c32e7ade919da5113bdd841a3f426553d0500662135ee0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v1-r1",
+      "contentSha256": "90dd5a73ad74b9418ebcf488d3c43e8efb0ec0ad148e896642e029d37182af4b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v1-r1",
+      "contentSha256": "0b9ea877ed1957dde3512f8983eb0ad60366fe6b73e08a65a5501d26018764dd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v1-r1",
+      "contentSha256": "10e6d195ff87cb0471a4161c37fb2d25d061a9c34e713301b99e0f68448bc5ad",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v2-r1",
+      "contentSha256": "5350eedc0b66997bb9ec69815ed843795befab19b1b0ab5d339fcd21cdb29cd0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v2-r1",
+      "contentSha256": "b742f9f74a6b7fcc13c1aa7584b2addc96693f13cfe525c0d25793765a1fa0c1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v2-r1",
+      "contentSha256": "704ac9180a891d859a1c39fc3749f923a05914e63dd984642a33804dd7d6883c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v2-r1",
+      "contentSha256": "5fd34433778fc4f16d625ab1a612eaf027bf90ec4204551de74472c4bfa5ec3b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v2-r1",
+      "contentSha256": "7c12837e4e41e017277bc61e7750dbd98845d3561175849bdd46dcc4da8be1d3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v2-r1",
+      "contentSha256": "bf7ee3f48d12dd611b91f9d69d0b1f0cb11945d40fc27bf45fb5710425c9a26c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v2-r1",
+      "contentSha256": "44894667302aad80328cdeed755c50295bea44b16e8dbfb4db4af9165b75d528",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v2-r1",
+      "contentSha256": "a46fb9afdb2a5d7ba3ed9e82c29c468db493f5f25b7ec9de092d81266e75d3b5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v2-r1",
+      "contentSha256": "3563f5f9c02b1f620cfcdf3711e5343db00892247488b0eb6e81c8124068c8da",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v2-r1",
+      "contentSha256": "eb9f4176721ff0818ede2f058ab625f8a34eed7ff190a28c7aa508953e04f627",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v2-r1",
+      "contentSha256": "30a17c604da6253475be9801e94a2afc5d53930d97e43352f91536078804f047",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v2-r1",
+      "contentSha256": "78014e762ca2a6ca6143b348014e341369b3bd896e34f08fa71f5ca2e29c8576",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v2-r1",
+      "contentSha256": "8919e30e883e842e73a6022a505cb9388f477c1acd324be9a1818e1246ece2ab",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v2-r1",
+      "contentSha256": "1d2097baf79d663ec72196f26626e9308bb39e492453f194497f02ab2c341614",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v2-r1",
+      "contentSha256": "cfbd44a431020f4e60a16acf2de889f75f1cc85765edbbbcf0c98bbaef0b6d3e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v2-r1",
+      "contentSha256": "74e46c589bd8f71f8229aca00b96cfec399f7fcd99be772e5c5267e9755fd89a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v2-r1",
+      "contentSha256": "bad7847a13135b8beaa81fa2a15386ea6ef5d4ef9f224796122c22adb4ad2bb6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v2-r1",
+      "contentSha256": "64d1d45bd62fa4111dd0bea06d5dc8e5d2faf4cdf481fc1910400f74c322df4e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v2-r1",
+      "contentSha256": "3790df608ac9c36c379ea70d68accd61142f570d9cedbe6d260b7911cab7e350",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v3-r1",
+      "contentSha256": "3343ec39c4ff3b573f21d51f0ef49e121a4c3a35f892d3710b0af0da1870a5fa",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v3-r1",
+      "contentSha256": "a3e999d9629fa1155f8c51d557ff59bbf334441677f40b93bd256cef87101de6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v3-r1",
+      "contentSha256": "1a3d2e8cbd698735b3b988b992e4db8b178b20c1d15dc8b51891fb0d12756bc8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v3-r1",
+      "contentSha256": "9a671be0b77a87dda94432a9b23d96a47cb4aa2fc8d4a2accef498b4ec972dec",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v3-r1",
+      "contentSha256": "987c5f80b688d827275aaa93242d3fe3a8171fd07d4cdf90e88046e3b858cf38",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v3-r1",
+      "contentSha256": "9b97c560195791bd34cf8491103888e4fd0a2817db240102c8f5306b3e072060",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v3-r1",
+      "contentSha256": "37d4d0ca78ad155b2f74b4d0cdb5db215193621f77ea4cf196ec27749989ab92",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v3-r1",
+      "contentSha256": "b6bff5ac532f0a8dfcaa8a0baf5f2e305b0b92ddd0792dc81118e3d03608e8bb",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v3-r1",
+      "contentSha256": "eef1f8284d1478cc8b306818ede92c07eb94d94abb49d491c9a4da1497515ebc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v3-r1",
+      "contentSha256": "584cf84c75ad5a8e17ae0437f8bbc3ad3a2fa4a749900dfa78ca9736177ff1ae",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v3-r1",
+      "contentSha256": "8d9a0a7c30a8c069907aefd40391da706f1f5bcf429b52b4e94ae7c48dafd781",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v3-r1",
+      "contentSha256": "eccc11556846b8b32172a8f6b5a9dc5b81d43ff2159b4c0e8b960ca0cd883e78",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v3-r1",
+      "contentSha256": "3dc3dcd08070a42da16b61d17a204d53733af3611e38204b756334dd26bee48b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v3-r1",
+      "contentSha256": "56bacac51e1a3d044f657a3715168c3cdfea94a1c2fe4003a942f9003ff2999e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v3-r1",
+      "contentSha256": "f753d339d286881f3cac694c8af739dd6dc7783bc80ac7bce24b3b12d0c2c103",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v3-r1",
+      "contentSha256": "cf6848c8711f85affa40e157b30d59f5bb853e156fdedf2fa6279e51350d1054",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v3-r1",
+      "contentSha256": "ab76dbc24e37c25cfd34dc8c2c8d701e69464ac42052e00ad3fe9e4ac84bd9c5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v3-r1",
+      "contentSha256": "4b00f1efaa92cadacd7fee7e0866508571219abce0638e86f50e10e2b8466c61",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v3-r1",
+      "contentSha256": "c642135c9060a33cec9df62d604a008e4fe881efe9373bbcc9f38da6963d9ebd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v4-r1",
+      "contentSha256": "807a89211cec4aff892496cd7fba54713c7d7497ca9cca72036d899d0909bace",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v4-r1",
+      "contentSha256": "1067f73a0e3ce41187dbbdd48128c9581906d21d2bd2ffd1d580db09fd3d13b1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v4-r1",
+      "contentSha256": "82487932907398c0a9cef26a5eccb5a74f35cdbd20fb2d6ffaaac23e92e3b93c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v4-r1",
+      "contentSha256": "1f7c46ec7cab8904cbbf8f7e92d1d4421f6807225fecd67bac6d579a600107ef",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v4-r1",
+      "contentSha256": "05d93f2967989c7f0bd3d61e041f541dee3216cca6d85394e242960c2fbf45f8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v4-r1",
+      "contentSha256": "2542c5b0a21ae581e0b6f2dc92a9a3d7398070c2257ddc8a50647120ee1139d1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v4-r1",
+      "contentSha256": "bb439f1189e689ed6edea9b18d27b24536fd99156d27a55a738f3271d16d7e27",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v4-r1",
+      "contentSha256": "5e0f173f5a3d5b86570174caeabb2b2a6275766650532e563d0ff8b234c3c787",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v4-r1",
+      "contentSha256": "d03ec51c76291c208d4efc424187efb41cf1c6b37643ceb9796bb1b0dfa2ce4b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v4-r1",
+      "contentSha256": "757e039068b43b02d6f94d7b005bef98877badbbc4df43aa542a67ef1c47535c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v4-r1",
+      "contentSha256": "b9a383a7459abfe10c38a63211468636ace922f562140787c1a43b108eb681dc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v4-r1",
+      "contentSha256": "a4ecdd1aaa22ffd77c1284562914303bdc5a79b3caf745fe05a570b1d6ff6ec3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v4-r1",
+      "contentSha256": "39e6d96657f33d3e3a93e426d5fbe7331d938cfab1c522afa190a91c3b1f8514",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v4-r1",
+      "contentSha256": "767d5d2050fdec5ca3821fe977854c62cf2bee90b8130948dea889b7b7c64438",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v4-r1",
+      "contentSha256": "f8f3e6f584174699af5980deb422036ca309cc1abad2874258b82de20721fa76",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v4-r1",
+      "contentSha256": "aa4d2476381716510bc087811fc417a1ad336c65ef36dcd98930b55d01ba308b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v4-r1",
+      "contentSha256": "e53515aed1f93a038cfdd376c2914b9956c2eb3f774aa0955823835333b512bc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v4-r1",
+      "contentSha256": "8468f542833112d6fa1d0f041317458f38604803ddf0d7ec17b65ac6df8b983e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v4-r1",
+      "contentSha256": "09e558b591a041469238a1a18aec1fb3bbc4bb2ce02ac2a076b338ceaaa5919f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v5-r1",
+      "contentSha256": "8430180652f62f1546ee26327090893904996fd11e5caf1f4e44a0b377cf06c3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v5-r1",
+      "contentSha256": "d8acb6d103c67a6154d97827b4099b3d6f91bc0dadbda0a2942bb3b61396684b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v5-r1",
+      "contentSha256": "2f9a9a9f61d2bed248546d833a9eb7e1fc393cf9725b53ea28d049a131e13ed3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v5-r1",
+      "contentSha256": "527ee240335e78cb0b29afc1db4fac11f32087f0973a6d59564bb734534abe26",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v5-r1",
+      "contentSha256": "3a98571e5ac8bfa9d2a2526d5b1041037be76528a12d14368974baa2b706c134",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v5-r1",
+      "contentSha256": "2593724a94255110b7a9619bb1a730b2ba7d5d4d0667d2baeb1a22be94d161b0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v5-r1",
+      "contentSha256": "f4ede4b03285397bbcc06b3807e2fcc6bede3b65e456261e871a4bd7be49b051",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v5-r1",
+      "contentSha256": "5698a844960ab6383afc7ab9b1db862265e0c896546c1dcf71b4b2a7d6d2c139",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v5-r1",
+      "contentSha256": "7966915d3d0508e6c849c5c4d1b9e714fdef2c60682df637ca882c39b2203323",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v5-r1",
+      "contentSha256": "9bcc8f1cdac127eef4e1a013fcd0d4e679aac99e247f8dd67e2967041f84b229",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v5-r1",
+      "contentSha256": "dbf72996c687563785bc2e507a0ba6a9d0d3dec31f02bd09994f48b153d515d4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v5-r1",
+      "contentSha256": "b1fa9aa44cd9cc91b292ee674764881cad8a33aa68568941c6d1d01df58b99c8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v5-r1",
+      "contentSha256": "8b45972aa93603113f143c87b73d8ac8ec29192a94b91f687cbcc135a28a85c8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v5-r1",
+      "contentSha256": "96a22baceb88caa1adfc06c23c2ee196e7a1c590b14fabe0e5320568b80a232b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v5-r1",
+      "contentSha256": "96851b0f7afab19a27e44bcdff87b0d38943975934ba78aed68a0148395f2a33",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v5-r1",
+      "contentSha256": "be15ed950d8499955aee3345b5ef088c3a554a5395a74a2080c6ea8049217ae8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v5-r1",
+      "contentSha256": "54c344cdc40c00e11f25ff90cf8227c5bbe72680a5e92b82decc29ae9ff4d808",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v5-r1",
+      "contentSha256": "545fae024b9f1ff69c3c12d1ba82aed9a2fe663e5c94d6b4f0a150e46598c035",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v5-r1",
+      "contentSha256": "16668ee8019144a4fc7f1874046261982054b56ea71d2d2a6882f5ab75c96fe3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v6-r1",
+      "contentSha256": "480dc1e8a510bb5a7c7d48a99fa4c2519241589cce50c2d5fce789e36287ca45",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v6-r1",
+      "contentSha256": "30a670c073622cd8f05639545788862f4201a0ac78baf3f9324040401236df66",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v6-r1",
+      "contentSha256": "f8326ce1c6a289dfec8d3f5ffc60bd9b0ea24a2b122e39ef0e04da846a1d465f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v6-r1",
+      "contentSha256": "be968d8f8ce52bb725a1af08fa30daa8811eaeda517e2a418f43e4c8ea766b58",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v6-r1",
+      "contentSha256": "f502545ecc0c2032276c2ed65ce990255882d23fdb998dfdbab923f651fb1fcb",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v6-r1",
+      "contentSha256": "5e030081da0f7374ea667b6949d112a52104f9226c92918d699ffde464929b1a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v6-r1",
+      "contentSha256": "dc0235387c890d66c34f2053e153a8063eecd598f24130a45dac237b656e35a1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v6-r1",
+      "contentSha256": "0d644194acb705d692ec17e7b3ee7e341b6d661ff1e205c3cf38b8202a06230d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v6-r1",
+      "contentSha256": "8ca009731001f425d37098c308a9eca47a91adec69c0688c592bc3b431fbadf6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v6-r1",
+      "contentSha256": "40f43f10f9732de4dd04abb8c614eae8e3e77e7f5458f05313b202bb45d85d22",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v6-r1",
+      "contentSha256": "f4f5fae792170e4ebf0a4386d2d2e8a7d419ba0913724bb625ef8063addb04f3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v6-r1",
+      "contentSha256": "43233eb2e948c53518f86da7a439c1db3f517ee2ce826094cb9c8632ffb69e01",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v6-r1",
+      "contentSha256": "8dd716d95a19f014c62106502ee4b78863b1ee8806ecc2e3757b1c355779ccf2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v6-r1",
+      "contentSha256": "00d03e114ddefc3db6b2b16b11da39eb726e1b8b793d94dcb196d42ac5838519",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v6-r1",
+      "contentSha256": "5ec27846a17219d162783483d823d2dcbf8cdc3af6ac8068fefb5665749c6f42",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v6-r1",
+      "contentSha256": "7b6f9567f4425b9f7436b51111d7792fcbea916e759807322767d33789fdfec2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v6-r1",
+      "contentSha256": "3f856c83086210284c3910bf88b7945f10a711ac491dcc7ce37895dc8ee27815",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v6-r1",
+      "contentSha256": "7f34a3fe71a43181a8a85c26238cb5bc5a1cda3d077ac1c7930cd2717a88333b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v6-r1",
+      "contentSha256": "d7e0f8094c02f1d20f28c40116b8a4a6c0161cd0ea747a2d97e2fc97b26b11e7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v7-r1",
+      "contentSha256": "28e3baed0b17523bfdfcbc2df2b9a9c898e4310ca7060306e6ccf068713e42c9",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v7-r1",
+      "contentSha256": "1af4c48086627659ebd2d5dcd5979c5a5c33223d06db32c16145ca92a284186c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v7-r1",
+      "contentSha256": "7fe3e25c49bae398c06bbb2cdfa888f165c4b48a37c0406dba33f4823415acd0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v7-r1",
+      "contentSha256": "c0296c0d424124d48e50bfdf124f7ce3bb20622e0b3a3c2378ee6230aa05d13f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v7-r1",
+      "contentSha256": "a9bba95bdba129b4ceb6e6ce1b13d5841d47d0413ce15981a5e7497116251a97",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v7-r1",
+      "contentSha256": "01b1e6c38bb71457d91077c1c410000f003748cb4b8ca976db4e0bb337d0d490",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v7-r1",
+      "contentSha256": "33304081159028afb31d23c150982b6d4c8f996c55f0c9f411a301cfebae23c7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v7-r1",
+      "contentSha256": "4fcdd66851e804e01a619a77bcdd5e671e863dab54ac60319bbab7e847b24d3d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v7-r1",
+      "contentSha256": "4401e64eea4b0d7fcea99f72d3239bff2f5a2674900150bc1ae309205ee1866e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v7-r1",
+      "contentSha256": "b8df5d42413a7b01b4fdb3f6da2740cf23bbcc7658acbeff71d0e4f28eeb8f36",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v7-r1",
+      "contentSha256": "452dcb5099602c98d28bef4e88aa6418b2f6ba044568686865c420422d5acb3e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v7-r1",
+      "contentSha256": "6c1a05a3e53aa3b4761061db14e4571fd9eb6cea10143cb5db2c2f55296799fd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v7-r1",
+      "contentSha256": "8213d2b4c062ac229715bf008bff85a63b420cea45846f3b3c4f2ee581ec8b3c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v7-r1",
+      "contentSha256": "345ed5ccb1df3854cd316ab28d0628876fc8266592e7f325e8a63ab4af60c28d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v7-r1",
+      "contentSha256": "105544c19e488316e96818506f1ce6f1de9d0f039faa0a49301b3ba91122b4ae",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v7-r1",
+      "contentSha256": "449bfbef7f9d5656fcacafb8a28c5e98560e8cfed77947df8d41b0c4477151d0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v7-r1",
+      "contentSha256": "b20b285d930ffc67561e586179c9a2c7b727ab05a7c6cc43091a1d78e8a5cb69",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v7-r1",
+      "contentSha256": "28727b2d7c6438aed7b1c3dcb08f009272634f6039e43d54605be9f8dd987a6d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v7-r1",
+      "contentSha256": "c65919826ebe6bb0c07e5d837d020db428781db9c0cee83ba3ee5972bb7f306e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v8-r1",
+      "contentSha256": "5f99b75cad8c489829482280b4995387e06f10fee804865045e0492a0141d645",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v8-r1",
+      "contentSha256": "b3bdad4d7858494026580c4e8396a7b5c96f8bddeacfa8e185fa3f5fe3b9c707",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v8-r1",
+      "contentSha256": "b7d6b83e43a103092b9889115ef45acabab8c050857f3f153812ca743910388e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v8-r1",
+      "contentSha256": "7cc22ae471c7bd918f5057c534f7031aa32c65410017380131ad11a7880394fd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v8-r1",
+      "contentSha256": "61e3b7f9de9c1a5e941e493561ac3a65b3604f9188d31f65b606a016d56324a8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v8-r1",
+      "contentSha256": "5ed2626043f6f14e860b5f197d3e4f9ca3df506dc9ab14d284e4a38fd65b6eb5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v8-r1",
+      "contentSha256": "bba9fdf3d27d339f9c135bbcf04e86e98ca6fad3f3647e369a4cc7b5fbada7c7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v8-r1",
+      "contentSha256": "78c144648e6c5224082866fdaa6ad37d1fa82a580b73d37755db8d8053198ac8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v8-r1",
+      "contentSha256": "4898e2e016b4e694c54b136191f08f04b1bf35cc7cad7617bd5ecade7f538eb1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v8-r1",
+      "contentSha256": "18b58935214106e2a1fe44476a30bb7bcde9ac589ec95470b71343813e137aee",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v8-r1",
+      "contentSha256": "3284559fb46ddfe3a786e6308587ed1983c39c9f5e86e8a14ffa4737d2bf2f87",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v8-r1",
+      "contentSha256": "546ecaca2eb3477f4836e274c82fd58431978c616789d0cdddd80ed558cf3b4a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v8-r1",
+      "contentSha256": "2c267ddf1bfcbe9ccfb0a50254688dad96f01e33a5cd40fbceeff9313db48925",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v8-r1",
+      "contentSha256": "26cd2bc27182e6f1b32c5c6e4b39522b2d3bdd605128f6a661e680172c2b84ab",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v8-r1",
+      "contentSha256": "17f79bb799184972f590265cc7cb591b8ce7fd4653624707747e4e287274a084",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v8-r1",
+      "contentSha256": "33b154da79c10d22ff856a222f4c68693f080dc1772fafb14d4fd94cab7ccbff",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v8-r1",
+      "contentSha256": "2d52165cb930f72ba9d7fe8e19ae91b28ec620c55679069830f06cb3abf6004a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v8-r1",
+      "contentSha256": "cab727e4eb758ab810d62f2023463b085fcb6b53527724cb2484e744bc63848e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v8-r1",
+      "contentSha256": "8baaf3ed955152c4c7ffaad6a59cd7bc895048248a9d6da1ce92c8c4d97f6ba5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v9-r1",
+      "contentSha256": "1ece0aafaebbfc3946f5e6ee91aa645d9262dded1bedbbc0240b06a4acd97673",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v9-r1",
+      "contentSha256": "78454ddb7b678824f57c6e6f360eb79367dac8689dd045e2112951b3973b93b2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v9-r1",
+      "contentSha256": "99fc021fc096d2d4f8313db78c4ccff47dced554ad30350200f4c1164976ea64",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v9-r1",
+      "contentSha256": "398a5b576b420c707d48cdd2aa6ff7e7a21b69c0e92ec486e98589b2100dfb7c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v9-r1",
+      "contentSha256": "79a27ee833360a7eb082ec7ce164b4dee69355d65f49420f6d09683f957ced53",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v9-r1",
+      "contentSha256": "f996732646436d58f67a8577c861be202d9dd1c730cec00e818426e125f7ec51",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v9-r1",
+      "contentSha256": "de7ed9a681d7862199dd5840052031c77c3328d5335ae60e83cbd5ad033b4f7d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v9-r1",
+      "contentSha256": "23860bd84d066864a43f17dc63414cdc333ed07faa4a7a8ae3d2e9e669b7c74b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v9-r1",
+      "contentSha256": "bb6fd899c7d1a47b3358716e8cdc33fb5e7f174dbc08001757a5e9078e797926",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v9-r1",
+      "contentSha256": "d35f4e02137e34647ba8e39b62a013361af6a1c74e2986b436e106d30b215e1e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v9-r1",
+      "contentSha256": "6439bd90d528c9fb513c18c4ff06b6a86bf97000674063b1cce413d9c3a0608c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v9-r1",
+      "contentSha256": "57f61b0dfb2fecaa17f579b911708b2b2d7035aacba7ebca434770539f165375",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v9-r1",
+      "contentSha256": "e8188f5c1b9024917991450742ac3ec3c09a5c34c3e8b1bee8789b20184f5224",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v9-r1",
+      "contentSha256": "0709c5ea8fc1bcc7b58bb7adafa8402f789d97689bd95bf0c5ba69d2359ea198",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v9-r1",
+      "contentSha256": "c2e822762496730fad3b2a44d91cd7aff4378222b57b469e429a5840976d0dd1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v9-r1",
+      "contentSha256": "ec1a1b66a0fb5abe7358a56feb5709f27b97a3ad472ea330d78f6600c4fff694",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v9-r1",
+      "contentSha256": "e751c176f39dd273b59b0144d48d104b961ce7b814d45ed8bdebbc4dfad45c53",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v9-r1",
+      "contentSha256": "b967c1215cc039a246a10f093d2b603a96357d4200929f15097566fa0cc37f2c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v9-r1",
+      "contentSha256": "dd37a110c1bd73903aade34151a9116935475891ea792754df8781eb01f076c8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n1-plan-perimeter-v10-r1",
+      "contentSha256": "9f817466c3b98973a7c1ec3eb3b873b169b2e55698da6d453b90079d623eb864",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n2-plan-house-area-v10-r1",
+      "contentSha256": "d5873699e5ae6d87ed228b820e5a584dfa07c83b0ec51c637b089f0240c2b8d4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n3-plan-lawn-area-v10-r1",
+      "contentSha256": "b0b44f8f136a2f71958d53cdf03db0c436f0ec0c55fc97e62816d04a2b626f06",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n4-plan-tiles-v10-r1",
+      "contentSha256": "1499e0c3ca7dc7e4f561038ca3c7f9aa8d840ec0bc11c39ee83a7184a001ffbc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n5-plan-fence-cost-v10-r1",
+      "contentSha256": "56da6c635c78f018356b383f5b9812013ec4e9f5e5fa38b481bab87c224f8713",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n6-fraction-sum-v10-r1",
+      "contentSha256": "3eb281b62e4eab755a6d5efefb1daac69537998c204c20ab1061af6d9edd5d23",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n7-root-interval-v10-r1",
+      "contentSha256": "561d0b5425837c0bea99b33f5a63b4fbe44ba1ae3be8b47081bac1b48fe96e87",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n8-difference-squares-v10-r1",
+      "contentSha256": "42201f7c2a432e6bd87881b2aff33b57b8c9434cbb1781af684b25e3c3b9e829",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n9-quadratic-larger-root-v10-r1",
+      "contentSha256": "f22efc788f74e46e39e5d1b4210bde2541adee7208b8c1fb28e1fa8adc66cb7d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n10-not-red-ball-v10-r1",
+      "contentSha256": "57c645aee7136ffce714412dc7e1b4a4a52e3c72fe9e3bc8441c88353c488bd4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n11-line-through-points-v10-r1",
+      "contentSha256": "410c946c54d44ab7c62232f5eb07ac50c1dca56f5fb7a3f497dfa8dcfc304ba3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n12-kinetic-energy-v10-r1",
+      "contentSha256": "a0fdbb1557b845f44d286621768000b970e91fba0f70aca0bb04869aeb01e735",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n13-integer-in-system-v10-r1",
+      "contentSha256": "514cdc806f662c09107758af2d4ffcd0bf87507fed64d92649c669c9060134ee",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n14-arithmetic-term-v10-r1",
+      "contentSha256": "2eb259b4578759fc66b5f148899dc4a05f88b32f388531b4290d8aa5da8dcdbc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n15-isosceles-angle-v10-r1",
+      "contentSha256": "b1f25614f39392cdebdf2ef338f62fba608694b1b4b11aadccd0b8b65ee44343",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n16-circle-chord-v10-r1",
+      "contentSha256": "032db6e2b84b2025d1050eef112d283e2d8e75bb19c7c11da85ed938b2c73492",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n17-rhombus-area-v10-r1",
+      "contentSha256": "f52edb96608fb42eb2bd35531469cfc7a80773f6b08f49ebd2b0b3fe0c2370f3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n18-grid-triangle-area-v10-r1",
+      "contentSha256": "0ea9bfbc2c6b91475474fc40800323661ef6c6975b6f8c22e13c3c185cfe796e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n19-geometric-statements-v10-r1",
+      "contentSha256": "8c0dfce76bcaadc43ab3ccd1560f286df3f1de55720c003b0aacc1d7ce2f711a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n20-rational-equation-v1-r1",
+      "contentSha256": "cc821876e497ddb11ee7c71b34638662346d1b2f49a3f2c1e4b6f048d97ab714",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n21-joint-work-v1-r1",
+      "contentSha256": "5a4dece295daf8ef968fa0b99298338e5a5eb8c48d41130232bf8c325a079760",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n22-line-with-hole-v1-r1",
+      "contentSha256": "401167237eeba288e1d5ccbf3f29c631f94e9510e2fb05ce39424841bcd4d039",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n23-altitude-projections-v1-r1",
+      "contentSha256": "ec26d6021bdab02367c63c6171000d1cdaee2e8409383bc3789378dbc176e08c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n20-rational-equation-v2-r1",
+      "contentSha256": "422d8807bbdfaf514bb50f6795502774843a71c48860d2d7d570e14f230b9eea",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n21-joint-work-v2-r1",
+      "contentSha256": "9da06791f5cc5362b7553a12985a05a9e54145da52c358956ff65154649beb1b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n22-line-with-hole-v2-r1",
+      "contentSha256": "d42baec0b5ab0443a3faca3fc6adb9719a318cab2414c2d43ea863b4966fa667",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n23-altitude-projections-v2-r1",
+      "contentSha256": "04e268f3fce70a6190a4da67d1194d90645f4fbad142a418f19102e25699115c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n20-rational-equation-v3-r1",
+      "contentSha256": "9bf74d7cb34061aa623700cca441385a5a578e28fd67f93b8c40c34a87ca02fb",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n21-joint-work-v3-r1",
+      "contentSha256": "ac83dc3e1895b509888d7e80acac6bb0d54503f2f09a5fb28ab15842a4c759c3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n22-line-with-hole-v3-r1",
+      "contentSha256": "7bb7325fc10f8504ffa6fae1a14fbe4a1e68ad61f31c95353856d06fcae8171a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n23-altitude-projections-v3-r1",
+      "contentSha256": "b99108083dc65c58295487011ac69481aec4744fdb6239212eebbdeb65b4ebd2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n20-rational-equation-v4-r1",
+      "contentSha256": "4ebd7326c19749fd433fcf832dbcf61a68139cd50a3f5f08dfbfe1d1c2a0f98a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n21-joint-work-v4-r1",
+      "contentSha256": "d4cafc461c1031b61e6df30df15733754fbee277d64614a52f990ff23624cb94",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n22-line-with-hole-v4-r1",
+      "contentSha256": "cc237ffc1bd682f6f26ad1f33a0b42c2439e6e789bf77f32c577d82acc3a2540",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n23-altitude-projections-v4-r1",
+      "contentSha256": "7412a9423f572811c0d4615f3ea4a15bd2b6bf07368b148aa5b371ac847368ca",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n24-trapezoid-midpoints-v1-r1",
+      "contentSha256": "7a926337d0facdedd04938afebabc54a9272c90b8bda56d75cff77ae17c96b61",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n24-two-tangents-v2-r1",
+      "contentSha256": "4313a28624d84127b9494fa680e4065aa49ad051e2d21420d33845ef821d7db4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n24-acute-altitudes-v3-r1",
+      "contentSha256": "3d18d48efa8c959ace1c347d4c21277e0fb26be25ef15837003b5ff12d2340a4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n24-incircle-tangents-v4-r1",
+      "contentSha256": "2dc15d3a94678db4405586e49e74ef70b5ae70ab1da97d189bc07da5385ca784",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n25-right-incircle-area-v1-r1",
+      "contentSha256": "008c67cd87edc3397fad01a2effd6e99dc92b7c7230a8161840054a6b9a8add7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n25-right-incircle-area-v2-r1",
+      "contentSha256": "c8a8077e73a60eb9a5e4f8a7e9c7d1a695fa943ce6521e68bf875d89e2d95952",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n25-right-incircle-area-v3-r1",
+      "contentSha256": "013cba7cc6dcc7f7848b481eeb40747d566f9f34ac02fd969f0f2ba6350b25d1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-2026-n25-right-incircle-area-v4-r1",
+      "contentSha256": "71b97620837db70e3a2d2aa6e2fce11335263fd4d28005429c9f8b3e8e20a694",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-oge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-right-triangle-area-v1-1",
+      "contentSha256": "d929183dd3d7a10816c215641724686d22a64ad4f4552a21c1a1cb88f06c3fec",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-trapezoid-area-v1-1",
+      "contentSha256": "b313669ea66a18d3165f985a6400e3033ab94517e069455b67f20d210812eb49",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-dot-product-v1-1",
+      "contentSha256": "83aa720d40d058e501a7a5e853872305af200346f8222eff2fad2fb88b2cdb90",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-vector-length-v1-1",
+      "contentSha256": "3724f28cf49298c560d5fa1dfd00959a08064d9c6799d608971e7d782bacd133",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-prism-diagonal-v1-1",
+      "contentSha256": "a0514789c2bca13e87a78c6f38deb6f671239d8d868cc8647815db68136ccc55",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-pyramid-volume-v1-1",
+      "contentSha256": "0364a091f3b45f911c505e4231519cdfa242b9ac42f28f93781d17409ab9afec",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-one-draw-v1-1",
+      "contentSha256": "ad08f723bab4be556778c96475c1dcf32640fea123e7e31cdd03f552d2a92ee4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-complement-v1-1",
+      "contentSha256": "25f499297a512ef6b40bc4d967704199d0f6064c2bff2be72f4c36c548e45965",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-exactly-one-v1-1",
+      "contentSha256": "04cfe2d931069e0167932e482e24ff75373ddb06cc5f98b960c880faa7d549c1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-at-least-one-v1-1",
+      "contentSha256": "efe777a93a3f64166ac25167a2fb25161a195694029c33760a51274f923a9279",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-exponential-v1-1",
+      "contentSha256": "0d9657e335425ddf74e15ee2cf01d4c977893ef6e3431d5b2077e595337b8f12",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-logarithmic-v1-1",
+      "contentSha256": "33dd1dc73d00ee060e1d50e14f05f3ec8774befb45382527e25aa94f3f117dd9",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-radical-identity-v1-1",
+      "contentSha256": "89c9ea257d842c4c3fed3e083f4b6fca7eb7105703857a3d70a465f9c159eb30",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-power-rules-v1-1",
+      "contentSha256": "805c234d8574b8844d96f515817e70c36d65341b14169daa8dba6a9c57d2cffd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-derivative-point-v1-1",
+      "contentSha256": "4ea173ab55a088fe9b444317cfea090f7b6e1475ff2341b78bcb2a677b3cdafc",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-parallel-tangent-v1-1",
+      "contentSha256": "28a5a71e79f925040cff3813745fa86122b4c9fb8a896f12841688e5f73edcf4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-accelerated-motion-v1-1",
+      "contentSha256": "37439c5f131643afc0ca1c3d40d24d96eabfbfca1847852e16b1af4e5dfc6ff9",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-joule-law-v1-1",
+      "contentSha256": "e2a0a06256ccd6da2df4c3ffe0ba67c9d05e491670bbe583e171ee0ced923f62",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-catch-up-v1-1",
+      "contentSha256": "a07be9dae199df296d217df797a0af5c21574c877c75aa5394ffc63148f2a872",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-joint-work-v1-1",
+      "contentSha256": "1bafba49e1d30aaf3bd19ebf6b8cf57d0f0c121ad8820bc8ef77e1b36599ba4e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-linear-function-v1-1",
+      "contentSha256": "dd6e8e9ffe11205ccb779082513f2a9b6949307d21376eac6b032fd141ae7b56",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-inverse-function-v1-1",
+      "contentSha256": "31c9dfbdbedb86fdbfcddae638325ceb4c4817e1f5e5c9ee86179c9d12d06b39",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-quadratic-maximum-v1-1",
+      "contentSha256": "e484583aec27cb834b18939950e20c40838dcd5c00ab416c96bac78a5b9bb3d1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-cubic-minimum-v1-1",
+      "contentSha256": "3ccacc0c3bc4d49f31200383724c708a748b860504e1c64de1315c840ed8bc46",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-right-triangle-area-v1-2",
+      "contentSha256": "24191fef5dc7d5550d1863408cc5d93a067759310a65073238a6fa5a5401b417",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-trapezoid-area-v1-2",
+      "contentSha256": "b14041a5a8e8b3d0adf0adabfaf3529492dacf763f1f6d8646ff9eb034874b93",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-dot-product-v1-2",
+      "contentSha256": "5c69cef1edb442d6d81092d3461da4c2662302caf9aaee30b749c5618a6da542",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-vector-length-v1-2",
+      "contentSha256": "c7763ec1d34843c7481b07d3ae4b11459cd3cf8d1e160b70a1f5dc8d966187a5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-prism-diagonal-v1-2",
+      "contentSha256": "c97513f7ef0f3634cefec3faa488b4a729fa2dc29cc43b689d3e61458905285d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-pyramid-volume-v1-2",
+      "contentSha256": "7e5c2a69e5f3a12fe8e4810d8fe7a58f66a220f87018c0d7e9a8642a314ccf67",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-one-draw-v1-2",
+      "contentSha256": "f850228014a2a5b2711d91229a4d4bdec4b0c6b23e2ba6eef9082e7493de4a90",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-complement-v1-2",
+      "contentSha256": "8d6b6c0278701c6e7d4b63cfc079c0da4dcd96b2c986a3accc9fd401d3fd6b7e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-exactly-one-v1-2",
+      "contentSha256": "93898ba387ae6b783a3cb563f0265bcb33f7f234997b4d9602dd656acb9cc872",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-at-least-one-v1-2",
+      "contentSha256": "89974ee2726151ec7372723771cb22a20dc32096e15addb0e052ac41eeab8049",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-exponential-v1-2",
+      "contentSha256": "fcecbdda8e6daaead62781388871589a2d633cdf753ef757e04039bead77b29e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-logarithmic-v1-2",
+      "contentSha256": "45fd26847cf2a45b5ebdff4f56a7cf6cc049545be1b1cf369b393da4a33d9995",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-radical-identity-v1-2",
+      "contentSha256": "d26640a8fe1c70dbb3de30008c0d6f1845ea2baf9f416d43d2bc0ba672fa7fe3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-power-rules-v1-2",
+      "contentSha256": "6d85203060c9b6cb2d4b51b0b6aa9e30fe8dc23e8c995c2561312cb590cde6a8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-derivative-point-v1-2",
+      "contentSha256": "ea6ad03c5cc4d9a71336967fae8202e7546453c13fa494b8a6b5d991487fa032",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-parallel-tangent-v1-2",
+      "contentSha256": "31ce92fe2d0ba12df0ff93a4dfe7457c7d2bdce3126c0040ca77b258e4869fc1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-accelerated-motion-v1-2",
+      "contentSha256": "775a7dfeb3d233c06370ffcdf58c335150b8098e87809546b93a905d03f16a0e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-joule-law-v1-2",
+      "contentSha256": "7378a0b60bf45c94504baf618b7660c9571e6c50d9d8f7dbe33a3e1316a8ba8f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-catch-up-v1-2",
+      "contentSha256": "cc789780708fed5716c61e29ec5be802e281a6d9c6ba3ff374a6bd2bcf049c3a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-joint-work-v1-2",
+      "contentSha256": "61cbd78d93d676542aa622535214821cf75faf224d0671604336cf3d0f54a2a0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-linear-function-v1-2",
+      "contentSha256": "073f89bf18e56a452647f83e40a8dcab4708bcb1d415b5701b082bdc3d34859b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-inverse-function-v1-2",
+      "contentSha256": "0cb7efa617741e46abe965825320c2fc6a9c2d540adc71496dae802dc4517e42",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-quadratic-maximum-v1-2",
+      "contentSha256": "4f593e1cbc0552a1c36f91f1d5feedf4999ef8ac430c05ec1760160ddb3f22ae",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-cubic-minimum-v1-2",
+      "contentSha256": "e61a6c7b46e0e4f3fc853fce3be82c4ec7c6afdf2bf792319f21c7e14a4d2c4c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-right-triangle-area-v1-3",
+      "contentSha256": "13b184a515745c445769a19541cb990374864dda4c0a915e0698bd827cf3bf22",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-trapezoid-area-v1-3",
+      "contentSha256": "91410af2263fdb504e3caa6320c6c2db265d0799e683dbe14f5b8864946f9d58",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-dot-product-v1-3",
+      "contentSha256": "90c81d856d66a2e5db860faca6c52c9fe42aca69c8f0488892eadf6b2d8a50f5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-vector-length-v1-3",
+      "contentSha256": "c7fe55fc653364ab4c6cb5f6c664dc79512b00756e5ada3e6206bf55eaed7ff6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-prism-diagonal-v1-3",
+      "contentSha256": "b56e9c4ff83672caef51bc2e4d563b0a2d0e209789073b1c4e0727185913f0f6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-pyramid-volume-v1-3",
+      "contentSha256": "fe33aef437db2d13d2d10e4f822a20a9e07512c27a5bcd176671b1441d58ddba",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-one-draw-v1-3",
+      "contentSha256": "da8bfaa0d07376544045e370494008eb5fd6ae6747495c4a37e93def4d34eb94",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-complement-v1-3",
+      "contentSha256": "dac2b1b3fcbab108d0ec73b6752bd5638fadea29dc362a3e962e5adc766db488",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-exactly-one-v1-3",
+      "contentSha256": "ee08fec1bd23fcb87b15910acb9d57fc8937e303beb06eaf97109439aa60e9f2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-at-least-one-v1-3",
+      "contentSha256": "437da17dedaf3873867365ce8b1c5107b4b09357b7030546fee0b2827d640bed",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-exponential-v1-3",
+      "contentSha256": "951982388bfbf5f85c5579a35370d1e990cf9bd39fef0155238bc4d85e98a2a7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-logarithmic-v1-3",
+      "contentSha256": "7b3bf05d1e6e173a6fbed068bcf56433841c5710e3f010f5e5fb9c46cfcc0c50",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-radical-identity-v1-3",
+      "contentSha256": "b20668783f225383b3535319da8ebfb35a5f264f0499e6282df45b72cac2c99f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-power-rules-v1-3",
+      "contentSha256": "16b645e9fd83b0de15a97d984f622c0b2afbf5393763297d8dc7173a7bfa17e4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-derivative-point-v1-3",
+      "contentSha256": "baf94deb694f0203e24cb73b0d69094c953a3e652be55df62ef9f8d7c28b8009",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-parallel-tangent-v1-3",
+      "contentSha256": "86390a3da1ec1205b01afdab550049adf34b8b4810e699f4c9ceab247f87bf98",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-accelerated-motion-v1-3",
+      "contentSha256": "ec9e7c14178056b857d6cde125a67bd1db77379a7e87e1a48ab0a0ff7bbd9026",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-joule-law-v1-3",
+      "contentSha256": "d6f4f1d29c9ef5eadd851c40d4937c2734dd69f2a4b8d28dbe3e76b69a007716",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-catch-up-v1-3",
+      "contentSha256": "65f06fdd6662c312e02f1163e80ffc245e40bde71038651f9523ee95166cc278",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-joint-work-v1-3",
+      "contentSha256": "bca5abbfd6f1a812916f552bfc76019b9d9d4462723891d3753183127db173e4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-linear-function-v1-3",
+      "contentSha256": "b1c2c3d91f622672f591513cab51e5840a59cd21eead4b28061def1c1de08900",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-inverse-function-v1-3",
+      "contentSha256": "5b012a95c57599b190d6d2ed40b70d62a0affd6e6ee76c563d0a2cb1afc23b6f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-quadratic-maximum-v1-3",
+      "contentSha256": "3b7bb855f47a3ac79ced4ac7f72ac6963a6db031d6fbd473273682565e6b34ed",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-cubic-minimum-v1-3",
+      "contentSha256": "c9c1554f076dfe5b7e709ddd9d694fd0e4f0952415b0cd926d2a0a6610dd1e32",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-right-triangle-area-v1-4",
+      "contentSha256": "c97b745797a82bf2b4ce106e76745006d00c7021bd96cf92f04f08f3553c2cd6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-trapezoid-area-v1-4",
+      "contentSha256": "741b96b08a078bb1fa9fb6b5a9f6013b3194698d3595a6e33ca57d05d2ac34a0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-dot-product-v1-4",
+      "contentSha256": "6db478520ca9e0b875238f329f196751169e29b91cf5f720ed7290907ee6c0b2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-vector-length-v1-4",
+      "contentSha256": "b3fa54b44563a40197bc445867d4c27f9516d912fc22bb6e8c216e097024297a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-prism-diagonal-v1-4",
+      "contentSha256": "e9c4c71b9e7c8c7a23ec843ec5b42719f41de240e9ff432917f797b2292516cf",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-pyramid-volume-v1-4",
+      "contentSha256": "7695060a762422f6da8740bf2e944be4f64ee60801a763c5d112c05d531ae438",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-one-draw-v1-4",
+      "contentSha256": "3f3fcb9ec178e80d379c79a035c44abe7db735ca7d161a8ef34e026ac98f0c95",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-complement-v1-4",
+      "contentSha256": "a6fa6c79c1a1278aca1d2cd616ed557746f507802b8d5310ba44ca3cb97b9052",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-exactly-one-v1-4",
+      "contentSha256": "127ca52e9f2a68ebcea07de6602e616a9fb06519af6d5d0516a1c42fede00b29",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-at-least-one-v1-4",
+      "contentSha256": "d2dbbe4d2acb50b4a03bff156a489c96dff1e61f7bfd405878ce86e32b12bf9d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-exponential-v1-4",
+      "contentSha256": "78c545dba60e58418115f9c079bbe27d0fe16cdd08e2ce5165a3cca7566755c3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-logarithmic-v1-4",
+      "contentSha256": "79867bd3d33d6dcb0ecf9898cfe1871795229dd5dfc13c28a146b684c899ac57",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-radical-identity-v1-4",
+      "contentSha256": "0acf68dea87399f341f2bd6c6c59f4c9a8d522816e0d60653197aa471fb036bd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-power-rules-v1-4",
+      "contentSha256": "7fb2fe6a32325345bd700e29d93e40845abc029526f6bbf16c989ad86e1c4eb7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-derivative-point-v1-4",
+      "contentSha256": "95762987c2365f17cae304d2ef5446617f19b576c9b165f1cf155168419af7cb",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-parallel-tangent-v1-4",
+      "contentSha256": "315a2c51c3487946fdc6a26b89007c975aae40604a7bc19dbace8ca0b922a196",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-accelerated-motion-v1-4",
+      "contentSha256": "8428beb2359f7d35e45a3c9ccaa91cb13dd364748597d4d41d3f396481ce1ea5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-joule-law-v1-4",
+      "contentSha256": "965f93696189d5cff425552dba187f28d7a92afc3f2d8039ec838cb6a79d039f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-catch-up-v1-4",
+      "contentSha256": "48a242ebe518ec8851be3d570afe1343e1ab95e719043696ce39ddea3f67a8af",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-joint-work-v1-4",
+      "contentSha256": "51952c4c18824cc07e15ac096404f7b9ce5345410f3678328eec67043482faba",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-linear-function-v1-4",
+      "contentSha256": "3263bab0639a7858d6c66eb38c9f6d36a6075b34b9e31a451c9ebb21f9919fbe",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-inverse-function-v1-4",
+      "contentSha256": "29e0b3f953d06ab552450e41e7b2c4b6106eb80ecda9aec6dc31c92f296bc970",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-quadratic-maximum-v1-4",
+      "contentSha256": "def591c36e97a93d19f5432c0d7f524d51f5484ecd39a558f279dc614237a0d0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-cubic-minimum-v1-4",
+      "contentSha256": "dc17dca71934bd4c1372e7f70f66fcb363818ffd3d21de44d6720a55112a901f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-right-triangle-area-v1-5",
+      "contentSha256": "0cbf29bc1312e02efca90a5fdd9ac59278e03a93bf989d7d2ad1fb8a12875e7e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-trapezoid-area-v1-5",
+      "contentSha256": "fc040b2d09a3d42610546fe1a5f82876a4c0d34dbbaa663e7e96615ce8e9090f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-dot-product-v1-5",
+      "contentSha256": "4d17e139f219fcb753e244475d6950a58ef4ac72300a67489e75cdbdee21cb11",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-vector-length-v1-5",
+      "contentSha256": "aeb1eb066beb6cc232008b496b03d658ed95457db0d02967fcbabf6537287cdb",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-prism-diagonal-v1-5",
+      "contentSha256": "b611ab94a96b085af4da60e06a43ac02655f4c1c80422ace1b4038109ac1afb7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-pyramid-volume-v1-5",
+      "contentSha256": "0108b3216a2b798189bffc285dd41f15d1882be7d995c6c95ffd17961f6eff38",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-one-draw-v1-5",
+      "contentSha256": "296c9c514ee74911cc6c4b5ede8ecf15524f7eae8b0f6ce85ca533da5bcd4f78",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-complement-v1-5",
+      "contentSha256": "ebfcee17d5419a4b2da73d9eb50061dcd3bbe5d7bcd3e06585aa579c3f66c97c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-exactly-one-v1-5",
+      "contentSha256": "dbb5323a32afc312edff92142ad615d84d65942a35dc6f8f584e940b944af487",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-at-least-one-v1-5",
+      "contentSha256": "003c57f2c309ed183b8062970379997267e00fdd0b050101868997bad698da21",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-exponential-v1-5",
+      "contentSha256": "2af665476beca918e48aa73be93b917848fd1e4ce19432c0877d364dc05e2d5e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-logarithmic-v1-5",
+      "contentSha256": "796cac1ba6f64a818ba179c2311d2d91e204f1f9bacb63be0cc2e91bb001e95e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-radical-identity-v1-5",
+      "contentSha256": "b760e02fb1e9616e9832f77a87827c815eb08fc68ee2a250ba32a4f6c29a3d1b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-power-rules-v1-5",
+      "contentSha256": "65694f786e79d301f50d30f97d7048fddb7280af37b9b61a53fb60a08e31a7d7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-derivative-point-v1-5",
+      "contentSha256": "80f5547c7f75862eed395cf778020fa86e438d60456838243a66ebdd224ae514",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-parallel-tangent-v1-5",
+      "contentSha256": "7d15cfdff8d6f1222651c6a94f482d08094dfe6f0d507da2e303a679efe4e447",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-accelerated-motion-v1-5",
+      "contentSha256": "8596dd580ca1e4357ac2e6f3c169606826b9559da76c1d46e51d1a72b898f46c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-joule-law-v1-5",
+      "contentSha256": "d1c425bd58b9a55cef14ae45922d6d3fb7ad279ea140bf1a04271940254f4eee",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-catch-up-v1-5",
+      "contentSha256": "b703dbe11c54501e10349d50fa127dbc28fec03d7c7373f908ef582d26b39ba4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-joint-work-v1-5",
+      "contentSha256": "70cdbfb7353ceaae128883e8d4c5e7c2ed352e6c675441c06e0973a095e3e490",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-linear-function-v1-5",
+      "contentSha256": "0a4e77a54ca4fe1272f4434ddb23e9016b409788ac62ce9a0e18d4d869be21ea",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-inverse-function-v1-5",
+      "contentSha256": "9c06104225acc7316764b9a9f8a62bfc78af2db1a5866d6c83e2d171e9a42bc6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-quadratic-maximum-v1-5",
+      "contentSha256": "ef852cefe7568a3c70cfabe919830731519bc489af8784fc4cc2f9cda3d35113",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-cubic-minimum-v1-5",
+      "contentSha256": "3eadc39c1957866cbeb92c872c0ded83e57c144b16110704179bf3dca2101180",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-right-triangle-area-v1-6",
+      "contentSha256": "94f94877839a39cebb2b179ceff3bdd047cb764e3e53a4e799845b2052f6c59a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-1-trapezoid-area-v1-6",
+      "contentSha256": "51e224580fc9388fe87261edbeef06bb4d25b1212086bad4667b900c535b923d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-dot-product-v1-6",
+      "contentSha256": "c98f5076a9f107202afb37fa1b017ef2fe90b97dc845b1ebf0137b2acd7b3c0c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-2-vector-length-v1-6",
+      "contentSha256": "5890a0d19c53db1eaef48725525624c73109040947c5dfee6cff11a5bb595664",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-prism-diagonal-v1-6",
+      "contentSha256": "f67f9b37381b7f298311e24e34b2197251afddff60b15a477d0458e9b189d83a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-3-pyramid-volume-v1-6",
+      "contentSha256": "33e29b675759a77cb4982ba7f9bed305e5d42ee7df6a83871d1d8de21ef84293",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-one-draw-v1-6",
+      "contentSha256": "d4784e96ea271f17726001c1b6438a0fb56672856fde60dc382f987b5627b323",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-4-complement-v1-6",
+      "contentSha256": "94393cf1a5bd7cbf7d97e0f6b9b9aafd6f0293dbe0e8adbf56863e21590e5f30",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-exactly-one-v1-6",
+      "contentSha256": "aa780f146912302e1d97485ba59d0880b396f2670b03277c00a63ce075f52f39",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-5-at-least-one-v1-6",
+      "contentSha256": "45258e24f89f7fd7b9c0bb15bb4ede00fbe7ae0fa024e37114d1cdd998a74280",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-exponential-v1-6",
+      "contentSha256": "12b3bea6c47a04fb98e484570bda57101baec039b5e88b484cc39cffdc645228",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-6-logarithmic-v1-6",
+      "contentSha256": "087b34d4295ccbea5d20ee51876fb1237d6b26fa59067df242dbd2ea35fa132d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-radical-identity-v1-6",
+      "contentSha256": "9d4c776e4966d5173d0500541863ea66889dd49b28f2d0ca543f1c5b0c08e9de",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-7-power-rules-v1-6",
+      "contentSha256": "ff5bae25409a1f55623ee1bc0d0565f6c7259eed9a368a93ad499a30f0d0d343",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-derivative-point-v1-6",
+      "contentSha256": "9b4332e1b660d230ff8b5e383d4b7af7a4146395b71eb4400e15364b9b8a99e1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-8-parallel-tangent-v1-6",
+      "contentSha256": "141785bfd58e64dbd3b34eb1839231ab88e8d3f8e7d4cd0f6f99e20fca9deb72",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-accelerated-motion-v1-6",
+      "contentSha256": "43fa6f51d4972a2dab0d91e99ba17618ffc97bdd827953c97188104fb1b42914",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-9-joule-law-v1-6",
+      "contentSha256": "73c337824449111c31cf2ba5b7c07a99cfe17cf84fd520c4ce22b874b9b104c7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-catch-up-v1-6",
+      "contentSha256": "dcaf410923378a9d4d78fa10a780aad2145d140c4e5946e3c46ffdeee554abe8",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-10-joint-work-v1-6",
+      "contentSha256": "ffed495c3281fa410ece685b8c48a52156cd6c08cab55eaae223a2a29c164973",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-linear-function-v1-6",
+      "contentSha256": "ea48f4d004f20d06a2e045162131c84583dac06a3a506ca95fd673886e1ae96b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-11-inverse-function-v1-6",
+      "contentSha256": "dbc20e4fb15c10f69073bbb067919b140ab6e990fc8b0f2f9df956b5b142d35a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-quadratic-maximum-v1-6",
+      "contentSha256": "868dae4ab245a495091a42a3dd4018009747cb2abd4d05d797bf75382b87fc77",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-12-cubic-minimum-v1-6",
+      "contentSha256": "f4d6b815ce8b2adb1a3b9e1d38c324252eabea6d0067116d2e95a80d08778c18",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-13-trig-roots-selection-v1-1",
+      "contentSha256": "276c2a6b362176561f4635c4236aefe32e20fa75a592aa0d16ca83fc3e9ee353",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-14-prism-line-plane-angle-v1-1",
+      "contentSha256": "1655ec94d05bb3ed11eb569e1ae80bf85310ce8e9765f6764900aefb27751fb6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-15-rational-inequality-v1-1",
+      "contentSha256": "37e5fbaaf23ed8f66f982ace4ff0109ba2841c196e798a63b9a9654ab24eb6e2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-16-loan-equal-principal-v1-1",
+      "contentSha256": "1c906cb73563abf63e1f96bc3a07bc00d1f7b198ca97960c310e2a558a865de5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-17-two-tangents-area-v1-1",
+      "contentSha256": "b62dff12417088d8149bc1a0cc380da443228a760bd4855e9c7ed88521578ec0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-18-parameter-positive-roots-v1-1",
+      "contentSha256": "0163f14ec529778157433125a1cb9497d4b2f17613fb3c962e9c28dd228c8d9c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-19-integer-product-shift-v1-1",
+      "contentSha256": "1e573bc391cee9016f75d099e7819c3ca55149724576441d99457b2d62c26189",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-13-trig-roots-selection-v1-2",
+      "contentSha256": "44243a79bf9e2b5e213d8ff90c63cac675b85af78520c0097f863384bd14151a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-14-prism-line-plane-angle-v1-2",
+      "contentSha256": "c26f689466f3f142d34b84e16d6d33b0d2cc94f85b223db9e623e837724dd11e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-15-rational-inequality-v1-2",
+      "contentSha256": "c455db145d461a84bd727ff15d30ccdb31ee941d9c21c1612aad2693ac749255",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-16-loan-equal-principal-v1-2",
+      "contentSha256": "59d2bd3a934ac04db4276c7d092e739bce19479a11ef1972b2902be7ce3c3fc1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-17-two-tangents-area-v1-2",
+      "contentSha256": "cce30fdd387f60b8e68985a5f7afe50015e3363f52d6a6360c127c5b3326c802",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-18-parameter-positive-roots-v1-2",
+      "contentSha256": "22d7ab034eaef6dc37070c8c0178ea245e732b2b11476b41532ef8e3f794c0c4",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-19-integer-product-shift-v1-2",
+      "contentSha256": "50a794c02c786e9a206f2dd75827ee3f63cb131a21c58134c8fba2379c2cda04",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-13-trig-roots-selection-v1-3",
+      "contentSha256": "cc37f8967460ff37b303a0b0373876b6ed00a535a582ae7ba934c2b30c38db2d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-14-prism-line-plane-angle-v1-3",
+      "contentSha256": "fa7dbcd19a66effb67d9268ff376d1f25e6a4bcd9fd2d341742206860f8f74fb",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-15-rational-inequality-v1-3",
+      "contentSha256": "a9e90f1ccea6b609e5e530a590af251bbc263691e0be81334c96c6d67f17ee9e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-16-loan-equal-principal-v1-3",
+      "contentSha256": "6c25241e52bbc2105a1cad5b2869d155adda5f38187ed0203d15c95a9bf73350",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-17-two-tangents-area-v1-3",
+      "contentSha256": "aa87620633597a3ea3f05f2e5fee9b4e63ae018f0d3d44e8fcd0a519af45c0e7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-18-parameter-positive-roots-v1-3",
+      "contentSha256": "bb82b4331aa5b2cc165d1c4f10c462eda9c2cbb3840e616662aeb952206b290b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-19-integer-product-shift-v1-3",
+      "contentSha256": "2dcc90fbab84bf3de2244a6fe44c2f844a6d1c163f0dcf5187e9942f4081f54c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-13-trig-roots-selection-v1-4",
+      "contentSha256": "305e1e67086ccf7c9ca30b9da322ebd47a78c2216ca5b56d1a62b5b91c0de24e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-14-prism-line-plane-angle-v1-4",
+      "contentSha256": "854a2de7a32ca139a5dea23d0748474b46b20e41a378cc989837b361d49962d3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-15-rational-inequality-v1-4",
+      "contentSha256": "76006bd5e01a21c67d0013a6be857847ff1215999ba86bc08fc2e00de8148144",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-16-loan-equal-principal-v1-4",
+      "contentSha256": "11a69ab927f36f81617fce197e35ef78e6b6a5496715cd1ec1f3a84205f8bb6e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-17-two-tangents-area-v1-4",
+      "contentSha256": "fe7b9968c8340f2c8ce05d33d5d12255f2d45417d546583e1cb7e95b688ee566",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-18-parameter-positive-roots-v1-4",
+      "contentSha256": "7526e19550d95e833e51010c8afbea01e6b6aa901400a113bdb9420b182e4f82",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-2026-19-integer-product-shift-v1-4",
+      "contentSha256": "7d196394d3119ebd9706f76a20c2c6930aa72f4c813c8ef7add84cb3feac81f5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-ege-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-6-multi-step-fractions-v1-1",
+      "contentSha256": "3422767e29de19c85bb11ba6b81f9d552a8f57f5fc7b12bbe77d9f4254511736",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-9-rational-domain-v1-1",
+      "contentSha256": "7c84fa75649fcacb46cd349614d2ecefcdeb978cd59dd711f72920977c059737",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-6-logarithm-domain-v1-1",
+      "contentSha256": "b84f3698b499066f58f0fbaac0d6112083e709524c435dfc83374f456a58085f",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-7-conjugate-fractions-v1-1",
+      "contentSha256": "7163245dd63d9385536523b587dcf765749a31ade87034242ade6b3ad748c31b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-6-multi-step-fractions-v1-2",
+      "contentSha256": "baa072a996115edf2a2b61a7491aee791177398027d327cc09d441d00a12f2ab",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-9-rational-domain-v1-2",
+      "contentSha256": "cfa6df73743c9206901b26cf42cfdbeeeae5a6b911f83a9b9f207672a39a5cca",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-6-logarithm-domain-v1-2",
+      "contentSha256": "9d8402b4e379fbe5a2694c0050dac30ec01f30a99d5302ac18f70ce15b7adefe",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-7-conjugate-fractions-v1-2",
+      "contentSha256": "76234d5932d49c24fa0e965762fbbe90af05a7fa2a89f5c5bf0809826957b315",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-6-multi-step-fractions-v1-3",
+      "contentSha256": "b8315dc855311f27ce122dfdbdfee5e167779450fe975fb87091a2593bad37fd",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-9-rational-domain-v1-3",
+      "contentSha256": "cbebe55e03c8917eda1fa52f2cad24727bbdf7fa3a1835bdf6a2d7fd0a9a26b9",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-6-logarithm-domain-v1-3",
+      "contentSha256": "dec83c825555946eca835ab5d6a130180025f340d37450c99df51a1162e0f603",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-7-conjugate-fractions-v1-3",
+      "contentSha256": "cd396a4ea00992da630bb78b4263569132a208a7b5e585950bf3364fd542c762",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-challenge-bank.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "fractions",
+      "contentSha256": "7aab37c7336719fe90c97a62f94767b589829f0f1db73ad112bea0c221c1e31a",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "decimals",
+      "contentSha256": "7addc71629433630847bdc194d2f6a34fe48d8f4f8336577683e183104b59e02",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "percentages",
+      "contentSha256": "9b2b1c124f74a1591dacfec1cb0d398ed14f0f5922b7807ffea867113863b464",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "linear-equations",
+      "contentSha256": "9bc2f016e93e23f97124b2f947fad9aa56797e26b51a034c9d732afe609305f9",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "quadratic-equations",
+      "contentSha256": "5dcdfbcaa37f6c238178f7aca6cffac3edd63f3fd7c623e7a3cde06b7a820ff1",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "powers-roots",
+      "contentSha256": "c7739d969418b60096e1b6651e844f6081db204f5ca57388f9ec5df6751b5440",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "geometry",
+      "contentSha256": "8bff0451f49d249c33ec9dc4e1ec44baa8e1ac767d1e6c16f5aeae951ffa7272",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "probability",
+      "contentSha256": "0d9ebdc37d8c70e6dd84b1c672086aa611aceb66c710f26b1997bfaf4688acb2",
+      "reviewScope": "foundation-automated-checks-and-independent-answer-review",
+      "evidence": [
+        "scripts/test-number-theory.mjs",
+        "scripts/test-foundation-learning-checks.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-1",
+      "contentSha256": "6e656fde1417e53d3c50250c5a36b05f56d6c905e38c4cf8311a30326bb1e9a2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-2",
+      "contentSha256": "93466ed770bd7e1c9552d7509afb1ecb5c0883cbf2a8e40e5a8f3d8340da797d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-3",
+      "contentSha256": "7144bbcbc1f3f9fce499cbc6237374c9818510184fb2b0d0a711047579c2b33c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-4",
+      "contentSha256": "0ba8b986cc6baede2934da6e83abafb2cc2e27536b057cc2c295202e7d1e2437",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-5",
+      "contentSha256": "06f21252243fcaf623a1b20d2f2706075d4577c6c1ecfc4dfac7d247150ad5b2",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-6",
+      "contentSha256": "6bd609d2807d39ae74f3592e3cafd16b67eb843e7fcc839babf83983d2dd3932",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-7",
+      "contentSha256": "2bfbec4281783075c7f9b4c43d833023bdf0699a9effc19191dc3808b76c2cf7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-8",
+      "contentSha256": "fe65047e2e9efd20f582c978af986d260ed0873d8209b87f2b2392fb78c854e9",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-9",
+      "contentSha256": "a5d4a4b144e26d0f1a88aa2767a9aa1294aa0d82b28c84d5d50c2d24c55af918",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-10",
+      "contentSha256": "c3bc6f4df498bb34aa6db4b085c38a167cef10d49314830dabffa0a7df8e7d97",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-11",
+      "contentSha256": "432635f2f58b7a8615b67478f750b9bebc3a7f4e80ce6b9e2ee282d6066ffff9",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-12",
+      "contentSha256": "950e5796bdb4f4eb2d3dad00a1f302b374dc322d25e472ed5ac3d70a1b2ead99",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-13",
+      "contentSha256": "a4f0b294ccad1896d36ab744fd36291966a2e97ee4d6494c712dce901de9ba85",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-14",
+      "contentSha256": "7188bb1394e9bf58e12eece67eef43180b7514210ac4db350218d6cdd3abd995",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-15",
+      "contentSha256": "49b0a09276b9bce66009965c92a66aaa94814277f3e98e8134f85a312dc1efd5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-16",
+      "contentSha256": "dfb8b7540a2116cabce72b9bc2349e59255c8ea602c466bb2463d55d2811b29d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-17",
+      "contentSha256": "6ec547aac7c1892d37cc0db754edab2f005d9a3df800b263b19b092aef786ac1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-18",
+      "contentSha256": "a1889a9280562418bb9e353a6b5710f1d19e52fe1f99ff84dcf4281b90f75e70",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-19",
+      "contentSha256": "1b7faa632c1721625feb8fca099e26fe4ab91c1fbf098818a1969b114d88d230",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-20",
+      "contentSha256": "dc957541ee7817583d9d9b1d759506ccaaac6874acab8c0c11cbf39a2ef73ae7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-21",
+      "contentSha256": "87d0668067f29fdb766492d87f249b2fe1d6df467865cd291513d52c6db14dbe",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-22",
+      "contentSha256": "743fe62d407cb776f93ccd5a7bd008f6d4f64709370f571c50193a4b95c8e43d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-23",
+      "contentSha256": "d97f9852425ff9237212b60fa3974562c61ceacaccd67493d3988511b6d189a0",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-24",
+      "contentSha256": "511ae443e2b682d60074b019c79a561cc06a3e9bdaee92e2db01089c62fe3a2b",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "oge-number-25",
+      "contentSha256": "2666823c274239f189ff3c8eaec7c7570fce3701529390da1c0d3f7b598f5c24",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-1",
+      "contentSha256": "1954d6a68f435f6def6e306f51bfd4384169858da081625b6132af642045000a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-2",
+      "contentSha256": "9c118a982d032d5f67e9d0ab98794f39e83bf4d0f115c4eca735e882214d08d3",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-3",
+      "contentSha256": "4deefbf48c6e685f4e5de3c4677ded9277c5557e91343abd45e50b7519e44186",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-4",
+      "contentSha256": "c77ad5d9ba28e933df0395c2d1d112981235645164b9eece436371b5a2337255",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-5",
+      "contentSha256": "4f96225fd706bbc99273325fba12db24e0f46897fdece3454c765f53e3e7b084",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-6",
+      "contentSha256": "1be037b6bbc5fa5975d9775518d752f6063774393498636261f8851c15e3a00c",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-7",
+      "contentSha256": "63c4b61c39f9aff284bfce46300e892072ad2f96ec3b6bfe441fdf58c68b75b5",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-8",
+      "contentSha256": "78f65ed14c8d3f46538501f1457c13ec0f4872058b9d783e82b024f6c8458e04",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-9",
+      "contentSha256": "ce8bb9ee6b9e11a5313c77325f398ada69f80355673fc50aa17a1810d7313e3d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-10",
+      "contentSha256": "fe595dd087848f4846e8d81f17effd84216f51483817198bc0876ae240c271f6",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-11",
+      "contentSha256": "2aab1d226bb857050630dec7a03584f9d2f374637f8f8a23c83ef21b44d613fa",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-12",
+      "contentSha256": "68397cd152e234845ed788e67aa9c7056e14d8cf8d4dc7ab9acd8fdcf17eaf7e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-13",
+      "contentSha256": "a298c17594cfb51a90715f3497b95dda7a14f5076bbf95a03acc9da11f0f12db",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-14",
+      "contentSha256": "0fa420eea03174cbaad213e2f2e63390bd6029e983d0934c802f3a0598716f9e",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-15",
+      "contentSha256": "217f6b715dff2ea1695853f0e54a3d0e6de5615ac2233a90413a3204e6f2759a",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-16",
+      "contentSha256": "26a080cb39eeae49dd5b5fe203891360729e0cb920e649a2d69e0c0a698b655d",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-17",
+      "contentSha256": "4ab9e57380b73505a394efba0e9245addc4bed7dafad2bdd1081e7574332b3b1",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-18",
+      "contentSha256": "a07e131d1373719e09b97b43af3e190c61d7b4842057ded66e30808a7ce587f7",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    },
+    {
+      "kind": "theory",
+      "id": "ege-profile-number-19",
+      "contentSha256": "f1a6fffa4e0806702ba02603bc0bc924595ec109f07ea9375e59bdf9fdd5c9c9",
+      "reviewScope": "legacy-collection-automated-checks",
+      "evidence": [
+        "scripts/test-number-theory.mjs"
+      ]
+    }
+  ]
+}
