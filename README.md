@@ -1,9 +1,9 @@
 # Точка — GitHub Pages
 
-Проверенная статическая сборка исходного коммита `c40694b9eee4fb1a1786f7530323defcad4b219b`.
+Статическая сборка существующего приложения.
 
-Сайт: https://booshish.github.io/tgminiapp-ege/?v=c40694b
+Исходный коммит: `ca6389adcb94c126b356e6e15fdf24743af15a59`.
 
-Исходники: https://github.com/booshish/tgminiapp-ege/tree/main
+Сайт: https://booshish.github.io/tgminiapp-ege/
 
-Отчёт: https://github.com/booshish/tgminiapp-ege/blob/main/docs/mobile-density-verification.md
+Отчёт: https://github.com/booshish/tgminiapp-ege/blob/main/docs/mobile-layout-verification.md
