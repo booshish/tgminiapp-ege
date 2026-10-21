@@ -206,7 +206,7 @@
 }
 
 /* Phone density; tablet and desktop retain their original spacing. */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .catalog-level-card,
   .catalog-empty,
   .catalog-theory-link {
@@ -297,4 +297,30 @@
   .catalog-number-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Phone hierarchy: selection first, optional practice and context after the list. */
+@media (max-width: 767px) {
+  .exam-catalog > .page-intro { margin-bottom: 16px; }
+  .exam-catalog > .page-intro > :is(.eyebrow, p) { display: none; }
+  .exam-catalog > .course-picker { margin-bottom: 12px; }
+  .exam-catalog .catalog-level-card {
+    padding: 0;
+    margin-bottom: 16px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .exam-catalog .catalog-level-card h2 {
+    margin: 0;
+    color: var(--muted);
+    font-size: var(--secondary-size);
+    font-weight: 500;
+  }
+  .catalog-number-mode > .catalog-list-heading { display: none; }
+  .catalog-topic-mode > .catalog-list-heading > :is(.eyebrow, p) { display: none; }
+  .catalog-topic-mode > .catalog-list-heading { margin-bottom: 12px; }
+  .exam-catalog > .random-practice-action { margin-top: 20px; }
+  .exam-catalog > .streak-summary { margin-block: 16px; }
+  .exam-catalog .catalog-card-status { font-size: var(--secondary-size); }
 }

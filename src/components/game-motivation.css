@@ -211,7 +211,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .game-section { margin-top: var(--mobile-section-gap); }
   .game-card { padding: var(--mobile-card-padding); }
   .game-card-label { font-size: var(--body-size); }

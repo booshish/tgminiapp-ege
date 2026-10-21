@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, BookOpen, Check, Clock3, ClipboardCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Check, ChevronDown, Clock3, ClipboardCheck } from "lucide-react";
 import { PageIntro, ExamPicker } from "@/components/ui";
 import { MathFormula } from "@/components/math-formula";
 import { TriangleDiagram } from "@/components/illustrations";
 import { useMockExam, type MockCallbacks } from "@/hooks/use-mock-exam";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { getAvailableExamDefinitions } from "@/lib/exams";
 import { tasks, type Task } from "@/lib/tasks";
 import type { Exam } from "@/lib/navigation";
@@ -25,6 +26,7 @@ function duration(milliseconds: number) {
 }
 
 export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...callbacks }: Props) {
+  const phoneLayout = usePhoneLayout();
   const mock = useMockExam(callbacks);
   const [selectedExam, setSelectedExam] = useState(exam);
   const [confirmFinish, setConfirmFinish] = useState(false);
@@ -47,13 +49,42 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
 
   if (!mock.ready) return <p role="status">Загружаем сохранённые варианты…</p>;
 
+  const numberNavigation = session && task && sessionDefinition && summary ? (
+    <nav className="mock-number-list" aria-label="Номера учебного варианта">
+      {session.taskIds.map((id, index) => {
+        const entry = tasks.find((item) => item.id === id)!;
+        const result = session.results[id];
+        const status = finished ? entry.part === 2 ? session.selfScores[id] !== undefined ? "самооценка сохранена" : "нужна самооценка" : result?.correct ? "верно" : result?.valid ? "неверно" : "ответ не засчитан" : session.answers[id]?.trim() ? "есть ответ" : "без ответа";
+        const badge = !finished ? null : entry.part === 2
+          ? session.selfScores[id] === undefined ? "Оценить" : `${session.selfScores[id]}/${entry.scoring.maxPrimaryScore}`
+          : `${result?.primaryScore ?? 0}/${entry.scoring.maxPrimaryScore}`;
+        return (
+          <button
+            key={id}
+            type="button"
+            aria-current={session.position === index ? "step" : undefined}
+            className={session.position === index ? "selected" : session.answers[id]?.trim() ? "has-answer" : ""}
+            onClick={() => { mock.position(index); setConfirmFinish(false); }}
+          >
+            <span className="sr-only">Задание </span>
+            <span>№{entry.examNumber}</span>
+            {badge && <small>{badge}</small>}
+            <span className="sr-only">, {status}</span>
+          </button>
+        );
+      })}
+    </nav>
+  ) : null;
+
   return (
     <section className="mock-page">
       <button type="button" className="back-link" onClick={() => { if (session) { mock.open(null); setConfirmFinish(false); } else onBack(); }}>
         <ArrowLeft size={19} aria-hidden="true" />{session ? "К вариантам и истории" : "Назад"}
       </button>
       <PageIntro eyebrow="САМОСТОЯТЕЛЬНАЯ ПОДГОТОВКА" title={session ? "Учебный вариант" : "Учебные варианты"}>
-        Авторские задания по предварительной структуре 2026 года. Это учебная тренировка, а не подтверждённый официальный пробник ФИПИ.
+        {phoneLayout && session
+          ? "Авторский учебный вариант."
+          : "Авторские задания по предварительной структуре 2026 года. Это учебная тренировка, а не подтверждённый официальный пробник ФИПИ."}
       </PageIntro>
       {mock.storageWarning && <p className="info-note" role="alert">Браузер не разрешил сохранить данные или прежняя запись требует восстановления. Она не перезаписана. Текущая работа может сохраниться только до закрытия страницы.</p>}
       {mock.actionError && <div className="mock-error" role="alert"><p>{mock.actionError}</p>{session?.finishedAt !== null && session && <button type="button" className="button button-secondary" onClick={mock.retryPublish}>Сохранить результаты</button>}</div>}
@@ -91,30 +122,15 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
               <p>Первичные баллы за автопроверку: <strong>{summary.automatic}</strong> · самооценка второй части: <strong>{summary.self}</strong>.</p>
               <p>Сумма: {summary.total} из {summary.maximum} по предварительной сетке. {summary.pendingSelf > 0 ? `Осталось оценить заданий второй части: ${summary.pendingSelf}.` : "Вторая часть отмечена как самооценка."} Это не тестовые баллы и не прогноз экзамена.</p>
             </> : <p>Введено ответов: {session.taskIds.filter((id) => session.answers[id]?.trim()).length} из {session.taskIds.length}. Переключение номеров сохраняет ввод.</p>}
-            <nav className="mock-number-list" aria-label="Номера учебного варианта">
-              {session.taskIds.map((id, index) => {
-                const entry = tasks.find((item) => item.id === id)!;
-                const result = session.results[id];
-                const status = finished ? entry.part === 2 ? session.selfScores[id] !== undefined ? "самооценка сохранена" : "нужна самооценка" : result?.correct ? "верно" : result?.valid ? "неверно" : "ответ не засчитан" : session.answers[id]?.trim() ? "есть ответ" : "без ответа";
-                const badge = !finished ? null : entry.part === 2
-                  ? session.selfScores[id] === undefined ? "Оценить" : `${session.selfScores[id]}/${entry.scoring.maxPrimaryScore}`
-                  : `${result?.primaryScore ?? 0}/${entry.scoring.maxPrimaryScore}`;
-                return (
-                  <button
-                    key={id}
-                    type="button"
-                    aria-current={session.position === index ? "step" : undefined}
-                    className={session.position === index ? "selected" : session.answers[id]?.trim() ? "has-answer" : ""}
-                    onClick={() => { mock.position(index); setConfirmFinish(false); }}
-                  >
-                    <span className="sr-only">Задание </span>
-                    <span>№{entry.examNumber}</span>
-                    {badge && <small>{badge}</small>}
-                    <span className="sr-only">, {status}</span>
-                  </button>
-                );
-              })}
-            </nav>
+            {phoneLayout ? (
+              <details className="mock-number-disclosure">
+                <summary>
+                  <span>Выбрать номер</span>
+                  <span>№{task.examNumber} <ChevronDown size={18} aria-hidden="true" /></span>
+                </summary>
+                {numberNavigation}
+              </details>
+            ) : numberNavigation}
           </section>
           <article className="mock-card mock-task" aria-labelledby="mock-task-title">
             <p className="eyebrow">{sessionDefinition.examType} · МАТЕМАТИКА · ЧАСТЬ {task.part}</p>
@@ -146,6 +162,14 @@ export function MockExamScreen({ exam, onBack, onOpenTheory, onExamChange, ...ca
           {!finished && <section className="mock-card">
             {!confirmFinish ? <button type="button" className="button button-primary" onClick={() => setConfirmFinish(true)}>Завершить вариант</button> : <div className="mock-finish-confirm"><h2>Завершить сейчас?</h2><p>Введённые ответы будут проверены. Неотвеченные задания получат 0 баллов; вторую часть можно будет оценить самостоятельно.</p><div><button type="button" className="button button-secondary" onClick={() => setConfirmFinish(false)}>Продолжить работу</button><button type="button" className="button button-primary" onClick={() => { mock.finish(); setConfirmFinish(false); }}>Завершить и проверить</button></div></div>}
           </section>}
+          {phoneLayout && (
+            <details className="mock-source-note">
+              <summary>О формате учебного варианта</summary>
+              <p>Авторские задания по предварительной структуре 2026 года. Это учебная тренировка, а не подтверждённый официальный пробник ФИПИ.</p>
+              <p>{mockDurationNote}</p>
+              <p>Ответы сохраняются в этом браузере. Вторую часть ты оцениваешь самостоятельно.</p>
+            </details>
+          )}
         </>
       ) : <p className="info-note">Материал этого варианта временно недоступен. Сохранённые данные не удалены.</p>}
     </section>

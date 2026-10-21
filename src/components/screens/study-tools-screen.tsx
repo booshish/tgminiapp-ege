@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, Bookmark as BookmarkIcon, BookOpen, CalendarClock, Check, RotateCcw, Trash2 } from "lucide-react";
 import { PageIntro } from "@/components/ui";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { tasks, taskTopicLabels, type Exam, type Task } from "@/lib/tasks";
 import { theoryTopics, getTheoryTopic } from "@/lib/theory";
 import type { LearningEvent } from "@/lib/learning-events";
@@ -27,6 +28,7 @@ const numberLabel = (task: Task) => task.examNumber === null ? "Базовое �
 const examLabel = (exam: Exam) => exam === "ЕГЭ" ? "ЕГЭ · Математика · Профиль" : "ОГЭ · Математика";
 
 export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onTheory, onPremium }: StudyToolsScreenProps) {
+  const isPhone = usePhoneLayout();
   const [exam, setExam] = useState<"all" | Exam>("all");
   const [kind, setKind] = useState<"all" | "task" | "theory">("all");
   const [unresolvedOnly, setUnresolvedOnly] = useState(true);
@@ -57,10 +59,21 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
   const recommendations = mode === "review" ? getDifficultyRecommendations(events, tasks, theoryTopics, isPremium)
     .filter((item) => exam === "all" || item.task.examType[0] === exam) : [];
 
+  const storageNote = (
+      <p className="study-tools-local-note">Сохраняется только в этом браузере. Аккаунты и перенос между устройствами пока не подключены.</p>
+  );
+  const reviewExplanation = (
+        <div className="study-tool-card study-review-explanation">
+          <h2>Как выбирается повторение</h2>
+          <p>После ошибки навык возвращается через день. Верный первый ответ на новый вариант увеличивает интервал до 3, 7, 14 и 30 дней; новая ошибка возвращает его к одному дню. Самооценка, повторные проверки и ответы после просмотра решения не меняют интервалы.</p>
+          <p>Это прозрачное учебное правило, а не диагноз. Банк конечный: если новых аналогичных задач нет, предлагаем теорию и прямо сообщаем об ограничении.</p>
+        </div>
+  );
+
   return (
     <section className="study-tools-page">
       <PageIntro eyebrow={mode === "review" ? "ДЕМОНСТРАЦИОННЫЙ PREMIUM" : "МОЯ ПОДГОТОВКА"} title={title}>{description}</PageIntro>
-      <p className="study-tools-local-note">Сохраняется только в этом браузере. Аккаунты и перенос между устройствами пока не подключены.</p>
+      {!isPhone && storageNote}
       {tools.storageWarning && <p className="study-tools-warning" role="alert">Не удалось прочитать или сохранить закладки. Изменения могут остаться только до закрытия страницы; прежние недоступные данные автоматически не перезаписываются.</p>}
       <div className="study-tools-filters">
         <label>Экзамен
@@ -110,11 +123,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
       </>}
 
       {mode === "review" && <>
-        <div className="study-tool-card study-review-explanation">
-          <h2>Как выбирается повторение</h2>
-          <p>После ошибки навык возвращается через день. Верный первый ответ на новый вариант увеличивает интервал до 3, 7, 14 и 30 дней; новая ошибка возвращает его к одному дню. Самооценка, повторные проверки и ответы после просмотра решения не меняют интервалы.</p>
-          <p>Это прозрачное учебное правило, а не диагноз. Банк конечный: если новых аналогичных задач нет, предлагаем теорию и прямо сообщаем об ограничении.</p>
-        </div>
+        {!isPhone && reviewExplanation}
         <h2 className="study-tools-section-title">Что повторить</h2>
         {reviews.length === 0 ? <div className="study-tool-card"><p>Пока нет навыков с ошибками в самостоятельных проверках. Продолжай обычную практику: рекомендации появятся по реальным ответам.</p></div>
           : <div className="study-tools-list">{reviews.map((item) => <article className="study-tool-card" key={item.key}>
@@ -138,6 +147,11 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
             </div>
           </article>)}</div>}
       </>}
+      {mode === "review" && isPhone && <details className="study-review-details">
+        <summary>Как выбирается повторение</summary>
+        {reviewExplanation}
+      </details>}
+      {isPhone && storageNote}
     </section>
   );
 }

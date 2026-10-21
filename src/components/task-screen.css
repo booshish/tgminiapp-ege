@@ -344,7 +344,7 @@
 }
 
 /* Compact phone spacing without changing task content or checking behavior. */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .task-screen {
     padding-bottom: 16px;
   }
@@ -425,6 +425,24 @@
   }
   .task-actions {
     gap: var(--mobile-item-gap, 10px);
+  }
+  .task-correction-note {
+    margin: 0 0 14px;
+    color: var(--ink);
+    font-size: var(--body-size);
+    line-height: 1.5;
+  }
+  .task-correction-note + .task-primary-score {
+    margin-top: 0;
+  }
+  .task-solution-navigation {
+    display: grid;
+    gap: var(--mobile-item-gap, 10px);
+    margin-top: var(--mobile-section-gap, 18px);
+  }
+  .task-solution-navigation .button {
+    width: 100%;
+    min-width: 0;
   }
   .task-sequence-navigation,
   .task-solution-panel {

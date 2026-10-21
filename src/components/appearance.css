@@ -480,11 +480,11 @@
   }
 }
 
-/* Phone-only scale. Keep the existing 601px+ reading/layout rules intact.
+/* Phone-only scale. Keep the existing 768px+ reading/layout rules intact.
    rem units also respect a larger browser default font; fields stay >=16px
    to avoid Safari's automatic input zoom. Screen-specific spacing lives with
    its component, while these tokens and shared controls have one owner. */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   :root {
     --body-size: 0.9375rem;
     --secondary-size: 0.8125rem;
@@ -519,6 +519,7 @@
     --mobile-math-size: 1.3125rem;
   }
   body { line-height: 1.5; }
+  html { scroll-padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
   h1 { font-size: var(--mobile-heading-size); letter-spacing: -0.4px; }
   h2 { font-size: var(--mobile-card-title-size); }
   h3 { font-size: var(--mobile-subheading-size); }
@@ -530,6 +531,7 @@
     min-height: 64px;
     padding: calc(8px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 8px max(16px, env(safe-area-inset-left));
   }
+  .app-shell .topbar-right { display: none; }
   .app-shell.focus-mode .main-content { padding: 10px 16px max(24px, env(safe-area-inset-bottom)); }
   .app-shell.focus-mode .topbar { padding-inline: 16px; }
   .app-shell .page-intro { margin-bottom: var(--mobile-section-gap); }
@@ -558,9 +560,22 @@
     font-size: var(--reading-size);
   }
   .app-shell .mobile-nav > button { min-height: 48px; font-size: var(--secondary-size); gap: 3px; }
-  .app-shell .navigation-dialog { padding: var(--mobile-card-padding); }
+  .app-shell .navigation-dialog {
+    padding: var(--mobile-card-padding);
+    max-height: calc(100dvh - 112px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
   .app-shell .navigation-dialog nav { gap: 4px; margin-top: 10px; }
   .app-shell .navigation-dialog nav > button { min-height: 44px; font-size: var(--button-size); padding: 8px; }
+  .app-shell .navigation-dialog nav > button > svg { flex: 0 0 auto; }
+  .app-shell .navigation-dialog .menu-item-label { min-width: 0; flex: 1; }
+  .app-shell .navigation-dialog .menu-premium-label { font-size: var(--secondary-size); color: var(--muted); }
+  .app-shell .navigation-dialog .menu-secondary-start {
+    margin-top: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
   .app-shell .bookmark-button { min-height: 44px; padding: 8px 10px; font-size: var(--button-size); }
   .app-shell .focus-switch { min-height: 44px; font-size: var(--button-size); }
   .app-shell .focus-toggle { font-size: var(--secondary-size); min-height: 44px; }

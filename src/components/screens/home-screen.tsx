@@ -16,6 +16,7 @@ import { ExamPicker, FeatureCard, PageIntro } from "@/components/ui";
 import type { Exam, View } from "@/lib/navigation";
 import { GameMotivation } from "@/components/game-motivation";
 import type { GameSummary } from "@/lib/gamification";
+import "./home-profile-mobile.css";
 
 type Props = {
   exam: Exam;
@@ -29,14 +30,18 @@ type Props = {
 
 export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHelp, resumeLabel }: Props) {
   return (
-    <>
+    <div className="home-screen-layout">
       <PageIntro eyebrow="ТОЧКА · МАТЕМАТИКА" title="Твоя подготовка">
-        Разбирай темы и решай задания в удобном порядке.
+        <span className="home-wide-copy">Разбирай темы и решай задания в удобном порядке.</span>
+        <span className="home-phone-context">{exam} · Математика{exam === "ЕГЭ" ? " · Профиль" : ""}</span>
       </PageIntro>
       <section className="course-hero" aria-labelledby="course-title">
         <div className="hero-copy">
           <span className="tag">Теория и практика</span>
-          <h2 id="course-title">{exam} · Математика</h2>
+          <h2 id="course-title">
+            <span className="home-wide-copy">{exam} · Математика</span>
+            <span className="home-phone-copy">{resumeLabel ? "Продолжить решение" : "Начать подготовку"}</span>
+          </h2>
           <p>
             {resumeLabel ?? "Выбери тему для повторения или начни самостоятельную практику."}
           </p>
@@ -54,7 +59,22 @@ export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHe
         </div>
         <LearningIllustration className="hero-illustration" />
       </section>
-      <ExamPicker exam={exam} onChange={onExamChange} />
+      <div className="home-exam-picker"><ExamPicker exam={exam} onChange={onExamChange} /></div>
+      <section className="home-quick-access" aria-labelledby="home-quick-title">
+        <h2 id="home-quick-title">Быстрый доступ</h2>
+        <div className="home-quick-grid">
+          {([
+            { view: "mistakes", label: "Мои ошибки", icon: CircleX },
+            { view: "favorites", label: "Избранное", icon: Bookmark },
+            { view: "mock", label: "Учебный вариант", icon: ClipboardCheck },
+          ] as const).map(({ view, label, icon: Icon }) => (
+            <button key={view} type="button" className="home-quick-link" onClick={() => onNavigate(view)}>
+              <Icon size={21} aria-hidden="true" />
+              <span>{label}</span>
+            </button>
+          ))}
+        </div>
+      </section>
       <GameMotivation summary={game} onHelp={onHelp} />
       <section className="feature-section" aria-labelledby="sections-title">
         <div className="section-title">
@@ -108,6 +128,9 @@ export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHe
           Подробнее о Premium <ArrowRight size={18} />
         </button>
       </section>
-    </>
+      <button type="button" className="text-button home-premium-link" onClick={() => onNavigate("premium")}>
+        Возможности Premium <ArrowRight size={17} aria-hidden="true" />
+      </button>
+    </div>
   );
 }

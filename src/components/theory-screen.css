@@ -311,8 +311,8 @@
   .theory-reading-page > .page-intro { margin-bottom: 20px; }
 }
 
-@media (max-width: 600px) {
-  /* Phone density only: keep the existing 601–767 px and tablet reading scales. */
+@media (max-width: 767px) {
+  /* Compact phone density; tablet reading starts at 768 px. */
   .theory-tools { padding: var(--mobile-card-padding, 16px); gap: 12px; margin-bottom: 18px; }
   .theory-search,
   .theory-number-filter { gap: 8px; }
@@ -376,4 +376,100 @@
     margin-bottom: 14px;
     font-size: var(--secondary-size);
   }
+}
+
+/* Mobile catalog and reading hierarchy. Existing >=768 px layout is untouched. */
+@media (max-width: 767px) {
+  .theory-catalog-page > .page-intro { margin-bottom: 16px; }
+  .theory-catalog-page > .page-intro > :is(.eyebrow, p) { display: none; }
+  .theory-catalog-page > .back-link { margin-bottom: 8px; }
+  .theory-catalog-page > .theory-search { margin-bottom: 16px; }
+  .theory-catalog-page > .course-picker { margin-bottom: 16px; }
+  .theory-catalog-page > .theory-tools {
+    padding: 0;
+    margin-bottom: 16px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    gap: 12px;
+  }
+  .theory-catalog-page .theory-section-heading { margin: 0 0 12px; }
+  .theory-catalog-page .theory-section-heading > .eyebrow { display: none; }
+  .theory-catalog-page .topic-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .theory-catalog-page .theory-topic-card {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) 19px;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+  }
+  .theory-topic-book { color: var(--sage-dark); }
+  .theory-topic-copy { min-width: 0; }
+  .theory-catalog-page .theory-topic-copy > strong {
+    display: block;
+    font-size: var(--mobile-card-title-size, 18px);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .theory-topic-copy .theory-topic-meta { display: block; margin-top: 5px; }
+  .theory-mobile-title { margin-bottom: 18px; }
+  .theory-mobile-title h1 {
+    font-size: var(--mobile-page-title-size, 22px);
+    line-height: 1.35;
+    font-weight: 700;
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+  }
+  .theory-mobile-title > p {
+    font-size: var(--body-size);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0;
+  }
+  .theory-mobile-practice { width: 100%; margin-top: 10px; }
+  .theory-mobile-details {
+    min-width: 0;
+    margin-top: 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface, #fff);
+    font-size: var(--body-size);
+    line-height: 1.6;
+  }
+  .theory-mobile-details > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 10px 14px;
+    cursor: pointer;
+    list-style: none;
+    color: var(--sage-dark);
+    font-weight: 600;
+  }
+  .theory-mobile-details > summary::-webkit-details-marker { display: none; }
+  .theory-mobile-details > summary > svg { flex: 0 0 auto; }
+  .theory-mobile-details[open] > summary > svg { transform: rotate(180deg); }
+  .theory-mobile-details > p,
+  .theory-mobile-details > .prerequisite-links {
+    padding: 0 14px 14px;
+    margin: 0;
+    color: var(--muted);
+  }
+  .theory-contents-details { border: 0; border-top: 1px solid var(--line); border-radius: 0; }
+  .theory-contents-details > summary { padding-inline: 0; }
+  .theory-contents-details > p { padding-inline: 0; }
+  .theory-contents-details > .topic-outline { padding-inline: 20px 0; }
+  .theory-overview-about > .info-note { margin: 0; padding: 0 14px 14px; }
+  .theory-overview-about > .info-note > svg { display: none; }
+  .theory-mobile-details .prerequisite-links .text-button {
+    min-height: 44px;
+    gap: 12px;
+    font-size: var(--button-size);
+  }
+  .theory-mobile-details .prerequisite-links .text-button > svg { flex: 0 0 auto; }
+  .theory-reading-page .topic-lesson > .lesson-source-details { margin-top: 20px; margin-bottom: 0; }
+  .theory-reading-focus :is(.theory-prerequisites-details, .theory-overview-about) { display: none; }
 }

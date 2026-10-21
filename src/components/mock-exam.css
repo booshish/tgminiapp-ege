@@ -41,7 +41,16 @@
   .mock-task { padding: 32px; }
   .mock-task .task-prompt, .mock-solution p, .mock-solution li { font-size: var(--reading-size, 20px); font-weight: 500; line-height: 1.65; text-align: left; }
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  .mock-page > .page-intro > .eyebrow { display: none; }
+  .mock-number-disclosure { margin-top: 12px; }
+  .mock-number-disclosure > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); font-weight: 600; cursor: pointer; list-style: none; }
+  .mock-number-disclosure > summary::-webkit-details-marker { display: none; }
+  .mock-number-disclosure > summary > span:last-child { display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .mock-number-disclosure[open] > summary svg { transform: rotate(180deg); }
+  .mock-source-note { margin-block: var(--mobile-section-gap); color: var(--muted); font-size: var(--secondary-size); }
+  .mock-source-note > summary { min-height: 44px; padding-block: 12px; cursor: pointer; font-size: var(--body-size); font-weight: 600; color: var(--ink); }
+  .mock-source-note > p { margin-top: 10px; line-height: 1.6; }
   .mock-card { margin-block: var(--mobile-section-gap); padding: var(--mobile-card-padding); }
   .mock-card h2 { margin-bottom: 12px; font-size: var(--mobile-card-title-size); }
   .mock-card h3 { margin: 16px 0 10px; font-size: var(--mobile-card-title-size); }

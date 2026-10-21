@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight, CalendarDays, ChartNoAxesCombined, Check, ChevronDown, CircleHelp, Layers3, LockKeyhole, RefreshCw, ShieldCheck, Sparkles } from "lucide-react";
 import { CoachIllustration } from "@/components/illustrations";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import {
   getSubscriptionPrice, subscriptionPrices, subscriptionTimezone,
   supportedSubscriptionSubjects, type ExamSeasonConfig, type SubscriptionPeriod,
@@ -37,6 +38,7 @@ function nextClockRefresh(now: Date): number {
 }
 
 export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: PremiumScreenProps) {
+  const isPhone = usePhoneLayout();
   // The first server/client render is identical; device time is only an informational preview.
   const [clock, setClock] = useState<Date | null>(null);
   const [selectedPeriod, setSelectedPeriod] = useState<SubscriptionPeriod>("monthly");
@@ -81,18 +83,7 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
         ? `Доступ по ${dateFormat.format(new Date(Date.parse(calendar.seasonEndsAt) - 1))} включительно, до 23:59:59 МСК. Разовый платёж, без автопродления.`
         : `Дата окончания сезона ${calendar?.seasonYear ?? ""} пока уточняется по официальному расписанию ОГЭ и ЕГЭ с резервными днями основного периода. Сезонную подписку пока нельзя оформить.`;
 
-  return (
-    <section className="premium-landing" aria-labelledby="premium-title">
-      <button type="button" className="back-link" onClick={onBack}><ArrowLeft size={18} aria-hidden="true" />Назад</button>
-      <header className="premium-landing-hero">
-        <div>
-          <span className="eyebrow">БОЛЬШЕ ПОДДЕРЖКИ В ПОДГОТОВКЕ</span>
-          <h1 id="premium-title">Точка Premium</h1>
-          <p>Разбирайся в ошибках, возвращайся к нужным темам и следи за результатами подготовки.</p>
-        </div>
-        <CoachIllustration className="premium-landing-mascot" />
-      </header>
-
+  const features = (
       <section className="premium-feature-section" aria-labelledby="premium-features-title">
         <h2 id="premium-features-title">Один набор возможностей — в каждом тарифе</h2>
         <p className="premium-secondary">Включая «Точка Лето». Различаются только число предметов и срок доступа.</p>
@@ -117,18 +108,9 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
           </article>
         </div>
       </section>
-
-      <section className="premium-pricing" aria-labelledby="premium-pricing-title">
-        <div className="premium-pricing-heading">
-          <div>
-            <span className="eyebrow">ТАРИФЫ ГОТОВЯТСЯ К ЗАПУСКУ</span>
-            <h2 id="premium-pricing-title">{period === "summer" ? "Точка Лето" : "Выбери удобный срок"}</h2>
-          </div>
-          <div className="premium-period-options" role="group" aria-label="Срок подписки" aria-busy={!calendar}>
-            {calendar ? periods.map((option) => <button key={option} type="button" aria-pressed={period === option}
-              className={period === option ? "selected" : ""} onClick={() => setSelectedPeriod(option)}>{periodLabels[option]}</button>) : <span className="premium-period-loading" role="status">Уточняем сроки…</span>}
-          </div>
-        </div>
+  );
+  const pricingNotes = (
+    <>
         <div className="premium-period-note" aria-live="polite">
           <CalendarDays size={21} aria-hidden="true" />
           <div>
@@ -141,6 +123,35 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
           {supportedCount === 1 ? `Сейчас доступна только ${supportedSubscriptionSubjects[0].title.toLocaleLowerCase("ru")}. Цены наборов на несколько предметов показаны для знакомства; выбрать такой набор пока нельзя.`
             : `Доступных предметов: ${supportedCount}. Выбрать можно только предметы, уже опубликованные в приложении.`}
         </p>
+    </>
+  );
+
+  return (
+    <section className="premium-landing" aria-labelledby="premium-title">
+      <button type="button" className="back-link" onClick={onBack}><ArrowLeft size={18} aria-hidden="true" />Назад</button>
+      <header className="premium-landing-hero">
+        <div>
+          <span className="eyebrow">БОЛЬШЕ ПОДДЕРЖКИ В ПОДГОТОВКЕ</span>
+          <h1 id="premium-title">Точка Premium</h1>
+          <p>Разбирайся в ошибках, возвращайся к нужным темам и следи за результатами подготовки.</p>
+        </div>
+        <CoachIllustration className="premium-landing-mascot" />
+      </header>
+
+      {!isPhone && features}
+
+      <section className="premium-pricing" aria-labelledby="premium-pricing-title">
+        <div className="premium-pricing-heading">
+          <div>
+            <span className="eyebrow">ТАРИФЫ ГОТОВЯТСЯ К ЗАПУСКУ</span>
+            <h2 id="premium-pricing-title">{period === "summer" ? "Точка Лето" : "Выбери удобный срок"}</h2>
+          </div>
+          <div className="premium-period-options" role="group" aria-label="Срок подписки" aria-busy={!calendar}>
+            {calendar ? periods.map((option) => <button key={option} type="button" aria-pressed={period === option}
+              className={period === option ? "selected" : ""} onClick={() => setSelectedPeriod(option)}>{periodLabels[option]}</button>) : <span className="premium-period-loading" role="status">Уточняем сроки…</span>}
+          </div>
+        </div>
+        {!isPhone && pricingNotes}
         <div className="premium-plan-grid">
           {plans.map((plan) => {
             const price = calendar ? getSubscriptionPrice(period, plan.slots, pricePhase) : null;
@@ -166,8 +177,11 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
             </article>;
           })}
         </div>
+        {isPhone && pricingNotes}
         <p id="premium-payment-note" className="premium-payment-note">Это информационная страница. Оплата, аккаунты и серверная проверка подписки ещё не подключены. Точную стоимость и срок при покупке будет подтверждать сервер.</p>
       </section>
+
+      {isPhone && features}
 
       <section className="premium-trial" aria-labelledby="premium-trial-title">
         <div>

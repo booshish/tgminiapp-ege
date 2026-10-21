@@ -1,0 +1,36 @@
+/* The existing tablet/desktop trainer keeps its original layout. */
+@media (max-width: 767px) {
+  .trainer-method-details {
+    margin-top: var(--mobile-section-gap);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+  }
+
+  .trainer-method-details > summary {
+    min-height: 44px;
+    padding: 12px 14px;
+    cursor: pointer;
+    color: var(--sage-dark);
+    font-weight: 600;
+  }
+
+  .trainer-method-details > p {
+    padding: 0 14px 12px;
+    font-size: var(--reading-size);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .app-shell .trainer-method-details .trainer-overview {
+    margin: 0;
+    padding: 14px;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .trainer-method-details .info-note {
+    margin: 0;
+    padding: 14px;
+  }
+}

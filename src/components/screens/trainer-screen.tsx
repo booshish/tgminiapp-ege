@@ -3,6 +3,8 @@
 import { ArrowRight, BookOpen, Lightbulb, Sparkles } from "lucide-react";
 import { CoachIllustration } from "@/components/illustrations";
 import { PageIntro } from "@/components/ui";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
+import "../trainer-mobile.css";
 import { getAnalytics, type LearningState } from "@/lib/learning-events";
 import { theoryTopics } from "@/lib/theory";
 import { tasks } from "@/lib/tasks";
@@ -25,6 +27,13 @@ export function TrainerScreen({
   onStart,
   onReview,
 }: TrainerScreenProps) {
+  const isPhone = usePhoneLayout();
+  const demoStatus = (
+    <p className="muted">
+      В демонстрационном Premium работают интервалы повторения и
+      рекомендации по сложности. Полная диагностика и персональный план ещё разрабатываются.
+    </p>
+  );
   if (!isPremium) {
     return (
       <>
@@ -40,13 +49,14 @@ export function TrainerScreen({
             повторяющимися ошибками. Подробные результаты и переход к повторению
             доступны в Premium.
           </p>
-          <p className="muted">
-            В демонстрационном Premium работают интервалы повторения и
-            рекомендации по сложности. Полная диагностика и персональный план ещё разрабатываются.
-          </p>
+          {!isPhone && demoStatus}
           <button className="button button-primary" onClick={onPremium}>
             Подробнее о Premium <ArrowRight size={18} aria-hidden="true" />
           </button>
+          {isPhone && <details className="trainer-method-details">
+            <summary>Как работают рекомендации</summary>
+            {demoStatus}
+          </details>}
         </section>
       </>
     );
@@ -61,11 +71,7 @@ export function TrainerScreen({
     },
   );
 
-  return (
-    <>
-      <PageIntro eyebrow="ДЕМОНСТРАЦИОННЫЙ PREMIUM" title="Мой тренер">
-        Темы для повторения по сохранённым ответам.
-      </PageIntro>
+  const overview = (
       <section className="premium-panel trainer-overview">
         <CoachIllustration className="premium-coach" />
         <div>
@@ -84,15 +90,37 @@ export function TrainerScreen({
           <button className="button button-primary" onClick={onReview}>Умное повторение <ArrowRight size={18} aria-hidden="true" /></button>
         </div>
       </section>
-      <section className="analytics-section">
-        <div className="section-title">
-          <h2>Что стоит повторить</h2>
-        </div>
+  );
+  const methodDescription = (
         <p className="muted">
           Показываем тему после шести разных самостоятельных задач, если хотя бы три
           ответа неверные. Небольшого числа ответов недостаточно для вывода обо
           всех знаниях по теме.
         </p>
+  );
+  const technicalNote = (
+      <div className="info-note">
+        <Lightbulb size={20} aria-hidden="true" />
+        <p>
+          Тренер не использует серверный ИИ. Сейчас он показывает простой
+          ориентир по сохранённым ответам. Интервальное повторение доступно
+          в отдельном разделе; полная диагностика и персональный план
+          требуют дальнейшей разработки и проверки.
+        </p>
+      </div>
+  );
+
+  return (
+    <>
+      <PageIntro eyebrow="ДЕМОНСТРАЦИОННЫЙ PREMIUM" title="Мой тренер">
+        Темы для повторения по сохранённым ответам.
+      </PageIntro>
+      {!isPhone && overview}
+      <section className="analytics-section">
+        <div className="section-title">
+          <h2>Что стоит повторить</h2>
+        </div>
+        {!isPhone && methodDescription}
         {repeatedErrors.length === 0 ? (
           <div className="empty-state">
             <span className="empty-icon">
@@ -138,13 +166,13 @@ export function TrainerScreen({
                       className="text-button"
                       onClick={() => onTheory(result.topicId)}
                     >
-                      <BookOpen size={16} aria-hidden="true" /> Повторить теорию
+                      <BookOpen size={16} aria-hidden="true" /> {isPhone ? "Открыть теорию" : "Повторить теорию"}
                     </button>
                     <button
                       className="text-button"
                       onClick={() => onStart(result.topicId)}
                     >
-                      Практика по теме{" "}
+                      {isPhone ? "Начать тренировку" : "Практика по теме"}{" "}
                       <ArrowRight size={16} aria-hidden="true" />
                     </button>
                   </div>
@@ -173,15 +201,12 @@ export function TrainerScreen({
           </div>
         )}
       </section>
-      <div className="info-note">
-        <Lightbulb size={20} aria-hidden="true" />
-        <p>
-          Тренер не использует серверный ИИ. Сейчас он показывает простой
-          ориентир по сохранённым ответам. Интервальное повторение доступно
-          в отдельном разделе; полная диагностика и персональный план
-          требуют дальнейшей разработки и проверки.
-        </p>
-      </div>
+      {isPhone ? <details className="trainer-method-details">
+        <summary>Как работают рекомендации</summary>
+        {methodDescription}
+        {overview}
+        {technicalNote}
+      </details> : technicalNote}
     </>
   );
 }

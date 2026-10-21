@@ -2,6 +2,7 @@
 
 import { ArrowRight, BookOpen, Hash, ListFilter, Shuffle } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { getExamDefinition } from "@/lib/exams";
 import type { CatalogSelection } from "@/lib/practice";
 import { getPracticeTasks, prototypes, taskTopicLabels } from "@/lib/tasks";
@@ -27,6 +28,7 @@ export function CatalogScreen({
   onShuffle,
   game,
 }: CatalogScreenProps) {
+  const isPhone = usePhoneLayout();
   const definition = getExamDefinition({
     examType: selection.exam,
     subjectId: selection.subjectId,
@@ -86,13 +88,7 @@ export function CatalogScreen({
     });
   }
 
-  return (
-    <section className="exam-catalog" aria-label="Каталог заданий">
-      <PageIntro eyebrow="САМОСТОЯТЕЛЬНАЯ ПРАКТИКА" title="Задания">
-        Выбери экзамен, затем номер задания или учебную тему.
-      </PageIntro>
-
-      <ExamPicker exam={selection.exam} onChange={changeExam} />
+  const practiceExtras = (<>
       <StreakSummary summary={game} subjectId={selection.subjectId} showOverall={false} />
       {onShuffle && definition?.available && (
         <div className="random-practice-action">
@@ -102,6 +98,16 @@ export function CatalogScreen({
           <p>Подборка по всему экзамену. Сначала варианты, которые ты ещё не проверял.</p>
         </div>
       )}
+  </>);
+
+  return (
+    <section className={`exam-catalog catalog-${selection.mode}-mode`} aria-label="Каталог заданий">
+      <PageIntro eyebrow="САМОСТОЯТЕЛЬНАЯ ПРАКТИКА" title="Задания">
+        Выбери экзамен, затем номер задания или учебную тему.
+      </PageIntro>
+
+      <ExamPicker exam={selection.exam} onChange={changeExam} />
+      {!isPhone && practiceExtras}
 
       {selection.exam === "ЕГЭ" && (
         <section
@@ -109,10 +115,10 @@ export function CatalogScreen({
           aria-labelledby="catalog-level-title"
         >
           <h2 id="catalog-level-title">Математика · Профильный уровень</h2>
-          <p>
+          {!isPhone && <p>
             В этой версии готовимся к профильной математике. Базовый уровень
             появится после проверки структуры и материалов.
-          </p>
+          </p>}
           {selection.level === "base" && (
             <button
               type="button"
@@ -327,6 +333,8 @@ export function CatalogScreen({
         </div>
       )}
 
+      {isPhone && practiceExtras}
+
       <section className="catalog-theory-link">
         <div>
           <h2>Сначала разобраться в теме</h2>
@@ -356,6 +364,9 @@ export function CatalogScreen({
           className="catalog-scope-note"
           aria-label="О демонстрационном каталоге"
         >
+          {isPhone && selection.exam === "ЕГЭ" && <p>
+            Доступна профильная математика. Базовый уровень появится после проверки структуры и материалов.
+          </p>}
           <p>
             Авторские учебные задания. Практика бесплатная и без дневных
             ограничений.

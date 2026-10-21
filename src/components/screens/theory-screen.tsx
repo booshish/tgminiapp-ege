@@ -14,6 +14,7 @@ import {
 import { BookmarkButton } from "@/components/bookmark-button";
 import { MathFormula } from "@/components/math-formula";
 import { ExamPicker, PageIntro } from "@/components/ui";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import type { Exam } from "@/lib/navigation";
 import { getTheoryTopic, theoryTopics } from "@/lib/theory";
 import { getExamDefinition } from "@/lib/exams";
@@ -47,6 +48,7 @@ export function TheoryScreen({
   bookmarked = false,
   onBookmark,
 }: TheoryScreenProps) {
+  const isPhone = usePhoneLayout();
   const [query, setQuery] = useState("");
   const [part, setPart] = useState<1 | 2>(1);
   const [number, setNumber] = useState("");
@@ -85,6 +87,63 @@ export function TheoryScreen({
     (topicId && (!topic || !topic.examType.includes(exam))) || (materialId && !isMaterial),
   );
 
+  const searchField = (
+    <label className="theory-search">
+      <span>Найти тему</span>
+      <span className="theory-search-field">
+        <Search size={20} aria-hidden="true" />
+        <input
+          type="search"
+          placeholder="Например, дроби или уравнения"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+      </span>
+    </label>
+  );
+
+  const sourceDetails = topic ? (
+    <details className="lesson-intro-note lesson-source-details">
+      <summary>О материале <ChevronDown size={17} aria-hidden="true" /></summary>
+      <p>
+        {topic.source.label} · около {topic.readMinutes} минут.
+        {topic.coverage === "foundation"
+          ? " Школьная база для ОГЭ и ЕГЭ."
+          : ` ${exam}${exam === "ЕГЭ" ? " · профиль" : ""}, часть ${topic.part}.`}
+        {" "}Это не официальный материал ФИПИ.
+        {topic.part === 2 && " Пояснения по оформлению — авторские, официальные критерии здесь не воспроизводятся."}
+      </p>
+    </details>
+  ) : null;
+
+  const overviewContents = topic ? (
+    <>
+      <p>
+        Внутри — основные правила, {topic.examples.length} разобранных
+        примера и частые затруднения.
+      </p>
+      <ul className="topic-outline">
+        {topic.sections.map((section) => (
+          <li key={section.title}>
+            <Check size={16} aria-hidden="true" />
+            {section.title}
+          </li>
+        ))}
+      </ul>
+    </>
+  ) : null;
+
+  const overviewNote = topic ? (
+    <div className="info-note">
+      <Lightbulb size={20} aria-hidden="true" />
+      <p>
+        {topic.coverage === "foundation"
+          ? "Базовая тема пригодится в разных экзаменационных задачах. Для практики выбери нужный экзамен."
+          : "Разобраны отдельные методы и авторские примеры. Полный перечень подтипов и официальные критерии требуют отдельной сверки ФИПИ."}
+      </p>
+    </div>
+  ) : null;
+
   if (unavailable) {
     return (
       <section className="theory-page">
@@ -110,7 +169,7 @@ export function TheoryScreen({
 
   return (
     <section
-      className={`theory-page${topic ? " theory-reading-page" : ""}${focusMode && topic ? " theory-reading-focus" : ""}`}
+      className={`theory-page${topic ? " theory-reading-page" : " theory-catalog-page"}${focusMode && topic ? " theory-reading-focus" : ""}`}
     >
       <button type="button" className="back-link" onClick={onBack}>
         <ArrowLeft size={17} aria-hidden="true" />
@@ -122,6 +181,7 @@ export function TheoryScreen({
           <PageIntro eyebrow="БИБЛИОТЕКА ЗНАНИЙ" title="Теория">
             Основные правила, формулы и пошаговые примеры по математике.
           </PageIntro>
+          {isPhone && searchField}
           <ExamPicker
             exam={exam}
             onChange={(value) => {
@@ -131,18 +191,7 @@ export function TheoryScreen({
             }}
           />
           <div className="theory-tools">
-            <label className="theory-search">
-              <span>Найти тему</span>
-              <span className="theory-search-field">
-                <Search size={20} aria-hidden="true" />
-                <input
-                  type="search"
-                  placeholder="Например, дроби или уравнения"
-                  value={query}
-                  onChange={(event) => setQuery(event.target.value)}
-                />
-              </span>
-            </label>
+            {!isPhone && searchField}
             <div
               className="segmented theory-part-switch"
               role="group"
@@ -185,11 +234,11 @@ export function TheoryScreen({
               {exam} · МАТЕМАТИКА{exam === "ЕГЭ" ? " · ПРОФИЛЬ" : ""} · ЧАСТЬ {part}
             </span>
             <h2>Выберите тему</h2>
-            <p>
+            {!isPhone && <p>
               Авторские материалы по номерам и школьной базе. Привязка к
               структуре 2026 года предварительная; отдельные методы не означают
               полного охвата всех экзаменационных подтипов.
-            </p>
+            </p>}
           </div>
           <div className="topic-grid">
             {visibleTopics.map((item, index) => (
@@ -199,6 +248,17 @@ export function TheoryScreen({
                   key={item.id}
                   onClick={() => onOpenTopic(item.id)}
                 >
+                  {isPhone ? <>
+                    <BookOpen className="theory-topic-book" size={22} aria-hidden="true" />
+                    <span className="theory-topic-copy">
+                      <strong>{item.title}</strong>
+                      <span className="theory-topic-meta">
+                        {item.examNumbers?.[0] ? `№${item.examNumbers[0]} · ` : "Школьная база · "}
+                        ≈{item.readMinutes} мин
+                      </span>
+                    </span>
+                    <ChevronRight size={19} aria-hidden="true" />
+                  </> : <>
                   <span className="theory-topic-top">
                     <span className="note-number">
                       {item.examNumbers?.[0] ? `№${item.examNumbers[0]}` : String(index + 1).padStart(2, "0")}
@@ -213,9 +273,11 @@ export function TheoryScreen({
                     <BookOpen size={15} aria-hidden="true" /> Конспект и{" "}
                     {item.examples.length} разбора · ≈{item.readMinutes} мин
                   </span>
+                  </>}
                 </button>
               ))}
           </div>
+
           {visibleTopics.length === 0 && (
             <section className="theory-empty" role="status">
               <BookOpen size={26} aria-hidden="true" />
@@ -238,10 +300,20 @@ export function TheoryScreen({
               </button>
             </section>
           )}
+          {isPhone && <details className="theory-mobile-details theory-catalog-about">
+            <summary>О материалах <ChevronDown size={17} aria-hidden="true" /></summary>
+            <p>Авторские материалы по номерам и школьной базе. Привязка к
+              структуре 2026 года предварительная; отдельные методы не означают
+              полного охвата всех экзаменационных подтипов.</p>
+          </details>}
         </>
       ) : (
         <>
           <nav className="lesson-breadcrumbs" aria-label="Путь к материалу">
+            {isPhone ? <span>
+              {exam} · Математика{exam === "ЕГЭ" ? " · профиль" : ""} · Часть {topic.part}
+              {topic.examNumbers?.[0] ? ` · №${topic.examNumbers[0]}` : " · Школьная база"}
+            </span> : <>
             <span>{exam}</span>
             <ChevronRight size={13} aria-hidden="true" />
             <span>Математика{exam === "ЕГЭ" ? " · профиль" : ""}</span>
@@ -257,7 +329,9 @@ export function TheoryScreen({
                 <span aria-current="page">Конспект</span>
               </>
             )}
+            </>}
           </nav>
+          {!isPhone && (
           <PageIntro
             eyebrow={
               isMaterial ? "КОНСПЕКТ · МАТЕМАТИКА" : `${exam} · МАТЕМАТИКА`
@@ -266,6 +340,7 @@ export function TheoryScreen({
           >
             {topic.description}
           </PageIntro>
+          )}
 
           {isMaterial ? (
             <article
@@ -273,17 +348,8 @@ export function TheoryScreen({
               aria-label={`Конспект: ${topic.title}`}
             >
               <TheoryCardHeader full readMinutes={topic.readMinutes} bookmarked={bookmarked} onBookmark={onBookmark} />
-              <details className="lesson-intro-note lesson-source-details">
-                <summary>О материале <ChevronDown size={17} aria-hidden="true" /></summary>
-                <p>
-                  {topic.source.label} · около {topic.readMinutes} минут.
-                  {topic.coverage === "foundation"
-                    ? " Школьная база для ОГЭ и ЕГЭ."
-                    : ` ${exam}${exam === "ЕГЭ" ? " · профиль" : ""}, часть ${topic.part}.`}
-                  {" "}Это не официальный материал ФИПИ.
-                  {topic.part === 2 && " Пояснения по оформлению — авторские, официальные критерии здесь не воспроизводятся."}
-                </p>
-              </details>
+              {isPhone && <TheoryMobileTitle title={topic.title} description={topic.description} />}
+              {!isPhone && sourceDetails}
               {topic.sections.map((section, index) => (
                 <section className="lesson-section" key={section.title}>
                   <span className="eyebrow">ШАГ {index + 1}</span>
@@ -357,28 +423,19 @@ export function TheoryScreen({
                   Перейти к заданиям <ArrowRight size={18} aria-hidden="true" />
                 </button>
               </div>
+              {isPhone && sourceDetails}
             </article>
           ) : (
             <div className="topic-overview">
               <section className="topic-overview-card">
                 <TheoryCardHeader readMinutes={topic.readMinutes} bookmarked={bookmarked} onBookmark={onBookmark} />
+                {isPhone && <TheoryMobileTitle title={topic.title} description={topic.description} />}
                 <h2>Коротко о главном</h2>
                 <p>{topic.sections[0]?.body[0]}</p>
                 {topic.sections[0]?.formulas?.slice(0, 1).map((latex) => (
                   <TheoryFormula key={latex} latex={latex} />
                 ))}
-                <p>
-                  Внутри — основные правила, {topic.examples.length} разобранных
-                  примера и частые затруднения.
-                </p>
-                <ul className="topic-outline">
-                  {topic.sections.map((section) => (
-                    <li key={section.title}>
-                      <Check size={16} aria-hidden="true" />
-                      {section.title}
-                    </li>
-                  ))}
-                </ul>
+                {!isPhone && overviewContents}
                 <button
                   type="button"
                   className="primary-button"
@@ -386,29 +443,45 @@ export function TheoryScreen({
                 >
                   Разобрать подробнее <ArrowRight size={18} aria-hidden="true" />
                 </button>
+                {isPhone && <>
+                  <button type="button" className="button button-secondary theory-mobile-practice" onClick={() => onPractice(topic.id)}>
+                    К заданиям по теме <ArrowRight size={17} aria-hidden="true" />
+                  </button>
+                  <details className="theory-mobile-details theory-contents-details">
+                    <summary>В полном конспекте <ChevronDown size={17} aria-hidden="true" /></summary>
+                    {overviewContents}
+                  </details>
+                </>}
               </section>
               <TheoryPrerequisites ids={topic.prerequisites} onOpenTopic={onOpenTopic} />
-              <div className="info-note">
-                <Lightbulb size={20} aria-hidden="true" />
-                <p>
-                  {topic.coverage === "foundation"
-                    ? "Базовая тема пригодится в разных экзаменационных задачах. Для практики выбери нужный экзамен."
-                    : "Разобраны отдельные методы и авторские примеры. Полный перечень подтипов и официальные критерии требуют отдельной сверки ФИПИ."}
-                </p>
-              </div>
-              <button
+              {isPhone ? (
+                <details className="theory-mobile-details theory-overview-about">
+                  <summary>О материале <ChevronDown size={17} aria-hidden="true" /></summary>
+                  {overviewNote}
+                </details>
+              ) : overviewNote}
+              {!isPhone && <button
                 type="button"
                 className="text-button"
                 onClick={() => onPractice(topic.id)}
               >
                 Сразу перейти к заданиям{" "}
                 <ArrowRight size={17} aria-hidden="true" />
-              </button>
+              </button>}
             </div>
           )}
         </>
       )}
     </section>
+  );
+}
+
+function TheoryMobileTitle({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="theory-mobile-title">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
   );
 }
 
@@ -464,11 +537,9 @@ function TheoryPrerequisites({
   ids: string[];
   onOpenTopic: (id: string) => void;
 }) {
+  const isPhone = usePhoneLayout();
   if (ids.length === 0) return null;
-  return (
-    <section className="topic-prerequisites" aria-label="Темы для повторения базы">
-      <span className="eyebrow">ЕСЛИ НУЖНО ОСВЕЖИТЬ БАЗУ</span>
-      <h2>Что пригодится</h2>
+  const links = (
       <div className="prerequisite-links">
         {ids.map((id) => {
           const prerequisite = getTheoryTopic(id);
@@ -485,6 +556,16 @@ function TheoryPrerequisites({
           ) : null;
         })}
       </div>
+  );
+  if (isPhone) return <details className="theory-mobile-details theory-prerequisites-details">
+    <summary>Что пригодится <ChevronDown size={17} aria-hidden="true" /></summary>
+    {links}
+  </details>;
+  return (
+    <section className="topic-prerequisites" aria-label="Темы для повторения базы">
+      <span className="eyebrow">ЕСЛИ НУЖНО ОСВЕЖИТЬ БАЗУ</span>
+      <h2>Что пригодится</h2>
+      {links}
     </section>
   );
 }

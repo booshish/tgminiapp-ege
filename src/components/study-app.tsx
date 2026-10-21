@@ -38,6 +38,7 @@ import { useStudyTools } from "@/hooks/use-study-tools";
 import { clearMockStorage } from "@/lib/mock-exam";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { usePracticeSession } from "@/hooks/use-practice-session";
 import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
 import { useBreakReminder } from "@/hooks/use-break-reminder";
@@ -78,8 +79,13 @@ const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "review", label: "Умное повторение", icon: CalendarClock },
 ];
 const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
+const phoneMoreOrder: View[] = ["mistakes", "favorites", "mock", "profile", "trainer", "review"];
 
 export function StudyApp() {
+  const phoneLayout = usePhoneLayout();
+  const moreNavigation = phoneLayout
+    ? phoneMoreOrder.map((view) => navigation.find((item) => item.view === view)!)
+    : navigation.slice(4);
   const { route, navigate, back } = useStudyNavigation();
   const {
     state,
@@ -701,11 +707,17 @@ export function StudyApp() {
           </button>
         </div>
         <nav aria-label="Дополнительные разделы">
-          {navigation.slice(4).map(({ view, label, icon: Icon }) => (
-            <button key={view} onClick={() => open(view)}>
-              <Icon size={23} />
-              {label}
-              <ChevronRight size={18} />
+          {moreNavigation.map(({ view, label, icon: Icon }) => (
+            <button
+              key={view}
+              className={phoneLayout && view === "trainer" ? "menu-secondary-start" : undefined}
+              aria-current={activeView === view ? "page" : undefined}
+              onClick={() => open(view)}
+            >
+              <Icon size={23} aria-hidden="true" />
+              {phoneLayout ? <span className="menu-item-label">{label}</span> : label}
+              {phoneLayout && (view === "trainer" || view === "review") && <span className="menu-premium-label">Premium</span>}
+              <ChevronRight size={18} aria-hidden="true" />
             </button>
           ))}
           <button onClick={openHelp}>
@@ -715,7 +727,7 @@ export function StudyApp() {
           </button>
           <button onClick={() => open("premium")}>
             <Grid2X2 size={23} />
-            Premium
+            {phoneLayout ? "Точка Premium" : "Premium"}
             <ChevronRight size={18} />
           </button>
         </nav>

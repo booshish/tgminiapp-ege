@@ -16,6 +16,7 @@ import type { Exam } from "@/lib/navigation";
 import type { PracticeTaskState } from "@/lib/practice";
 import { SelfAssessmentScreen } from "./self-assessment-screen";
 import { BookmarkButton } from "./bookmark-button";
+import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import "./task-screen.css";
 
 export type TaskScreenProps = {
@@ -76,6 +77,7 @@ function TaskAttempt({
   bookmarked = false,
   onBookmark,
 }: TaskScreenProps) {
+  const phoneLayout = usePhoneLayout();
   const { answer, validationMessage, attempt } = value;
   const solutionVisible = attempt !== null && value.solutionVisible;
   const submittedAttemptRef = useRef(value.attempt);
@@ -263,6 +265,11 @@ function TaskAttempt({
                   )}
                 </strong>
               </p>
+              {phoneLayout && !attempt.correct && (
+                <p className="task-correction-note">
+                  Можно исправить ответ в поле или посмотреть разбор.
+                </p>
+              )}
               <div className="task-primary-score" role="note">
                 {maxScore !== null ? (
                   <>
@@ -285,7 +292,7 @@ function TaskAttempt({
           <div className="task-actions">
             <button
               type="button"
-              className="button button-secondary task-solution-button"
+              className={`button ${phoneLayout && !attempt.correct && !solutionVisible ? "button-primary" : "button-secondary"} task-solution-button`}
               onClick={toggleSolution}
               aria-expanded={solutionVisible}
               aria-controls="task-solution"
@@ -293,20 +300,20 @@ function TaskAttempt({
               <BookOpen size={20} aria-hidden="true" />
               {solutionVisible ? "Скрыть решение" : "Посмотреть решение"}
             </button>
-            <button
+            {(!phoneLayout || !solutionVisible) && <button
               type="button"
-              className="button button-primary task-next-button"
+              className={`button ${phoneLayout && !attempt.correct ? "button-secondary" : "button-primary"} task-next-button`}
               onClick={onNext}
               disabled={!canNext}
             >
               Следующее задание
               <ArrowRight size={20} aria-hidden="true" />
-            </button>
+            </button>}
           </div>
         )}
       </div>
 
-      <nav
+      {(!phoneLayout || !solutionVisible) && <nav
         className="task-sequence-navigation"
         aria-label="Переходы между заданиями"
       >
@@ -319,7 +326,7 @@ function TaskAttempt({
           <ArrowLeft size={20} aria-hidden="true" />
           Предыдущее задание
         </button>
-      </nav>
+      </nav>}
 
       {solutionVisible && (
         <section
@@ -344,6 +351,26 @@ function TaskAttempt({
             <span>Ответ</span>
             <strong>{task.answerDisplay}</strong>
           </div>
+          {phoneLayout && (
+            <nav className="task-solution-navigation" aria-label="Переходы после решения">
+              <button
+                type="button"
+                className="button button-primary task-next-button"
+                onClick={onNext}
+                disabled={!canNext}
+              >
+                Следующее задание <ArrowRight size={20} aria-hidden="true" />
+              </button>
+              <button
+                type="button"
+                className="button button-secondary task-previous-button"
+                onClick={onPrevious}
+                disabled={!canPrevious}
+              >
+                <ArrowLeft size={20} aria-hidden="true" /> Предыдущее задание
+              </button>
+            </nav>
+          )}
         </section>
       )}
     </section>
