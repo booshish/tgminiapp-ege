@@ -1,0 +1,10 @@
+.subscription-status-card { min-width: 0; }
+.subscription-status-card .section-title { flex-wrap: wrap; gap: 12px; }
+.subscription-status-card .subscription-account-note { display: flex; align-items: flex-start; gap: 12px; margin-block: 18px; padding: 16px; border-radius: 12px; background: var(--surface-soft); }
+.subscription-account-note > svg { flex-shrink: 0; margin-top: 4px; color: var(--sage-dark); }
+.subscription-status-card .subscription-account-note p { margin: 0; color: var(--ink); }
+.subscription-account-facts { margin-block: 20px; display: grid; gap: 16px; }
+.subscription-account-facts > div { display: grid; gap: 6px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.subscription-account-facts dt { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: var(--secondary-size); }
+.subscription-account-facts dd { margin: 0; overflow-wrap: anywhere; font-weight: 500; }
+.subscription-status-card .subscription-developer-note { border-left: 3px solid var(--sage); padding-left: 14px; }

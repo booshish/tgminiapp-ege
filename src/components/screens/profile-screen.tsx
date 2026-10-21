@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, CircleHelp, Focus, Moon, ShieldCheck, Sun, UserRound } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
+import { SubscriptionStatusCard } from "@/components/subscription-status-card";
 import type { LearningState } from "@/lib/learning-events";
 import type { Exam } from "@/lib/navigation";
 
@@ -180,22 +181,7 @@ export function ProfileScreen({
           </div>
         </div>
       </section>
-      <section className="settings-card">
-        <div className="section-title">
-          <h2>Подписка</h2>
-          <span className="tag">
-            {isPremium ? "Демонстрационный Premium" : "Free"}
-          </span>
-        </div>
-        <p>
-          {isPremium
-            ? "Открыт интерфейс Premium для разработки. Реальной подписки нет."
-            : "Теория, доступные задания, проверка и разбор после ответа открыты бесплатно."}
-        </p>
-        <button className="text-button" onClick={onPremium}>
-          Подробнее о Premium <ArrowRight size={18} />
-        </button>
-      </section>
+      <SubscriptionStatusCard onPremium={onPremium} developerPreview={isPremium} />
       <section className="settings-card">
         <h2>
           <ShieldCheck size={22} /> Данные на устройстве

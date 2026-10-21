@@ -619,7 +619,7 @@ export function StudyApp() {
               onPremium={openPremium}
             />
           )}
-          {route.view === "premium" && <PremiumScreen onBack={back} />}
+          {route.view === "premium" && <PremiumScreen onBack={back} onProfile={() => open("profile")} />}
           {route.view === "help" && <HelpScreen onBack={returnFromHelp} />}
           {(["favorites", "mistakes", "review"] as const).map((view) => route.view === view && (
             <StudyToolsScreen key={view} mode={view} events={state.events} tools={studyTools}
