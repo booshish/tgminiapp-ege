@@ -34,7 +34,7 @@ export type GameLearningEvent = GameAttempt | GameSelfAssessment | {
   taskId: string;
   subjectId: string;
   createdAt: string;
-  attemptId: string;
+  attemptId?: string;
 };
 
 type XPEventContext = {

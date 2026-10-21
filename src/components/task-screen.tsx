@@ -15,6 +15,7 @@ import { checkTaskAnswer, type Task } from "@/lib/tasks";
 import type { Exam } from "@/lib/navigation";
 import type { PracticeTaskState } from "@/lib/practice";
 import { SelfAssessmentScreen } from "./self-assessment-screen";
+import { BookmarkButton } from "./bookmark-button";
 import "./task-screen.css";
 
 export type TaskScreenProps = {
@@ -43,6 +44,8 @@ export type TaskScreenProps = {
   canPrevious: boolean;
   onBack: () => void;
   focusMode?: boolean;
+  bookmarked?: boolean;
+  onBookmark?: () => void;
 };
 
 /** Drafts belong to the practice session; revisiting a task never checks it again. */
@@ -70,6 +73,8 @@ function TaskAttempt({
   canPrevious,
   onBack,
   focusMode = false,
+  bookmarked = false,
+  onBookmark,
 }: TaskScreenProps) {
   const { answer, validationMessage, attempt } = value;
   const solutionVisible = attempt !== null && value.solutionVisible;
@@ -136,6 +141,7 @@ function TaskAttempt({
         <button type="button" className="back-link" onClick={onBack}>
           <ArrowLeft size={20} aria-hidden="true" />К выбору заданий
         </button>
+        {onBookmark && <BookmarkButton active={bookmarked} onClick={onBookmark} />}
       </div>
 
       <header className="task-heading-block">

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Exam, Route, Selection, View } from "@/lib/navigation";
 import { tasks } from "@/lib/tasks";
+import { orderPracticeTasks } from "@/lib/practice-order";
 import {
   createPracticeSession,
   defaultCatalogSelection,
@@ -291,7 +292,7 @@ export function usePracticeSession({
   }, [catalog, navigate]);
 
   const start = useCallback(
-    (next: CatalogSelection, initialTaskId?: string) => {
+    (next: CatalogSelection, initialTaskId?: string, shuffleSeenIds?: readonly string[]) => {
       const selection = normalizeCatalogSelection(next);
       const previous = Object.values(sessions)
         .reverse()
@@ -300,11 +301,11 @@ export function usePracticeSession({
             !candidate.invalidContext &&
             JSON.stringify(candidate.selection) === JSON.stringify(selection),
         );
-      if (previous) {
+      if (previous && shuffleSeenIds === undefined && (!initialTaskId || previous.taskIds.includes(initialTaskId))) {
         setCatalog(selection);
         setExam(selection.exam);
         setActiveId(previous.id);
-        const taskId = previous.taskIds[previous.lastPosition];
+        const taskId = initialTaskId ?? previous.taskIds[previous.lastPosition];
         navigate("tasks", {
           ...catalogRoute(selection),
           taskIndex: tasks.findIndex((task) => task.id === taskId),
@@ -317,6 +318,10 @@ export function usePracticeSession({
         selection,
         initialTaskId,
       );
+      if (shuffleSeenIds !== undefined) {
+        created.taskIds = orderPracticeTasks(created.taskIds, created.id, shuffleSeenIds);
+        created.lastPosition = 0;
+      }
       setCatalog(selection);
       setExam(selection.exam);
       setSessions((previous) => ({ ...previous, [created.id]: created }));

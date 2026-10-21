@@ -1,0 +1,16 @@
+.desktop-nav { min-height: 0; overflow-y: auto; align-content: start; }
+.sidebar > .brand-button, .sidebar-bottom { flex-shrink: 0; }
+.bookmark-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 46px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 12px;
+  color: var(--sage-dark); background: var(--surface); font-size: var(--secondary-size); font-weight: 600;
+}
+.bookmark-button[aria-pressed="true"] { background: var(--light-green); border-color: var(--sage); }
+.task-topbar { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.task-topbar .back-link { margin-bottom: 0; }
+.theory-page > .bookmark-button { margin-bottom: 24px; }
+.focus-mode .bookmark-button { display: none; }
+.random-practice-action { margin: 0 0 24px; display: grid; justify-items: start; gap: 10px; }
+.random-practice-action p { color: var(--muted); font-size: var(--secondary-size); max-width: 60ch; }
+.random-practice-action .button { white-space: normal; text-align: left; }
+.task-prompt { white-space: pre-line; }

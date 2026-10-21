@@ -1,3 +1,6 @@
+import { challengeTasks, challengePrototypes } from "./content/challenge-bank";
+import { ogeTasks, ogePrototypes } from "./content/oge-bank";
+import { egeTasks, egePrototypes } from "./content/ege-bank";
 import type { Exam } from "./navigation";
 import { getExamDefinition, type ExamLevel, type ExamPart } from "./exams";
 import { getExamNumberXPScoringRule } from "./exam-scores";
@@ -42,6 +45,8 @@ export type Task = {
   /** Author-written check list, never labelled as official assessment criteria. */
   selfCheckNotes?: string[];
   criteriaSourceUrl?: string;
+  /** Shared original statement for a coherent group, such as ОГЭ 1–5. */
+  sharedConditionId?: string;
 };
 
 /** Task topics may exist before a corresponding theory article is published. */
@@ -100,6 +105,9 @@ export const prototypes = [
   { id: "trig-extended", topicId: "trigonometric-equations", title: "Тригонометрическое уравнение и отбор корней" },
   { id: "geometry-extended", topicId: "geometry", title: "Геометрическое доказательство и вычисление" },
   { id: "integer-pairs-extended", topicId: "number-theory", title: "Уравнение в натуральных числах" },
+  ...ogePrototypes,
+  ...egePrototypes,
+  ...challengePrototypes,
 ];
 
 type DerivedTaskMetadata =
@@ -1190,6 +1198,9 @@ export const tasks: Task[] = [
     ],
     criteriaSourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
   }),
+  ...ogeTasks,
+  ...egeTasks,
+  ...challengeTasks,
 ];
 
 export type PracticeTaskFilter = {

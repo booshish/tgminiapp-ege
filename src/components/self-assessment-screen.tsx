@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ClipboardCheck } from "lucide-react";
 import { MathFormula } from "@/components/math-formula";
 import type { TaskScreenProps } from "./task-screen";
+import { BookmarkButton } from "./bookmark-button";
 import "./self-assessment-screen.css";
 
 /** A voluntary self-assessment is never an automatically checked correct answer. */
@@ -24,6 +25,8 @@ export function SelfAssessmentScreen({
   canPrevious,
   onBack,
   focusMode = false,
+  bookmarked = false,
+  onBookmark,
 }: TaskScreenProps) {
   const [feedback, setFeedback] = useState("");
   const confirmedScore = useRef<number | null>(null);
@@ -76,6 +79,7 @@ export function SelfAssessmentScreen({
         <button type="button" className="back-link" onClick={onBack}>
           <ArrowLeft size={20} aria-hidden="true" />К выбору заданий
         </button>
+        {onBookmark && <BookmarkButton active={bookmarked} onClick={onBookmark} />}
       </div>
       <header className="task-heading-block">
         <p className="eyebrow">

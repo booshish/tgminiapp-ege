@@ -1,11 +1,11 @@
 "use client";
 
-import { ArrowRight, BookOpen, Hash, ListFilter } from "lucide-react";
+import { ArrowRight, BookOpen, Hash, ListFilter, Shuffle } from "lucide-react";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import { getExamDefinition } from "@/lib/exams";
 import type { CatalogSelection } from "@/lib/practice";
 import { getPracticeTasks, prototypes, taskTopicLabels } from "@/lib/tasks";
-import { theoryTopics } from "@/lib/theory";
+import { getTheoryTopic, theoryTopics } from "@/lib/theory";
 import "@/components/catalog-screen.css";
 
 type CatalogScreenProps = {
@@ -13,6 +13,7 @@ type CatalogScreenProps = {
   onChange: (selection: CatalogSelection) => void;
   onStart: (selection: CatalogSelection) => void;
   onTheory: (topicId?: string) => void;
+  onShuffle?: () => void;
 };
 
 export function CatalogScreen({
@@ -20,6 +21,7 @@ export function CatalogScreen({
   onChange,
   onStart,
   onTheory,
+  onShuffle,
 }: CatalogScreenProps) {
   const definition = getExamDefinition({
     examType: selection.exam,
@@ -47,7 +49,7 @@ export function CatalogScreen({
       id: task.topicId,
       title: taskTopicLabels[task.topicId] ?? task.title,
       description: "Авторские задания · Самопроверка по образцу решения.",
-      hasTheory: false,
+      hasTheory: Boolean(getTheoryTopic(task.topicId)),
     });
   }
   const availablePrototypes = prototypes.filter(
@@ -86,6 +88,14 @@ export function CatalogScreen({
       </PageIntro>
 
       <ExamPicker exam={selection.exam} onChange={changeExam} />
+      {onShuffle && definition?.available && (
+        <div className="random-practice-action">
+          <button type="button" className="button button-secondary" onClick={onShuffle}>
+            <Shuffle size={19} aria-hidden="true" /> Случайная практика · {selection.exam}
+          </button>
+          <p>Подборка по всему экзамену. Сначала варианты, которые ты ещё не проверял.</p>
+        </div>
+      )}
 
       {selection.exam === "ЕГЭ" && (
         <section
@@ -320,7 +330,8 @@ export function CatalogScreen({
           onClick={() =>
             onTheory(
               selection.mode === "topic" &&
-              theoryTopics.some((topic) => topic.id === selection.topicId)
+              selection.topicId &&
+              Boolean(getTheoryTopic(selection.topicId))
                 ? selection.topicId
                 : undefined,
             )

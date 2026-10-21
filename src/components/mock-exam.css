@@ -1,0 +1,49 @@
+.mock-page { min-width: 0; }
+.mock-card { margin: 22px 0; padding: 26px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); min-width: 0; }
+.mock-card h2 { margin-bottom: 18px; font-size: 22px; font-weight: 700; }
+.mock-card h3 { margin: 22px 0 12px; font-size: 20px; font-weight: 700; }
+.mock-card > p { margin: 16px 0; line-height: 1.6; }
+.mock-card > p > svg { display: inline-block; vertical-align: middle; }
+.mock-number-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.mock-number-list button { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: 48px; min-height: 48px; padding: 8px; border: 1px solid var(--line); border-radius: 10px; font-weight: 600; background: var(--cream); color: var(--ink); }
+.mock-number-list button small { font-size: 14px; font-weight: 500; line-height: 1.4; }
+.mock-number-list button.has-answer { background: var(--light-green); }
+.mock-number-list button.selected { border: 2px solid var(--sage); background: var(--light-green); color: var(--sage-dark); }
+.mock-clock { display: flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.mock-task { max-width: 706px; margin-inline: auto; }
+.mock-task .task-prompt { white-space: pre-line; }
+.mock-answer-label { display: block; font-weight: 600; margin: 24px 0 10px; }
+.mock-task input[type="text"], .mock-task textarea { display: block; width: 100%; min-width: 0; min-height: 52px; border: 1px solid var(--line); border-radius: 12px; padding: 13px 16px; background: var(--cream); color: var(--ink); font: inherit; }
+.mock-task textarea { resize: vertical; line-height: 1.6; }
+.mock-secondary { color: var(--muted); font-size: var(--secondary-size); }
+.mock-task-navigation { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; margin-top: 28px; }
+.mock-verdict { padding: 14px; background: var(--light-green); border-radius: 12px; font-weight: 600; }
+.mock-solution { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 4px; }
+.mock-solution ol { padding-left: 24px; list-style: decimal; }
+.mock-solution ul { padding-left: 24px; list-style: disc; }
+.mock-solution li { margin: 18px 0; line-height: 1.65; }
+.mock-self-assessment { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 4px; }
+.mock-self-assessment p { margin: 16px 0; line-height: 1.6; }
+.mock-self-assessment fieldset { border: 0; padding: 0; margin: 20px 0; }
+.mock-self-assessment legend { margin-bottom: 12px; }
+.mock-score-options { display: flex; flex-wrap: wrap; gap: 10px; }
+.mock-score-options label { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 54px; min-height: 48px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.mock-score-options input { accent-color: var(--sage); width: 18px; height: 18px; }
+.mock-finish-confirm > div { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.mock-history { list-style: none; padding: 0; }
+.mock-history li + li { border-top: 1px solid var(--line); }
+.mock-history button { display: flex; width: 100%; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 18px 0; text-align: left; }
+.mock-history button > span { display: grid; gap: 6px; }
+.mock-history button span span { color: var(--muted); font-size: var(--secondary-size); }
+.mock-error { border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-block: 18px; background: var(--surface); }
+.mock-error p { margin-bottom: 12px; }
+@media (min-width: 768px) {
+  .mock-task { padding: 32px; }
+  .mock-task .task-prompt, .mock-solution p, .mock-solution li { font-size: var(--reading-size, 20px); font-weight: 500; line-height: 1.65; text-align: left; }
+}
+@media (max-width: 600px) {
+  .mock-card { padding: 20px; }
+  .mock-task-navigation .button { flex: 1; min-width: 0; padding-inline: 10px; }
+  .mock-number-list { gap: 7px; }
+  .mock-number-list button { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: 44px; }
+}

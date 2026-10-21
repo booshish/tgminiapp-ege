@@ -7,21 +7,19 @@ import {
   storageKey,
   legacyStorageKey,
   type LearningState,
-  type AnswerEvent,
   type SolutionEvent,
   type SelfAssessmentEvent,
 } from "@/lib/learning-events";
-import { checkTaskAnswer, type Task } from "@/lib/tasks";
+import type { Task } from "@/lib/tasks";
 import {
   emptyGameState,
-  recordGameAttempt,
   recordSelfAssessment,
   getSelfAssessment,
-  getAttemptXPAward,
   getGameSummary,
 } from "@/lib/gamification";
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import type { Exam } from "@/lib/navigation";
+import { appendCheckedAnswer, appendMockSolutionExposure } from "@/lib/learning-mutations";
 
 function eventId() {
   return typeof crypto !== "undefined" &&
@@ -39,7 +37,11 @@ export function useDemoProgress() {
   const pendingWrite = useRef(false);
   const stateRef = useRef(state);
   const updateState = useCallback(
-    (update: (previous: LearningState) => LearningState) => {
+    (update: (previous: LearningState) => LearningState, requirePersistence = false) => {
+      if (requirePersistence && !canPersist.current) {
+        setStorageWarning(true);
+        throw new Error("Learning storage is unavailable");
+      }
       // Refresh the canonical local ledger before a mutation; other tabs may have changed it.
       if (canPersist.current && !pendingWrite.current) {
         try {
@@ -53,28 +55,31 @@ export function useDemoProgress() {
               (value.version === 2 || value.version === 3)
             ) {
               stateRef.current = parseLearningState(raw);
-            }
+            } else if (requirePersistence) throw new Error("Unsupported learning data");
           }
-        } catch {
+        } catch (error) {
           setStorageWarning(true);
+          if (requirePersistence) throw error;
         }
       }
       const next = update(stateRef.current);
-      if (next === stateRef.current) {
+      if (next === stateRef.current && !requirePersistence) {
         setState(next);
         return;
       }
-      stateRef.current = next;
       // Commit events and their XP ledger together before the user can reload.
+      // A mock must not acknowledge publication or expose a solution until this write succeeds.
       if (canPersist.current) {
         try {
           window.localStorage.setItem(storageKey, JSON.stringify(next));
           pendingWrite.current = false;
-        } catch {
-          pendingWrite.current = true;
+        } catch (error) {
           setStorageWarning(true);
+          if (requirePersistence) throw error;
+          pendingWrite.current = true;
         }
       }
+      stateRef.current = next;
       setState(next);
     },
     [],
@@ -189,56 +194,26 @@ export function useDemoProgress() {
     [updateState],
   );
   const recordAnswer = useCallback(
-    (
-      task: Task,
-      answer: string,
-      correct: boolean,
-      solutionSeenBeforeCheck = false,
-    ) => {
-      const id = eventId();
+    (task: Task, answer: string, correct: boolean, solutionSeenBeforeCheck = false, requestId?: string) => {
+      const id = requestId ?? eventId();
       let xpAwarded = 0;
-      const checked = checkTaskAnswer(answer, task.answerRule);
-      if (!checked.valid || checked.correct !== correct)
-        throw new Error("Invalid checked answer");
       updateState((previous) => {
-        const event: AnswerEvent = {
-          kind: "answer_checked",
-          id,
-          taskId: task.id,
-          topicId: task.topicId,
-          prototypeId: task.prototypeId,
-          examType: task.examType[0],
-          subjectId: "math",
-          level: task.level,
-          examNumber: task.examNumber,
-          examVersionId: task.examVersionId,
-          examYear: task.examYear,
-          part: task.part,
-          answerFormat: task.part === 2 ? "extended" : "short",
-          createdAt: new Date().toISOString(),
-          answer: answer.trim(),
-          correct,
-          ...(solutionSeenBeforeCheck ? { solutionSeenBeforeCheck: true } : {}),
-        };
-        const game = recordGameAttempt(
-          previous.game,
-          event,
-          previous.events,
-          getTaskXPScoringRule(task),
-        );
-        xpAwarded = getAttemptXPAward(game, id);
-        return {
-          ...previous,
-          events: [...previous.events, event],
-          game,
-        };
-      });
+        const result = appendCheckedAnswer(previous, task, answer, correct, id, solutionSeenBeforeCheck);
+        xpAwarded = result.xpAwarded;
+        return result.state;
+      }, Boolean(requestId));
       return { id, xpAwarded };
     },
     [updateState],
   );
+  const recordSolutionExposed = useCallback(
+    (task: Task, mockSessionId: string) => {
+      updateState((previous) => appendMockSolutionExposure(previous, task, mockSessionId), true);
+    },
+    [updateState],
+  );
   const confirmSelfAssessment = useCallback(
-    (task: Task, score: number) => {
+    (task: Task, score: number, requirePersistence = false) => {
       const rule = getTaskXPScoringRule(task);
       if (
         !rule ||
@@ -285,13 +260,13 @@ export function useDemoProgress() {
             getGameSummary(previous.game).totalXP,
         };
         return { ...previous, events: [...previous.events, event], game };
-      });
+      }, requirePersistence);
       return result;
     },
     [updateState],
   );
   const recordSolutionViewed = useCallback(
-    (task: Task, attemptId: string) => {
+    (task: Task, attemptId: string, requirePersistence = false) => {
       updateState((previous) => {
         const attempt = previous.events.find(
           (event) =>
@@ -299,7 +274,10 @@ export function useDemoProgress() {
             event.id === attemptId &&
             event.taskId === task.id,
         );
-        if (!attempt) return previous;
+        if (!attempt) {
+          if (requirePersistence) throw new Error("Missing persisted attempt");
+          return previous;
+        }
         if (
           previous.events.some(
             (event) =>
@@ -332,7 +310,7 @@ export function useDemoProgress() {
           attemptId,
         };
         return { ...previous, events: [...previous.events, event] };
-      });
+      }, requirePersistence);
     },
     [updateState],
   );
@@ -381,6 +359,7 @@ export function useDemoProgress() {
     recordAnswer,
     confirmSelfAssessment,
     recordSolutionViewed,
+    recordSolutionExposed,
     clearLocalData,
   };
 }

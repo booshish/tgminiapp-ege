@@ -3,6 +3,10 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   BookOpen,
+  Bookmark,
+  CircleX,
+  CalendarClock,
+  ClipboardCheck,
   ChevronRight,
   Grid2X2,
   House,
@@ -28,6 +32,10 @@ import { ProgressScreen } from "@/components/screens/progress-screen";
 import { ProfileScreen } from "@/components/screens/profile-screen";
 import { PremiumScreen } from "@/components/screens/premium-screen";
 import { HelpScreen } from "@/components/screens/help-screen";
+import { StudyToolsScreen } from "@/components/screens/study-tools-screen";
+import { MockExamScreen } from "@/components/screens/mock-exam-screen";
+import { useStudyTools } from "@/hooks/use-study-tools";
+import { clearMockStorage } from "@/lib/mock-exam";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
 import { usePracticeSession } from "@/hooks/use-practice-session";
@@ -51,10 +59,11 @@ import {
   type CatalogSelection,
 } from "@/lib/practice";
 import { getExamLevelLabel } from "@/lib/exams";
-import { theoryTopics } from "@/lib/theory";
+import { getTheoryTopic } from "@/lib/theory";
 import { viewTitles, type View } from "@/lib/navigation";
 import { getGameSummary, getSelfAssessment } from "@/lib/gamification";
 import "./appearance.css";
+import "./learning-features.css";
 
 const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "home", label: "Главная", icon: House },
@@ -63,6 +72,10 @@ const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "progress", label: "Прогресс", icon: TrendingUp },
   { view: "trainer", label: "Мой тренер", icon: Sparkles },
   { view: "profile", label: "Профиль", icon: UserRound },
+  { view: "favorites", label: "Избранное", icon: Bookmark },
+  { view: "mistakes", label: "Мои ошибки", icon: CircleX },
+  { view: "mock", label: "Учебный вариант", icon: ClipboardCheck },
+  { view: "review", label: "Умное повторение", icon: CalendarClock },
 ];
 const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
 
@@ -82,8 +95,10 @@ export function StudyApp() {
     recordAnswer,
     confirmSelfAssessment,
     recordSolutionViewed,
+    recordSolutionExposed,
     clearLocalData,
   } = useDemoProgress();
+  const studyTools = useStudyTools();
   const [demoPremium, setDemoPremium] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const [now, setNow] = useState(() => new Date());
@@ -110,6 +125,8 @@ export function StudyApp() {
     rootRef: catalogRef,
   });
   const isPremium = demoAllowed && demoPremium;
+  const routeTheory = route.topicId ? getTheoryTopic(route.topicId) : undefined;
+  const theoryExam = route.exam ?? (routeTheory?.examType.length === 1 ? routeTheory.examType[0] : state.exam);
   const canConcentrate = route.view === "tasks"
     || (route.view === "theory" && Boolean(route.topicId));
   const concentrating = state.focusMode && canConcentrate;
@@ -130,6 +147,10 @@ export function StudyApp() {
     safePointKey: `${pageKey}:${latestCheck?.id ?? ""}`,
     ready,
   });
+
+  useEffect(() => {
+    if (ready && practice.initialized && route.view === "theory" && state.exam !== theoryExam) setExam(theoryExam);
+  }, [ready, practice.initialized, route.view, state.exam, theoryExam, setExam]);
 
   useEffect(() => {
     if (!ready) return;
@@ -241,10 +262,28 @@ export function StudyApp() {
     catalogScroll.capture();
     practice.start(selection);
   }
+  function shufflePractice() {
+    catalogScroll.capture();
+    practice.start({ ...practice.catalog, examNumber: undefined, topicId: undefined, prototypeId: undefined },
+      undefined, state.events.map((event) => event.taskId));
+  }
+  function openTaskById(taskId: string) {
+    const task = tasks.find((item) => item.id === taskId);
+    if (!task || task.level === "base") return;
+    practice.start({
+      exam: task.examType[0], subjectId: task.subjectId, level: task.level ?? undefined,
+      mode: task.examNumber === null ? "topic" : "number",
+      examNumber: task.examNumber ?? undefined,
+      topicId: task.examNumber === null ? task.topicId : undefined,
+    }, task.id);
+  }
   const openPremium = () => open("premium");
   const openTheory = (topicId?: string) => {
     if (route.view === "catalog") catalogScroll.capture();
-    navigate("theory", { topicId });
+    const topic = topicId ? getTheoryTopic(topicId) : undefined;
+    if (topic && !topic.examType.includes(state.exam)) setExam(topic.examType[0]);
+    navigate("theory", { topicId: topic?.id ?? topicId,
+      exam: topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam });
   };
   function openHelp() {
     if (route.view === "help") {
@@ -417,6 +456,9 @@ export function StudyApp() {
               onHelp={openHelp}
             />
           )}
+          {studyTools.storageWarning && route.view !== "favorites" && (
+            <p className="storage-warning" role="status">Не удалось сохранить закладки в браузере. Они могут быть потеряны после закрытия страницы.</p>
+          )}
           <div
             ref={catalogRef}
             hidden={route.view !== "catalog" || !practice.initialized}
@@ -426,25 +468,30 @@ export function StudyApp() {
               onChange={practice.changeCatalog}
               onStart={startFromCatalog}
               onTheory={openTheory}
+              onShuffle={shufflePractice}
             />
           </div>
           {route.view === "theory" && (
             <TheoryScreen
-              exam={state.exam}
+              exam={theoryExam}
               focusMode={concentrating}
               topicId={route.topicId}
               materialId={route.materialId}
-              onExamChange={practice.changeExam}
-              onOpenTopic={(topicId) => navigate("theory", { topicId })}
+              bookmarked={Boolean(route.topicId && studyTools.isBookmarked("theory", getTheoryTopic(route.topicId)?.id ?? route.topicId))}
+              onBookmark={route.topicId && studyTools.ready ? () => studyTools.toggleBookmark({
+                kind: "theory", itemId: getTheoryTopic(route.topicId!)?.id ?? route.topicId!, examType: theoryExam,
+              }) : undefined}
+              onExamChange={(exam) => { practice.changeExam(exam); navigate("theory", { exam }); }}
+              onOpenTopic={(topicId) => navigate("theory", { topicId, exam: theoryExam })}
               onOpenMaterial={(topicId, materialId) =>
-                navigate("theory", { topicId, materialId })
+                navigate("theory", { topicId, materialId, exam: theoryExam })
               }
               onPractice={startPractice}
               onBack={() => {
                 if (route.topicId) {
                   navigate(
                     "theory",
-                    route.materialId ? { topicId: route.topicId } : {},
+                    route.materialId ? { topicId: route.topicId, exam: theoryExam } : { exam: theoryExam },
                   );
                 } else back();
               }}
@@ -459,6 +506,10 @@ export function StudyApp() {
               <TaskScreen
                 key={`${session.id}:${currentTask.id}`}
                 task={currentTask}
+                bookmarked={studyTools.isBookmarked("task", currentTask.id)}
+                onBookmark={studyTools.ready ? () => studyTools.toggleBookmark({
+                  kind: "task", itemId: currentTask.id, examType: currentTask.examType[0],
+                }) : undefined}
                 exam={session.selection.exam}
                 levelLabel={
                   session.selection.exam === "ЕГЭ"
@@ -467,7 +518,7 @@ export function StudyApp() {
                 }
                 examNumber={currentTask.examNumber}
                 topicTitle={
-                  theoryTopics.find((topic) => topic.id === currentTask.topicId)
+                  getTheoryTopic(currentTask.topicId)
                     ?.title ??
                   taskTopicLabels[currentTask.topicId] ??
                   "Математика"
@@ -537,6 +588,7 @@ export function StudyApp() {
               onPremium={openPremium}
               onTheory={openTheory}
               onStart={startPractice}
+              onReview={() => open("review")}
             />
           )}
           {route.view === "profile" && (
@@ -554,8 +606,10 @@ export function StudyApp() {
               onClear={() => {
                 const practiceCleared = practice.reset();
                 const scrollCleared = catalogScroll.reset();
+                const bookmarksCleared = studyTools.clearBookmarks();
+                const mocksCleared = clearMockStorage();
                 const success =
-                  clearLocalData() && practiceCleared && scrollCleared;
+                  clearLocalData() && practiceCleared && scrollCleared && bookmarksCleared && mocksCleared;
                 if (success) {
                   setDemoPremium(false);
                   reminder.reset();
@@ -567,6 +621,18 @@ export function StudyApp() {
           )}
           {route.view === "premium" && <PremiumScreen onBack={back} />}
           {route.view === "help" && <HelpScreen onBack={returnFromHelp} />}
+          {(["favorites", "mistakes", "review"] as const).map((view) => route.view === view && (
+            <StudyToolsScreen key={view} mode={view} events={state.events} tools={studyTools}
+              isPremium={isPremium} onTask={openTaskById} onTheory={openTheory} onPremium={openPremium} />
+          ))}
+          {route.view === "mock" && (
+            <MockExamScreen exam={state.exam} onExamChange={setExam} onBack={back} onOpenTheory={openTheory}
+              onAnswer={recordAnswer} onSelfAssessment={(task, score) => confirmSelfAssessment(task, score, true)}
+              onSolutionViewed={(task, attemptId, sessionId) => {
+                if (attemptId) recordSolutionViewed(task, attemptId, true);
+                else recordSolutionExposed(task, sessionId);
+              }} />
+          )}
           {reminder.visible && (
             <aside
               className="break-reminder"
@@ -607,7 +673,8 @@ export function StudyApp() {
             activeView === "trainer" ||
             activeView === "profile" ||
             activeView === "premium" ||
-            activeView === "help"
+            activeView === "help" ||
+            ["favorites", "mistakes", "review", "mock"].includes(activeView)
               ? "active"
               : ""
           }

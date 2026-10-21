@@ -10,6 +10,7 @@ import {
   ChevronRight,
   Lightbulb,
 } from "lucide-react";
+import { BookmarkButton } from "@/components/bookmark-button";
 import { MathFormula } from "@/components/math-formula";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import type { Exam } from "@/lib/navigation";
@@ -28,6 +29,8 @@ type TheoryScreenProps = {
   onOpenMaterial: (topicId: string, materialId: string) => void;
   onPractice: (topicId: string) => void;
   onBack: () => void;
+  bookmarked?: boolean;
+  onBookmark?: () => void;
 };
 
 export function TheoryScreen({
@@ -40,6 +43,8 @@ export function TheoryScreen({
   onOpenMaterial,
   onPractice,
   onBack,
+  bookmarked = false,
+  onBookmark,
 }: TheoryScreenProps) {
   const [query, setQuery] = useState("");
   const [part, setPart] = useState<1 | 2>(1);
@@ -58,14 +63,14 @@ export function TheoryScreen({
           examType: exam,
           level: exam === "ЕГЭ" ? "profile" : undefined,
           examNumber: Number(number),
-        }).map((task) => task.topicId),
+        }).map((task) => getTheoryTopic(task.topicId)?.id ?? task.topicId),
       )
     : undefined;
   const visibleTopics = theoryTopics.filter(
     (item) =>
       item.examType.includes(exam) &&
       item.part === part &&
-      (!matchingTaskTopics || matchingTaskTopics.has(item.id)) &&
+      (!matchingTaskTopics || item.examNumbers?.includes(Number(number)) || matchingTaskTopics.has(item.id)) &&
       (!normalizedQuery ||
         [item.title, item.description, ...item.sections.map((section) => section.title)]
           .join(" ")
@@ -76,7 +81,7 @@ export function TheoryScreen({
   const topic = topicId ? getTheoryTopic(topicId) : undefined;
   const isMaterial = Boolean(topic && materialId === topic.materialId);
   const unavailable = Boolean(
-    (topicId && !topic) || (materialId && !isMaterial),
+    (topicId && (!topic || !topic.examType.includes(exam))) || (materialId && !isMaterial),
   );
 
   if (unavailable) {
@@ -110,6 +115,7 @@ export function TheoryScreen({
         <ArrowLeft size={17} aria-hidden="true" />
         {isMaterial ? "К теме" : topic ? "К списку тем" : "Назад"}
       </button>
+      {topic && onBookmark && <BookmarkButton active={bookmarked} onClick={onBookmark} />}
 
       {!topic ? (
         <>
@@ -180,9 +186,9 @@ export function TheoryScreen({
             </span>
             <h2>Выберите тему</h2>
             <p>
-              Авторские конспекты по школьной базе для ОГЭ и ЕГЭ. Связь с
-              номерами предварительная: это демобиблиотека, а не полный
-              экзаменационный курс.
+              Авторские материалы по номерам и школьной базе. Привязка к
+              структуре 2026 года предварительная; отдельные методы не означают
+              полного охвата всех экзаменационных подтипов.
             </p>
           </div>
           <div className="topic-grid">
@@ -195,7 +201,7 @@ export function TheoryScreen({
                 >
                   <span className="theory-topic-top">
                     <span className="note-number">
-                      {String(index + 1).padStart(2, "0")}
+                      {item.examNumbers?.[0] ? `№${item.examNumbers[0]}` : String(index + 1).padStart(2, "0")}
                     </span>
                     <ChevronRight size={20} aria-hidden="true" />
                   </span>
@@ -213,17 +219,11 @@ export function TheoryScreen({
           {visibleTopics.length === 0 && (
             <section className="theory-empty" role="status">
               <BookOpen size={26} aria-hidden="true" />
-              <h2>
-                {part === 2
-                  ? "Глубокие материалы ещё готовятся"
-                  : "Подходящий материал пока не найден"}
-              </h2>
+              <h2>Подходящий материал пока не найден</h2>
               <p>
-                {part === 2
-                  ? "Для второй части нужны отдельные методы, примеры оформления и проверенные источники. Общую базу можно повторить в первой части; официальные критерии пока не опубликованы в приложении."
-                  : number
-                    ? "В демобиблиотеке пока нет связанного конспекта к этому номеру. Открой все темы или измени поиск."
-                    : "Попробуй более короткий запрос или открой все темы."}
+                {number
+                  ? "Попробуй убрать поисковый запрос или открыть все материалы выбранной части."
+                  : "Попробуй более короткий запрос или открой все темы."}
               </p>
               <button
                 type="button"
@@ -246,7 +246,7 @@ export function TheoryScreen({
             <ChevronRight size={13} aria-hidden="true" />
             <span>Математика{exam === "ЕГЭ" ? " · профиль" : ""}</span>
             <ChevronRight size={13} aria-hidden="true" />
-            <span>Школьная база · часть {topic.part}</span>
+            <span>{topic.coverage === "foundation" ? "Школьная база" : `№${topic.examNumbers?.[0]}`} · часть {topic.part}</span>
             <ChevronRight size={13} aria-hidden="true" />
             <span aria-current={!isMaterial ? "page" : undefined}>
               {topic.title}
@@ -276,7 +276,11 @@ export function TheoryScreen({
                 <BookOpen size={19} aria-hidden="true" />
                 <p>
                   {topic.source.label} · около {topic.readMinutes} минут.
-                  Школьная база для ОГЭ и ЕГЭ; это не официальный материал ФИПИ.
+                  {topic.coverage === "foundation"
+                    ? " Школьная база для ОГЭ и ЕГЭ."
+                    : ` ${exam}${exam === "ЕГЭ" ? " · профиль" : ""}, часть ${topic.part}.`}
+                  {" "}Это не официальный материал ФИПИ.
+                  {topic.part === 2 && " Пояснения по оформлению — авторские, официальные критерии здесь не воспроизводятся."}
                 </p>
               </div>
               {topic.sections.map((section, index) => (
@@ -360,7 +364,7 @@ export function TheoryScreen({
                   <BookOpen size={25} aria-hidden="true" />
                 </span>
                 <span className="theory-author-label">
-                  Авторский конспект · школьная база · ≈{topic.readMinutes} мин
+                  Авторский конспект · {topic.coverage === "foundation" ? "школьная база" : `часть ${topic.part}`} · ≈{topic.readMinutes} мин
                 </span>
                 <h2>Коротко о главном</h2>
                 <p>{topic.sections[0]?.body[0]}</p>
@@ -391,8 +395,9 @@ export function TheoryScreen({
               <div className="info-note">
                 <Lightbulb size={20} aria-hidden="true" />
                 <p>
-                  Эта тема полезна и для ОГЭ, и для ЕГЭ. В демоверсии показаны
-                  общие основы, без обещания полного покрытия экзамена.
+                  {topic.coverage === "foundation"
+                    ? "Базовая тема пригодится в разных экзаменационных задачах. Для практики выбери нужный экзамен."
+                    : "Разобраны отдельные методы и авторские примеры. Полный перечень подтипов и официальные критерии требуют отдельной сверки ФИПИ."}
                 </p>
               </div>
               <button

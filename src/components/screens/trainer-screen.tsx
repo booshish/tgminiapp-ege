@@ -5,6 +5,8 @@ import { CoachIllustration } from "@/components/illustrations";
 import { PageIntro } from "@/components/ui";
 import { getAnalytics, type LearningState } from "@/lib/learning-events";
 import { theoryTopics } from "@/lib/theory";
+import { tasks } from "@/lib/tasks";
+import { independentAnswers } from "@/lib/study-tools";
 
 type TrainerScreenProps = {
   state: LearningState;
@@ -12,6 +14,7 @@ type TrainerScreenProps = {
   onPremium: () => void;
   onTheory: (topicId: string) => void;
   onStart: (topicId?: string) => void;
+  onReview: () => void;
 };
 
 export function TrainerScreen({
@@ -20,6 +23,7 @@ export function TrainerScreen({
   onPremium,
   onTheory,
   onStart,
+  onReview,
 }: TrainerScreenProps) {
   if (!isPremium) {
     return (
@@ -37,8 +41,8 @@ export function TrainerScreen({
             доступны в Premium.
           </p>
           <p className="muted">
-            Полная диагностика пробелов, персональный план и адаптивная
-            тренировка — следующие этапы развития. Сейчас они не подключены.
+            В демонстрационном Premium работают интервалы повторения и
+            рекомендации по сложности. Полная диагностика и персональный план ещё разрабатываются.
           </p>
           <button className="button button-primary" onClick={onPremium}>
             Подробнее о Premium <ArrowRight size={18} aria-hidden="true" />
@@ -49,9 +53,12 @@ export function TrainerScreen({
   }
 
   const analytics = getAnalytics(state);
+  const independent = independentAnswers(state.events, tasks);
   const repeatedErrors = analytics.topics.filter(
-    (topic) =>
-      topic.attempts >= 3 && topic.attempts - topic.correctAnswers >= 2,
+    (topic) => {
+      const sample = independent.filter((event) => event.topicId === topic.topicId).slice(-6);
+      return sample.length >= 6 && sample.filter((event) => !event.correct).length >= 3;
+    },
   );
 
   return (
@@ -70,10 +77,11 @@ export function TrainerScreen({
             готовности к экзамену.
           </p>
           <p className="muted">
-            Автоматический персональный план и адаптивный подбор заданий пока не
-            подключены. Кнопки ниже открывают обычную практику по выбранной
-            тобой теме.
+            «Умное повторение» предлагает новые похожие задачи и добровольные
+            рекомендации по сложности. Это прозрачные учебные правила;
+            персональный план пока не подключён.
           </p>
+          <button className="button button-primary" onClick={onReview}>Умное повторение <ArrowRight size={18} aria-hidden="true" /></button>
         </div>
       </section>
       <section className="analytics-section">
@@ -81,8 +89,8 @@ export function TrainerScreen({
           <h2>Что стоит повторить</h2>
         </div>
         <p className="muted">
-          Показываем тему после трёх проверенных ответов, если хотя бы два из
-          них неверные. Небольшого числа ответов недостаточно для вывода обо
+          Показываем тему после шести разных самостоятельных задач, если хотя бы три
+          ответа неверные. Небольшого числа ответов недостаточно для вывода обо
           всех знаниях по теме.
         </p>
         {repeatedErrors.length === 0 ? (
@@ -169,9 +177,9 @@ export function TrainerScreen({
         <Lightbulb size={20} aria-hidden="true" />
         <p>
           Тренер не использует серверный ИИ. Сейчас он показывает простой
-          ориентир по сохранённым ответам. Полная диагностика, персональный план
-          и повторение с автоматическим подбором появятся после отдельной
-          разработки и проверки.
+          ориентир по сохранённым ответам. Интервальное повторение доступно
+          в отдельном разделе; полная диагностика и персональный план
+          требуют дальнейшей разработки и проверки.
         </p>
       </div>
     </>

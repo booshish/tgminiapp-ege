@@ -1,0 +1,1489 @@
+{
+  "revision": "1c8d914",
+  "schemaVersion": 1,
+  "taskOrder": [
+    "triangle-sine",
+    "linear-equation",
+    "fraction-addition",
+    "probability-balls",
+    "percentage-discount",
+    "fraction-subtraction",
+    "fraction-signed",
+    "decimal-addition",
+    "decimal-product",
+    "decimal-division",
+    "percentage-jacket",
+    "percentage-increase",
+    "linear-negative",
+    "linear-brackets",
+    "quadratic-two-roots",
+    "quadratic-opposite-roots",
+    "quadratic-fractional-roots",
+    "powers-quotient",
+    "roots-sum",
+    "roots-product",
+    "triangle-sine-five-twelve",
+    "triangle-sine-eight-fifteen",
+    "probability-die",
+    "probability-cards",
+    "oge-fraction-sum-terminating",
+    "oge-quadratic-larger-root",
+    "oge-probability-even-die",
+    "oge-triangle-three-four",
+    "ege-base-fraction-sum",
+    "ege-base-decimal-difference",
+    "ege-base-discount",
+    "ege-base-linear-equation",
+    "ege-base-quadratic-roots",
+    "ege-base-powers-quotient",
+    "ege-base-triangle-sine",
+    "ege-base-probability-balls",
+    "ege-profile-triangle-twelve-nine",
+    "ege-profile-triangle-nine-twelve",
+    "ege-profile-probability-balls",
+    "ege-profile-probability-cards",
+    "ege-profile-exponential-two",
+    "ege-profile-exponential-three",
+    "ege-profile-roots-product",
+    "ege-profile-powers-quotient",
+    "ege-profile-fraction-difference",
+    "ege-profile-fraction-product",
+    "oge20-quadratic-self",
+    "ege13-trigonometric-self",
+    "ege17-triangle-proof-self",
+    "ege19-integer-pairs-self"
+  ],
+  "totals": {
+    "allTasks": 50,
+    "activeTasks": 34,
+    "inactiveTasks": 16,
+    "unnumberedActiveTasks": 7,
+    "uniqueTheory": 8,
+    "numbers": 44,
+    "numbersWithTasks": 13,
+    "numbersWithTheory": 9
+  },
+  "exams": [
+    {
+      "id": "oge-math",
+      "title": "ОГЭ · Математика",
+      "year": 2026,
+      "taskCount": 21,
+      "unnumberedTaskCount": 7,
+      "theoryCount": 8,
+      "numberCount": 25,
+      "numbersWithTasks": 6,
+      "numbersWithTheory": 5
+    },
+    {
+      "id": "ege-math-profile",
+      "title": "ЕГЭ · Математика · Профильный уровень",
+      "year": 2026,
+      "taskCount": 13,
+      "unnumberedTaskCount": 0,
+      "theoryCount": 8,
+      "numberCount": 19,
+      "numbersWithTasks": 7,
+      "numbersWithTheory": 4
+    }
+  ],
+  "inactiveExams": [
+    {
+      "id": "ege-math-base",
+      "title": "ЕГЭ · Математика · Базовый уровень",
+      "preservedTaskCount": 16,
+      "reason": "Базовый уровень временно недоступен: сначала проверим структуру и подготовим проверенный контент. Старые локальные события сохраняются."
+    }
+  ],
+  "rows": [
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 1,
+      "part": 1,
+      "title": "Практические задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 2,
+      "part": 1,
+      "title": "Практические задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 3,
+      "part": 1,
+      "title": "Практические задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 4,
+      "part": 1,
+      "title": "Практические задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 5,
+      "part": 1,
+      "title": "Практические задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 6,
+      "part": 1,
+      "title": "Числа и вычисления",
+      "topicIds": [
+        "fractions",
+        "decimals"
+      ],
+      "topics": [
+        "Обыкновенные дроби",
+        "Десятичные дроби"
+      ],
+      "prototypes": [
+        "fraction-arithmetic",
+        "decimal-arithmetic"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "fractions",
+          "title": "Обыкновенные дроби",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "fraction-arithmetic",
+              "title": "Сложение и вычитание дробей",
+              "taskCount": 2
+            }
+          ]
+        },
+        {
+          "topicId": "decimals",
+          "title": "Десятичные дроби",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "decimal-arithmetic",
+              "title": "Действия с десятичными дробями",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 4,
+      "theoryCount": 2,
+      "theoryIds": [
+        "fractions",
+        "decimals"
+      ],
+      "solutionCount": 4,
+      "automaticCount": 4,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 7,
+      "part": 1,
+      "title": "Числовые неравенства и координатная прямая",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 8,
+      "part": 1,
+      "title": "Алгебраические выражения",
+      "topicIds": [
+        "powers-roots"
+      ],
+      "topics": [
+        "Степени и корни"
+      ],
+      "prototypes": [
+        "powers-and-roots"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "powers-roots",
+          "title": "Степени и корни",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "powers-and-roots",
+              "title": "Степени и квадратные корни",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 2,
+      "theoryCount": 1,
+      "theoryIds": [
+        "powers-roots"
+      ],
+      "solutionCount": 2,
+      "automaticCount": 2,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 9,
+      "part": 1,
+      "title": "Уравнения",
+      "topicIds": [
+        "linear-equations",
+        "quadratic-equations"
+      ],
+      "topics": [
+        "Линейные уравнения",
+        "Квадратные уравнения"
+      ],
+      "prototypes": [
+        "linear-basic",
+        "quadratic-roots"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "linear-equations",
+          "title": "Линейные уравнения",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "linear-basic",
+              "title": "Линейные уравнения",
+              "taskCount": 2
+            }
+          ]
+        },
+        {
+          "topicId": "quadratic-equations",
+          "title": "Квадратные уравнения",
+          "taskCount": 1,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "quadratic-roots",
+              "title": "Корни квадратного уравнения",
+              "taskCount": 1
+            }
+          ]
+        }
+      ],
+      "taskCount": 3,
+      "theoryCount": 2,
+      "theoryIds": [
+        "linear-equations",
+        "quadratic-equations"
+      ],
+      "solutionCount": 3,
+      "automaticCount": 3,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 10,
+      "part": 1,
+      "title": "Теория вероятностей",
+      "topicIds": [
+        "probability"
+      ],
+      "topics": [
+        "Вероятность"
+      ],
+      "prototypes": [
+        "classical-probability"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "probability",
+          "title": "Вероятность",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "classical-probability",
+              "title": "Равновозможные исходы",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 2,
+      "theoryCount": 1,
+      "theoryIds": [
+        "probability"
+      ],
+      "solutionCount": 2,
+      "automaticCount": 2,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 11,
+      "part": 1,
+      "title": "Графики функций",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 12,
+      "part": 1,
+      "title": "Вычисления по формулам",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 13,
+      "part": 1,
+      "title": "Неравенства и их системы",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 14,
+      "part": 1,
+      "title": "Прогрессии",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 15,
+      "part": 1,
+      "title": "Треугольники",
+      "topicIds": [
+        "geometry"
+      ],
+      "topics": [
+        "Базовая геометрия"
+      ],
+      "prototypes": [
+        "triangle-sine"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "geometry",
+          "title": "Базовая геометрия",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "triangle-sine",
+              "title": "Синус в прямоугольном треугольнике",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 2,
+      "theoryCount": 1,
+      "theoryIds": [
+        "geometry"
+      ],
+      "solutionCount": 2,
+      "automaticCount": 2,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 16,
+      "part": 1,
+      "title": "Окружности",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 17,
+      "part": 1,
+      "title": "Четырёхугольники",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 18,
+      "part": 1,
+      "title": "Фигуры на клетчатой бумаге",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 19,
+      "part": 1,
+      "title": "Геометрические утверждения",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 20,
+      "part": 2,
+      "title": "Уравнения и неравенства",
+      "topicIds": [
+        "quadratic-equations"
+      ],
+      "topics": [
+        "Квадратные уравнения"
+      ],
+      "prototypes": [
+        "quadratic-extended"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "quadratic-equations",
+          "title": "Квадратные уравнения",
+          "taskCount": 1,
+          "theoryCount": 0,
+          "prototypes": [
+            {
+              "id": "quadratic-extended",
+              "title": "Уравнение с развёрнутым решением",
+              "taskCount": 1
+            }
+          ]
+        }
+      ],
+      "taskCount": 1,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 1,
+      "automaticCount": 0,
+      "selfAssessmentCount": 1,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 21,
+      "part": 2,
+      "title": "Текстовые задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 22,
+      "part": 2,
+      "title": "Графики функций",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 23,
+      "part": 2,
+      "title": "Геометрические задачи на вычисление",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 24,
+      "part": 2,
+      "title": "Геометрические задачи на доказательство",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "oge-math",
+      "examVersionId": "oge-math-2026",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": null,
+      "year": 2026,
+      "number": 25,
+      "part": 2,
+      "title": "Геометрические задачи повышенной сложности",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 1,
+      "part": 1,
+      "title": "Планиметрия",
+      "topicIds": [
+        "geometry"
+      ],
+      "topics": [
+        "Базовая геометрия"
+      ],
+      "prototypes": [
+        "triangle-sine"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "geometry",
+          "title": "Базовая геометрия",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "triangle-sine",
+              "title": "Синус в прямоугольном треугольнике",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 2,
+      "theoryCount": 1,
+      "theoryIds": [
+        "geometry"
+      ],
+      "solutionCount": 2,
+      "automaticCount": 2,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 2,
+      "part": 1,
+      "title": "Векторы",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 3,
+      "part": 1,
+      "title": "Стереометрия",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 4,
+      "part": 1,
+      "title": "Теория вероятностей",
+      "topicIds": [
+        "probability"
+      ],
+      "topics": [
+        "Вероятность"
+      ],
+      "prototypes": [
+        "classical-probability"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "probability",
+          "title": "Вероятность",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "classical-probability",
+              "title": "Равновозможные исходы",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 2,
+      "theoryCount": 1,
+      "theoryIds": [
+        "probability"
+      ],
+      "solutionCount": 2,
+      "automaticCount": 2,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 5,
+      "part": 1,
+      "title": "Теория вероятностей",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 6,
+      "part": 1,
+      "title": "Уравнения",
+      "topicIds": [
+        "powers-roots"
+      ],
+      "topics": [
+        "Степени и корни"
+      ],
+      "prototypes": [
+        "exponential-equation"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "powers-roots",
+          "title": "Степени и корни",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "exponential-equation",
+              "title": "Простейшие показательные уравнения",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 2,
+      "theoryCount": 1,
+      "theoryIds": [
+        "powers-roots"
+      ],
+      "solutionCount": 2,
+      "automaticCount": 2,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 7,
+      "part": 1,
+      "title": "Вычисления и преобразования",
+      "topicIds": [
+        "powers-roots",
+        "fractions"
+      ],
+      "topics": [
+        "Степени и корни",
+        "Обыкновенные дроби"
+      ],
+      "prototypes": [
+        "powers-and-roots",
+        "fraction-arithmetic"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "powers-roots",
+          "title": "Степени и корни",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "powers-and-roots",
+              "title": "Степени и квадратные корни",
+              "taskCount": 2
+            }
+          ]
+        },
+        {
+          "topicId": "fractions",
+          "title": "Обыкновенные дроби",
+          "taskCount": 2,
+          "theoryCount": 1,
+          "prototypes": [
+            {
+              "id": "fraction-arithmetic",
+              "title": "Сложение и вычитание дробей",
+              "taskCount": 2
+            }
+          ]
+        }
+      ],
+      "taskCount": 4,
+      "theoryCount": 2,
+      "theoryIds": [
+        "fractions",
+        "powers-roots"
+      ],
+      "solutionCount": 4,
+      "automaticCount": 4,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 8,
+      "part": 1,
+      "title": "Производная",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 9,
+      "part": 1,
+      "title": "Прикладные задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 10,
+      "part": 1,
+      "title": "Текстовые задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 11,
+      "part": 1,
+      "title": "Функции и графики",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 12,
+      "part": 1,
+      "title": "Исследование функций",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 1,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 13,
+      "part": 2,
+      "title": "Уравнения",
+      "topicIds": [
+        "trigonometric-equations"
+      ],
+      "topics": [
+        "Тригонометрические уравнения"
+      ],
+      "prototypes": [
+        "trig-extended"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "trigonometric-equations",
+          "title": "Тригонометрические уравнения",
+          "taskCount": 1,
+          "theoryCount": 0,
+          "prototypes": [
+            {
+              "id": "trig-extended",
+              "title": "Тригонометрическое уравнение и отбор корней",
+              "taskCount": 1
+            }
+          ]
+        }
+      ],
+      "taskCount": 1,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 1,
+      "automaticCount": 0,
+      "selfAssessmentCount": 1,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 14,
+      "part": 2,
+      "title": "Стереометрия",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 3,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 15,
+      "part": 2,
+      "title": "Неравенства",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 16,
+      "part": 2,
+      "title": "Экономические задачи",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 2,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 17,
+      "part": 2,
+      "title": "Планиметрия",
+      "topicIds": [
+        "geometry"
+      ],
+      "topics": [
+        "Базовая геометрия"
+      ],
+      "prototypes": [
+        "geometry-extended"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "geometry",
+          "title": "Базовая геометрия",
+          "taskCount": 1,
+          "theoryCount": 0,
+          "prototypes": [
+            {
+              "id": "geometry-extended",
+              "title": "Геометрическое доказательство и вычисление",
+              "taskCount": 1
+            }
+          ]
+        }
+      ],
+      "taskCount": 1,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 1,
+      "automaticCount": 0,
+      "selfAssessmentCount": 1,
+      "maxPrimaryScore": 3,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 18,
+      "part": 2,
+      "title": "Задачи с параметрами",
+      "topicIds": [],
+      "topics": [],
+      "prototypes": [],
+      "topicCoverage": [],
+      "taskCount": 0,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 0,
+      "automaticCount": 0,
+      "selfAssessmentCount": 0,
+      "maxPrimaryScore": 4,
+      "verificationStatus": "not-verified-online"
+    },
+    {
+      "examId": "ege-math-profile",
+      "examVersionId": "ege-math-profile-2026",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "subjectTitle": "Математика",
+      "level": "profile",
+      "year": 2026,
+      "number": 19,
+      "part": 2,
+      "title": "Теория чисел",
+      "topicIds": [
+        "number-theory"
+      ],
+      "topics": [
+        "Теория чисел"
+      ],
+      "prototypes": [
+        "integer-pairs-extended"
+      ],
+      "topicCoverage": [
+        {
+          "topicId": "number-theory",
+          "title": "Теория чисел",
+          "taskCount": 1,
+          "theoryCount": 0,
+          "prototypes": [
+            {
+              "id": "integer-pairs-extended",
+              "title": "Уравнение в натуральных числах",
+              "taskCount": 1
+            }
+          ]
+        }
+      ],
+      "taskCount": 1,
+      "theoryCount": 0,
+      "theoryIds": [],
+      "solutionCount": 1,
+      "automaticCount": 0,
+      "selfAssessmentCount": 1,
+      "maxPrimaryScore": 4,
+      "verificationStatus": "not-verified-online"
+    }
+  ],
+  "missingLinks": [
+    "task:ege13-trigonometric-self → topic:trigonometric-equations",
+    "task:ege19-integer-pairs-self → topic:number-theory"
+  ]
+}

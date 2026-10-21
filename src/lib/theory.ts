@@ -1,10 +1,13 @@
 import type { Exam } from "@/lib/navigation";
+import { numberTheoryTopics } from "./content/number-theory";
 
 export type TheoryTopic = {
   id: string;
   subjectId: "math";
-  part: 1;
-  coverage: "foundation";
+  part: 1 | 2;
+  coverage: "foundation" | "exam-topic";
+  /** Author-defined links to the project exam structure, not official endorsement. */
+  examNumbers?: number[];
   source: { kind: "author"; label: string };
   readMinutes: number;
   examType: Exam[];
@@ -657,8 +660,16 @@ export const theoryTopics: TheoryTopic[] = [
       "Ответ больше 1 или меньше 0 означает ошибку в подсчёте или вычислениях.",
     ],
   },
+  ...numberTheoryTopics,
 ];
 
+/** Legacy task/event topic identifiers resolve without rewriting stored history. */
+export const theoryTopicAliases: Readonly<Record<string, string>> = {
+  "trigonometric-equations": "ege-profile-number-13",
+  "number-theory": "ege-profile-number-19",
+};
+
 export function getTheoryTopic(id: string): TheoryTopic | undefined {
-  return theoryTopics.find((topic) => topic.id === id);
+  const resolved = theoryTopicAliases[id] ?? id;
+  return theoryTopics.find((topic) => topic.id === resolved);
 }

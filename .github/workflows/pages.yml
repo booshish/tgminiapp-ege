@@ -48,6 +48,9 @@ jobs:
       - name: Проверить задания и сохранения
         run: npm test
 
+      - name: Проверить покрытие и связи материалов
+        run: npm run content:check
+
       - name: Собрать сайт
         run: npm run build:pages
 

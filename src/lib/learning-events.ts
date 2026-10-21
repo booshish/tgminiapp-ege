@@ -34,7 +34,10 @@ export type AnswerEvent = EventContext & {
 
 export type SolutionEvent = EventContext & {
   kind: "solution_viewed";
-  attemptId: string;
+  attemptId?: string;
+  /** An unanswered item may be reviewed only after finishing a mock. */
+  source?: "completed-mock";
+  mockSessionId?: string;
 };
 
 export type SelfAssessmentEvent = EventContext & {
@@ -237,11 +240,17 @@ function parseEvents(value: unknown): LearningEvent[] {
           : {}),
       });
     } else if (event.kind === "solution_viewed") {
-      if (!isId(event.attemptId)) continue;
+      const exposedAfterMock = event.source === "completed-mock" &&
+        event.attemptId === undefined && isId(event.mockSessionId) &&
+        context.part === 1 && context.answerFormat === "short" &&
+        typeof context.examVersionId === "string";
+      if (!isId(event.attemptId) && !exposedAfterMock) continue;
       candidates.push({
         ...context,
         kind: "solution_viewed",
-        attemptId: event.attemptId,
+        ...(exposedAfterMock
+          ? { source: "completed-mock" as const, mockSessionId: event.mockSessionId as string }
+          : { attemptId: event.attemptId as string }),
       });
     } else if (event.kind === "self_assessed") {
       const task = tasks.find((candidate) => candidate.id === context.taskId)!;
@@ -285,7 +294,12 @@ function parseEvents(value: unknown): LearningEvent[] {
   }
   for (const event of candidates) {
     if (event.kind !== "solution_viewed" || ids.has(event.id)) continue;
-    const attempt = answers.get(event.attemptId);
+    if (event.source === "completed-mock" && event.attemptId === undefined) {
+      accepted.add(event);
+      ids.add(event.id);
+      continue;
+    }
+    const attempt = event.attemptId ? answers.get(event.attemptId) : undefined;
     if (
       attempt !== undefined &&
       attempt.taskId === event.taskId &&

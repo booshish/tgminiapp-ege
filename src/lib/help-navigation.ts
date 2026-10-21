@@ -22,7 +22,7 @@ function object(value: unknown): Record<string, unknown> | null {
 function validHash(value: unknown): value is string {
   if (typeof value !== "string" || value.length > 4096 || /[\u0000-\u001f\u007f]/.test(value)) return false;
   if (value === "") return true; // The initial home route has no fragment.
-  return /^#\/(?:home|catalog|theory|trainer|progress|profile|premium)(?:\?[^#]*)?$/.test(value)
+  return /^#\/(?:home|catalog|theory|trainer|progress|profile|premium|favorites|mistakes|review|mock)(?:\?[^#]*)?$/.test(value)
     || /^#\/tasks\/\d{1,6}(?:\?[^#]*)?$/.test(value);
 }
 

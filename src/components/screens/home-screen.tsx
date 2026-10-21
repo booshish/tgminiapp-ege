@@ -3,6 +3,10 @@
 import {
   ArrowRight,
   BookOpen,
+  Bookmark,
+  CircleX,
+  ClipboardCheck,
+  CalendarClock,
   ListChecks,
   Sparkles,
   TrendingUp,
@@ -81,6 +85,10 @@ export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHe
             onClick={() => onNavigate("trainer")}
             tone="feature-trainer"
           />
+          <FeatureCard icon={Bookmark} label="Избранное" description="Сохранённые задания и конспекты" onClick={() => onNavigate("favorites")} />
+          <FeatureCard icon={CircleX} label="Мои ошибки" description="Вернуться к задачам и разобрать теорию" onClick={() => onNavigate("mistakes")} />
+          <FeatureCard icon={ClipboardCheck} label="Учебный вариант" description="Таймер, задания и сохранение ответов" onClick={() => onNavigate("mock")} />
+          <FeatureCard icon={CalendarClock} label="Умное повторение" description="Новые аналогичные задачи в Premium" onClick={() => onNavigate("review")} />
         </div>
       </section>
       <section className="premium-summary">
