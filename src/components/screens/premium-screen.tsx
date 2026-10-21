@@ -172,9 +172,13 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
       <section className="premium-trial" aria-labelledby="premium-trial-title">
         <div>
           <span className="eyebrow">ПРОБНЫЙ ПЕРИОД · ПЛАНИРУЕТСЯ</span>
-          <h2 id="premium-trial-title">{subscriptionPrices.trial.days} дней Premium без карты</h2>
+          <h2 id="premium-trial-title">{subscriptionPrices.trial.days} дней Premium</h2>
           <p>Полный Premium на {subscriptionPrices.trial.slots} выбранных предмета. Затем — Free без списаний, с сохранением данных.</p>
           <p className="premium-secondary">Один пробный период на пользователя. Он появится после подключения аккаунтов, проверки права на пробу и нужного набора предметов.</p>
+          <details className="premium-trial-terms">
+            <summary>Условия пробного периода</summary>
+            <p className="premium-secondary">По текущей модели привязка карты не требуется. Доступ заканчивается через {subscriptionPrices.trial.days} суток после активации, без списаний и автоматического продления. Сейчас активировать пробный период нельзя.</p>
+          </details>
         </div>
         <button type="button" className="button premium-unavailable-button" disabled>Пробный период скоро</button>
       </section>

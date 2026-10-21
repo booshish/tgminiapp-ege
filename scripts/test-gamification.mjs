@@ -533,3 +533,57 @@ test("flame size and color depend only on the correct-answer series and remain v
   }
   assert.equal(summary(game).winStreak, 60);
 });
+
+test("rechecking an already counted task incorrectly never erases a newer streak", () => {
+  for (const firstCorrect of [false, true]) {
+    const old = attempt(`old-${firstCorrect}`, { correct: firstCorrect });
+    const firstNew = attempt(`new-one-${firstCorrect}`);
+    const secondNew = attempt(`new-two-${firstCorrect}`);
+    const repeatWrong = attempt(`repeat-wrong-${firstCorrect}`, { taskId: old.taskId, correct: false });
+    const history = [old, firstNew, secondNew];
+    let game = record(emptyGameState(), old);
+    game = record(game, firstNew, [old]);
+    game = record(game, secondNew, [old, firstNew]);
+    const before = summary(game);
+    const repeated = record(game, repeatWrong, history);
+    assert.equal(repeated, game, "No new game check or award for an old task's wrong recheck");
+    assert.equal(summary(repeated).winStreak, firstCorrect ? 3 : 2);
+    assert.equal(summary(repeated).subjects[0].winStreak, before.subjects[0].winStreak);
+    assert.deepEqual(repeated.xpEvents, game.xpEvents);
+    assert.deepEqual(parseGameState(JSON.stringify(repeated), [...history, repeatWrong]), game);
+  }
+});
+
+test("old duplicate wrong checks are ignored in projection and repaired from actual history without fabricating a streak", () => {
+  const wrong = attempt("historical-error", { correct: false });
+  const first = attempt("historical-new-one");
+  const second = attempt("historical-new-two");
+  const duplicateWrong = attempt("historical-recheck", { taskId: wrong.taskId, correct: false });
+  const history = [wrong, first, second, duplicateWrong];
+  const saved = record(record(record(emptyGameState(), wrong), first, [wrong]), second, [wrong, first]);
+  const former = { ...saved, checks: [...saved.checks, {
+    attemptId: duplicateWrong.id, taskId: duplicateWrong.taskId, subjectId: duplicateWrong.subjectId,
+    correct: false, createdAt: duplicateWrong.createdAt,
+  }] };
+  assert.equal(summary(former).winStreak, 2, "Even the old in-memory projection ignores the repeated failure");
+  assert.deepEqual(parseGameState(former, history), saved);
+  assert.deepEqual(reconcileUnrewardedAttempts(former, history, () => rule()), saved);
+  const reconstructed = reconcileUnrewardedAttempts(emptyGameState(), history, () => null);
+  assert.equal(summary(reconstructed).winStreak, 2, "Saved first checks suffice without XP scoring");
+  assert.equal(summary(reconstructed).totalXP, 0);
+  assert.equal(summary(reconcileUnrewardedAttempts(emptyGameState(), [], () => rule())).winStreak, 0);
+});
+
+test("another subject's repeated failure cannot reset either current subject series or the global streak", () => {
+  const russianWrong = attempt("russian-old-error", { subjectId: "russian", correct: false });
+  const math = attempt("math-after-other-error");
+  const russianRight = attempt("russian-new-correct", { subjectId: "russian" });
+  const repeatedWrong = attempt("russian-old-error-recheck", { subjectId: "russian", taskId: russianWrong.taskId, correct: false });
+  let game = record(emptyGameState(), russianWrong, [], null);
+  game = record(game, math, [russianWrong]);
+  game = record(game, russianRight, [russianWrong, math], null);
+  const after = summary(record(game, repeatedWrong, [russianWrong, math, russianRight], null));
+  assert.equal(after.winStreak, 2);
+  assert.equal(after.subjects.find((item) => item.subjectId === "math").winStreak, 1);
+  assert.equal(after.subjects.find((item) => item.subjectId === "russian").winStreak, 1);
+});

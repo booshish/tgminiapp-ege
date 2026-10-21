@@ -43,6 +43,8 @@ export function useStudyNavigation() {
             : 0;
       const params = new URLSearchParams();
       if (selected.topicId) params.set("topic", selected.topicId);
+      if (selected.taskId) params.set("task", selected.taskId);
+      if (selected.part) params.set("part", String(selected.part));
       if (selected.prototypeId) params.set("prototype", selected.prototypeId);
       if (selected.materialId) params.set("material", selected.materialId);
       if (selected.exam) params.set("exam", selected.exam);

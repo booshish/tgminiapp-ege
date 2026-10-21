@@ -126,6 +126,34 @@
   white-space: nowrap;
 }
 
+.streak-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 18px 0 24px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.streak-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  min-width: 0;
+  flex: 1 1 260px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.streak-summary-label {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .game-flame-slot {
   display: inline-flex;
   align-items: center;

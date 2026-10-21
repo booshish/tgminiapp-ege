@@ -91,7 +91,6 @@ export function StudyApp() {
     setTheme,
     setFocusMode,
     setBreakReminderMinutes,
-    rememberTask,
     recordAnswer,
     confirmSelfAssessment,
     recordSolutionViewed,
@@ -132,6 +131,7 @@ export function StudyApp() {
   const concentrating = state.focusMode && canConcentrate;
   const activeView = route.view === "tasks" ? "catalog" : route.view;
   const { currentTask, session } = practice;
+  const changePracticeExam = practice.changeExam;
   const currentIndex = currentTask
     ? tasks.findIndex((task) => task.id === currentTask.id)
     : 0;
@@ -149,8 +149,8 @@ export function StudyApp() {
   });
 
   useEffect(() => {
-    if (ready && practice.initialized && route.view === "theory" && state.exam !== theoryExam) setExam(theoryExam);
-  }, [ready, practice.initialized, route.view, state.exam, theoryExam, setExam]);
+    if (ready && practice.initialized && route.view === "theory" && state.exam !== theoryExam) changePracticeExam(theoryExam);
+  }, [ready, practice.initialized, route.view, state.exam, theoryExam, changePracticeExam]);
 
   useEffect(() => {
     if (!ready) return;
@@ -174,10 +174,6 @@ export function StudyApp() {
     };
   }, []);
 
-  useEffect(() => {
-    if (ready && route.view === "tasks" && currentTask)
-      rememberTask(currentIndex);
-  }, [ready, route.view, currentIndex, currentTask, rememberTask]);
   useLayoutEffect(() => {
     if (!ready) return;
     const returningFromHelp =
@@ -224,7 +220,11 @@ export function StudyApp() {
     // Remove the modal's inert state before the next screen receives focus.
     if (menuDialog.current?.open) menuDialog.current.close();
     setMoreOpen(false);
-    if (view === "catalog") practice.openCatalog();
+    if (view === "catalog") {
+      // A return from another section resumes practice; tapping the active tab opens its catalog.
+      if (route.view !== "catalog" && route.view !== "tasks" && practice.resume()) return;
+      practice.openCatalog();
+    }
     else navigate(view);
   }
   function startPractice(topicId?: string, prototypeId?: string) {
@@ -236,27 +236,12 @@ export function StudyApp() {
       examNumber: undefined,
       topicId,
       prototypeId,
+      part: undefined,
     });
   }
   function continuePractice() {
     if (practice.resume()) return;
-    const remembered = tasks[state.lastTaskIndex];
-    if (
-      remembered?.examType.includes(state.exam) &&
-      (state.exam === "ОГЭ" || remembered.level === practice.catalog.level)
-    ) {
-      practice.start(
-        {
-          ...practice.catalog,
-          exam: state.exam,
-          mode: "topic",
-          examNumber: undefined,
-          topicId: undefined,
-          prototypeId: undefined,
-        },
-        remembered.id,
-      );
-    } else startPractice();
+    practice.openCatalog();
   }
   function startFromCatalog(selection: CatalogSelection) {
     catalogScroll.capture();
@@ -264,7 +249,7 @@ export function StudyApp() {
   }
   function shufflePractice() {
     catalogScroll.capture();
-    practice.start({ ...practice.catalog, examNumber: undefined, topicId: undefined, prototypeId: undefined },
+    practice.start({ ...practice.catalog, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined },
       undefined, state.events.map((event) => event.taskId));
   }
   function openTaskById(taskId: string) {
@@ -275,13 +260,14 @@ export function StudyApp() {
       mode: task.examNumber === null ? "topic" : "number",
       examNumber: task.examNumber ?? undefined,
       topicId: task.examNumber === null ? task.topicId : undefined,
+      part: task.part ?? undefined,
     }, task.id);
   }
   const openPremium = () => open("premium");
   const openTheory = (topicId?: string) => {
     if (route.view === "catalog") catalogScroll.capture();
     const topic = topicId ? getTheoryTopic(topicId) : undefined;
-    if (topic && !topic.examType.includes(state.exam)) setExam(topic.examType[0]);
+    if (topic && !topic.examType.includes(state.exam)) practice.changeExam(topic.examType[0]);
     navigate("theory", { topicId: topic?.id ?? topicId,
       exam: topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam });
   };
@@ -454,6 +440,12 @@ export function StudyApp() {
               onNavigate={open}
               game={game}
               onHelp={openHelp}
+              resumeLabel={practice.resumeTarget ? [
+                practice.resumeTarget.selection.exam,
+                "Математика",
+                practice.resumeTarget.task.examNumber ? `№${practice.resumeTarget.task.examNumber}` : "Базовая практика",
+                practice.resumeTarget.task.title,
+              ].join(" · ") : undefined}
             />
           )}
           {studyTools.storageWarning && route.view !== "favorites" && (
@@ -469,6 +461,7 @@ export function StudyApp() {
               onStart={startFromCatalog}
               onTheory={openTheory}
               onShuffle={shufflePractice}
+              game={game}
             />
           </div>
           {route.view === "theory" && (
@@ -579,6 +572,7 @@ export function StudyApp() {
               isPremium={isPremium}
               onPremium={openPremium}
               onStart={startPractice}
+              game={game}
             />
           )}
           {route.view === "trainer" && (
@@ -626,7 +620,7 @@ export function StudyApp() {
               isPremium={isPremium} onTask={openTaskById} onTheory={openTheory} onPremium={openPremium} />
           ))}
           {route.view === "mock" && (
-            <MockExamScreen exam={state.exam} onExamChange={setExam} onBack={back} onOpenTheory={openTheory}
+            <MockExamScreen exam={state.exam} onExamChange={practice.changeExam} onBack={back} onOpenTheory={openTheory}
               onAnswer={recordAnswer} onSelfAssessment={(task, score) => confirmSelfAssessment(task, score, true)}
               onSolutionViewed={(task, attemptId, sessionId) => {
                 if (attemptId) recordSolutionViewed(task, attemptId, true);

@@ -24,9 +24,10 @@ type Props = {
   onNavigate: (view: View) => void;
   game: GameSummary;
   onHelp: () => void;
+  resumeLabel?: string;
 };
 
-export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHelp }: Props) {
+export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHelp, resumeLabel }: Props) {
   return (
     <>
       <PageIntro eyebrow="ТОЧКА · МАТЕМАТИКА" title="Твоя подготовка">
@@ -37,11 +38,11 @@ export function HomeScreen({ exam, onExamChange, onStart, onNavigate, game, onHe
           <span className="tag">Теория и практика</span>
           <h2 id="course-title">{exam} · Математика</h2>
           <p>
-            Выбери тему для повторения или продолжи самостоятельную практику.
+            {resumeLabel ?? "Выбери тему для повторения или начни самостоятельную практику."}
           </p>
           <div className="hero-actions">
             <button className="button button-primary" onClick={onStart}>
-              Продолжить подготовку <ArrowRight size={18} />
+              {resumeLabel ? "Продолжить решение" : "Выбрать задания"} <ArrowRight size={18} />
             </button>
             <button
               className="button button-secondary"

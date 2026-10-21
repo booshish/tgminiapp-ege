@@ -86,9 +86,87 @@
   color: var(--muted);
   font-size: var(--secondary-size);
 }
+.theory-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-bottom: 22px;
+}
+.theory-card-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 1 150px;
+  min-width: 0;
+  color: var(--sage-dark);
+  font-size: var(--secondary-size);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.theory-card-meta > svg { margin-top: 2px; }
+.theory-card-meta small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: var(--secondary-size);
+  font-weight: 500;
+}
+.theory-card-header > .bookmark-button {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+.theory-reading-page > .back-link { margin-bottom: 14px; }
+.theory-reading-page > .lesson-breadcrumbs { margin-bottom: 16px; }
+.theory-reading-page > .page-intro { margin-bottom: 24px; }
+.lesson-source-details { padding: 0; }
+.lesson-source-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 14px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+}
+.lesson-source-details summary::-webkit-details-marker { display: none; }
+.lesson-source-details[open] summary > svg { transform: rotate(180deg); }
+.lesson-source-details > p { padding: 0 14px 14px; }
+.theory-reading-page :is(.topic-lesson, .topic-overview-card, .lesson-section, .lesson-example, .example-steps, .example-steps > li, .lesson-difficulties > div) {
+  min-width: 0;
+  max-width: 100%;
+}
+.theory-formula { min-width: 0; max-width: 100%; }
+.theory-reading-page .math-block {
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sage) var(--light-green);
+}
+/* Keep the full intrinsic KaTeX width inside the scroll area, including both edges. */
+.theory-reading-page .math-block .katex-display {
+  width: max-content;
+  min-width: 100%;
+}
+.theory-reading-page .math-block::-webkit-scrollbar { height: 6px; }
+.theory-reading-page .math-block::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 8px; }
+.theory-reading-page .math-block::-webkit-scrollbar-track { background: var(--light-green); }
+.app-shell .theory-reading-page .theory-formula > .theory-formula-scroll-note {
+  margin-top: -10px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
 .theory-reading-focus :is(
   .lesson-breadcrumbs,
   .lesson-intro-note,
+  .theory-card-header,
   .topic-prerequisites,
   .lesson-practice,
   .theory-author-label,
@@ -178,6 +256,59 @@
     font-size: var(--theory-reading-size);
     margin-block: 20px;
   }
+}
+
+/* Narrow phones only. Keep tablet reading sizes and the existing text-size settings. */
+@media (max-width: 767px) {
+  .app-shell .theory-reading-page { --theory-mobile-size: 17px; }
+  .app-shell.font-large .theory-reading-page { --theory-mobile-size: 19px; }
+  .app-shell.font-huge .theory-reading-page { --theory-mobile-size: 21px; }
+  .app-shell .theory-reading-page :is(.topic-lesson, .topic-overview-card, .lesson-section, .lesson-examples, .lesson-difficulties) {
+    font-size: var(--theory-mobile-size);
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+  }
+  .app-shell .theory-reading-page :is(.lesson-section p, .example-steps p, .lesson-difficulties li, .topic-outline li, .topic-overview-card > p) {
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: normal;
+  }
+  .app-shell .theory-reading-page :is(.lesson-section, .lesson-examples, .lesson-difficulties, .topic-overview-card) h2 {
+    font-size: calc(var(--theory-mobile-size) + 6px);
+    line-height: 1.4;
+  }
+  .app-shell .theory-reading-page .lesson-example h3 {
+    font-size: calc(var(--theory-mobile-size) + 5px);
+    line-height: 1.45;
+  }
+  .app-shell .theory-reading-page :is(.lesson-section, .lesson-examples) > .eyebrow,
+  .app-shell .theory-reading-page .lesson-example-label {
+    font-size: calc(var(--theory-mobile-size) - 3px);
+    font-weight: 500;
+  }
+  .app-shell .theory-reading-page .math-block {
+    font-size: calc(var(--theory-mobile-size) + 1px);
+    padding: 16px 12px;
+  }
+  .app-shell .theory-reading-page .math-block .katex { font-size: 1.05em; }
+  .app-shell .theory-reading-page :is(.lesson-source-details, .topic-overview > .info-note) {
+    font-size: calc(var(--theory-mobile-size) - 1px);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  .app-shell .theory-reading-page .lesson-source-details { padding: 0; margin-bottom: 22px; }
+  .app-shell .theory-reading-page .lesson-source-details p { font-size: inherit; line-height: inherit; }
+  .app-shell .theory-reading-page :is(.topic-lesson, .topic-overview-card) { padding: 20px 16px; }
+  .app-shell .theory-reading-page .example-steps { padding-left: 20px; }
+  .app-shell .theory-reading-page .example-steps > li { padding-left: 0; }
+  .theory-reading-page .theory-card-header { margin-bottom: 18px; }
+  .theory-reading-page .theory-card-meta,
+  .theory-reading-page .theory-card-meta small { font-size: 14px; }
+  .theory-reading-page > .lesson-breadcrumbs { font-size: 14px; margin-bottom: 12px; }
+  .theory-reading-page > .page-intro { margin-bottom: 20px; }
 }
 
 @media (max-width: 600px) {

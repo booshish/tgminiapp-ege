@@ -14,11 +14,31 @@ export const practiceStorageKey = "tochka-practice-v1";
 export const catalogScrollStorageKey = "tochka-catalog-scroll-v1";
 
 export type StoredPractice = {
-  version: 1;
+  version: 2;
   catalog: CatalogSelection;
   sessions: Record<string, PracticeSession>;
   activeId: string | null;
+  /** One authoritative draft/checked-state map across number/topic sessions. */
+  taskStates: Record<string, PracticeTaskState>;
 };
+
+export function isReadablePracticeStorage(raw: string | null): boolean {
+  if (raw === null) return true;
+  if (!raw || raw.length > 8_000_000) return false;
+  try {
+    const input = object(JSON.parse(raw));
+    return Boolean(input && (input.version === 1 || input.version === 2)
+      && object(input.catalog) && object(input.sessions)
+      && (input.activeId === null || typeof input.activeId === "string")
+      && (input.version === 1 || object(input.taskStates)));
+  } catch { return false; }
+}
+
+/** Session.states is a screen projection; only taskStates is persisted. */
+export function serializeStoredPractice(value: StoredPractice): string {
+  return JSON.stringify({ ...value, sessions: Object.fromEntries(Object.entries(value.sessions)
+    .map(([id, session]) => [id, { ...session, states: undefined }])) });
+}
 
 export type StoredScrollSnapshot = {
   version: 1;
@@ -118,19 +138,24 @@ function taskState(value: unknown, taskId: string): PracticeTaskState | null {
 /** Corrupt/unknown schemas start safely; stored content is never executed. */
 export function parseStoredPractice(raw: string | null): StoredPractice {
   const empty: StoredPractice = {
-    version: 1,
+    version: 2,
     catalog: defaultCatalogSelection(),
     sessions: {},
     activeId: null,
+    taskStates: {},
   };
   if (!raw || raw.length > 8_000_000) return empty;
   try {
     const input = object(JSON.parse(raw));
-    if (!input || input.version !== 1) return empty;
+    if (!input || (input.version !== 1 && input.version !== 2)) return empty;
     const catalog = selection(input.catalog) ?? empty.catalog;
     const records = object(input.sessions);
     const sessions: Record<string, PracticeSession> = {};
-    for (const [id, value] of Object.entries(records ?? {}).slice(-1000)) {
+    const taskStates: Record<string, PracticeTaskState> = {};
+    const entries = Object.entries(records ?? {}).slice(-1000);
+    // v1 has no per-draft timestamps: the active session wins, then stored insertion order.
+    const legacyStates: { id: string; states: Record<string, unknown> | null }[] = [];
+    for (const [id, value] of entries) {
       if (!/^[a-zA-Z0-9-]{1,100}$/.test(id) || ["constructor", "prototype", "__proto__"].includes(id)) continue;
       const record = object(value);
       const selected = selection(record?.selection);
@@ -144,16 +169,11 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
       const taskIds = record.invalidContext === true
         ? []
         : [...new Set([...savedIds, ...availableIds])];
-      const sourceStates = object(record.states);
-      const states: Record<string, PracticeTaskState> = {};
-      for (const taskId of taskIds) {
-        const state = taskState(sourceStates?.[taskId], taskId);
-        if (state) states[taskId] = state;
-      }
+      if (input.version === 1) legacyStates.push({ id, states: object(record.states) });
       const previousPosition = typeof record.lastPosition === "number" && Number.isInteger(record.lastPosition)
         ? record.lastPosition
         : 0;
-      const previousTaskId = record.taskIds[previousPosition];
+      const previousTaskId = typeof record.lastTaskId === "string" ? record.lastTaskId : record.taskIds[previousPosition];
       const restoredPosition = typeof previousTaskId === "string"
         ? taskIds.indexOf(previousTaskId)
         : -1;
@@ -161,17 +181,37 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
         id,
         selection: selected,
         taskIds,
-        states,
+        states: {},
         lastPosition: restoredPosition >= 0
           ? restoredPosition
           : Math.max(0, Math.min(previousPosition, taskIds.length - 1)),
         ...(record.invalidContext === true ? { invalidContext: true } : {}),
+        visitOrder: typeof record.visitOrder === "number" && Number.isSafeInteger(record.visitOrder) && record.visitOrder >= 0 ? record.visitOrder : entries.findIndex(([entryId]) => entryId === id) + 1,
       };
+      sessions[id].lastTaskId = taskIds[sessions[id].lastPosition];
+    }
+    if (input.version === 1) {
+      legacyStates.sort((a, b) => Number(a.id === input.activeId) - Number(b.id === input.activeId));
+      for (const source of legacyStates) for (const [taskId, value] of Object.entries(source.states ?? {})) {
+        if (["constructor", "prototype", "__proto__"].includes(taskId)) continue;
+        const parsed = taskState(value, taskId);
+        if (!parsed) continue;
+        const previous = taskStates[taskId];
+        taskStates[taskId] = { ...parsed, solutionViewed: Boolean(parsed.solutionViewed || previous?.solutionViewed) };
+      }
+      if (typeof input.activeId === "string" && sessions[input.activeId]) sessions[input.activeId].visitOrder = entries.length + 1;
+    } else {
+      for (const [taskId, value] of Object.entries(object(input.taskStates) ?? {})) {
+        if (["constructor", "prototype", "__proto__"].includes(taskId)) continue;
+        const parsed = taskState(value, taskId);
+        if (parsed) taskStates[taskId] = parsed;
+      }
     }
     return {
-      version: 1,
+      version: 2,
       catalog,
       sessions,
+      taskStates,
       activeId: typeof input.activeId === "string" && Object.hasOwn(sessions, input.activeId)
         ? input.activeId
         : null,

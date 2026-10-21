@@ -146,13 +146,16 @@ function contributesToStreak(
   checks: readonly GameCheck[],
 ) {
   if (!automaticContext(attempt)) return false;
-  // Every genuine wrong check breaks the series. A later correction may earn XP,
-  // but only a new task answered correctly on its first attempt grows the series.
+  // A task contributes only its first automatic check, whether right or wrong.
+  // Rechecking an old task must not erase a newer series. XP is a separate policy:
+  // a later independent correction may still earn its one unique-task award.
+  if (checks.some((check) => check.taskId === attempt.taskId)
+    || priorEvents.some((event) => event.taskId === attempt.taskId
+      && event.kind === "answer_checked")) return false;
   if (!attempt.correct) return true;
   return attempt.solutionSeenBeforeCheck !== true
-    && !checks.some((check) => check.taskId === attempt.taskId)
     && !priorEvents.some((event) => event.taskId === attempt.taskId
-      && (event.kind === "answer_checked" || event.kind === "solution_viewed"));
+      && event.kind === "solution_viewed");
 }
 function validSelfAssessment(assessment: GameSelfAssessment) {
   return assessment.kind === "self_assessed" && validContext(assessment)
@@ -407,7 +410,10 @@ export function getGameSummary(game: GameState, now = new Date()): GameSummary {
   const subjectStreaks: Record<string, number> = {};
   const checkedTasks = new Set<string>();
   for (const check of game.checks) {
-    if (check.correct && !checkedTasks.has(check.taskId)) {
+    // Older journals can contain repeated wrong checks. The projection must be
+    // correct even before hydration normalizes that journal in place.
+    if (checkedTasks.has(check.taskId)) continue;
+    if (check.correct) {
       winStreak++;
       subjectStreaks[check.subjectId] = (subjectStreaks[check.subjectId] ?? 0) + 1;
     } else if (!check.correct) {

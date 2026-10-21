@@ -1692,10 +1692,12 @@ test("Хранилище практики переживает перезагр�
   session.lastPosition = 1;
   const source = { version: 1, catalog, sessions: { [session.id]: session }, activeId: session.id };
   const restored = parseStoredPractice(JSON.stringify(source));
-  assert.deepEqual(restored, source);
+  assert.equal(restored.version, 2);
+  assert.deepEqual(restored.taskStates, source.sessions[session.id].states);
+  assert.equal(restored.sessions[session.id].lastTaskId, second);
   assert.deepEqual(parseStoredPractice(JSON.stringify(restored)), restored);
-  assert.equal(restored.sessions[session.id].states[first].attempt.id, "checked-before-reload");
-  assert.equal(restored.sessions[session.id].states[second].answer, "-");
+  assert.equal(restored.taskStates[first].attempt.id, "checked-before-reload");
+  assert.equal(restored.taskStates[second].answer, "-");
   assert.equal("events" in restored, false, "Загрузка сессии не создаёт учебных событий");
   assert.equal("xpEvents" in restored, false, "Загрузка сессии не начисляет опыт");
 });
@@ -1721,10 +1723,10 @@ test("Повреждённая практика не открывает чужо
   assert.equal(session.taskIds.includes("missing-task"), false);
   assert.equal(session.taskIds.length, new Set(session.taskIds).size);
   assert.equal(session.lastPosition, session.taskIds.length - 1);
-  assert.equal(session.states[linear.id].answer, "6");
-  assert.equal(session.states[linear.id].attempt, null);
-  assert.equal(session.states[linear.id].solutionViewed, false);
-  assert.equal(session.states[linear.id].solutionVisible, false);
+  assert.equal(restored.taskStates[linear.id].answer, "6");
+  assert.equal(restored.taskStates[linear.id].attempt, null);
+  assert.equal(restored.taskStates[linear.id].solutionViewed, false);
+  assert.equal(restored.taskStates[linear.id].solutionVisible, false);
   const unavailable = createPracticeSession("old-base-session", normalizeCatalogSelection({
     exam: "ЕГЭ", level: "base", mode: "topic",
   }));
@@ -1748,7 +1750,7 @@ test("Редактирование ошибки сохраняет факт пр
   });
   const restored = parseStoredPractice(JSON.stringify({
     version: 1, catalog, sessions: { [session.id]: session }, activeId: session.id,
-  })).sessions[session.id].states[linear.id];
+  })).taskStates[linear.id];
   assert.equal(restored.answer, "5");
   assert.equal(restored.attempt, null);
   assert.equal(restored.solutionViewed, true);
@@ -1769,7 +1771,7 @@ test("Черновик самопроверки сохраняет работу 
   const serialize = (candidate) => JSON.stringify({
     version: 1, catalog, sessions: { [candidate.id]: candidate }, activeId: candidate.id,
   });
-  const restored = parseStoredPractice(serialize(session)).sessions[session.id].states[task.id];
+  const restored = parseStoredPractice(serialize(session)).taskStates[task.id];
   assert.equal(restored.selfWork, "Пусть x и y — натуральные числа.");
   assert.equal(restored.selfDraftScore, 3);
   assert.equal(restored.selfSolutionVisible, true);
@@ -1780,7 +1782,7 @@ test("Черновик самопроверки сохраняет работу 
     const invalid = updateSessionTask(session, task.id, {
       ...session.states[task.id], selfDraftScore,
     });
-    const saved = parseStoredPractice(serialize(invalid)).sessions[session.id].states[task.id];
+    const saved = parseStoredPractice(serialize(invalid)).taskStates[task.id];
     assert.equal(saved.selfDraftScore, undefined);
   }
   const oldEmpty = { ...session, states: {}, taskIds: [], lastPosition: 0 };

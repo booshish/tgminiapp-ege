@@ -13,12 +13,15 @@ import { Meter, PageIntro } from "@/components/ui";
 import { getAnalytics, type LearningState } from "@/lib/learning-events";
 import { tasks } from "@/lib/tasks";
 import { theoryTopics } from "@/lib/theory";
+import { StreakSummary } from "@/components/game-motivation";
+import type { GameSummary } from "@/lib/gamification";
 
 type ProgressScreenProps = {
   state: LearningState;
   isPremium: boolean;
   onPremium: () => void;
   onStart: (topicId?: string) => void;
+  game: GameSummary;
 };
 
 function topicTitle(topicId: string) {
@@ -44,6 +47,7 @@ export function ProgressScreen({
   isPremium,
   onPremium,
   onStart,
+  game,
 }: ProgressScreenProps) {
   if (!isPremium) {
     return (
@@ -52,6 +56,7 @@ export function ProgressScreen({
           Статистика ответов, история ошибок и динамика занятий доступны в
           Premium.
         </PageIntro>
+        <StreakSummary summary={game} />
         <section className="premium-gate">
           <span className="feature-icon">
             <ChartNoAxesCombined size={28} aria-hidden="true" />
@@ -82,6 +87,7 @@ export function ProgressScreen({
         Реальные ответы из этого браузера. Без примерных процентов и оценок
         готовности к экзамену.
       </PageIntro>
+      <StreakSummary summary={game} />
       <div className="stats-grid">
         <section className="stat-card">
           <span className="feature-icon">

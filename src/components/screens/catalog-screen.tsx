@@ -6,6 +6,8 @@ import { getExamDefinition } from "@/lib/exams";
 import type { CatalogSelection } from "@/lib/practice";
 import { getPracticeTasks, prototypes, taskTopicLabels } from "@/lib/tasks";
 import { getTheoryTopic, theoryTopics } from "@/lib/theory";
+import { StreakSummary } from "@/components/game-motivation";
+import type { GameSummary } from "@/lib/gamification";
 import "@/components/catalog-screen.css";
 
 type CatalogScreenProps = {
@@ -14,6 +16,7 @@ type CatalogScreenProps = {
   onStart: (selection: CatalogSelection) => void;
   onTheory: (topicId?: string) => void;
   onShuffle?: () => void;
+  game: GameSummary;
 };
 
 export function CatalogScreen({
@@ -22,6 +25,7 @@ export function CatalogScreen({
   onStart,
   onTheory,
   onShuffle,
+  game,
 }: CatalogScreenProps) {
   const definition = getExamDefinition({
     examType: selection.exam,
@@ -78,6 +82,7 @@ export function CatalogScreen({
       examNumber: undefined,
       topicId: undefined,
       prototypeId: undefined,
+      part: undefined,
     });
   }
 
@@ -88,6 +93,7 @@ export function CatalogScreen({
       </PageIntro>
 
       <ExamPicker exam={selection.exam} onChange={changeExam} />
+      <StreakSummary summary={game} subjectId={selection.subjectId} showOverall={false} />
       {onShuffle && definition?.available && (
         <div className="random-practice-action">
           <button type="button" className="button button-secondary" onClick={onShuffle}>
@@ -118,6 +124,7 @@ export function CatalogScreen({
                   examNumber: undefined,
                   topicId: undefined,
                   prototypeId: undefined,
+                  part: undefined,
                 })
               }
             >
@@ -180,6 +187,7 @@ export function CatalogScreen({
                 prototypeId: prototype?.id,
                 topicId: prototype?.topicId,
                 examNumber: undefined,
+                part: undefined,
               });
             }}
           >
@@ -217,6 +225,7 @@ export function CatalogScreen({
                     const cardSelection: CatalogSelection = {
                       ...selection,
                       examNumber: item.number,
+                      part: item.part,
                       topicId: undefined,
                       prototypeId: undefined,
                     };
@@ -276,6 +285,7 @@ export function CatalogScreen({
                 ...selection,
                 topicId: topic.id,
                 examNumber: undefined,
+                part: undefined,
                 prototypeId:
                   chosenPrototype?.topicId === topic.id
                     ? chosenPrototype.id

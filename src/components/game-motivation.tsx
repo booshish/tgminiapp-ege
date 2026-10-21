@@ -38,7 +38,7 @@ function XPScale({
   );
 }
 
-function WinStreak({ value }: { value: number }) {
+export function WinStreak({ value }: { value: number }) {
   const flame = getStreakFlame(value);
   return (
     <span className="game-streak">
@@ -53,6 +53,33 @@ function WinStreak({ value }: { value: number }) {
       </span>
       <span>Серия верных: {value}</span>
     </span>
+  );
+}
+
+/** The same free motivation counters, without exposing learning analytics. */
+export function StreakSummary({
+  summary,
+  subjectId = "math",
+  subjectTitle = "Математика",
+  showOverall = true,
+}: {
+  summary: GameSummary;
+  subjectId?: string;
+  subjectTitle?: string;
+  showOverall?: boolean;
+}) {
+  const subjectStreak = summary.subjects.find((subject) => subject.subjectId === subjectId)?.winStreak ?? 0;
+  return (
+    <div className="streak-summary" role="group" aria-label="Серии верных ответов">
+      {showOverall && <div className="streak-summary-item">
+        <span className="streak-summary-label">Общая серия</span>
+        <WinStreak value={summary.winStreak} />
+      </div>}
+      <div className="streak-summary-item">
+        <span className="streak-summary-label">{subjectTitle}</span>
+        <WinStreak value={subjectStreak} />
+      </div>
+    </div>
   );
 }
 

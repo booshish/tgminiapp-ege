@@ -6,15 +6,20 @@ import { tasks } from "@/lib/tasks";
 import { orderPracticeTasks } from "@/lib/practice-order";
 import {
   createPracticeSession,
+  findRecentPracticeSession,
+  getSessionTaskId,
+  practiceContextKey,
+  rememberPracticePosition,
   defaultCatalogSelection,
   normalizeCatalogSelection,
-  updateSessionTask,
   type CatalogSelection,
   type PracticeSession,
   type PracticeTaskState,
 } from "@/lib/practice";
 import {
   parseStoredPractice,
+  isReadablePracticeStorage,
+  serializeStoredPractice,
   practiceStorageKey,
   type StoredPractice,
 } from "@/lib/practice-storage";
@@ -36,6 +41,7 @@ export function catalogRoute(selection: CatalogSelection): Selection {
     examNumber: selection.examNumber,
     topicId: selection.topicId,
     prototypeId: selection.prototypeId,
+    part: selection.part,
   };
 }
 
@@ -51,6 +57,7 @@ function selectionFromRoute(route: Route, fallback: CatalogSelection) {
       examNumber: route.examNumber,
       topicId: route.topicId,
       prototypeId: route.prototypeId,
+      part: route.part,
     },
     fallback.exam,
   );
@@ -74,13 +81,14 @@ export function usePracticeSession({
     defaultCatalogSelection,
   );
   const [sessions, setSessions] = useState<Record<string, PracticeSession>>({});
+  const [taskStates, setTaskStates] = useState<Record<string, PracticeTaskState>>({});
   const [activeId, setActiveId] = useState<string | null>(null);
   const [initialized, setInitialized] = useState(false);
   const [storageWarning, setStorageWarning] = useState(false);
   const initialRead = useRef(false);
   const canPersist = useRef(false);
   const latest = useRef<StoredPractice | null>(null);
-  latest.current = { version: 1, catalog, sessions, activeId };
+  latest.current = { version: 2, catalog, sessions, activeId, taskStates };
 
   useEffect(() => {
     if (!ready || initialRead.current) return;
@@ -88,11 +96,13 @@ export function usePracticeSession({
     let fallback = defaultCatalogSelection(exam);
     try {
       const raw = window.localStorage.getItem(practiceStorageKey);
+      if (!isReadablePracticeStorage(raw)) throw new Error("Unsupported or damaged practice storage");
       if (raw) {
         const restored = parseStoredPractice(raw);
         fallback = restored.catalog;
         setSessions(restored.sessions);
         setActiveId(restored.activeId);
+        setTaskStates(restored.taskStates);
       }
       canPersist.current = true;
     } catch {
@@ -110,17 +120,17 @@ export function usePracticeSession({
   useEffect(() => {
     if (!initialized || !canPersist.current || !latest.current) return;
     try {
-      window.localStorage.setItem(practiceStorageKey, JSON.stringify(latest.current));
+      window.localStorage.setItem(practiceStorageKey, serializeStoredPractice(latest.current));
     } catch {
       setStorageWarning(true);
     }
-  }, [initialized, catalog, sessions, activeId]);
+  }, [initialized, catalog, sessions, activeId, taskStates]);
 
   useEffect(() => {
     const persist = () => {
       if (!initialized || !canPersist.current || !latest.current) return;
       try {
-        window.localStorage.setItem(practiceStorageKey, JSON.stringify(latest.current));
+        window.localStorage.setItem(practiceStorageKey, serializeStoredPractice(latest.current));
       } catch {
         setStorageWarning(true);
       }
@@ -144,7 +154,7 @@ export function usePracticeSession({
   }, [initialized, route, exam, setExam]);
 
   const requestedId = route.sessionId ?? activeId;
-  const routeTask = tasks[route.taskIndex];
+  const routeTask = route.taskId ? tasks.find((task) => task.id === route.taskId) : tasks[route.taskIndex];
   const invalidContext = Boolean(
     route.invalidContext ||
     (route.view === "tasks" &&
@@ -166,8 +176,8 @@ export function usePracticeSession({
       (!route.prototypeId ||
         route.prototypeId === cachedSession.selection.prototypeId) &&
       (!route.catalogMode ||
-        JSON.stringify(selectionFromRoute(route, cachedSession.selection)) ===
-          JSON.stringify(cachedSession.selection)) &&
+        practiceContextKey(selectionFromRoute(route, cachedSession.selection)) ===
+          practiceContextKey(cachedSession.selection)) &&
       (Boolean(route.sessionId) ||
         cachedSession.taskIds.length === 0 ||
         Boolean(routeTask && cachedSession.taskIds.includes(routeTask.id))));
@@ -193,13 +203,18 @@ export function usePracticeSession({
             invalidContext: true,
           }
         : contextMatches
-          ? cachedSession
+          ? cachedSession ? { ...cachedSession, states: taskStates } : undefined
           : undefined,
-    [blockedLink, cachedSession, contextMatches, route],
+    [blockedLink, cachedSession, contextMatches, route, taskStates],
   );
-  const position =
-    session && routeTask ? session.taskIds.indexOf(routeTask.id) : -1;
-  const currentTask = position >= 0 ? routeTask : undefined;
+  // Stable IDs take precedence over the legacy numeric URL. A removed ID in a saved
+  // session falls back within that same selection; never to another exam.
+  const restoredId = session ? getSessionTaskId(session) : undefined;
+  const targetId = session && route.sessionId && !route.taskId ? restoredId : routeTask?.id ?? restoredId;
+  const position = session && targetId ? session.taskIds.indexOf(targetId) : -1;
+  const currentTask = position >= 0 ? tasks.find((task) => task.id === targetId) : undefined;
+  const nextVisit = useCallback((records: Record<string, PracticeSession>) =>
+    Math.max(0, ...Object.values(records).map((item) => item.visitOrder ?? 0)) + 1, []);
 
   useEffect(() => {
     if (!initialized || !ready || route.view !== "tasks" || blockedLink) return;
@@ -211,16 +226,16 @@ export function usePracticeSession({
           ? previous
           : session.selection,
       );
-      if (position >= 0 && position !== session.lastPosition) {
+      if (currentTask && position >= 0 && (position !== session.lastPosition || session.lastTaskId !== currentTask.id || activeId !== session.id)) {
         setSessions((previous) => ({
           ...previous,
-          [session.id]: { ...previous[session.id], lastPosition: position },
+          [session.id]: rememberPracticePosition(previous[session.id], currentTask.id, nextVisit(previous)),
         }));
       }
       return;
     }
 
-    const requestedTask = tasks[route.taskIndex];
+    const requestedTask = routeTask;
     const selectedExam = route.exam ?? requestedTask?.examType[0] ?? exam;
     const fallback = defaultCatalogSelection(selectedExam);
     if (selectedExam === "ЕГЭ" && requestedTask?.level)
@@ -241,13 +256,16 @@ export function usePracticeSession({
       });
     }
     const id = route.sessionId ?? newSessionId();
-    const created = createPracticeSession(id, selection, requestedTask?.id);
-    // A stale or mismatched direct link must never silently substitute another task.
+    let created = createPracticeSession(id, selection, requestedTask?.id);
+    const firstId = getSessionTaskId(created);
+    if (firstId) created = rememberPracticePosition(created, firstId, nextVisit(sessions));
+    // Conflicting exam/number links stay empty. A removed stable ID may fall back
+    // only inside its explicit selection, not to a task from another exam.
     if (invalidContext) created.invalidContext = true;
     if (
       invalidContext ||
-      !requestedTask ||
-      !created.taskIds.includes(requestedTask.id)
+      (requestedTask && !created.taskIds.includes(requestedTask.id)) ||
+      (!requestedTask && !route.taskId && route.taskIndex >= 0)
     )
       created.taskIds = [];
     setSessions((previous) => ({ ...previous, [id]: created }));
@@ -265,6 +283,10 @@ export function usePracticeSession({
     setExam,
     blockedLink,
     invalidContext,
+    routeTask,
+    currentTask,
+    nextVisit,
+    sessions,
   ]);
 
   const changeCatalog = useCallback(
@@ -288,32 +310,30 @@ export function usePracticeSession({
   );
 
   const openCatalog = useCallback(() => {
-    navigate("catalog", catalogRoute(catalog));
-  }, [catalog, navigate]);
+    const selection = catalog.exam === exam ? catalog : defaultCatalogSelection(exam);
+    navigate("catalog", catalogRoute(selection));
+  }, [catalog, exam, navigate]);
 
   const start = useCallback(
     (next: CatalogSelection, initialTaskId?: string, shuffleSeenIds?: readonly string[]) => {
       const selection = normalizeCatalogSelection(next);
-      const previous = Object.values(sessions)
-        .reverse()
-        .find(
-          (candidate) =>
-            !candidate.invalidContext &&
-            JSON.stringify(candidate.selection) === JSON.stringify(selection),
-        );
+      const previous = findRecentPracticeSession(sessions, selection, true, activeId);
       if (previous && shuffleSeenIds === undefined && (!initialTaskId || previous.taskIds.includes(initialTaskId))) {
         setCatalog(selection);
         setExam(selection.exam);
         setActiveId(previous.id);
-        const taskId = initialTaskId ?? previous.taskIds[previous.lastPosition];
+        const taskId = initialTaskId ?? getSessionTaskId(previous);
+        if (!taskId) return;
+        setSessions((records) => ({ ...records, [previous.id]: rememberPracticePosition(previous, taskId, nextVisit(records)) }));
         navigate("tasks", {
           ...catalogRoute(selection),
           taskIndex: tasks.findIndex((task) => task.id === taskId),
+          taskId,
           sessionId: previous.id,
         });
         return;
       }
-      const created = createPracticeSession(
+      let created = createPracticeSession(
         newSessionId(),
         selection,
         initialTaskId,
@@ -322,6 +342,8 @@ export function usePracticeSession({
         created.taskIds = orderPracticeTasks(created.taskIds, created.id, shuffleSeenIds);
         created.lastPosition = 0;
       }
+      const initialId = created.taskIds[created.lastPosition];
+      if (initialId) created = rememberPracticePosition(created, initialId, nextVisit(sessions));
       setCatalog(selection);
       setExam(selection.exam);
       setSessions((previous) => ({ ...previous, [created.id]: created }));
@@ -330,10 +352,11 @@ export function usePracticeSession({
       navigate("tasks", {
         ...catalogRoute(selection),
         taskIndex: tasks.findIndex((task) => task.id === firstId),
+        taskId: firstId,
         sessionId: created.id,
       });
     },
-    [navigate, setExam, sessions],
+    [navigate, setExam, sessions, activeId, nextVisit],
   );
 
   const move = useCallback(
@@ -344,6 +367,7 @@ export function usePracticeSession({
       navigate("tasks", {
         ...catalogRoute(session.selection),
         taskIndex: tasks.findIndex((task) => task.id === nextId),
+        taskId: nextId,
         sessionId: session.id,
       });
     },
@@ -353,13 +377,9 @@ export function usePracticeSession({
   const changeTask = useCallback(
     (value: PracticeTaskState) => {
       if (!session || !currentTask) return;
-      setSessions((previous) => ({
+      setTaskStates((previous) => ({
         ...previous,
-        [session.id]: updateSessionTask(
-          previous[session.id],
-          currentTask.id,
-          value,
-        ),
+        [currentTask.id]: { ...value, solutionViewed: Boolean(value.solutionViewed || previous[currentTask.id]?.solutionViewed) },
       }));
     },
     [session, currentTask],
@@ -372,23 +392,20 @@ export function usePracticeSession({
     navigate("catalog", catalogRoute(selection));
   }, [catalog, session, navigate, setExam]);
 
+  const resumeSelection = normalizeCatalogSelection({ ...catalog, exam,
+    level: catalog.exam === exam ? catalog.level : undefined });
+  const resumeSession = findRecentPracticeSession(sessions, resumeSelection, false, activeId);
+  const resumeTaskId = resumeSession ? getSessionTaskId(resumeSession) : undefined;
+  const resumeTask = resumeTaskId ? tasks.find((task) => task.id === resumeTaskId) : undefined;
+  const resumeTarget = resumeSession && resumeTask ? { task: resumeTask, selection: resumeSession.selection } : null;
   const resume = useCallback(() => {
-    const previous = activeId ? sessions[activeId] : undefined;
-    const taskId = previous?.taskIds[previous.lastPosition];
-    if (
-      !previous ||
-      !taskId ||
-      previous.selection.exam !== exam ||
-      (exam === "ЕГЭ" && previous.selection.level !== catalog.level)
-    )
-      return false;
+    if (!resumeSession || !resumeTask) return false;
     navigate("tasks", {
-      ...catalogRoute(previous.selection),
-      taskIndex: tasks.findIndex((task) => task.id === taskId),
-      sessionId: previous.id,
+      ...catalogRoute(resumeSession.selection), taskId: resumeTask.id,
+      taskIndex: tasks.findIndex((task) => task.id === resumeTask.id), sessionId: resumeSession.id,
     });
     return true;
-  }, [activeId, sessions, exam, catalog.level, navigate]);
+  }, [resumeSession, resumeTask, navigate]);
 
   const reset = useCallback(() => {
     try {
@@ -400,12 +417,14 @@ export function usePracticeSession({
       return false;
     }
     latest.current = {
-      version: 1,
+      version: 2,
       catalog: defaultCatalogSelection(),
       sessions: {},
       activeId: null,
+      taskStates: {},
     };
     setSessions({});
+    setTaskStates({});
     setActiveId(null);
     setCatalog(defaultCatalogSelection());
     return true;
@@ -428,6 +447,7 @@ export function usePracticeSession({
     changeTask,
     returnToCatalog,
     resume,
+    resumeTarget,
     reset,
   };
 }

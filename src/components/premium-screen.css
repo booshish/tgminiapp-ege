@@ -56,6 +56,9 @@
 .premium-trial h2 { margin-bottom: 12px; }
 .premium-trial p + p { margin-top: 12px; }
 .premium-trial > button { flex: 0 0 auto; max-width: 100%; }
+.premium-trial-terms { margin-top: 12px; }
+.premium-trial-terms summary { min-height: 44px; padding-block: 9px; cursor: pointer; color: var(--sage-dark); font-size: var(--secondary-size); font-weight: 600; }
+.premium-trial-terms p { margin-top: 6px; }
 .premium-rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin: 32px 0; }
 .premium-rules article { display: flex; align-items: flex-start; gap: 14px; min-width: 0; }
 .premium-rules article > svg { margin-top: 4px; color: var(--sage); }

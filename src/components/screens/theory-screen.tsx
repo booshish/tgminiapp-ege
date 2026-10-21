@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Search,
   ArrowLeft,
   ArrowRight,
   BookOpen,
   Check,
+  ChevronDown,
   ChevronRight,
   Lightbulb,
 } from "lucide-react";
@@ -115,7 +116,6 @@ export function TheoryScreen({
         <ArrowLeft size={17} aria-hidden="true" />
         {isMaterial ? "К теме" : topic ? "К списку тем" : "Назад"}
       </button>
-      {topic && onBookmark && <BookmarkButton active={bookmarked} onClick={onBookmark} />}
 
       {!topic ? (
         <>
@@ -272,8 +272,9 @@ export function TheoryScreen({
               className="topic-lesson"
               aria-label={`Конспект: ${topic.title}`}
             >
-              <div className="lesson-intro-note">
-                <BookOpen size={19} aria-hidden="true" />
+              <TheoryCardHeader full readMinutes={topic.readMinutes} bookmarked={bookmarked} onBookmark={onBookmark} />
+              <details className="lesson-intro-note lesson-source-details">
+                <summary>О материале <ChevronDown size={17} aria-hidden="true" /></summary>
                 <p>
                   {topic.source.label} · около {topic.readMinutes} минут.
                   {topic.coverage === "foundation"
@@ -282,7 +283,7 @@ export function TheoryScreen({
                   {" "}Это не официальный материал ФИПИ.
                   {topic.part === 2 && " Пояснения по оформлению — авторские, официальные критерии здесь не воспроизводятся."}
                 </p>
-              </div>
+              </details>
               {topic.sections.map((section, index) => (
                 <section className="lesson-section" key={section.title}>
                   <span className="eyebrow">ШАГ {index + 1}</span>
@@ -291,7 +292,7 @@ export function TheoryScreen({
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                   {section.formulas?.map((latex) => (
-                    <MathFormula key={latex} latex={latex} />
+                    <TheoryFormula key={latex} latex={latex} />
                   ))}
                 </section>
               ))}
@@ -312,7 +313,7 @@ export function TheoryScreen({
                       {example.steps.map((step, stepIndex) => (
                         <li key={stepIndex}>
                           <p>{step.text}</p>
-                          {step.latex && <MathFormula latex={step.latex} />}
+                          {step.latex && <TheoryFormula latex={step.latex} />}
                         </li>
                       ))}
                     </ol>
@@ -360,16 +361,11 @@ export function TheoryScreen({
           ) : (
             <div className="topic-overview">
               <section className="topic-overview-card">
-                <span className="feature-icon">
-                  <BookOpen size={25} aria-hidden="true" />
-                </span>
-                <span className="theory-author-label">
-                  Авторский конспект · {topic.coverage === "foundation" ? "школьная база" : `часть ${topic.part}`} · ≈{topic.readMinutes} мин
-                </span>
+                <TheoryCardHeader readMinutes={topic.readMinutes} bookmarked={bookmarked} onBookmark={onBookmark} />
                 <h2>Коротко о главном</h2>
                 <p>{topic.sections[0]?.body[0]}</p>
                 {topic.sections[0]?.formulas?.slice(0, 1).map((latex) => (
-                  <MathFormula key={latex} latex={latex} />
+                  <TheoryFormula key={latex} latex={latex} />
                 ))}
                 <p>
                   Внутри — основные правила, {topic.examples.length} разобранных
@@ -414,6 +410,50 @@ export function TheoryScreen({
       )}
     </section>
   );
+}
+
+function TheoryCardHeader({ full = false, readMinutes, bookmarked, onBookmark }: {
+  full?: boolean;
+  readMinutes: number;
+  bookmarked: boolean;
+  onBookmark?: () => void;
+}) {
+  return (
+    <header className="theory-card-header">
+      <div className="theory-card-meta">
+        <BookOpen size={22} aria-hidden="true" />
+        <span>{full ? "Полный конспект" : "Краткий конспект"}<small>Авторский · ≈{readMinutes} мин</small></span>
+      </div>
+      {onBookmark && <BookmarkButton active={bookmarked} onClick={onBookmark} savedLabel="Сохранено" />}
+    </header>
+  );
+}
+
+/** Keep KaTeX intact; only genuinely wide expressions receive a scrolling cue. */
+function TheoryFormula({ latex }: { latex: string }) {
+  const container = useRef<HTMLDivElement>(null);
+  const [overflows, setOverflows] = useState(false);
+  useEffect(() => {
+    const element = container.current;
+    const formula = element?.querySelector<HTMLElement>(".math-block");
+    if (!element || !formula) return;
+    let active = true;
+    const measure = () => {
+      if (active) setOverflows(formula.scrollWidth > formula.clientWidth + 1);
+    };
+    const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measure);
+    observer?.observe(formula);
+    const content = formula.querySelector(".katex-display");
+    if (content) observer?.observe(content);
+    measure();
+    void document.fonts?.ready.then(measure);
+    window.addEventListener("resize", measure);
+    return () => { active = false; observer?.disconnect(); window.removeEventListener("resize", measure); };
+  }, [latex]);
+  return <div className="theory-formula" ref={container}>
+    <MathFormula latex={latex} />
+    {overflows && <p className="theory-formula-scroll-note">Прокрути формулу по горизонтали ↔</p>}
+  </div>;
 }
 
 
