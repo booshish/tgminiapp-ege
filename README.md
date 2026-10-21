@@ -1,15 +1,9 @@
-# Точка — готовая сборка GitHub Pages
+# Точка — GitHub Pages
 
-Сайт: https://booshish.github.io/tgminiapp-ege/?v=77ccc62
+Проверенная статическая сборка исходного коммита `c40694b9eee4fb1a1786f7530323defcad4b219b`.
 
-Исходники: https://github.com/booshish/tgminiapp-ege/tree/77ccc62ad34cd793a0977bb579e7c8530e779c3c
+Сайт: https://booshish.github.io/tgminiapp-ege/?v=c40694b
 
-Сборка: `npm run build:pages`, Premium developer flag выключен.
+Исходники: https://github.com/booshish/tgminiapp-ege/tree/main
 
-Инструкция: https://github.com/booshish/tgminiapp-ege/blob/main/README.md
-
-Отчёт по сериям, практике и мобильной теории: https://github.com/booshish/tgminiapp-ege/blob/main/docs/study-return-verification.md
-
-Модель подписок: https://github.com/booshish/tgminiapp-ege/blob/main/docs/subscription-model.md
-
-Эта ветка содержит скомпилированные файлы. Исходный коммит: `77ccc62ad34cd793a0977bb579e7c8530e779c3c`.
+Отчёт: https://github.com/booshish/tgminiapp-ege/blob/main/docs/mobile-density-verification.md
