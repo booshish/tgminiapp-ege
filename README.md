@@ -1,9 +1,9 @@
 # Точка — GitHub Pages
 
-Статическая сборка существующего приложения.
-
-Исходный коммит: `ca6389adcb94c126b356e6e15fdf24743af15a59`.
+Проверенный статический экспорт из исходников `b91d2f265cc781180d00a5dd5b7667a5918c3b74`.
 
 Сайт: https://booshish.github.io/tgminiapp-ege/
 
-Отчёт: https://github.com/booshish/tgminiapp-ege/blob/main/docs/mobile-layout-verification.md
+Отчёт: https://github.com/booshish/tgminiapp-ege/blob/b91d2f265cc781180d00a5dd5b7667a5918c3b74/docs/math-expansion-report.md
+
+Полное официально подтверждённое покрытие трёх экзаменов пока заблокировано отсутствующими документами ФИПИ.
