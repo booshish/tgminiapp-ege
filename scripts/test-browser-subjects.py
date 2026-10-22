@@ -16,7 +16,7 @@ if server:
 deadline = time() + 30
 while True:
     try:
-        with urlopen(base_url, timeout=2) as response:
+        with urlopen(base_url + "/", timeout=2) as response:
             if response.status == 200:
                 break
     except Exception:
