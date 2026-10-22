@@ -1,8 +1,10 @@
 import type { Exam } from "./navigation";
 import { getExamNumberXPScoringRule } from "./exam-scores";
+import { subjectExamDefinitions } from "./subject-models";
+import type { SubjectId } from "./subjects";
+export type { SubjectId } from "./subjects";
 
 export type ExamLevel = "base" | "profile";
-export type SubjectId = "math";
 export type ExamSelection = {
   examType: Exam;
   subjectId?: SubjectId;
@@ -16,6 +18,8 @@ export type ExamNumberDefinition = {
   answerFormat: "short" | "extended";
   maxPrimaryScore: number | null;
   scoringStatus: "project-config" | "verified" | "not-configured";
+  pendingReason?: string;
+  sourceReference?: { url: string; pdfPage: number };
 };
 export type ExamDefinition = {
   id: string;
@@ -29,7 +33,7 @@ export type ExamDefinition = {
   title: string;
   numbers: ExamNumberDefinition[];
   sources: { title: string; url: string }[];
-  verificationStatus: "not-verified-online";
+  verificationStatus: "not-verified-online" | "draft-source-reviewed";
   verificationNote: string;
 };
 
@@ -109,20 +113,37 @@ export const examDefinitions: ExamDefinition[] = [
     level: "base",
     year: 2026,
     versionId: "ege-math-base-2026",
-    available: false,
-    availabilityNote:
-      "Базовый уровень временно недоступен: сначала проверим структуру и подготовим проверенный контент. Старые локальные события сохраняются.",
+    available: true,
     title: "ЕГЭ · Математика · Базовый уровень",
     numbers: numbers("ege-math-base-2026", 21, 21, {
+      1: "Вычисления и единицы измерения",
+      2: "Прикладные текстовые задачи и формулы",
+      3: "Таблицы и диаграммы",
+      4: "Вычисления в практических задачах",
       5: "Вероятность",
-      13: "Числовые вычисления",
-      14: "Степени и корни",
+      6: "Таблицы, графики и выбор условий",
+      7: "Функции, графики и производная",
+      8: "Логика и рассуждения",
+      9: "Прикладная планиметрия",
+      10: "Планиметрия",
+      11: "Стереометрия: объёмы и площади",
+      12: "Планиметрия: отношения и теоремы",
+      13: "Стереометрия: геометрические величины",
+      14: "Числа и вычисления",
       15: "Проценты",
+      16: "Преобразования выражений",
       17: "Уравнения",
+      18: "Неравенства",
+      19: "Целые числа и выбор метода",
+      20: "Текстовые задачи и уравнения",
+      21: "Логические текстовые задачи",
     }),
-    sources: [egeSource],
+    sources: [egeSource, {
+      title: "Копия спецификации ФИПИ 2026, база: печатные с. 7–12 (PDF с. 4–6)",
+      url: "https://pro-schools.ru/fipi/ege/spec/2026/ma-11-ege-2026-spec-bazovyy.pdf",
+    }],
     verificationStatus: "not-verified-online",
-    verificationNote,
+    verificationNote: "Учебный банк по структуре 2026 года: 21 краткий ответ, максимум 21 первичный балл, 180 минут. Структура сверена с доступной копией спецификации ФИПИ 2026 (печатные с. 7–12). Загруженные архивы не поступили; соответствие их содержимому и окончательной структуре 2027 года не подтверждено. Условия и решения — авторские.",
   },
   {
     id: "ege-math-profile",
@@ -164,7 +185,7 @@ export function getExamDefinition(
   selection: ExamSelection,
 ): ExamDefinition | undefined {
   if (selection.subjectId !== undefined && selection.subjectId !== "math")
-    return undefined;
+    return subjectExamDefinitions.find((entry) => entry.examType === selection.examType && entry.subjectId === selection.subjectId && selection.level == null);
   const level =
     selection.examType === "ЕГЭ"
       ? selection.level === undefined

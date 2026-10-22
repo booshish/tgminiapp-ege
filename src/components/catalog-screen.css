@@ -198,6 +198,8 @@
 .catalog-part-heading p, .catalog-part-note { color: var(--muted); font-size: var(--secondary-size); }
 .catalog-part-note { margin-top: 16px; max-width: 68ch; }
 .catalog-level-card .button { margin-top: 16px; }
+.catalog-level-switch { display: flex; width: min(100%, 360px); margin-top: 12px; }
+.catalog-level-switch > button { flex: 1; min-width: 0; min-height: 44px; padding: 10px 16px; }
 
 @media (max-width: 800px) {
   .catalog-number-grid {
@@ -324,3 +326,7 @@
   .exam-catalog > .streak-summary { margin-block: 16px; }
   .exam-catalog .catalog-card-status { font-size: var(--secondary-size); }
 }
+.catalog-subjects { margin: 14px 0 20px; }
+.catalog-subjects > summary { cursor: pointer; min-height: 44px; padding: 12px 0; font-weight: 600; }
+.catalog-subjects .catalog-topic-grid { margin-top: 12px; }
+.catalog-number-card:disabled { cursor: default; opacity: .7; }

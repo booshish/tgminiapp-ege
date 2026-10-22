@@ -20,12 +20,13 @@ export function buildCoverage(content) {
   const { tasks, prototypes, theoryTopics, examDefinitions } = content;
   const topicFor = (id) => content.getTheoryTopic?.(id) ?? theoryTopics.find((topic) => topic.id === id);
   const available = examDefinitions.filter((exam) => exam.available);
-  const active = tasks.filter((task) => available.some((exam) => exam.versionId === task.examVersionId));
+  const active = tasks.filter((task) => task.availability !== "history-only" && available.some((exam) => exam.versionId === task.examVersionId));
   const rows = available.flatMap((exam) => exam.numbers.map((number) => {
     const bank = active.filter((task) => task.examVersionId === exam.versionId && task.examNumber === number.number);
     const topicIds = [...new Set(bank.map((task) => task.topicId))];
     const theory = theoryTopics.filter((topic) => topic.subjectId === exam.subjectId
       && topic.examType.includes(exam.examType)
+      && (topic.coverage === "foundation" || exam.examType !== "ЕГЭ" || (topic.level ?? "profile") === exam.level)
       && topic.part === number.part
       && (topic.examNumbers?.includes(number.number) || topicIds.some((id) => topicFor(id)?.id === topic.id)));
     const linkedTopicIds = [...new Set([...topicIds, ...theory.map((topic) => topic.id)])];
@@ -68,7 +69,8 @@ export function buildCoverage(content) {
       id: exam.id, title: exam.title, year: exam.year,
       taskCount: active.filter((task) => task.examVersionId === exam.versionId).length,
       unnumberedTaskCount: active.filter((task) => task.examVersionId === exam.versionId && task.examNumber === null).length,
-      theoryCount: theoryTopics.filter((topic) => topic.examType.includes(exam.examType)).length,
+      theoryCount: theoryTopics.filter((topic) => topic.examType.includes(exam.examType)
+        && (topic.coverage === "foundation" || exam.examType !== "ЕГЭ" || (topic.level ?? "profile") === exam.level)).length,
       numberCount: exam.numbers.length,
       numbersWithTasks: rows.filter((row) => row.examId === exam.id && row.taskCount).length,
       numbersWithTheory: rows.filter((row) => row.examId === exam.id && row.theoryCount).length,
@@ -109,11 +111,11 @@ function markdown(baseline, current) {
     "",
     `Исходный срез: коммит \`${baseline.revision}\`. Текущий срез воспроизводится командой \`node scripts/content-report.mjs\`.`,
     "",
-    "Работают только ОГЭ и профильный ЕГЭ по математике, структура проекта 2026 года. Покрытие номера означает наличие авторских тренировочных задач и материала; оно не доказывает полный охват официальных подтипов или экзаменационную эквивалентность.",
+    "Доступны ОГЭ, базовый и профильный ЕГЭ по математике по конфигурациям 2026 года. Покрытие номера означает наличие авторских тренировочных задач и материала; оно не доказывает полный охват официальных подтипов или соответствие проектам 2027 года.",
     "",
     "## Официальная сверка",
     "",
-    "21 октября 2026 года обе страницы ФИПИ вернули CONNECT HTTP 403 от сети среды. Демоверсии, спецификации, кодификаторы, время и критерии не были прочитаны. Обход ограничений не выполнялся. Нумерация и баллы остаются предварительной конфигурацией проекта, а не подтверждённым официальным реестром; соответствие 2027 году не заявляется.",
+    "Прежняя попытка сетевой сверки 21 октября была заблокирована. В этом этапе страницы ФИПИ и отдельные копии спецификаций прочитаны через поиск; материалы 2027 обозначены проектами. Шесть заявленных вложенных ZIP не доступны. Полный реестр источников, страниц и расхождений — в exam-requirements.json и materials-inventory.json; соответствие действующего банка 2027 году не заявляется.",
     "",
     ...officialSourceReview.urls.map((url) => `- ${url}`),
     "",
@@ -130,11 +132,11 @@ function markdown(baseline, current) {
   for (const row of current.rows) {
     const before = baseline.rows.find((item) => item.examId === row.examId && item.number === row.number);
     const mode = row.automaticCount && row.selfAssessmentCount ? `авто ${row.automaticCount}; самооценка ${row.selfAssessmentCount}` : row.automaticCount ? "автоматическая" : row.selfAssessmentCount ? "самооценка; авторские ориентиры" : "нет задач";
-    lines.push(`| ${row.exam}${row.level ? " профиль" : ""} / математика | ${row.number} / ${row.part} | ${row.title}; ${row.topics.join(", ") || "—"} | ${before?.taskCount ?? 0} → ${row.taskCount} | ${before?.theoryCount ?? 0} → ${row.theoryCount} | ${row.solutionCount}/${row.taskCount} | ${mode} |`);
+    lines.push(`| ${row.exam}${row.level ? row.level === "base" ? " база" : " профиль" : ""} / математика | ${row.number} / ${row.part} | ${row.title}; ${row.topics.join(", ") || "—"} | ${before?.taskCount ?? 0} → ${row.taskCount} | ${before?.theoryCount ?? 0} → ${row.theoryCount} | ${row.solutionCount}/${row.taskCount} | ${mode} |`);
   }
   lines.push("", "## Темы и доступные прототипы внутри номеров", "", "Количество ниже относится к конкретной теме и прототипу; одинаковые числовые варианты не считаются новыми прототипами.", "", "| Экзамен / предмет | № | Тема | Задачи | Материалы | Прототипы (задач) |", "| --- | ---: | --- | ---: | ---: | --- |");
   for (const row of current.rows) for (const topic of row.topicCoverage) {
-    lines.push(`| ${row.exam}${row.level ? " профиль" : ""} / математика | ${row.number} | ${topic.title} | ${topic.taskCount} | ${topic.theoryCount} | ${topic.prototypes.map((prototype) => `${prototype.title} (${prototype.taskCount})`).join("; ") || "—"} |`);
+    lines.push(`| ${row.exam}${row.level ? row.level === "base" ? " база" : " профиль" : ""} / математика | ${row.number} | ${topic.title} | ${topic.taskCount} | ${topic.theoryCount} | ${topic.prototypes.map((prototype) => `${prototype.title} (${prototype.taskCount})`).join("; ") || "—"} |`);
   }
   const emptyTasks = current.rows.filter((row) => !row.taskCount);
   const emptyTheory = current.rows.filter((row) => !row.theoryCount);
@@ -144,9 +146,9 @@ function markdown(baseline, current) {
     `- Неразрешённые связи: ${current.missingLinks.length ? current.missingLinks.join("; ") : "не обнаружены"}.`,
     "- Точное соответствие структуре, сложности, времени и критериям ФИПИ за нужный год не подтверждено из-за недоступных источников.",
     "- Параметрические варианты одного прототипа не заменяют разнообразие всех подтипов. Требуются дальнейшая методическая рецензия и задачи с иными условиями/чертежами, особенно для №1–5 ОГЭ и развёрнутой части.",
-    "- Конкретные ограничения нового банка: ОГЭ №1–5 — один тип общего условия (участок), без шин/квартир/тарифов; №20–23 и25 — по одному новому семейству. ЕГЭ №14 — один прямой параллелепипед, №17 — касательные, №18 — квадратное уравнение с положительными корнями, №19 — одно семейство диофантовых уравнений. Другие конфигурации этих разделов ещё предстоит наполнить и проверить.",
+    "- Конкретные ограничения банка: ОГЭ №1–5 — один тип общего условия (участок), без шин/квартир/тарифов; новые отдельные задачи расширили подтипы второй части, но не закрыли все темы. В базе по четыре авторских семейства на номер, каждое с пятью наборами параметров. Минимум 20 задач на номер ОГЭ/профиля и разнообразие всех подтем пока не достигнуты. Координатные и вычислительные проверки не заменяют рецензию доказательств.",
     "- Официально согласованных критериев развёрнутых ответов нет. Доступны авторский образец и явно обозначенная самооценка; это не объективная оценка экзаменатора.",
-    "- Базовый ЕГЭ и другие предметы недоступны. Старые задачи базы сохранены только ради совместимости.",
+    "- Базовый ЕГЭ доступен по прочитанной спецификации 2026 (копия PDF); старые неверно привязанные примеры базы сохранены только ради совместимости. Другие предметы недоступны.",
     "- Сервер, БД и аккаунты отсутствуют; закладки, попытки и результаты остаются в браузере. Перенос между устройствами не обещается.",
     "",
     "## Воспроизводимое наполнение и экспорт",

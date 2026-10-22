@@ -1,11 +1,14 @@
 "use client";
 
 import { ArrowRight, BookOpen, Hash, ListFilter, Shuffle } from "lucide-react";
-import { ExamPicker, PageIntro } from "@/components/ui";
+import { ExamPicker, PageIntro, FeatureCard } from "@/components/ui";
+import { getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { getExamDefinition } from "@/lib/exams";
+import { VariantLaunchCard } from "@/components/variant-launch-card";
+import type { MockState } from "@/lib/mock-exam";
 import type { CatalogSelection } from "@/lib/practice";
-import { getPracticeTasks, prototypes, taskTopicLabels } from "@/lib/tasks";
+import { getPracticeTasks, practicePrototypes as prototypes, taskTopicLabels } from "@/lib/tasks";
 import { getTheoryTopic, theoryTopics } from "@/lib/theory";
 import { StreakSummary } from "@/components/game-motivation";
 import type { GameSummary } from "@/lib/gamification";
@@ -17,6 +20,10 @@ type CatalogScreenProps = {
   onStart: (selection: CatalogSelection) => void;
   onTheory: (topicId?: string) => void;
   onShuffle?: () => void;
+  mockState?: MockState;
+  mockReady?: boolean;
+  onVariant?: (variantNumber: number, replace: boolean) => void;
+  onResumeVariant?: (sessionId: string) => void;
   game: GameSummary;
 };
 
@@ -26,6 +33,10 @@ export function CatalogScreen({
   onStart,
   onTheory,
   onShuffle,
+  mockState,
+  mockReady,
+  onVariant,
+  onResumeVariant,
   game,
 }: CatalogScreenProps) {
   const isPhone = usePhoneLayout();
@@ -41,7 +52,9 @@ export function CatalogScreen({
   };
   const availableTasks = getPracticeTasks(filter);
   const availableTopics = theoryTopics
+    .filter((topic) => topic.subjectId === selection.subjectId)
     .filter((topic) => topic.examType.includes(selection.exam))
+    .filter((topic) => selection.exam !== "ЕГЭ" || topic.coverage !== "exam-topic" || (topic.level ?? "profile") === (selection.level ?? "profile"))
     .map((topic) => ({
       id: topic.id,
       title: topic.title,
@@ -70,10 +83,14 @@ export function CatalogScreen({
     if (exam === selection.exam) return;
     onChange({
       exam,
-      subjectId: "math",
-      level: exam === "ЕГЭ" ? "profile" : undefined,
+      subjectId: exam === "ОГЭ" && selection.subjectId === "chinese" ? "math" : selection.subjectId,
+      level: exam === "ЕГЭ" && selection.subjectId === "math" ? "profile" : undefined,
       mode: selection.mode,
     });
+  }
+
+  function changeSubject(subjectId: SubjectId) {
+    onChange({ exam: selection.exam, subjectId, mode: "number", level: subjectId === "math" && selection.exam === "ЕГЭ" ? "profile" : undefined });
   }
 
   function changeMode(mode: CatalogSelection["mode"]) {
@@ -106,39 +123,40 @@ export function CatalogScreen({
         Выбери экзамен, затем номер задания или учебную тему.
       </PageIntro>
 
-      <ExamPicker exam={selection.exam} onChange={changeExam} />
-      {!isPhone && practiceExtras}
+      <ExamPicker exam={selection.exam} onChange={changeExam} subjectId={selection.subjectId} onSubjectChange={changeSubject} />
+      <details className="catalog-subjects">
+        <summary>Все предметы {selection.exam}</summary>
+        <div className="catalog-topic-grid">
+          {getSubjects(selection.exam).map(([id, title]) => <FeatureCard key={id} icon={BookOpen} label={title}
+            description={id === "math" ? "Действующая математика" : id === "informatics" ? "Проект 2027 · задания и номера" : "Структура и задания готовятся"}
+            onClick={() => changeSubject(id)} />)}
+        </div>
+      </details>
+      {selection.subjectId !== "math" && <div className="info-note" role="status"><p>
+        {definition ? definition.verificationNote : `${subjectTitle(selection.subjectId)}: спецификация ещё не сверена. Номера и баллы появятся после проверки источников; заданий другого предмета здесь нет.`}
+      </p></div>}
 
-      {selection.exam === "ЕГЭ" && (
+      {selection.exam === "ЕГЭ" && selection.subjectId === "math" && (
         <section
           className="catalog-level-card"
           aria-labelledby="catalog-level-title"
         >
-          <h2 id="catalog-level-title">Математика · Профильный уровень</h2>
-          {!isPhone && <p>
-            В этой версии готовимся к профильной математике. Базовый уровень
-            появится после проверки структуры и материалов.
-          </p>}
-          {selection.level === "base" && (
-            <button
-              type="button"
-              className="button button-secondary"
-              onClick={() =>
-                onChange({
-                  ...selection,
-                  level: "profile",
-                  examNumber: undefined,
-                  topicId: undefined,
-                  prototypeId: undefined,
-                  part: undefined,
-                })
-              }
-            >
-              Выбрать профильный уровень
-            </button>
-          )}
+          <h2 id="catalog-level-title">Математика · {selection.level === "base" ? "Базовый уровень" : "Профильный уровень"}</h2>
+          <div className="segmented catalog-level-switch" role="group" aria-label="Уровень математики ЕГЭ">
+            {(["base", "profile"] as const).map((level) => <button key={level} type="button"
+              className={(selection.level ?? "profile") === level ? "selected" : ""}
+              aria-pressed={(selection.level ?? "profile") === level}
+              onClick={() => onChange({ ...selection, level, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined })}
+            >{level === "base" ? "База" : "Профиль"}</button>)}
+          </div>
+          {!isPhone && !getExamDefinition({ examType: "ЕГЭ", level: "base" })?.available && <p>Материалы базового уровня готовятся. Выбор базы покажет фактическую доступность без подмены профильными заданиями.</p>}
         </section>
       )}
+
+      {selection.subjectId === "math" && <VariantLaunchCard key={`${selection.exam}-${selection.level ?? ""}-${selection.subjectId}`}
+        definition={definition} state={mockState} ready={mockReady}
+        onStart={onVariant} onResume={onResumeVariant} />}
+      {!isPhone && selection.subjectId === "math" && practiceExtras}
 
       <div
         className="segmented catalog-mode-switch"
@@ -165,7 +183,7 @@ export function CatalogScreen({
 
       <div className="catalog-list-heading">
         <span className="eyebrow">
-          {definition?.title ?? `${selection.exam} · Математика`}
+          {definition?.title ?? `${selection.exam} · ${subjectTitle(selection.subjectId)}`}
         </span>
         <h2>
           {selection.mode === "number" ? "Номера заданий" : "Учебные темы"}
@@ -210,7 +228,7 @@ export function CatalogScreen({
       {selection.mode === "number" ? (
         definition && definition.available !== false ? (
           <div className="catalog-parts">
-            {([1, 2] as const).map((part) => (
+            {([1, 2] as const).filter((part) => definition.numbers.some((item) => item.part === part)).map((part) => (
               <section
                 key={part}
                 className="catalog-part"
@@ -235,13 +253,14 @@ export function CatalogScreen({
                       topicId: undefined,
                       prototypeId: undefined,
                     };
-                    const hasTasks =
+                    const taskCount =
                       getPracticeTasks({ ...filter, examNumber: item.number })
-                        .length > 0;
+                        .length;
                     return (
                       <button
                         type="button"
                         key={item.number}
+                        disabled={taskCount === 0}
                         data-catalog-number={item.number}
                         className={`catalog-number-card${selection.examNumber === item.number ? " catalog-card-selected" : ""}`}
                         aria-pressed={selection.examNumber === item.number}
@@ -253,9 +272,9 @@ export function CatalogScreen({
                         </span>
                         <span className="catalog-card-title">{item.title}</span>
                         <span className="catalog-card-status">
-                          {hasTasks
-                            ? item.part === 2 ? "Самопроверка" : "Открыть практику"
-                            : "Задания скоро появятся"}
+                          {taskCount > 0
+                            ? `Задач: ${taskCount} · ${item.part === 2 ? "самопроверка" : "открыть практику"}`
+                            : item.pendingReason ?? "Авторское задание ещё не подготовлено"}
                         </span>
                       </button>
                     );
@@ -333,7 +352,7 @@ export function CatalogScreen({
         </div>
       )}
 
-      {isPhone && practiceExtras}
+      {isPhone && selection.subjectId === "math" && practiceExtras}
 
       <section className="catalog-theory-link">
         <div>

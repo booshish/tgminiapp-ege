@@ -18,8 +18,8 @@ test("coverage keeps the recorded baseline and all historical task indices", () 
 });
 
 test("every supported number has tasks, usable theory, a solution and an explicit check mode", () => {
-  assert.equal(coverage.rows.length, 44);
-  assert.equal(coverage.exams.length, 2);
+  assert.equal(coverage.rows.length, 65);
+  assert.equal(coverage.exams.length, 3);
   assert.deepEqual(contentIntegrityIssues(content, coverage), []);
   for (const row of coverage.rows) {
     assert.equal(row.automaticCount + row.selfAssessmentCount, row.taskCount);
@@ -33,7 +33,7 @@ test("legacy theory aliases resolve without inflating the material count", () =>
   assert.equal(content.getTheoryTopic("trigonometric-equations")?.id, "ege-profile-number-13");
   assert.equal(content.getTheoryTopic("number-theory")?.id, "ege-profile-number-19");
   assert.equal(new Set(content.theoryTopics.map((topic) => topic.materialId)).size, content.theoryTopics.length);
-  const row = coverage.rows.find((item) => item.exam === "ЕГЭ" && item.number === 13);
+  const row = coverage.rows.find((item) => item.level === "profile" && item.number === 13);
   assert.equal(row.theoryCount, 1);
 });
 

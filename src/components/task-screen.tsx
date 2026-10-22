@@ -17,6 +17,7 @@ import type { PracticeTaskState } from "@/lib/practice";
 import { SelfAssessmentScreen } from "./self-assessment-screen";
 import { BookmarkButton } from "./bookmark-button";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
+import { subjectTitle } from "@/lib/subjects";
 import "./task-screen.css";
 
 export type TaskScreenProps = {
@@ -138,7 +139,7 @@ function TaskAttempt({
   }
 
   return (
-    <section className="task-screen" aria-labelledby="task-heading">
+    <section className="task-screen" data-subject={task.subjectId} aria-labelledby="task-heading">
       <div className="task-topbar">
         <button type="button" className="back-link" onClick={onBack}>
           <ArrowLeft size={20} aria-hidden="true" />К выбору заданий
@@ -148,7 +149,7 @@ function TaskAttempt({
 
       <header className="task-heading-block">
         <p className="eyebrow">
-          {exam} · Математика{levelLabel ? ` · ${levelLabel}` : ""}
+          {exam} · {subjectTitle(task.subjectId)}{levelLabel ? ` · ${levelLabel}` : ""}
         </p>
         <h1 id="task-heading">
           {examNumber ? `Задание №${examNumber}` : "Учебное задание"}
@@ -163,6 +164,9 @@ function TaskAttempt({
 
       <div className="task-card">
         <p className="task-prompt">{task.prompt}</p>
+        {task.resources && <section aria-label="Материалы задания"><h2>Материалы задания</h2><ul>
+          {task.resources.map((resource) => <li key={resource.name}><a download={resource.name} href={`data:text/plain;charset=utf-8,${encodeURIComponent(resource.content)}`}>{resource.name} · скачать</a></li>)}
+        </ul></section>}
 
         {task.diagram?.type === "right-triangle" && (
           <div className="task-diagram-wrap">
@@ -224,7 +228,7 @@ function TaskAttempt({
             />
           </div>
           <p id="task-input-help" className="task-input-help">
-            {isSetAnswer
+            {task.answerRule.type === "text" ? "Формат ответа указан в условии. Порядок символов и слов важен." : isSetAnswer
               ? "Запишите все корни через точку с запятой. Порядок не важен."
               : "Можно записать число или дробь. Точка и запятая равнозначны."}
           </p>

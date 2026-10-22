@@ -12,7 +12,12 @@
     "test": "node --test scripts/test-*.mjs",
     "content:check": "node scripts/content-report.mjs --check",
     "content:report": "node scripts/content-report.mjs",
-    "content:seed": "node scripts/content-report.mjs --seed"
+    "content:seed": "node scripts/content-report.mjs --seed",
+    "materials:inventory": "node scripts/exam-materials.mjs --matrix docs/exam-requirements.json",
+    "materials:check": "node scripts/exam-materials.mjs --matrix docs/exam-requirements.json --check",
+    "quality:report": "node scripts/exam-quality.mjs",
+    "quality:check": "node scripts/exam-quality.mjs --require-complete",
+    "quality:verify": "node scripts/exam-quality.mjs --verify"
   },
   "dependencies": {
     "katex": "^0.19.0",

@@ -41,14 +41,24 @@ test("Bookmarks deduplicate by stable material ID, toggle, and survive serializa
   assert.equal(toggleBookmark(saved, input, catalog).bookmarks.length, 0);
 });
 
-test("Shared theory has one bookmark; invalid exam, unavailable base and removed links are rejected", () => {
+test("Shared theory has one bookmark; invalid exam, history-only base and removed links are rejected", () => {
   const shared = toggleBookmark(emptyStudyToolsState(), { kind: "theory", itemId: "fractions", examType: "ОГЭ" }, catalog);
   assert.equal(toggleBookmark(shared, { kind: "theory", itemId: "fractions", examType: "ЕГЭ" }, catalog).bookmarks.length, 0);
-  const withBase = { ...catalog, tasks: [...bank, task("old-base", { level: "base", examType: ["ЕГЭ"] })] };
+  const withBase = { ...catalog, tasks: [...bank, task("old-base", { level: "base", examType: ["ЕГЭ"], availability: "history-only" })] };
   for (const input of [{ kind: "task", itemId: "task-0", examType: "ЕГЭ" }, { kind: "task", itemId: "old-base", examType: "ЕГЭ" }, { kind: "theory", itemId: "removed", examType: "ОГЭ" }]) {
     assert.equal(toggleBookmark(shared, input, withBase), shared);
   }
   assert.equal(parseStudyToolsState(JSON.stringify(shared), { tasks: bank, topics: [] }).bookmarks.length, 0);
+});
+
+test("Available base tasks keep bookmarks and mistakes independently from profile", () => {
+  const base = task("base-current", { level: "base", examType: ["ЕГЭ"], examVersionId: "ege-math-base-2026" });
+  const baseCatalog = { ...catalog, tasks: [...bank, base] };
+  const state = toggleBookmark(emptyStudyToolsState(), { kind: "task", itemId: base.id, examType: "ЕГЭ" }, baseCatalog);
+  assert.equal(state.bookmarks.length, 1);
+  assert.deepEqual(parseStudyToolsState(JSON.stringify(state), baseCatalog), state);
+  const event = answer(0, false, undefined, {}, base);
+  assert.deepEqual(getMistakes([event], baseCatalog.tasks).map((item) => item.task.id), [base.id]);
 });
 
 test("Bookmark schema migrates v1, safely reads corrupt data and preserves unknown schema detection", () => {

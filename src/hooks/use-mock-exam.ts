@@ -2,11 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ExamDefinition } from "@/lib/exams";
-import { getAvailableExamDefinitions } from "@/lib/exams";
+import { examDefinitions } from "@/lib/exams";
 import { tasks, type Task } from "@/lib/tasks";
 import {
-  createMockSession, emptyMockState, finishMockSession, mockExamStorageKey,
+  emptyMockState, finishMockSession, mockExamStorageKey,
   parseMockState, selectMockPosition, setMockSelfScore, updateMockAnswer,
+  skipMockTask, startMockAttempt,
   type MockSession, type MockState,
 } from "@/lib/mock-exam";
 
@@ -16,7 +17,7 @@ export type MockCallbacks = {
   onSelfAssessment: (task: Task, score: number) => { score: number; maxScore: number; deltaXP: number };
 };
 
-export function useMockExam(callbacks: MockCallbacks) {
+export function useMockExam(callbacks: MockCallbacks, enabled = true) {
   const [state, setState] = useState<MockState>(emptyMockState);
   const [ready, setReady] = useState(false);
   const [storageWarning, setStorageWarning] = useState(false);
@@ -24,6 +25,7 @@ export function useMockExam(callbacks: MockCallbacks) {
   const [now, setNow] = useState(() => Date.now());
   const current = useRef(state);
   const canPersist = useRef(false);
+  const pendingWrite = useRef(false);
   const mounted = useRef(false);
   const callbacksRef = useRef(callbacks);
   callbacksRef.current = callbacks;
@@ -33,7 +35,7 @@ export function useMockExam(callbacks: MockCallbacks) {
     if (mounted.current) return;
     mounted.current = true;
     try {
-      const restored = parseMockState(localStorage.getItem(mockExamStorageKey), tasks, getAvailableExamDefinitions());
+      const restored = parseMockState(localStorage.getItem(mockExamStorageKey), tasks, examDefinitions);
       current.current = restored;
       setState(restored);
       canPersist.current = true;
@@ -48,10 +50,32 @@ export function useMockExam(callbacks: MockCallbacks) {
     // The snapshot is written before callbacks that modify the learning journal.
     current.current = next;
     if (canPersist.current) {
-      try { localStorage.setItem(mockExamStorageKey, JSON.stringify(next)); }
-      catch { setStorageWarning(true); }
-    }
+      try { localStorage.setItem(mockExamStorageKey, JSON.stringify(next)); pendingWrite.current = false; }
+      catch { pendingWrite.current = true; setStorageWarning(true); }
+    } else pendingWrite.current = true;
     setState(next);
+  }, []);
+
+  useEffect(() => {
+    const sync = (event: StorageEvent) => {
+      if (event.key !== mockExamStorageKey && event.key !== null) return;
+      try {
+        const restored = parseMockState(event.newValue, tasks, examDefinitions);
+        // Explicit reset in another tab clears its live timers here as well.
+        // Ordinary remote updates must not erase an unsaved local draft.
+        if (event.newValue !== null && pendingWrite.current) return;
+        current.current = restored;
+        canPersist.current = true;
+        pendingWrite.current = false;
+        setState(restored);
+      } catch {
+        // A newer/unknown schema must not be overwritten by a stale local tab.
+        canPersist.current = false;
+        setStorageWarning(true);
+      }
+    };
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
   }, []);
 
   const changeSession = useCallback((id: string, change: (session: MockSession) => MockSession) => {
@@ -63,11 +87,25 @@ export function useMockExam(callbacks: MockCallbacks) {
   }, [commit]);
 
   const publishResults = useCallback((sessionId: string) => {
-    if (publishing.current.has(sessionId)) return;
+    if (!enabled || publishing.current.has(sessionId)) return;
     publishing.current.add(sessionId);
     try {
       const session = current.current.sessions.find((entry) => entry.id === sessionId);
       if (!session || session.finishedAt === null) return;
+      // A durable attempt snapshot must precede its learning-journal events.
+      // Otherwise a quota failure could leave a stale draft on reload whose
+      // reused request ID conflicts with the already-published answer.
+      if (!canPersist.current) {
+        setActionError("Попытка доступна в этой вкладке, но её запись в браузере недоступна. Результаты пока не переданы в прогресс.");
+        return;
+      }
+      try { localStorage.setItem(mockExamStorageKey, JSON.stringify(current.current)); pendingWrite.current = false; }
+      catch {
+        pendingWrite.current = true;
+        setStorageWarning(true);
+        setActionError("Не удалось сохранить попытку в браузере. Результаты пока не переданы в прогресс. Освободи место и нажми «Сохранить результаты».");
+        return;
+      }
       for (const taskId of session.taskIds) {
         const result = session.results[taskId];
         if (!result?.valid || !result.requestId || session.publishedTaskIds.includes(taskId)) continue;
@@ -83,7 +121,7 @@ export function useMockExam(callbacks: MockCallbacks) {
     } finally {
       publishing.current.delete(sessionId);
     }
-  }, [changeSession]);
+  }, [changeSession, enabled]);
 
   const finish = useCallback((id: string, at = Date.now()) => {
     changeSession(id, (session) => finishMockSession(session, tasks, at));
@@ -93,7 +131,7 @@ export function useMockExam(callbacks: MockCallbacks) {
   const hasUnfinishedSession = state.sessions.some((session) => session.finishedAt === null);
 
   useEffect(() => {
-    if (!ready || !hasUnfinishedSession) return;
+    if (!enabled || !ready || !hasUnfinishedSession) return;
     const tick = () => {
       const time = Date.now();
       setNow(time);
@@ -105,25 +143,23 @@ export function useMockExam(callbacks: MockCallbacks) {
     const timer = window.setInterval(tick, 1000);
     document.addEventListener("visibilitychange", tick);
     return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", tick); };
-  }, [ready, hasUnfinishedSession, finish]);
+  }, [enabled, ready, hasUnfinishedSession, finish]);
 
   useEffect(() => {
-    if (!ready) return;
+    if (!enabled || !ready) return;
     for (const session of current.current.sessions) {
       if (session.finishedAt !== null && Object.values(session.results).some((result) => result.valid && !session.publishedTaskIds.includes(result.taskId))) publishResults(session.id);
     }
-  }, [ready, publishResults]);
+  }, [enabled, ready, state.sessions, publishResults]);
 
   const active = state.sessions.find((session) => session.id === state.activeId) ?? null;
   return {
     state, active, ready, now, storageWarning, actionError,
-    start(definition: ExamDefinition) {
+    start(definition: ExamDefinition, variantNumber?: number, options?: { replace?: boolean }) {
+      if (!enabled || !ready) return;
       try {
-        const unfinished = current.current.sessions.find((session) => session.finishedAt === null);
-        if (unfinished) { commit({ ...current.current, activeId: unfinished.id }); return; }
         const id = `mock-${crypto.randomUUID()}`;
-        const session = createMockSession(id, definition, tasks, current.current.sessions, Date.now());
-        commit({ ...current.current, sessions: [...current.current.sessions, session], activeId: session.id });
+        commit(startMockAttempt(current.current, definition, tasks, id, Date.now(), variantNumber, options?.replace === true));
         setActionError("");
       } catch { setActionError("Не удалось создать вариант. Проверь доступность всех номеров и попробуй снова."); }
     },
@@ -137,6 +173,21 @@ export function useMockExam(callbacks: MockCallbacks) {
     position(position: number) {
       const id = current.current.activeId;
       if (id) changeSession(id, (session) => selectMockPosition(session, position));
+    },
+    skip(taskId?: string) {
+      const session = current.current.sessions.find((entry) => entry.id === current.current.activeId);
+      const target = taskId ?? session?.taskIds[session.position];
+      if (session && target) changeSession(session.id, (latest) => skipMockTask(latest, target));
+    },
+    /** Called after the existing Profile reset removes the user's local data. */
+    reset() {
+      canPersist.current = true;
+      pendingWrite.current = false;
+      const cleared = emptyMockState();
+      current.current = cleared;
+      setState(cleared);
+      setStorageWarning(false);
+      setActionError("");
     },
     finish() { if (current.current.activeId) finish(current.current.activeId); },
     retryPublish() { if (current.current.activeId) publishResults(current.current.activeId); },
@@ -167,3 +218,5 @@ export function useMockExam(callbacks: MockCallbacks) {
     },
   };
 }
+
+export type MockExamController = ReturnType<typeof useMockExam>;

@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ClipboardCheck } from "lucide-react";
 import { MathFormula } from "@/components/math-formula";
 import type { TaskScreenProps } from "./task-screen";
 import { BookmarkButton } from "./bookmark-button";
+import { subjectTitle } from "@/lib/subjects";
 import "./self-assessment-screen.css";
 
 /** A voluntary self-assessment is never an automatically checked correct answer. */
@@ -83,7 +84,7 @@ export function SelfAssessmentScreen({
       </div>
       <header className="task-heading-block">
         <p className="eyebrow">
-          {exam} · Математика{levelLabel ? ` · ${levelLabel}` : ""}
+          {exam} · {subjectTitle(task.subjectId)}{levelLabel ? ` · ${levelLabel}` : ""}
         </p>
         <h1 id="task-heading">Задание №{examNumber}</h1>
         <p className="task-topic">Тема: {topicTitle}</p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { tasks } from "@/lib/tasks";
+import { practiceBank as tasks } from "@/lib/tasks";
 import { theoryTopics, getTheoryTopic } from "@/lib/theory";
 import {
   bookmarkKey, canReadStudyToolsState, emptyStudyToolsState, legacyStudyToolsStorageKey,

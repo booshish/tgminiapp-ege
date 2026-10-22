@@ -30,7 +30,7 @@ async function load(url) {
   modules.set(url.href, pending);
   return pending;
 }
-const { egeTasks, egePrototypes, egeGeneratorCases } = await import(await load(new URL("src/lib/content/ege-bank.ts", root)));
+const { egeTasks, egePrototypes, egeGeneratorCases, egeSupplementIds } = await import(await load(new URL("src/lib/content/ege-bank.ts", root)));
 const { checkTaskAnswer } = await import(await load(new URL("src/lib/tasks.ts", root)));
 const byId = new Map(egeTasks.map((task) => [task.id, task]));
 const fixed = (value) => String(Number(value.toFixed(9)));
@@ -82,19 +82,23 @@ function expectedShort(family, p) {
   }
 }
 
-test("ЕГЭ: воспроизводимые 172 задачи покрывают каждый номер; ID и условия уникальны", () => {
-  assert.equal(egeTasks.length, 172);
-  assert.equal(egeGeneratorCases.length, egeTasks.length);
+test("ЕГЭ: воспроизводимые 179 задач покрывают каждый номер; ID и условия уникальны", () => {
+  assert.equal(egeTasks.length, 179);
+  assert.equal(egeGeneratorCases.length, 172);
+  assert.equal(egeSupplementIds.length, 7);
+  assert.equal(egeGeneratorCases.length + egeSupplementIds.length, egeTasks.length);
   assert.equal(new Set(egeTasks.map(t => t.id)).size, egeTasks.length);
   assert.equal(new Set(egeTasks.map(t => `${t.examNumber}|${t.prompt}|${t.conditionLatex ?? ""}`)).size, egeTasks.length);
   assert.equal(new Set(egePrototypes.map(p => p.id)).size, egePrototypes.length);
-  for (let n = 1; n <= 19; n++) assert.equal(egeTasks.filter(t => t.examNumber === n).length, n <= 12 ? 12 : 4);
+  for (let n = 1; n <= 19; n++) assert.equal(egeTasks.filter(t => t.examNumber === n).length, n <= 12 ? 12 : 5);
   for (const t of egeTasks) {
     assert.deepEqual(t.examType, ["ЕГЭ"]); assert.equal(t.level, "profile"); assert.equal(t.examYear, 2026);
     assert.equal(t.topicId, `ege-profile-number-${t.examNumber}`);
     assert(egePrototypes.some(p => p.id === t.prototypeId && p.topicId === t.topicId));
     assert(t.prompt.length > 15 && t.answerDisplay.length && t.solution.length >= 2);
     assert.equal(t.source.kind, "author"); assert.notEqual(t.scoring.status, "verified");
+    assert.equal(t.provenance.creation_method, egeSupplementIds.includes(t.id) ? "original-individual-task" : "original-deterministic-family");
+    assert.equal("creationMethod" in t, false);
     if (t.examNumber <= 12) { assert.equal(t.part, 1); assert.equal(t.answerRule.type, "number"); assert.equal(t.scoring.maxPrimaryScore, 1); }
     else {
       assert.equal(t.part, 2); assert.equal(t.answerRule.type, "self"); assert(t.selfCheckNotes.length >= 3);
@@ -223,4 +227,122 @@ test("ЕГЭ №19: полный перебор натуральных реше�
     assert(task.answerDisplay.includes(`Минимальная сумма: ${Math.min(...sums)}`));
     assert(task.answerDisplay.includes(`максимальная: ${Math.max(...sums)}`));
   }
+});
+
+const supplementary = (number) => {
+  const task = egeTasks.find((entry) => egeSupplementIds.includes(entry.id) && entry.examNumber === number);
+  assert(task, `Missing individually written EGE ${number}`);
+  return task;
+};
+
+test("ЕГЭ: семь новых подтипов, отдельное решение и ориентиры для каждого развёрнутого номера", () => {
+  assert.equal(new Set(egeSupplementIds).size, 7);
+  assert.deepEqual(egeSupplementIds.map((id) => byId.get(id).examNumber), [13, 14, 15, 16, 17, 18, 19]);
+  for (const id of egeSupplementIds) {
+    const task = byId.get(id);
+    assert.equal(task.answerRule.type, "self");
+    assert(task.solution.length >= 4 && task.selfCheckNotes.length >= 3);
+    assert.equal(egeTasks.filter((entry) => entry.prototypeId === task.prototypeId).length, 1);
+  }
+});
+
+test("ЕГЭ новый №13: все серии, отбор и корень на левом конце проверены подстановкой", () => {
+  const roots = new Set();
+  for (let n = -3; n <= 3; n++) for (const root of [Math.PI / 2 + Math.PI * n, Math.PI / 6 + 2 * Math.PI * n, 5 * Math.PI / 6 + 2 * Math.PI * n]) {
+    close(Math.sin(2 * root), Math.cos(root));
+    if (root >= -Math.PI / 2 - 1e-10 && root <= Math.PI + 1e-10) roots.add(fixed(root));
+  }
+  const selected = [...roots].map(Number).sort((a, b) => a - b);
+  assert.equal(selected.length, 4);
+  selected.forEach((x, index) => close(x, [-Math.PI / 2, Math.PI / 6, Math.PI / 2, 5 * Math.PI / 6][index]));
+  assert.notEqual(Math.sin(2 * Math.PI), Math.cos(Math.PI));
+  assert.match(supplementary(13).answerDisplay, /−π\/2; π\/6; π\/2; 5π\/6/);
+});
+
+test("ЕГЭ новый №14: расстояние до плоскости независимо вычислено через объём и векторное произведение", () => {
+  const b = [6, 0, -4], c = [0, 6, -4]; // Vectors SB, SC, with A=(0,0,0), S=(0,0,4).
+  const cross = [b[1] * c[2] - b[2] * c[1], b[2] * c[0] - b[0] * c[2], b[0] * c[1] - b[1] * c[0]];
+  const sideFaceArea = Math.hypot(...cross) / 2;
+  const volume = 6 * 6 / 2 * 4 / 3;
+  const distance = 3 * volume / sideFaceArea;
+  close(distance, 12 / Math.sqrt(17));
+  close(12 / Math.hypot(2, 2, 3), distance); // Plane 2x+2y+3z=12.
+  const bc = [-6, 6, 0], am = [3, 3, 0];
+  close(bc.reduce((sum, value, index) => sum + value * am[index], 0), 0);
+  assert.match(supplementary(14).answerDisplay, /12\/√17/);
+});
+
+test("ЕГЭ новый №15: исходные логарифмы проверены по допустимым аргументам и границам", () => {
+  for (let x = -5; x <= 8; x += 0.125) {
+    const valid = x - 1 > 0 && x + 1 > 0;
+    const satisfies = valid && Math.log2(x - 1) + Math.log2(x + 1) <= 3 + 1e-12;
+    assert.equal(satisfies, x > 1 && x <= 3);
+  }
+  assert.equal(Math.log2(2) + Math.log2(4), 3);
+  assert.equal(supplementary(15).answerDisplay, "(1; 3]");
+});
+
+test("ЕГЭ новый №16: последовательное начисление и снятие подтверждает оба остатка", () => {
+  const p = 20, q = 1 + p / 100;
+  let balance = 200000;
+  const balances = [];
+  for (let year = 0; year < 2; year++) {
+    balance *= q;
+    assert(balance >= 50000);
+    balance -= 50000;
+    balances.push(balance);
+  }
+  assert.deepEqual(balances, [190000, 178000]);
+  const D = 25 ** 2 + 4 * 100 * 114;
+  const roots = [(25 - Math.sqrt(D)) / 200, (25 + Math.sqrt(D)) / 200];
+  assert.deepEqual(roots.filter((root) => root >= 1), [1.2]);
+  assert.match(supplementary(16).answerDisplay, /20%.*190 000.*178 000/);
+});
+
+test("ЕГЭ новый №17: проекции в координатах подтверждают окружность и длину хорды", () => {
+  const a = [0, 12], b = [-5, 0], c = [9, 0], d = [0, 0];
+  const project = (point, start, end) => {
+    const direction = end.map((value, index) => value - start[index]);
+    const t = direction.reduce((sum, value, index) => sum + value * (point[index] - start[index]), 0) / direction.reduce((sum, value) => sum + value * value, 0);
+    assert(t > 0 && t < 1);
+    return start.map((value, index) => value + t * direction[index]);
+  };
+  const p = project(d, a, b), q = project(d, a, c), circleCenter = [0, 6];
+  for (const point of [a, p, d, q]) close(Math.hypot(point[0] - circleCenter[0], point[1] - circleCenter[1]), 6);
+  close(Math.hypot(p[0] - q[0], p[1] - q[1]), 672 / 65);
+  assert.match(supplementary(17).answerDisplay, /672\/65/);
+});
+
+test("ЕГЭ новый №18: независимое пересечение линейных участков проверяет число корней и слияние на границе", () => {
+  const intervalRoots = (a) => {
+    const f = (x) => Math.abs(x - 2) + Math.abs(x + 1) - a * x;
+    const boundaries = [-1e6, -1, 2, 1e6];
+    const roots = [];
+    for (let index = 0; index < boundaries.length - 1; index++) {
+      const left = boundaries[index], right = boundaries[index + 1], fLeft = f(left), fRight = f(right);
+      if (fLeft === 0) roots.push(left);
+      if (fRight === 0) roots.push(right);
+      if (fLeft * fRight < 0) roots.push(left - fLeft * (right - left) / (fRight - fLeft));
+    }
+    return roots.sort((x, y) => x - y).filter((x, index, all) => index === 0 || Math.abs(x - all[index - 1]) > 1e-6);
+  };
+  for (let a = -5; a <= 5; a += 0.125) {
+    const roots = intervalRoots(a);
+    assert.equal(roots.length === 2, a > 1.5 && a < 2, `a=${a}, roots=${roots}`);
+  }
+  assert.equal(intervalRoots(1.5).length, 1);
+  assert.equal(intervalRoots(2).length, 1);
+  assert.equal(intervalRoots(-2).length, 0);
+  assert.equal(supplementary(18).answerDisplay, "3/2 < a < 2");
+});
+
+test("ЕГЭ новый №19: полный конечный перебор подтверждает достижимость и оба экстремума", () => {
+  const pairs = [];
+  for (let x = 1; x < 37; x++) for (let y = 1; y < 37; y++) if (x + 2 * y === 37) pairs.push([x, y]);
+  assert.equal(pairs.length, 18);
+  assert(pairs.some(([x, y]) => x * y === 168));
+  assert.equal(Math.max(...pairs.map(([x, y]) => x * y)), 171);
+  assert.equal(Math.min(...pairs.map(([x, y]) => Math.abs(x - y))), 1);
+  const t = supplementary(19);
+  for (const part of ["(21; 8)", "171", "(19; 9)", "(13; 12)"]) assert(t.answerDisplay.includes(part));
 });

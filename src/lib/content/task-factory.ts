@@ -1,15 +1,18 @@
 import type { Task } from "../tasks";
 import { getExamDefinition } from "../exams";
 import { getExamNumberXPScoringRule } from "../exam-scores";
+import { originalProvenance, type ContentProvenance } from "./provenance";
 
 type Derived = "subjectId" | "examYear" | "examVersionId" | "part" |
-  "difficulty" | "answerFormat" | "source" | "scoring";
+  "difficulty" | "answerFormat" | "source" | "scoring" | "provenance";
 export type OriginalTaskInput = Omit<Task, Derived> & {
   difficulty?: Task["difficulty"];
+  creationMethod?: ContentProvenance["creation_method"];
 };
 
 /** Deterministic author content uses the same versioned scoring registry as practice. */
 export function makeOriginalTask(data: OriginalTaskInput): Task {
+  const { creationMethod = "original-deterministic-family", ...taskData } = data;
   const exam = getExamDefinition({ examType: data.examType[0], subjectId: "math", level: data.level });
   const number = exam?.numbers.find((entry) => entry.number === data.examNumber);
   if (!exam?.available || !number) throw new Error(`Unsupported original task: ${data.id}`);
@@ -17,7 +20,8 @@ export function makeOriginalTask(data: OriginalTaskInput): Task {
     throw new Error(`Answer format does not match part: ${data.id}`);
   const scoring = getExamNumberXPScoringRule(exam.versionId, number.number);
   return {
-    ...data,
+    ...taskData,
+    provenance: originalProvenance(creationMethod),
     subjectId: "math",
     examYear: exam.year,
     examVersionId: exam.versionId,

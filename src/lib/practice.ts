@@ -2,10 +2,11 @@ import type { Exam } from "./navigation";
 import type { ExamLevel } from "./exams";
 import { getExamDefinition } from "./exams";
 import { getPracticeTasks } from "./tasks";
+import { isSubjectId, type SubjectId } from "./subjects";
 
 export type CatalogSelection = {
   exam: Exam;
-  subjectId: "math";
+  subjectId: SubjectId;
   level?: ExamLevel;
   mode: "number" | "topic";
   examNumber?: number;
@@ -73,14 +74,15 @@ export function normalizeCatalogSelection(
     typeof candidate === "string" && /^[a-z0-9-]{1,100}$/.test(candidate)
       ? candidate
       : undefined;
-  const level = exam === "ЕГЭ" ? input.level === "base" ? "base" : "profile" : undefined;
+  const subjectId = isSubjectId(input.subjectId) && !(exam === "ОГЭ" && input.subjectId === "chinese") ? input.subjectId : "math";
+  const level = exam === "ЕГЭ" && subjectId === "math" ? input.level === "base" ? "base" : "profile" : undefined;
   const examNumber = mode === "number" && typeof input.examNumber === "number" && Number.isInteger(input.examNumber)
     && input.examNumber > 0 && input.examNumber <= 99 ? input.examNumber : undefined;
-  const part = examNumber ? getExamDefinition({ examType: exam, level })?.numbers.find((entry) => entry.number === examNumber)?.part
+  const part = examNumber ? getExamDefinition({ examType: exam, subjectId, level })?.numbers.find((entry) => entry.number === examNumber)?.part
     : input.part === 1 || input.part === 2 ? input.part : undefined;
   return {
     exam,
-    subjectId: "math",
+    subjectId,
     level,
     mode,
     examNumber,

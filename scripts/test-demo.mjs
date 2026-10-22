@@ -306,7 +306,8 @@ test("Практика строго разделена по экзамену, у
         (task) =>
           task.examType[0] === examType &&
           task.level === level &&
-          task.subjectId === subjectId,
+          task.subjectId === subjectId &&
+          task.availability !== "history-only",
       ),
     );
     const selected = all.find((task) => task.examNumber !== null);
@@ -402,12 +403,16 @@ test("Каталоги разделены, а ограничение офици�
     );
     assert.equal(definition.year, 2026);
     assert.equal(definition.verificationStatus, "not-verified-online");
-    assert.ok(definition.verificationNote.includes("недоступна"));
-    assert.ok(
-      definition.sources.every(
-        (source) => new URL(source.url).hostname === "fipi.ru",
-      ),
-    );
+    assert.match(definition.verificationNote, /2027/);
+    assert.match(definition.verificationNote, /не подтвержден/);
+    assert.ok(definition.sources.some((source) => new URL(source.url).hostname === "fipi.ru"));
+    for (const source of definition.sources) {
+      const url = new URL(source.url);
+      assert.equal(url.protocol, "https:");
+      assert.ok(url.hostname === "fipi.ru" ||
+        (definition.level === "base" && url.hostname === "pro-schools.ru" && source.title.includes("Копия спецификации ФИПИ 2026")),
+      "Копия источника указана явно, а не представлена как оригинальный сайт ФИПИ");
+    }
     for (const entry of definition.numbers) {
       const pool = getPracticeTasks({
         examType: definition.examType,
@@ -435,11 +440,11 @@ test("Один экзаменационный номер может содерж
     new Set(ogeNine.map((task) => task.topicId)).has("quadratic-equations"),
   );
   assert.ok(new Set(ogeNine.map((task) => task.prototypeId)).size > 1);
-  assert.deepEqual(
-    getPracticeTasks({ examType: "ЕГЭ", level: "base", examNumber: 13 }),
-    [],
-    "Базовый уровень не подменяется подборкой ОГЭ или профиля",
-  );
+  const baseThirteen = getPracticeTasks({ examType: "ЕГЭ", level: "base", examNumber: 13 });
+  assert.ok(baseThirteen.length >= 5);
+  assert.ok(baseThirteen.every((task) => task.examType[0] === "ЕГЭ" && task.level === "base" &&
+    task.examNumber === 13 && task.topicId === "ege-base-number-13"),
+  "Базовый уровень №13 содержит собственную стереометрию, а не подборку ОГЭ или профиля");
 });
 
 test("Фундаментальные упражнения без номера не выдаются за экзаменационный формат", () => {
@@ -862,7 +867,7 @@ test("Настройки каталога нормализуются без см
     prototypeId: "linear-basic",
   });
   assert.equal(oge.exam, "ОГЭ");
-  assert.equal(oge.subjectId, "math");
+  assert.equal(oge.subjectId, "physics");
   assert.equal(oge.level, undefined);
   assert.equal(oge.examNumber, 9);
   assert.equal(oge.topicId, undefined);
@@ -1111,7 +1116,7 @@ test("Парсер помечает неподдерживаемые экзам�
   for (const query of [
     "exam=ГИА",
     "exam=",
-    "subject=physics",
+    "subject=astronomy",
     "subject=",
     "level=advanced",
     "level=",
@@ -1223,7 +1228,8 @@ test("Прежняя кодированная ссылка базы сохран
     prototypeId: route.prototypeId,
   });
   assert.deepEqual(pool, [], "Старая ссылка не открывает неподтверждённую версию или другой экзамен");
-  assert.equal(getExamDefinition({ examType: route.exam, level: route.level }).available, false);
+  assert.equal(getExamDefinition({ examType: route.exam, level: route.level }).available, true);
+  assert.ok(!pool.some((task) => task.id === "decimal-division"), "Прежняя нумерация базы остаётся только в истории");
 });
 
 test("Ссылка каталога читает режим, выбранную карточку и фильтры, небезопасный ID сессии не используется", () => {
@@ -1257,20 +1263,37 @@ test("Ссылка каталога читает режим, выбранную 
 });
 
 
-test("Опубликованы только ОГЭ и профиль, базовая версия остаётся в истории без практики", () => {
+test("Доступны три учебных банка, прежние 16 задач базы остаются в истории без повторной аттестации", () => {
   assert.deepEqual(
     getAvailableExamDefinitions().map((definition) => definition.id),
-    ["oge-math", "ege-math-profile"],
+    ["oge-math", "ege-math-base", "ege-math-profile"],
   );
   const base = getExamDefinition({ examType: "ЕГЭ", level: "base" });
-  assert.equal(base.available, false);
-  assert.ok(base.availabilityNote.includes("недоступен"));
+  assert.equal(base.available, true);
+  assert.equal(base.numbers.length, 21);
+  assert.ok(base.numbers.every((number) => number.part === 1 && number.maxPrimaryScore === 1));
   const oldTask = taskById("decimal-division");
   const saved = answerEvent("base-historical", oldTask, "60", true, {
     level: "base", examNumber: 13,
   });
   assert.deepEqual(restore([saved]).events, [saved]);
-  assert.deepEqual(getPracticeTasks({ examType: "ЕГЭ", level: "base" }), []);
+  const current = getPracticeTasks({ examType: "ЕГЭ", level: "base" });
+  assert.ok(current.length >= 21 * 20, "В новом банке минимум 20 задач на каждый из 21 номера");
+  assert.deepEqual([...new Set(current.map((task) => task.examNumber))].sort((a, b) => a - b),
+    Array.from({ length: 21 }, (_, index) => index + 1));
+  assert.ok(current.every((task) => task.id.startsWith("base-2026-") && task.level === "base"));
+  for (let number = 1; number <= 21; number++) {
+    const pool = current.filter((task) => task.examNumber === number);
+    assert.ok(pool.length >= 20, `База №${number}`);
+    assert.ok(new Set(pool.map((task) => task.prototypeId)).size >= 2, `Разные подтипы базы №${number}`);
+  }
+  const historical = tasks.filter((task) => task.level === "base" && task.availability === "history-only");
+  assert.equal(historical.length, 16);
+  for (const task of historical) {
+    assert.ok(!current.some((entry) => entry.id === task.id));
+    assert.equal(getTaskXPScoringRule(task), null, task.id);
+    assert.equal(task.scoring.maxPrimaryScore, null, task.id);
+  }
 });
 
 test("Предварительные карты различают части, названия, короткие и развёрнутые ответы", () => {
@@ -1319,13 +1342,13 @@ test("Каждая демозадача содержит версию, част�
     if (number?.part === 2) assert.equal(task.difficulty, "advanced");
     if (!number) assert.equal(task.difficulty, "foundation");
     assert.equal(task.scoring.status, number ?
-      (definition.available ? "project-config" : "pending-official-verification") : "not-applicable");
-    assert.equal(task.scoring.maxPrimaryScore, number?.maxPrimaryScore ?? null);
+      (task.availability === "history-only" ? "pending-official-verification" : "project-config") : "not-applicable");
+    assert.equal(task.scoring.maxPrimaryScore, task.availability === "history-only" ? null : number?.maxPrimaryScore ?? null);
   }
   assert.deepEqual(verifiedXPScoringRules, [], "Непрочитанная спецификация не становится проверенной балльной сеткой");
   for (const task of tasks) {
     const rule = getTaskXPScoringRule(task);
-    if (task.examNumber === null || task.level === "base") assert.equal(rule, null, task.id);
+    if (task.examNumber === null || task.availability === "history-only") assert.equal(rule, null, task.id);
     else {
       assert.ok(rule, task.id);
       assert.equal(rule.status, "project-config");
@@ -1340,7 +1363,7 @@ test("Каждая демозадача содержит версию, част�
 });
 
 test("Сетка 2026 задаётся отдельно для каждого номера и не подставляется неизвестным версиям", () => {
-  assert.equal(configuredXPScoringRules.length, 44);
+  assert.equal(configuredXPScoringRules.length, 65);
   const profileScores = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 2, 2, 3, 4, 4];
   for (let number = 1; number <= 25; number++) {
     const rule = getExamNumberXPScoringRule("oge-math-2026", number);
@@ -1360,9 +1383,19 @@ test("Сетка 2026 задаётся отдельно для каждого н
     assert.equal(rule.subjectId, "math");
     assert.equal(rule.level, "profile");
   }
+  for (let number = 1; number <= 21; number++) {
+    const rule = getExamNumberXPScoringRule("ege-math-base-2026", number);
+    assert.equal(rule.maxPrimaryScore, 1, `База №${number}`);
+    assert.equal(rule.part, 1);
+    assert.equal(rule.answerFormat, "short");
+    assert.equal(rule.level, "base");
+    assert.equal(rule.status, "project-config");
+    assert.equal(rule.verifiedAt, undefined);
+  }
   for (const [version, number] of [
     ["oge-math-2027", 6], ["ege-math-profile-2025", 1],
-    ["ege-math-base-2026", 1], ["ege-physics-2026", 1],
+    ["ege-math-base-2027", 1], ["ege-physics-2026", 1],
+    ["ege-math-base-2026", 22],
     ["oge-math-2026", 0], ["oge-math-2026", 26],
     ["ege-math-profile-2026", 20], ["oge-math-2026", 6.5],
   ]) assert.equal(getExamNumberXPScoringRule(version, number), null);
@@ -1735,7 +1768,10 @@ test("Повреждённая практика не открывает чужо
     version: 1, catalog: unavailable.selection, activeId: unavailable.id,
     sessions: { [unavailable.id]: unavailable },
   }));
-  assert.deepEqual(baseState.sessions[unavailable.id].taskIds, []);
+  const restoredBaseIds = baseState.sessions[unavailable.id].taskIds;
+  assert.equal(restoredBaseIds.includes("decimal-division"), false);
+  assert.deepEqual(restoredBaseIds, getPracticeTasks({ examType: "ЕГЭ", level: "base" }).map((task) => task.id),
+    "Повреждённая подборка восстанавливается только реальным банком выбранной базы");
   const unsafe = parseStoredPractice('{"version":1,"sessions":{"__proto__":{"id":"__proto__","selection":{"exam":"ОГЭ","subjectId":"math","mode":"number"},"taskIds":[]}},"activeId":"__proto__"}');
   assert.deepEqual(Object.keys(unsafe.sessions), []);
   assert.equal(unsafe.activeId, null);

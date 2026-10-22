@@ -35,6 +35,7 @@ import { HelpScreen } from "@/components/screens/help-screen";
 import { StudyToolsScreen } from "@/components/screens/study-tools-screen";
 import { MockExamScreen } from "@/components/screens/mock-exam-screen";
 import { useStudyTools } from "@/hooks/use-study-tools";
+import { useMockExam } from "@/hooks/use-mock-exam";
 import { clearMockStorage } from "@/lib/mock-exam";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
@@ -52,14 +53,15 @@ import {
   loadHelpOrigin,
   clearHelpOrigin,
 } from "@/lib/help-navigation";
-import { tasks, taskTopicLabels } from "@/lib/tasks";
+import { practiceBank as tasks, taskTopicLabels } from "@/lib/tasks";
+import { subjectTitle } from "@/lib/subjects";
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import {
   catalogListKey,
   emptyTaskState,
   type CatalogSelection,
 } from "@/lib/practice";
-import { getExamLevelLabel } from "@/lib/exams";
+import { examDefinitions, getExamDefinition, getExamLevelLabel, type ExamLevel } from "@/lib/exams";
 import { getTheoryTopic } from "@/lib/theory";
 import { viewTitles, type View } from "@/lib/navigation";
 import { getGameSummary, getSelfAssessment } from "@/lib/gamification";
@@ -103,6 +105,14 @@ export function StudyApp() {
     recordSolutionExposed,
     clearLocalData,
   } = useDemoProgress();
+  const mock = useMockExam({
+    onAnswer: recordAnswer,
+    onSelfAssessment: (task, score) => confirmSelfAssessment(task, score, true),
+    onSolutionViewed: (task, attemptId, sessionId) => {
+      if (attemptId) recordSolutionViewed(task, attemptId, true);
+      else recordSolutionExposed(task, sessionId);
+    },
+  }, ready);
   const studyTools = useStudyTools();
   const [demoPremium, setDemoPremium] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
@@ -116,6 +126,7 @@ export function StudyApp() {
   } | null>(null);
   const focusPosition = useRef<ViewportPosition | null>(null);
   const previousView = useRef(route.view);
+  const requestedMockSession = useRef<string | null>(null);
   const practice = usePracticeSession({
     route,
     navigate,
@@ -132,12 +143,14 @@ export function StudyApp() {
   const isPremium = demoAllowed && demoPremium;
   const routeTheory = route.topicId ? getTheoryTopic(route.topicId) : undefined;
   const theoryExam = route.exam ?? (routeTheory?.examType.length === 1 ? routeTheory.examType[0] : state.exam);
+  const theoryLevel = route.level ?? routeTheory?.level ?? practice.catalog.level ?? "profile";
   const canConcentrate = route.view === "tasks"
     || (route.view === "theory" && Boolean(route.topicId));
   const concentrating = state.focusMode && canConcentrate;
   const activeView = route.view === "tasks" ? "catalog" : route.view;
   const { currentTask, session } = practice;
   const changePracticeExam = practice.changeExam;
+  const openMockAttempt = mock.open;
   const currentIndex = currentTask
     ? tasks.findIndex((task) => task.id === currentTask.id)
     : 0;
@@ -157,6 +170,16 @@ export function StudyApp() {
   useEffect(() => {
     if (ready && practice.initialized && route.view === "theory" && state.exam !== theoryExam) changePracticeExam(theoryExam);
   }, [ready, practice.initialized, route.view, state.exam, theoryExam, changePracticeExam]);
+
+  useEffect(() => {
+    if (route.view !== "mock" || !route.sessionId) {
+      requestedMockSession.current = null;
+      return;
+    }
+    if (!mock.ready || route.invalidContext || requestedMockSession.current === route.sessionId) return;
+    requestedMockSession.current = route.sessionId;
+    openMockAttempt(route.sessionId);
+  }, [mock.ready, openMockAttempt, route.invalidContext, route.sessionId, route.view]);
 
   useEffect(() => {
     if (!ready) return;
@@ -235,9 +258,13 @@ export function StudyApp() {
   }
   function startPractice(topicId?: string, prototypeId?: string) {
     if (route.view === "catalog") catalogScroll.capture();
+    const topic = topicId ? getTheoryTopic(topicId) : undefined;
+    const exam = topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam;
     practice.start({
       ...practice.catalog,
-      exam: state.exam,
+      exam,
+      subjectId: topic || route.view === "theory" ? "math" : practice.catalog.subjectId,
+      level: exam === "ЕГЭ" ? topic?.level ?? (route.view === "theory" ? theoryLevel : practice.catalog.level ?? "profile") : undefined,
       mode: "topic",
       examNumber: undefined,
       topicId,
@@ -253,6 +280,27 @@ export function StudyApp() {
     catalogScroll.capture();
     practice.start(selection);
   }
+  function startVariant(variantNumber: number, replace: boolean) {
+    const selection = practice.catalog;
+    const definition = getExamDefinition({ examType: selection.exam, subjectId: selection.subjectId, level: selection.level });
+    if (!definition) return;
+    catalogScroll.capture();
+    mock.start(definition, variantNumber, { replace });
+    navigate("mock", { exam: selection.exam, subjectId: selection.subjectId, level: selection.level });
+  }
+  function resumeVariant(sessionId: string) {
+    const attempt = mock.state.sessions.find((entry) => entry.id === sessionId);
+    const definition = attempt && examDefinitions.find((entry) => entry.versionId === attempt.examVersionId);
+    if (!definition) return;
+    catalogScroll.capture();
+    practice.changeCatalog({ ...practice.catalog, exam: definition.examType, level: definition.level ?? undefined, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined });
+    mock.open(sessionId);
+    navigate("mock", { exam: definition.examType, subjectId: definition.subjectId, level: definition.level ?? undefined, sessionId });
+  }
+  function changeMockSelection(exam: CatalogSelection["exam"], level?: ExamLevel) {
+    practice.changeCatalog({ ...practice.catalog, exam, level: exam === "ЕГЭ" ? level ?? "profile" : undefined, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined });
+    navigate("mock", { exam, subjectId: "math", level: exam === "ЕГЭ" ? level ?? "profile" : undefined });
+  }
   function shufflePractice() {
     catalogScroll.capture();
     practice.start({ ...practice.catalog, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined },
@@ -260,7 +308,7 @@ export function StudyApp() {
   }
   function openTaskById(taskId: string) {
     const task = tasks.find((item) => item.id === taskId);
-    if (!task || task.level === "base") return;
+    if (!task || task.availability === "history-only" || !getExamDefinition({ examType: task.examType[0], subjectId: task.subjectId, level: task.level })?.available) return;
     practice.start({
       exam: task.examType[0], subjectId: task.subjectId, level: task.level ?? undefined,
       mode: task.examNumber === null ? "topic" : "number",
@@ -274,9 +322,16 @@ export function StudyApp() {
     if (route.view === "catalog") catalogScroll.capture();
     const topic = topicId ? getTheoryTopic(topicId) : undefined;
     if (topic && !topic.examType.includes(state.exam)) practice.changeExam(topic.examType[0]);
-    navigate("theory", { topicId: topic?.id ?? topicId,
-      exam: topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam });
+    const exam = topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam;
+    navigate("theory", { topicId: topic?.id ?? topicId, exam,
+      level: exam === "ЕГЭ" ? topic?.level ?? practice.catalog.level ?? "profile" : undefined });
   };
+  function openMockTheory(topicId: string) {
+    const definition = examDefinitions.find((entry) => entry.versionId === mock.active?.examVersionId);
+    if (!definition) { openTheory(topicId); return; }
+    practice.changeCatalog({ ...practice.catalog, exam: definition.examType, level: definition.level ?? undefined, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined });
+    navigate("theory", { topicId, exam: definition.examType, level: definition.level ?? undefined });
+  }
   function openHelp() {
     if (route.view === "help") {
       menuDialog.current?.close();
@@ -370,7 +425,7 @@ export function StudyApp() {
           </button>
           <span className="desktop-breadcrumb">{viewTitles[route.view]}</span>
           <div className="topbar-right">
-            <span className="course-label">{state.exam} · Математика</span>
+            <span className="course-label">{state.exam} · {subjectTitle(practice.catalog.subjectId)}</span>
             <button
               className="avatar"
               onClick={() => open("profile")}
@@ -448,7 +503,7 @@ export function StudyApp() {
               onHelp={openHelp}
               resumeLabel={practice.resumeTarget ? [
                 practice.resumeTarget.selection.exam,
-                "Математика",
+                subjectTitle(practice.resumeTarget.task.subjectId),
                 practice.resumeTarget.task.examNumber ? `№${practice.resumeTarget.task.examNumber}` : "Базовая практика",
                 practice.resumeTarget.task.title,
               ].join(" · ") : undefined}
@@ -467,12 +522,17 @@ export function StudyApp() {
               onStart={startFromCatalog}
               onTheory={openTheory}
               onShuffle={shufflePractice}
+              mockState={mock.state}
+              mockReady={mock.ready}
+              onVariant={startVariant}
+              onResumeVariant={resumeVariant}
               game={game}
             />
           </div>
           {route.view === "theory" && (
             <TheoryScreen
               exam={theoryExam}
+              level={theoryLevel}
               focusMode={concentrating}
               topicId={route.topicId}
               materialId={route.materialId}
@@ -480,17 +540,21 @@ export function StudyApp() {
               onBookmark={route.topicId && studyTools.ready ? () => studyTools.toggleBookmark({
                 kind: "theory", itemId: getTheoryTopic(route.topicId!)?.id ?? route.topicId!, examType: theoryExam,
               }) : undefined}
-              onExamChange={(exam) => { practice.changeExam(exam); navigate("theory", { exam }); }}
-              onOpenTopic={(topicId) => navigate("theory", { topicId, exam: theoryExam })}
+              onExamChange={(exam) => { practice.changeExam(exam); navigate("theory", { exam, level: exam === "ЕГЭ" ? theoryLevel : undefined }); }}
+              onLevelChange={(level) => {
+                practice.changeCatalog({ ...practice.catalog, exam: "ЕГЭ", level, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined });
+                navigate("theory", { exam: "ЕГЭ", level });
+              }}
+              onOpenTopic={(topicId) => navigate("theory", { topicId, exam: theoryExam, level: theoryExam === "ЕГЭ" ? getTheoryTopic(topicId)?.level ?? theoryLevel : undefined })}
               onOpenMaterial={(topicId, materialId) =>
-                navigate("theory", { topicId, materialId, exam: theoryExam })
+                navigate("theory", { topicId, materialId, exam: theoryExam, level: theoryExam === "ЕГЭ" ? getTheoryTopic(topicId)?.level ?? theoryLevel : undefined })
               }
               onPractice={startPractice}
               onBack={() => {
                 if (route.topicId) {
                   navigate(
                     "theory",
-                    route.materialId ? { topicId: route.topicId, exam: theoryExam } : { exam: theoryExam },
+                    route.materialId ? { topicId: route.topicId, exam: theoryExam, level: theoryExam === "ЕГЭ" ? theoryLevel : undefined } : { exam: theoryExam, level: theoryExam === "ЕГЭ" ? theoryLevel : undefined },
                   );
                 } else back();
               }}
@@ -511,7 +575,7 @@ export function StudyApp() {
                 }) : undefined}
                 exam={session.selection.exam}
                 levelLabel={
-                  session.selection.exam === "ЕГЭ"
+                  session.selection.exam === "ЕГЭ" && currentTask.subjectId === "math"
                     ? getExamLevelLabel(session.selection.level)
                     : undefined
                 }
@@ -520,17 +584,17 @@ export function StudyApp() {
                   getTheoryTopic(currentTask.topicId)
                     ?.title ??
                   taskTopicLabels[currentTask.topicId] ??
-                  "Математика"
+                  currentTask.title
                 }
                 value={session.states[currentTask.id] ?? emptyTaskState()}
                 onChange={practice.changeTask}
-                onAnswer={recordAnswer}
+                onAnswer={(task, input, correct, viewed) => task.subjectId === "math" ? recordAnswer(task, input, correct, viewed) : { id: crypto.randomUUID(), xpAwarded: 0 }}
                 maxPrimaryScore={
                   getTaskXPScoringRule(currentTask)?.maxPrimaryScore ?? null
                 }
                 selfAssessment={getSelfAssessment(state.game, currentTask.id)}
                 onSelfAssessment={confirmSelfAssessment}
-                onSolutionViewed={recordSolutionViewed}
+                onSolutionViewed={(task, attemptId) => { if (task.subjectId === "math") recordSolutionViewed(task, attemptId); }}
                 focusMode={concentrating}
                 onNext={() => practice.move(1)}
                 canNext={
@@ -550,7 +614,7 @@ export function StudyApp() {
                 </h1>
                 {!session.invalidContext && (
                   <p>
-                    {session.selection.exam} · Математика
+                    {session.selection.exam} · {subjectTitle(session.selection.subjectId)}
                     {session.selection.level
                       ? ` · ${getExamLevelLabel(session.selection.level)}`
                       : ""}
@@ -608,6 +672,7 @@ export function StudyApp() {
                 const scrollCleared = catalogScroll.reset();
                 const bookmarksCleared = studyTools.clearBookmarks();
                 const mocksCleared = clearMockStorage();
+                if (mocksCleared) mock.reset();
                 const success =
                   clearLocalData() && practiceCleared && scrollCleared && bookmarksCleared && mocksCleared;
                 if (success) {
@@ -625,14 +690,12 @@ export function StudyApp() {
             <StudyToolsScreen key={view} mode={view} events={state.events} tools={studyTools}
               isPremium={isPremium} onTask={openTaskById} onTheory={openTheory} onPremium={openPremium} />
           ))}
-          {route.view === "mock" && (
-            <MockExamScreen exam={state.exam} onExamChange={practice.changeExam} onBack={back} onOpenTheory={openTheory}
-              onAnswer={recordAnswer} onSelfAssessment={(task, score) => confirmSelfAssessment(task, score, true)}
-              onSolutionViewed={(task, attemptId, sessionId) => {
-                if (attemptId) recordSolutionViewed(task, attemptId, true);
-                else recordSolutionExposed(task, sessionId);
-              }} />
-          )}
+          {route.view === "mock" && (route.invalidContext || (route.subjectId !== undefined && route.subjectId !== "math") ? (
+            <section className="empty-state" role="status"><h1>Вариант недоступен</h1><p>В ссылке указан неподдерживаемый предмет, экзамен или уровень. Выбери доступный вариант в «Заданиях».</p><button type="button" className="button button-primary" onClick={() => practice.openCatalog()}>К заданиям</button></section>
+          ) : (
+            <MockExamScreen mock={mock} exam={route.exam ?? state.exam} level={route.level ?? practice.catalog.level}
+              onSelectionChange={changeMockSelection} onBack={back} onOpenTheory={openMockTheory} />
+          ))}
           {reminder.visible && (
             <aside
               className="break-reminder"

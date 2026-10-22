@@ -8,7 +8,10 @@
 .mock-number-list button { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: 48px; min-height: 48px; padding: 8px; border: 1px solid var(--line); border-radius: 10px; font-weight: 600; background: var(--cream); color: var(--ink); }
 .mock-number-list button small { font-size: 14px; font-weight: 500; line-height: 1.4; }
 .mock-number-list button.has-answer { background: var(--light-green); }
+.mock-number-list button.is-skipped { border-style: dashed; }
 .mock-number-list button.selected { border: 2px solid var(--sage); background: var(--light-green); color: var(--sage-dark); }
+.mock-level-switch { display: flex; width: min(100%, 360px); margin-top: 16px; }
+.mock-level-switch > button { flex: 1; min-width: 0; min-height: 44px; padding: 10px 16px; }
 .mock-clock { display: flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums; font-weight: 600; }
 .mock-task { max-width: 706px; margin-inline: auto; }
 .mock-task .task-prompt { white-space: pre-line; }

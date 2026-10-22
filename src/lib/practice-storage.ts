@@ -7,7 +7,8 @@ import {
   type PracticeSession,
   type PracticeTaskState,
 } from "./practice";
-import { checkTaskAnswer, tasks } from "./tasks";
+import { checkTaskAnswer, practiceBank as tasks } from "./tasks";
+import { isSubjectId } from "./subjects";
 import { getTaskXPScoringRule } from "./exam-scores";
 
 export const practiceStorageKey = "tochka-practice-v1";
@@ -84,9 +85,10 @@ function selection(value: unknown): CatalogSelection | null {
   if (
     !input ||
     (input.exam !== "ОГЭ" && input.exam !== "ЕГЭ") ||
-    input.subjectId !== "math" ||
+    !isSubjectId(input.subjectId) ||
     (input.mode !== "number" && input.mode !== "topic") ||
-    (input.exam === "ЕГЭ" && input.level !== "profile" && input.level !== "base") ||
+    (input.exam === "ЕГЭ" && input.subjectId === "math" && input.level !== "profile" && input.level !== "base") ||
+    (input.subjectId !== "math" && input.level !== undefined) ||
     (input.exam === "ОГЭ" && input.level !== undefined)
   )
     return null;

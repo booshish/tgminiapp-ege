@@ -1,0 +1,4376 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T04:18:21.288Z",
+  "target_year": 2027,
+  "status": "partial_draft_spec_review_complete_archive_and_codifier_review_blocked",
+  "source_inventory": "docs/materials-inventory.json",
+  "reviewed_pdf_count": 0,
+  "supplemental_source_reviews": [
+    {
+      "name": "oge-2027-matematika-specifikaciya.pdf",
+      "year": 2027,
+      "role": "specification",
+      "physical_page_count": 11,
+      "url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+      "official_index_url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "document_status": "draft",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "source_references": [
+        {
+          "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+          "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+          "physical_page": 1,
+          "printed_page": 1,
+          "section": "title",
+          "document_status": "draft",
+          "access_method": "web_pdf_text",
+          "attached_archive_integrity": "not_available_not_compared"
+        }
+      ],
+      "scope_exclusions": [
+        "complete_codifier_subtopics",
+        "task_specific_demo_scoring_criteria",
+        "archive_integrity"
+      ],
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    },
+    {
+      "name": "ege-2027-matematika-baza-specifikaciya.pdf",
+      "year": 2027,
+      "role": "specification",
+      "physical_page_count": 6,
+      "url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+      "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "document_status": "draft",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "source_references": [
+        {
+          "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+          "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+          "physical_page": 1,
+          "printed_page": 1,
+          "section": "title",
+          "document_status": "draft",
+          "access_method": "web_pdf_text",
+          "attached_archive_integrity": "not_available_not_compared"
+        }
+      ],
+      "scope_exclusions": [
+        "complete_codifier_subtopics",
+        "task_specific_demo_scoring_criteria",
+        "archive_integrity"
+      ],
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    },
+    {
+      "name": "ege-2027-matematika-profil-specifikaciya.pdf",
+      "year": 2027,
+      "role": "specification",
+      "physical_page_count": 14,
+      "url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+      "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "document_status": "draft",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "source_references": [
+        {
+          "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+          "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+          "physical_page": 1,
+          "printed_page": 1,
+          "section": "title",
+          "document_status": "draft",
+          "access_method": "web_pdf_text",
+          "attached_archive_integrity": "not_available_not_compared"
+        }
+      ],
+      "scope_exclusions": [
+        "complete_codifier_subtopics",
+        "task_specific_demo_scoring_criteria",
+        "archive_integrity"
+      ],
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    },
+    {
+      "name": "ma-11-ege-2026-spec-bazovyy.pdf",
+      "year": 2026,
+      "role": "specification",
+      "physical_page_count": 6,
+      "url": "https://pro-schools.ru/fipi/ege/spec/2026/ma-11-ege-2026-spec-bazovyy.pdf",
+      "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "document_status": "no_draft_mark_detected_final_status_not_independently_authenticated",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    }
+  ],
+  "official_change_comparison_2025_2026_2027": {
+    "status": "partial_independent_copies_only",
+    "full_archive_comparison_complete": false
+  },
+  "exams": [
+    {
+      "id": "oge-math",
+      "exam": "ОГЭ",
+      "subject": "math",
+      "level": null,
+      "target_year": 2027,
+      "official_target_requirements": {
+        "verification_status": "draft_specification_read_from_independent_copy",
+        "document_status": "draft_not_final_approved",
+        "official_index_url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+        "number_count": 25,
+        "parts": [
+          {
+            "part": 1,
+            "numbers": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "answer_format": "short"
+          },
+          {
+            "part": 2,
+            "numbers": [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            "answer_format": "extended"
+          }
+        ],
+        "duration_minutes": 235,
+        "maximum_primary_score": 31,
+        "permitted_materials": [
+          "ruler",
+          "reference_materials_provided_with_exam"
+        ],
+        "scoring_criteria": {
+          "short": "exact_answer_in_prescribed_format",
+          "extended": "expert_assessed_task_specific_criteria_pending_demo_review"
+        },
+        "rules": {
+          "automatic_extended_answer_grading": false,
+          "official_test_score_conversion": null,
+          "exact_exam_date": null
+        },
+        "numbers": [
+          {
+            "number": 1,
+            "part": 1,
+            "content_summary": "Практические задачи",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              "1–8"
+            ],
+            "requirement_codes": [
+              "8–10"
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 7,
+                "printed_page": 13,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "part": 1,
+            "content_summary": "Практические задачи",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              "1–8"
+            ],
+            "requirement_codes": [
+              "8–10"
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 7,
+                "printed_page": 13,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "part": 1,
+            "content_summary": "Практические задачи",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              "1–8"
+            ],
+            "requirement_codes": [
+              "8–10"
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 7,
+                "printed_page": 13,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "part": 1,
+            "content_summary": "Практические задачи",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              "1–8"
+            ],
+            "requirement_codes": [
+              "8–10"
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "part": 1,
+            "content_summary": "Чтение данных",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              8
+            ],
+            "requirement_codes": [
+              14
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "part": 1,
+            "content_summary": "Вычисления",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              3
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "part": 1,
+            "content_summary": "Числа и координаты",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              6
+            ],
+            "requirement_codes": [
+              3
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "part": 1,
+            "content_summary": "Преобразования",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              2
+            ],
+            "requirement_codes": [
+              4
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "part": 1,
+            "content_summary": "Уравнения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              3
+            ],
+            "requirement_codes": [
+              5
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "part": 1,
+            "content_summary": "Вероятность",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              8
+            ],
+            "requirement_codes": [
+              15
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "part": 1,
+            "content_summary": "Функции",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              5
+            ],
+            "requirement_codes": [
+              6
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "part": 1,
+            "content_summary": "Формулы",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              4
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "part": 1,
+            "content_summary": "Неравенства",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              3,
+              6
+            ],
+            "requirement_codes": [
+              5
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "part": 1,
+            "content_summary": "Последовательности",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              4
+            ],
+            "requirement_codes": [
+              7
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 15,
+            "part": 1,
+            "content_summary": "Геометрические вычисления",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 16,
+            "part": 1,
+            "content_summary": "Геометрические вычисления",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 17,
+            "part": 1,
+            "content_summary": "Геометрические вычисления",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "part": 1,
+            "content_summary": "Геометрические вычисления",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "part": 1,
+            "content_summary": "Утверждения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              2
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 20,
+            "part": 2,
+            "content_summary": "Уравнения и неравенства",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2,
+              3
+            ],
+            "requirement_codes": [
+              5
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 21,
+            "part": 2,
+            "content_summary": "Текстовая задача",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              3
+            ],
+            "requirement_codes": [
+              8
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 22,
+            "part": 2,
+            "content_summary": "Графики",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              5
+            ],
+            "requirement_codes": [
+              6
+            ],
+            "difficulty": "В",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 23,
+            "part": 2,
+            "content_summary": "Геометрические вычисления",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              11
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 11,
+                "printed_page": 17,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 24,
+            "part": 2,
+            "content_summary": "Доказательство",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              2,
+              11
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 11,
+                "printed_page": 17,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 25,
+            "part": 2,
+            "content_summary": "Геометрическое исследование",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              11
+            ],
+            "difficulty": "В",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": null,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+                "physical_page": 11,
+                "printed_page": 17,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          }
+        ],
+        "parameter_sources": {
+          "number_count": [
+            {
+              "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+              "physical_page": 3,
+              "printed_page": 6,
+              "section": "structure",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "parts": [
+            {
+              "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+              "physical_page": 3,
+              "printed_page": 6,
+              "section": "structure",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "duration_minutes": [
+            {
+              "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 10,
+              "section": "duration",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "maximum_primary_score": [
+            {
+              "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+              "physical_page": 6,
+              "printed_page": 11,
+              "section": "scoring",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "permitted_materials": [
+            {
+              "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+              "physical_page": 6,
+              "printed_page": 11,
+              "section": "equipment",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "scoring_criteria": [
+            {
+              "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+              "physical_page": 6,
+              "printed_page": 11,
+              "section": "scoring",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ]
+        },
+        "source_references": [
+          {
+            "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+            "physical_page": 1,
+            "printed_page": 1,
+            "section": "draft_title",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+            "physical_page": 3,
+            "printed_page": 6,
+            "section": "structure",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+            "physical_page": 6,
+            "printed_page": 11,
+            "section": "scoring",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+            "physical_page": 5,
+            "printed_page": 10,
+            "section": "duration",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+            "physical_page": 6,
+            "printed_page": 11,
+            "section": "equipment",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          }
+        ],
+        "codifier_subtopic_coverage": "not_reviewed",
+        "task_specific_demo_criteria_reviewed": false
+      },
+      "current_project_configuration": {
+        "year": 2026,
+        "version_id": "oge-math-2026",
+        "available": true,
+        "title": "ОГЭ · Математика",
+        "number_count": 25,
+        "maximum_primary_score": 31,
+        "verification_status": "project_configuration_not_source_verified",
+        "source_file": "src/lib/exams.ts",
+        "scoring_source_file": "src/lib/exam-scores.ts",
+        "numbers": [
+          {
+            "number": 1,
+            "part": 1,
+            "title": "Практические задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 2,
+            "part": 1,
+            "title": "Практические задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 3,
+            "part": 1,
+            "title": "Практические задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 4,
+            "part": 1,
+            "title": "Практические задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 5,
+            "part": 1,
+            "title": "Практические задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 6,
+            "part": 1,
+            "title": "Числа и вычисления",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 7,
+            "part": 1,
+            "title": "Числовые неравенства и координатная прямая",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 8,
+            "part": 1,
+            "title": "Алгебраические выражения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 9,
+            "part": 1,
+            "title": "Уравнения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 10,
+            "part": 1,
+            "title": "Теория вероятностей",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 11,
+            "part": 1,
+            "title": "Графики функций",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 12,
+            "part": 1,
+            "title": "Вычисления по формулам",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 13,
+            "part": 1,
+            "title": "Неравенства и их системы",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 14,
+            "part": 1,
+            "title": "Прогрессии",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 15,
+            "part": 1,
+            "title": "Треугольники",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 16,
+            "part": 1,
+            "title": "Окружности",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 17,
+            "part": 1,
+            "title": "Четырёхугольники",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 18,
+            "part": 1,
+            "title": "Фигуры на клетчатой бумаге",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 19,
+            "part": 1,
+            "title": "Геометрические утверждения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 20,
+            "part": 2,
+            "title": "Уравнения и неравенства",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 21,
+            "part": 2,
+            "title": "Текстовые задачи",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 22,
+            "part": 2,
+            "title": "Графики функций",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 23,
+            "part": 2,
+            "title": "Геометрические задачи на вычисление",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 24,
+            "part": 2,
+            "title": "Геометрические задачи на доказательство",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 25,
+            "part": 2,
+            "title": "Геометрические задачи повышенной сложности",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          }
+        ]
+      },
+      "number_mapping_review": [
+        {
+          "current_project_number": 1,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 2,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 3,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 4,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 5,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 6,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 7,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 8,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 9,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 10,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 11,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 12,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 13,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 14,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 15,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 16,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 17,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 18,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 19,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 20,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 21,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 22,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 23,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 24,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 25,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        }
+      ],
+      "reviewed_changes": [
+        {
+          "from_year": 2026,
+          "to_year": 2027,
+          "status": "no_structure_content_changes_reported_by_2027_draft",
+          "independently_compared_previous_document": false,
+          "sources": [
+            {
+              "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+              "physical_page": 6,
+              "printed_page": 12,
+              "section": "changes",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ]
+        }
+      ],
+      "historical_comparison": [
+        {
+          "year": 2025,
+          "status": "source_missing_not_reviewed",
+          "differences": null,
+          "source_references": []
+        },
+        {
+          "year": 2026,
+          "status": "source_missing_not_reviewed",
+          "differences": null,
+          "source_references": []
+        }
+      ]
+    },
+    {
+      "id": "ege-math-base",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "level": "base",
+      "target_year": 2027,
+      "official_target_requirements": {
+        "verification_status": "draft_specification_read_from_independent_copy",
+        "document_status": "draft_not_final_approved",
+        "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+        "number_count": 21,
+        "parts": [
+          {
+            "part": 1,
+            "numbers": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21
+            ],
+            "answer_format": "short"
+          }
+        ],
+        "duration_minutes": 180,
+        "maximum_primary_score": 21,
+        "permitted_materials": [
+          "ruler",
+          "reference_materials_provided_with_exam"
+        ],
+        "scoring_criteria": {
+          "short": "exact_answer_in_prescribed_format",
+          "extended": "not_applicable"
+        },
+        "rules": {
+          "automatic_extended_answer_grading": false,
+          "official_test_score_conversion": null,
+          "exact_exam_date": null
+        },
+        "numbers": [
+          {
+            "number": 1,
+            "part": 1,
+            "content_summary": "Вычисления",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              2
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 7,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "part": 1,
+            "content_summary": "Прикладные расчёты",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              6,
+              9
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 5,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "part": 1,
+            "content_summary": "Чтение данных",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              3,
+              6
+            ],
+            "requirement_codes": [
+              7
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 5,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "part": 1,
+            "content_summary": "Формулы и расчёты",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              2
+            ],
+            "requirement_codes": [
+              2,
+              6
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 4,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "part": 1,
+            "content_summary": "Вероятность",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              6
+            ],
+            "requirement_codes": [
+              8
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 10,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "part": 1,
+            "content_summary": "Табличные данные",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              2,
+              7
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 11,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "part": 1,
+            "content_summary": "Графики и производная",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              3,
+              4
+            ],
+            "requirement_codes": [
+              4,
+              5
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 7,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "part": 1,
+            "content_summary": "Логические рассуждения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              5
+            ],
+            "requirement_codes": [
+              1
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 8,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "part": 1,
+            "content_summary": "Практическая геометрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              9
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 6,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 5,
+                "printed_page": 10,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "part": 1,
+            "content_summary": "Планиметрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              9
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 10,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "part": 1,
+            "content_summary": "Стереометрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              10,
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 11,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "part": 1,
+            "content_summary": "Планиметрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              9
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 8,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "part": 1,
+            "content_summary": "Стереометрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              10,
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 8,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "part": 1,
+            "content_summary": "Числовые выражения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              2
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 5,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 15,
+            "part": 1,
+            "content_summary": "Числовые задачи",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              2,
+              6
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 8,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 16,
+            "part": 1,
+            "content_summary": "Преобразования",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              2
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 7,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 17,
+            "part": 1,
+            "content_summary": "Уравнения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              3
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 7,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "part": 1,
+            "content_summary": "Неравенства",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              2
+            ],
+            "requirement_codes": [
+              2,
+              3
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 8,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "part": 1,
+            "content_summary": "Числа и выбор метода",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              2
+            ],
+            "requirement_codes": [
+              2,
+              6,
+              13
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 15,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 11,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 20,
+            "part": 1,
+            "content_summary": "Текстовая задача",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              3,
+              6
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 15,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 12,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 21,
+            "part": 1,
+            "content_summary": "Числа и рассуждения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              2
+            ],
+            "requirement_codes": [
+              2,
+              6,
+              13
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 15,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+                "physical_page": 6,
+                "printed_page": 12,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          }
+        ],
+        "parameter_sources": {
+          "number_count": [
+            {
+              "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+              "physical_page": 3,
+              "printed_page": 6,
+              "section": "structure",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "parts": [
+            {
+              "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+              "physical_page": 3,
+              "printed_page": 6,
+              "section": "structure",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "duration_minutes": [
+            {
+              "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+              "physical_page": 4,
+              "printed_page": 8,
+              "section": "duration",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "maximum_primary_score": [
+            {
+              "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 9,
+              "section": "scoring",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "permitted_materials": [
+            {
+              "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+              "physical_page": 4,
+              "printed_page": 8,
+              "section": "equipment",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "scoring_criteria": [
+            {
+              "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 9,
+              "section": "scoring",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ]
+        },
+        "source_references": [
+          {
+            "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+            "physical_page": 1,
+            "printed_page": 1,
+            "section": "draft_title",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+            "physical_page": 3,
+            "printed_page": 6,
+            "section": "structure",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+            "physical_page": 5,
+            "printed_page": 9,
+            "section": "scoring",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+            "physical_page": 4,
+            "printed_page": 8,
+            "section": "duration",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+            "physical_page": 4,
+            "printed_page": 8,
+            "section": "equipment",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          }
+        ],
+        "codifier_subtopic_coverage": "not_reviewed",
+        "task_specific_demo_criteria_reviewed": false
+      },
+      "current_project_configuration": {
+        "year": 2026,
+        "version_id": "ege-math-base-2026",
+        "available": true,
+        "title": "ЕГЭ · Математика · Базовый уровень",
+        "number_count": 21,
+        "maximum_primary_score": 21,
+        "verification_status": "project_configuration_not_source_verified",
+        "source_file": "src/lib/exams.ts",
+        "scoring_source_file": "src/lib/exam-scores.ts",
+        "numbers": [
+          {
+            "number": 1,
+            "part": 1,
+            "title": "Вычисления и единицы измерения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 2,
+            "part": 1,
+            "title": "Прикладные текстовые задачи и формулы",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 3,
+            "part": 1,
+            "title": "Таблицы и диаграммы",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 4,
+            "part": 1,
+            "title": "Вычисления в практических задачах",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 5,
+            "part": 1,
+            "title": "Вероятность",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 6,
+            "part": 1,
+            "title": "Таблицы, графики и выбор условий",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 7,
+            "part": 1,
+            "title": "Функции, графики и производная",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 8,
+            "part": 1,
+            "title": "Логика и рассуждения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 9,
+            "part": 1,
+            "title": "Прикладная планиметрия",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 10,
+            "part": 1,
+            "title": "Планиметрия",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 11,
+            "part": 1,
+            "title": "Стереометрия: объёмы и площади",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 12,
+            "part": 1,
+            "title": "Планиметрия: отношения и теоремы",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 13,
+            "part": 1,
+            "title": "Стереометрия: геометрические величины",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 14,
+            "part": 1,
+            "title": "Числа и вычисления",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 15,
+            "part": 1,
+            "title": "Проценты",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 16,
+            "part": 1,
+            "title": "Преобразования выражений",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 17,
+            "part": 1,
+            "title": "Уравнения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 18,
+            "part": 1,
+            "title": "Неравенства",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 19,
+            "part": 1,
+            "title": "Целые числа и выбор метода",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 20,
+            "part": 1,
+            "title": "Текстовые задачи и уравнения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 21,
+            "part": 1,
+            "title": "Логические текстовые задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          }
+        ]
+      },
+      "number_mapping_review": [
+        {
+          "current_project_number": 1,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 2,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 3,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 4,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 5,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 6,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 7,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 8,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 9,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 10,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 11,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 12,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 13,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 14,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 15,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 16,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 17,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 18,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 19,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 20,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 21,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        }
+      ],
+      "reviewed_changes": [
+        {
+          "from_year": 2026,
+          "to_year": 2027,
+          "status": "no_structure_content_changes_reported_by_2027_draft",
+          "independently_compared_previous_document": true,
+          "sources": [
+            {
+              "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 9,
+              "section": "changes",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            },
+            {
+              "source_pdf": "ma-11-ege-2026-spec-bazovyy.pdf",
+              "source_url": "https://pro-schools.ru/fipi/ege/spec/2026/ma-11-ege-2026-spec-bazovyy.pdf",
+              "physical_page": 6,
+              "printed_page": 12,
+              "section": "general_plan_total"
+            }
+          ]
+        },
+        {
+          "from_year": 2025,
+          "to_year": 2026,
+          "status": "no_structure_content_changes_reported_by_2026_spec_copy",
+          "independently_compared_previous_document": false,
+          "sources": [
+            {
+              "source_pdf": "ma-11-ege-2026-spec-bazovyy.pdf",
+              "source_url": "https://pro-schools.ru/fipi/ege/spec/2026/ma-11-ege-2026-spec-bazovyy.pdf",
+              "physical_page": 5,
+              "printed_page": 9,
+              "section": "changes"
+            }
+          ]
+        }
+      ],
+      "historical_comparison": [
+        {
+          "year": 2025,
+          "status": "source_missing_not_reviewed",
+          "differences": null,
+          "source_references": []
+        },
+        {
+          "year": 2026,
+          "status": "source_missing_not_reviewed",
+          "differences": null,
+          "source_references": []
+        }
+      ]
+    },
+    {
+      "id": "ege-math-profile",
+      "exam": "ЕГЭ",
+      "subject": "math",
+      "level": "profile",
+      "target_year": 2027,
+      "official_target_requirements": {
+        "verification_status": "draft_specification_read_from_independent_copy",
+        "document_status": "draft_not_final_approved",
+        "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+        "number_count": 20,
+        "parts": [
+          {
+            "part": 1,
+            "numbers": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "answer_format": "short"
+          },
+          {
+            "part": 2,
+            "numbers": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "answer_format": "extended"
+          }
+        ],
+        "duration_minutes": 235,
+        "maximum_primary_score": 33,
+        "permitted_materials": [
+          "ruler",
+          "reference_materials_provided_with_exam"
+        ],
+        "scoring_criteria": {
+          "short": "exact_answer_in_prescribed_format",
+          "extended": "expert_assessed_task_specific_criteria_pending_demo_review"
+        },
+        "rules": {
+          "automatic_extended_answer_grading": false,
+          "official_test_score_conversion": null,
+          "exact_exam_date": null
+        },
+        "numbers": [
+          {
+            "number": 1,
+            "part": 1,
+            "content_summary": "Планиметрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              9,
+              10,
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 3,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 7,
+                "printed_page": 12,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "part": 1,
+            "content_summary": "Векторы",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              12
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 3,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 7,
+                "printed_page": 12,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "part": 1,
+            "content_summary": "Стереометрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              9,
+              10,
+              11
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 3,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 7,
+                "printed_page": 12,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "part": 1,
+            "content_summary": "Вероятность",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              6
+            ],
+            "requirement_codes": [
+              8
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 2,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 13,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "part": 1,
+            "content_summary": "Вероятностные модели",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              6
+            ],
+            "requirement_codes": [
+              8
+            ],
+            "difficulty": "П",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 7,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 13,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "part": 1,
+            "content_summary": "Случайные величины",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              6
+            ],
+            "requirement_codes": [
+              8
+            ],
+            "difficulty": "П",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 8,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 8,
+                "printed_page": 13,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "part": 1,
+            "content_summary": "Уравнения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              3
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 2,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "part": 1,
+            "content_summary": "Преобразования",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1
+            ],
+            "requirement_codes": [
+              2
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 3,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "part": 1,
+            "content_summary": "Математический анализ",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              3,
+              4
+            ],
+            "requirement_codes": [
+              4
+            ],
+            "difficulty": "Б",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 5,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 9,
+                "printed_page": 14,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "part": 1,
+            "content_summary": "Прикладные модели",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              6
+            ],
+            "difficulty": "П",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 5,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "part": 1,
+            "content_summary": "Текстовые задачи",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              6
+            ],
+            "difficulty": "П",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 6,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "part": 1,
+            "content_summary": "Функции",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              3
+            ],
+            "requirement_codes": [
+              5
+            ],
+            "difficulty": "П",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 8,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 13,
+            "part": 1,
+            "content_summary": "Финансовые расчёты",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              "1–3"
+            ],
+            "requirement_codes": [
+              6
+            ],
+            "difficulty": "П",
+            "answer_format": "short",
+            "exact_short_answer_type": null,
+            "max_primary_score": 1,
+            "approximate_task_minutes": 10,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "exact_answer_required",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 10,
+                "printed_page": 15,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 14,
+            "part": 2,
+            "content_summary": "Уравнения",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              3
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": 10,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 11,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 15,
+            "part": 2,
+            "content_summary": "Стереометрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              9,
+              10,
+              11
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 3,
+            "approximate_task_minutes": 20,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 11,
+                "printed_page": 16,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 16,
+            "part": 2,
+            "content_summary": "Неравенства",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              2
+            ],
+            "requirement_codes": [
+              3
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": 10,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 12,
+                "printed_page": 17,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 17,
+            "part": 2,
+            "content_summary": "Прикладное моделирование",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              "1–4"
+            ],
+            "requirement_codes": [
+              4,
+              6
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 2,
+            "approximate_task_minutes": 20,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 12,
+                "printed_page": 17,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 18,
+            "part": 2,
+            "content_summary": "Планиметрия",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              7
+            ],
+            "requirement_codes": [
+              9,
+              11
+            ],
+            "difficulty": "П",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 3,
+            "approximate_task_minutes": 35,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 12,
+                "printed_page": 17,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 19,
+            "part": 2,
+            "content_summary": "Параметры",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              "2–4"
+            ],
+            "requirement_codes": [
+              3,
+              5
+            ],
+            "difficulty": "В",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 4,
+            "approximate_task_minutes": 35,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 13,
+                "printed_page": 18,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          },
+          {
+            "number": 20,
+            "part": 2,
+            "content_summary": "Целые числа",
+            "content_summary_status": "brief_editorial_label_not_exhaustive_codifier_mapping",
+            "content_codes": [
+              1,
+              2,
+              5
+            ],
+            "requirement_codes": [
+              1,
+              2,
+              13
+            ],
+            "difficulty": "В",
+            "answer_format": "extended",
+            "exact_short_answer_type": null,
+            "max_primary_score": 4,
+            "approximate_task_minutes": 40,
+            "scoring_criteria": null,
+            "scoring_criteria_status": "task_specific_demo_criteria_not_reviewed",
+            "source_references": [
+              {
+                "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                "physical_page": 13,
+                "printed_page": 18,
+                "section": "general_plan",
+                "document_status": "draft",
+                "access_method": "web_pdf_text",
+                "attached_archive_integrity": "not_available_not_compared"
+              }
+            ]
+          }
+        ],
+        "parameter_sources": {
+          "number_count": [
+            {
+              "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+              "physical_page": 4,
+              "printed_page": 7,
+              "section": "structure",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "parts": [
+            {
+              "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+              "physical_page": 4,
+              "printed_page": 7,
+              "section": "structure",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "duration_minutes": [
+            {
+              "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 9,
+              "section": "duration",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "maximum_primary_score": [
+            {
+              "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 10,
+              "section": "scoring",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "permitted_materials": [
+            {
+              "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 9,
+              "section": "equipment",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ],
+          "scoring_criteria": [
+            {
+              "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+              "physical_page": 5,
+              "printed_page": 10,
+              "section": "scoring",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ]
+        },
+        "source_references": [
+          {
+            "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+            "physical_page": 1,
+            "printed_page": 1,
+            "section": "draft_title",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+            "physical_page": 4,
+            "printed_page": 7,
+            "section": "structure",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+            "physical_page": 5,
+            "printed_page": 10,
+            "section": "scoring",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+            "physical_page": 5,
+            "printed_page": 9,
+            "section": "duration",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          },
+          {
+            "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+            "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+            "physical_page": 5,
+            "printed_page": 9,
+            "section": "equipment",
+            "document_status": "draft",
+            "access_method": "web_pdf_text",
+            "attached_archive_integrity": "not_available_not_compared"
+          }
+        ],
+        "codifier_subtopic_coverage": "not_reviewed",
+        "task_specific_demo_criteria_reviewed": false,
+        "source_conflicts": [
+          {
+            "field": "aggregate_difficulty_distribution",
+            "status": "unresolved_internal_inconsistency_in_independent_copy",
+            "observations": [
+              {
+                "value": {
+                  "basic": 7,
+                  "advanced": 11,
+                  "high": 2
+                },
+                "source_reference": {
+                  "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                  "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                  "physical_page": 5,
+                  "printed_page": 9,
+                  "section": "section_7",
+                  "document_status": "draft",
+                  "access_method": "web_pdf_text",
+                  "attached_archive_integrity": "not_available_not_compared"
+                }
+              },
+              {
+                "value": {
+                  "basic": 6,
+                  "advanced": 12,
+                  "high": 2
+                },
+                "source_reference": {
+                  "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+                  "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+                  "physical_page": 14,
+                  "printed_page": 19,
+                  "section": "general_plan_total",
+                  "document_status": "draft",
+                  "access_method": "web_pdf_text",
+                  "attached_archive_integrity": "not_available_not_compared"
+                }
+              }
+            ],
+            "action": "Do not choose silently; compare with canonical attached PDF/FIPI archive and the final approved revision."
+          }
+        ]
+      },
+      "current_project_configuration": {
+        "year": 2026,
+        "version_id": "ege-math-profile-2026",
+        "available": true,
+        "title": "ЕГЭ · Математика · Профильный уровень",
+        "number_count": 19,
+        "maximum_primary_score": 32,
+        "verification_status": "project_configuration_not_source_verified",
+        "source_file": "src/lib/exams.ts",
+        "scoring_source_file": "src/lib/exam-scores.ts",
+        "numbers": [
+          {
+            "number": 1,
+            "part": 1,
+            "title": "Планиметрия",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 2,
+            "part": 1,
+            "title": "Векторы",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 3,
+            "part": 1,
+            "title": "Стереометрия",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 4,
+            "part": 1,
+            "title": "Теория вероятностей",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 5,
+            "part": 1,
+            "title": "Теория вероятностей",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 6,
+            "part": 1,
+            "title": "Уравнения",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 7,
+            "part": 1,
+            "title": "Вычисления и преобразования",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 8,
+            "part": 1,
+            "title": "Производная",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 9,
+            "part": 1,
+            "title": "Прикладные задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 10,
+            "part": 1,
+            "title": "Текстовые задачи",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 11,
+            "part": 1,
+            "title": "Функции и графики",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 12,
+            "part": 1,
+            "title": "Исследование функций",
+            "answer_format": "short",
+            "max_primary_score": 1,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 13,
+            "part": 2,
+            "title": "Уравнения",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 14,
+            "part": 2,
+            "title": "Стереометрия",
+            "answer_format": "extended",
+            "max_primary_score": 3,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 15,
+            "part": 2,
+            "title": "Неравенства",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 16,
+            "part": 2,
+            "title": "Экономические задачи",
+            "answer_format": "extended",
+            "max_primary_score": 2,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 17,
+            "part": 2,
+            "title": "Планиметрия",
+            "answer_format": "extended",
+            "max_primary_score": 3,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 18,
+            "part": 2,
+            "title": "Задачи с параметрами",
+            "answer_format": "extended",
+            "max_primary_score": 4,
+            "scoring_status": "project-config"
+          },
+          {
+            "number": 19,
+            "part": 2,
+            "title": "Теория чисел",
+            "answer_format": "extended",
+            "max_primary_score": 4,
+            "scoring_status": "project-config"
+          }
+        ]
+      },
+      "number_mapping_review": [
+        {
+          "current_project_number": 1,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 2,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 3,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 4,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 5,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 6,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 7,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 8,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 9,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 10,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 11,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 12,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 13,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 14,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 15,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 16,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 17,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 18,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        },
+        {
+          "current_project_number": 19,
+          "official_target_number": null,
+          "official_target_part": null,
+          "official_target_content": null,
+          "official_target_topics": null,
+          "official_target_answer_type": null,
+          "official_target_max_primary_score": null,
+          "official_target_scoring_criteria": null,
+          "source_pdf": null,
+          "source_page": null,
+          "status": "task_level_migration_not_reviewed_see_separate_draft_target_numbers"
+        }
+      ],
+      "reviewed_changes": [
+        {
+          "from_year": 2026,
+          "to_year": 2027,
+          "status": "draft_changes_detected",
+          "independently_compared_previous_document": false,
+          "number_count": {
+            "previous": 19,
+            "draft": 20
+          },
+          "maximum_primary_score": {
+            "previous": 32,
+            "draft": 33
+          },
+          "content_changes": [
+            "new_short_random_variable_item_6",
+            "short_finance_item_13",
+            "extended_modelling_item_17",
+            "renumbering_requires_versioned_task_mapping"
+          ],
+          "sources": [
+            {
+              "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+              "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+              "physical_page": 6,
+              "printed_page": 11,
+              "section": "changes",
+              "document_status": "draft",
+              "access_method": "web_pdf_text",
+              "attached_archive_integrity": "not_available_not_compared"
+            }
+          ]
+        }
+      ],
+      "historical_comparison": [
+        {
+          "year": 2025,
+          "status": "source_missing_not_reviewed",
+          "differences": null,
+          "source_references": []
+        },
+        {
+          "year": 2026,
+          "status": "source_missing_not_reviewed",
+          "differences": null,
+          "source_references": []
+        }
+      ]
+    }
+  ],
+  "next_step": "Provide the six named ZIP files, verify canonical PDF identity, review all demo-specific criteria and complete codifiers, resolve the profile draft difficulty conflict, compare 2025–2026 documents and plan versioned content migration. The independently read 2027 draft copies are not final approved standards."
+}

@@ -2,6 +2,7 @@ import { ArrowUpRight, ChevronDown, Flower2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import type { Exam } from "@/lib/navigation";
+import { getSubjects, type SubjectId } from "@/lib/subjects";
 
 export function Brand() {
   return (
@@ -53,9 +54,13 @@ export function PageIntro({
 export function ExamPicker({
   exam,
   onChange,
+  subjectId = "math",
+  onSubjectChange,
 }: {
   exam: Exam;
   onChange: (exam: Exam) => void;
+  subjectId?: SubjectId;
+  onSubjectChange?: (subject: SubjectId) => void;
 }) {
   return (
     <div className="course-picker">
@@ -79,8 +84,8 @@ export function ExamPicker({
       <label className="subject-picker">
         <span className="picker-caption">Предмет</span>
         <span className="select-wrap">
-          <select aria-label="Выберите предмет" defaultValue="math">
-            <option value="math">Математика</option>
+          <select aria-label="Выберите предмет" value={subjectId} onChange={(event) => onSubjectChange?.(event.target.value as SubjectId)}>
+            {getSubjects(exam).filter(([id]) => onSubjectChange || id === "math").map(([id, title]) => <option key={id} value={id}>{title}</option>)}
           </select>
           <ChevronDown size={16} aria-hidden="true" />
         </span>

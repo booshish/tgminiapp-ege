@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T04:18:20.904Z",
+  "target_year": 2027,
+  "expected_archive_count": 6,
+  "expected_pdf_count": 24,
+  "actual_archive_count": 0,
+  "actual_pdf_count": 0,
+  "readable_pdf_count": 0,
+  "reviewed_pdf_count": 0,
+  "supplemental_web_pdf_reviews": [
+    {
+      "name": "oge-2027-matematika-specifikaciya.pdf",
+      "year": 2027,
+      "role": "specification",
+      "physical_page_count": 11,
+      "url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+      "official_index_url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "document_status": "draft",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "source_references": [
+        {
+          "source_pdf": "oge-2027-matematika-specifikaciya.pdf",
+          "source_url": "https://examlab.ru/fipi/oge-2027-matematika-specifikaciya.pdf",
+          "physical_page": 1,
+          "printed_page": 1,
+          "section": "title",
+          "document_status": "draft",
+          "access_method": "web_pdf_text",
+          "attached_archive_integrity": "not_available_not_compared"
+        }
+      ],
+      "scope_exclusions": [
+        "complete_codifier_subtopics",
+        "task_specific_demo_scoring_criteria",
+        "archive_integrity"
+      ],
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    },
+    {
+      "name": "ege-2027-matematika-baza-specifikaciya.pdf",
+      "year": 2027,
+      "role": "specification",
+      "physical_page_count": 6,
+      "url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+      "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "document_status": "draft",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "source_references": [
+        {
+          "source_pdf": "ege-2027-matematika-baza-specifikaciya.pdf",
+          "source_url": "https://examlab.ru/fipi/ege-2027-matematika-baza-specifikaciya.pdf",
+          "physical_page": 1,
+          "printed_page": 1,
+          "section": "title",
+          "document_status": "draft",
+          "access_method": "web_pdf_text",
+          "attached_archive_integrity": "not_available_not_compared"
+        }
+      ],
+      "scope_exclusions": [
+        "complete_codifier_subtopics",
+        "task_specific_demo_scoring_criteria",
+        "archive_integrity"
+      ],
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    },
+    {
+      "name": "ege-2027-matematika-profil-specifikaciya.pdf",
+      "year": 2027,
+      "role": "specification",
+      "physical_page_count": 14,
+      "url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+      "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "document_status": "draft",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "source_references": [
+        {
+          "source_pdf": "ege-2027-matematika-profil-specifikaciya.pdf",
+          "source_url": "https://examlab.ru/fipi/ege-2027-matematika-profil-specifikaciya.pdf",
+          "physical_page": 1,
+          "printed_page": 1,
+          "section": "title",
+          "document_status": "draft",
+          "access_method": "web_pdf_text",
+          "attached_archive_integrity": "not_available_not_compared"
+        }
+      ],
+      "scope_exclusions": [
+        "complete_codifier_subtopics",
+        "task_specific_demo_scoring_criteria",
+        "archive_integrity"
+      ],
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    },
+    {
+      "name": "ma-11-ege-2026-spec-bazovyy.pdf",
+      "year": 2026,
+      "role": "specification",
+      "physical_page_count": 6,
+      "url": "https://pro-schools.ru/fipi/ege/spec/2026/ma-11-ege-2026-spec-bazovyy.pdf",
+      "official_index_url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "document_status": "no_draft_mark_detected_final_status_not_independently_authenticated",
+      "review_status": "structure_scoring_and_general_plan_read_from_independent_copy",
+      "sha256": null,
+      "byte_identity_with_fipi_archive": "not_verified",
+      "publication_use": "requirements_facts_only_no_task_text_copied",
+      "license_or_permission_for_republishing_full_document": "not_established_document_not_republished"
+    }
+  ],
+  "supplemental_web_pdf_review_count": 4,
+  "input_directories": [
+    "/workspace/library-files",
+    "/workspace/shared/downloads",
+    "/workspace/tgminiapp-ege"
+  ],
+  "archives": [
+    {
+      "name": "ma_9_2025.zip",
+      "exam": "ОГЭ",
+      "year": 2025,
+      "expected_pdf_count": 3,
+      "status": "missing",
+      "crc_status": "not_checked",
+      "pdfs": [],
+      "source_reviewed": false
+    },
+    {
+      "name": "ma_11_2025.zip",
+      "exam": "ЕГЭ",
+      "year": 2025,
+      "expected_pdf_count": 5,
+      "status": "missing",
+      "crc_status": "not_checked",
+      "pdfs": [],
+      "source_reviewed": false
+    },
+    {
+      "name": "ma_9_2026.zip",
+      "exam": "ОГЭ",
+      "year": 2026,
+      "expected_pdf_count": 3,
+      "status": "missing",
+      "crc_status": "not_checked",
+      "pdfs": [],
+      "source_reviewed": false
+    },
+    {
+      "name": "ma_11_2026.zip",
+      "exam": "ЕГЭ",
+      "year": 2026,
+      "expected_pdf_count": 5,
+      "status": "missing",
+      "crc_status": "not_checked",
+      "pdfs": [],
+      "source_reviewed": false
+    },
+    {
+      "name": "ma_9_2027.zip",
+      "exam": "ОГЭ",
+      "year": 2027,
+      "expected_pdf_count": 3,
+      "status": "missing",
+      "crc_status": "not_checked",
+      "pdfs": [],
+      "source_reviewed": false
+    },
+    {
+      "name": "ma_11_2027.zip",
+      "exam": "ЕГЭ",
+      "year": 2027,
+      "expected_pdf_count": 5,
+      "status": "missing",
+      "crc_status": "not_checked",
+      "pdfs": [],
+      "source_reviewed": false
+    }
+  ],
+  "duplicate_archives": [],
+  "unrecognized_archives": [],
+  "missing_archive_names": [
+    "ma_9_2025.zip",
+    "ma_11_2025.zip",
+    "ma_9_2026.zip",
+    "ma_11_2026.zip",
+    "ma_9_2027.zip",
+    "ma_11_2027.zip"
+  ],
+  "complete": false,
+  "limitations": [
+    "No document is treated as read or approved merely because its archive name mentions an exam and year.",
+    "PDF extraction and title classification do not establish authenticity, final approval, publication rights, or a completed specification review.",
+    "Source PDFs and extracted complete text remain local scratch artifacts; they are not app content or deployment assets."
+  ]
+}

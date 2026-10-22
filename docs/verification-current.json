@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "implementationStatus": "partial-original-request-not-complete",
+  "deployed": false,
+  "checks": [
+    {
+      "command": "npm run lint",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "passed": 285,
+      "failed": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build:pages",
+      "exitCode": 0,
+      "outputDirectory": "out",
+      "basePath": "/tgminiapp-ege"
+    },
+    {
+      "command": "npm run content:check",
+      "exitCode": 0,
+      "numbersWithTasks": 65,
+      "numbersWithTheory": 65
+    },
+    {
+      "command": "npm run quality:verify",
+      "exitCode": 0,
+      "passed": 87,
+      "failed": 0,
+      "expertReviewedTasks": 0
+    },
+    {
+      "command": "npm run materials:check",
+      "exitCode": 1,
+      "expectedFailure": true,
+      "reason": "Six uploaded ZIP files missing; 0/24 attached PDFs inspected"
+    },
+    {
+      "command": "npm run quality:verify -- --require-complete",
+      "exitCode": 1,
+      "expectedFailure": true,
+      "passed": 87,
+      "failed": 0,
+      "reason": "Full 2027 requirements not met; false completion is rejected"
+    },
+    {
+      "command": "python3 scripts/test-browser-variants.py --serve",
+      "exitCode": 0,
+      "reportPath": "/workspace/scratch/qa-variants/results.json",
+      "passed": 8,
+      "failed": 0,
+      "page_errors": [],
+      "seconds": 25.13,
+      "checks": [
+        {
+          "name": "responsive_layout_320_375_430_768_1024_three_exams",
+          "status": "passed",
+          "seconds": 10.26
+        },
+        {
+          "name": "start_variant5_draft_skip_reload_and_catalogue_resume",
+          "status": "passed",
+          "seconds": 1.94
+        },
+        {
+          "name": "exam_level_scoped_resume_and_confirmed_new_attempt_preserves_old",
+          "status": "passed",
+          "seconds": 0.86
+        },
+        {
+          "name": "finish_primary_points_strict_input_self_check_and_no_reload_duplicate_xp",
+          "status": "passed",
+          "seconds": 1.54
+        },
+        {
+          "name": "same_task_across_variants_does_not_duplicate_xp_or_streak",
+          "status": "passed",
+          "seconds": 0.32
+        },
+        {
+          "name": "base_theory_navigation_knowledge_check_and_correct_level_practice",
+          "status": "passed",
+          "seconds": 0.33
+        },
+        {
+          "name": "complete_base_variant_all21_short_answers_primary21",
+          "status": "passed",
+          "seconds": 2.9
+        },
+        {
+          "name": "dark_theme_cross_tab_reset_and_future_schema_preservation",
+          "status": "passed",
+          "seconds": 5.27
+        }
+      ],
+      "limitations": [
+        "Chromium only; physical iPad Safari and Telegram WebView were not available."
+      ]
+    }
+  ],
+  "sourceReview": {
+    "attachedArchives": 0,
+    "expectedArchives": 6,
+    "attachedPDFs": 0,
+    "expectedPDFs": 24,
+    "supplementalWebSpecificationCopies": 4,
+    "year2027Status": "draft-not-final-approved"
+  }
+}

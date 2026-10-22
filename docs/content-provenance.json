@@ -1,0 +1,5768 @@
+{
+  "schemaVersion": 1,
+  "note": "Project authorship declarations; no third-party text or artwork was imported in this change. No external licence is invented or granted. Existing declarations were retained, not independently rights-audited. FIPI copies are analytical sources only, not bank content.",
+  "policies": [
+    {
+      "source_type": "original",
+      "license": null,
+      "permission": "created-for-project",
+      "author": "Точка · авторские материалы проекта",
+      "source_url": null,
+      "creation_method": "existing-project-author-declaration",
+      "rights_status": "project-authorship-declared"
+    },
+    {
+      "source_type": "original",
+      "license": null,
+      "permission": "created-for-project",
+      "author": "Точка · авторские материалы проекта",
+      "source_url": null,
+      "creation_method": "original-deterministic-family",
+      "rights_status": "project-authorship-declared"
+    },
+    {
+      "source_type": "original",
+      "license": null,
+      "permission": "created-for-project",
+      "author": "Точка · авторские материалы проекта",
+      "source_url": null,
+      "creation_method": "original-individual-task",
+      "rights_status": "project-authorship-declared"
+    },
+    {
+      "source_type": "original",
+      "license": null,
+      "permission": "created-for-project",
+      "author": "Точка · авторские материалы проекта",
+      "source_url": null,
+      "creation_method": "original-explanation",
+      "rights_status": "project-authorship-declared"
+    }
+  ],
+  "records": [
+    {
+      "id": "triangle-sine",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "5d92c9b010bc70df45423aa193d0826eae4687c60fd87a5ad961e19f10539473"
+    },
+    {
+      "id": "linear-equation",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "108d64122eacc4b70ac161afd3e6c80aa346c6c495270e302142e1bf3f078cec"
+    },
+    {
+      "id": "fraction-addition",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "80c3bb15b20b46da65a55419a1f1ab9877ae9fd594642c699bd596589a2be752"
+    },
+    {
+      "id": "probability-balls",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "b2017e9ad98a6a1b5fb87d348478fe184e708de39970c5d79dac331098cab0aa"
+    },
+    {
+      "id": "percentage-discount",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "28185d1e1a41098b22e35be5065c7a9639613bae5d312bcfe5e77476686a53bc"
+    },
+    {
+      "id": "fraction-subtraction",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "27870585503b8b07c4cc450e6a6cae0c2afb677054b6e37bcf6603fca80f11ee"
+    },
+    {
+      "id": "fraction-signed",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "1999d9175a4c2a09f6d627062def5c2736dbae12b7405192f7dacc77f073ab25"
+    },
+    {
+      "id": "decimal-addition",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "4ca95ef9b7854345655bdca96ee1e562aa2ab877e6fd2eb504e57960af4f8a68"
+    },
+    {
+      "id": "decimal-product",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "49a2d64acb27aaf1118c856c2046ec58063f8aa17fb43dbee2a0d2d5b6b2ec7a"
+    },
+    {
+      "id": "decimal-division",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "853f85eabf18e44ca2053671a63c63c18b17bba92f078a6eb61843451c23006b"
+    },
+    {
+      "id": "percentage-jacket",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "040efc0c37615d48809831dae8adf57ffc60c7e09950c96ebd5dae150a50abe4"
+    },
+    {
+      "id": "percentage-increase",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "1f2bf339c0212b46f4e6b60c8343e0894ec633c6c70033aff38a29363b5d0273"
+    },
+    {
+      "id": "linear-negative",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "e9823f08383e58dc2d6787c3a7b52ce86fb3b4075dae240f8f4d6f9e5a74fefc"
+    },
+    {
+      "id": "linear-brackets",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "c2704f118cf37db074c5279a9496baa4c03fe47afa5ea164b31ae2a8465379a3"
+    },
+    {
+      "id": "quadratic-two-roots",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "43525a03082d712ea875b1f1d8fbf961bbaf43af333805d54e02b36ec8a52c49"
+    },
+    {
+      "id": "quadratic-opposite-roots",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "c014806513c1c58448f6713d0215ffcbd07115b4887ab596252b6d5543d700d3"
+    },
+    {
+      "id": "quadratic-fractional-roots",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "b8fd53f18525244049091cfc898df052286dd326e679eef775d83d307606cecc"
+    },
+    {
+      "id": "powers-quotient",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "84146e13f31815971d050a7296b54fee6751f0324010b808979c3d74a6bf2ff1"
+    },
+    {
+      "id": "roots-sum",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "a55e4ce2a32f26b4711704b365c52fd2de3602d6c48f69e743da849da975388e"
+    },
+    {
+      "id": "roots-product",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "fba59e3badd6b3e7c7f6ffe1d15804b24d6da77ea68e7f925834c02b7faa7e77"
+    },
+    {
+      "id": "triangle-sine-five-twelve",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "2c5cc91210279fbdd8e69da888eed5fc7fd914eb71e1f2e6823687de032c5e20"
+    },
+    {
+      "id": "triangle-sine-eight-fifteen",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "826567170f11fa7d7a51a080791df52fe2fac8ca9ecb7ffdd5120c1260c80d76"
+    },
+    {
+      "id": "probability-die",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "22ceb83dfa207ef113616615a9ec17f47339afe4646ff93c651a04f6e42ca72c"
+    },
+    {
+      "id": "probability-cards",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "f4761ad05b983ea37a69655be1c2a6dd27727d29dbed99989667b4fd5357b6b9"
+    },
+    {
+      "id": "oge-fraction-sum-terminating",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "cdf941293996c49d78d58ee52c457efa89cbdf88f71de3d4b95a15594af157ff"
+    },
+    {
+      "id": "oge-quadratic-larger-root",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "5224c891b32ace19daf7fa963ae88ca524a53ea259bcc1e2e290fd3f5a8cd544"
+    },
+    {
+      "id": "oge-probability-even-die",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "69e0272344aa8896f4d2030aeb4c9e0b06f1ee9cc55c923b74fc4e477c18f4b1"
+    },
+    {
+      "id": "oge-triangle-three-four",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "f645807007720fd119e8b66a174eb3dc3fb42e69bf7fbc798ffa503e0cbcb9b9"
+    },
+    {
+      "id": "ege-base-fraction-sum",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "8221ec22ee174db4c492709ce14b077dc72f5346d6a28d33df59586091652e21"
+    },
+    {
+      "id": "ege-base-decimal-difference",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "7b3ed7d809cc56c71b78fc813cbf352eea2fcf4f99bcc2b9623cb490d3aa734b"
+    },
+    {
+      "id": "ege-base-discount",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "33b1d5277be96757b933c729ae553396a7a23fd8659e46471fdefb407a62ae44"
+    },
+    {
+      "id": "ege-base-linear-equation",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "ff1839259979056a31a2d4383056fbd3883ebfc144ae65a1e4edf2f188b4adbe"
+    },
+    {
+      "id": "ege-base-quadratic-roots",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "8859e45190c6839bdecbecf645e23dc0eaa7683bec1402b0d7e672f46060633e"
+    },
+    {
+      "id": "ege-base-powers-quotient",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "d695ef198180e3a064bed721e8ec35239ff7b2fb29dbdd3e74f4744008723440"
+    },
+    {
+      "id": "ege-base-triangle-sine",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "a7fb4187363b9d3b7adafe52cfdea845b8ed9057b8a986d072690de20c1e56b0"
+    },
+    {
+      "id": "ege-base-probability-balls",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "35a826c7b631e8d3831483b25cba7e1db7e2787d576dc0493ee70e5fa5a0a300"
+    },
+    {
+      "id": "ege-profile-triangle-twelve-nine",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "a4de50ebb73d1a5cc818a9077b0e96204a5f3f4f867b06ec2c88c5f09df8607f"
+    },
+    {
+      "id": "ege-profile-triangle-nine-twelve",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "244d8b9c641af01a8a5b912f056da3d4639b055541ee20d5f6845413675a2e48"
+    },
+    {
+      "id": "ege-profile-probability-balls",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "ec609c33a1ea156f8a6b8b689bdf769a8434b4bf70804238d185c2afb09bebcd"
+    },
+    {
+      "id": "ege-profile-probability-cards",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "04f8efd6557a214f76a12ce5a914185347caa1f3d142b6e1719f0973ae8dcee6"
+    },
+    {
+      "id": "ege-profile-exponential-two",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "e8285483869db146f3f20cfb3638fdda1aa711e8e2d1a3876d37afc8f47d5314"
+    },
+    {
+      "id": "ege-profile-exponential-three",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "b68766bc958c7dcf6ee25d399d4c812b881919c8f5793f8929401be1d8833940"
+    },
+    {
+      "id": "ege-profile-roots-product",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "1d029a18c6ae3e1fbec8b470452a6801ee8306b566b66bd1a8f1dc4e34f81106"
+    },
+    {
+      "id": "ege-profile-powers-quotient",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "3825f44bc7ecfc9e5c00958bb0ecb8c62f8b45f4acf769ba5d389c76ba8e524e"
+    },
+    {
+      "id": "ege-profile-fraction-difference",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "2089ab2901558a7db674ca8fd7d2f95bd220e9e96eec5df82d3ce4412a4ee2a3"
+    },
+    {
+      "id": "ege-profile-fraction-product",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "fcad8da51831132ebb014eb2af99de274fb704c95bd6dc59f4e17057d7b2c18d"
+    },
+    {
+      "id": "oge20-quadratic-self",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "4be05b882f59c5cb82c18de6bee645e76548ca2af71acf0848e4a3bbf034d82d"
+    },
+    {
+      "id": "ege13-trigonometric-self",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "85baad1d19dc649b0eddbe5d49adf9367daa20ff58dca565528e02fa1e97425b"
+    },
+    {
+      "id": "ege17-triangle-proof-self",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "765b3827fbd7cc4abc377e5ab22b2455b70d35130c05e40beaf180588443fb26"
+    },
+    {
+      "id": "ege19-integer-pairs-self",
+      "kind": "task",
+      "provenancePolicy": 0,
+      "sha256": "1c0ea4ec53125c342fbe9cdcf41bd1ee4beba09b3fb6c656459e38f14d71e8c3"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5537938f7c013adae2117b90e2c1b55b341977daf988479db160595883fc2403"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9580df32cc93fddc9642a87b5b3949a8c9185ec07f50dfa79e969fe57bd83a41"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "212a36a6d9ef556a5f474b5b5d6896b289a038e536f1a0c15ccf9e104469e543"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6bb18eee09f13db796d7f379f531d0811c1a01073a88637468023041652fe559"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "484d8809d178e45595c8c7284595f5428b54767326ce6a3f36110fad4e07710f"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d39b3d76136b7baef598b7a8988bc7cdccd19a60ebc8fd2f055228314302caa1"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2a00be8cbdec05556cdb84e50ef044600078bd0f23858cef83f77a077e56911b"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3b5f16763bd2bb3d9f8e89c4917d1222b35f657a2575b3da4eee0cf54c3511b6"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b7301a01d6a0a40ca177cd7a735de3819a06810456dbd9bceb4ba6cf3372cc47"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "628cc2a523ceab9d66c70b70a95bd1af5c7b285068603880bea238d95fb7ba3b"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c33f215dbd730976aaedfcc38aada8f29f64cc72bacb51507c3745a9c5d1c736"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "dbf695511bdb7a8e602a67e45cc1121d97b4024bc82578c2f6e1c401d7b00e37"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "71eb910cbbe8d94f8bdd2bb81071dc3177a5b0c91cffed2e097b876e74ff64fa"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "de64b40f504d81a228b1395e4686a7c75b0e33308553059c3f72443cdfb2d1dd"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "aa684ddd0d87d77c81a26125253d6ba93c30dbac5ae4b97b1cb9810c45e9557d"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8da4ed9da61bd032493d7da10b89e4d82d6fa037234eafa58f744b1e2136f42e"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "87096a028373215e68572547a8f8eedc7d9c6ca53edd2a9549eb882bb91f72f9"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4a4d63de51cbebb25c93a80926461bd389caf86b9a13af87560b519ced6e0543"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4cd67d978460caa7234bc1d7ec151eaccde49865317e08680f26137e0ba8e16a"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0464b07ffa669071069caa5478a7b82300a09a2fea6e2f4c20deaea56497a7e0"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "da76532cbe4b9021b6512109e2d7f7cfee86ed17407c2a7b97a36870c50ba5cd"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "16a560b739b1c598adbfd9d0a03b824c991cf2d44be1b13bd0336e767e90b5ae"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e25be1a090b9696a9317f8a4f51564cbd0d1178a06e0ff0f64547db0554ae430"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "989b42b541b946c132c8dca04c4859d675b6c9e6eab23713e6294a89fe6f42f7"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4f75806b11592265575218fcd97f1c0fbb666ea30bc73e9e40c3f1cb30746a85"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "601300646f860f6e49ca42fdce35b52c0fe9468f7f194f788308ab8663a31a88"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8af76a69947e2cb8ef934cb3bc15272174362b5143f7f78a5e5463a728512e0f"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "95c7fad361526feb36b64b824ea15697524662d154714c2eec148cce10d98d80"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e3599b203dc97825a491413f8d15dabe3834e2f8a4fa144bf52f97d399d9e123"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bd3c2803bf8483c421a7a7f370bd97da8c29c423a85acdaa2e5272fb83a1a869"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f7ef41c01c6762a0fe70549ce0d6470283e65daff1e62c1f6d75af4c27872a91"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6af8936102ad70a80edcaad44cc2c2e0d82c9e2b288e394646ea28914bb3854e"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7c05a93bf0f2d700eeb6fc4ab3bd13e2795c48711e80e193b968482f22bc0718"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b0e0303dda5a5f1281824eb8b2522438c4b55c78f0c9de16e50d8131edca8a51"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9ca37bd46a53820c9b71dbe18b5b984f10e05d94da8060aacb78af15bd49ec7f"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cefe66049418da1c21cf083792f1a54ddcf392603d4713a3761f69e3b3183d64"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f6cfde27a9ab7c2c093741f502718d041742ea01bd813bf3a3835e7a62e060bc"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "83e82a523af41282d09c04c48404a96c28c19df7c9e6ac31a2edbe8c58d4659e"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5161f8935ee0ab65e4636a02882fe45ca87747b0fdac5eb2592e65c923716c80"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c3737de728a3ab5d770f6dfb041123b8abd2b5008e30ed33b707d7d2346a6bd2"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c470d821db38eba29886ab06000a79a9ca451747e0e3f60a6671c40d0bf3ace9"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "53b76a62b0e8d50ff9fd91349a965dd9359378ace13fc181f546731c9b8a5bf3"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3ac36366fd36104d827fd1d31ba9ec0269c59fceba447049b0472281f4fc96fa"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "196db62a5c0ebde51ac32231147d74c6bbdd30148849adb21643134128c6465c"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a51b1269b262322c56dbd8f046732cad3c3b3faf4c8a196fcd295a25f66b9817"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3fb586135d13f73ec85a4eb069034d879eba088643ecd8ea3dc87043dc61e042"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "937778254063f40a653734c9973f88c961f50d742915e5d42caa8bcd0ee1597c"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9f0b8f908bf216db34804d1340244b5db32c9fb31c5c86bb33935afa521b5707"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0846fed1afb29187a8b2070c30954912ec43923b30f8d8e7522415c779b2abad"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4c0ae0a3ae9505edce961d400f992144ebdcabbcbc6095f4cb0a7caea60dbe8e"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7ae9c881cf22db9fc1c6d203f098eed59645cc3f9b09ed2124e903d66593f6a5"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c6429539f16d592d7861ae6778bfea29bbdce0e59b87881a8a1dd58a93f4621b"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "839be9deb32b99634ff442d6e180ef11af4b58cab2474aacf96a78630514d8a8"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8eb58a3d067661d70dda35b543f41abd20d6eaa75d22bcebab17d4a81518fdcc"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "70929007d316a5e38241ea76715b531b0807aed0aca646a3452dc7e1faad54d9"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "62354b18b594ca3c3ba737da79a36fa3c87179f9b904a711ba5fbf066e3bf1f7"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "da2713d888f9a35dd4fac45f28d6af0f1f71d40e41d0856e2759452ba7eb1ad2"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "016c1878215f03d919d47f0710969ea66c68fd8cefe3945ebf0b5463865a9874"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "746258fe7b3dfdfc5e95ffe5f58538ff8e3151e4b181bfc7545a4dab1a3c0b1f"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7eaa29f31ee0c8aa45e2025470dd5f649933d79fc02b32aed48b6cf000589e9f"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f5628199d523e5b31a752d57db99a373571668dfa24ac8dce0a71c3a162e2a70"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b69e1b9f0dec4f2dac41399b67fb0fc378c0ea211274125c884fac536da07a67"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "69274a58f3c3923bb3de72bb1cd593b0c53fba6b0cfaf6e7ed713e97f4bfa475"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5a3d7c41151b56c17da989f951fbb3815c650a72fd9cf89363887accaa70b0c6"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "43ab2fccca0ae5969a3084c77e03dba9264dc6a12563de8ad9aa5e087708125b"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "03c6b9a109e3b5291729b0389f07d7c111865409487dcd753d7d00ae8c58079a"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e1fb43cf9f6cd6eba11bed0635891c46b345548744fb7063e81e45c909b5343d"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "96200a53767009f6fa511fb7e43b842bf7afab16e753244e4800f1be74061d83"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c06a434f1ea90e3bff185e95e1e66ac67f7f3f3369a6ffb668357e3b98dc792f"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "521baa415011a58f1d8b670b687190eaf55d1fa136554260d38c32ed1a5fcdd5"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8ef35b48a7e0cada732042179bbc2cfbe98291bf4ae2e2bfe8467566c8f6d8f9"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e7bf9543324a1e6de097c2ea9b6ed3cce7f7715a7641ec39b0ea7f7d2978c921"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3ba8149002dbd8aeeccd04f10e661c9445a32e53407b3a4669d5502c8d0048d6"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2e030142b129089309ff9a5f22cad31b8800fa6ee0a95395f7020808aeeef82a"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "121280d28a5e887e5bcbf5a5d5e688f61b5dea53e13d49d27dff8367e349165c"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eda7570d1acf84919979a4d24a8668dd7d5e2d313904efdcb0dbfb702690721d"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "971026fde6829edf786d49673ec2c80a0279315d0803ec162ffc43dde3f750c1"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "42d5f2eecd5bca71c46542529d3bd6c287fcc5bc24c300ee50ddf209b289cecc"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a06ee05596d418f36fe09d7c67b3a8596994ec092202eaffd22da25e33eaab9b"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "28d73abbd49bcb2ad8f985799ddbdf136670efab775aff7327ea2406229c6e42"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "03082ade347d67be9d895a27fffa5c8783344fd2f48337093d0b75a33adb108b"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0201572e9ce7cc57c91583c835c685e05763e81ce60beda80a939b7e62a6a60e"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5b28e9ed8f26b1caf68f72d59495813c6a8ed516b12c317bab15aec7741e45eb"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eafdee95c52df2b9fc789f9cb0b57fac2ba55ceffa2fb74f9ef1435feddf892b"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "11cdd195a3d659fc435640a57e8f967d6536cd45ce520a9bc451010bf021e567"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "31060c31f1ec9a74c29077c7eae7444d046685214e19874bd84a7c44fbabdc89"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "122157ac65742b4ee691d5f24ea0f07a9b164dc1660af69b3e6b98b5a2db7367"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6bf7fa6d639a06c3c417c663dfc345129c79065f4f89616afe48f305adc74d77"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "154f91bb828b8a2570a46c987d44f55f897a43fa6e9fe00b21aecf0b8c1ccd8c"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f9196d80449f2afd3e22ace29be288d23f0cce798b0f2085b3e89ee43a632bae"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "87792179acaeee2b9a2f1bd9ec365ba105660dd876a66e24f02727a90bf4151f"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a97234284985c1efeb5db274bd22760881082854980b06d7068ac0347de3c627"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "91bbdb7d84bf05534b8091c7afb44e7573969d7109325ab1aafa574bcd0fa37c"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e09a6da509a43dec726e4e62a34e200afa190892f53a83e0a222f8b1118d416b"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "304492387668d01da4d5f18f2b25c28158b44e177280a332a755f480d320245b"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "02af081020013cfeba70cce32f34d2351541f1b01904f594a2e8b88d088faaef"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4007ca3e048b808b183908fd4c2cfd6d34adb926304e55fdd3a7b4f9c4bd1673"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c79003c5ef0bd2c64f08ddc2e29a05c23e7a551cf2fb9e4dfc6c9325f799299c"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c8fc18cb068cd1ea6dd53e5dab68d2045e5820f9992b1d8b9b2aa291d1bca866"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3ed108587445fd02e3ef8596bd68a9de10a8368260a67ec5659c9782c17be213"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "577778c80791aceec72c821c364de9260f50e63f18356a07ebc6658987eee7b0"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7dd0cd04a47656be284979c1a053f2f53c6d32269d14ba195b0076de124040c4"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2ddc1cd88a58afa95c5e423231ae7f3d92952434baf9316f414e236628553032"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b205f2412820803e90d1b9b35f24debdde56abe0efe8b944c2db04e6af135a06"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1a82d550a5aa47747c0b7a450f75d7e043a0c052d59a39ee6cf29f470ff5e617"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "81f90fbb5e76d098690713085d2536cb71a6af09baba95a11b6ab441e7040f5b"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ca5b584ad44f57bd9a08f00ed6c5f4d3eab5f0f1cbc0f0175ab7424f032743a9"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2bef96335ca4d3715b62d37ae7f9af00847eeeebf57d47755a8d5b35f66110d4"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "26f44eac77f02a475f48ad0def780b4f554af466300370f352e10a00755256bf"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "056ed7adc7e8f725b09c74139ab7b184a49a3a72085fb7c46c6add874861aefd"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "81491184748940dfce33d9743665e1f49af094765bf4323f48aa5e1630cf342e"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "28c6a8edf3defab0e7512b1b896352d69ef2f68ef14bc2fe6e6d5f02c05a628c"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "27b647fa2c9207ee1fb6a195002e39dc21e78ee7a98de144cd6df38e0e0f1f96"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v6-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c267e1b682767a840110ee07d1fbdfe45389716166770634d1fcf732fa4288ad"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1e71c81d64db17d1ebaa461ce51615a82a2214427a7bf40343d606b74c4dff19"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1134c4f51e145d8710968c19b546b212e1897f6fadd1fa9b697082e9af5f1b50"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ea9ddeb2eeeb0c10dc2b60620acfda66ec42ca9adfc13ff19fc8c42105623400"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2449e04bdb627cf3cd54b3522e71ea6e878611d3798f6ee3439c91afce27ea64"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5db03f0c71dcb1860d5a97f30cc97df1854524ea9e0f058cdd7e8297bd934244"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "79167ae62ef624511df3f4c92f29daca9a23c1fd3a6a20ccb99b47ee9bca3ae9"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "046798eb2f4565c25bd75f9da43f5c6b8068dd6c62e739752d8a3ce4724de9d1"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "87634fcb97979ba48be43541e709f99f1af662e0bfcb5ae0bf42066668eb5018"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "17b005508e7e2155c77434bfc01ff5e2222a461b95244da22275f5de66375113"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "94d38ea43d8be678bfb25350ecd52c4f14f83c237da4bf853088895de67eb63c"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d98f3e47f1c44bfe72da2580e3ee25100dd5eab621d5ab52d51618d5a3f7c134"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "24d183a01cd967110f46070bea1f92b5cbcb9efccdf763608687deaca865b5f0"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a01449159ca1dc00741c41ea79c4d7101bfc32a95a7cc922cbb3139e2a66c944"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f14f1ce214c2e77ba61a4b82e49b4c661d63a7905aab66c1b0bd9f7a3fa80f54"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "709a6e549cda192550de424c5c383ea2f97d23fca995778b96625e82571a34cc"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a6e83c932f001a5e3a89209935e947b53257bdd879fc05032b77d471f41e75fc"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "24b1ef57cf7d4c68c3bbd9e5e072697b9217ee4ee26261e935958d2a51f4ff1d"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "22a18d6004b64b638964e89b090b138539162d6b3ae0ac0b7c85b90aeac2c32c"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v7-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c400b8367e6ab089cd75b43f7d20512513b9876fb9be0cdaa6bbef6091c086d7"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2bb17a93367cdea1b202f606449df6a52bf0c1e68c78059f9822704e04274ce9"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "73d9d667ea03c308c5ba226d08c8f98991cef99ff25e219397002fbe90a33bca"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8b75d83a8af5a8ccc6b79234fac4a236c4973ca11b4ee93f3453c446a7b798f8"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "83bcf2efea5b94a2371e799f3b9797f2f03ee215555d7fa25a5492cca414f722"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8d728f299f32d5a71ea085eedf1627a1cdce032c8e8965c40fe7a6b0bfc9809c"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6898e2aec6f5e41ec4637412cd69bc1a135b9174557be6083a3e6b0cffaf1c2b"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "60118989a0abae0d0c18f14e73ef20180a4b5e6fd86b5c4d70e981a25e08b7d2"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3adbde02c9b83ef6bae2b4ca9a89f8f2cd006a3ec027b9249849b3456f89e456"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "224b5014b2289c82bb3b5124711852e6b96ab542838537a77113e99f2c18ac5c"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c621c30e297c7667b9f9fd7b49b04875a425393f713e85ea113ceab2c61d9875"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fab7feea4de32a5d923c19174407e775aa34124b70f0477a747d69847895c469"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0e7a840d6cc4fb3660ccd94144ed527fde1dcbca726d827ff286dc2a3cb8c78a"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "13f76ff2546286eff99fe68fe8dcc1d42ab434d9885325824cd32d8838b06613"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c21853825d1236c60f43c7b893d12e4f0b0d36d7a42895e139b70ce156718de3"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f6c058b520ab3792f40ea22d3c98add0756c6cb8f6a9cbe992d02c5124963180"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2f28229f0ce1e392c043358757163fda4854e90d0a0357ae3563aac6b3ae34e9"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2715cbc3bc6abe5f0922afec0fc59bc3549572b54af51da8d47e3261a10af51a"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "08676752eaba3800f51b2c2f38f0691d037522b5bbde0f2956ef7b55bd636ccd"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v8-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "506f45efb7ea4e91945391f129edc8bb435d8f7bec7a42703ef324da14956af0"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "429b5c2bc5926d01df6cd4132240f398bcabccf8d84aacb0739ce34976527a85"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5d4d426352101598cd9d645e4089743048a60db8eaa83da2399e8bf8b555b452"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cf9be263ff1381bda7613f5cc64b197e72d19aef71f5207e023e1254f34e783a"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "68fbb3fc55345f9c8d2f027c21e159cced97d4b30f79ac2ff827d6752f5619d3"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "173f7ceae9da73b752ccce05fec36eebec1758c0a0c8592b0fa1a48c59e3feef"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6ed8a3ad7205f119163982e03775e983cb0d36295acadcce75fa9a0f10979472"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eb1b1c71b78540d7d8f6361a52dffba46ad58da2890517bec83bff4444d57c85"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f4d7277b010017b07fa25b9fba5a2ee02e3daff6d4ad1efc18f029f3a48da267"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6ec7a0430595a8215621830dfb6c7e4be562ced4d7f820444d88ce0e79d7cee0"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e539da5855170fd0229470538d407583f618e844eb29520ef8f623274a2014b0"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "000b58d69c16a4d56aaace9ce8b69143e5839a2d179eab38aa51fad0c383958d"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a4fb1b02947cb3a2a8a9c1e77c3653e42666bb63bbcc1ed3389d830d85f4ec5f"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8d20edadc78b162ab7d1b4611d6a0d4b3705586d22a1e53269a06cd8ca036bc9"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "121c22cae19d533e8109ab87d441f393991d5f431e3e6f5f5c930a2ed94999e9"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "dc62098e1ca7bcd67dcaa9ac728f19b3baf9bb82e62cf5eaf5cca0ec251d9f46"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6ce6646ba0b6d2e1b63d7ab2dac1a90e37b8ee47ce040aaf49c4b8052b0dc06c"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1b26540babe709620eeaca0e3a5f794ea4ef49df9f79932e94723f6057020c55"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2f35143c86c9dc10d3dff756812b8f207184192b7c618f742d60c3a01caee2b4"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v9-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c1e673efa4971ef812820341cdd01289bec3ba300126a6844d6233fd375a9915"
+    },
+    {
+      "id": "oge-2026-n1-plan-perimeter-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b0e2e124ba70d4b6173d3568125173cec14ae4e11afec355a975e99b56288b77"
+    },
+    {
+      "id": "oge-2026-n2-plan-house-area-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "44dbd237cb7e9301c66636c367e10bd4afd78362c9246d75605a2b1a3b2351ae"
+    },
+    {
+      "id": "oge-2026-n3-plan-lawn-area-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f45d55b0b0a728f942207465454d5b484c6cbe1e69277ad65f293493ffd98d5c"
+    },
+    {
+      "id": "oge-2026-n4-plan-tiles-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b8f48ba3a8fa2cde2ec98295e62888cd0ee65632ec3b61e024f7911af43583fa"
+    },
+    {
+      "id": "oge-2026-n5-plan-fence-cost-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "aa6844fdcfb0727ab6c13aa9e4e9661c6a3651778ceaa746018cfd2d42ebb39f"
+    },
+    {
+      "id": "oge-2026-n6-fraction-sum-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1bfb2ef8ff1c7631c0399b043e94d555357565ec6d791606d4ee9d20b1249b4d"
+    },
+    {
+      "id": "oge-2026-n7-root-interval-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a97eb08ad15c578a7bd511e09281c97786629145f0d819b757dac2782001aa08"
+    },
+    {
+      "id": "oge-2026-n8-difference-squares-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b9ca5c238865833ab9220a2927a3e5c84fe3e699e795b381e8377ae4f3b13dbd"
+    },
+    {
+      "id": "oge-2026-n9-quadratic-larger-root-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "602c37c647e59f90d70bb0eea7a6ac8e93a1bf03dcb16710a3b71296bc744092"
+    },
+    {
+      "id": "oge-2026-n10-not-red-ball-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "915a03df467fcd52bc6a824d85fee003ce60dabec9e13ca9fad8712bf65ad7a0"
+    },
+    {
+      "id": "oge-2026-n11-line-through-points-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d578fe9948eef05ad8352ea4298793912f0f76ad4a60376d6c9b198bde153953"
+    },
+    {
+      "id": "oge-2026-n12-kinetic-energy-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "772e8a2a7d7a8b1edcd29cbc7eb3b56302d919f4c764b9a6142a307b30c4b4f5"
+    },
+    {
+      "id": "oge-2026-n13-integer-in-system-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c496a9ea041816981b170eff01e6a045ede82a624bec360826a9cc82bfc0ea67"
+    },
+    {
+      "id": "oge-2026-n14-arithmetic-term-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c938c6b67379193ab1121c35233a2c0dec90bbdfa736717e4d5808cf2b9075b2"
+    },
+    {
+      "id": "oge-2026-n15-isosceles-angle-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7363bacab1593ba60ea76818737880a5046ceb2b0dbc33e50e22d44506bea860"
+    },
+    {
+      "id": "oge-2026-n16-circle-chord-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "30fe6c7930e95681a8276b0f64b281eceaf58786cf22ccced650fd8159998c6e"
+    },
+    {
+      "id": "oge-2026-n17-rhombus-area-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4452138ea34b29bac99f7b7fd24bfc712fd589293a339fe0d6f50ff78fcf00fa"
+    },
+    {
+      "id": "oge-2026-n18-grid-triangle-area-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7accc9c82b644dfe1c75eb238db98d29e68ad3810fdbf524482381796ac17765"
+    },
+    {
+      "id": "oge-2026-n19-geometric-statements-v10-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "734eb0b943981a7381088863afc377e0316281b8c74e5c52c0e5ae93e1f5d2a5"
+    },
+    {
+      "id": "oge-2026-n20-rational-equation-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ff22604aa7066512842388dd5f281085d60c79ae96bfee4e0c93109760a75b60"
+    },
+    {
+      "id": "oge-2026-n21-joint-work-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1c1a68e2cc7581902683282603cd5c65e1b36da89f38a9c0d86ef0a8980c8575"
+    },
+    {
+      "id": "oge-2026-n22-line-with-hole-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "29ed5170ab856decac054853e78201cc30858b9400a859c096dafc1dcc1a2b00"
+    },
+    {
+      "id": "oge-2026-n23-altitude-projections-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4ae22ee872a03d4fa8cc73da172abb8421b7e63cbc66597ac2ea4bbc05879206"
+    },
+    {
+      "id": "oge-2026-n20-rational-equation-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a0792fc53aaf3d9dd214a70385ea64f8c8eb1257a77c013125e85584c0a44ed3"
+    },
+    {
+      "id": "oge-2026-n21-joint-work-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "35326bc1eef4fbe540bf064e1cae8d681199cf459d0d674897978c52e5aa2e57"
+    },
+    {
+      "id": "oge-2026-n22-line-with-hole-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "57d54ede67dc6297773e422f04ee0eb384fa8e5b35def344cde3fe0a1537b871"
+    },
+    {
+      "id": "oge-2026-n23-altitude-projections-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "face2acd1b5084e6b123a5f74dacb2d0cd844147f95a2ede01c574b32fa40777"
+    },
+    {
+      "id": "oge-2026-n20-rational-equation-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "dc598cac2781760406b6ce3db0d0f61f9f25ee7e8c7b1409c701a984ee634c59"
+    },
+    {
+      "id": "oge-2026-n21-joint-work-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "40ba00f64f5337d24b8dc81495679cbe57b51986d6ccf763a39aa40a62a1a430"
+    },
+    {
+      "id": "oge-2026-n22-line-with-hole-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1a1fcee6985d95673237e96d94d6713229993f4061d6c79a2a64d44aaa48184c"
+    },
+    {
+      "id": "oge-2026-n23-altitude-projections-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e780f7fd4814c91acb7f1af8934544a384ab1c49b3551651ffc134111179db70"
+    },
+    {
+      "id": "oge-2026-n20-rational-equation-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cf5eb78adb9e2c268d0c47142554867c1e705d96051078536d4aa9d5155e6f45"
+    },
+    {
+      "id": "oge-2026-n21-joint-work-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fb63ebde45f32f16687ccac33f140e23096c58da16a7fb1f5fc03b978ef1f81e"
+    },
+    {
+      "id": "oge-2026-n22-line-with-hole-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "073e17f789b97cd9b8f780d14f35ba44ee6cde5dc3a5ca4f947bb6cbbaba2d65"
+    },
+    {
+      "id": "oge-2026-n23-altitude-projections-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "97d18f0465d2387dad3e64e54873fbe4f5d775870e20ecb21633a02cd3f78060"
+    },
+    {
+      "id": "oge-2026-n24-trapezoid-midpoints-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0a816278540fa62676b8869a739cef59fe97a26626eb81291c7b9c7aa5416ae6"
+    },
+    {
+      "id": "oge-2026-n24-two-tangents-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8b5091d28a46425d2eb6fe3310cb24277292d91e7e09f22ae21e10a437501fd6"
+    },
+    {
+      "id": "oge-2026-n24-acute-altitudes-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e6bdcb40903777d672c8a7a6fb36fbe822c83abe24c00ad024ca2f4170e37e26"
+    },
+    {
+      "id": "oge-2026-n24-incircle-tangents-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "29106480160cb2b0aa0d999884e73833b5cabe6a9fb4c63fe397a95544b2b095"
+    },
+    {
+      "id": "oge-2026-n25-right-incircle-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "64b42bf97302b692357f76b102dc08be0837b0e3cb3b4b84070c093dcc7a78b1"
+    },
+    {
+      "id": "oge-2026-n25-right-incircle-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e42c974a5419985a5e1eed1df563bba46fc3fd2b46366214478b8feae5c19041"
+    },
+    {
+      "id": "oge-2026-n25-right-incircle-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5adbb4ef5a271e8855b5859b39d19711ecfe852c0473dd991645e66f944a5659"
+    },
+    {
+      "id": "oge-2026-n25-right-incircle-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7258a9f058010da130487beaac78c6900bc3b7fffedc10566871670316ac42c6"
+    },
+    {
+      "id": "ege-2026-1-right-triangle-area-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8a938eb7cf78eaa39bb0c45c2adb422b3456517b85627759f646ba982da32e5b"
+    },
+    {
+      "id": "ege-2026-1-trapezoid-area-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "81d44f01a1a8e680a24d9af0456f98d3583adb2c03b1093a37dc44fd46c48ef4"
+    },
+    {
+      "id": "ege-2026-2-dot-product-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d09384827d89d1b5c58c2f2fb5132538045d821dd74ef7b5e7788c03136e3822"
+    },
+    {
+      "id": "ege-2026-2-vector-length-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0bb720a8db6553f83a4f42c2d43ed647a51df5b040234d6c5185d24316e43f5f"
+    },
+    {
+      "id": "ege-2026-3-prism-diagonal-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "27b61882d15d820da1c6469a110d000b2b267f0c00056dcddbfc37c7d7306657"
+    },
+    {
+      "id": "ege-2026-3-pyramid-volume-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "047735b59b81154530fe14609a1294374c5aff91fafdc4c1e4f0ddd28167f29e"
+    },
+    {
+      "id": "ege-2026-4-one-draw-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bf83bb2cb67b39abff2a465b9d0743fa9f686f3cb9739b7c4af4b9bf083b258f"
+    },
+    {
+      "id": "ege-2026-4-complement-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c70c0a5dcc9394b8f9d13119d70362be679acbc532e0d808412772b33e843b8d"
+    },
+    {
+      "id": "ege-2026-5-exactly-one-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d2f7a1c6397c5c76f0d3dc66317a18a66a8c35d30679b53f222a4624c3fe6b07"
+    },
+    {
+      "id": "ege-2026-5-at-least-one-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "479f01398c068e11d610c26c603dbb489337d4123b477213208bee682b411174"
+    },
+    {
+      "id": "ege-2026-6-exponential-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "40fd794d96b5c77b1b5d84071f828229355fc64d4c802163b63da8dd4927f360"
+    },
+    {
+      "id": "ege-2026-6-logarithmic-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a484f2411786e9dd26d2246a4f5acf231da228f6d68db35f2bdc0b43f50e797f"
+    },
+    {
+      "id": "ege-2026-7-radical-identity-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "34220d4a89a059ae0d5eb45ba062bffd557a25af23453af9a8f9908eb8d9c0af"
+    },
+    {
+      "id": "ege-2026-7-power-rules-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "dfd06e41e331d2c13de700e4d54963674fb6a1d577d7d54df57fdeead814ffb4"
+    },
+    {
+      "id": "ege-2026-8-derivative-point-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0871d447142081e27822502b64939d67fd36763e2ab6a7685d631c459c528143"
+    },
+    {
+      "id": "ege-2026-8-parallel-tangent-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5d898df088ec13f28a7c14d0234b69bf4b91af5d76ed75467c1d8af3b3ba0f64"
+    },
+    {
+      "id": "ege-2026-9-accelerated-motion-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8f2941b10708c6b1ffbdd7a963e0f9a06fdb0fb357355058abd8407cf0b86f6d"
+    },
+    {
+      "id": "ege-2026-9-joule-law-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "03b44e6043d1f63396580bc09398aef2e592d2b622aac099ee8cef2ee2d5f192"
+    },
+    {
+      "id": "ege-2026-10-catch-up-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0496332b17547380a42c47877af1f6f892e9799fd1036c6f8c8372489d7553a7"
+    },
+    {
+      "id": "ege-2026-10-joint-work-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bf694441e5a7911d91683c0b652a991a229db986c322bc382f7aa43fa29af108"
+    },
+    {
+      "id": "ege-2026-11-linear-function-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ce14de28eea6881eaa930578998b327ba5d5a6699802fdc9a5845dd9d730dfe9"
+    },
+    {
+      "id": "ege-2026-11-inverse-function-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "215c92047c1032e7e034ec6d4a1b561071f1da2322974ef2859c9d433422e21b"
+    },
+    {
+      "id": "ege-2026-12-quadratic-maximum-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "19793d1b45f89d57236e8674c27e3d7239c7cc107d76451d2b675a3111daf36c"
+    },
+    {
+      "id": "ege-2026-12-cubic-minimum-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "09b542336075b68a6ff515fbff0892e41d026aa6b374477199a9fefabadae2ae"
+    },
+    {
+      "id": "ege-2026-1-right-triangle-area-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0889614529c1703bafc5a5c0bdc79706dd185ad84746ba1a7ab104c1946ddf36"
+    },
+    {
+      "id": "ege-2026-1-trapezoid-area-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4c27bc06ca72859a7d04c765e2087536c3c2fb31426f6acf58c69dd67ee6f4be"
+    },
+    {
+      "id": "ege-2026-2-dot-product-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7878f5d55bcddbd6142cb7d696dfb6afefdb7ba81a525438b6cd7a8bce5d3825"
+    },
+    {
+      "id": "ege-2026-2-vector-length-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "839b6d75660f122f7ce29c008761e3d918fd7fcea46c84db1a3a34a3d70c209f"
+    },
+    {
+      "id": "ege-2026-3-prism-diagonal-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "180d409efcab3e4b831aad0c8a2a14c39ef25b31ec8adca6964cd5a100b2e334"
+    },
+    {
+      "id": "ege-2026-3-pyramid-volume-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "90f2b355604cb8abce3288bdeda5157cf115d0e19f6aca68d95fc1a2539e37b2"
+    },
+    {
+      "id": "ege-2026-4-one-draw-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "da60c7ae3592105124abd83ccd7fc6b0b0da79d9c039945d7ecc22105f174deb"
+    },
+    {
+      "id": "ege-2026-4-complement-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4370738761d47c98cf8cbb6e20438bcaf7708bdab0f3f6a644341dc99d839caf"
+    },
+    {
+      "id": "ege-2026-5-exactly-one-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "769c9f5f7d6029c03489c4b1eacc62d38ca2d9925638b88c089319f202804f61"
+    },
+    {
+      "id": "ege-2026-5-at-least-one-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3cddd06949c95e1ef9306610e05a98ed34fad0e96a353e32f5d3da5c6d4c9f3a"
+    },
+    {
+      "id": "ege-2026-6-exponential-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9bdcbc96a307498b5110e6fcc76d9a9dcd11d95261845aae7e20f9ee0faa5e9a"
+    },
+    {
+      "id": "ege-2026-6-logarithmic-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "afbd44f818f6bbe9bfe4f441cdc68569e63e13850a83f7c4aab858e934eb9eee"
+    },
+    {
+      "id": "ege-2026-7-radical-identity-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c147643a00b8ead5adf81d6d8f2631e1ac4d371328b5dc9769fd3ba7d1e35081"
+    },
+    {
+      "id": "ege-2026-7-power-rules-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "65716f026748e31e05e8dd819e619872297b00d3f64638542dc390a2da9062e2"
+    },
+    {
+      "id": "ege-2026-8-derivative-point-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "780f27ab03ee555adb70f7c34d152db2b505b5e4d1b9c7b73bf94bf6bd6944ed"
+    },
+    {
+      "id": "ege-2026-8-parallel-tangent-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "aaf3f4dfce8f7be8706de321a8ac62e38aa0608e1f9cbcc9302dc908148df0aa"
+    },
+    {
+      "id": "ege-2026-9-accelerated-motion-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "26244140f216a1d1d5c511c3f877bc4fe8c332c37a1f1fb6fdadc0439646662f"
+    },
+    {
+      "id": "ege-2026-9-joule-law-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7d506cd28a9af6ab3cafdb04165e48db40a36a27497d6426ecde93a0c5307c28"
+    },
+    {
+      "id": "ege-2026-10-catch-up-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4dfc9705881f3c7f198287bff717235ac27d720c792eb05295f0f3583535e916"
+    },
+    {
+      "id": "ege-2026-10-joint-work-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d41833edbacf3fb1fab7d76ba5c211b8aefab60c895b4b81ee05c5079c46ca88"
+    },
+    {
+      "id": "ege-2026-11-linear-function-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ccb4f55e1f636a9ac5816133e8addaf8aed96a31f8ebcc668f2fb8f7c5d2c271"
+    },
+    {
+      "id": "ege-2026-11-inverse-function-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3eb4d829b2bf0d20f28baa87a6a8ea14cb32d33d7fd5859b1f9573c139b7e61a"
+    },
+    {
+      "id": "ege-2026-12-quadratic-maximum-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "115df80d9aebde8159db1cb2039884981de7a8c3151487f4a3db8f8e12486cd5"
+    },
+    {
+      "id": "ege-2026-12-cubic-minimum-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "62bff87a71d23fddff49cbc4703cd639be1819c6c28bed2d7e10c535cdb41ca1"
+    },
+    {
+      "id": "ege-2026-1-right-triangle-area-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "04c242d712e0118a17918e66495c3bfcc355e3b28f45118a4cc40915cda1ec01"
+    },
+    {
+      "id": "ege-2026-1-trapezoid-area-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "038efc5fa12e50692e04ef990dcf6f86fc11bc7cbadc0083b10321f35cc40002"
+    },
+    {
+      "id": "ege-2026-2-dot-product-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d26d589f4dcf924f439beddaab483dd98f5157b660013361614418d44e9125fb"
+    },
+    {
+      "id": "ege-2026-2-vector-length-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b1941931b410f65440fd8c36e3fb8b61ae1f8a9eaba276961c62f28f13f3696d"
+    },
+    {
+      "id": "ege-2026-3-prism-diagonal-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2c5ad2a951191ff090e5291bda3b5799bbb18993e04d32710a7d2e4051282787"
+    },
+    {
+      "id": "ege-2026-3-pyramid-volume-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4f659c38d05303917388a019bfaa6b8d6560fb59672799eb2f5c9585c311ce2f"
+    },
+    {
+      "id": "ege-2026-4-one-draw-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c716225cadedc49615ea1eb35479f173bc09bfbd8894476225dca7cfca4adbc7"
+    },
+    {
+      "id": "ege-2026-4-complement-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "94ad574ee9f3d7d5b91a9ee35df04a1f83e5afe7ec4c1b116f94eeb4b210dd8f"
+    },
+    {
+      "id": "ege-2026-5-exactly-one-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a1c7dc72d4c1b320f77b892e2330fe8d9aa4a689de06190db4d02c745a493131"
+    },
+    {
+      "id": "ege-2026-5-at-least-one-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "211eba5febb9fd161876e840f36e83fa258d844df257b5ca6d15991d6de7c208"
+    },
+    {
+      "id": "ege-2026-6-exponential-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0397a3141c803556dcb55765c2605a0296612ee7f359c0259cf9e0bbd451e996"
+    },
+    {
+      "id": "ege-2026-6-logarithmic-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9ddcb5420ba4610b0bbea8b14478dae39277d4aa5bdf1b0c5d2e2dc6cc361686"
+    },
+    {
+      "id": "ege-2026-7-radical-identity-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5e54ee1b69e3c3a363da892acff739708e75eb497f18912203f7aa790bf962d9"
+    },
+    {
+      "id": "ege-2026-7-power-rules-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d29c66f35090a74e8e5cb22a080cfba9190bc0d68a693978d80ae2595773e305"
+    },
+    {
+      "id": "ege-2026-8-derivative-point-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bf11b09f74cced4bd300a9c015022c4ad683746091a092e79471c467d5396473"
+    },
+    {
+      "id": "ege-2026-8-parallel-tangent-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "19e84e4002c996e61447318799f1f99dd05c9addbaaba51232fc9b41fe73329b"
+    },
+    {
+      "id": "ege-2026-9-accelerated-motion-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1239fe19933c5cc28eccddac16ff391e8009be7ed730747dd56163c656542fbf"
+    },
+    {
+      "id": "ege-2026-9-joule-law-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "891a92346e5a0dcc5dec3a3ccd286fc8eaa1c54ef1bdf963aa70305334740745"
+    },
+    {
+      "id": "ege-2026-10-catch-up-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "085c953ccb2881cccfd541580c43bfaf5385a7fa9508e1bad3f3421fb9a96b86"
+    },
+    {
+      "id": "ege-2026-10-joint-work-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "00f4b2640259b85f092fc5370656bf21f25adce3a1963a6afa658c2c1ead3335"
+    },
+    {
+      "id": "ege-2026-11-linear-function-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8d540eb06c848ee4eb3f1abd09afb8f752612c96505f04c2eb9be565546865b9"
+    },
+    {
+      "id": "ege-2026-11-inverse-function-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "232ab9b4069032831f9ec6323adb1a6a5b148898fbae2b17e00f4aa4887b05ce"
+    },
+    {
+      "id": "ege-2026-12-quadratic-maximum-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "be48e11dcdaf9ac35cadf684178fafafe28d8b7c65f3b4d3600b42e4938a533f"
+    },
+    {
+      "id": "ege-2026-12-cubic-minimum-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5d7599f9fc128676fedb4deed27035674ecc4eb9a58ad227b6f3c7ede3b12914"
+    },
+    {
+      "id": "ege-2026-1-right-triangle-area-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6d4e3c1cc731206547223ceea5e791f5a1a11a6a87ba37ba9a190e22c8493e26"
+    },
+    {
+      "id": "ege-2026-1-trapezoid-area-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9060ebfd50860510456b94e9be4d6ad860a5888095727e14902db7114aad4b36"
+    },
+    {
+      "id": "ege-2026-2-dot-product-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b64f6da9a4261a2fccb21f672264e12923a447469f746cacb8ce212e394b346c"
+    },
+    {
+      "id": "ege-2026-2-vector-length-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9b249d5dfc169fc4322d5af27c2f4f81332fcaa0a09f95207d6f4a460579d804"
+    },
+    {
+      "id": "ege-2026-3-prism-diagonal-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cf4eabf4f7c027375b47b6477045b1680b14fa437116975637a5dcd1ec47e6ce"
+    },
+    {
+      "id": "ege-2026-3-pyramid-volume-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b333cf2784b3197b1391e1c4c731f59ad653d9612567c17624976788df57668f"
+    },
+    {
+      "id": "ege-2026-4-one-draw-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3013320b46125fc4f6b313c8675fbe467e156e3c6a88712ff2c771ae96d0f8f6"
+    },
+    {
+      "id": "ege-2026-4-complement-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1e2f5698863508bc4d369d2c88914d95bafd06c4c2d5bb78a17a68a9c692e62b"
+    },
+    {
+      "id": "ege-2026-5-exactly-one-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a5c22347342de92fe985715f69dd8889e88d25910de3fd58aad81d52a9b198ad"
+    },
+    {
+      "id": "ege-2026-5-at-least-one-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e94614eef7fc5cd2aefc4a545f99cb9285e2e891522d92d9171628f6dcc58d1c"
+    },
+    {
+      "id": "ege-2026-6-exponential-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c41dc9fc2e3759f6132a55ad149db6bd7b3983b83d5eec60d0455ba5733c070e"
+    },
+    {
+      "id": "ege-2026-6-logarithmic-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d4f8d96c7845e9f22fae218c54ea104308d62b1411e32e6ae606d7cd2bda4218"
+    },
+    {
+      "id": "ege-2026-7-radical-identity-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9417e90f0cd727163de4db91723f9129c6510b452b53755b202dba5389510ebd"
+    },
+    {
+      "id": "ege-2026-7-power-rules-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2841cea87ce242a3c4eab48b5aecaef937451d35439a0889b23efc0d987da0b7"
+    },
+    {
+      "id": "ege-2026-8-derivative-point-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0e5a8de90b8ce1911550d93d7ec815ecdb3c9435d1667f2a38afbfde9b078463"
+    },
+    {
+      "id": "ege-2026-8-parallel-tangent-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bcb097995041d1a3c5107b539eed11dd5eea2128b4bf1b8778b962824da683ee"
+    },
+    {
+      "id": "ege-2026-9-accelerated-motion-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3d8e0b8e5f61f9f6aa204b7b31caf944f0ae4bf0881d6404c95481a1e74b2208"
+    },
+    {
+      "id": "ege-2026-9-joule-law-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "86713d5b2abcf032a908dd993c7380d33a0e8ae5cfaa511c13131ec1cba173e2"
+    },
+    {
+      "id": "ege-2026-10-catch-up-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f09087684ffa35601e74ed8b602fd2602d3941efecdb7496a794027fb65cc6b3"
+    },
+    {
+      "id": "ege-2026-10-joint-work-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2302e8c0674385bac083e66e473595ac25baa57054e874f324abc05aa124ea6d"
+    },
+    {
+      "id": "ege-2026-11-linear-function-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e0f1da2d22b07a69dd9d8adad310f4301e69ac21a07f7897538e522a5cd5daaf"
+    },
+    {
+      "id": "ege-2026-11-inverse-function-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "245c2d1644c3fa89bfccff20816152cda29d4c143dbae089dad629b8a59b937c"
+    },
+    {
+      "id": "ege-2026-12-quadratic-maximum-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6165b5d43d6c42cf8533e40176db8155fbf3817ba1a1b76a7efef9f31605be97"
+    },
+    {
+      "id": "ege-2026-12-cubic-minimum-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "24b6bc2ea617abd92cd4f88df330d1d40d37610bb6a99c4387e9f670a6443ddd"
+    },
+    {
+      "id": "ege-2026-1-right-triangle-area-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a58cd154eab90d3c9654c31ae3775311277cee8d45ab645db5f18ead87f8a1ea"
+    },
+    {
+      "id": "ege-2026-1-trapezoid-area-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d0c36533c257dc34b110bc02606ef05a0083e9130db0f9f4cca4c2b97a39a4ff"
+    },
+    {
+      "id": "ege-2026-2-dot-product-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bd1576368ecfe7fd87c2129205634629db7a8cbff7d2fbb59832483eac48d601"
+    },
+    {
+      "id": "ege-2026-2-vector-length-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9acbf4c8a9d133f766c830fa351c1cb30fb96c3f3642fb26febe3c36c4a3ab7f"
+    },
+    {
+      "id": "ege-2026-3-prism-diagonal-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7dbc343de28510044f317d11b4aef248950279c94378d121fd42167f31816c0e"
+    },
+    {
+      "id": "ege-2026-3-pyramid-volume-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3ec78588f91199473a9b0d9cee4832355bbb28360e455bfce888a7b259e649df"
+    },
+    {
+      "id": "ege-2026-4-one-draw-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "120644c0f7406dc6b7f20897bfb8a3f57e5ce4f09beee0943b02f9c31e57bea1"
+    },
+    {
+      "id": "ege-2026-4-complement-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a25735fb2004c309f3727496b23e85c045b26eed2900fff354dfff4207e20112"
+    },
+    {
+      "id": "ege-2026-5-exactly-one-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "11833f85c93bb45c54e6293b1f877aab31fad66ccd69df90db492ad33a81cf47"
+    },
+    {
+      "id": "ege-2026-5-at-least-one-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5597f73bdc49fcd53cdcc12a9f5823b34cf54b34526cb8071d23a80872578823"
+    },
+    {
+      "id": "ege-2026-6-exponential-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3703370dc547520d393a6ec9e814ab248b3528b5b019b3e20932d36d15221083"
+    },
+    {
+      "id": "ege-2026-6-logarithmic-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a9e3ee19d4bdb8eb6ad0890b1f03a5bd7269eb827dd9097344c65d1312e9f475"
+    },
+    {
+      "id": "ege-2026-7-radical-identity-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c8c7d9a3da96a7c23b14ff21ed13308bdbb542eb08ea400a2c97b20decd6cb3e"
+    },
+    {
+      "id": "ege-2026-7-power-rules-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "974fa4714d63c1d3d8b3be94f0bec02c52ed58538e4e72feed31468e400b450b"
+    },
+    {
+      "id": "ege-2026-8-derivative-point-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1bbe3dd5590a06c2ef5d3c5c4561f76ed808685a296cfcc457a0f2045a0c85b9"
+    },
+    {
+      "id": "ege-2026-8-parallel-tangent-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0c3b6c4d438cb7a68c1f9d7cc29abf84b534a70e3c79076c5936e2595a42a592"
+    },
+    {
+      "id": "ege-2026-9-accelerated-motion-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a757aaa596ff4b6bb5543a2733682884962c60bb6bcd084467a428d027a77cd3"
+    },
+    {
+      "id": "ege-2026-9-joule-law-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "72617dc982169a3695b37b7b9fc10a8f5df6215c1abf63c7f6d425bdb96c22ce"
+    },
+    {
+      "id": "ege-2026-10-catch-up-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e580e7aaa51eab30ef532208fc1db29975f660f1b3804df0023c267e8914da5d"
+    },
+    {
+      "id": "ege-2026-10-joint-work-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "66106e914386693c8dc8314dc888bf4ee0449aa83f44f0dfbce3d77b50b7e5f8"
+    },
+    {
+      "id": "ege-2026-11-linear-function-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ab323b53923384327b34667bd9b94b1fd0689c0b2e30da465ad969008c4b0c80"
+    },
+    {
+      "id": "ege-2026-11-inverse-function-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bdf91e66b2e28ee55560807180ec5eabc073d67c3d01dc4a8ebe28aebe794344"
+    },
+    {
+      "id": "ege-2026-12-quadratic-maximum-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "78740a9244eaa7ec0347b211083dc3ebee26b64f3de22c827b565869e73e3151"
+    },
+    {
+      "id": "ege-2026-12-cubic-minimum-v1-5",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "db9c12568d3831e20c074d462a43dc86b8a025e7266646ba72a37a56ec6ae772"
+    },
+    {
+      "id": "ege-2026-1-right-triangle-area-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ba25dbf8a3c4fac4d78688f90d142db9bd546da1a192ab6c292b3798b407a56d"
+    },
+    {
+      "id": "ege-2026-1-trapezoid-area-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5972c9cffb2961a54aa6e0906fb2ec31cb1498c2a3f2b472ca93f28b065740ba"
+    },
+    {
+      "id": "ege-2026-2-dot-product-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d16a73ca413f069b8ad2f7db17f9d319d900c0038fc0ca81d25b72e0202db0d3"
+    },
+    {
+      "id": "ege-2026-2-vector-length-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3a2eff6323a7af48979ef3e779f3fa9eeec0b0b7ddad5c8b840144b521dc62b3"
+    },
+    {
+      "id": "ege-2026-3-prism-diagonal-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4e6ba500eb1d0218840264c8f3c13231947c41b80b0e72b80a5fba542f3a95c1"
+    },
+    {
+      "id": "ege-2026-3-pyramid-volume-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b054a05d3ffffe0d57c5137afeb91e9a18c07c8dd37ae1939567dd723fef72ce"
+    },
+    {
+      "id": "ege-2026-4-one-draw-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b55539da05bea4355f35ea10ffe70f15e7470ee63b596b5e022c4584d7b72e43"
+    },
+    {
+      "id": "ege-2026-4-complement-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7746ec35e5f2150434a2324df32a906d6e496a95aa608cc3a78da4f5f56529d6"
+    },
+    {
+      "id": "ege-2026-5-exactly-one-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "33bb13c535398333acddb3cdc9fa08ec675edaa333bddea44aa2a1fa1142c302"
+    },
+    {
+      "id": "ege-2026-5-at-least-one-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8c9fffd723b45f999c2f3b52a45cd66fd57f92a588fde666d79431228b293122"
+    },
+    {
+      "id": "ege-2026-6-exponential-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "96818c29d6cb2359340c00e991ed1bf22f92a5eb2ac361ea43694a593e18903d"
+    },
+    {
+      "id": "ege-2026-6-logarithmic-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "070afc80381dedf5fb1bff48d150dabbb93bb471c1317f7f831c9ee4c7130f7b"
+    },
+    {
+      "id": "ege-2026-7-radical-identity-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "961967573f67dc1a90ea62710d215fe5a0c00a307c81b24ea2d9efc7d9c9d75b"
+    },
+    {
+      "id": "ege-2026-7-power-rules-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "70a461444445e199145e9705a234653268f01d54d9de863a7dedf146890e7d47"
+    },
+    {
+      "id": "ege-2026-8-derivative-point-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "71e8b8c17d73d5132bcfd7cfca3f36a8761ee1e755711c9152256d88fe0e62a2"
+    },
+    {
+      "id": "ege-2026-8-parallel-tangent-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "43d6900a766995148b62e5d349a298c427e7892b6cbda3c0b716c124e976f16c"
+    },
+    {
+      "id": "ege-2026-9-accelerated-motion-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6231871f954c9543c5ba0ff539625b5f3dab83ed56cdb22a1a31a31222447823"
+    },
+    {
+      "id": "ege-2026-9-joule-law-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3121c5c82aae917ebba6908d10d0582a9ce9be4571d899640e4f6f3055798bff"
+    },
+    {
+      "id": "ege-2026-10-catch-up-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "112df8c57d24db26f74b24d13c33037eb3696a28e88539ef02ab4c5f4665f685"
+    },
+    {
+      "id": "ege-2026-10-joint-work-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ab60dd3198fcc324aff212d3678898725ff6ed5669a9ac6a44225f8ecd101c7d"
+    },
+    {
+      "id": "ege-2026-11-linear-function-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bb85df7d59d9bc4442f75baac44418f70cd0f9484aa6b89986cce79289613753"
+    },
+    {
+      "id": "ege-2026-11-inverse-function-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "41c8a46dfb06081d5b4cddbd630467832ad65393bc6fa881fccba658c77402f0"
+    },
+    {
+      "id": "ege-2026-12-quadratic-maximum-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "08f7a78281ea2b16c6f928cd16cf787fd3f21e1aa35eb07949ff9c8ad4f57c6e"
+    },
+    {
+      "id": "ege-2026-12-cubic-minimum-v1-6",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8dd89e7477c62229242413726fb00198fae95e716d1593d5649b7eac72d37c3f"
+    },
+    {
+      "id": "ege-2026-13-trig-roots-selection-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fcc3440bf8b3a94ef165858080b87b7542bae77457809cc254ed6f3db48af7dc"
+    },
+    {
+      "id": "ege-2026-14-prism-line-plane-angle-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5a643ff2a45ef88196e2d1197853e219642a33c623b9bc1dc5a023c78c535e42"
+    },
+    {
+      "id": "ege-2026-15-rational-inequality-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4c813719e3152e4ff6efec84edfab3c687441046760f4c940e2302ac0306987c"
+    },
+    {
+      "id": "ege-2026-16-loan-equal-principal-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "da8e1cdfed7ad95cdd08650789e68860f385f7bd7dd10a7b391bbb6db40dfcb1"
+    },
+    {
+      "id": "ege-2026-17-two-tangents-area-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fc3d1825017b0712f97fa5722ba0be9adb7e609f2355fb9d5fd910f5f7be34c6"
+    },
+    {
+      "id": "ege-2026-18-parameter-positive-roots-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "54a1f943854b5b89ce9109dd276bf27b7ed6b5a22a04d7b2099d9f2ff65cdc2b"
+    },
+    {
+      "id": "ege-2026-19-integer-product-shift-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "04b56de1fc166389993bde35681e80a42009d0b9b20aa824d764753042e923e3"
+    },
+    {
+      "id": "ege-2026-13-trig-roots-selection-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "39225999d1235e0aacd0ba21a161c1e5b3aa95f221323c9fbf43d340566f384f"
+    },
+    {
+      "id": "ege-2026-14-prism-line-plane-angle-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "81b45e969725f29b2d4c30fa2fdf5f2cd0a17a97b6a51264bddaa73d92f14fcf"
+    },
+    {
+      "id": "ege-2026-15-rational-inequality-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "146708197374d874a426826893e021ef398a42d262c91a3fb9b4a8b6f05a8ca4"
+    },
+    {
+      "id": "ege-2026-16-loan-equal-principal-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7774718fa8d63727812a375e20134b937f84e90a7ce7a52007450234f9c76b61"
+    },
+    {
+      "id": "ege-2026-17-two-tangents-area-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c08193c1782ad91ae03dee706c8c3562a0e65d8ccb1728afa7f58a98603e363a"
+    },
+    {
+      "id": "ege-2026-18-parameter-positive-roots-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "edffc8f82c284dcc8a9993aef5d760d283f4bca1ab1099ecee53b2d795a8a579"
+    },
+    {
+      "id": "ege-2026-19-integer-product-shift-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9b309d6d3e3be1b2508b1b2ee7ae59f00183dd44e861b6473e15988b7ec3f0a0"
+    },
+    {
+      "id": "ege-2026-13-trig-roots-selection-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "aaec6c955fd329f308f50ab0b2946468da571bbbd10804748d5cd5951a8cc9d9"
+    },
+    {
+      "id": "ege-2026-14-prism-line-plane-angle-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "13fd3488c096fca777e745fb7e0ee975079ee09a7c8b2f6bd437abc5520c5caa"
+    },
+    {
+      "id": "ege-2026-15-rational-inequality-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fc84208aa4e6308aaf27e00b6f2fec057a7d8beef3e0c38b5e87d5d105c3e5cf"
+    },
+    {
+      "id": "ege-2026-16-loan-equal-principal-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9f789d737a07b21f087865a46245216ec24ba8694a8ddd26c0a819a52c23ff34"
+    },
+    {
+      "id": "ege-2026-17-two-tangents-area-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "06184861f58dc962bfd9bbf3ca17f182267d49a19c0524fc658614bc483f49b7"
+    },
+    {
+      "id": "ege-2026-18-parameter-positive-roots-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7157f46cd3e2de2a253918b6de7db0d8d3fc431a83facd5c74892f1e78293aa0"
+    },
+    {
+      "id": "ege-2026-19-integer-product-shift-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2340fe4af61a9bdc6a39a5863d927c3abdff55c4de2775fe163dada637b06919"
+    },
+    {
+      "id": "ege-2026-13-trig-roots-selection-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d1c6bcf893b5ec5019db60be4d03f63ee73a207cdabc77ab895a8058d172c430"
+    },
+    {
+      "id": "ege-2026-14-prism-line-plane-angle-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4a6d12cb76336b746b1d1a8d6ba301e829044fcc4c661f15fee31ccb03773d15"
+    },
+    {
+      "id": "ege-2026-15-rational-inequality-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8467ce8578be5df8e9f1a4d0b3dce9e3d17ca3dcff4ceb22cf5de7f54edf1eb2"
+    },
+    {
+      "id": "ege-2026-16-loan-equal-principal-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d36d74f0e75cea1c3096bad29613211fdd61831e1ae7c26a0aacf660fcf1f3ad"
+    },
+    {
+      "id": "ege-2026-17-two-tangents-area-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fb822880b8e50cd0f6a9c4d46f88dc8fb7b12535d6512f6cdc217cb22cb05794"
+    },
+    {
+      "id": "ege-2026-18-parameter-positive-roots-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7cb1ce76cf8c59b5444dd6c31c11064d4d571bd1e022ea6148c38a08fcad40c1"
+    },
+    {
+      "id": "ege-2026-19-integer-product-shift-v1-4",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "aeeac12143518f45c4f6df71a6e58c9a710fa8b7b7ca2cd03533bc4adc9addb8"
+    },
+    {
+      "id": "oge-6-multi-step-fractions-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5aa7e7d000a0d917b65b28bb631143410492441a104b3f65cbad4869a98a57bd"
+    },
+    {
+      "id": "oge-9-rational-domain-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c2f2d0ae1679ce5b162c872f11208578e0b8cf3ec7fe47ef1f67354478ae1c29"
+    },
+    {
+      "id": "ege-6-logarithm-domain-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e34b529d958d854f8f2f16d23eaffeca05aba776b28b87ee678de340fd67c4d0"
+    },
+    {
+      "id": "ege-7-conjugate-fractions-v1-1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6fd021e0e2006354964d740eb5fb97254c783ee2149eb9e94343634a05272d49"
+    },
+    {
+      "id": "oge-6-multi-step-fractions-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9eb55b3ae0a23eff5fd5f2be081c1fe465f23daa7d78a56d3fc0ebb1619e6466"
+    },
+    {
+      "id": "oge-9-rational-domain-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4768903bda1cdb39824407382d6aaf292098d525645cffb94fb723b837c9e107"
+    },
+    {
+      "id": "ege-6-logarithm-domain-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f796ff62d1e2ed262d63fa39de0b2b542c2c16cd7eca717ac4246ee8ae6bd71a"
+    },
+    {
+      "id": "ege-7-conjugate-fractions-v1-2",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "377c99ed2e2d64434bd767de4626f2cd79e4b9921d448e53ff15a553ac7eff1e"
+    },
+    {
+      "id": "oge-6-multi-step-fractions-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0350ac1078f2eb270d800807ac96eb7328b92b9f48b81535097da607c9b3554f"
+    },
+    {
+      "id": "oge-9-rational-domain-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a58180b8c3749937c2b582c219e68024155793b69028192c1c403e624d7e308e"
+    },
+    {
+      "id": "ege-6-logarithm-domain-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cdd61eb3426890d393e95b339631e170ee542a5466ddc59bc0d11d6d4ff5099e"
+    },
+    {
+      "id": "ege-7-conjugate-fractions-v1-3",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d4df48389117edf54cb7a4854c00a4d46231ac46063cac77f007bddbffdc5ca5"
+    },
+    {
+      "id": "oge-2026-n20-symmetric-system-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "884471bba19fe89770259cb60b5a9e1ee22e768e0f4f6d06dfa39b03fab046b8"
+    },
+    {
+      "id": "oge-2026-n21-return-journey-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "40c3885aef15720c510907fcce7506bf76813b9fd057e7050519b0776686a808"
+    },
+    {
+      "id": "oge-2026-n22-absolute-value-plateau-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "596e4153e33b1be6c85d39ae4bb9ae61963eff92cf753e8a36d13e559c5c046a"
+    },
+    {
+      "id": "oge-2026-n23-altitude-two-pythagoras-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "29a792bb2fe47aa28dc7ee7302aae34eb1a07cca7b6fe80d3751c82544eccc9d"
+    },
+    {
+      "id": "oge-2026-n24-quadrilateral-midpoints-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "3be95aee1e772279cd8ff8b376d521424836046426f155ee42ba87e185e4e216"
+    },
+    {
+      "id": "oge-2026-n25-two-inscribed-circles-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "5b6a4b8c91dfdba2d96857dceb188562fe8c166e4bff0903bb4ddfb00714a344"
+    },
+    {
+      "id": "ege-2026-13-double-angle-without-division-v1-1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "e2d0672c9e7fe44de69e6d9f52b2cdee038cc68ac8c8c6393f720c2ed0dcc67b"
+    },
+    {
+      "id": "ege-2026-14-pyramid-plane-distance-v1-1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "71102902205d69d37308bfe6ec192a81e26e4190228bff9af88735f9245c6d25"
+    },
+    {
+      "id": "ege-2026-15-logarithmic-sum-domain-v1-1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "44637af161656beb8d2851b49d7af3a941f9f117686a83a0568f500114bb1920"
+    },
+    {
+      "id": "ege-2026-16-deposit-with-withdrawals-v1-1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "7b6a403c5aa01b4e270c18a38efa28102a4391db992df06caf4162e07ec8969e"
+    },
+    {
+      "id": "ege-2026-17-pedal-circle-chord-v1-1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "dc8273fda38fbb0760227a9a5847abe4d76a8368c792a3a9ab2332726469afaf"
+    },
+    {
+      "id": "ege-2026-18-modulus-line-intersections-v1-1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "5b745d36ebd67e9e9f76cd1b5351845424c52288ed2afe35e622940a09f66ca7"
+    },
+    {
+      "id": "ege-2026-19-integer-linear-constraint-v1-1",
+      "kind": "task",
+      "provenancePolicy": 2,
+      "sha256": "67c478f363c60741b5588c83d52d8e7184f055a4fe3eeb0d4b197ee6698270aa"
+    },
+    {
+      "id": "base-2026-n1-fraction-product-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b64cd990d048416201783218a2f7ec9ab4533e05653e286f274aa038afb611e1"
+    },
+    {
+      "id": "base-2026-n1-signed-change-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "442bea51514ae32bad57fe017308f3400fac0bd171512e8712133e6a8af0266b"
+    },
+    {
+      "id": "base-2026-n2-braking-formula-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ca38766137497474ed22522ffbba987cb1e5c660bd44250e64ec750e91de15f4"
+    },
+    {
+      "id": "base-2026-n2-temperature-formula-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0ef42086dd90b1f1059ff3daaa192518591b8a3ed3254c5c2d0a3e3bab3300bb"
+    },
+    {
+      "id": "base-2026-n3-table-ratio-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "77f38339d0486400e0c966ccb245f4d1adf14411dc3bed3b12656a8ad77b4e23"
+    },
+    {
+      "id": "base-2026-n3-frequency-table-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "93e0e90826c66a4d5cc771d9d981412b6e6868a0cd3120a71a744ba0b6da5d4a"
+    },
+    {
+      "id": "base-2026-n4-mixed-vehicles-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0a451fa948a3660550743b07407ea40a244270dc0aa36815e776666aa1e96355"
+    },
+    {
+      "id": "base-2026-n4-cutting-count-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e4c730b2cf65d9a7ec8d4ba9b876de2f280c4e78c83c57bdcc0dc873a793992a"
+    },
+    {
+      "id": "base-2026-n5-exactly-one-success-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6ac653c9e3820e80f272f3ff16e75d219cf936367c967730ef0b5921fefe8aed"
+    },
+    {
+      "id": "base-2026-n5-at-least-one-success-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3702eafbbaa127108389989c755c865948f141eb5f9a88196cf279598dcbae16"
+    },
+    {
+      "id": "base-2026-n6-conditions-table-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "04019cca6fbe183464d0698fe2ffca90a3b720174097bc2285e73d5836a9b62a"
+    },
+    {
+      "id": "base-2026-n6-billing-table-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b2f3a9ae39efc0d7216ecaac198c8443991e2aa2ca4679c99952170243942503"
+    },
+    {
+      "id": "base-2026-n7-derivative-signs-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f0cc36b2d863c7bb53a0749f0398a899620ca1425f415c573a40f587a72d9c3f"
+    },
+    {
+      "id": "base-2026-n7-line-value-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "54017e5470ec6ed2b96be87447022ae0657e3029e5018e8f797d97454b356da3"
+    },
+    {
+      "id": "base-2026-n8-sets-neither-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "73bef5df99fad78f05632c720a10ff5a8ec459756f5fc0b79552051cbf31583a"
+    },
+    {
+      "id": "base-2026-n8-logical-counterexample-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "93101bea463013cab141812a3c9e385fa4b1b167236b8cd05d16cd5ceb5b4a86"
+    },
+    {
+      "id": "base-2026-n9-paint-wall-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eee4ccd65cec3211f97975c510a42473ae761c435be0a5d913c30a400cba9278"
+    },
+    {
+      "id": "base-2026-n9-map-scale-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ea102af44e5f297edb1eb6155efd12297d6ff4948ffb4276a8725c7b9a32c7b5"
+    },
+    {
+      "id": "base-2026-n10-circle-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6312be249f7961a0ed4b2ba050cf60381b55c1672fd75bb3f56e4f31d26cb01c"
+    },
+    {
+      "id": "base-2026-n10-triangle-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3520b58803d45930c22ae51b1aed4f08a07447e3656c406783ff4dc67d204bdc"
+    },
+    {
+      "id": "base-2026-n11-cylinder-volume-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cd408dafd588d614fdd0b442d1d6317aae8000296cbec82e4d4a72915d0eabc7"
+    },
+    {
+      "id": "base-2026-n11-cone-volume-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0fd63dcdfc9d63c7511b53dd6ca34e4e1201899874183c76498c863cc45bc22b"
+    },
+    {
+      "id": "base-2026-n12-cyclic-quadrilateral-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "dfe0a9bed7016199bdc8de158761f5dd5af38a8e20b2d3a04cc344d8bff59ac5"
+    },
+    {
+      "id": "base-2026-n12-similarity-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "af8255e6b182cc7593ffe75378d4f585bad3d150f3047adea2b64b8242650a13"
+    },
+    {
+      "id": "base-2026-n13-cube-cutting-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0fd8003786b87d5af08f6b5bba85f32958289af0367f4fb7495efa659f560cc9"
+    },
+    {
+      "id": "base-2026-n13-liquid-height-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6f21770f75f9d9345898a728a3bf7e984da76e294906da030225e187caa9270d"
+    },
+    {
+      "id": "base-2026-n14-fraction-division-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "be91f8946f86855c4ee92eb5d4606ba6ab5a443a76dd0d262c06bd7355250729"
+    },
+    {
+      "id": "base-2026-n14-operation-order-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "090a223584302d0dd816c4f9beb44298879ce634cc2d33415fd8780fad61ee4b"
+    },
+    {
+      "id": "base-2026-n15-sequential-percent-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "449614dd4afc4df907b0d025315377eb795b5a706d3e6bc3b3a0d8ccd1a5e9b6"
+    },
+    {
+      "id": "base-2026-n15-percent-comparison-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "32db7c486460e7763042743d0e7252654c79f2da15f4e3117721128dd6e4e1ee"
+    },
+    {
+      "id": "base-2026-n16-logarithm-value-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9d5070e03ae362c936a800ce3b4b55454022c9fb75e0211c3cb1b7bc2ba46325"
+    },
+    {
+      "id": "base-2026-n16-algebraic-fraction-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "41f4b9be23cfd8329b3ac30c32d511379bd3bc8772429c34a4134712bc967a13"
+    },
+    {
+      "id": "base-2026-n17-radical-root-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2e1aeb70b17ca99ab4c79496943203f212f17872b0901bb8cf38146be6963a3d"
+    },
+    {
+      "id": "base-2026-n17-rational-root-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9b00b9c6b7f6649ff74a3b0ccbea49f5a916ce813f97892814769db001835689"
+    },
+    {
+      "id": "base-2026-n18-linear-largest-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1a81fd7b89c81f2b35ec8708b43e1e00ab0299e76c9cce6a21064659ab468bea"
+    },
+    {
+      "id": "base-2026-n18-exponential-count-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f92e417fdc71c153e4740b93a44fda6692484d913860f457a9963e85f6fc81fc"
+    },
+    {
+      "id": "base-2026-n19-least-common-multiple-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5e41afeca8f6a14bf196091135975ed5029a8081a08896914905e0a35a7dba21"
+    },
+    {
+      "id": "base-2026-n19-last-digit-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a41b46c9a7bbd81b58e59b32ea50f5b511dcbef715b537e1ec53279b02ceb2c7"
+    },
+    {
+      "id": "base-2026-n20-catch-up-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "13636b6fe65c8274bc2284073ecd145303f98877c7d02eb0b1114e62eb55aa60"
+    },
+    {
+      "id": "base-2026-n20-mixture-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f35b91657132c41e54c1458279f53d947f5c7f7aed58843d8414de4b1457cda4"
+    },
+    {
+      "id": "base-2026-n21-coin-search-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d1980aa0a56439119511d2710ab2d1a90db388bce3ac73c57aa47158e3904830"
+    },
+    {
+      "id": "base-2026-n21-counting-paths-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "191fe6347cc65c0297c73b563c1a56ed30aaafa951233de10b57280eb11c1c1a"
+    },
+    {
+      "id": "base-2026-n1-fraction-product-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e6deddc8b8f836b0ab255fab83c2e09cc91618b24c5c14c04b03c79807e6b033"
+    },
+    {
+      "id": "base-2026-n1-signed-change-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "736535d3d0fb986dba014eea13f2fb9182972dca6942e0a2a704b942589a3414"
+    },
+    {
+      "id": "base-2026-n2-braking-formula-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5711578676634289f70790268bb33141ddfe958ea127db0b9b81cfca84015ff6"
+    },
+    {
+      "id": "base-2026-n2-temperature-formula-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a3d61ef03ecb2e15f25aad686a7e3a1cad52fa747b18148a021be8e7fe7efd05"
+    },
+    {
+      "id": "base-2026-n3-table-ratio-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "aa8abc9c6f40a0150ad682f5acb48e0cedfa4eb29d35a4af08dba366f28db326"
+    },
+    {
+      "id": "base-2026-n3-frequency-table-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a0fcbeeb8633b8b625eb097439764a572a9f6bf2b455a308f24e5ba761936f31"
+    },
+    {
+      "id": "base-2026-n4-mixed-vehicles-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eb65d7b9b81614457852a95c6a84420b004a40151bb109311db3fed34d0577e8"
+    },
+    {
+      "id": "base-2026-n4-cutting-count-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "907261c0f18b0c6c8df4ce53a5f6c960e9fa6992dd7084577bc0452257bf3108"
+    },
+    {
+      "id": "base-2026-n5-exactly-one-success-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "33b8add95af03d13df97c8ca155e02438174307a07b4f7f4934391982cd414d3"
+    },
+    {
+      "id": "base-2026-n5-at-least-one-success-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e9dab2e01e314154b3de09b4c4f860ede89590b09c883fc443aaa99f696d8742"
+    },
+    {
+      "id": "base-2026-n6-conditions-table-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8395ccce91147f0f535b93f5209fea39a9a9a9f9dab70aa4523cf58e7d716f37"
+    },
+    {
+      "id": "base-2026-n6-billing-table-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d61fef4a090d3ce37729ae0e56c23dc8eedf4acb259e2d14d67f7406e3c1e113"
+    },
+    {
+      "id": "base-2026-n7-derivative-signs-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d12551118277b89ac3496fee059666a58df0a7d129e00eaa694a777709550203"
+    },
+    {
+      "id": "base-2026-n7-line-value-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3df3a376f9895f94eb158311293df6e21b41e9d74f55c9b7cbce2d755d821821"
+    },
+    {
+      "id": "base-2026-n8-sets-neither-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6bf4a697b10817f3bcf9a179195a8371a6a30dd60e3ef20a693d074486c45231"
+    },
+    {
+      "id": "base-2026-n8-logical-counterexample-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fc9ffc25d52f6ebb0c5fdb76f6abd6e3843e6b661016a115e5b7198006dc1a8c"
+    },
+    {
+      "id": "base-2026-n9-paint-wall-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "39f4e9fdbe8bc472bb7f6cb849b8efe58e9c5ed5094aeb8824039c30c880173d"
+    },
+    {
+      "id": "base-2026-n9-map-scale-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c58b8607722d1d2a0356410aa8617d746aeacda2fa6eb2189dab784e9f820211"
+    },
+    {
+      "id": "base-2026-n10-circle-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3d9e4d4217be947af5c25818b7425e82cec6231f20cf75ff9e8d63b39a4bb6da"
+    },
+    {
+      "id": "base-2026-n10-triangle-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "99a7e66e90dcdc3f921a1fdbb3cd0cba1fefd0d1f97a0f7202ade97c38221cb9"
+    },
+    {
+      "id": "base-2026-n11-cylinder-volume-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ebeff155b4ead6bbe6cc98ace2cb4299be385272ae4e2e93c2e7e27780f54542"
+    },
+    {
+      "id": "base-2026-n11-cone-volume-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f7c12a3932b913411ac2422e28999ca8f753afdda65595d83a3a8c92a21ce384"
+    },
+    {
+      "id": "base-2026-n12-cyclic-quadrilateral-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3a09e0d7ac4c60a4cf31ef608b3faf45b00dd535fa902d8c5d0b8ccbb65efd3b"
+    },
+    {
+      "id": "base-2026-n12-similarity-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7022c7c13370980ddce4adc0a43d15c9c4d25131d529819959054f7bd40a7b86"
+    },
+    {
+      "id": "base-2026-n13-cube-cutting-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "86302f843680f74f1065b29ebaf6a9490741abb9f134cf828fce28aed7442e5a"
+    },
+    {
+      "id": "base-2026-n13-liquid-height-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "caa08864bb4f4b20c3e16f53f390c18cb2bd2fe696c6eac05811b9767caae4e1"
+    },
+    {
+      "id": "base-2026-n14-fraction-division-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d1449268165a334838cd1702d62a5fb7977230642e8ede7be5d679e5e0b8a8c0"
+    },
+    {
+      "id": "base-2026-n14-operation-order-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a2da43ecf1ef75da36fb05b3023589ec5129b5174a3564cb08245ccdbf92e6f5"
+    },
+    {
+      "id": "base-2026-n15-sequential-percent-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "84843f2873ea25864b2636b0097349aeb6c8c470db8684691e6b5be703a98a4e"
+    },
+    {
+      "id": "base-2026-n15-percent-comparison-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "db11856c131504ff3c44888125a1c2a7b6ce655575b14883b4ee5af1be7282ce"
+    },
+    {
+      "id": "base-2026-n16-logarithm-value-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6cf2a89df9f5ec6d841705162664212ec3691327efecb106c85601dfd2bc5fba"
+    },
+    {
+      "id": "base-2026-n16-algebraic-fraction-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c74572ba3b7fc2d2340487d622b5f15ec0fd55acc1014457bde6c7ce64e76699"
+    },
+    {
+      "id": "base-2026-n17-radical-root-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1f6c8ff11a7f9362e8b5bbe3cd15ee5b3dbe347070885ed66613c53d44d09514"
+    },
+    {
+      "id": "base-2026-n17-rational-root-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7c4fda80995be655cc737f4359988976588dc68b26c5cefcb3740b78ea474b2f"
+    },
+    {
+      "id": "base-2026-n18-linear-largest-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8e7cbc9b3d2fe6bc4f709491049f89209c95e82be66c1b6b2266e228f510ce59"
+    },
+    {
+      "id": "base-2026-n18-exponential-count-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e9636b99f2e80286155041e23f3b746a9412fdd578b08d83eeea9d3a07ced972"
+    },
+    {
+      "id": "base-2026-n19-least-common-multiple-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ab6b853bcd1f85a0ac79e1a787dc37521051729ba418c4256bdbcddd87f98244"
+    },
+    {
+      "id": "base-2026-n19-last-digit-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a9df892b81401f7554111408435bde9323f41c42243d1f2f03ef8abb9fa07880"
+    },
+    {
+      "id": "base-2026-n20-catch-up-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0b85506af7f16b7a980d7c56c9d099baee34835764520c828e90526e31a61d46"
+    },
+    {
+      "id": "base-2026-n20-mixture-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a4ae5e2145584f6e3adafeaee2e446f08fc7ea02e108e0ee35364af5d4ad1930"
+    },
+    {
+      "id": "base-2026-n21-coin-search-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "87c28e49dd80dd8dc47836e7ed0ceea2ff326a8e5db415475df756a845e85be5"
+    },
+    {
+      "id": "base-2026-n21-counting-paths-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d552320e96912c77415713e95e6f4de8cafed42184325a6edf5d179f180a372b"
+    },
+    {
+      "id": "base-2026-n1-fraction-product-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0ca7581fb2d219afb78e68346d3402a26f05e8abe7c7c30ae8c1de74b0ce3633"
+    },
+    {
+      "id": "base-2026-n1-signed-change-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2e23197d660e1f8f2a59bfd2908ceb1823b7198d63b21a2b70d96e24924bab43"
+    },
+    {
+      "id": "base-2026-n2-braking-formula-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "74933cd251dabf016c8216f31fd3f83bf629c4b66c4b7d5ba8d72616f580843c"
+    },
+    {
+      "id": "base-2026-n2-temperature-formula-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1e41767b9dee28cb0a211527eb484a4d1908caa4887a0b9d922dcdff1b94edab"
+    },
+    {
+      "id": "base-2026-n3-table-ratio-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "519595176f78af60ec9cf5731dc8c3937bedcedc11d3aadc6d099822de46ef30"
+    },
+    {
+      "id": "base-2026-n3-frequency-table-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "049a788876dcac0f8c8851e20598a5f71bfb3dc477043a9fc1ce4edc8dd2576e"
+    },
+    {
+      "id": "base-2026-n4-mixed-vehicles-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e9c5d6f7ea25e934ed55a7db1d0bb3f16118e4723295f1febd4c1306fdfae0b3"
+    },
+    {
+      "id": "base-2026-n4-cutting-count-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9658d78c301ec9d98d234d55790ac9c07429e896372aa8978f4ef10341c645cd"
+    },
+    {
+      "id": "base-2026-n5-exactly-one-success-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c8bbcc26ffa83809241f82ebb109fcdde5b463283acd569d014d77c3766f9111"
+    },
+    {
+      "id": "base-2026-n5-at-least-one-success-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0d6ea47821b5d626e0d9f90b978a2bd2ced3520fa11c230c73321f8a08343299"
+    },
+    {
+      "id": "base-2026-n6-conditions-table-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8bf60f0315a5a1db9e1249a7480d1eb38f2827784e4aa3e6869341f3135803e0"
+    },
+    {
+      "id": "base-2026-n6-billing-table-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4475b7cc66f4714d2af2f1cab064fae53d4d3bc2d9ad161d45c04396f7499eac"
+    },
+    {
+      "id": "base-2026-n7-derivative-signs-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "76fb35a9088aaeded754d3e04e03753b3b73e4d79a8e4cf42ac6d4cdaddc9941"
+    },
+    {
+      "id": "base-2026-n7-line-value-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "99c3354d9c1e9ff62d2c965f4cc64c410a9c1f9af6b62b07e2b5a87b390e3484"
+    },
+    {
+      "id": "base-2026-n8-sets-neither-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "345f15c50463a5f39854fbdbce44cc9bc2a210829be5ac560b7a6102e792e0b5"
+    },
+    {
+      "id": "base-2026-n8-logical-counterexample-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7672ad5afb41d41df6acbf03f94d96884a4293f510c2d1ec4d976b3ff2fc0e33"
+    },
+    {
+      "id": "base-2026-n9-paint-wall-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e3bade2f74676bdc595b54ae19b5391b3c86e84dc0248274ef1fb0f5967952db"
+    },
+    {
+      "id": "base-2026-n9-map-scale-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3940c27ad087811d91ac4bef155842764c73388e75a8bbe27e99f6b5bce0e0cf"
+    },
+    {
+      "id": "base-2026-n10-circle-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "47e635fa9205e23c31324f716548af6450232f2b777eaff49894f4694b5ec481"
+    },
+    {
+      "id": "base-2026-n10-triangle-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2f5934ee463a72a039da2cf221db65fae810f5e1f1ee7a2dacc9b42815a99e6d"
+    },
+    {
+      "id": "base-2026-n11-cylinder-volume-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ca37a83d2f408138efe8338075f95b62b82e57abb2de06aa64a7f4c860f48894"
+    },
+    {
+      "id": "base-2026-n11-cone-volume-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8090742deca0d439cbc3938831d00296a8899232706cef80f82769f3985e6302"
+    },
+    {
+      "id": "base-2026-n12-cyclic-quadrilateral-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "776af9b530392406a48401dc0d8c00a712b5e7c9646bfda281e32713f27376cb"
+    },
+    {
+      "id": "base-2026-n12-similarity-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a31e51ee08321a6e18c2468dc99e63cd9cc698e54131d025f55963e768d670d0"
+    },
+    {
+      "id": "base-2026-n13-cube-cutting-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a9501a33ba5f6a8f7ae215ea6a08f0015a0a28f79a93ff547e057096fbadf5ee"
+    },
+    {
+      "id": "base-2026-n13-liquid-height-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "83e942c0041932a99ae2bc012a072f55463207c9b7b551ea8dea4cc033d704a4"
+    },
+    {
+      "id": "base-2026-n14-fraction-division-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8a66678b50aa4b8d1b7de5eab8fbbc2fa9c29d7b67810ce2dfd9437ae2b8da82"
+    },
+    {
+      "id": "base-2026-n14-operation-order-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fbb3617ec3f462c34709230cc5a6a834220633fe324e62114ba807359abcd62a"
+    },
+    {
+      "id": "base-2026-n15-sequential-percent-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "86060901f018f52e29efb8061d1d202cd61d1e725f3298b7e804713f2a677024"
+    },
+    {
+      "id": "base-2026-n15-percent-comparison-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3b04bf2029a819503657e9a9cd25faa3285fd7c4dc5a89ce39242dc8a0591287"
+    },
+    {
+      "id": "base-2026-n16-logarithm-value-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7b198ff3edad0681b4e9a95cc7f99ce150bd4b73f139f464e5a2396cc82128b3"
+    },
+    {
+      "id": "base-2026-n16-algebraic-fraction-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ad69c7eadeed27f50429b7ec0e6b0ee89e02431612c3b0123df294e2380baed5"
+    },
+    {
+      "id": "base-2026-n17-radical-root-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "838ee079a0e888055be3079441c2e0ecdf7acd95b952c9bd26140a499a7c6ea1"
+    },
+    {
+      "id": "base-2026-n17-rational-root-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5e99e74b8777e255c8462a137d98e2243a44f5e571b18875a7b61f0016bb4f73"
+    },
+    {
+      "id": "base-2026-n18-linear-largest-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fb930ce833cd1841ffd065273d447742f236bba7cc0205b2dc64f2734d1ebb2a"
+    },
+    {
+      "id": "base-2026-n18-exponential-count-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b8211790fa6ed1d9705b43f6f246def242e14b1f6e0d31b764cbf5f3d3971ed5"
+    },
+    {
+      "id": "base-2026-n19-least-common-multiple-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "06a6971dafc6aa7171ebb28d2814f279b3cc7f62b870837d9f5460ab058fc28f"
+    },
+    {
+      "id": "base-2026-n19-last-digit-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "31ead145467cfa5c8ec1cf2eb43770cf34035819f5f33b6032e81780fd3b281d"
+    },
+    {
+      "id": "base-2026-n20-catch-up-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "47fe95fa8f84e492d764bb7aa94cf2f65b410f2dd99ec32d7580dc0a25baa1dd"
+    },
+    {
+      "id": "base-2026-n20-mixture-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "49b0668bb9b14d5f4febf953cf480e6e2d66c1a47850b62e0572d310f1001abd"
+    },
+    {
+      "id": "base-2026-n21-coin-search-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f67e69d2225f8c74942f43602c9aba2d1cda559efdf376fc756d3aeb11c9ac1f"
+    },
+    {
+      "id": "base-2026-n21-counting-paths-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8884c9e402ce0ac72872c836f13f7a6470d78caa4e09f72614b684afc398f2b6"
+    },
+    {
+      "id": "base-2026-n1-fraction-product-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8f34c6612ec4da7e2ff76643ee0bc3c67e92ae279b4b6faa05247048c578f900"
+    },
+    {
+      "id": "base-2026-n1-signed-change-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0ab232268eb69158f79cd389cde00859c6782471afcee70a59ec04de70b691bd"
+    },
+    {
+      "id": "base-2026-n2-braking-formula-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e8cf44e67b1aa2b1dfd14bd525c1f84aedf828f54619831cca22cd0f9d8ae26d"
+    },
+    {
+      "id": "base-2026-n2-temperature-formula-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "199f05cd69b5d65654768a9bf4f59d423b86a0f122eec6989885c8fe2986dc56"
+    },
+    {
+      "id": "base-2026-n3-table-ratio-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f1ab82e190a0b1f50d649e9050998ca131d56512d991e07a50295aa385be8f3f"
+    },
+    {
+      "id": "base-2026-n3-frequency-table-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bf135201e516e019630d68a5d79acb4d94aa5e76ad54ee5df4572ddd29bb4334"
+    },
+    {
+      "id": "base-2026-n4-mixed-vehicles-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5a1559a0a587ae6005e6cf7c43729d088891990578841b2b054d768de0bd0e95"
+    },
+    {
+      "id": "base-2026-n4-cutting-count-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "834083efac8a19edf2eccee976196ed824dc3942808d5172503f4602e17c09fd"
+    },
+    {
+      "id": "base-2026-n5-exactly-one-success-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3801f45f2dbf5213dd5539578e8acd755a9a1495984b09b8328551ed044adce2"
+    },
+    {
+      "id": "base-2026-n5-at-least-one-success-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a54a567c5d0fd29256dd58683ae0015f3ed3fa8135b1d88359a878f4094635f9"
+    },
+    {
+      "id": "base-2026-n6-conditions-table-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3092020c71610d0ee8e76beace73af3dff265f5f471ff2cb2f64a76f7b0049a8"
+    },
+    {
+      "id": "base-2026-n6-billing-table-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "548f7e12056426b4a0727b62d30ce53c9194780a99130bba6745521c41a53554"
+    },
+    {
+      "id": "base-2026-n7-derivative-signs-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "37bc79581012e3faac5c4d04f764b8c86d8fb11b84fae25338405e99a7e5a612"
+    },
+    {
+      "id": "base-2026-n7-line-value-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "639fa1600b75771edee7abf677886ec4777264607b7e732dff664ca9034eade2"
+    },
+    {
+      "id": "base-2026-n8-sets-neither-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c1bb87d2886e90daf98b029559be8d8ca8434debcfdd3f760e83261e2a2ef6ea"
+    },
+    {
+      "id": "base-2026-n8-logical-counterexample-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5d98ce9c88522520546bcd6a52fcc55fa88d431e458f46a3a95e0e6c3f98b44b"
+    },
+    {
+      "id": "base-2026-n9-paint-wall-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "21f966b4213e569254f753d12bc807564a96b2862c4d8c97a9827863b1ecc46f"
+    },
+    {
+      "id": "base-2026-n9-map-scale-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "11236dd7e092dde240f766edf60c424f9f59adeef38b66de5daffba6cb2fbcf7"
+    },
+    {
+      "id": "base-2026-n10-circle-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "39630818d39e120add38537e9de3be444b4e83febcf44a982f406133756952c6"
+    },
+    {
+      "id": "base-2026-n10-triangle-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2c57b9533d0a0eb083ca2ba1bfc01de4fb541a2f7f1e7156acea57bc34bb7321"
+    },
+    {
+      "id": "base-2026-n11-cylinder-volume-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a13a0f7a6052d145d9cb12353d5960309dd4190f603a76292a131c0feed8a8c9"
+    },
+    {
+      "id": "base-2026-n11-cone-volume-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "11c5961d234eb9d4aba834ecf8b59d20f21276a91d7d30cedd1cede17639130b"
+    },
+    {
+      "id": "base-2026-n12-cyclic-quadrilateral-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "70315163e4497cb00ec36487082a758c81774c8384917e6765ea4a6a5591f31b"
+    },
+    {
+      "id": "base-2026-n12-similarity-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ff092a6aa95f8f1f0303366a2eebe5af6fce60294b2b8469496498b6d355ef86"
+    },
+    {
+      "id": "base-2026-n13-cube-cutting-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "96fe1d709cd44d9811fd50e6b5d8e59d6717040b1f92fc8ee06feb80a08cab7e"
+    },
+    {
+      "id": "base-2026-n13-liquid-height-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6a17ae8970a313ed00eec56630bc8d5804897437e706c3169dd77e55fbf53680"
+    },
+    {
+      "id": "base-2026-n14-fraction-division-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8726157cfc3789fbe7c176c4259861a665593cf13d64a716f3092ceebc183508"
+    },
+    {
+      "id": "base-2026-n14-operation-order-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "676435314696fa4280f2d618cdc5dc0cea336bc8763290e4c8ae3901732517ce"
+    },
+    {
+      "id": "base-2026-n15-sequential-percent-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "18ab2380851ebf0e48ded32407eceb0ee6e1f6d0383d5da0a5daa3ae6d497a4f"
+    },
+    {
+      "id": "base-2026-n15-percent-comparison-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "615c99b25708e815e2c24e70f2551712b35e430a450c634a674885f1fe23ab0f"
+    },
+    {
+      "id": "base-2026-n16-logarithm-value-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0c5a5681174b0895d8340e53078bb45d131e7ea7148910a62e53c9e5fcdfe62d"
+    },
+    {
+      "id": "base-2026-n16-algebraic-fraction-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5ea255972b16a92f3d05edb78efc0ebbb3360a4dcd233d5d6f0e27c21947a04f"
+    },
+    {
+      "id": "base-2026-n17-radical-root-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cb2c1d81343523e71bddd2d190d95e50e96da98adb21650c251c63234d46970c"
+    },
+    {
+      "id": "base-2026-n17-rational-root-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4978a96d70a6ad5b40d458aae5b16d0c453ac6adf89ecccbe5e1430676ce9845"
+    },
+    {
+      "id": "base-2026-n18-linear-largest-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2ea5d484ec88b21f9119cf755f80f8d66c36c748b9cf3ad28a0528f66b332232"
+    },
+    {
+      "id": "base-2026-n18-exponential-count-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f4759f1b8afd1399d46966c9ec6d3580cd96bf53d9bc9211ffa058bc3562a461"
+    },
+    {
+      "id": "base-2026-n19-least-common-multiple-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c72d5118cb3b1384868d413d700e55e3033cc7f7c1910d1c51f4fa9eb8c69f4c"
+    },
+    {
+      "id": "base-2026-n19-last-digit-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "153a73a5aade5feee35f97a6175d73d5a619dc717b94763549304c7ea682b396"
+    },
+    {
+      "id": "base-2026-n20-catch-up-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "de8e97e76d4f23dcf55a2db21440a115d55cc1625b02ac8974d01ff4b7ccab46"
+    },
+    {
+      "id": "base-2026-n20-mixture-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "22210b1987f0ac8d2fd0fd5d0750b8b7adc7d2e5b3eb014ece237292ab2ab034"
+    },
+    {
+      "id": "base-2026-n21-coin-search-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3dc1704d4508f8e62ed2ff40fe9e6e5d76943cfa0c1d15895a4a0e552d0e911b"
+    },
+    {
+      "id": "base-2026-n21-counting-paths-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "39239c0ff411789ce1d21e58305e31551608af6743265058d810befcddbbb6d4"
+    },
+    {
+      "id": "base-2026-n1-fraction-product-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "007fb4f13ed8f31ce64909f51cb43625fbc64d43e85f87a4a2b16ec0f03de30d"
+    },
+    {
+      "id": "base-2026-n1-signed-change-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6f19291f1d616ff6985f7f53564bf82551a24e7abffee2f39482c52c3fea4292"
+    },
+    {
+      "id": "base-2026-n2-braking-formula-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d94e68e1e654d41ba0656897df35349b6b0ab88a66fb0a8300977b031edcf2fe"
+    },
+    {
+      "id": "base-2026-n2-temperature-formula-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "248702fd9080489d1d948ff76ab27c68cf1481a215dcba9b5e7b6ebda0cbc3bd"
+    },
+    {
+      "id": "base-2026-n3-table-ratio-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a1cc1c853c2a0074baec99c32c1e8e846c1f0e12bc337798292951fc41ce3310"
+    },
+    {
+      "id": "base-2026-n3-frequency-table-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4b79a4d904d693657c7a3a8327d820e5f113b897abb70409e40e7a590570d477"
+    },
+    {
+      "id": "base-2026-n4-mixed-vehicles-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8da02421493f9e2047d1640fd341c89ec9d5b32e5fb92d70b314cddf3687a233"
+    },
+    {
+      "id": "base-2026-n4-cutting-count-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f812c27069fdea636c0fe9a77effb72ea23b1a7db58acd57a3c7ae06512e4e12"
+    },
+    {
+      "id": "base-2026-n5-exactly-one-success-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "41d862d5dfcb731c3922ac0d44992d2e756e12f36bf0e3d00508e92b2796332f"
+    },
+    {
+      "id": "base-2026-n5-at-least-one-success-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2a6d5fc02f83ea3628accb3254125153604492a8f6af63d63aabb631e88e0931"
+    },
+    {
+      "id": "base-2026-n6-conditions-table-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7a9f9b8873c3ee286c1c5aa9b04348782efaa74cd95c9d79794d010bd5ef8736"
+    },
+    {
+      "id": "base-2026-n6-billing-table-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f3ce3e519bac8876218887ab53017387eb208fa3b2f9eaff4fdbd433a52f401a"
+    },
+    {
+      "id": "base-2026-n7-derivative-signs-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e1efbfaeea1287c18ecc6c96e3e25777b7aa86b17ff8455fa32d9023d95cc5c1"
+    },
+    {
+      "id": "base-2026-n7-line-value-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3b6062ba1924178223edc17bae3b162e4c601fc2d7dbd856c8c3eafb496056b1"
+    },
+    {
+      "id": "base-2026-n8-sets-neither-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "741b631b37f7d86e99352d10961a3cfed6cfc0b8c067021965f880092a73cd80"
+    },
+    {
+      "id": "base-2026-n8-logical-counterexample-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5eb37712573c8310bde6e9f7eeb2dad46591ff136dd934d7167140326acadd51"
+    },
+    {
+      "id": "base-2026-n9-paint-wall-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ed554254df3812dd4c5785f00e9c3f7bd084dd176e89f26f705da8bcc342e36a"
+    },
+    {
+      "id": "base-2026-n9-map-scale-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8c080e335218fb6e9c202895b5e51848af2ce3df740b790b35689ce6c14c8b30"
+    },
+    {
+      "id": "base-2026-n10-circle-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "449536131f641f5fc3463b493c806f069cae9a9a45730289e36970b9f56c3e25"
+    },
+    {
+      "id": "base-2026-n10-triangle-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c5e7c1c63ee4698ccf58ea6580631c9029cbe6544ed28804721e5391d448c2fd"
+    },
+    {
+      "id": "base-2026-n11-cylinder-volume-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9c4e1f2d480270fe062b44b244bd5b1e07cef31282b91c741a72f1e6001dc837"
+    },
+    {
+      "id": "base-2026-n11-cone-volume-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "28220d14257cadb37d829df6f080e768926a320425ffe22ed52f2248db7d435f"
+    },
+    {
+      "id": "base-2026-n12-cyclic-quadrilateral-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "77344fb440a0a86aa2f0008942ecd4b4810762d0837e13145a208fb3cf947247"
+    },
+    {
+      "id": "base-2026-n12-similarity-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f2d80f647f706236daab01c2087241988fe59dc741ee4e32944d5b5d5936ed23"
+    },
+    {
+      "id": "base-2026-n13-cube-cutting-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c9a683e1db62792941dde399e2def24838f6216431f23e01c63f1382482c07c4"
+    },
+    {
+      "id": "base-2026-n13-liquid-height-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "00a840b88cba55aa24a0a2dcc02935e7cbd2510a1a579d09d4f662a53d0f26eb"
+    },
+    {
+      "id": "base-2026-n14-fraction-division-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c8bb7f1b943e83b989510ce580ea490a5d6477c460c010b71285d5642f9ac4bf"
+    },
+    {
+      "id": "base-2026-n14-operation-order-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f57688d1e0e678822296b35745e5069babedbc6a3fefcf3d5470819b1d3e6e6e"
+    },
+    {
+      "id": "base-2026-n15-sequential-percent-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "224f1cbc12fbfb401c5c2cb651a20923df9c3788733cc3de2021ed017301c4ea"
+    },
+    {
+      "id": "base-2026-n15-percent-comparison-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5a4491ec01523d9c28d3858b0185e19a9d317d2450df9fa6632dbf94f5d0a8df"
+    },
+    {
+      "id": "base-2026-n16-logarithm-value-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "addc64a548ab916f1e09d6f694884c495f6df373cc88d095dbfadb390b8df0d5"
+    },
+    {
+      "id": "base-2026-n16-algebraic-fraction-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1d7419d1a5e9f75250d3ec99b9c17d33003816590e8ab46d6aa1473ea259ca2e"
+    },
+    {
+      "id": "base-2026-n17-radical-root-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9f5ac5abb020ffdd3e65261070add216d7b14cacbfa0b375a7ca32538eee2792"
+    },
+    {
+      "id": "base-2026-n17-rational-root-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "beea8808732a1ffda45196199a7b45c9bbb6d3fc17a947978149214ae75c80a2"
+    },
+    {
+      "id": "base-2026-n18-linear-largest-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "40dff2fb94f55987ce38e952aba40d62dfda49981fa073af73229cc5cdffba2e"
+    },
+    {
+      "id": "base-2026-n18-exponential-count-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2dd2e51042ab8d3421a7dc4afc8dd447b8cfb081808c33543038207e1f20ab4f"
+    },
+    {
+      "id": "base-2026-n19-least-common-multiple-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3bf9b873d7604f0673feaac899158b0c63a8b4d79bbf446a76f0e37d018e29c1"
+    },
+    {
+      "id": "base-2026-n19-last-digit-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4f5043b3739178ce617a4e7ba97b714c03b74ef8edaf12495cbddfb66c174669"
+    },
+    {
+      "id": "base-2026-n20-catch-up-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c13806cedfa7b3f7113dc8fcc8461118cebe58f9fd57be1669aee65a30b9c80a"
+    },
+    {
+      "id": "base-2026-n20-mixture-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5a404c784727b3cdf5cc3826f0609ebf14bf7d91dd5cfe63d77d2c1c7c6bbfae"
+    },
+    {
+      "id": "base-2026-n21-coin-search-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "65c0e6c695d51803dbf692a9109ff8920bdf2bfdb46cef61cc0505f224ffda3e"
+    },
+    {
+      "id": "base-2026-n21-counting-paths-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0c3b1a30cec70b73450c7a88c5169bcd3d11939aadcd9f8e33fbe064917e8ce3"
+    },
+    {
+      "id": "base-2026-n1-packages-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d3ce4f58ffd2c6d01df425ab28a6283dd3d0a3fdfd27425e10f58d3e2927942a"
+    },
+    {
+      "id": "base-2026-n1-time-units-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ebed142a5679d32b3395fc0144a60db279c246359c76b4734f2a4a03a209eb63"
+    },
+    {
+      "id": "base-2026-n2-tariff-formula-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c4522e77c84cdcef410e8f8f75aab31fb4b085133b7451c0df891a091c5c5601"
+    },
+    {
+      "id": "base-2026-n2-power-time-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4c633ee944cb6f969240d8f48fb0fe7ce72abf242768fd6a23d89c9861c7c830"
+    },
+    {
+      "id": "base-2026-n3-table-maximum-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e308c43997c061beb0112eeef7235bb1aecd5fb2cd674b97f2e36d7a94016980"
+    },
+    {
+      "id": "base-2026-n3-table-mean-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0de6f784751cf8872c3a38f479bcd178edc1585f87c381cac07f512014703251"
+    },
+    {
+      "id": "base-2026-n4-roll-cost-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fc995cc0fb6a05057513aa2f88090a78a7fada51a5568b4287dab6c9d78767e8"
+    },
+    {
+      "id": "base-2026-n4-maximum-purchase-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5a2065f66aa28560889b52f45db493275afeb72b53a0e5486ce146a651427229"
+    },
+    {
+      "id": "base-2026-n5-one-draw-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "70f8ea5c694d5ea20317a0b129b72fa0af37956133b91e295fe13c84e1684a62"
+    },
+    {
+      "id": "base-2026-n5-complement-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4c304f6af0e578c5b49fbd5ae078f7d5b20c5d838ab8764d760c190f936ef3a1"
+    },
+    {
+      "id": "base-2026-n6-tariff-table-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "134c7b4f7aadd793d27e950a4edcaee0f3a11d092fc85bfeb370f95d141d52d8"
+    },
+    {
+      "id": "base-2026-n6-transport-table-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b1f1bd784c8752fec0b33097172158aef78fb13691d6ff1ea3fca596120c123b"
+    },
+    {
+      "id": "base-2026-n7-piecewise-graph-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a684bc9d961a8013f826abefb6d8905582f463bf70244c61e3758c3e2dc780ee"
+    },
+    {
+      "id": "base-2026-n7-tangent-slope-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "280b75df8d6540333b00784b13ef6f320141367d7195b369e567cd26fb5ea094"
+    },
+    {
+      "id": "base-2026-n8-sets-union-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2fefbd82b2455ace38745eeba75acdd5ddb1dfc20d953ab520ce67583f3fabce"
+    },
+    {
+      "id": "base-2026-n8-logic-count-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "193c505b0e89b4ad5c9e1b1f938d410b4b12f35a61d6db2a2e1c3cb878f6b6d1"
+    },
+    {
+      "id": "base-2026-n9-floor-tiles-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "921544868215fa9e5fc20e26d84bfe77ee886a13c10b8463341b931d9e4b3f02"
+    },
+    {
+      "id": "base-2026-n9-ladder-height-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a576b974d0e3b5a2537ab18cf868187478c6d45f0a9b7621bc6c72d5db193448"
+    },
+    {
+      "id": "base-2026-n10-hypotenuse-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5186cf5bcb0dd40eaed370bf8db317818c9a640fad225302d20e821a97c81637"
+    },
+    {
+      "id": "base-2026-n10-trapezoid-area-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "516ba96926c816fc3310fe3789be72d4bd34ab43f5cea5c4e55d689f24ab4fca"
+    },
+    {
+      "id": "base-2026-n11-cube-surface-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0823d78336e16783a88fcfbe8108dee0af052d87e6efdd3de34091068437bd9e"
+    },
+    {
+      "id": "base-2026-n11-box-volume-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f4ecfdaba88f32f394eeacb4e45094dd333501ebadaace8c346a950948cc232a"
+    },
+    {
+      "id": "base-2026-n12-isosceles-angle-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "41268301d9dee7f3fb49bd5d99408ec28658a4371847d828cad40bc3bf4c6df1"
+    },
+    {
+      "id": "base-2026-n12-similarity-side-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1bb280d9884b19f382859ea894676a40434854dffd61b29ff59e3e67b63e379f"
+    },
+    {
+      "id": "base-2026-n13-pyramid-volume-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "865332645cb3fe3779d49926c1dd3e22e7b722ecf34b864b5596c5c0d8886976"
+    },
+    {
+      "id": "base-2026-n13-box-diagonal-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f8b108b00db82e22b8fb157eab028ed895448e85465a226fcfe445dd761ba0c6"
+    },
+    {
+      "id": "base-2026-n14-fraction-sum-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "87fdee08e992e617a5cff652794491783464651caba0e9fe888a932a22d44155"
+    },
+    {
+      "id": "base-2026-n14-decimal-difference-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "72460d1504e4122057c9c6f744ffb3dba20a3fc7bad2bb6abd5d47d0a9017dc0"
+    },
+    {
+      "id": "base-2026-n15-discount-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b4d6594582195ac0188a3054c1ec2ebb3dac310e247a92b3f43b23d745d388e8"
+    },
+    {
+      "id": "base-2026-n15-whole-from-percent-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "81abdb90c86ad433efeb8f77210442a94225361415adcd86435dea9226b0284d"
+    },
+    {
+      "id": "base-2026-n16-radical-sum-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1b858add875d7f92352dd53bd1c2a15c0fce58e22b4948fac3b9ae6a7df36f55"
+    },
+    {
+      "id": "base-2026-n16-power-quotient-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ac40e856dd3307bdf5453deea2a25175f059eefb18bfc3d4295587e620197172"
+    },
+    {
+      "id": "base-2026-n17-quadratic-root-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eaced543567cb790f61ebe18a291051ec641f2a3dd70c0365a80c71a2dfbc967"
+    },
+    {
+      "id": "base-2026-n17-exponential-root-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "879baeb12a5bd51534354a72f9a32c523949e736ca9179da71bdd9af1b9b10e2"
+    },
+    {
+      "id": "base-2026-n18-integer-interval-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5a9894939ede7ac6b52b1ff3f8ebc8f8623d128a7c5db0ee043c4f3a5c7fe697"
+    },
+    {
+      "id": "base-2026-n18-quadratic-integers-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f58b52a6e663e945e69dfbb5e811784431e6a273d5de816c2ff5767ac7ac0b5f"
+    },
+    {
+      "id": "base-2026-n19-digits-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eb46e4820a526c429ebf14ef41d2beb80483afd6d5686929013222b47cefa7ce"
+    },
+    {
+      "id": "base-2026-n19-remainder-search-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f2f743472d599e38d5c7ca6ff2e40b762ba3600cdf3b8eddb7e9ef007742caa5"
+    },
+    {
+      "id": "base-2026-n20-meeting-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3433e7ac6af0f4b1e43b96e5192f54e5741b339ccb8933697689aed3a0773821"
+    },
+    {
+      "id": "base-2026-n20-joint-work-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "717a05e15126670dee4dc96724e8b66d04b12f772e06d6d62917c6a4d0ffde2f"
+    },
+    {
+      "id": "base-2026-n21-pigeonhole-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "afac77c80747c691ca6f9a48ca853f45c5199aedd9b17bdf96e12022689dace4"
+    },
+    {
+      "id": "base-2026-n21-three-days-v1-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2f3f2ed747a55046320f3d2c864ed6be0061ee3b154bdfe5e9a365d98bb65642"
+    },
+    {
+      "id": "base-2026-n1-packages-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d3e815cbcaab35d2dde62d485dcd79b24026538067f0224083cde3a9c00d2de4"
+    },
+    {
+      "id": "base-2026-n1-time-units-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8d6ffbdb3985b1546b543ecc9f7a69adfd93328adb4bbaf895aa34a180d89c4f"
+    },
+    {
+      "id": "base-2026-n2-tariff-formula-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c0f9d6e60d2031439009d3869d6304a11c078d366eb1af2845c65d27aa79559e"
+    },
+    {
+      "id": "base-2026-n2-power-time-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "998b8a0ff60a8869e67949c8749351a725518f568bd12c2c9356b618169191ad"
+    },
+    {
+      "id": "base-2026-n3-table-maximum-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3d0ba9aba73b42a5721c0a68967460a18b95affbcbf9ec8c65d06ece4501e802"
+    },
+    {
+      "id": "base-2026-n3-table-mean-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "144ea2b26d59832abd86529f653b5ea208992e0e9d7683b5bdeb157d139cadf9"
+    },
+    {
+      "id": "base-2026-n4-roll-cost-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4611d06f02fa072b0b6d6015310f6716ba8b0ea5bc54e07f74f235a09e417df5"
+    },
+    {
+      "id": "base-2026-n4-maximum-purchase-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bea6ae9cd0a1a4fb0050d7a8defb9b94f2ba82d0e7bc9e78a1c0b0fca6b2b9bf"
+    },
+    {
+      "id": "base-2026-n5-one-draw-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2b6551d9acb170bc58150e9e80715d91576934c5866cbcea5394d75d4b85b97b"
+    },
+    {
+      "id": "base-2026-n5-complement-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0f21c72fed687104aa5d1e3a3a3bb40c788cfb37641d8d3c74d1ce56db7211d5"
+    },
+    {
+      "id": "base-2026-n6-tariff-table-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "938f7ca5209e596b3d31967abf4c7862130c7c6e1dba62c0638baed225c63988"
+    },
+    {
+      "id": "base-2026-n6-transport-table-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0da6da6847c4256f1a20615cd3223782c52f85325e10fd06eef0769b3dd3917b"
+    },
+    {
+      "id": "base-2026-n7-piecewise-graph-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9a484feb10eabf827bc965ae4410b7568a872cfbf7b880ace33689cb710c5932"
+    },
+    {
+      "id": "base-2026-n7-tangent-slope-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cc69baf38e1a2a5ae4c2e74da6c22f48edfdf562b59739a416e3396dc706bae8"
+    },
+    {
+      "id": "base-2026-n8-sets-union-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "aa89edb3e9dedee004f17bede9b0c4d8e3da33246b9cd399709e554bf6dae60c"
+    },
+    {
+      "id": "base-2026-n8-logic-count-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5619c5251cad941edfa2f9b866ec99df07d011d102334c0ac8878a21bb89b555"
+    },
+    {
+      "id": "base-2026-n9-floor-tiles-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "fcf86c818ab6e286dfbe5e247abb9ab3119c3c9ea84ab6a1c1579ca4629f0356"
+    },
+    {
+      "id": "base-2026-n9-ladder-height-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b77859e830ff904ae1375012e93c2a1d2bbb9755ef5ce671fcb88c312400d89a"
+    },
+    {
+      "id": "base-2026-n10-hypotenuse-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b1c347b89d62779f91e15774be06aa0952d0e38acaee37b8f6e8c28faecbc124"
+    },
+    {
+      "id": "base-2026-n10-trapezoid-area-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "01a034999513f8213fafdf837da8daee07d1e224f1afa7a14cf141c5c35b0386"
+    },
+    {
+      "id": "base-2026-n11-cube-surface-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "61dba61ec8ad99f5707e83263a936781cfbdda6f025236678dd51f775867e5eb"
+    },
+    {
+      "id": "base-2026-n11-box-volume-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "715f5f1a38d94a797442aea307cef2838e78940740a3145f345d410574dbe83f"
+    },
+    {
+      "id": "base-2026-n12-isosceles-angle-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2a50f62e1a8f5b9fb48a8c4187de006ffede52965a81582832a002bb4e6904cc"
+    },
+    {
+      "id": "base-2026-n12-similarity-side-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "db712d6ba0a4772bc4bdc6a3b658c713167b8f14ac17146a27adc5da77488b07"
+    },
+    {
+      "id": "base-2026-n13-pyramid-volume-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8e03edb771f22eac8821d1b4f3b247dbb46d9d9208dc24f2fda1e03a4e42593f"
+    },
+    {
+      "id": "base-2026-n13-box-diagonal-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "058bb7342564ffaca99c7360c29f5c442e50d2b2dc2b978663224400643d10c5"
+    },
+    {
+      "id": "base-2026-n14-fraction-sum-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9175a97fe70752d61891f3fb49f4e145f364f647e88b2125835159b60ca996fc"
+    },
+    {
+      "id": "base-2026-n14-decimal-difference-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ccfb54aaba3bcdeecf5c92b49814efa20caf49e8c95b6939945a1c842c05fa9b"
+    },
+    {
+      "id": "base-2026-n15-discount-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9925ed75ba5719a625e6be5269d72a72b4ee7bb5d01447e58a3cada081c545c1"
+    },
+    {
+      "id": "base-2026-n15-whole-from-percent-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "61810cabe1a7637b66b1aabe8c849ac1a1d6a892fd36421b35e34f156b7a8d2f"
+    },
+    {
+      "id": "base-2026-n16-radical-sum-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d6810fa3b9cf064f233f9dd3d8b4f8c74e1aa37654e4d76ddca3b67be8450848"
+    },
+    {
+      "id": "base-2026-n16-power-quotient-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5084edd6ee6031bf4c0247a7789db60f057e2ad58b19f99ed8f46d14d9aa2808"
+    },
+    {
+      "id": "base-2026-n17-quadratic-root-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6b360438cdb5e5424a185591cfea3a47cfa33dd3ef1ea6176020d3f187033569"
+    },
+    {
+      "id": "base-2026-n17-exponential-root-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9b3856752feb88591ccf92a0e76cec2a8d60c02477dc88a7f3760a93f5c25c18"
+    },
+    {
+      "id": "base-2026-n18-integer-interval-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7ed168fa10dffe5fd88223bd858a8abba17474340bb41667d5c8b9051594c9cf"
+    },
+    {
+      "id": "base-2026-n18-quadratic-integers-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e2808e9d3bb3da182f09118802e14b260d451247ef6a11a48fc5f91324582311"
+    },
+    {
+      "id": "base-2026-n19-digits-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3c371efb997758db929162241b462661d87fcb47075d58e312a71dbe7ca28c6a"
+    },
+    {
+      "id": "base-2026-n19-remainder-search-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "dc0b615bf6f4f19f1dacf172574441fc71a97f5e37916b210188ef34088f786c"
+    },
+    {
+      "id": "base-2026-n20-meeting-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a5028512b3f96c8eb37483fd458b429c299735ddd21607ce0cc555ada9c2a515"
+    },
+    {
+      "id": "base-2026-n20-joint-work-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f2351e543d6b12f05ba4c370eb506883d44794ce55fb9c8165c5f7f237e572bc"
+    },
+    {
+      "id": "base-2026-n21-pigeonhole-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "dbf0ae72cd5cf2319dd48bea8025aa0564ad31e9cdbd1a64a98a7d619ef48bba"
+    },
+    {
+      "id": "base-2026-n21-three-days-v2-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ffc459191dba9fedaf12225d034f22fdacb827ede90d05e6a13a37eefc0efdf7"
+    },
+    {
+      "id": "base-2026-n1-packages-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4c07aab672ef22aba778c219a68800fefddbef5a44f2af13e5e7b860deb8b795"
+    },
+    {
+      "id": "base-2026-n1-time-units-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bd68613cccd6a77c778fe29a7025996695e9d05fbf015defb50fce043cf1716e"
+    },
+    {
+      "id": "base-2026-n2-tariff-formula-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "944d249524dabe61a6ac1f73aac37c6635fc8abe74639187a84d14a7a8602b07"
+    },
+    {
+      "id": "base-2026-n2-power-time-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "221de1a7736c466cd240ab6008d199fbfd4cdb048c4ee4ad34a70e4e3129a0fd"
+    },
+    {
+      "id": "base-2026-n3-table-maximum-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a6acc28c756a96bcd4206193c94d87921edf78c917e8211755a23395fe78e2c7"
+    },
+    {
+      "id": "base-2026-n3-table-mean-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "88f97bf0a0257608c415f7ef6834b44bdbfef18b81662b264f29339d26d1b156"
+    },
+    {
+      "id": "base-2026-n4-roll-cost-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "69e1450d3be6cb97c20e658d32a8e2cc8917a6889a7ea9b5209323428d664ae1"
+    },
+    {
+      "id": "base-2026-n4-maximum-purchase-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "36ff59c7bff2f0477b69e6f62dca8c48263459292a4fafe8046f9095740c078b"
+    },
+    {
+      "id": "base-2026-n5-one-draw-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0efdf238184e2eee894fe4f119fec55b8767706572dfc3785f95004ddbfedca8"
+    },
+    {
+      "id": "base-2026-n5-complement-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6e98dabde38c18615d8d0344fecbceb763ea57dab8d5e08b16c9fa7d7429416e"
+    },
+    {
+      "id": "base-2026-n6-tariff-table-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2893afd5bde3666f64d401cac605cdaf0a4901729f9346f5399bcdaffcf81288"
+    },
+    {
+      "id": "base-2026-n6-transport-table-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b0e14c941b06a35cfebb135c90e2fd7f1fa5e13298b24197abc4b958da91cfb4"
+    },
+    {
+      "id": "base-2026-n7-piecewise-graph-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a6bf19dc5cfbfd3d6e36fc6ba7781ad303bdf1023da2adacaa31e650195be2b9"
+    },
+    {
+      "id": "base-2026-n7-tangent-slope-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "624c9e0b962e97726e1ad85b1036faddcbee382b74cce24d00b356eeb4017a1b"
+    },
+    {
+      "id": "base-2026-n8-sets-union-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3d4e2934affa21f664c4f91b7d827535b08bcca9c12e7ce81c0fc32dbe037e6f"
+    },
+    {
+      "id": "base-2026-n8-logic-count-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1b34660987ec3743386ee8197b368a05ac00dfe2abfaad001254c56c5bae1ec9"
+    },
+    {
+      "id": "base-2026-n9-floor-tiles-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bb65613b85f18452a2123567160b31f3762be07da661f72ad39985076b27f4ea"
+    },
+    {
+      "id": "base-2026-n9-ladder-height-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "42c3ff84cd05813426538b5470e1aec54b89bc6179f9a7e134323832282e9e3a"
+    },
+    {
+      "id": "base-2026-n10-hypotenuse-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "09dfc5bf8ffb82d7177bc6ead5bee6296f5ed69afe7348797837cc65a6020231"
+    },
+    {
+      "id": "base-2026-n10-trapezoid-area-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0ba4f6831deb9b34fbb19b3175f6483148319cb599dce680fd8dc8041204d992"
+    },
+    {
+      "id": "base-2026-n11-cube-surface-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f9b9da3f08fd7aeb756aa510de83345d230b5b38226ed51bd89bf30a1de2d0bb"
+    },
+    {
+      "id": "base-2026-n11-box-volume-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "12de4b124e31e54e6a0c42752bcab7ab7406cf790cf05935ff7ce385f88e8cb4"
+    },
+    {
+      "id": "base-2026-n12-isosceles-angle-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "89137e2afc7da1c6ace4d8bc14d89ecd6da87a46b293ebde062a3e770cfe26ca"
+    },
+    {
+      "id": "base-2026-n12-similarity-side-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "29bed0cca584a9c7b371b06d7c372e6e640ea07eb374c2dc268838cecf4c8c65"
+    },
+    {
+      "id": "base-2026-n13-pyramid-volume-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7cf60f1c4989c95b31536293f90aa9f921f58e2ab8c3cf2b12a8df6e0939c4c7"
+    },
+    {
+      "id": "base-2026-n13-box-diagonal-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "585e9ff510c73274814aded10e2a6f5124c00d4e9f31a5c2753c9b0a35b29186"
+    },
+    {
+      "id": "base-2026-n14-fraction-sum-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "035a611af966ca295b26fd925bffc1a7dcd5c3b1576e2f64095b011904cdb0b9"
+    },
+    {
+      "id": "base-2026-n14-decimal-difference-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5eabf486ecc7ba07425bbf553fc183c5be030b96f69502dab79809619cdef916"
+    },
+    {
+      "id": "base-2026-n15-discount-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "63db3b7f258499ad32b278d201fcab9ee0cf6db0b4d797e9e88ebfc447dd95ed"
+    },
+    {
+      "id": "base-2026-n15-whole-from-percent-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0c84e6d7407c1b417208f9e4fabe937ea345ee00508d2669016f0178a59edede"
+    },
+    {
+      "id": "base-2026-n16-radical-sum-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4b472e5be83e775e4e2abc081046b34b6b146d19a7f51623afcb4213629d83f3"
+    },
+    {
+      "id": "base-2026-n16-power-quotient-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c111b0efc7e6c3b6c7edd7e73b9245708a99ee45b7189eb6d98c8f553b362909"
+    },
+    {
+      "id": "base-2026-n17-quadratic-root-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b9811f41e657f338c15227cd70af1fa6a2485317d55ce6688c39833ed6e53ded"
+    },
+    {
+      "id": "base-2026-n17-exponential-root-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e9c6374ca12d6908f7a1f62766c603c2abf0b112508f07e4322b3683a3059eb2"
+    },
+    {
+      "id": "base-2026-n18-integer-interval-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3e42d175107795e60c21bad406c40a68a5bb8898a8884c4b03cad3c7830e43ed"
+    },
+    {
+      "id": "base-2026-n18-quadratic-integers-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8abb7457c474713c6815d3ed3155642f86defe94a255a5099bee92729ae7f336"
+    },
+    {
+      "id": "base-2026-n19-digits-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "3e859f0cc52540987c8a7e94fb6e3b7e2787a10cc4a9d6b70519b776ab30c0da"
+    },
+    {
+      "id": "base-2026-n19-remainder-search-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "29e4c768722d8a415017385ab31e82d0173820a1fb373bb3573cc168d2a6d10d"
+    },
+    {
+      "id": "base-2026-n20-meeting-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f58a7125bb5bbde6e39adcde026e976bd35d93977948cb9c44bb352c29186731"
+    },
+    {
+      "id": "base-2026-n20-joint-work-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "28351694a2d16727306fea5298bcd72a1afa9f6e6d7cc5ff55c804fda1826808"
+    },
+    {
+      "id": "base-2026-n21-pigeonhole-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1dd09f1092c29282193efefefcacb57f2450db4403c911224c905081ca73856c"
+    },
+    {
+      "id": "base-2026-n21-three-days-v3-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "98bf8ffbdbe8c634661b5c9c81855a6e37b98699ee589167ea103834e3a87f00"
+    },
+    {
+      "id": "base-2026-n1-packages-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "83265de77859f993795e540480840404f59860727714fd0985f8bdbdba7b9096"
+    },
+    {
+      "id": "base-2026-n1-time-units-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "796e96f26ed76cefa2d299c1d26c1a17b94fd7b27ec5fd9fe919abcc097eacbb"
+    },
+    {
+      "id": "base-2026-n2-tariff-formula-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8133e3328256bd55c6dfb9fbe2b977c54591eb0216a9a130e9257d04ca69096b"
+    },
+    {
+      "id": "base-2026-n2-power-time-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1a3d083d22c5f9dc185a55cdc97b556b65bb735633a6d06a20ec538145bae9fb"
+    },
+    {
+      "id": "base-2026-n3-table-maximum-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "adf097951090c9b1bf8d20e9ee063c3d0a7e7bd9e3800e64274791f47f8a4061"
+    },
+    {
+      "id": "base-2026-n3-table-mean-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e483be84f004436e5c399d1e7033c595d62cb24f739ce90f5c0861d396cac294"
+    },
+    {
+      "id": "base-2026-n4-roll-cost-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4fd777b8c5f227185d4def45ae89d7967af62ba8e59ad5fd9117c4f69051bb50"
+    },
+    {
+      "id": "base-2026-n4-maximum-purchase-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2a8abfe809ae87f16d11ffcafc1b288d524b8f6d63afcb6c8638288e5cefa794"
+    },
+    {
+      "id": "base-2026-n5-one-draw-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2768c713a93d9076994d128ccb34077eb79f82ff000a772ba69006355936ee73"
+    },
+    {
+      "id": "base-2026-n5-complement-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8a57beacc20ef8b7108a4726386a4f2dad75c7927058064e11b4107d5d1debe0"
+    },
+    {
+      "id": "base-2026-n6-tariff-table-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "535319af7ee1e4f0bad44fec08f0087f857e4aeb3a62aedcd088e38997391452"
+    },
+    {
+      "id": "base-2026-n6-transport-table-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "526c989f835d54eed046d12c57bf11d5f093c045e80165f06cab488c10a9089c"
+    },
+    {
+      "id": "base-2026-n7-piecewise-graph-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8fccf2c5536f94ad901467963edf1a55de3244e50b61d8792a02d2737a45949c"
+    },
+    {
+      "id": "base-2026-n7-tangent-slope-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "edb39df7fbfea8e1db3a3ff8bf64d0505a9cdcb54349117b19f2d05bc4556229"
+    },
+    {
+      "id": "base-2026-n8-sets-union-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cd8bb6a6e07ca09f50fb39911124c4e5ccfea118874e3cfa8dbfa2158e26cd33"
+    },
+    {
+      "id": "base-2026-n8-logic-count-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "9e6c70be2e3fc8a8d979618f93b514681086f80dda4f869d20cecab62f6d3662"
+    },
+    {
+      "id": "base-2026-n9-floor-tiles-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6a403e5907dc456cb2a05a7384341ee574ffd381c77d4b1d76ee0dc4aebfe645"
+    },
+    {
+      "id": "base-2026-n9-ladder-height-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d626ba02561e70155300bea84697616e660aaf600213f932d99562e683668d86"
+    },
+    {
+      "id": "base-2026-n10-hypotenuse-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7c7a6a9a97823652738f96c4d1b6dd81a9740aa6f5254d5dd4e86411253385f0"
+    },
+    {
+      "id": "base-2026-n10-trapezoid-area-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "287a3a6e4d68c3c616c729966cbcaa2c11aff82b8b6310d056d37f5d8e177123"
+    },
+    {
+      "id": "base-2026-n11-cube-surface-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7eff9b4f94ac88b759a763a3b11163e042a471947148bcb0929f4e38c39776a1"
+    },
+    {
+      "id": "base-2026-n11-box-volume-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "14f5867a58d0f025e3a6b6a1c880876e55a80d1993eb81b8048b447d7a3f1161"
+    },
+    {
+      "id": "base-2026-n12-isosceles-angle-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b625ce466d96c2f281930da881715dbcd983f0d06da1f251a191f20159c15e8d"
+    },
+    {
+      "id": "base-2026-n12-similarity-side-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8502c6cdcc80ce65e3c6e01d938183bf6d237261e00ce0bd0cc82a54ccc228d1"
+    },
+    {
+      "id": "base-2026-n13-pyramid-volume-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6dfaae68a10d9729564d19671b856248130b8215f805e2e818b7c5d6e22f0269"
+    },
+    {
+      "id": "base-2026-n13-box-diagonal-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2af5a4be410289e6bacfc5eacf2d16b501ca9c906311560404f2e2c800017623"
+    },
+    {
+      "id": "base-2026-n14-fraction-sum-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c590833740d87327b61a05e9a7149c22e47e7820ff62c694f80b8575d4e2bbba"
+    },
+    {
+      "id": "base-2026-n14-decimal-difference-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "63fb843ada72c9bc3b07dbeab96ee6f65a6670e55740cb4e205752c9ff8ac15e"
+    },
+    {
+      "id": "base-2026-n15-discount-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "14a185e3e7b7a1d03975ce713b7fade513c0b1f2f5abe584581f4d297fb434ca"
+    },
+    {
+      "id": "base-2026-n15-whole-from-percent-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a5ef67ae8f7cc7860234811f1c48a62ebab5120799fea61976cfc254d9a1fb53"
+    },
+    {
+      "id": "base-2026-n16-radical-sum-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ed90a4f3b235c3b0d9fb6501c8e2693caadfe66bdd0c00097c1a35aee5f8cb50"
+    },
+    {
+      "id": "base-2026-n16-power-quotient-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "eb34620746ee5ff192cf3a04481624cf4c8ed676573523b86c8408ec16083829"
+    },
+    {
+      "id": "base-2026-n17-quadratic-root-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e4c4529532e482060af9f6331e8c310bc60d679dfef344893d2f0c52e72c6152"
+    },
+    {
+      "id": "base-2026-n17-exponential-root-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "7b6d79e044447d3295a074a9b6a632c6bc68dcea64ff56740e61668f8c89c49b"
+    },
+    {
+      "id": "base-2026-n18-integer-interval-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "53553ccb7943b711de951d2c56bbfb856f5e2146e6cb4a2fb2a0e3e4be470e52"
+    },
+    {
+      "id": "base-2026-n18-quadratic-integers-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "94b947ef27c111f43ee0748d9b4605f9f15feef72b8aa05006127c27e9bd59a1"
+    },
+    {
+      "id": "base-2026-n19-digits-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b0a930e5c3b30bab0933e11ed081f7cb52f11be5df42ce416ec25361b9e1e092"
+    },
+    {
+      "id": "base-2026-n19-remainder-search-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "15aca18411c9a206bc49c570c47be861bb2f8cbbb93b2857f8f65bec1db61c8b"
+    },
+    {
+      "id": "base-2026-n20-meeting-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "76a1b9a9d7fa4cd813b04d1c76c2e584d02512f4d37b947baccbc766014c80a9"
+    },
+    {
+      "id": "base-2026-n20-joint-work-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "bf272e5998d11e45ed89f9d9215cd83e1e23c9e37340468010f9596f066513da"
+    },
+    {
+      "id": "base-2026-n21-pigeonhole-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e5b4efa824b30e84a830995a361779b948bbc7b75f75afe57571d94df906b28d"
+    },
+    {
+      "id": "base-2026-n21-three-days-v4-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b08ccb1e290e7544a88d9dbf11c024e19bd71223ce89e432711c929c8cfcb9bc"
+    },
+    {
+      "id": "base-2026-n1-packages-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "500d4c2c64171e270a0884c9c3dc0f5c4424fa28d94ea7c38eb157290811c509"
+    },
+    {
+      "id": "base-2026-n1-time-units-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "85e155d6c6f6c19e80c48b69c9b89851b0dfa1060d9fa81dd0eb3f90a237663e"
+    },
+    {
+      "id": "base-2026-n2-tariff-formula-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "570459dc1b426e01246dcbe00f62e81220a5782d72e2bcc2dd4b191584464a77"
+    },
+    {
+      "id": "base-2026-n2-power-time-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "b58277f9acaa31dacfae87bbe3cae0b5cd0fe01ce3016f9b1a8b200b7dc6b571"
+    },
+    {
+      "id": "base-2026-n3-table-maximum-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "df4a632aad6c96c9086e4e6d0a10232e66bc3de7f9fbea2b3927105f8fdaa55d"
+    },
+    {
+      "id": "base-2026-n3-table-mean-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a94c2198b44554741493ce23692db5592fccdfa8bc8b6a54c44dc48842325f77"
+    },
+    {
+      "id": "base-2026-n4-roll-cost-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "ee0eeb40bc3456fe6a220a771f78e1080750eec9398ab197b03f17615d802d29"
+    },
+    {
+      "id": "base-2026-n4-maximum-purchase-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a6b125fcf49e6b7625a76b3e09c85438969ee1ec67bf486af93d35e6f7ecd6f4"
+    },
+    {
+      "id": "base-2026-n5-one-draw-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c0c8461dca08f8e7111d25fb98d452f4dc91da6828cddca0be292db3ffbe18a0"
+    },
+    {
+      "id": "base-2026-n5-complement-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6ffc64f37c5b628885cf71ab54b95b677f9c28da2b00a2b2f0a14673027a9b21"
+    },
+    {
+      "id": "base-2026-n6-tariff-table-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0fc96a553887adfc3198864fb27d43c82a33b52de8c8e234fbc2af9435d67813"
+    },
+    {
+      "id": "base-2026-n6-transport-table-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "4df95e8c2257be592521a7d09086d303863b2725db0cf61667abaae996082fae"
+    },
+    {
+      "id": "base-2026-n7-piecewise-graph-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "11e663c24deaf7ceaaf00e1983390ba9a8d5ac0333be33b3e3ecf02a38ddea5e"
+    },
+    {
+      "id": "base-2026-n7-tangent-slope-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "115eabe5c12dbe6bbda8447027652c32e326ee678231bbfd51e970908ee3193c"
+    },
+    {
+      "id": "base-2026-n8-sets-union-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "177e5ad9e2df357a02a47ae80925913343fdb51594a23b3a3aa4c7235eec427c"
+    },
+    {
+      "id": "base-2026-n8-logic-count-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cd83478a29221896aa597c3788b595ba98b15603f214ce6c67bf32811d75f60e"
+    },
+    {
+      "id": "base-2026-n9-floor-tiles-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "19bf08cdc5a825bee8944da144cd5ca2825ed3354ec29708f0cb197baebd7dc6"
+    },
+    {
+      "id": "base-2026-n9-ladder-height-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "cb978feb3727d31a934475fa75af3b8fba75eb83bb7ba3d97178072db64f87cc"
+    },
+    {
+      "id": "base-2026-n10-hypotenuse-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "0c00037fbba4cc3d83324940a25e6a53e6fd312dda7b74dd1ad53ff6e635aa67"
+    },
+    {
+      "id": "base-2026-n10-trapezoid-area-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "985ce20b474c5b50388a36e3751169fec6adbdc1b5b62df5b80826336668c857"
+    },
+    {
+      "id": "base-2026-n11-cube-surface-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f785a94036b49db5eb7833da87a1463a2798902237a99a593f3154f4192e26dc"
+    },
+    {
+      "id": "base-2026-n11-box-volume-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "e3c66721b9d22eb79100acc9126ef5d080561449e9b8ca0b037ba0189a65425b"
+    },
+    {
+      "id": "base-2026-n12-isosceles-angle-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "d9e28e13419899d7111206b4ff288eaff326e538367c39a389b62b170f225160"
+    },
+    {
+      "id": "base-2026-n12-similarity-side-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a8024e0a0800826d14a0a88a9a5ab5faacc31cf1cb6812b13841d6bfb4d745ae"
+    },
+    {
+      "id": "base-2026-n13-pyramid-volume-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "8f84019330c24a777b90baf48375fbcf51d48bc570c957afcc6d979085b77a4d"
+    },
+    {
+      "id": "base-2026-n13-box-diagonal-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "2c87228af55b1440b98d4832e3aec3a2c1691bb2f0c21c8c575f189d1b54e750"
+    },
+    {
+      "id": "base-2026-n14-fraction-sum-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "312e2ab3f6829f0757b205c0f98bb6557b81b253f5f51c870ca249aff5d4ca67"
+    },
+    {
+      "id": "base-2026-n14-decimal-difference-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "5b74a3093e4a83bdc2d9478f780f15396d5cc140e3cc7b025b4b745d77840fe3"
+    },
+    {
+      "id": "base-2026-n15-discount-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "818a85b4402b25b0efa2a719b89a9c7d9196761bb2561bd8105ab94ca15c4a6e"
+    },
+    {
+      "id": "base-2026-n15-whole-from-percent-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "18eb9c24bb37c2071cbfe138aac4c955b7f680bbc4731ffc21e0ad7b747635c7"
+    },
+    {
+      "id": "base-2026-n16-radical-sum-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "6680c0b62809b1424e15aa17a8809ff805ca3b19240313e63c5e43d7dc5c107d"
+    },
+    {
+      "id": "base-2026-n16-power-quotient-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "adf583c33af521b62fba608abff88600389d70babfd01e09f59839fb1768c65c"
+    },
+    {
+      "id": "base-2026-n17-quadratic-root-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "753724da761d018a513f1d6c794df5c3b68f51446aa915271b6ab411b76319ec"
+    },
+    {
+      "id": "base-2026-n17-exponential-root-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "daed2a92eb94380c9a04e3720ad94553e3eafac695b83c124b1f51d364b448b9"
+    },
+    {
+      "id": "base-2026-n18-integer-interval-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "07dddaf36d416fd5346feec10c987f31839902608f57bbd57e18a6d68f5e7777"
+    },
+    {
+      "id": "base-2026-n18-quadratic-integers-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "56643808988ea766942c65a1374b50c1ea9c7c979b33217ba39699efd835299d"
+    },
+    {
+      "id": "base-2026-n19-digits-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "a9721279239093ea0d8aab14ebdd14ccc01ad661d0457f7c0575b18e32c1d367"
+    },
+    {
+      "id": "base-2026-n19-remainder-search-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "f205358cb37266da7a206bf4d56ddbcc8a2064cd18e761601c2b9aaae2731d7a"
+    },
+    {
+      "id": "base-2026-n20-meeting-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "051675cd7c7b715d7bb2f3e683ac5d8b731849136f14ffcfef6df1a6a3d9bc06"
+    },
+    {
+      "id": "base-2026-n20-joint-work-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "c3716b6d97f799a91188ba375106b1759e461e709f3ba972f1e7f5c50751d292"
+    },
+    {
+      "id": "base-2026-n21-pigeonhole-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "84dcafa3cde1ba084163097763eeb09b9a24d3efdfe123dc9443eae237d126d5"
+    },
+    {
+      "id": "base-2026-n21-three-days-v5-r1",
+      "kind": "task",
+      "provenancePolicy": 1,
+      "sha256": "1513f247d07a616cc5c32e5cb08024009dea84d4af767e27b288c30e319f598c"
+    },
+    {
+      "id": "fractions",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "a9962a6f851f88ee7eb2e0544cdaa7850f8ee30c9b88f0781f13075c0ef833eb"
+    },
+    {
+      "id": "decimals",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "8048cfff5c1006673d7e203f84d293877f8cede3c74982ba2fe22d5596c1851d"
+    },
+    {
+      "id": "percentages",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "646b3904da1e0fc05075603203e76684276ab78f55335e9fdf5d88b0ae5fd040"
+    },
+    {
+      "id": "linear-equations",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "82285a89d8bb5871d8ccf435c561108c4521ec339cb24afa4b0cdbcb92ef9f75"
+    },
+    {
+      "id": "quadratic-equations",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "24a8df9f2a3fc9e846917c0538dce421203a8221de377eb78e92035e58a27614"
+    },
+    {
+      "id": "powers-roots",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "0ac70c94d4b3359a077c60f6e1cbfb336b510ece55efe6d7566eb91fa29c24e3"
+    },
+    {
+      "id": "geometry",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "72bc80520acce194e397a8484252dfd8fef65f2aa15d462160a9b69ad0a77fbe"
+    },
+    {
+      "id": "probability",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "3b22672ea880b585e79f830399c90e1f88f27fc9b388490d813483ad50b1f259"
+    },
+    {
+      "id": "oge-number-1",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "7c2a1567f97466eb5ec4e2cc68cce1a7e38712225e64d06ae8dc91fbb4b6dcaa"
+    },
+    {
+      "id": "oge-number-2",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "a0e4c886882c934e165c21f4745ef40a16f3e74788f5552bb7b29560f2a94b68"
+    },
+    {
+      "id": "oge-number-3",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "20c95a79b911f29f44f87f3fb770a242bca2ae0ea72453d76774b2442d054920"
+    },
+    {
+      "id": "oge-number-4",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "e53dd1e1eecc96a45ed2efecd979894df6efb2ae18d5918b38704b457a69a0c6"
+    },
+    {
+      "id": "oge-number-5",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "16b21ba5ff0994b60065318baa78f8c72daa86bfae2a3f2b2b3e2299396ebe95"
+    },
+    {
+      "id": "oge-number-6",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "bb7b7fa556e86d49efaec14aed843cb7ff9951bd9c43efa373686963a2b01630"
+    },
+    {
+      "id": "oge-number-7",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "7262aaeb89750cf06ca461265156f75215941ed1515e47c03a2932b3cf72abc2"
+    },
+    {
+      "id": "oge-number-8",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "83d82b51b0c10c30dd4b0e382f8297fb0c99847d3294b0f654967d40a2e2efa0"
+    },
+    {
+      "id": "oge-number-9",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "237ebf161ce775c4264a68b4e050e469ec994f034e29f90a67e4b9b95865fbd8"
+    },
+    {
+      "id": "oge-number-10",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "a36671da53ff91b3d607c9a2ead012b77d9211b2be0460763fe8975108b5ff96"
+    },
+    {
+      "id": "oge-number-11",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "8fa5bc28dbd79cb346480107c2fbc7d037dd3595bbacbbf1d169d23553cb876d"
+    },
+    {
+      "id": "oge-number-12",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "d72d7b400e961cac0ec4b38a5b41ec2db8a4a5f6aef8bd7b96fecd46f9ccfe58"
+    },
+    {
+      "id": "oge-number-13",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "b8ff708b5ef575e32b233e1c0ebedae5947b0b017cec20bb5fd85e3c71cfcb81"
+    },
+    {
+      "id": "oge-number-14",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "bf6a277bd1909ac9fff6c9432de597462098bd223bf5e59fee1f3df0b0b625c2"
+    },
+    {
+      "id": "oge-number-15",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "41af39984942fed3cecdbeda929771e6d79bbae24611fd117c4f00ab1c1b457d"
+    },
+    {
+      "id": "oge-number-16",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "4f96457787f7141d49d3db17f2480747a132af8353b32b84c6ebb363606bc3ee"
+    },
+    {
+      "id": "oge-number-17",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "8b0caf764badb21dbf4002bf0930863e320d51e7b123f9cec14af31fd8a74cce"
+    },
+    {
+      "id": "oge-number-18",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "80217afc60aabeadd261b07c9bae9b07cc703fd1e65a40475e6346e2c92f7355"
+    },
+    {
+      "id": "oge-number-19",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "7bf2b5216a8876d2243a74048d5de212146e9fcb9c7f8c49d66567562d39b584"
+    },
+    {
+      "id": "oge-number-20",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "75a9991c1adb2e285130f0f09af87e9aa1d6f042880ee3cbdccc6d0bb85d5b91"
+    },
+    {
+      "id": "oge-number-21",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "7016a7a8af01bde18785c9b318b226edd86ddb3a78e2abb5314769235c53fdb7"
+    },
+    {
+      "id": "oge-number-22",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "722d02f3550e89e1607d79b8ea52ad4f146c54fb3f146d0abf9925fcd6b04784"
+    },
+    {
+      "id": "oge-number-23",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "576a33315948fd02240be6c9b3219cf951763845ead42319913ec33562888e8a"
+    },
+    {
+      "id": "oge-number-24",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "50279a1229863692fd6820c41bbfaf482f23afd99d3d3c1a24798669396f4055"
+    },
+    {
+      "id": "oge-number-25",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "d1a9d47964c21ed3337ec60a51525718ad4909136e31bf5f1dce363657f2d125"
+    },
+    {
+      "id": "ege-profile-number-1",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "703449652afe4ba3e265fba8c419c9898c97935789881aa7ddbaa372747fba6a"
+    },
+    {
+      "id": "ege-profile-number-2",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "84d83a51d4c7cd981d96dec6277f26d80d623d1bb181888cc466f79896721845"
+    },
+    {
+      "id": "ege-profile-number-3",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "adebfce4b4c7580b4d057cd173000cd14afc7042250270f9e2a561cba7e88aff"
+    },
+    {
+      "id": "ege-profile-number-4",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "14a20c6897a73f76621eebc93edbe860f511bd05597d12cc89642f27e8d4759a"
+    },
+    {
+      "id": "ege-profile-number-5",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "3261f8afc1a4397fd3a64566f31114dd68a231ee183ce6da6831fbd64b44c61c"
+    },
+    {
+      "id": "ege-profile-number-6",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "e09a160ad90073563ce7ee6a53658a86befb62bcb04b92c88dfc88bb484248f9"
+    },
+    {
+      "id": "ege-profile-number-7",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "ab8bc9b5a6dd527f054f6757fc5933d5f79c4a558c4d15c77b03814070087d91"
+    },
+    {
+      "id": "ege-profile-number-8",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "04cbcdb76355587a2c6e16d346cf8d065a4592cda55e664f71915fc375ed74e6"
+    },
+    {
+      "id": "ege-profile-number-9",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "aa56252629eeb3bc93f7ae0453262b2bbfe3eb67ce6d76b0f0a5d52547de95ed"
+    },
+    {
+      "id": "ege-profile-number-10",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "90578668cf84cdb564eaaef480903e1400161d990f76f85e4a99ea6719cafb7f"
+    },
+    {
+      "id": "ege-profile-number-11",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "572ba5f39dc0c6e7fbb3a1c5f6088643f261a5b412d745885d8fc35d7d34cc1b"
+    },
+    {
+      "id": "ege-profile-number-12",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "0265cc1a2d4fcb587ff526014581ef5a28348473782ba9e8245550a7f49814f3"
+    },
+    {
+      "id": "ege-profile-number-13",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "5715baecc826d940718ef53d31239c4b86dc036ce15f625ae11f712bbccd3012"
+    },
+    {
+      "id": "ege-profile-number-14",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "aaf95f518d27a1fdb3223f713b6e5b06f35321f74ce360801a2bfb048756a470"
+    },
+    {
+      "id": "ege-profile-number-15",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "d6b416e0a9835ed32f1b7751959e4354db5996ef3e095718f47fbd743193d24e"
+    },
+    {
+      "id": "ege-profile-number-16",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "a2bbf300cc1a0324ae414d37d9a40b6d6fb7a953a424e242d118ca1748edfa37"
+    },
+    {
+      "id": "ege-profile-number-17",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "2795f00207c17e95f70e517d9a9f3fe5010acbe1d247175e9e8be9a587d36727"
+    },
+    {
+      "id": "ege-profile-number-18",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "5741368c02724fe660b3a77e7a3b0deb40b930c9b913c9ddccd31d2fa801a58f"
+    },
+    {
+      "id": "ege-profile-number-19",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "7974c6ee97f6bb7b37885ad5b1e4c6a15ac45aaaae3c0b868d2295defe51391c"
+    },
+    {
+      "id": "ege-base-number-1",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "8f46fdfab3a638fca99f9a5ef0151acca403958e07f2c6617d31b4f0d4dcbccd"
+    },
+    {
+      "id": "ege-base-number-2",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "d73a1194189ac3f6a43b6ffd6d492ef437477e3aff8bc02ab8bd8ef877152d7f"
+    },
+    {
+      "id": "ege-base-number-3",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "51833c397c630c5e50a064feba13aa368e134ca74cbdc6805755f1fbe9b2a025"
+    },
+    {
+      "id": "ege-base-number-4",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "9120dd614332d8afdde3d2e1e085ce58fc5592f9b0a5d297b0471ca99e2c45b8"
+    },
+    {
+      "id": "ege-base-number-5",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "2e231004ad93135378ba2786acfad5f68af8de46f09eb7c402fee7756a9586d0"
+    },
+    {
+      "id": "ege-base-number-6",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "0e2ab952e6e338a02e6146e7863571f7b05aa2c35fb7446aa8dd09798d2bfd5e"
+    },
+    {
+      "id": "ege-base-number-7",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "c08e74e0e94486da071f82c7c8a22cbe16cdbc3bde39b4fbed5777a63a632436"
+    },
+    {
+      "id": "ege-base-number-8",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "1e47371bb020b53185feae37efb932b61e64fe15fd1234a703641ab811474b06"
+    },
+    {
+      "id": "ege-base-number-9",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "0247b0a11e8f2e8efa340dc7315cb928632f08dcd280bb89bb5d22ff5084b2ff"
+    },
+    {
+      "id": "ege-base-number-10",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "94b71cf3be91eafeb74561bd8ec7a3b96153f07a3b88aba0b57e462edc7acaba"
+    },
+    {
+      "id": "ege-base-number-11",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "df5225e83c6e77fb54656cb266e14f2c60af6e362fbf54b0ae5eeddfb6217dfb"
+    },
+    {
+      "id": "ege-base-number-12",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "576715b85e7de39bab131c7dbeb3122935862a3d46bb84cc6a10228280ad371c"
+    },
+    {
+      "id": "ege-base-number-13",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "baa168f929226b6faba9070bd57cf9edf6708e5e82de2e742894985767a6e00e"
+    },
+    {
+      "id": "ege-base-number-14",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "19168eb1dfa69bb0175de6ee51ef0b4126183c98e0f1049444de1877d1c2b48b"
+    },
+    {
+      "id": "ege-base-number-15",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "1f50a203852752c19ef5c672a5a279d30ceb65590f4aaa07c4c65f0153a89063"
+    },
+    {
+      "id": "ege-base-number-16",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "b186e9a7abcf7d49c43aa3d92e3927c637cbe194a08b78ef09f305609bdd7c9e"
+    },
+    {
+      "id": "ege-base-number-17",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "f7fb343507de8684056502bbb84b2624b4278e636317b7f683601ff0ce5838e6"
+    },
+    {
+      "id": "ege-base-number-18",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "92f6985dffa2d89af73c524f6d124bbb64289c81a5d107b21809c8e21f7b1ad9"
+    },
+    {
+      "id": "ege-base-number-19",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "750238cb1756c19e47ab6e1c6aff1f2341ea268d870cc895b1b57de5f2d19a4d"
+    },
+    {
+      "id": "ege-base-number-20",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "0cd90c32b21f4c7ed4cd6ff69d0d681bb343579bb61f0185be9c54347da408a1"
+    },
+    {
+      "id": "ege-base-number-21",
+      "kind": "theory",
+      "provenancePolicy": 3,
+      "sha256": "eeefc7954bc0be7b32cf0aac6605a50dfe22dc7f609af855d6b0c196dc296067"
+    }
+  ]
+}

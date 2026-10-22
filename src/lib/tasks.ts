@@ -4,14 +4,22 @@ import { egeTasks, egePrototypes } from "./content/ege-bank";
 import type { Exam } from "./navigation";
 import { getExamDefinition, type ExamLevel, type ExamPart } from "./exams";
 import { getExamNumberXPScoringRule } from "./exam-scores";
+import { originalProvenance, type ContentProvenance } from "./content/provenance";
+import { legacyTaskOrder } from "./content/legacy-task-order";
+import { baseTasks, basePrototypes } from "./content/base-bank";
+import { informaticsTasks, informaticsPrototypes } from "./content/informatics-bank";
+import type { SubjectId } from "./subjects";
+export type { SubjectId } from "./subjects";
 
 export type { Exam } from "./navigation";
-export type SubjectId = "math";
 export type AnswerRule =
-  { type: "number"; value: string } | { type: "set"; values: string[] } | { type: "self" };
+  { type: "number"; value: string } | { type: "set"; values: string[] } | { type: "text"; value: string; caseInsensitive?: boolean } | { type: "self" };
 
 export type Task = {
   id: string;
+  /** Historical examples remain readable but are not relabelled as current numbered tasks. */
+  availability?: "practice" | "history-only";
+  provenance: ContentProvenance;
   topicId: string;
   prototypeId: string;
   examType: [Exam];
@@ -23,7 +31,10 @@ export type Task = {
   /** null means a fundamental school example, not an official numbered prototype. */
   part: ExamPart | null;
   difficulty: "foundation" | "standard" | "advanced";
-  answerFormat: "number" | "set" | "extended";
+  answerFormat: "number" | "set" | "text" | "extended";
+  resources?: { name: string; content: string }[];
+  /** Entry restrictions for a named exam attempt; ordinary practice stays compatible. */
+  examEntryFormat?: "digit-sequence";
   source: {
     kind: "author";
     label: string;
@@ -108,6 +119,7 @@ export const prototypes = [
   ...ogePrototypes,
   ...egePrototypes,
   ...challengePrototypes,
+  ...basePrototypes,
 ];
 
 type DerivedTaskMetadata =
@@ -118,6 +130,7 @@ type DerivedTaskMetadata =
   | "difficulty"
   | "answerFormat"
   | "source"
+  | "provenance"
   | "scoring";
 
 function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
@@ -130,11 +143,14 @@ function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
   const number = definition.numbers.find(
     (entry) => entry.number === data.examNumber,
   );
-  const scoringRule = number
+  const historicalBase = definition.level === "base";
+  const scoringRule = number && !historicalBase
     ? getExamNumberXPScoringRule(definition.versionId, number.number)
     : null;
   return {
     ...data,
+    ...(historicalBase ? { availability: "history-only" as const } : {}),
+    provenance: originalProvenance("existing-project-author-declaration"),
     subjectId: "math",
     examYear: definition.year,
     examVersionId: definition.versionId,
@@ -150,6 +166,7 @@ function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
 }
 
 /** Author-written examples. Original 24 IDs and indexes stay stable for old local records. */
+const legacyOrder = new Map(legacyTaskOrder.map((id, index) => [id, index]));
 export const tasks: Task[] = [
   defineTask({
     id: "triangle-sine",
@@ -1201,7 +1218,12 @@ export const tasks: Task[] = [
   ...ogeTasks,
   ...egeTasks,
   ...challengeTasks,
-];
+  ...baseTasks,
+].sort((left, right) => (legacyOrder.get(left.id) ?? Infinity) - (legacyOrder.get(right.id) ?? Infinity));
+
+/** The original maths array/order stays untouched; universal practice opts into this bank. */
+export const practiceBank: Task[] = [...tasks, ...informaticsTasks];
+export const practicePrototypes = [...prototypes, ...informaticsPrototypes];
 
 export type PracticeTaskFilter = {
   examType: Exam;
@@ -1221,11 +1243,12 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
     !definition.numbers.some((entry) => entry.number === filter.examNumber)
   )
     return [];
-  return tasks.filter(
+  return practiceBank.filter(
     (task) =>
       task.examType[0] === definition.examType &&
       task.subjectId === definition.subjectId &&
       task.level === definition.level &&
+      task.availability !== "history-only" &&
       (filter.examNumber === undefined ||
         task.examNumber === filter.examNumber) &&
       (!filter.topicId || task.topicId === filter.topicId) &&
@@ -1313,6 +1336,15 @@ export function checkTaskAnswer(
       correct:
         expected !== null && rationalKey(answer) === rationalKey(expected),
     };
+  }
+
+  if (rule.type === "text") {
+    const normalize = (value: string) => {
+      const text = value.normalize("NFC").trim().replace(/\s+/g, " ");
+      return rule.caseInsensitive ? text.toLocaleLowerCase("ru") : text;
+    };
+    if (!input.trim()) return { valid: false, correct: false, message: "Введите ответ в формате, указанном в условии." };
+    return { valid: true, correct: normalize(input) === normalize(rule.value) };
   }
 
   const trimmed = input.trim();

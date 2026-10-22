@@ -109,7 +109,7 @@ test("unreadable/unknown storage is recognized before persistence; unsupported s
   assert.equal(isReadablePracticeStorage(JSON.stringify({ ...store({}, null), version: 1 })), true);
   assert.equal(isReadablePracticeStorage(JSON.stringify(store({}, null))), true);
   const session = opened("unsupported", "ОГЭ", 7, 1, 1);
-  session.selection.subjectId = "physics";
+  session.selection.subjectId = "astronomy";
   const restored = parseStoredPractice(JSON.stringify(store({ [session.id]: session }, session.id)));
   assert.deepEqual(restored.sessions, {});
   assert.equal(restored.activeId, null);

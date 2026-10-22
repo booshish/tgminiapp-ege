@@ -17,12 +17,14 @@ import { ExamPicker, PageIntro } from "@/components/ui";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import type { Exam } from "@/lib/navigation";
 import { getTheoryTopic, theoryTopics } from "@/lib/theory";
-import { getExamDefinition } from "@/lib/exams";
+import { getExamDefinition, type ExamLevel } from "@/lib/exams";
 import { getPracticeTasks } from "@/lib/tasks";
 import "@/components/theory-screen.css";
 
 type TheoryScreenProps = {
   exam: Exam;
+  level?: ExamLevel | null;
+  onLevelChange?: (level: ExamLevel) => void;
   topicId?: string;
   materialId?: string;
   focusMode?: boolean;
@@ -37,6 +39,8 @@ type TheoryScreenProps = {
 
 export function TheoryScreen({
   exam,
+  level = "profile",
+  onLevelChange,
   topicId,
   materialId,
   focusMode = false,
@@ -54,7 +58,7 @@ export function TheoryScreen({
   const [number, setNumber] = useState("");
   const definition = getExamDefinition({
     examType: exam,
-    level: exam === "ЕГЭ" ? "profile" : undefined,
+    level: exam === "ЕГЭ" ? level ?? "profile" : undefined,
   });
   const normalizedQuery = query
     .trim()
@@ -64,7 +68,7 @@ export function TheoryScreen({
     ? new Set(
         getPracticeTasks({
           examType: exam,
-          level: exam === "ЕГЭ" ? "profile" : undefined,
+          level: exam === "ЕГЭ" ? level ?? "profile" : undefined,
           examNumber: Number(number),
         }).map((task) => getTheoryTopic(task.topicId)?.id ?? task.topicId),
       )
@@ -72,6 +76,7 @@ export function TheoryScreen({
   const visibleTopics = theoryTopics.filter(
     (item) =>
       item.examType.includes(exam) &&
+      (item.coverage === "foundation" || exam !== "ЕГЭ" || (item.level ?? "profile") === (level ?? "profile")) &&
       item.part === part &&
       (!matchingTaskTopics || item.examNumbers?.includes(Number(number)) || matchingTaskTopics.has(item.id)) &&
       (!normalizedQuery ||
@@ -84,8 +89,10 @@ export function TheoryScreen({
   const topic = topicId ? getTheoryTopic(topicId) : undefined;
   const isMaterial = Boolean(topic && materialId === topic.materialId);
   const unavailable = Boolean(
-    (topicId && (!topic || !topic.examType.includes(exam))) || (materialId && !isMaterial),
+    (topicId && (!topic || !topic.examType.includes(exam) ||
+      (topic.coverage !== "foundation" && exam === "ЕГЭ" && (topic.level ?? "profile") !== (level ?? "profile")))) || (materialId && !isMaterial),
   );
+  const levelCaption = exam === "ЕГЭ" ? level === "base" ? " · база" : " · профиль" : "";
 
   const searchField = (
     <label className="theory-search">
@@ -109,7 +116,7 @@ export function TheoryScreen({
         {topic.source.label} · около {topic.readMinutes} минут.
         {topic.coverage === "foundation"
           ? " Школьная база для ОГЭ и ЕГЭ."
-          : ` ${exam}${exam === "ЕГЭ" ? " · профиль" : ""}, часть ${topic.part}.`}
+          : ` ${exam}${levelCaption}, часть ${topic.part}.`}
         {" "}Это не официальный материал ФИПИ.
         {topic.part === 2 && " Пояснения по оформлению — авторские, официальные критерии здесь не воспроизводятся."}
       </p>
@@ -191,13 +198,21 @@ export function TheoryScreen({
             }}
           />
           <div className="theory-tools">
+            {exam === "ЕГЭ" && onLevelChange && <label className="theory-number-filter">
+              <span>Уровень математики</span>
+              <select aria-label="Уровень математики в теории" value={level ?? "profile"} onChange={(event) => {
+                setPart(1); setNumber(""); onLevelChange(event.target.value as ExamLevel);
+              }}>
+                <option value="base">Базовый</option><option value="profile">Профильный</option>
+              </select>
+            </label>}
             {!isPhone && searchField}
             <div
               className="segmented theory-part-switch"
               role="group"
               aria-label="Часть экзамена"
             >
-              {([1, 2] as const).map((value) => (
+              {([1, 2] as const).filter((value) => definition?.numbers.some((entry) => entry.part === value)).map((value) => (
                 <button
                   key={value}
                   type="button"
@@ -231,7 +246,7 @@ export function TheoryScreen({
           </div>
           <div className="theory-section-heading">
             <span className="eyebrow">
-              {exam} · МАТЕМАТИКА{exam === "ЕГЭ" ? " · ПРОФИЛЬ" : ""} · ЧАСТЬ {part}
+              {exam} · МАТЕМАТИКА{levelCaption.toLocaleUpperCase("ru")} · ЧАСТЬ {part}
             </span>
             <h2>Выберите тему</h2>
             {!isPhone && <p>
@@ -311,12 +326,12 @@ export function TheoryScreen({
         <>
           <nav className="lesson-breadcrumbs" aria-label="Путь к материалу">
             {isPhone ? <span>
-              {exam} · Математика{exam === "ЕГЭ" ? " · профиль" : ""} · Часть {topic.part}
+              {exam} · Математика{levelCaption} · Часть {topic.part}
               {topic.examNumbers?.[0] ? ` · №${topic.examNumbers[0]}` : " · Школьная база"}
             </span> : <>
             <span>{exam}</span>
             <ChevronRight size={13} aria-hidden="true" />
-            <span>Математика{exam === "ЕГЭ" ? " · профиль" : ""}</span>
+            <span>Математика{levelCaption}</span>
             <ChevronRight size={13} aria-hidden="true" />
             <span>{topic.coverage === "foundation" ? "Школьная база" : `№${topic.examNumbers?.[0]}`} · часть {topic.part}</span>
             <ChevronRight size={13} aria-hidden="true" />
@@ -410,6 +425,15 @@ export function TheoryScreen({
                 </div>
               </section>
               <TheoryPrerequisites ids={topic.prerequisites} onOpenTopic={onOpenTopic} />
+              {Boolean(topic.knowledgeChecks?.length) && <section className="lesson-section lesson-knowledge-checks" aria-label="Самопроверка знаний">
+                <span className="eyebrow">ПРОВЕРЬ ПОНИМАНИЕ</span>
+                <h2>Самопроверка знаний</h2>
+                {topic.knowledgeChecks?.map((item) => <div key={item.question}>
+                  <p>{item.question}</p>
+                  {item.latex && <TheoryFormula latex={item.latex} />}
+                  <details><summary>Показать ответ и объяснение</summary><p><strong>{item.answer}</strong></p><p>{item.explanation}</p></details>
+                </div>)}
+              </section>}
               <div className="lesson-practice">
                 <div>
                   <h2>Теперь твоя очередь</h2>

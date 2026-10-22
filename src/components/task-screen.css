@@ -506,3 +506,4 @@
   white-space: nowrap;
   color: var(--sage-dark);
 }
+.task-screen[data-subject="informatics"] .task-prompt { white-space: pre-wrap; overflow-wrap: anywhere; }

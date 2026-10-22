@@ -34,9 +34,10 @@ function isObject(value: unknown): value is Record<string, unknown> {
 }
 
 export function isAvailableTask(task: Task): boolean {
-  return task.subjectId === "math" &&
+  if (task.subjectId !== "math") return task.subjectId === "informatics" && task.availability !== "history-only";
+  return task.subjectId === "math" && task.availability !== "history-only" &&
     ((task.examType[0] === "ОГЭ" && task.level === null) ||
-      (task.examType[0] === "ЕГЭ" && task.level === "profile"));
+      (task.examType[0] === "ЕГЭ" && (task.level === "profile" || task.level === "base")));
 }
 
 export function resolveBookmark(input: BookmarkInput, catalog: StudyToolsCatalog) {

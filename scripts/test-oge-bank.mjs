@@ -4,7 +4,7 @@ import katex from "katex";
 import { createContentLoader } from "./content-source-loader.mjs";
 
 const load = createContentLoader();
-const { ogeTasks, ogePrototypes, ogeGeneratorCases } = load("src/lib/content/oge-bank.ts");
+const { ogeTasks, ogePrototypes, ogeGeneratorCases, ogeSupplementIds } = load("src/lib/content/oge-bank.ts");
 const { checkTaskAnswer } = load("src/lib/tasks.ts");
 const cases = ogeGeneratorCases.map((entry) => ({ ...entry, task: ogeTasks.find((task) => task.id === entry.taskId) }));
 const forNumber = (number) => cases.filter((entry) => entry.number === number);
@@ -17,13 +17,16 @@ function accepted(task, numerator, denominator = 1) {
 }
 
 test("OGE author bank reproducibly covers 1–25 with complete metadata, no duplicate variants or foreign exams", () => {
-  assert.equal(ogeTasks.length, 214);
-  assert.equal(ogeGeneratorCases.length, ogeTasks.length);
+  assert.equal(ogeTasks.length, 220);
+  assert.equal(ogeGeneratorCases.length, 214);
+  assert.equal(ogeSupplementIds.length, 6);
+  assert.equal(ogeGeneratorCases.length + ogeSupplementIds.length, ogeTasks.length);
   assert.equal(new Set(ogeTasks.map((task) => task.id)).size, ogeTasks.length);
   assert.equal(new Set(ogeTasks.map((task) => `${task.prompt}|${task.conditionLatex ?? ""}`)).size, ogeTasks.length);
   assert.deepEqual(createContentLoader()("src/lib/content/oge-bank.ts").ogeTasks, ogeTasks);
   for (let number = 1; number <= 25; number++) {
-    assert.equal(forNumber(number).length, number <= 19 ? 10 : 4, `number ${number}`);
+    assert.equal(forNumber(number).length, number <= 19 ? 10 : 4, `recipe number ${number}`);
+    assert.equal(ogeTasks.filter((task) => task.examNumber === number).length, number <= 19 ? 10 : 5, `total number ${number}`);
   }
   for (const task of ogeTasks) {
     assert.deepEqual(task.examType, ["ОГЭ"]);
@@ -35,6 +38,8 @@ test("OGE author bank reproducibly covers 1–25 with complete metadata, no dupl
     assert(task.solution.length >= 3);
     assert(task.solution.every((step) => step.text.trim().length > 10));
     assert.equal(task.source.kind, "author");
+    assert.equal(task.provenance.creation_method, ogeSupplementIds.includes(task.id) ? "original-individual-task" : "original-deterministic-family");
+    assert.equal("creationMethod" in task, false);
     assert.notEqual(task.scoring.status, "verified");
     assert.equal(task.scoring.maxPrimaryScore, task.examNumber <= 19 ? 1 : 2);
     assert.equal(task.answerRule.type, task.examNumber <= 19 ? "number" : "self");
@@ -292,4 +297,92 @@ test("OGE 25 positive tangent lengths reconstruct a valid right triangle and Her
     assert.equal(heron, a * b / 2);
     assert.equal(task.answerDisplay, `${heron} см²`);
   }
+});
+
+const supplementary = (number) => {
+  const task = ogeTasks.find((entry) => ogeSupplementIds.includes(entry.id) && entry.examNumber === number);
+  assert(task, `Missing individually written OGE ${number}`);
+  return task;
+};
+
+test("OGE extra subtypes are six distinct solved tasks, one for every extended number", () => {
+  assert.equal(new Set(ogeSupplementIds).size, 6);
+  assert.deepEqual(ogeSupplementIds.map((id) => ogeTasks.find((task) => task.id === id).examNumber), [20, 21, 22, 23, 24, 25]);
+  for (const id of ogeSupplementIds) {
+    const task = ogeTasks.find((entry) => entry.id === id);
+    assert.equal(task.answerRule.type, "self");
+    assert(task.solution.length >= 4 && task.selfCheckNotes.length >= 3);
+    assert.equal(ogeTasks.filter((entry) => entry.prototypeId === task.prototypeId).length, 1);
+  }
+});
+
+test("OGE extra symmetric system: independent difference identity confirms all real roots", () => {
+  // (x−y)² = 2(x²+y²)−(x+y)² = 1 gives exactly two possible real differences.
+  const differenceSquared = 2 * 25 - 7 ** 2;
+  const roots = [-Math.sqrt(differenceSquared), Math.sqrt(differenceSquared)]
+    .map((difference) => [(7 + difference) / 2, (7 - difference) / 2]);
+  assert.deepEqual(roots, [[3, 4], [4, 3]]);
+  const t = supplementary(20);
+  for (const [x, y] of roots) {
+    assert.equal(x + y, 7); assert.equal(x * x + y * y, 25);
+    assert(t.answerDisplay.includes(`(${x}; ${y})`));
+  }
+});
+
+test("OGE extra journey: both polynomial roots and the unique physically admissible time model", () => {
+  const roots = [(7 - Math.sqrt(49 + 120)) / 2, (7 + Math.sqrt(49 + 120)) / 2];
+  const valid = roots.filter((speed) => speed > 0);
+  assert.deepEqual(valid, [10]);
+  assert.equal(60 / valid[0] + 60 / (valid[0] + 5), 10);
+  assert(60 / 9 + 60 / 14 > 10 && 60 / 11 + 60 / 16 < 10);
+  assert.match(supplementary(21).answerDisplay, /10 км\/ч.*15 км\/ч/);
+});
+
+test("OGE extra absolute-value graph: plateau, rays and all intersection counts", () => {
+  const f = (x) => Math.abs(x - 2) + Math.abs(x + 1);
+  for (let x = -1; x <= 2; x += 0.125) assert.equal(f(x), 3);
+  for (let x = -10; x <= 10; x += 0.25) assert(f(x) >= 3);
+  for (const level of [3.125, 4, 7, 20]) {
+    const roots = [(1 - level) / 2, (level + 1) / 2];
+    assert(roots[0] < -1 && roots[1] > 2);
+    roots.forEach((root) => assert.equal(f(root), level));
+  }
+  assert.match(supplementary(22).answerDisplay, /m = 3: бесконечно много/);
+});
+
+test("OGE extra triangle: Heron's formula independently checks the height-based area", () => {
+  const [a, b, c] = [13, 15, 14], s = (a + b + c) / 2;
+  const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+  assert.equal(area, 84);
+  assert.equal(2 * area / c, 12);
+  assert.equal(supplementary(23).answerDisplay, `${area} см²`);
+});
+
+test("OGE extra midpoint theorem: several convex coordinate witnesses verify both pairs of parallel sides", () => {
+  // These witnesses catch swapped midpoint labels; the general proof remains the supplied theorem argument.
+  const quadrilaterals = [
+    [[0, 0], [8, 0], [6, 5], [-2, 4]],
+    [[-3, 1], [5, -2], [8, 6], [0, 9]],
+    [[1, 1], [9, 3], [7, 10], [-4, 6]],
+  ];
+  for (const vertices of quadrilaterals) {
+    const midpoints = vertices.map(([x, y], index) => [(x + vertices[(index + 1) % 4][0]) / 2, (y + vertices[(index + 1) % 4][1]) / 2]);
+    const edges = midpoints.map(([x, y], index) => [midpoints[(index + 1) % 4][0] - x, midpoints[(index + 1) % 4][1] - y]);
+    assert.deepEqual(edges[0], edges[2].map((value) => -value));
+    assert.deepEqual(edges[1], edges[3].map((value) => -value));
+  }
+  assert.match(supplementary(24).answerDisplay, /параллелограмм/);
+});
+
+test("OGE extra two circles: Cartesian distances confirm all tangencies and containment", () => {
+  // A=(0,8), B=(-6,0), C=(6,0); side lines ±4x−3y+24=0.
+  const big = [0, 3], small = [0, 27 / 4], radius = 3 / 4;
+  const sideDistance = ([x, y], sign) => Math.abs(sign * 4 * x - 3 * y + 24) / 5;
+  for (const sign of [-1, 1]) {
+    assert.equal(sideDistance(big, sign), 3);
+    assert.equal(sideDistance(small, sign), radius);
+  }
+  assert.equal(Math.hypot(small[0] - big[0], small[1] - big[1]), 3 + radius);
+  assert(small[1] - radius > 0 && small[1] + radius < 8);
+  assert.equal(supplementary(25).answerDisplay, "3/4 см");
 });

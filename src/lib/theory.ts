@@ -1,8 +1,14 @@
 import type { Exam } from "@/lib/navigation";
 import { numberTheoryTopics } from "./content/number-theory";
+import { baseTheoryTopics } from "./content/base-theory";
+import { knowledgeChecks, type KnowledgeCheck } from "./content/knowledge-checks";
+import { originalProvenance, type ContentProvenance } from "./content/provenance";
 
 export type TheoryTopic = {
   id: string;
+  level?: "base" | "profile" | null;
+  knowledgeChecks?: KnowledgeCheck[];
+  provenance?: ContentProvenance;
   subjectId: "math";
   part: 1 | 2;
   coverage: "foundation" | "exam-topic";
@@ -25,7 +31,7 @@ export type TheoryTopic = {
 };
 
 /** Общая математическая база для обоих экзаменов, не полный курс ОГЭ или ЕГЭ. */
-export const theoryTopics: TheoryTopic[] = [
+const originalTheoryTopics: TheoryTopic[] = [
   {
     id: "fractions",
     subjectId: "math",
@@ -661,7 +667,14 @@ export const theoryTopics: TheoryTopic[] = [
     ],
   },
   ...numberTheoryTopics,
+  ...baseTheoryTopics,
 ];
+
+export const theoryTopics: TheoryTopic[] = originalTheoryTopics.map((topic) => ({
+  ...topic,
+  provenance: originalProvenance("original-explanation"),
+  knowledgeChecks: topic.knowledgeChecks ?? knowledgeChecks[topic.id] ?? [],
+}));
 
 /** Legacy task/event topic identifiers resolve without rewriting stored history. */
 export const theoryTopicAliases: Readonly<Record<string, string>> = {

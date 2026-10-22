@@ -46,6 +46,15 @@ export const configuredXPScoringRules: readonly XPScoringRule[] = [
       sourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
     };
   }),
+  // Read from the 2026 specification copy, PDF p.5–6 (printed p.9–12).
+  // Still project-config: uploaded archive identity and complete source review are pending.
+  ...Array.from({ length: 21 }, (_, index): XPScoringRule => ({
+    status: "project-config", ruleId: `ege-math-base-2026-${index + 1}`,
+    examVersionId: "ege-math-base-2026", examYear: 2026,
+    subjectId: "math", examType: "ЕГЭ", examNumber: index + 1,
+    level: "base", part: 1, answerFormat: "short", maxPrimaryScore: 1,
+    sourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+  })),
 ];
 
 /** Kept separate so a configured grid cannot be mistaken for a completed source review. */
@@ -63,7 +72,7 @@ export function getExamNumberXPScoringRule(
 }
 
 export function getTaskXPScoringRule(task: Task): XPScoringRule | null {
-  if (task.examNumber === null || task.part === null) return null;
+  if (task.examNumber === null || task.part === null || task.availability === "history-only") return null;
   const rule = getExamNumberXPScoringRule(task.examVersionId, task.examNumber);
   if (!rule || rule.examYear !== task.examYear || rule.subjectId !== task.subjectId
     || rule.examType !== task.examType[0] || rule.level !== task.level

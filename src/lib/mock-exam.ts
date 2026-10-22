@@ -3,19 +3,40 @@ import { checkTaskAnswer, type Task } from "./tasks";
 
 export const mockExamStorageKey = "tochka-mock-exams-v1";
 export const mockDurationMinutes = 235;
-export const mockDurationNote = "235 минут — учебная настройка. Длительность и структура официального экзамена требуют сверки с ФИПИ соответствующего года.";
+export const mockDurationNote = "Учебная настройка: ОГЭ и ЕГЭ профиль — 235 минут, ЕГЭ база — 180 минут. Длительность и структура официального экзамена 2027 года требуют сверки с конкретными документами ФИПИ.";
+
+/** Project settings, not a claim that the unavailable 2027 specifications were read. */
+export function getMockDurationMinutes(definition: ExamDefinition) {
+  return definition.examType === "ЕГЭ" && definition.level === "base" ? 180 : mockDurationMinutes;
+}
+
+export type MockVariant = {
+  id: string;
+  number: number;
+  title: string;
+  taskIds: string[];
+  maxPrimaryScore: number;
+  durationMinutes: number;
+};
 
 export type MockResult = {
   taskId: string;
   valid: boolean;
   correct: boolean;
   primaryScore: number;
+  message?: string;
   /** Stable request identifier; not a second XP journal. */
   requestId: string | null;
 };
 export type MockSession = {
   id: string;
   examVersionId: string;
+  /** Optional for pre-catalogue attempts; saved taskIds remain the source of truth. */
+  variantId?: string;
+  variantNumber?: number;
+  durationMinutes?: number;
+  /** Only named attempts opt in; historical rational-format attempts retain their rules. */
+  answerFormatVersion?: 1;
   taskIds: string[];
   startedAt: number;
   deadline: number;
@@ -27,18 +48,20 @@ export type MockSession = {
   selfScores: Record<string, number>;
   revealedTaskIds: string[];
   publishedTaskIds: string[];
+  /** Additive migration: legacy attempts have no skipped tasks. */
+  skippedTaskIds?: string[];
 };
 export type MockState = { version: 1; activeId: string | null; sessions: MockSession[] };
 export const emptyMockState = (): MockState => ({ version: 1, activeId: null, sessions: [] });
 
-function usableTask(task: Task, definition: ExamDefinition) {
+function usableTask(task: Task, definition: ExamDefinition, historicalAttempt = false) {
   const number = definition.numbers.find((entry) => entry.number === task.examNumber);
-  return Boolean(number && task.examVersionId === definition.versionId &&
+  return Boolean(number && (historicalAttempt || task.availability !== "history-only") && task.examVersionId === definition.versionId &&
     task.examType[0] === definition.examType && task.subjectId === definition.subjectId &&
     task.level === definition.level && task.part === number.part && task.solution.length > 0 &&
     task.prompt.trim() && task.scoring.maxPrimaryScore === number.maxPrimaryScore &&
     number.maxPrimaryScore !== null && number.maxPrimaryScore > 0 &&
-    (number.part === 1 ? task.answerRule.type !== "self" : task.answerRule.type === "self"));
+    (number.part === 1 ? task.answerRule.type === "number" || (historicalAttempt && task.answerRule.type === "set") : task.answerRule.type === "self"));
 }
 
 export function getMockCoverage(definition: ExamDefinition, bank: Task[]) {
@@ -50,6 +73,65 @@ export function getMockCoverage(definition: ExamDefinition, bank: Task[]) {
     : [];
   const missingSharedCondition = definition.examType === "ОГЭ" && completeGroups.length === 0;
   return { available, missingNumbers, completeGroups, missingSharedCondition, canStart: definition.available && missingNumbers.length === 0 && !missingSharedCondition };
+}
+
+/** Five fixed learning variants when every number has enough distinct author tasks.
+ * Sorting by stable ID makes the catalogue independent of array order. Attempts
+ * snapshot task IDs, so later content additions never change an existing attempt.
+ */
+export function getMockVariants(definition: ExamDefinition, bank: Task[]): MockVariant[] {
+  const coverage = getMockCoverage(definition, bank);
+  if (!coverage.canStart) return [];
+  const byId = (a: Task, b: Task) => a.id.localeCompare(b.id, "en", { numeric: true });
+  const diverseChoices = (choices: Task[]) => {
+    const families = new Map<string, Task[]>();
+    for (const task of choices.sort(byId)) {
+      const family = families.get(task.prototypeId) ?? [];
+      family.push(task);
+      families.set(task.prototypeId, family);
+    }
+    const groups = [...families.entries()].sort(([a], [b]) => a.localeCompare(b, "en", { numeric: true })).map(([, family]) => family);
+    const interleaved: Task[] = [];
+    for (let index = 0; interleaved.length < choices.length; index += 1) {
+      for (const family of groups) if (family[index]) interleaved.push(family[index]);
+    }
+    return interleaved;
+  };
+  const groups = [...coverage.completeGroups].sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
+  const choicesByNumber = definition.numbers.map((number) => diverseChoices(coverage.available
+    .filter((task) => task.examNumber === number.number)));
+  const independentCounts = choicesByNumber.map((choices, index) =>
+    definition.examType === "ОГЭ" && definition.numbers[index].number <= 5 ? groups.length : choices.length);
+  const count = Math.min(5, ...independentCounts);
+  return Array.from({ length: count }, (_, index) => {
+    const taskIds = definition.numbers.map((number, position) => {
+      const choices = choicesByNumber[position];
+      return (definition.examType === "ОГЭ" && number.number <= 5
+        ? choices.find((task) => task.sharedConditionId === groups[index])!
+        : choices[index]).id;
+    });
+    return {
+      id: `${definition.versionId}-study-v1-${index + 1}`,
+      number: index + 1,
+      title: `Вариант №${index + 1}`,
+      taskIds,
+      maxPrimaryScore: definition.numbers.reduce((sum, number) => sum + (number.maxPrimaryScore ?? 0), 0),
+      durationMinutes: getMockDurationMinutes(definition),
+    };
+  });
+}
+
+export function getUnfinishedMockSession(state: MockState, definition: ExamDefinition): MockSession | null {
+  const candidates = state.sessions.filter((session) => session.examVersionId === definition.versionId && session.finishedAt === null);
+  return candidates.find((session) => session.id === state.activeId)
+    ?? [...candidates].sort((a, b) => b.startedAt - a.startedAt)[0]
+    ?? null;
+}
+
+export function getMockTaskStatus(session: MockSession, taskId: string): "unanswered" | "answered" | "skipped" {
+  if (!session.taskIds.includes(taskId)) return "unanswered";
+  if (session.skippedTaskIds?.includes(taskId)) return "skipped";
+  return session.answers[taskId]?.trim() ? "answered" : "unanswered";
 }
 
 function seedNumber(seed: string) {
@@ -71,6 +153,7 @@ export function createMockSession(
   bank: Task[],
   previousSessions: MockSession[] = [],
   now = Date.now(),
+  variantNumber?: number,
 ): MockSession {
   if (!/^[a-zA-Z0-9-]{1,100}$/.test(id) || !Number.isSafeInteger(now) || now < 0) throw new Error("Invalid session identity");
   const coverage = getMockCoverage(definition, bank);
@@ -81,14 +164,40 @@ export function createMockSession(
   const group = coverage.completeGroups.length
     ? chooseLeastUsed(coverage.completeGroups, (value) => value, previous.map((session) => bank.find((task) => task.id === session.taskIds[0])?.sharedConditionId ?? ""), seed)
     : null;
-  const taskIds = definition.numbers.map((number) => {
+  let taskIds = definition.numbers.map((number) => {
     const choices = coverage.available.filter((task) => task.examNumber === number.number &&
       (definition.examType !== "ОГЭ" || number.number > 5 || task.sharedConditionId === group));
     return chooseLeastUsed(choices, (task) => task.id, recentIds, (seed + number.number * 7919) >>> 0).id;
   });
+  const variant = variantNumber === undefined ? undefined : getMockVariants(definition, bank).find((entry) => entry.number === variantNumber);
+  if (variantNumber !== undefined && !variant) throw new Error("Unknown learning variant");
+  if (variant) taskIds = [...variant.taskIds];
+  const durationMinutes = getMockDurationMinutes(definition);
+  const deadline = now + durationMinutes * 60_000;
+  if (!Number.isSafeInteger(deadline)) throw new Error("Invalid session deadline");
   return { id, examVersionId: definition.versionId, taskIds, startedAt: now,
-    deadline: now + mockDurationMinutes * 60_000, finishedAt: null, finishReason: null,
-    position: 0, answers: {}, results: {}, selfScores: {}, revealedTaskIds: [], publishedTaskIds: [] };
+    ...(variant ? { variantId: variant.id, variantNumber: variant.number, answerFormatVersion: 1 as const } : {}),
+    durationMinutes,
+    deadline, finishedAt: null, finishReason: null,
+    position: 0, answers: {}, results: {}, selfScores: {}, revealedTaskIds: [], publishedTaskIds: [], skippedTaskIds: [] };
+}
+
+/** Start is explicit; restoring a state never creates an attempt. A new attempt
+ * preserves every older attempt and its deadline, answers and history. */
+export function startMockAttempt(
+  state: MockState,
+  definition: ExamDefinition,
+  bank: Task[],
+  id: string,
+  now = Date.now(),
+  variantNumber?: number,
+  replace = false,
+): MockState {
+  const unfinished = getUnfinishedMockSession(state, definition);
+  if (unfinished && !replace) return { ...state, activeId: unfinished.id };
+  if (state.sessions.some((session) => session.id === id)) throw new Error("Duplicate mock session identity");
+  const session = createMockSession(id, definition, bank, state.sessions, now, variantNumber);
+  return { ...state, sessions: [...state.sessions, session], activeId: session.id };
 }
 
 export function remainingMockMilliseconds(session: MockSession, now: number) {
@@ -98,23 +207,48 @@ export function elapsedMockMilliseconds(session: MockSession, now: number) {
   return Math.max(0, Math.min(session.finishedAt ?? now, session.deadline) - session.startedAt);
 }
 export function updateMockAnswer(session: MockSession, taskId: string, answer: string, now = Date.now()): MockSession {
-  if (session.finishedAt !== null || now >= session.deadline || !session.taskIds.includes(taskId) || answer.length > 20_000) return session;
-  return { ...session, answers: { ...session.answers, [taskId]: answer } };
+  if (session.finishedAt !== null || !validTime(now) || now < session.startedAt || now >= session.deadline || !session.taskIds.includes(taskId) || answer.length > 20_000) return session;
+  return { ...session, answers: { ...session.answers, [taskId]: answer }, skippedTaskIds: (session.skippedTaskIds ?? []).filter((id) => id !== taskId) };
+}
+
+export function skipMockTask(session: MockSession, taskId: string, now = Date.now()): MockSession {
+  if (session.finishedAt !== null || !validTime(now) || now < session.startedAt || now >= session.deadline || !session.taskIds.includes(taskId)) return session;
+  return { ...session, skippedTaskIds: [...new Set([...(session.skippedTaskIds ?? []), taskId])] };
 }
 export function selectMockPosition(session: MockSession, position: number): MockSession {
   if (!Number.isInteger(position) || position < 0 || position >= session.taskIds.length) return session;
   return { ...session, position };
 }
 
+/** Exam entry format is deliberately narrower than the practice rational parser.
+ * Digit sequences compare as strings and never pass through numeric normalization.
+ */
+export function checkMockAnswer(input: string, task: Task, strict = true) {
+  if (strict && task.part === 1 && task.examEntryFormat === "digit-sequence") {
+    const answer = typeof input === "string" ? input.trim() : "";
+    if (task.answerRule.type !== "number" || answer.length > 128 || !/^\d+$/.test(answer)) {
+      return { valid: false, correct: false, message: "Запишите последовательность цифр без пробелов, знаков, дробной части и разделителей." };
+    }
+    return { valid: true, correct: answer === task.answerRule.value };
+  }
+  if (strict && task.part === 1 && (task.answerRule.type !== "number" ||
+      typeof input !== "string" || !/^[+-]?\d+(?:[,.]\d+)?$/.test(input.trim().replaceAll("−", "-")))) {
+    return { valid: false, correct: false, message: "Запишите целое число или конечную десятичную дробь, без единиц измерения. Обыкновенная дробь и список значений в этом формате не принимаются." };
+  }
+  return checkTaskAnswer(input, task.answerRule);
+}
+
 export function finishMockSession(session: MockSession, bank: Task[], now = Date.now()): MockSession {
   if (session.finishedAt !== null) return session;
+  if (!validTime(now) || now < session.startedAt) throw new Error("Invalid finish time");
   const results: MockSession["results"] = {};
   for (const taskId of session.taskIds) {
     const task = bank.find((entry) => entry.id === taskId);
     if (!task || task.part !== 1) continue;
-    const checked = checkTaskAnswer(session.answers[taskId] ?? "", task.answerRule);
+    const checked = checkMockAnswer(session.answers[taskId] ?? "", task, session.answerFormatVersion === 1);
     results[taskId] = { taskId, valid: checked.valid, correct: checked.correct,
       primaryScore: checked.valid && checked.correct ? task.scoring.maxPrimaryScore ?? 0 : 0,
+      ...(checked.message ? { message: checked.message } : {}),
       requestId: checked.valid ? `${session.id}-answer-${task.examNumber}` : null };
   }
   return { ...session, finishedAt: Math.max(session.startedAt, Math.min(now, session.deadline)), finishReason: now >= session.deadline ? "timeout" : "manual", results };
@@ -145,10 +279,16 @@ export function parseMockState(raw: string | null, bank: Task[], definitions: Ex
   const sessions: MockSession[] = [];
   for (const value of input.sessions) {
     if (!isObject(value) || typeof value.id !== "string" || !/^[a-zA-Z0-9-]{1,100}$/.test(value.id) || sessions.some((entry) => entry.id === value.id)) throw new Error("Invalid mock session");
-    const definition = definitions.find((entry) => entry.versionId === value.examVersionId && entry.available);
-    if (!definition || !Array.isArray(value.taskIds) || value.taskIds.length !== definition.numbers.length || !validTime(value.startedAt) || !validTime(value.deadline) || value.deadline !== value.startedAt + mockDurationMinutes * 60_000) throw new Error("Invalid mock metadata");
+    const definition = definitions.find((entry) => entry.versionId === value.examVersionId);
+    // Legacy v1 attempts all used 235 minutes, including historical base attempts.
+    const durationMinutes = value.durationMinutes === undefined ? mockDurationMinutes : value.durationMinutes;
+    if (typeof durationMinutes !== "number" || !definition || ![mockDurationMinutes, getMockDurationMinutes(definition)].includes(durationMinutes)) throw new Error("Invalid mock duration");
+    if (!definition || !Array.isArray(value.taskIds) || value.taskIds.length !== definition.numbers.length || !validTime(value.startedAt) || !validTime(value.deadline) || value.deadline !== value.startedAt + durationMinutes * 60_000) throw new Error("Invalid mock metadata");
+    if ((value.variantNumber !== undefined || value.variantId !== undefined) &&
+        (typeof value.variantNumber !== "number" || !Number.isInteger(value.variantNumber) || value.variantNumber < 1 || value.variantNumber > 100 || value.variantId !== `${definition.versionId}-study-v1-${value.variantNumber}`)) throw new Error("Invalid mock variant identity");
+    if (value.answerFormatVersion !== undefined && value.answerFormatVersion !== 1) throw new Error("Unsupported mock answer format");
     const taskIds = value.taskIds as unknown[];
-    if (new Set(taskIds).size !== taskIds.length || !taskIds.every((id, index) => typeof id === "string" && bank.some((task) => task.id === id && usableTask(task, definition) && task.examNumber === definition.numbers[index].number))) throw new Error("Unavailable mock content");
+    if (new Set(taskIds).size !== taskIds.length || !taskIds.every((id, index) => typeof id === "string" && bank.some((task) => task.id === id && usableTask(task, definition, true) && task.examNumber === definition.numbers[index].number))) throw new Error("Unavailable mock content");
     if (definition.examType === "ОГЭ") {
       const groups = new Set(taskIds.slice(0, 5).map((id) => bank.find((task) => task.id === id)?.sharedConditionId));
       if (groups.size !== 1 || groups.has(undefined)) throw new Error("Mixed shared conditions");
@@ -160,11 +300,16 @@ export function parseMockState(raw: string | null, bank: Task[], definitions: Ex
       if (typeof value.answers[id] !== "string" || value.answers[id].length > 20_000) throw new Error("Invalid mock answer text");
       answers[id] = value.answers[id];
     }
+    if (value.skippedTaskIds !== undefined && !Array.isArray(value.skippedTaskIds)) throw new Error("Invalid skipped task list");
+    const skippedTaskIds = [...new Set((value.skippedTaskIds ?? []).filter((id): id is string => typeof id === "string" && taskIds.includes(id)))];
     const revealedTaskIds = [...new Set(value.revealedTaskIds.filter((id): id is string => typeof id === "string" && taskIds.includes(id)))];
     const publishedTaskIds = [...new Set(value.publishedTaskIds.filter((id): id is string => typeof id === "string" && taskIds.includes(id)))];
     let session: MockSession = { id: value.id, examVersionId: definition.versionId, taskIds: taskIds as string[], startedAt: value.startedAt, deadline: value.deadline,
+      ...(value.variantNumber !== undefined ? { variantNumber: value.variantNumber as number, variantId: value.variantId as string } : {}),
+      ...(value.answerFormatVersion === 1 ? { answerFormatVersion: 1 as const } : {}),
+      durationMinutes,
       finishedAt: null, finishReason: null, position: typeof value.position === "number" && Number.isInteger(value.position) && value.position >= 0 && value.position < taskIds.length ? value.position : 0,
-      answers, results: {}, selfScores: {}, revealedTaskIds: [], publishedTaskIds: [] };
+      answers, results: {}, selfScores: {}, revealedTaskIds: [], publishedTaskIds: [], skippedTaskIds };
     if (value.finishedAt !== null) {
       if (!validTime(value.finishedAt) || value.finishedAt < session.startedAt || value.finishedAt > session.deadline) throw new Error("Invalid finish time");
       session = finishMockSession(session, bank, value.finishedAt);

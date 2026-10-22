@@ -1948,24 +1948,457 @@
       "oge-6-multi-step-fractions-v1-3",
       "oge-9-rational-domain-v1-3",
       "ege-6-logarithm-domain-v1-3",
-      "ege-7-conjugate-fractions-v1-3"
+      "ege-7-conjugate-fractions-v1-3",
+      "oge-2026-n20-symmetric-system-v1-r1",
+      "oge-2026-n21-return-journey-v1-r1",
+      "oge-2026-n22-absolute-value-plateau-v1-r1",
+      "oge-2026-n23-altitude-two-pythagoras-v1-r1",
+      "oge-2026-n24-quadrilateral-midpoints-v1-r1",
+      "oge-2026-n25-two-inscribed-circles-v1-r1",
+      "ege-2026-13-double-angle-without-division-v1-1",
+      "ege-2026-14-pyramid-plane-distance-v1-1",
+      "ege-2026-15-logarithmic-sum-domain-v1-1",
+      "ege-2026-16-deposit-with-withdrawals-v1-1",
+      "ege-2026-17-pedal-circle-chord-v1-1",
+      "ege-2026-18-modulus-line-intersections-v1-1",
+      "ege-2026-19-integer-linear-constraint-v1-1",
+      "base-2026-n1-fraction-product-v1-r1",
+      "base-2026-n1-signed-change-v1-r1",
+      "base-2026-n2-braking-formula-v1-r1",
+      "base-2026-n2-temperature-formula-v1-r1",
+      "base-2026-n3-table-ratio-v1-r1",
+      "base-2026-n3-frequency-table-v1-r1",
+      "base-2026-n4-mixed-vehicles-v1-r1",
+      "base-2026-n4-cutting-count-v1-r1",
+      "base-2026-n5-exactly-one-success-v1-r1",
+      "base-2026-n5-at-least-one-success-v1-r1",
+      "base-2026-n6-conditions-table-v1-r1",
+      "base-2026-n6-billing-table-v1-r1",
+      "base-2026-n7-derivative-signs-v1-r1",
+      "base-2026-n7-line-value-v1-r1",
+      "base-2026-n8-sets-neither-v1-r1",
+      "base-2026-n8-logical-counterexample-v1-r1",
+      "base-2026-n9-paint-wall-v1-r1",
+      "base-2026-n9-map-scale-v1-r1",
+      "base-2026-n10-circle-area-v1-r1",
+      "base-2026-n10-triangle-area-v1-r1",
+      "base-2026-n11-cylinder-volume-v1-r1",
+      "base-2026-n11-cone-volume-v1-r1",
+      "base-2026-n12-cyclic-quadrilateral-v1-r1",
+      "base-2026-n12-similarity-area-v1-r1",
+      "base-2026-n13-cube-cutting-v1-r1",
+      "base-2026-n13-liquid-height-v1-r1",
+      "base-2026-n14-fraction-division-v1-r1",
+      "base-2026-n14-operation-order-v1-r1",
+      "base-2026-n15-sequential-percent-v1-r1",
+      "base-2026-n15-percent-comparison-v1-r1",
+      "base-2026-n16-logarithm-value-v1-r1",
+      "base-2026-n16-algebraic-fraction-v1-r1",
+      "base-2026-n17-radical-root-v1-r1",
+      "base-2026-n17-rational-root-v1-r1",
+      "base-2026-n18-linear-largest-v1-r1",
+      "base-2026-n18-exponential-count-v1-r1",
+      "base-2026-n19-least-common-multiple-v1-r1",
+      "base-2026-n19-last-digit-v1-r1",
+      "base-2026-n20-catch-up-v1-r1",
+      "base-2026-n20-mixture-v1-r1",
+      "base-2026-n21-coin-search-v1-r1",
+      "base-2026-n21-counting-paths-v1-r1",
+      "base-2026-n1-fraction-product-v2-r1",
+      "base-2026-n1-signed-change-v2-r1",
+      "base-2026-n2-braking-formula-v2-r1",
+      "base-2026-n2-temperature-formula-v2-r1",
+      "base-2026-n3-table-ratio-v2-r1",
+      "base-2026-n3-frequency-table-v2-r1",
+      "base-2026-n4-mixed-vehicles-v2-r1",
+      "base-2026-n4-cutting-count-v2-r1",
+      "base-2026-n5-exactly-one-success-v2-r1",
+      "base-2026-n5-at-least-one-success-v2-r1",
+      "base-2026-n6-conditions-table-v2-r1",
+      "base-2026-n6-billing-table-v2-r1",
+      "base-2026-n7-derivative-signs-v2-r1",
+      "base-2026-n7-line-value-v2-r1",
+      "base-2026-n8-sets-neither-v2-r1",
+      "base-2026-n8-logical-counterexample-v2-r1",
+      "base-2026-n9-paint-wall-v2-r1",
+      "base-2026-n9-map-scale-v2-r1",
+      "base-2026-n10-circle-area-v2-r1",
+      "base-2026-n10-triangle-area-v2-r1",
+      "base-2026-n11-cylinder-volume-v2-r1",
+      "base-2026-n11-cone-volume-v2-r1",
+      "base-2026-n12-cyclic-quadrilateral-v2-r1",
+      "base-2026-n12-similarity-area-v2-r1",
+      "base-2026-n13-cube-cutting-v2-r1",
+      "base-2026-n13-liquid-height-v2-r1",
+      "base-2026-n14-fraction-division-v2-r1",
+      "base-2026-n14-operation-order-v2-r1",
+      "base-2026-n15-sequential-percent-v2-r1",
+      "base-2026-n15-percent-comparison-v2-r1",
+      "base-2026-n16-logarithm-value-v2-r1",
+      "base-2026-n16-algebraic-fraction-v2-r1",
+      "base-2026-n17-radical-root-v2-r1",
+      "base-2026-n17-rational-root-v2-r1",
+      "base-2026-n18-linear-largest-v2-r1",
+      "base-2026-n18-exponential-count-v2-r1",
+      "base-2026-n19-least-common-multiple-v2-r1",
+      "base-2026-n19-last-digit-v2-r1",
+      "base-2026-n20-catch-up-v2-r1",
+      "base-2026-n20-mixture-v2-r1",
+      "base-2026-n21-coin-search-v2-r1",
+      "base-2026-n21-counting-paths-v2-r1",
+      "base-2026-n1-fraction-product-v3-r1",
+      "base-2026-n1-signed-change-v3-r1",
+      "base-2026-n2-braking-formula-v3-r1",
+      "base-2026-n2-temperature-formula-v3-r1",
+      "base-2026-n3-table-ratio-v3-r1",
+      "base-2026-n3-frequency-table-v3-r1",
+      "base-2026-n4-mixed-vehicles-v3-r1",
+      "base-2026-n4-cutting-count-v3-r1",
+      "base-2026-n5-exactly-one-success-v3-r1",
+      "base-2026-n5-at-least-one-success-v3-r1",
+      "base-2026-n6-conditions-table-v3-r1",
+      "base-2026-n6-billing-table-v3-r1",
+      "base-2026-n7-derivative-signs-v3-r1",
+      "base-2026-n7-line-value-v3-r1",
+      "base-2026-n8-sets-neither-v3-r1",
+      "base-2026-n8-logical-counterexample-v3-r1",
+      "base-2026-n9-paint-wall-v3-r1",
+      "base-2026-n9-map-scale-v3-r1",
+      "base-2026-n10-circle-area-v3-r1",
+      "base-2026-n10-triangle-area-v3-r1",
+      "base-2026-n11-cylinder-volume-v3-r1",
+      "base-2026-n11-cone-volume-v3-r1",
+      "base-2026-n12-cyclic-quadrilateral-v3-r1",
+      "base-2026-n12-similarity-area-v3-r1",
+      "base-2026-n13-cube-cutting-v3-r1",
+      "base-2026-n13-liquid-height-v3-r1",
+      "base-2026-n14-fraction-division-v3-r1",
+      "base-2026-n14-operation-order-v3-r1",
+      "base-2026-n15-sequential-percent-v3-r1",
+      "base-2026-n15-percent-comparison-v3-r1",
+      "base-2026-n16-logarithm-value-v3-r1",
+      "base-2026-n16-algebraic-fraction-v3-r1",
+      "base-2026-n17-radical-root-v3-r1",
+      "base-2026-n17-rational-root-v3-r1",
+      "base-2026-n18-linear-largest-v3-r1",
+      "base-2026-n18-exponential-count-v3-r1",
+      "base-2026-n19-least-common-multiple-v3-r1",
+      "base-2026-n19-last-digit-v3-r1",
+      "base-2026-n20-catch-up-v3-r1",
+      "base-2026-n20-mixture-v3-r1",
+      "base-2026-n21-coin-search-v3-r1",
+      "base-2026-n21-counting-paths-v3-r1",
+      "base-2026-n1-fraction-product-v4-r1",
+      "base-2026-n1-signed-change-v4-r1",
+      "base-2026-n2-braking-formula-v4-r1",
+      "base-2026-n2-temperature-formula-v4-r1",
+      "base-2026-n3-table-ratio-v4-r1",
+      "base-2026-n3-frequency-table-v4-r1",
+      "base-2026-n4-mixed-vehicles-v4-r1",
+      "base-2026-n4-cutting-count-v4-r1",
+      "base-2026-n5-exactly-one-success-v4-r1",
+      "base-2026-n5-at-least-one-success-v4-r1",
+      "base-2026-n6-conditions-table-v4-r1",
+      "base-2026-n6-billing-table-v4-r1",
+      "base-2026-n7-derivative-signs-v4-r1",
+      "base-2026-n7-line-value-v4-r1",
+      "base-2026-n8-sets-neither-v4-r1",
+      "base-2026-n8-logical-counterexample-v4-r1",
+      "base-2026-n9-paint-wall-v4-r1",
+      "base-2026-n9-map-scale-v4-r1",
+      "base-2026-n10-circle-area-v4-r1",
+      "base-2026-n10-triangle-area-v4-r1",
+      "base-2026-n11-cylinder-volume-v4-r1",
+      "base-2026-n11-cone-volume-v4-r1",
+      "base-2026-n12-cyclic-quadrilateral-v4-r1",
+      "base-2026-n12-similarity-area-v4-r1",
+      "base-2026-n13-cube-cutting-v4-r1",
+      "base-2026-n13-liquid-height-v4-r1",
+      "base-2026-n14-fraction-division-v4-r1",
+      "base-2026-n14-operation-order-v4-r1",
+      "base-2026-n15-sequential-percent-v4-r1",
+      "base-2026-n15-percent-comparison-v4-r1",
+      "base-2026-n16-logarithm-value-v4-r1",
+      "base-2026-n16-algebraic-fraction-v4-r1",
+      "base-2026-n17-radical-root-v4-r1",
+      "base-2026-n17-rational-root-v4-r1",
+      "base-2026-n18-linear-largest-v4-r1",
+      "base-2026-n18-exponential-count-v4-r1",
+      "base-2026-n19-least-common-multiple-v4-r1",
+      "base-2026-n19-last-digit-v4-r1",
+      "base-2026-n20-catch-up-v4-r1",
+      "base-2026-n20-mixture-v4-r1",
+      "base-2026-n21-coin-search-v4-r1",
+      "base-2026-n21-counting-paths-v4-r1",
+      "base-2026-n1-fraction-product-v5-r1",
+      "base-2026-n1-signed-change-v5-r1",
+      "base-2026-n2-braking-formula-v5-r1",
+      "base-2026-n2-temperature-formula-v5-r1",
+      "base-2026-n3-table-ratio-v5-r1",
+      "base-2026-n3-frequency-table-v5-r1",
+      "base-2026-n4-mixed-vehicles-v5-r1",
+      "base-2026-n4-cutting-count-v5-r1",
+      "base-2026-n5-exactly-one-success-v5-r1",
+      "base-2026-n5-at-least-one-success-v5-r1",
+      "base-2026-n6-conditions-table-v5-r1",
+      "base-2026-n6-billing-table-v5-r1",
+      "base-2026-n7-derivative-signs-v5-r1",
+      "base-2026-n7-line-value-v5-r1",
+      "base-2026-n8-sets-neither-v5-r1",
+      "base-2026-n8-logical-counterexample-v5-r1",
+      "base-2026-n9-paint-wall-v5-r1",
+      "base-2026-n9-map-scale-v5-r1",
+      "base-2026-n10-circle-area-v5-r1",
+      "base-2026-n10-triangle-area-v5-r1",
+      "base-2026-n11-cylinder-volume-v5-r1",
+      "base-2026-n11-cone-volume-v5-r1",
+      "base-2026-n12-cyclic-quadrilateral-v5-r1",
+      "base-2026-n12-similarity-area-v5-r1",
+      "base-2026-n13-cube-cutting-v5-r1",
+      "base-2026-n13-liquid-height-v5-r1",
+      "base-2026-n14-fraction-division-v5-r1",
+      "base-2026-n14-operation-order-v5-r1",
+      "base-2026-n15-sequential-percent-v5-r1",
+      "base-2026-n15-percent-comparison-v5-r1",
+      "base-2026-n16-logarithm-value-v5-r1",
+      "base-2026-n16-algebraic-fraction-v5-r1",
+      "base-2026-n17-radical-root-v5-r1",
+      "base-2026-n17-rational-root-v5-r1",
+      "base-2026-n18-linear-largest-v5-r1",
+      "base-2026-n18-exponential-count-v5-r1",
+      "base-2026-n19-least-common-multiple-v5-r1",
+      "base-2026-n19-last-digit-v5-r1",
+      "base-2026-n20-catch-up-v5-r1",
+      "base-2026-n20-mixture-v5-r1",
+      "base-2026-n21-coin-search-v5-r1",
+      "base-2026-n21-counting-paths-v5-r1",
+      "base-2026-n1-packages-v1-r1",
+      "base-2026-n1-time-units-v1-r1",
+      "base-2026-n2-tariff-formula-v1-r1",
+      "base-2026-n2-power-time-v1-r1",
+      "base-2026-n3-table-maximum-v1-r1",
+      "base-2026-n3-table-mean-v1-r1",
+      "base-2026-n4-roll-cost-v1-r1",
+      "base-2026-n4-maximum-purchase-v1-r1",
+      "base-2026-n5-one-draw-v1-r1",
+      "base-2026-n5-complement-v1-r1",
+      "base-2026-n6-tariff-table-v1-r1",
+      "base-2026-n6-transport-table-v1-r1",
+      "base-2026-n7-piecewise-graph-v1-r1",
+      "base-2026-n7-tangent-slope-v1-r1",
+      "base-2026-n8-sets-union-v1-r1",
+      "base-2026-n8-logic-count-v1-r1",
+      "base-2026-n9-floor-tiles-v1-r1",
+      "base-2026-n9-ladder-height-v1-r1",
+      "base-2026-n10-hypotenuse-v1-r1",
+      "base-2026-n10-trapezoid-area-v1-r1",
+      "base-2026-n11-cube-surface-v1-r1",
+      "base-2026-n11-box-volume-v1-r1",
+      "base-2026-n12-isosceles-angle-v1-r1",
+      "base-2026-n12-similarity-side-v1-r1",
+      "base-2026-n13-pyramid-volume-v1-r1",
+      "base-2026-n13-box-diagonal-v1-r1",
+      "base-2026-n14-fraction-sum-v1-r1",
+      "base-2026-n14-decimal-difference-v1-r1",
+      "base-2026-n15-discount-v1-r1",
+      "base-2026-n15-whole-from-percent-v1-r1",
+      "base-2026-n16-radical-sum-v1-r1",
+      "base-2026-n16-power-quotient-v1-r1",
+      "base-2026-n17-quadratic-root-v1-r1",
+      "base-2026-n17-exponential-root-v1-r1",
+      "base-2026-n18-integer-interval-v1-r1",
+      "base-2026-n18-quadratic-integers-v1-r1",
+      "base-2026-n19-digits-v1-r1",
+      "base-2026-n19-remainder-search-v1-r1",
+      "base-2026-n20-meeting-v1-r1",
+      "base-2026-n20-joint-work-v1-r1",
+      "base-2026-n21-pigeonhole-v1-r1",
+      "base-2026-n21-three-days-v1-r1",
+      "base-2026-n1-packages-v2-r1",
+      "base-2026-n1-time-units-v2-r1",
+      "base-2026-n2-tariff-formula-v2-r1",
+      "base-2026-n2-power-time-v2-r1",
+      "base-2026-n3-table-maximum-v2-r1",
+      "base-2026-n3-table-mean-v2-r1",
+      "base-2026-n4-roll-cost-v2-r1",
+      "base-2026-n4-maximum-purchase-v2-r1",
+      "base-2026-n5-one-draw-v2-r1",
+      "base-2026-n5-complement-v2-r1",
+      "base-2026-n6-tariff-table-v2-r1",
+      "base-2026-n6-transport-table-v2-r1",
+      "base-2026-n7-piecewise-graph-v2-r1",
+      "base-2026-n7-tangent-slope-v2-r1",
+      "base-2026-n8-sets-union-v2-r1",
+      "base-2026-n8-logic-count-v2-r1",
+      "base-2026-n9-floor-tiles-v2-r1",
+      "base-2026-n9-ladder-height-v2-r1",
+      "base-2026-n10-hypotenuse-v2-r1",
+      "base-2026-n10-trapezoid-area-v2-r1",
+      "base-2026-n11-cube-surface-v2-r1",
+      "base-2026-n11-box-volume-v2-r1",
+      "base-2026-n12-isosceles-angle-v2-r1",
+      "base-2026-n12-similarity-side-v2-r1",
+      "base-2026-n13-pyramid-volume-v2-r1",
+      "base-2026-n13-box-diagonal-v2-r1",
+      "base-2026-n14-fraction-sum-v2-r1",
+      "base-2026-n14-decimal-difference-v2-r1",
+      "base-2026-n15-discount-v2-r1",
+      "base-2026-n15-whole-from-percent-v2-r1",
+      "base-2026-n16-radical-sum-v2-r1",
+      "base-2026-n16-power-quotient-v2-r1",
+      "base-2026-n17-quadratic-root-v2-r1",
+      "base-2026-n17-exponential-root-v2-r1",
+      "base-2026-n18-integer-interval-v2-r1",
+      "base-2026-n18-quadratic-integers-v2-r1",
+      "base-2026-n19-digits-v2-r1",
+      "base-2026-n19-remainder-search-v2-r1",
+      "base-2026-n20-meeting-v2-r1",
+      "base-2026-n20-joint-work-v2-r1",
+      "base-2026-n21-pigeonhole-v2-r1",
+      "base-2026-n21-three-days-v2-r1",
+      "base-2026-n1-packages-v3-r1",
+      "base-2026-n1-time-units-v3-r1",
+      "base-2026-n2-tariff-formula-v3-r1",
+      "base-2026-n2-power-time-v3-r1",
+      "base-2026-n3-table-maximum-v3-r1",
+      "base-2026-n3-table-mean-v3-r1",
+      "base-2026-n4-roll-cost-v3-r1",
+      "base-2026-n4-maximum-purchase-v3-r1",
+      "base-2026-n5-one-draw-v3-r1",
+      "base-2026-n5-complement-v3-r1",
+      "base-2026-n6-tariff-table-v3-r1",
+      "base-2026-n6-transport-table-v3-r1",
+      "base-2026-n7-piecewise-graph-v3-r1",
+      "base-2026-n7-tangent-slope-v3-r1",
+      "base-2026-n8-sets-union-v3-r1",
+      "base-2026-n8-logic-count-v3-r1",
+      "base-2026-n9-floor-tiles-v3-r1",
+      "base-2026-n9-ladder-height-v3-r1",
+      "base-2026-n10-hypotenuse-v3-r1",
+      "base-2026-n10-trapezoid-area-v3-r1",
+      "base-2026-n11-cube-surface-v3-r1",
+      "base-2026-n11-box-volume-v3-r1",
+      "base-2026-n12-isosceles-angle-v3-r1",
+      "base-2026-n12-similarity-side-v3-r1",
+      "base-2026-n13-pyramid-volume-v3-r1",
+      "base-2026-n13-box-diagonal-v3-r1",
+      "base-2026-n14-fraction-sum-v3-r1",
+      "base-2026-n14-decimal-difference-v3-r1",
+      "base-2026-n15-discount-v3-r1",
+      "base-2026-n15-whole-from-percent-v3-r1",
+      "base-2026-n16-radical-sum-v3-r1",
+      "base-2026-n16-power-quotient-v3-r1",
+      "base-2026-n17-quadratic-root-v3-r1",
+      "base-2026-n17-exponential-root-v3-r1",
+      "base-2026-n18-integer-interval-v3-r1",
+      "base-2026-n18-quadratic-integers-v3-r1",
+      "base-2026-n19-digits-v3-r1",
+      "base-2026-n19-remainder-search-v3-r1",
+      "base-2026-n20-meeting-v3-r1",
+      "base-2026-n20-joint-work-v3-r1",
+      "base-2026-n21-pigeonhole-v3-r1",
+      "base-2026-n21-three-days-v3-r1",
+      "base-2026-n1-packages-v4-r1",
+      "base-2026-n1-time-units-v4-r1",
+      "base-2026-n2-tariff-formula-v4-r1",
+      "base-2026-n2-power-time-v4-r1",
+      "base-2026-n3-table-maximum-v4-r1",
+      "base-2026-n3-table-mean-v4-r1",
+      "base-2026-n4-roll-cost-v4-r1",
+      "base-2026-n4-maximum-purchase-v4-r1",
+      "base-2026-n5-one-draw-v4-r1",
+      "base-2026-n5-complement-v4-r1",
+      "base-2026-n6-tariff-table-v4-r1",
+      "base-2026-n6-transport-table-v4-r1",
+      "base-2026-n7-piecewise-graph-v4-r1",
+      "base-2026-n7-tangent-slope-v4-r1",
+      "base-2026-n8-sets-union-v4-r1",
+      "base-2026-n8-logic-count-v4-r1",
+      "base-2026-n9-floor-tiles-v4-r1",
+      "base-2026-n9-ladder-height-v4-r1",
+      "base-2026-n10-hypotenuse-v4-r1",
+      "base-2026-n10-trapezoid-area-v4-r1",
+      "base-2026-n11-cube-surface-v4-r1",
+      "base-2026-n11-box-volume-v4-r1",
+      "base-2026-n12-isosceles-angle-v4-r1",
+      "base-2026-n12-similarity-side-v4-r1",
+      "base-2026-n13-pyramid-volume-v4-r1",
+      "base-2026-n13-box-diagonal-v4-r1",
+      "base-2026-n14-fraction-sum-v4-r1",
+      "base-2026-n14-decimal-difference-v4-r1",
+      "base-2026-n15-discount-v4-r1",
+      "base-2026-n15-whole-from-percent-v4-r1",
+      "base-2026-n16-radical-sum-v4-r1",
+      "base-2026-n16-power-quotient-v4-r1",
+      "base-2026-n17-quadratic-root-v4-r1",
+      "base-2026-n17-exponential-root-v4-r1",
+      "base-2026-n18-integer-interval-v4-r1",
+      "base-2026-n18-quadratic-integers-v4-r1",
+      "base-2026-n19-digits-v4-r1",
+      "base-2026-n19-remainder-search-v4-r1",
+      "base-2026-n20-meeting-v4-r1",
+      "base-2026-n20-joint-work-v4-r1",
+      "base-2026-n21-pigeonhole-v4-r1",
+      "base-2026-n21-three-days-v4-r1",
+      "base-2026-n1-packages-v5-r1",
+      "base-2026-n1-time-units-v5-r1",
+      "base-2026-n2-tariff-formula-v5-r1",
+      "base-2026-n2-power-time-v5-r1",
+      "base-2026-n3-table-maximum-v5-r1",
+      "base-2026-n3-table-mean-v5-r1",
+      "base-2026-n4-roll-cost-v5-r1",
+      "base-2026-n4-maximum-purchase-v5-r1",
+      "base-2026-n5-one-draw-v5-r1",
+      "base-2026-n5-complement-v5-r1",
+      "base-2026-n6-tariff-table-v5-r1",
+      "base-2026-n6-transport-table-v5-r1",
+      "base-2026-n7-piecewise-graph-v5-r1",
+      "base-2026-n7-tangent-slope-v5-r1",
+      "base-2026-n8-sets-union-v5-r1",
+      "base-2026-n8-logic-count-v5-r1",
+      "base-2026-n9-floor-tiles-v5-r1",
+      "base-2026-n9-ladder-height-v5-r1",
+      "base-2026-n10-hypotenuse-v5-r1",
+      "base-2026-n10-trapezoid-area-v5-r1",
+      "base-2026-n11-cube-surface-v5-r1",
+      "base-2026-n11-box-volume-v5-r1",
+      "base-2026-n12-isosceles-angle-v5-r1",
+      "base-2026-n12-similarity-side-v5-r1",
+      "base-2026-n13-pyramid-volume-v5-r1",
+      "base-2026-n13-box-diagonal-v5-r1",
+      "base-2026-n14-fraction-sum-v5-r1",
+      "base-2026-n14-decimal-difference-v5-r1",
+      "base-2026-n15-discount-v5-r1",
+      "base-2026-n15-whole-from-percent-v5-r1",
+      "base-2026-n16-radical-sum-v5-r1",
+      "base-2026-n16-power-quotient-v5-r1",
+      "base-2026-n17-quadratic-root-v5-r1",
+      "base-2026-n17-exponential-root-v5-r1",
+      "base-2026-n18-integer-interval-v5-r1",
+      "base-2026-n18-quadratic-integers-v5-r1",
+      "base-2026-n19-digits-v5-r1",
+      "base-2026-n19-remainder-search-v5-r1",
+      "base-2026-n20-meeting-v5-r1",
+      "base-2026-n20-joint-work-v5-r1",
+      "base-2026-n21-pigeonhole-v5-r1",
+      "base-2026-n21-three-days-v5-r1"
     ],
     "totals": {
-      "allTasks": 448,
-      "activeTasks": 432,
+      "allTasks": 881,
+      "activeTasks": 865,
       "inactiveTasks": 16,
       "unnumberedActiveTasks": 7,
-      "uniqueTheory": 52,
-      "numbers": 44,
-      "numbersWithTasks": 44,
-      "numbersWithTheory": 44
+      "uniqueTheory": 73,
+      "numbers": 65,
+      "numbersWithTasks": 65,
+      "numbersWithTheory": 65
     },
     "exams": [
       {
         "id": "oge-math",
         "title": "ОГЭ · Математика",
         "year": 2026,
-        "taskCount": 241,
+        "taskCount": 247,
         "unnumberedTaskCount": 7,
         "theoryCount": 33,
         "numberCount": 25,
@@ -1973,10 +2406,21 @@
         "numbersWithTheory": 25
       },
       {
+        "id": "ege-math-base",
+        "title": "ЕГЭ · Математика · Базовый уровень",
+        "year": 2026,
+        "taskCount": 420,
+        "unnumberedTaskCount": 0,
+        "theoryCount": 29,
+        "numberCount": 21,
+        "numbersWithTasks": 21,
+        "numbersWithTheory": 21
+      },
+      {
         "id": "ege-math-profile",
         "title": "ЕГЭ · Математика · Профильный уровень",
         "year": 2026,
-        "taskCount": 191,
+        "taskCount": 198,
         "unnumberedTaskCount": 0,
         "theoryCount": 27,
         "numberCount": 19,
@@ -1984,14 +2428,7 @@
         "numbersWithTheory": 19
       }
     ],
-    "inactiveExams": [
-      {
-        "id": "ege-math-base",
-        "title": "ЕГЭ · Математика · Базовый уровень",
-        "preservedTaskCount": 16,
-        "reason": "Базовый уровень временно недоступен: сначала проверим структуру и подготовим проверенный контент. Старые локальные события сохраняются."
-      }
-    ],
+    "inactiveExams": [],
     "rows": [
       {
         "examId": "oge-math",
@@ -3019,7 +3456,8 @@
         ],
         "prototypes": [
           "quadratic-extended",
-          "oge-20-rational-equation"
+          "oge-20-rational-equation",
+          "oge-20-symmetric-system"
         ],
         "topicCoverage": [
           {
@@ -3038,25 +3476,30 @@
           {
             "topicId": "oge-number-20",
             "title": "№20. Уравнения и неравенства с развёрнутым решением",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "oge-20-rational-equation",
                 "title": "Рациональное уравнение и ОДЗ",
                 "taskCount": 4
+              },
+              {
+                "id": "oge-20-symmetric-system",
+                "title": "Система через сумму и произведение",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 5,
+        "taskCount": 6,
         "theoryCount": 1,
         "theoryIds": [
           "oge-number-20"
         ],
-        "solutionCount": 5,
+        "solutionCount": 6,
         "automaticCount": 0,
-        "selfAssessmentCount": 5,
+        "selfAssessmentCount": 6,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -3078,31 +3521,37 @@
           "№21. Текстовые задачи с уравнением"
         ],
         "prototypes": [
-          "oge-21-joint-work"
+          "oge-21-joint-work",
+          "oge-21-return-journey"
         ],
         "topicCoverage": [
           {
             "topicId": "oge-number-21",
             "title": "№21. Текстовые задачи с уравнением",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "oge-21-joint-work",
                 "title": "Совместная работа двух труб",
                 "taskCount": 4
+              },
+              {
+                "id": "oge-21-return-journey",
+                "title": "Движение туда и обратно",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "oge-number-21"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -3124,31 +3573,37 @@
           "№22. Графики: построение и число пересечений"
         ],
         "prototypes": [
-          "oge-22-line-with-hole"
+          "oge-22-line-with-hole",
+          "oge-22-absolute-value-plateau"
         ],
         "topicCoverage": [
           {
             "topicId": "oge-number-22",
             "title": "№22. Графики: построение и число пересечений",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "oge-22-line-with-hole",
                 "title": "График с исключённой точкой",
                 "taskCount": 4
+              },
+              {
+                "id": "oge-22-absolute-value-plateau",
+                "title": "Сумма модулей и число пересечений",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "oge-number-22"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -3170,31 +3625,37 @@
           "№23. Геометрия: вычисления с обоснованием"
         ],
         "prototypes": [
-          "oge-23-altitude-projections"
+          "oge-23-altitude-projections",
+          "oge-23-altitude-two-pythagoras"
         ],
         "topicCoverage": [
           {
             "topicId": "oge-number-23",
             "title": "№23. Геометрия: вычисления с обоснованием",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "oge-23-altitude-projections",
                 "title": "Высота к гипотенузе",
                 "taskCount": 4
+              },
+              {
+                "id": "oge-23-altitude-two-pythagoras",
+                "title": "Площадь треугольника через высоту",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "oge-number-23"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -3219,13 +3680,14 @@
           "oge-24-trapezoid-midpoints",
           "oge-24-two-tangents",
           "oge-24-acute-altitudes",
-          "oge-24-incircle-tangents"
+          "oge-24-incircle-tangents",
+          "oge-24-quadrilateral-midpoints"
         ],
         "topicCoverage": [
           {
             "topicId": "oge-number-24",
             "title": "№24. Геометрические доказательства",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
@@ -3247,18 +3709,23 @@
                 "id": "oge-24-incircle-tangents",
                 "title": "Отрезки касательных вписанной окружности",
                 "taskCount": 1
+              },
+              {
+                "id": "oge-24-quadrilateral-midpoints",
+                "title": "Середины сторон четырёхугольника",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "oge-number-24"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -3280,32 +3747,1382 @@
           "№25. Геометрия: составные конфигурации"
         ],
         "prototypes": [
-          "oge-25-right-incircle-area"
+          "oge-25-right-incircle-area",
+          "oge-25-two-inscribed-circles"
         ],
         "topicCoverage": [
           {
             "topicId": "oge-number-25",
             "title": "№25. Геометрия: составные конфигурации",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "oge-25-right-incircle-area",
                 "title": "Вписанная окружность и площадь",
                 "taskCount": 4
+              },
+              {
+                "id": "oge-25-two-inscribed-circles",
+                "title": "Две окружности в угле треугольника",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "oge-number-25"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 2,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 1,
+        "part": 1,
+        "title": "Вычисления и единицы измерения",
+        "topicIds": [
+          "ege-base-number-1"
+        ],
+        "topics": [
+          "№1. Повседневные расчёты и единицы"
+        ],
+        "prototypes": [
+          "base-1-fraction-product",
+          "base-1-signed-change",
+          "base-1-packages",
+          "base-1-time-units"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-1",
+            "title": "№1. Повседневные расчёты и единицы",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-1-fraction-product",
+                "title": "Вычисление произведения дроби и числа",
+                "taskCount": 5
+              },
+              {
+                "id": "base-1-signed-change",
+                "title": "Несколько изменений величины",
+                "taskCount": 5
+              },
+              {
+                "id": "base-1-packages",
+                "title": "Покупка целых упаковок",
+                "taskCount": 5
+              },
+              {
+                "id": "base-1-time-units",
+                "title": "Перевод времени в минуты",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-1"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 2,
+        "part": 1,
+        "title": "Прикладные текстовые задачи и формулы",
+        "topicIds": [
+          "ege-base-number-2"
+        ],
+        "topics": [
+          "№2. Вычисления по формулам"
+        ],
+        "prototypes": [
+          "base-2-braking-formula",
+          "base-2-temperature-formula",
+          "base-2-tariff-formula",
+          "base-2-power-time"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-2",
+            "title": "№2. Вычисления по формулам",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-2-braking-formula",
+                "title": "Скорость по формуле тормозного пути",
+                "taskCount": 5
+              },
+              {
+                "id": "base-2-temperature-formula",
+                "title": "Перевод температур по формуле",
+                "taskCount": 5
+              },
+              {
+                "id": "base-2-tariff-formula",
+                "title": "Расстояние по формуле тарифа",
+                "taskCount": 5
+              },
+              {
+                "id": "base-2-power-time",
+                "title": "Время по мощности и энергии",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-2"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 3,
+        "part": 1,
+        "title": "Таблицы и диаграммы",
+        "topicIds": [
+          "ege-base-number-3"
+        ],
+        "topics": [
+          "№3. Таблицы и диаграммы"
+        ],
+        "prototypes": [
+          "base-3-table-ratio",
+          "base-3-frequency-table",
+          "base-3-table-maximum",
+          "base-3-table-mean"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-3",
+            "title": "№3. Таблицы и диаграммы",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-3-table-ratio",
+                "title": "Доля по данным таблицы",
+                "taskCount": 5
+              },
+              {
+                "id": "base-3-frequency-table",
+                "title": "Сумма по таблице частот",
+                "taskCount": 5
+              },
+              {
+                "id": "base-3-table-maximum",
+                "title": "Чтение таблицы посещений",
+                "taskCount": 5
+              },
+              {
+                "id": "base-3-table-mean",
+                "title": "Среднее значение по таблице",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-3"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 4,
+        "part": 1,
+        "title": "Вычисления в практических задачах",
+        "topicIds": [
+          "ege-base-number-4"
+        ],
+        "topics": [
+          "№4. Выбор выгодного предложения"
+        ],
+        "prototypes": [
+          "base-4-mixed-vehicles",
+          "base-4-cutting-count",
+          "base-4-roll-cost",
+          "base-4-maximum-purchase"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-4",
+            "title": "№4. Выбор выгодного предложения",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-4-mixed-vehicles",
+                "title": "Сравнение способов перевозки",
+                "taskCount": 5
+              },
+              {
+                "id": "base-4-cutting-count",
+                "title": "Число целых отрезков",
+                "taskCount": 5
+              },
+              {
+                "id": "base-4-roll-cost",
+                "title": "Округление и стоимость",
+                "taskCount": 5
+              },
+              {
+                "id": "base-4-maximum-purchase",
+                "title": "Число покупок на заданную сумму",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-4"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 5,
+        "part": 1,
+        "title": "Вероятность",
+        "topicIds": [
+          "ege-base-number-5"
+        ],
+        "topics": [
+          "№5. Вероятность случайного события"
+        ],
+        "prototypes": [
+          "base-5-exactly-one-success",
+          "base-5-at-least-one-success",
+          "base-5-one-draw",
+          "base-5-complement"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-5",
+            "title": "№5. Вероятность случайного события",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-5-exactly-one-success",
+                "title": "Ровно один успех",
+                "taskCount": 5
+              },
+              {
+                "id": "base-5-at-least-one-success",
+                "title": "Хотя бы один успех",
+                "taskCount": 5
+              },
+              {
+                "id": "base-5-one-draw",
+                "title": "Равновозможный выбор",
+                "taskCount": 5
+              },
+              {
+                "id": "base-5-complement",
+                "title": "Противоположное событие",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-5"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 6,
+        "part": 1,
+        "title": "Таблицы, графики и выбор условий",
+        "topicIds": [
+          "ege-base-number-6"
+        ],
+        "topics": [
+          "№6. Графики зависимостей"
+        ],
+        "prototypes": [
+          "base-6-conditions-table",
+          "base-6-billing-table",
+          "base-6-tariff-table",
+          "base-6-transport-table"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-6",
+            "title": "№6. Графики зависимостей",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-6-conditions-table",
+                "title": "Отбор по двум условиям таблицы",
+                "taskCount": 5
+              },
+              {
+                "id": "base-6-billing-table",
+                "title": "Стоимость по ступенчатым условиям",
+                "taskCount": 5
+              },
+              {
+                "id": "base-6-tariff-table",
+                "title": "Выбор тарифа по таблице",
+                "taskCount": 5
+              },
+              {
+                "id": "base-6-transport-table",
+                "title": "Сравнение предложений перевозчика",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-6"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 7,
+        "part": 1,
+        "title": "Функции, графики и производная",
+        "topicIds": [
+          "ege-base-number-7"
+        ],
+        "topics": [
+          "№7. Свойства функции и производная"
+        ],
+        "prototypes": [
+          "base-7-derivative-signs",
+          "base-7-line-value",
+          "base-7-piecewise-graph",
+          "base-7-tangent-slope"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-7",
+            "title": "№7. Свойства функции и производная",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-7-derivative-signs",
+                "title": "Экстремумы по знакам производной",
+                "taskCount": 5
+              },
+              {
+                "id": "base-7-line-value",
+                "title": "Значение линейной функции по двум точкам",
+                "taskCount": 5
+              },
+              {
+                "id": "base-7-piecewise-graph",
+                "title": "Изменение функции на отрезках",
+                "taskCount": 5
+              },
+              {
+                "id": "base-7-tangent-slope",
+                "title": "Производная по касательной",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-7"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 8,
+        "part": 1,
+        "title": "Логика и рассуждения",
+        "topicIds": [
+          "ege-base-number-8"
+        ],
+        "topics": [
+          "№8. Логические утверждения"
+        ],
+        "prototypes": [
+          "base-8-sets-neither",
+          "base-8-logical-counterexample",
+          "base-8-sets-union",
+          "base-8-logic-count"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-8",
+            "title": "№8. Логические утверждения",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-8-sets-neither",
+                "title": "Дополнение объединения множеств",
+                "taskCount": 5
+              },
+              {
+                "id": "base-8-logical-counterexample",
+                "title": "Необходимое следствие неравенства",
+                "taskCount": 5
+              },
+              {
+                "id": "base-8-sets-union",
+                "title": "Два множества и их пересечение",
+                "taskCount": 5
+              },
+              {
+                "id": "base-8-logic-count",
+                "title": "Следствия из условия",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-8"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 9,
+        "part": 1,
+        "title": "Прикладная планиметрия",
+        "topicIds": [
+          "ege-base-number-9"
+        ],
+        "topics": [
+          "№9. Геометрия в практических ситуациях"
+        ],
+        "prototypes": [
+          "base-9-paint-wall",
+          "base-9-map-scale",
+          "base-9-floor-tiles",
+          "base-9-ladder-height"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-9",
+            "title": "№9. Геометрия в практических ситуациях",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-9-paint-wall",
+                "title": "Площадь окраски с исключением окна",
+                "taskCount": 5
+              },
+              {
+                "id": "base-9-map-scale",
+                "title": "Масштаб и единицы длины",
+                "taskCount": 5
+              },
+              {
+                "id": "base-9-floor-tiles",
+                "title": "Плитка на прямоугольном полу",
+                "taskCount": 5
+              },
+              {
+                "id": "base-9-ladder-height",
+                "title": "Высота приставленной лестницы",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-9"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 10,
+        "part": 1,
+        "title": "Планиметрия",
+        "topicIds": [
+          "ege-base-number-10"
+        ],
+        "topics": [
+          "№10. Планиметрия: углы и треугольники"
+        ],
+        "prototypes": [
+          "base-10-circle-area",
+          "base-10-triangle-area",
+          "base-10-hypotenuse",
+          "base-10-trapezoid-area"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-10",
+            "title": "№10. Планиметрия: углы и треугольники",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-10-circle-area",
+                "title": "Площадь круга через длину окружности",
+                "taskCount": 5
+              },
+              {
+                "id": "base-10-triangle-area",
+                "title": "Площадь по основанию и высоте",
+                "taskCount": 5
+              },
+              {
+                "id": "base-10-hypotenuse",
+                "title": "Теорема Пифагора",
+                "taskCount": 5
+              },
+              {
+                "id": "base-10-trapezoid-area",
+                "title": "Площадь трапеции",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-10"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 11,
+        "part": 1,
+        "title": "Стереометрия: объёмы и площади",
+        "topicIds": [
+          "ege-base-number-11"
+        ],
+        "topics": [
+          "№11. Геометрические тела"
+        ],
+        "prototypes": [
+          "base-11-cylinder-volume",
+          "base-11-cone-volume",
+          "base-11-cube-surface",
+          "base-11-box-volume"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-11",
+            "title": "№11. Геометрические тела",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-11-cylinder-volume",
+                "title": "Объём цилиндра",
+                "taskCount": 5
+              },
+              {
+                "id": "base-11-cone-volume",
+                "title": "Объём конуса",
+                "taskCount": 5
+              },
+              {
+                "id": "base-11-cube-surface",
+                "title": "Площадь поверхности куба",
+                "taskCount": 5
+              },
+              {
+                "id": "base-11-box-volume",
+                "title": "Объём прямоугольного параллелепипеда",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-11"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 12,
+        "part": 1,
+        "title": "Планиметрия: отношения и теоремы",
+        "topicIds": [
+          "ege-base-number-12"
+        ],
+        "topics": [
+          "№12. Площади и длины на плоскости"
+        ],
+        "prototypes": [
+          "base-12-cyclic-quadrilateral",
+          "base-12-similarity-area",
+          "base-12-isosceles-angle",
+          "base-12-similarity-side"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-12",
+            "title": "№12. Площади и длины на плоскости",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-12-cyclic-quadrilateral",
+                "title": "Углы вписанного четырёхугольника",
+                "taskCount": 5
+              },
+              {
+                "id": "base-12-similarity-area",
+                "title": "Площади подобных фигур",
+                "taskCount": 5
+              },
+              {
+                "id": "base-12-isosceles-angle",
+                "title": "Углы равнобедренного треугольника",
+                "taskCount": 5
+              },
+              {
+                "id": "base-12-similarity-side",
+                "title": "Подобие треугольников",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-12"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 13,
+        "part": 1,
+        "title": "Стереометрия: геометрические величины",
+        "topicIds": [
+          "ege-base-number-13"
+        ],
+        "topics": [
+          "№13. Объёмы, сечения и отношения в пространстве"
+        ],
+        "prototypes": [
+          "base-13-cube-cutting",
+          "base-13-liquid-height",
+          "base-13-pyramid-volume",
+          "base-13-box-diagonal"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-13",
+            "title": "№13. Объёмы, сечения и отношения в пространстве",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-13-cube-cutting",
+                "title": "Разбиение куба на малые кубики",
+                "taskCount": 5
+              },
+              {
+                "id": "base-13-liquid-height",
+                "title": "Высота жидкости в прямоугольном сосуде",
+                "taskCount": 5
+              },
+              {
+                "id": "base-13-pyramid-volume",
+                "title": "Объём пирамиды",
+                "taskCount": 5
+              },
+              {
+                "id": "base-13-box-diagonal",
+                "title": "Пространственная диагональ",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-13"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 14,
+        "part": 1,
+        "title": "Числа и вычисления",
+        "topicIds": [
+          "ege-base-number-14"
+        ],
+        "topics": [
+          "№14. Числа и действия с дробями"
+        ],
+        "prototypes": [
+          "base-14-fraction-division",
+          "base-14-operation-order",
+          "base-14-fraction-sum",
+          "base-14-decimal-difference"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-14",
+            "title": "№14. Числа и действия с дробями",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-14-fraction-division",
+                "title": "Деление обыкновенных дробей",
+                "taskCount": 5
+              },
+              {
+                "id": "base-14-operation-order",
+                "title": "Порядок действий и знаки",
+                "taskCount": 5
+              },
+              {
+                "id": "base-14-fraction-sum",
+                "title": "Действия с дробями",
+                "taskCount": 5
+              },
+              {
+                "id": "base-14-decimal-difference",
+                "title": "Вычитание десятичных дробей",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-14"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 15,
+        "part": 1,
+        "title": "Проценты",
+        "topicIds": [
+          "ege-base-number-15"
+        ],
+        "topics": [
+          "№15. Проценты и изменение величины"
+        ],
+        "prototypes": [
+          "base-15-sequential-percent",
+          "base-15-percent-comparison",
+          "base-15-discount",
+          "base-15-whole-from-percent"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-15",
+            "title": "№15. Проценты и изменение величины",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-15-sequential-percent",
+                "title": "Последовательное изменение цены",
+                "taskCount": 5
+              },
+              {
+                "id": "base-15-percent-comparison",
+                "title": "На сколько процентов больше",
+                "taskCount": 5
+              },
+              {
+                "id": "base-15-discount",
+                "title": "Стоимость после скидки",
+                "taskCount": 5
+              },
+              {
+                "id": "base-15-whole-from-percent",
+                "title": "Целое по его проценту",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-15"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 16,
+        "part": 1,
+        "title": "Преобразования выражений",
+        "topicIds": [
+          "ege-base-number-16"
+        ],
+        "topics": [
+          "№16. Преобразование выражений"
+        ],
+        "prototypes": [
+          "base-16-logarithm-value",
+          "base-16-algebraic-fraction",
+          "base-16-radical-sum",
+          "base-16-power-quotient"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-16",
+            "title": "№16. Преобразование выражений",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-16-logarithm-value",
+                "title": "Значение логарифма",
+                "taskCount": 5
+              },
+              {
+                "id": "base-16-algebraic-fraction",
+                "title": "Разложение разности квадратов",
+                "taskCount": 5
+              },
+              {
+                "id": "base-16-radical-sum",
+                "title": "Квадрат суммы с корнями",
+                "taskCount": 5
+              },
+              {
+                "id": "base-16-power-quotient",
+                "title": "Свойства степеней",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-16"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 17,
+        "part": 1,
+        "title": "Уравнения",
+        "topicIds": [
+          "ege-base-number-17"
+        ],
+        "topics": [
+          "№17. Уравнения и проверка корней"
+        ],
+        "prototypes": [
+          "base-17-radical-root",
+          "base-17-rational-root",
+          "base-17-quadratic-root",
+          "base-17-exponential-root"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-17",
+            "title": "№17. Уравнения и проверка корней",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-17-radical-root",
+                "title": "Иррациональное уравнение",
+                "taskCount": 5
+              },
+              {
+                "id": "base-17-rational-root",
+                "title": "Рациональное уравнение и ОДЗ",
+                "taskCount": 5
+              },
+              {
+                "id": "base-17-quadratic-root",
+                "title": "Квадратное уравнение с отбором",
+                "taskCount": 5
+              },
+              {
+                "id": "base-17-exponential-root",
+                "title": "Показательное уравнение",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-17"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 18,
+        "part": 1,
+        "title": "Неравенства",
+        "topicIds": [
+          "ege-base-number-18"
+        ],
+        "topics": [
+          "№18. Неравенства и промежутки"
+        ],
+        "prototypes": [
+          "base-18-linear-largest",
+          "base-18-exponential-count",
+          "base-18-integer-interval",
+          "base-18-quadratic-integers"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-18",
+            "title": "№18. Неравенства и промежутки",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-18-linear-largest",
+                "title": "Наибольшее целое решение",
+                "taskCount": 5
+              },
+              {
+                "id": "base-18-exponential-count",
+                "title": "Целые решения показательного неравенства",
+                "taskCount": 5
+              },
+              {
+                "id": "base-18-integer-interval",
+                "title": "Целые решения двойного неравенства",
+                "taskCount": 5
+              },
+              {
+                "id": "base-18-quadratic-integers",
+                "title": "Целые решения квадратного неравенства",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-18"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 19,
+        "part": 1,
+        "title": "Целые числа и выбор метода",
+        "topicIds": [
+          "ege-base-number-19"
+        ],
+        "topics": [
+          "№19. Целые числа, делимость и цифры"
+        ],
+        "prototypes": [
+          "base-19-least-common-multiple",
+          "base-19-last-digit",
+          "base-19-digits",
+          "base-19-remainder-search"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-19",
+            "title": "№19. Целые числа, делимость и цифры",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-19-least-common-multiple",
+                "title": "Общий цикл двух событий",
+                "taskCount": 5
+              },
+              {
+                "id": "base-19-last-digit",
+                "title": "Последняя цифра степени",
+                "taskCount": 5
+              },
+              {
+                "id": "base-19-digits",
+                "title": "Число по сумме и разности цифр",
+                "taskCount": 5
+              },
+              {
+                "id": "base-19-remainder-search",
+                "title": "Делимость и остаток",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-19"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 20,
+        "part": 1,
+        "title": "Текстовые задачи и уравнения",
+        "topicIds": [
+          "ege-base-number-20"
+        ],
+        "topics": [
+          "№20. Текстовые задачи: движение и работа"
+        ],
+        "prototypes": [
+          "base-20-catch-up",
+          "base-20-mixture",
+          "base-20-meeting",
+          "base-20-joint-work"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-20",
+            "title": "№20. Текстовые задачи: движение и работа",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-20-catch-up",
+                "title": "Движение вдогонку",
+                "taskCount": 5
+              },
+              {
+                "id": "base-20-mixture",
+                "title": "Концентрация смеси",
+                "taskCount": 5
+              },
+              {
+                "id": "base-20-meeting",
+                "title": "Движение навстречу",
+                "taskCount": 5
+              },
+              {
+                "id": "base-20-joint-work",
+                "title": "Совместная работа",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-20"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
+        "verificationStatus": "not-verified-online"
+      },
+      {
+        "examId": "ege-math-base",
+        "examVersionId": "ege-math-base-2026",
+        "exam": "ЕГЭ",
+        "subject": "math",
+        "subjectTitle": "Математика",
+        "level": "base",
+        "year": 2026,
+        "number": 21,
+        "part": 1,
+        "title": "Логические текстовые задачи",
+        "topicIds": [
+          "ege-base-number-21"
+        ],
+        "topics": [
+          "№21. Логический перебор и комбинаторика"
+        ],
+        "prototypes": [
+          "base-21-coin-search",
+          "base-21-counting-paths",
+          "base-21-pigeonhole",
+          "base-21-three-days"
+        ],
+        "topicCoverage": [
+          {
+            "topicId": "ege-base-number-21",
+            "title": "№21. Логический перебор и комбинаторика",
+            "taskCount": 20,
+            "theoryCount": 1,
+            "prototypes": [
+              {
+                "id": "base-21-coin-search",
+                "title": "Наименьшее число монет",
+                "taskCount": 5
+              },
+              {
+                "id": "base-21-counting-paths",
+                "title": "Подсчёт кратчайших маршрутов",
+                "taskCount": 5
+              },
+              {
+                "id": "base-21-pigeonhole",
+                "title": "Гарантированный результат",
+                "taskCount": 5
+              },
+              {
+                "id": "base-21-three-days",
+                "title": "Последовательное распределение",
+                "taskCount": 5
+              }
+            ]
+          }
+        ],
+        "taskCount": 20,
+        "theoryCount": 1,
+        "theoryIds": [
+          "ege-base-number-21"
+        ],
+        "solutionCount": 20,
+        "automaticCount": 20,
+        "selfAssessmentCount": 0,
+        "maxPrimaryScore": 1,
         "verificationStatus": "not-verified-online"
       },
       {
@@ -4049,7 +5866,8 @@
         ],
         "prototypes": [
           "trig-extended",
-          "ege-13-trig-roots-selection"
+          "ege-13-trig-roots-selection",
+          "ege-13-double-angle-without-division"
         ],
         "topicCoverage": [
           {
@@ -4068,25 +5886,30 @@
           {
             "topicId": "ege-profile-number-13",
             "title": "№13. Уравнения и отбор корней",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "ege-13-trig-roots-selection",
                 "title": "Тригонометрическое уравнение и отбор корней",
                 "taskCount": 4
+              },
+              {
+                "id": "ege-13-double-angle-without-division",
+                "title": "Двойной угол и потерянные при делении корни",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 5,
+        "taskCount": 6,
         "theoryCount": 1,
         "theoryIds": [
           "ege-profile-number-13"
         ],
-        "solutionCount": 5,
+        "solutionCount": 6,
         "automaticCount": 0,
-        "selfAssessmentCount": 5,
+        "selfAssessmentCount": 6,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -4108,31 +5931,37 @@
           "№14. Стереометрия: доказательство и вычисление"
         ],
         "prototypes": [
-          "ege-14-prism-line-plane-angle"
+          "ege-14-prism-line-plane-angle",
+          "ege-14-pyramid-plane-distance"
         ],
         "topicCoverage": [
           {
             "topicId": "ege-profile-number-14",
             "title": "№14. Стереометрия: доказательство и вычисление",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "ege-14-prism-line-plane-angle",
                 "title": "Перпендикулярность и угол с плоскостью",
                 "taskCount": 4
+              },
+              {
+                "id": "ege-14-pyramid-plane-distance",
+                "title": "Перпендикулярное сечение пирамиды",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "ege-profile-number-14"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 3,
         "verificationStatus": "not-verified-online"
       },
@@ -4154,31 +5983,37 @@
           "№15. Неравенства: области и интервалы"
         ],
         "prototypes": [
-          "ege-15-rational-inequality"
+          "ege-15-rational-inequality",
+          "ege-15-logarithmic-sum-domain"
         ],
         "topicCoverage": [
           {
             "topicId": "ege-profile-number-15",
             "title": "№15. Неравенства: области и интервалы",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "ege-15-rational-inequality",
                 "title": "Рациональное неравенство методом интервалов",
                 "taskCount": 4
+              },
+              {
+                "id": "ege-15-logarithmic-sum-domain",
+                "title": "Сумма логарифмов в неравенстве",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "ege-profile-number-15"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -4200,31 +6035,37 @@
           "№16. Экономические задачи"
         ],
         "prototypes": [
-          "ege-16-loan-equal-principal"
+          "ege-16-loan-equal-principal",
+          "ege-16-deposit-with-withdrawals"
         ],
         "topicCoverage": [
           {
             "topicId": "ege-profile-number-16",
             "title": "№16. Экономические задачи",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "ege-16-loan-equal-principal",
                 "title": "Кредит с равномерным уменьшением долга",
                 "taskCount": 4
+              },
+              {
+                "id": "ege-16-deposit-with-withdrawals",
+                "title": "Вклад с ежегодным снятием",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "ege-profile-number-16"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 2,
         "verificationStatus": "not-verified-online"
       },
@@ -4249,7 +6090,8 @@
         ],
         "prototypes": [
           "geometry-extended",
-          "ege-17-two-tangents-area"
+          "ege-17-two-tangents-area",
+          "ege-17-pedal-circle-chord"
         ],
         "topicCoverage": [
           {
@@ -4268,25 +6110,30 @@
           {
             "topicId": "ege-profile-number-17",
             "title": "№17. Планиметрия: доказательство и расчёт",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "ege-17-two-tangents-area",
                 "title": "Касательные к окружности: доказательство и площадь",
                 "taskCount": 4
+              },
+              {
+                "id": "ege-17-pedal-circle-chord",
+                "title": "Окружность на высоте и хорда",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 5,
+        "taskCount": 6,
         "theoryCount": 1,
         "theoryIds": [
           "ege-profile-number-17"
         ],
-        "solutionCount": 5,
+        "solutionCount": 6,
         "automaticCount": 0,
-        "selfAssessmentCount": 5,
+        "selfAssessmentCount": 6,
         "maxPrimaryScore": 3,
         "verificationStatus": "not-verified-online"
       },
@@ -4308,31 +6155,37 @@
           "№18. Задачи с параметром"
         ],
         "prototypes": [
-          "ege-18-parameter-positive-roots"
+          "ege-18-parameter-positive-roots",
+          "ege-18-modulus-line-intersections"
         ],
         "topicCoverage": [
           {
             "topicId": "ege-profile-number-18",
             "title": "№18. Задачи с параметром",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "ege-18-parameter-positive-roots",
                 "title": "Параметр и два положительных корня",
                 "taskCount": 4
+              },
+              {
+                "id": "ege-18-modulus-line-intersections",
+                "title": "Параметр и пересечения суммы модулей",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 4,
+        "taskCount": 5,
         "theoryCount": 1,
         "theoryIds": [
           "ege-profile-number-18"
         ],
-        "solutionCount": 4,
+        "solutionCount": 5,
         "automaticCount": 0,
-        "selfAssessmentCount": 4,
+        "selfAssessmentCount": 5,
         "maxPrimaryScore": 4,
         "verificationStatus": "not-verified-online"
       },
@@ -4356,7 +6209,8 @@
         ],
         "prototypes": [
           "integer-pairs-extended",
-          "ege-19-integer-product-shift"
+          "ege-19-integer-product-shift",
+          "ege-19-integer-linear-constraint"
         ],
         "topicCoverage": [
           {
@@ -4375,25 +6229,30 @@
           {
             "topicId": "ege-profile-number-19",
             "title": "№19. Теория чисел",
-            "taskCount": 4,
+            "taskCount": 5,
             "theoryCount": 1,
             "prototypes": [
               {
                 "id": "ege-19-integer-product-shift",
                 "title": "Натуральные решения и экстремальные суммы",
                 "taskCount": 4
+              },
+              {
+                "id": "ege-19-integer-linear-constraint",
+                "title": "Целочисленное ограничение и максимум",
+                "taskCount": 1
               }
             ]
           }
         ],
-        "taskCount": 5,
+        "taskCount": 6,
         "theoryCount": 1,
         "theoryIds": [
           "ege-profile-number-19"
         ],
-        "solutionCount": 5,
+        "solutionCount": 6,
         "automaticCount": 0,
-        "selfAssessmentCount": 5,
+        "selfAssessmentCount": 6,
         "maxPrimaryScore": 4,
         "verificationStatus": "not-verified-online"
       }

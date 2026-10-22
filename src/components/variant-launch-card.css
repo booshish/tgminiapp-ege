@@ -1,0 +1,26 @@
+.variant-launch-card { display: grid; gap: 16px; min-width: 0; margin-bottom: 24px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
+.variant-launch-card h2 { display: flex; align-items: center; gap: 9px; font-size: 20px; line-height: 1.4; font-weight: 700; }
+.variant-launch-card h2 svg { flex: 0 0 auto; color: var(--sage-dark); }
+.variant-launch-copy > p { margin-top: 8px; }
+.variant-launch-meta, .variant-launch-standard { color: var(--muted); font-size: var(--secondary-size); line-height: 1.5; }
+.variant-launch-resume, .variant-launch-new { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 18px; }
+.variant-launch-resume > p { align-self: center; }
+.variant-number-picker { display: grid; gap: 7px; flex: 0 1 230px; min-width: 0; font-size: var(--secondary-size); font-weight: 600; }
+.variant-number-picker select { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--cream); color: var(--ink); font: inherit; font-size: 16px; }
+.variant-launch-card .button { min-height: 48px; white-space: normal; text-align: center; }
+.variant-launch-confirm { border-top: 1px solid var(--line); padding-top: 14px; }
+.variant-launch-confirm > p { line-height: 1.6; }
+.variant-launch-confirm > div { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+@media (max-width: 767px) {
+  .variant-launch-card { gap: 12px; margin-bottom: var(--mobile-section-gap, 18px); padding: var(--mobile-card-padding, 16px); }
+  .variant-launch-card h2 { align-items: start; font-size: var(--mobile-card-title-size, 18px); }
+  .variant-launch-card h2 svg { margin-top: 2px; }
+  .variant-launch-copy > p { margin-top: 6px; line-height: 1.5; }
+  .variant-launch-resume, .variant-launch-new { gap: 10px; align-items: stretch; }
+  .variant-launch-resume > p { flex-basis: 100%; }
+  .variant-launch-card .button { flex: 1 1 100%; min-width: 0; min-height: 44px; padding-inline: 10px; }
+  .variant-number-picker { flex-basis: 100%; }
+  .variant-number-picker select { min-height: 44px; }
+  .variant-launch-confirm > div { gap: 10px; }
+  .variant-launch-standard { font-size: var(--secondary-size); }
+}

@@ -1,29 +1,19 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
 import test from "node:test";
-import ts from "typescript";
 import katex from "katex";
+import { createContentLoader } from "./content-source-loader.mjs";
 
-async function moduleURL(path, replacements = {}) {
-  const source = await readFile(new URL(path, import.meta.url), "utf8");
-  const { outputText, diagnostics = [] } = ts.transpileModule(source, {
-    compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2020 },
-    reportDiagnostics: true,
-  });
-  assert.equal(diagnostics.filter((item) => item.category === ts.DiagnosticCategory.Error).length, 0);
-  let output = outputText;
-  for (const [specifier, url] of Object.entries(replacements)) output = output.replace(`"${specifier}"`, `"${url}"`);
-  return `data:text/javascript;base64,${Buffer.from(output).toString("base64")}`;
-}
-const numberURL = await moduleURL("../src/lib/content/number-theory.ts");
-const { numberTheoryTopics } = await import(numberURL);
-const { theoryTopics, getTheoryTopic } = await import(await moduleURL("../src/lib/theory.ts", { "./content/number-theory": numberURL }));
+const load = createContentLoader();
+const { numberTheoryTopics } = load("src/lib/content/number-theory.ts");
+const { theoryTopics, getTheoryTopic } = load("src/lib/theory.ts");
+const { knowledgeChecks } = load("src/lib/content/knowledge-checks.ts");
 
 test("Every supported exam number has its own original article and worked examples", () => {
   assert.equal(numberTheoryTopics.length, 44);
-  assert.equal(theoryTopics.length, 52);
-  assert.equal(new Set(theoryTopics.map((topic) => topic.id)).size, 52);
-  assert.equal(new Set(theoryTopics.map((topic) => topic.materialId)).size, 52);
+  const baseTopics = theoryTopics.filter((topic) => topic.id.startsWith("ege-base-number-"));
+  assert.equal(theoryTopics.length - baseTopics.length, 52);
+  assert.equal(new Set(theoryTopics.map((topic) => topic.id)).size, theoryTopics.length);
+  assert.equal(new Set(theoryTopics.map((topic) => topic.materialId)).size, theoryTopics.length);
   for (const [exam, prefix, count, firstEnd] of [["ОГЭ", "oge", 25, 19], ["ЕГЭ", "ege-profile", 19, 12]]) {
     for (let n = 1; n <= count; n += 1) {
       const topic = getTheoryTopic(`${prefix}-number-${n}`);
@@ -69,6 +59,7 @@ test("Every formula in all articles renders with strict KaTeX without unsafe HTM
     const all = [
       ...topic.sections.flatMap((section) => section.formulas ?? []),
       ...topic.examples.flatMap((example) => example.steps.flatMap((step) => step.latex ? [step.latex] : [])),
+      ...(topic.knowledgeChecks ?? []).flatMap((check) => check.latex ? [check.latex] : []),
     ];
     for (const latex of all) {
       assert.doesNotThrow(() => katex.renderToString(latex, { throwOnError: true, strict: "error", trust: false }), `${topic.id}: ${latex}`);
@@ -76,6 +67,53 @@ test("Every formula in all articles renders with strict KaTeX without unsafe HTM
     }
   }
   assert(formulas >= 100);
+});
+
+test("All 52 foundational, OGE and profile articles have substantive original self-check questions", () => {
+  assert.equal(Object.keys(knowledgeChecks).length, 52);
+  for (const [id, checks] of Object.entries(knowledgeChecks)) {
+    const topic = getTheoryTopic(id);
+    assert(topic, `Self-check points at a missing article: ${id}`);
+    assert.deepEqual(topic.knowledgeChecks, checks, `Self-check was not attached to ${id}`);
+    assert(checks.length >= 1);
+    for (const check of checks) {
+      assert(check.question.trim().length >= 25, `${id}: short question`);
+      assert(check.answer.trim().length > 0, `${id}: empty answer`);
+      assert(check.explanation.trim().length >= 25, `${id}: missing reasoning`);
+      assert.notEqual(check.explanation.trim(), check.answer.trim(), `${id}: explanation only repeats the answer`);
+      assert(!/заглушка|TODO|будет добавлено/i.test(JSON.stringify(check)), id);
+    }
+  }
+});
+
+test("Self-check mathematics: independent counting, geometry and percentage calculations match the answers", () => {
+  const answer = (id) => knowledgeChecks[id][0].answer;
+  assert.equal(125 * 0.8, 100); // Follow changes from an actual 100-unit starting price.
+  assert.equal(answer("percentages"), "Вернулась к начальной цене.");
+  assert.equal((6 + 2) / 6, 4 / 3);
+  assert.equal(answer("fractions"), "Нет; 4/3.");
+  assert.equal(4 * 250 / 100, 10);
+  assert.equal(answer("oge-number-1"), "10 м.");
+  assert.equal((3 * 2) * (5 * 2), 60);
+  assert.equal(answer("oge-number-2"), "60 м².");
+  assert.equal(14 * 20 - 70 - 18, 192);
+  assert.equal(answer("oge-number-3"), "192 м².");
+  const multiples = Array.from({ length: 20 }, (_, index) => index + 1).filter((value) => value % 4 === 0);
+  assert.equal(multiples.length / 20, 0.25);
+  assert.equal(answer("oge-number-10"), "0,25.");
+  assert.equal(Math.hypot(5, 12), 13);
+  assert.equal(answer("geometry"), "5/13.");
+  const outcomes = [];
+  for (let first = 0; first < 10; first++) for (let second = 0; second < 10; second++)
+    outcomes.push((first < 4) !== (second < 5));
+  assert.equal(outcomes.filter(Boolean).length / outcomes.length, 0.5);
+  assert.equal(answer("ege-profile-number-5"), "0,5.");
+  assert.equal((180 + 120) / (180 / 60 + 120 / 40), 50);
+  assert.equal(answer("ege-profile-number-10"), "50 км/ч.");
+  const squareResidues = new Set(Array.from({ length: 8 }, (_, value) => (value * value) % 4));
+  assert.deepEqual([...squareResidues].sort(), [0, 1]);
+  for (const a of squareResidues) for (const b of squareResidues) assert.notEqual((a + b) % 4, 3);
+  assert.equal(answer("ege-profile-number-19"), "Нет.");
 });
 
 test("Numerical examples and advanced boundary cases agree with independent calculations", () => {

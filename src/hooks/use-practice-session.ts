@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Exam, Route, Selection, View } from "@/lib/navigation";
-import { tasks } from "@/lib/tasks";
+import { practiceBank as tasks } from "@/lib/tasks";
 import { orderPracticeTasks } from "@/lib/practice-order";
 import {
   createPracticeSession,
@@ -50,6 +50,7 @@ function selectionFromRoute(route: Route, fallback: CatalogSelection) {
     {
       ...fallback,
       exam: route.exam ?? fallback.exam,
+      subjectId: route.subjectId ?? fallback.subjectId,
       level: route.level ?? fallback.level,
       mode:
         route.catalogMode ??
@@ -110,7 +111,7 @@ export function usePracticeSession({
       canPersist.current = false;
       setStorageWarning(true);
     }
-    const hasRouteSelection = route.exam || route.catalogMode || route.topicId || route.examNumber || route.prototypeId || route.level;
+    const hasRouteSelection = route.exam || route.subjectId || route.catalogMode || route.topicId || route.examNumber || route.prototypeId || route.level;
     const initial = hasRouteSelection ? selectionFromRoute(route, fallback) : fallback;
     setCatalog(initial);
     if (exam !== initial.exam) setExam(initial.exam);
@@ -167,6 +168,7 @@ export function usePracticeSession({
   const selectionMatches =
     !cachedSession ||
     ((!route.exam || route.exam === cachedSession.selection.exam) &&
+      (!route.subjectId || route.subjectId === cachedSession.selection.subjectId) &&
       (!route.level ||
         cachedSession.selection.exam === "ОГЭ" ||
         route.level === cachedSession.selection.level) &&
@@ -238,6 +240,7 @@ export function usePracticeSession({
     const requestedTask = routeTask;
     const selectedExam = route.exam ?? requestedTask?.examType[0] ?? exam;
     const fallback = defaultCatalogSelection(selectedExam);
+    if (requestedTask) fallback.subjectId = requestedTask.subjectId;
     if (selectedExam === "ЕГЭ" && requestedTask?.level)
       fallback.level = requestedTask.level;
     let selection = selectionFromRoute(route, fallback);

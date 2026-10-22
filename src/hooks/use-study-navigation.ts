@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { tasks } from "@/lib/tasks";
+import { practiceBank as tasks } from "@/lib/tasks";
 import {
   parseStudyRoute,
   type Route,

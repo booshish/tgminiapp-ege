@@ -1,5 +1,6 @@
 export type Exam = "ЕГЭ" | "ОГЭ";
 import type { ExamLevel } from "./exams";
+import { isSubjectId, type SubjectId } from "./subjects";
 
 export type View =
   | "home"
@@ -24,7 +25,7 @@ export type Selection = {
   prototypeId?: string;
   materialId?: string;
   exam?: Exam;
-  subjectId?: "math";
+  subjectId?: SubjectId;
   level?: ExamLevel;
   catalogMode?: "number" | "topic";
   examNumber?: number;
@@ -80,7 +81,8 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
     materialId: params.get("material") || undefined,
     invalidContext:
       (exam !== null && exam !== "ОГЭ" && exam !== "ЕГЭ") ||
-      (subject !== null && subject !== "math") ||
+      (subject !== null && (!isSubjectId(subject) || (exam === "ОГЭ" && subject === "chinese"))) ||
+      (subject !== null && subject !== "math" && level !== null) ||
       (taskId !== null && !/^[a-z0-9-]{1,160}$/.test(taskId)) ||
       (part !== null && part !== "1" && part !== "2") ||
       (level !== null && level !== "base" && level !== "profile") ||
@@ -97,7 +99,7 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
         (value) => value !== null && !/^[a-z0-9-]{1,100}$/.test(value),
       ),
     exam: exam === "ОГЭ" || exam === "ЕГЭ" ? exam : undefined,
-    subjectId: params.get("subject") === "math" ? "math" : undefined,
+    subjectId: isSubjectId(subject) ? subject : undefined,
     level: level === "base" || level === "profile" ? level : undefined,
     catalogMode: mode === "number" || mode === "topic" ? mode : undefined,
     examNumber:
