@@ -10,6 +10,7 @@ import { originalProvenance, type ContentProvenance } from "./content/provenance
 import { legacyTaskOrder } from "./content/legacy-task-order";
 import { baseTasks, basePrototypes } from "./content/base-bank";
 import { informaticsTasks, informaticsPrototypes } from "./content/informatics-bank";
+import { physicsTasks, physicsPrototypes } from "./content/physics-bank";
 import type { SubjectId } from "./subjects";
 export type { SubjectId } from "./subjects";
 
@@ -19,6 +20,7 @@ export type AnswerRule =
 
 export type Task = {
   id: string;
+  requirementsReference?: { url: string; pdfPage: number; year: number; status: "draft-copy-reviewed" };
   publication: PublicationCandidate;
   /** Historical examples remain readable but are not relabelled as current numbered tasks. */
   availability?: "practice" | "history-only";
@@ -1227,8 +1229,8 @@ export const tasks: Task[] = [
 ].sort((left, right) => (legacyOrder.get(left.id) ?? Infinity) - (legacyOrder.get(right.id) ?? Infinity));
 
 /** The original maths array/order stays untouched; universal practice opts into this bank. */
-export const practiceBank: Task[] = [...tasks, ...informaticsTasks];
-export const practicePrototypes = [...prototypes, ...informaticsPrototypes];
+export const practiceBank: Task[] = [...tasks, ...informaticsTasks, ...physicsTasks];
+export const practicePrototypes = [...prototypes, ...informaticsPrototypes, ...physicsPrototypes];
 
 /** Approval is evaluated once for this immutable bundled revision, not per filter row. */
 const selectableTasks = practiceBank.filter((task) => task.publication.id === task.id && getPublicationDecision(task.publication).allowed);

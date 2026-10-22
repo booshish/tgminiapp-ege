@@ -13,6 +13,8 @@ const collections = {
   "base-bank": { file: "src/lib/content/base-bank.ts", tests: ["scripts/test-base-bank.mjs", "scripts/test-exam-quality.mjs"] },
   "base-theory": { file: "src/lib/content/base-theory.ts", tests: ["scripts/test-base-theory.mjs"] },
   "informatics-bank": { file: "src/lib/content/informatics-bank.ts", tests: ["scripts/test-subject-expansion.mjs"] },
+  "physics-bank": { file: "src/lib/content/physics-bank.ts", tests: ["scripts/test-content-expansion.mjs"] },
+  "subject-theory": { file: "src/lib/content/subject-theory.ts", tests: ["scripts/test-content-expansion.mjs"] },
 } as const;
 export type OriginalCollection = keyof typeof collections;
 

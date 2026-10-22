@@ -35,7 +35,7 @@ test("All requested subjects are unique and Chinese is EGE-only; math bank remai
 test("Source-reviewed informatics models cover 16/27 slots and explicitly list every unfinished resource", () => {
   assert.equal(informaticsTasks.length, 31);
   assert.equal(new Set(practiceBank.map((task) => task.id)).size, practiceBank.length);
-  for (const model of subjectExamDefinitions) {
+  for (const model of subjectExamDefinitions.filter(model => model.subjectId === "informatics")) {
     assert.equal(model.year, 2027);
     assert.equal(model.verificationStatus, "draft-source-reviewed");
     assert.equal(model.numbers.length, model.examType === "ОГЭ" ? 16 : 27);

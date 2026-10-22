@@ -3,6 +3,8 @@ import { getPublicationDecision } from "./content-publication";
 import type { PublicationCandidate } from "./content-publication";
 import { foundationLearningChecks } from "./content/foundation-learning-checks";
 import type { Exam } from "@/lib/navigation";
+import type { SubjectId } from "./subjects";
+import { subjectTheoryTopics } from "./content/subject-theory";
 import { numberTheoryTopics } from "./content/number-theory";
 import { baseTheoryTopics } from "./content/base-theory";
 import { knowledgeChecks, type KnowledgeCheck } from "./content/knowledge-checks";
@@ -15,7 +17,8 @@ export type TheoryTopic = {
   level?: "base" | "profile" | null;
   knowledgeChecks?: KnowledgeCheck[];
   provenance?: ContentProvenance;
-  subjectId: "math";
+  subjectId: SubjectId;
+  requirementsReference?: { url: string; pdfPage: number; year: number; status: "draft-copy-reviewed" };
   part: 1 | 2;
   coverage: "foundation" | "exam-topic";
   /** Author-defined links to the project exam structure, not official endorsement. */
@@ -686,6 +689,8 @@ export const theoryTopics: TheoryTopic[] = originalTheoryTopics.map((topic) => (
 }));
 
 /** Legacy task/event topic identifiers resolve without rewriting stored history. */
+export const allTheoryTopics: TheoryTopic[] = [...theoryTopics, ...subjectTheoryTopics];
+
 export const theoryTopicAliases: Readonly<Record<string, string>> = {
   "trigonometric-equations": "ege-profile-number-13",
   "number-theory": "ege-profile-number-19",
@@ -697,5 +702,5 @@ export function getTheoryTopic(id: string): TheoryTopic | undefined {
 }
 
 export function getPublishedTheoryTopics(): TheoryTopic[] {
-  return theoryTopics.filter((topic) => topic.publication.id === topic.id && getPublicationDecision(topic.publication).allowed);
+  return allTheoryTopics.filter((topic) => topic.publication.id === topic.id && getPublicationDecision(topic.publication).allowed);
 }

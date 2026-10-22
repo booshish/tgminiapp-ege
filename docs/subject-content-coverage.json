@@ -1,0 +1,579 @@
+{
+  "checkedAt": "2026-10-22",
+  "newTasks": 4,
+  "newTheory": 35,
+  "blocks": [
+    {
+      "exam": "ОГЭ",
+      "subjectId": "russian",
+      "title": "Русский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "physics",
+      "title": "Физика",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "chemistry",
+      "title": "Химия",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "biology",
+      "title": "Биология",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "geography",
+      "title": "География",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "history",
+      "title": "История",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "social-studies",
+      "title": "Обществознание",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "informatics",
+      "title": "Информатика",
+      "modelStatus": "draft-copy-reviewed",
+      "year": 2027,
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "taskCount": 12,
+      "theoryCount": 12,
+      "missingTasks": [
+        {
+          "number": 13,
+          "reason": "Нужны оригинальные материалы для документа/презентации и проверенные критерии."
+        },
+        {
+          "number": 14,
+          "reason": "Нужны файл электронной таблицы и критерии проверки работы."
+        },
+        {
+          "number": 15,
+          "reason": "Нужны оригинальное поле исполнителя, среда исполнения и критерии."
+        },
+        {
+          "number": 16,
+          "reason": "Нужны набор тестов для программы и сверка критериев экспертной проверки."
+        }
+      ],
+      "missingTheory": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "literature",
+      "title": "Литература",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "english",
+      "title": "Английский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "german",
+      "title": "Немецкий язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "french",
+      "title": "Французский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ОГЭ",
+      "subjectId": "spanish",
+      "title": "Испанский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "russian",
+      "title": "Русский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "physics",
+      "title": "Физика",
+      "modelStatus": "draft-copy-reviewed",
+      "year": 2027,
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "taskCount": 4,
+      "theoryCount": 4,
+      "missingTasks": [
+        {
+          "number": 5,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 6,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 7,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 8,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 9,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 10,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 11,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 12,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 13,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 14,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 15,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 16,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 17,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 18,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 19,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 20,
+          "reason": "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами."
+        },
+        {
+          "number": 21,
+          "reason": "Нужны оригинальное развёрнутое задание, решение и сверенные критерии самопроверки."
+        },
+        {
+          "number": 22,
+          "reason": "Нужны оригинальное развёрнутое задание, решение и сверенные критерии самопроверки."
+        },
+        {
+          "number": 23,
+          "reason": "Нужны оригинальное развёрнутое задание, решение и сверенные критерии самопроверки."
+        },
+        {
+          "number": 24,
+          "reason": "Нужны оригинальное развёрнутое задание, решение и сверенные критерии самопроверки."
+        },
+        {
+          "number": 25,
+          "reason": "Нужны оригинальное развёрнутое задание, решение и сверенные критерии самопроверки."
+        },
+        {
+          "number": 26,
+          "reason": "Нужны оригинальное развёрнутое задание, решение и сверенные критерии самопроверки."
+        }
+      ],
+      "missingTheory": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "chemistry",
+      "title": "Химия",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "biology",
+      "title": "Биология",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "geography",
+      "title": "География",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "history",
+      "title": "История",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "social-studies",
+      "title": "Обществознание",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "informatics",
+      "title": "Информатика",
+      "modelStatus": "draft-copy-reviewed",
+      "year": 2027,
+      "numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "taskCount": 19,
+      "theoryCount": 19,
+      "missingTasks": [
+        {
+          "number": 3,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        },
+        {
+          "number": 9,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        },
+        {
+          "number": 17,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        },
+        {
+          "number": 18,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        },
+        {
+          "number": 22,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        },
+        {
+          "number": 24,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        },
+        {
+          "number": 26,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        },
+        {
+          "number": 27,
+          "reason": "Нужен оригинальный проверенный файл данных и сверка формата ответа по демоверсии."
+        }
+      ],
+      "missingTheory": [
+        3,
+        9,
+        17,
+        18,
+        22,
+        24,
+        26,
+        27
+      ]
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "literature",
+      "title": "Литература",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "english",
+      "title": "Английский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "german",
+      "title": "Немецкий язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "french",
+      "title": "Французский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "spanish",
+      "title": "Испанский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    },
+    {
+      "exam": "ЕГЭ",
+      "subjectId": "chinese",
+      "title": "Китайский язык",
+      "modelStatus": "not-reviewed",
+      "year": null,
+      "numbers": null,
+      "taskCount": 0,
+      "theoryCount": 0,
+      "missingTasks": null,
+      "missingTheory": null
+    }
+  ]
+}

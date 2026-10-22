@@ -34,7 +34,7 @@ function isObject(value: unknown): value is Record<string, unknown> {
 }
 
 export function isAvailableTask(task: Task): boolean {
-  if (task.subjectId !== "math") return task.subjectId === "informatics" && task.availability !== "history-only";
+  if (task.subjectId !== "math") return ["informatics", "physics"].includes(task.subjectId) && task.availability !== "history-only";
   return task.subjectId === "math" && task.availability !== "history-only" &&
     ((task.examType[0] === "ОГЭ" && task.level === null) ||
       (task.examType[0] === "ЕГЭ" && (task.level === "profile" || task.level === "base")));

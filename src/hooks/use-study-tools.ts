@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { practiceBank as tasks } from "@/lib/tasks";
-import { theoryTopics, getTheoryTopic } from "@/lib/theory";
+import { allTheoryTopics as theoryTopics, getTheoryTopic } from "@/lib/theory";
 import {
   bookmarkKey, canReadStudyToolsState, emptyStudyToolsState, legacyStudyToolsStorageKey,
   parseStudyToolsState, studyToolsStorageKey, toggleBookmark as toggleBookmarkState,

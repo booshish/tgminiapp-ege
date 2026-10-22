@@ -19,10 +19,13 @@ import type { Exam } from "@/lib/navigation";
 import { getTheoryTopic, getPublishedTheoryTopics } from "@/lib/theory";
 import { getExamDefinition, type ExamLevel } from "@/lib/exams";
 import { getPracticeTasks } from "@/lib/tasks";
+import { subjectTitle, type SubjectId } from "@/lib/subjects";
 import "@/components/theory-screen.css";
 
 type TheoryScreenProps = {
   exam: Exam;
+  subjectId?: SubjectId;
+  onSubjectChange?: (subject: SubjectId) => void;
   level?: ExamLevel | null;
   onLevelChange?: (level: ExamLevel) => void;
   topicId?: string;
@@ -39,6 +42,8 @@ type TheoryScreenProps = {
 
 export function TheoryScreen({
   exam,
+  subjectId = "math",
+  onSubjectChange,
   level = "profile",
   onLevelChange,
   topicId,
@@ -58,7 +63,8 @@ export function TheoryScreen({
   const [number, setNumber] = useState("");
   const definition = getExamDefinition({
     examType: exam,
-    level: exam === "ЕГЭ" ? level ?? "profile" : undefined,
+    subjectId,
+    level: subjectId === "math" && exam === "ЕГЭ" ? level ?? "profile" : undefined,
   });
   const normalizedQuery = query
     .trim()
@@ -68,7 +74,8 @@ export function TheoryScreen({
     ? new Set(
         getPracticeTasks({
           examType: exam,
-          level: exam === "ЕГЭ" ? level ?? "profile" : undefined,
+          subjectId,
+          level: subjectId === "math" && exam === "ЕГЭ" ? level ?? "profile" : undefined,
           examNumber: Number(number),
         }).map((task) => getTheoryTopic(task.topicId)?.id ?? task.topicId),
       )
@@ -76,7 +83,8 @@ export function TheoryScreen({
   const visibleTopics = getPublishedTheoryTopics().filter(
     (item) =>
       item.examType.includes(exam) &&
-      (item.coverage === "foundation" || exam !== "ЕГЭ" || (item.level ?? "profile") === (level ?? "profile")) &&
+      item.subjectId === subjectId &&
+      (subjectId !== "math" || item.coverage === "foundation" || exam !== "ЕГЭ" || (item.level ?? "profile") === (level ?? "profile")) &&
       item.part === part &&
       (!matchingTaskTopics || item.examNumbers?.includes(Number(number)) || matchingTaskTopics.has(item.id)) &&
       (!normalizedQuery ||
@@ -89,10 +97,10 @@ export function TheoryScreen({
   const topic = topicId ? getTheoryTopic(topicId) : undefined;
   const isMaterial = Boolean(topic && materialId === topic.materialId);
   const unavailable = Boolean(
-    (topicId && (!topic || !topic.examType.includes(exam) ||
-      (topic.coverage !== "foundation" && exam === "ЕГЭ" && (topic.level ?? "profile") !== (level ?? "profile")))) || (materialId && !isMaterial),
+    (topicId && (!topic || topic.subjectId !== subjectId || !topic.examType.includes(exam) ||
+      (subjectId === "math" && topic.coverage !== "foundation" && exam === "ЕГЭ" && (topic.level ?? "profile") !== (level ?? "profile")))) || (materialId && !isMaterial),
   );
-  const levelCaption = exam === "ЕГЭ" ? level === "base" ? " · база" : " · профиль" : "";
+  const levelCaption = subjectId === "math" && exam === "ЕГЭ" ? level === "base" ? " · база" : " · профиль" : "";
 
   const searchField = (
     <label className="theory-search">
@@ -101,7 +109,7 @@ export function TheoryScreen({
         <Search size={20} aria-hidden="true" />
         <input
           type="search"
-          placeholder="Например, дроби или уравнения"
+          placeholder={subjectId === "math" ? "Например, дроби или уравнения" : "Название темы или метода"}
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
@@ -114,6 +122,7 @@ export function TheoryScreen({
       <summary>О материале <ChevronDown size={17} aria-hidden="true" /></summary>
       <p>
         {topic.source.label} · около {topic.readMinutes} минут.
+        {topic.requirementsReference && <><br /><a href={topic.requirementsReference.url} target="_blank" rel="noreferrer">Источник требований: проект {topic.requirementsReference.year}, PDF с. {topic.requirementsReference.pdfPage}</a>. Прочитана копия; это не разрешение копировать задания.</>}
         {topic.coverage === "foundation"
           ? " Школьная база для ОГЭ и ЕГЭ."
           : ` ${exam}${levelCaption}, часть ${topic.part}.`}
@@ -186,11 +195,13 @@ export function TheoryScreen({
       {!topic ? (
         <>
           <PageIntro eyebrow="БИБЛИОТЕКА ЗНАНИЙ" title="Теория">
-            Основные правила, формулы и пошаговые примеры по математике.
+            {subjectId === "math" ? "Основные правила, формулы и пошаговые примеры по математике." : `Оригинальные объяснения и примеры: ${subjectTitle(subjectId)}. Не официальный банк.`}
           </PageIntro>
           {isPhone && searchField}
           <ExamPicker
             exam={exam}
+            subjectId={subjectId}
+            onSubjectChange={onSubjectChange ? (value) => { setNumber(""); setPart(1); onSubjectChange(value); } : undefined}
             onChange={(value) => {
               setNumber("");
               setPart(1);
@@ -198,7 +209,7 @@ export function TheoryScreen({
             }}
           />
           <div className="theory-tools">
-            {exam === "ЕГЭ" && onLevelChange && <label className="theory-number-filter">
+            {subjectId === "math" && exam === "ЕГЭ" && onLevelChange && <label className="theory-number-filter">
               <span>Уровень математики</span>
               <select aria-label="Уровень математики в теории" value={level ?? "profile"} onChange={(event) => {
                 setPart(1); setNumber(""); onLevelChange(event.target.value as ExamLevel);
@@ -246,16 +257,15 @@ export function TheoryScreen({
           </div>
           <div className="theory-section-heading">
             <span className="eyebrow">
-              {exam} · МАТЕМАТИКА{levelCaption.toLocaleUpperCase("ru")} · ЧАСТЬ {part}
+              {exam} · {subjectTitle(subjectId).toLocaleUpperCase("ru")}{levelCaption.toLocaleUpperCase("ru")} · ЧАСТЬ {part}
             </span>
             <h2>Выберите тему</h2>
             {!isPhone && <p>
-              Авторские материалы по номерам и школьной базе. Привязка к
-              структуре 2026 года предварительная; отдельные методы не означают
-              полного охвата всех экзаменационных подтипов.
+              {subjectId === "math" ? "Авторские материалы по номерам и школьной базе. Привязка к структуре 2026 года предварительная; отдельные методы не означают полного охвата всех экзаменационных подтипов." : "Авторские учебные материалы по прочитанным разделам проекта 2027. Это не полный курс и не утверждённые критерии экзамена; источник требований указан в конспекте."}
             </p>}
           </div>
           <div className="topic-grid">
+            {visibleTopics.length === 0 && <p className="info-note">Для выбранного предмета и фильтра готовых конспектов пока нет. Математика не подставляется вместо другого предмета.</p>}
             {visibleTopics.map((item, index) => (
                 <button
                   type="button"
@@ -317,21 +327,19 @@ export function TheoryScreen({
           )}
           {isPhone && <details className="theory-mobile-details theory-catalog-about">
             <summary>О материалах <ChevronDown size={17} aria-hidden="true" /></summary>
-            <p>Авторские материалы по номерам и школьной базе. Привязка к
-              структуре 2026 года предварительная; отдельные методы не означают
-              полного охвата всех экзаменационных подтипов.</p>
+            <p>{subjectId === "math" ? "Авторские материалы по номерам и школьной базе. Привязка к структуре 2026 года предварительная; отдельные методы не означают полного охвата всех экзаменационных подтипов." : "Авторские учебные материалы по проекту 2027. Это не полный курс и не официальные критерии; источник указан в конспекте."}</p>
           </details>}
         </>
       ) : (
         <>
           <nav className="lesson-breadcrumbs" aria-label="Путь к материалу">
             {isPhone ? <span>
-              {exam} · Математика{levelCaption} · Часть {topic.part}
+              {exam} · {subjectTitle(subjectId)}{levelCaption} · Часть {topic.part}
               {topic.examNumbers?.[0] ? ` · №${topic.examNumbers[0]}` : " · Школьная база"}
             </span> : <>
             <span>{exam}</span>
             <ChevronRight size={13} aria-hidden="true" />
-            <span>Математика{levelCaption}</span>
+            <span>{subjectTitle(subjectId)}{levelCaption}</span>
             <ChevronRight size={13} aria-hidden="true" />
             <span>{topic.coverage === "foundation" ? "Школьная база" : `№${topic.examNumbers?.[0]}`} · часть {topic.part}</span>
             <ChevronRight size={13} aria-hidden="true" />
@@ -349,7 +357,7 @@ export function TheoryScreen({
           {!isPhone && (
           <PageIntro
             eyebrow={
-              isMaterial ? "КОНСПЕКТ · МАТЕМАТИКА" : `${exam} · МАТЕМАТИКА`
+              isMaterial ? `КОНСПЕКТ · ${subjectTitle(subjectId).toLocaleUpperCase("ru")}` : `${exam} · ${subjectTitle(subjectId).toLocaleUpperCase("ru")}`
             }
             title={topic.title}
           >

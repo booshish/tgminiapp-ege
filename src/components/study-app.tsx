@@ -144,12 +144,13 @@ export function StudyApp() {
   const routeTheory = route.topicId ? getTheoryTopic(route.topicId) : undefined;
   const theoryExam = route.exam ?? (routeTheory?.examType.length === 1 ? routeTheory.examType[0] : state.exam);
   const theoryLevel = route.level ?? routeTheory?.level ?? practice.catalog.level ?? "profile";
+  const theorySubject = route.subjectId ?? routeTheory?.subjectId ?? practice.catalog.subjectId;
+  const { initialized: practiceInitialized, catalog: practiceCatalog, changeCatalog: changePracticeCatalog } = practice;
   const canConcentrate = route.view === "tasks"
     || (route.view === "theory" && Boolean(route.topicId));
   const concentrating = state.focusMode && canConcentrate;
   const activeView = route.view === "tasks" ? "catalog" : route.view;
   const { currentTask, session } = practice;
-  const changePracticeExam = practice.changeExam;
   const openMockAttempt = mock.open;
   const currentIndex = currentTask
     ? tasks.findIndex((task) => task.id === currentTask.id)
@@ -168,8 +169,12 @@ export function StudyApp() {
   });
 
   useEffect(() => {
-    if (ready && practice.initialized && route.view === "theory" && state.exam !== theoryExam) changePracticeExam(theoryExam);
-  }, [ready, practice.initialized, route.view, state.exam, theoryExam, changePracticeExam]);
+    if (ready && practiceInitialized && route.view === "theory" && (state.exam !== theoryExam || practiceCatalog.subjectId !== theorySubject)) {
+      changePracticeCatalog({ ...practiceCatalog, exam: theoryExam, subjectId: theorySubject,
+        level: theorySubject === "math" && theoryExam === "ЕГЭ" ? theoryLevel : undefined,
+        examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined });
+    }
+  }, [ready, practiceInitialized, route.view, state.exam, theoryExam, theorySubject, theoryLevel, practiceCatalog, changePracticeCatalog]);
 
   useEffect(() => {
     if (route.view !== "mock" || !route.sessionId) {
@@ -254,6 +259,8 @@ export function StudyApp() {
       if (route.view !== "catalog" && route.view !== "tasks" && practice.resume()) return;
       practice.openCatalog();
     }
+    else if (view === "theory") openTheory();
+    else if (view === "mock" && practice.catalog.subjectId !== "math") navigate(view, { exam: state.exam, subjectId: practice.catalog.subjectId });
     else navigate(view);
   }
   function startPractice(topicId?: string, prototypeId?: string) {
@@ -263,8 +270,8 @@ export function StudyApp() {
     practice.start({
       ...practice.catalog,
       exam,
-      subjectId: topic || route.view === "theory" ? "math" : practice.catalog.subjectId,
-      level: exam === "ЕГЭ" ? topic?.level ?? (route.view === "theory" ? theoryLevel : practice.catalog.level ?? "profile") : undefined,
+      subjectId: topic?.subjectId ?? (route.view === "theory" ? theorySubject : practice.catalog.subjectId),
+      level: (topic?.subjectId ?? (route.view === "theory" ? theorySubject : practice.catalog.subjectId)) === "math" && exam === "ЕГЭ" ? topic?.level ?? (route.view === "theory" ? theoryLevel : practice.catalog.level ?? "profile") : undefined,
       mode: "topic",
       examNumber: undefined,
       topicId,
@@ -324,7 +331,8 @@ export function StudyApp() {
     if (topic && !topic.examType.includes(state.exam)) practice.changeExam(topic.examType[0]);
     const exam = topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam;
     navigate("theory", { topicId: topic?.id ?? topicId, exam,
-      level: exam === "ЕГЭ" ? topic?.level ?? practice.catalog.level ?? "profile" : undefined });
+      subjectId: topic?.subjectId ?? practice.catalog.subjectId,
+      level: (topic?.subjectId ?? practice.catalog.subjectId) === "math" && exam === "ЕГЭ" ? topic?.level ?? practice.catalog.level ?? "profile" : undefined });
   };
   function openMockTheory(topicId: string) {
     const definition = examDefinitions.find((entry) => entry.versionId === mock.active?.examVersionId);
@@ -496,7 +504,12 @@ export function StudyApp() {
           {route.view === "home" && (
             <HomeScreen
               exam={state.exam}
-              onExamChange={practice.changeExam}
+              subjectId={practice.catalog.subjectId}
+              onSubjectChange={(subjectId) => practice.changeCatalog({ ...practice.catalog, subjectId, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined })}
+              onExamChange={(exam) => practice.changeCatalog({ ...practice.catalog, exam,
+                subjectId: exam === "ОГЭ" && practice.catalog.subjectId === "chinese" ? "math" : practice.catalog.subjectId,
+                level: exam === "ЕГЭ" && practice.catalog.subjectId === "math" ? practice.catalog.level ?? "profile" : undefined,
+                examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined })}
               onStart={continuePractice}
               onNavigate={open}
               game={game}
@@ -532,6 +545,11 @@ export function StudyApp() {
           {route.view === "theory" && (
             <TheoryScreen
               exam={theoryExam}
+              subjectId={theorySubject}
+              onSubjectChange={(subjectId) => {
+                practice.changeCatalog({ ...practice.catalog, exam: theoryExam, subjectId, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined });
+                navigate("theory", { exam: theoryExam, subjectId, level: subjectId === "math" && theoryExam === "ЕГЭ" ? theoryLevel : undefined });
+              }}
               level={theoryLevel}
               focusMode={concentrating}
               topicId={route.topicId}
@@ -540,21 +558,21 @@ export function StudyApp() {
               onBookmark={route.topicId && studyTools.ready ? () => studyTools.toggleBookmark({
                 kind: "theory", itemId: getTheoryTopic(route.topicId!)?.id ?? route.topicId!, examType: theoryExam,
               }) : undefined}
-              onExamChange={(exam) => { practice.changeExam(exam); navigate("theory", { exam, level: exam === "ЕГЭ" ? theoryLevel : undefined }); }}
+              onExamChange={(exam) => { const subjectId = exam === "ОГЭ" && theorySubject === "chinese" ? "math" : theorySubject; practice.changeExam(exam); navigate("theory", { exam, subjectId, level: subjectId === "math" && exam === "ЕГЭ" ? theoryLevel : undefined }); }}
               onLevelChange={(level) => {
                 practice.changeCatalog({ ...practice.catalog, exam: "ЕГЭ", level, examNumber: undefined, topicId: undefined, prototypeId: undefined, part: undefined });
                 navigate("theory", { exam: "ЕГЭ", level });
               }}
-              onOpenTopic={(topicId) => navigate("theory", { topicId, exam: theoryExam, level: theoryExam === "ЕГЭ" ? getTheoryTopic(topicId)?.level ?? theoryLevel : undefined })}
+              onOpenTopic={(topicId) => navigate("theory", { topicId, exam: theoryExam, subjectId: getTheoryTopic(topicId)?.subjectId ?? theorySubject, level: (getTheoryTopic(topicId)?.subjectId ?? theorySubject) === "math" && theoryExam === "ЕГЭ" ? getTheoryTopic(topicId)?.level ?? theoryLevel : undefined })}
               onOpenMaterial={(topicId, materialId) =>
-                navigate("theory", { topicId, materialId, exam: theoryExam, level: theoryExam === "ЕГЭ" ? getTheoryTopic(topicId)?.level ?? theoryLevel : undefined })
+                navigate("theory", { topicId, materialId, exam: theoryExam, subjectId: getTheoryTopic(topicId)?.subjectId ?? theorySubject, level: (getTheoryTopic(topicId)?.subjectId ?? theorySubject) === "math" && theoryExam === "ЕГЭ" ? getTheoryTopic(topicId)?.level ?? theoryLevel : undefined })
               }
               onPractice={startPractice}
               onBack={() => {
                 if (route.topicId) {
                   navigate(
                     "theory",
-                    route.materialId ? { topicId: route.topicId, exam: theoryExam, level: theoryExam === "ЕГЭ" ? theoryLevel : undefined } : { exam: theoryExam, level: theoryExam === "ЕГЭ" ? theoryLevel : undefined },
+                    route.materialId ? { topicId: route.topicId, exam: theoryExam, subjectId: theorySubject, level: theorySubject === "math" && theoryExam === "ЕГЭ" ? theoryLevel : undefined } : { exam: theoryExam, subjectId: theorySubject, level: theorySubject === "math" && theoryExam === "ЕГЭ" ? theoryLevel : undefined },
                   );
                 } else back();
               }}

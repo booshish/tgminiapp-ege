@@ -102,6 +102,50 @@ with sync_playwright() as playwright:
     visit("catalog?exam=ЕГЭ&subject=math&level=profile&mode=number")
     assert page.locator(".catalog-number-card").count() == 19
     result["passed"].append("math_base_profile_catalogues_unchanged")
+
+    visit("catalog?exam=ЕГЭ&subject=physics&mode=number")
+    assert page.locator(".catalog-number-card").count() == 26
+    assert page.locator('[data-catalog-number="5"]').is_disabled()
+    before = game()
+    page.locator('[data-catalog-number="1"]').click()
+    page.locator('#task-answer').fill("4")
+    page.get_by_role("button", name="Проверить ответ", exact=True).click()
+    page.locator(".task-verdict-correct").wait_for()
+    assert game() == before
+    page.reload(wait_until="networkidle")
+    page.locator(".task-verdict-correct").wait_for()
+    assert "Физика" in page.locator('.task-heading-block').inner_text()
+    result["passed"].append("physics_four_ready_numbers_answer_reload_no_XP_change")
+
+    visit("catalog?exam=ЕГЭ&subject=physics&mode=number")
+    page.get_by_role("button", name="Открыть теорию", exact=True).click()
+    page.locator(".theory-topic-card").first.wait_for()
+    assert page.locator(".theory-topic-card").count() == 4
+    assert page.get_by_role("combobox", name="Выберите предмет", exact=True).input_value() == "physics"
+    assert page.get_by_label("Уровень математики в теории").count() == 0
+    page.locator(".theory-topic-card").first.click()
+    page.get_by_role("button", name="Разобрать подробнее", exact=False).click()
+    page.locator(".topic-lesson").wait_for()
+    assert "Физика" in page.locator(".lesson-breadcrumbs").inner_text()
+    assert "8 м" in page.locator(".topic-lesson").inner_text()
+    page.reload(wait_until="networkidle")
+    page.locator(".topic-lesson").wait_for()
+    for width in [320, 430, 768, 1024]:
+        page.set_viewport_size({"width": width, "height": 900})
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), f"Theory overflow at {width}"
+    page.get_by_role("button", name="Перейти к заданиям", exact=False).first.click()
+    page.locator("#task-answer").wait_for()
+    assert "Физика" in page.locator('.task-heading-block').inner_text()
+    result["passed"].append("physics_theory_material_reload_mobile_iPad_and_back_to_own_practice")
+
+    page.goto(base_url + "/#/theory?exam=ЕГЭ&subject=informatics", wait_until="networkidle")
+    assert page.locator(".theory-topic-card").count() == 19
+    page.get_by_role("combobox", name="Выберите предмет", exact=True).select_option("russian")
+    assert page.locator(".theory-topic-card").count() == 0
+    assert "готовых конспектов пока нет" in page.locator(".theory-page").inner_text()
+    page.reload(wait_until="networkidle")
+    assert page.get_by_role("combobox", name="Выберите предмет", exact=True).input_value() == "russian"
+    result["passed"].append("theory_subject_switch_saved_and_no_math_replacement")
     browser.close()
 assert not result["page_errors"], result["page_errors"]
 (artifacts / "results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2))

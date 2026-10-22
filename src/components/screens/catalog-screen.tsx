@@ -9,7 +9,7 @@ import { VariantLaunchCard } from "@/components/variant-launch-card";
 import type { MockState } from "@/lib/mock-exam";
 import type { CatalogSelection } from "@/lib/practice";
 import { getPracticeTasks, practicePrototypes as prototypes, taskTopicLabels } from "@/lib/tasks";
-import { getTheoryTopic, theoryTopics } from "@/lib/theory";
+import { getTheoryTopic, allTheoryTopics as theoryTopics } from "@/lib/theory";
 import { StreakSummary } from "@/components/game-motivation";
 import type { GameSummary } from "@/lib/gamification";
 import "@/components/catalog-screen.css";
@@ -54,7 +54,7 @@ export function CatalogScreen({
   const availableTopics = theoryTopics
     .filter((topic) => topic.subjectId === selection.subjectId)
     .filter((topic) => topic.examType.includes(selection.exam))
-    .filter((topic) => selection.exam !== "ЕГЭ" || topic.coverage !== "exam-topic" || (topic.level ?? "profile") === (selection.level ?? "profile"))
+    .filter((topic) => selection.subjectId !== "math" || selection.exam !== "ЕГЭ" || topic.coverage !== "exam-topic" || (topic.level ?? "profile") === (selection.level ?? "profile"))
     .map((topic) => ({
       id: topic.id,
       title: topic.title,
@@ -128,7 +128,7 @@ export function CatalogScreen({
         <summary>Все предметы {selection.exam}</summary>
         <div className="catalog-topic-grid">
           {getSubjects(selection.exam).map(([id, title]) => <FeatureCard key={id} icon={BookOpen} label={title}
-            description={id === "math" ? "Действующая математика" : id === "informatics" ? "Проект 2027 · задания и номера" : "Структура и задания готовятся"}
+            description={id === "math" ? "Действующая математика" : id === "informatics" || (id === "physics" && selection.exam === "ЕГЭ") ? "Проект 2027 · задания и открытые пробелы" : "Структура и задания готовятся"}
             onClick={() => changeSubject(id)} />)}
         </div>
       </details>

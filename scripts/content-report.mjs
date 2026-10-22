@@ -83,8 +83,13 @@ export function buildCoverage(content) {
 
 export function contentIntegrityIssues(content, coverage = buildCoverage(content)) {
   const issues = [...coverage.missingLinks, ...contentReviewIssues(content)];
+  const subjectContent = { tasks: (content.practiceBank ?? []).filter(task => task.subjectId !== "math"), theoryTopics: (content.allTheoryTopics ?? []).filter(topic => topic.subjectId !== "math") };
+  if (subjectContent.tasks.length || subjectContent.theoryTopics.length) {
+    try { issues.push(...contentReviewIssues(subjectContent, JSON.parse(readFileSync(resolve(projectRoot, "docs/subject-content-review.json"), "utf8")))); }
+    catch { issues.push("subject content review: missing or invalid manifest"); }
+  }
   const { getPublicationDecision } = createContentLoader()("src/lib/content-publication.ts");
-  for (const material of [...content.tasks, ...content.theoryTopics]) {
+  for (const material of [...content.tasks, ...content.theoryTopics, ...subjectContent.tasks, ...subjectContent.theoryTopics]) {
     const decision = getPublicationDecision(material.publication);
     if (material.publication?.id !== material.id) issues.push(`publication identity mismatch: ${material.id}`);
     for (const reason of decision.reasons) issues.push(`publication blocked: ${material.id}: ${reason.code}`);
