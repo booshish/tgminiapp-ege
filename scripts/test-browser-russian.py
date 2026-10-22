@@ -73,6 +73,38 @@ with sync_playwright() as playwright:
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), f"Overflow at {width}"
         assert page.locator("#task-answer").is_visible()
     checks.append("own_numbered_text_and_mobile_iPad_desktop_no_overflow")
+
+    # New entries must open by their stable ID rather than falling back to old tasks.
+    for exam, number, slug, answer in [
+        ("ОГЭ", 8, "socks", "носков"),
+        ("ОГЭ", 4, "dash-subject", "312"),
+        ("ОГЭ", 7, "shore-a", "46"),
+        ("ОГЭ", 12, "russian-museum-label-12", "бережно"),
+        ("ЕГЭ", 9, "roots-meanings", "43"),
+        ("ЕГЭ", 8, "syntax-conference", "41235"),
+        ("ЕГЭ", 22, "devices-ocean", "53142"),
+        ("ЕГЭ", 26, "russian-queue-help-26", "5"),
+        ("ЕГЭ", 4, "stress-f", "1235"),
+        ("ЕГЭ", 13, "not-pronouns", "124"),
+    ]:
+        prefix = "oge" if exam == "ОГЭ" else "ege"
+        task_id = f"{prefix}-russian-2027-n{number}-p2-{slug}-r1"
+        part = 2 if exam == "ОГЭ" else 1
+        page.goto(base + f"/#/tasks/0?exam={exam}&subject=russian&number={number}&mode=number&part={part}&task={task_id}", wait_until="networkidle")
+        page.locator("#task-answer").wait_for()
+        assert task_id in page.url
+        correct(answer)
+        assert game() == before
+        page.reload(wait_until="networkidle")
+        page.locator(".task-verdict-correct").wait_for()
+        assert page.locator("#task-answer").input_value() == answer
+        for width in [320, 430, 768, 1024]:
+            page.set_viewport_size({"width": width, "height": 900})
+            assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), f"Overflow: {task_id} at {width}"
+    for exam, count in [("ОГЭ", 14), ("ЕГЭ", 8)]:
+        catalog(exam)
+        assert f"Задач: {count}" in page.locator('[data-catalog-number="8"]').inner_text()
+    checks.append("pack2_ten_new_IDs_answers_reload_mobile_and_real_14_8_counts")
     browser.close()
 assert not errors, errors
 print(json.dumps({"passed": checks, "page_errors": errors}, ensure_ascii=False, indent=2))

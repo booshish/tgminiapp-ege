@@ -4,6 +4,7 @@ import { originalProvenance } from "./provenance";
 import { russianSources, russianTitles } from "./russian-model";
 import { ogeRussianEntries } from "./russian-oge";
 import { egeRussianEntries } from "./russian-ege";
+import { russianPack2 } from "./russian-pack2";
 
 export type RussianEntry = {
   number: number; slug: string; prompt: string; answer: string; explanation: string;
@@ -11,8 +12,12 @@ export type RussianEntry = {
   passage?: { id: string; sentences: string[] };
   references?: number[];
 };
-export const russianTasks: Task[] = (["ОГЭ", "ЕГЭ"] as const).flatMap(exam => {
-  return (exam === "ОГЭ" ? ogeRussianEntries : egeRussianEntries).map(entry => {
+// Append after all previously shipped entries: historical IDs and indices stay stable.
+export const russianTasks: Task[] = [
+  ...ogeRussianEntries.map(entry => ({ exam: "ОГЭ" as const, entry })),
+  ...egeRussianEntries.map(entry => ({ exam: "ЕГЭ" as const, entry })),
+  ...russianPack2,
+].map(({ exam, entry }) => {
     const id = `${exam === "ОГЭ" ? "oge" : "ege"}-russian-2027-n${entry.number}-${entry.slug}-r1`;
     const passage = entry.passage ? entry.passage.sentences.map((sentence,i) => `(${i+1}) ${sentence}`).join("\n") + "\n\n" : "";
     const instruction = entry.mode === "word" ? "Запишите ответ без пробелов, кавычек и дополнительных знаков." : entry.mode === "ordered" ? "Запишите цифры подряд в порядке букв. В практике проверяется весь ответ, без частичных экзаменационных баллов." : "Запишите номера правильных ответов подряд, без пробелов и повторов; порядок номеров не важен.";
@@ -32,6 +37,5 @@ export const russianTasks: Task[] = (["ОГЭ", "ЕГЭ"] as const).flatMap(exam
       provenance: originalProvenance("original-individual-task"), publication: originalPublication(id, "russian-bank"),
       scoring: { status: "pending-official-verification", maxPrimaryScore: exam === "ЕГЭ" && [8,22].includes(entry.number) ? 2 : 1 },
     };
-  });
 });
 export const russianPrototypes = russianTasks.map(task => ({ id: task.prototypeId, topicId: task.topicId, title: task.title }));

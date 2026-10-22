@@ -6,6 +6,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { createContentLoader, loadContent } from "./content-source-loader.mjs";
 import { createComponentLoader } from "./component-source-loader.mjs";
 import { contentReviewIssues } from "./content-review-evidence.mjs";
+import "./russian-pack2-review.mjs";
 
 const load=createContentLoader();
 const {russianTasks}=load("src/lib/content/russian-bank.ts");
@@ -25,17 +26,17 @@ const reviewed={
   ЕГЭ:{1:["но","сколько"],2:["1345","124"],3:["135","135"],4:["134","234"],5:["надеть","эффективным"],6:["свободная","обратно"],7:["лягте","яблок"],8:["12345","21435"],9:["134","134"],10:["124","124"],11:["123","124"],12:["124","123"],13:["123","125"],14:["134","123"],15:["13","23"],16:["234","134"],17:["123456","123"],18:["1234","345"],19:["123","14"],20:["123","13"],21:["13","135"],22:["12345","35124"],23:["135","134"],24:["124","123"],25:["непокладаярук","раздражение"],26:["5","5"]},
 };
 
-test("Russian package has exactly 44/52 complete original tasks and all 37 short-answer slots",()=>{
-  assert.equal(russianTasks.length,96);assert.equal(ogeRussianEntries.length,44);assert.equal(egeRussianEntries.length,52);
-  assert.equal(new Set(russianTasks.map(task=>task.id)).size,96);
-  assert.equal(new Set(russianTasks.map(task=>task.prompt.normalize("NFC").replace(/\s+/g," ").trim())).size,96);
+test("Russian bank has 154/208 complete original tasks and all 37 short-answer slots",()=>{
+  assert.equal(russianTasks.length,362);assert.equal(ogeRussianEntries.length,44);assert.equal(egeRussianEntries.length,52);
+  assert.equal(new Set(russianTasks.map(task=>task.id)).size,362);
+  assert.equal(new Set(russianTasks.map(task=>task.prompt.normalize("NFC").replace(/\s+/g," ").trim())).size,362);
   for(const exam of ["ОГЭ","ЕГЭ"]){
     const model=russianModels.find(item=>item.examType===exam);
     assert.equal(model.numbers.length,exam==="ОГЭ"?13:27);
     for(const slot of model.numbers){
       const bank=getPracticeTasks({examType:exam,subjectId:"russian",examNumber:slot.number});
       if(slot.answerFormat==="extended"){assert.equal(bank.length,0);assert(slot.pendingReason);continue;}
-      assert.equal(bank.length,exam==="ОГЭ"?4:2,`${exam}#${slot.number}`);
+      assert.equal(bank.length,exam==="ОГЭ"?14:8,`${exam}#${slot.number}`);
       for(const task of bank){assert.equal(task.part,slot.part);assert.equal(task.scoring.maxPrimaryScore,slot.maxPrimaryScore);}
     }
   }
