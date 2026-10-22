@@ -101,10 +101,48 @@ with sync_playwright() as playwright:
         for width in [320, 430, 768, 1024]:
             page.set_viewport_size({"width": width, "height": 900})
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), f"Overflow: {task_id} at {width}"
-    for exam, count in [("ОГЭ", 14), ("ЕГЭ", 8)]:
+    for exam, count in [("ОГЭ", 28), ("ЕГЭ", 13)]:
         catalog(exam)
         assert f"Задач: {count}" in page.locator('[data-catalog-number="8"]').inner_text()
-    checks.append("pack2_ten_new_IDs_answers_reload_mobile_and_real_14_8_counts")
+    checks.append("pack2_ten_preserved_IDs_answers_reload_mobile")
+    for exam, number, slug, answer in [
+        ("ОГЭ", 4, "rules-materials", "425"),
+        ("ОГЭ", 6, "orth-adjective-n", "35"),
+        ("ОГЭ", 7, "letters-fields", "12456"),
+        ("ОГЭ", 8, "norm-friends", "друзей"),
+        ("ОГЭ", 9, "phrase-bird-song", "птичьепение"),
+        ("ОГЭ", 12, "russian-school-radio-12", "вдохновенно"),
+        ("ЕГЭ", 4, "accent-terms", "124"),
+        ("ЕГЭ", 6, "lex-horizons", "расширила"),
+        ("ЕГЭ", 8, "syntax-ecology", "31425"),
+        ("ЕГЭ", 9, "root-speech-weather", "1245"),
+        ("ЕГЭ", 11, "suffix-clothes-flowers", "1234"),
+        ("ЕГЭ", 13, "ne-short-adjectives", "124"),
+        ("ЕГЭ", 15, "nn-speech-short", "34"),
+        ("ЕГЭ", 20, "mixed-colon-condition", "13"),
+        ("ЕГЭ", 22, "devices-transfers", "21453"),
+        ("ЕГЭ", 26, "russian-beach-sculpture-26", "6"),
+    ]:
+        prefix = "oge" if exam == "ОГЭ" else "ege"
+        task_id = f"{prefix}-russian-2027-n{number}-p3-{slug}-r1"
+        part = 2 if exam == "ОГЭ" else 1
+        page.goto(base + f"/#/tasks/0?exam={exam}&subject=russian&number={number}&mode=number&part={part}&task={task_id}", wait_until="networkidle")
+        page.locator("#task-answer").wait_for()
+        assert task_id in page.url
+        correct(answer)
+        assert game() == before
+        page.reload(wait_until="networkidle")
+        page.locator(".task-verdict-correct").wait_for()
+        assert page.locator("#task-answer").input_value() == answer
+        for width in [320, 430, 768, 1024]:
+            page.set_viewport_size({"width": width, "height": 900})
+            assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), f"Overflow: {task_id} at {width}"
+    catalog("ОГЭ")
+    assert "Задач: 28" in page.locator('[data-catalog-number="7"]').inner_text()
+    catalog("ЕГЭ")
+    for number, count in [(4, 12), (8, 13), (13, 13), (22, 12), (26, 12)]:
+        assert f"Задач: {count}" in page.locator(f'[data-catalog-number="{number}"]').inner_text()
+    checks.append("pack3_sixteen_new_IDs_answers_reload_320_430_768_1024_and_real_counts")
     browser.close()
 assert not errors, errors
 print(json.dumps({"passed": checks, "page_errors": errors}, ensure_ascii=False, indent=2))

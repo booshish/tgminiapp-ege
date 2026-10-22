@@ -5,6 +5,7 @@ import { russianSources, russianTitles } from "./russian-model";
 import { ogeRussianEntries } from "./russian-oge";
 import { egeRussianEntries } from "./russian-ege";
 import { russianPack2 } from "./russian-pack2";
+import { russianPack3 } from "./russian-pack3";
 
 export type RussianEntry = {
   number: number; slug: string; prompt: string; answer: string; explanation: string;
@@ -17,6 +18,7 @@ export const russianTasks: Task[] = [
   ...ogeRussianEntries.map(entry => ({ exam: "ОГЭ" as const, entry })),
   ...egeRussianEntries.map(entry => ({ exam: "ЕГЭ" as const, entry })),
   ...russianPack2,
+  ...russianPack3,
 ].map(({ exam, entry }) => {
     const id = `${exam === "ОГЭ" ? "oge" : "ege"}-russian-2027-n${entry.number}-${entry.slug}-r1`;
     const passage = entry.passage ? entry.passage.sentences.map((sentence,i) => `(${i+1}) ${sentence}`).join("\n") + "\n\n" : "";
