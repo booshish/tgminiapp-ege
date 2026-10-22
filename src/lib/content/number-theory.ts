@@ -1,6 +1,7 @@
 import type { TheoryTopic } from "../theory";
 
 const m = String.raw;
+type AuthoredTopic = Omit<TheoryTopic, "publication" | "learningChecks">;
 type Section = TheoryTopic["sections"][number];
 type Example = TheoryTopic["examples"][number];
 const section = (title: string, body: string[], formulas: string[] = []): Section => ({ title, body, formulas });
@@ -10,7 +11,7 @@ const example = (title: string, answer: string, steps: (string | { text: string;
 function article(
   exam: "ОГЭ" | "ЕГЭ", number: number, title: string, description: string,
   prerequisites: string[], sections: Section[], examples: Example[], difficulties: string[],
-): TheoryTopic {
+): AuthoredTopic {
   const id = `${exam === "ОГЭ" ? "oge" : "ege-profile"}-number-${number}`;
   const part = number <= (exam === "ОГЭ" ? 19 : 12) ? 1 : 2;
   return {
@@ -22,7 +23,7 @@ function article(
 }
 
 /** Original explanations. Exam-number links remain provisional until an official review. */
-export const numberTheoryTopics: TheoryTopic[] = [
+export const numberTheoryTopics: AuthoredTopic[] = [
   article("ОГЭ", 1, "Практические задачи: читаем условие", "Сопоставляем обозначения плана и сведения из общего условия.", ["decimals"], [
     section("Сначала условие, затем вопрос", ["У нескольких практических задач может быть одно общее описание. Выпишите, что означают числа, буквы и единицы. Ответ к одному номеру нельзя автоматически использовать в другом: каждый вопрос задаёт свою величину.", "На плане подпись объекта определяют по всем признакам вместе: соседству, форме, расположению входа. Если чертёж дан без масштаба, длину нельзя измерять линейкой на экране."]),
     section("Работа с масштабом", ["Масштаб 1:n означает: одна единица на изображении соответствует n таким же единицам в действительности. Сначала выполните умножение, затем переведите сантиметры в метры."], [m`L_{\text{реал}}=nL_{\text{план}},\qquad 100\text{ см}=1\text{ м}`]),

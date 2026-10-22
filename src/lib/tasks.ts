@@ -1,3 +1,5 @@
+import { originalPublication } from "./content/original-publication";
+import { getPublicationDecision, type PublicationCandidate } from "./content-publication";
 import { challengeTasks, challengePrototypes } from "./content/challenge-bank";
 import { ogeTasks, ogePrototypes } from "./content/oge-bank";
 import { egeTasks, egePrototypes } from "./content/ege-bank";
@@ -17,6 +19,7 @@ export type AnswerRule =
 
 export type Task = {
   id: string;
+  publication: PublicationCandidate;
   /** Historical examples remain readable but are not relabelled as current numbered tasks. */
   availability?: "practice" | "history-only";
   provenance: ContentProvenance;
@@ -131,6 +134,7 @@ type DerivedTaskMetadata =
   | "answerFormat"
   | "source"
   | "provenance"
+  | "publication"
   | "scoring";
 
 function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
@@ -149,6 +153,7 @@ function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
     : null;
   return {
     ...data,
+    publication: originalPublication(data.id, "legacy-tasks"),
     ...(historicalBase ? { availability: "history-only" as const } : {}),
     provenance: originalProvenance("existing-project-author-declaration"),
     subjectId: "math",
@@ -1185,7 +1190,7 @@ export const tasks: Task[] = [
     selfCheckNotes: [
       "Сверь доказательство перпендикулярности: ссылка на свойство равнобедренного треугольника тоже допустима при корректном обосновании.",
       "Проверь вычисление высоты и применение формулы площади.",
-      "Выбери самооценку по полноте собственного решения; это не объективная проверка и не официальный разбор критериев.",
+      "Выбери самопроверку по полноте собственного решения; это не объективная проверка и не официальный разбор критериев.",
     ],
     criteriaSourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
   }),
@@ -1211,7 +1216,7 @@ export const tasks: Task[] = [
     selfCheckNotes: [
       "Проверь переход к произведению и объяснение положительности множителей.",
       "Сверь перебор делителей, все три пары и доказательство того, что других пар нет.",
-      "Проверь отдельный ответ о равных числах. Выбранные баллы — твоя самооценка; эти пояснения авторские, а не официальные критерии.",
+      "Проверь отдельный ответ о равных числах. Выбранные баллы — твоя самопроверка; эти пояснения авторские, а не официальные критерии.",
     ],
     criteriaSourceUrl: "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
   }),
@@ -1224,6 +1229,9 @@ export const tasks: Task[] = [
 /** The original maths array/order stays untouched; universal practice opts into this bank. */
 export const practiceBank: Task[] = [...tasks, ...informaticsTasks];
 export const practicePrototypes = [...prototypes, ...informaticsPrototypes];
+
+/** Approval is evaluated once for this immutable bundled revision, not per filter row. */
+const selectableTasks = practiceBank.filter((task) => task.publication.id === task.id && getPublicationDecision(task.publication).allowed);
 
 export type PracticeTaskFilter = {
   examType: Exam;
@@ -1243,7 +1251,7 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
     !definition.numbers.some((entry) => entry.number === filter.examNumber)
   )
     return [];
-  return practiceBank.filter(
+  return selectableTasks.filter(
     (task) =>
       task.examType[0] === definition.examType &&
       task.subjectId === definition.subjectId &&

@@ -1,5 +1,6 @@
 """Targeted subject QA, using an existing production build and installed Chromium."""
 import json
+import os
 import subprocess
 import atexit
 from pathlib import Path
@@ -8,16 +9,18 @@ from urllib.request import urlopen
 from playwright.sync_api import sync_playwright
 
 root = Path(__file__).resolve().parents[1]
-server = subprocess.Popen(["node", "node_modules/next/dist/bin/next", "start", "--hostname", "127.0.0.1", "--port", "3000"], cwd=root, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-atexit.register(server.terminate)
+base_url = os.environ.get("TOCHKA_QA_BASE_URL", "http://127.0.0.1:3000").rstrip("/")
+server = None if "TOCHKA_QA_BASE_URL" in os.environ else subprocess.Popen(["node", "node_modules/next/dist/bin/next", "start", "--hostname", "127.0.0.1", "--port", "3000"], cwd=root, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+if server:
+    atexit.register(server.terminate)
 deadline = time() + 30
 while True:
     try:
-        with urlopen("http://127.0.0.1:3000", timeout=2) as response:
+        with urlopen(base_url, timeout=2) as response:
             if response.status == 200:
                 break
     except Exception:
-        if server.poll() is not None or time() > deadline:
+        if (server is not None and server.poll() is not None) or time() > deadline:
             raise RuntimeError("Production server not ready")
         sleep(.2)
 
@@ -31,7 +34,7 @@ with sync_playwright() as playwright:
     page.on("pageerror", lambda error: result["page_errors"].append(str(error)))
 
     def visit(route):
-        page.goto("http://127.0.0.1:3000/#/" + route, wait_until="networkidle")
+        page.goto(base_url + "/#/" + route, wait_until="networkidle")
         page.locator(".exam-catalog:visible").wait_for()
 
     def game():

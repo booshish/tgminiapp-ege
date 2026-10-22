@@ -1,5 +1,6 @@
 import type { ExamDefinition } from "./exams";
 import { checkTaskAnswer, type Task } from "./tasks";
+import { getPublicationDecision } from "./content-publication";
 
 export const mockExamStorageKey = "tochka-mock-exams-v1";
 export const mockDurationMinutes = 235;
@@ -65,7 +66,11 @@ function usableTask(task: Task, definition: ExamDefinition, historicalAttempt = 
 }
 
 export function getMockCoverage(definition: ExamDefinition, bank: Task[]) {
-  const available = bank.filter((task) => usableTask(task, definition));
+  // New selections require a current publication decision. Parsing earlier
+  // sessions intentionally retains structural validation so a withdrawn task
+  // does not erase a student's existing answers, scores or timer history.
+  const available = bank.filter((task) => usableTask(task, definition) &&
+    task.publication?.id === task.id && getPublicationDecision(task.publication).allowed);
   const missingNumbers = definition.numbers.filter((number) => !available.some((task) => task.examNumber === number.number)).map((number) => number.number);
   const groups = new Set(available.filter((task) => task.examNumber === 1 && task.sharedConditionId).map((task) => task.sharedConditionId!));
   const completeGroups = definition.examType === "ОГЭ"

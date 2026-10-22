@@ -1,17 +1,18 @@
+import { originalPublication, type OriginalCollection } from "./original-publication";
 import type { Task } from "../tasks";
 import { getExamDefinition } from "../exams";
 import { getExamNumberXPScoringRule } from "../exam-scores";
 import { originalProvenance, type ContentProvenance } from "./provenance";
 
 type Derived = "subjectId" | "examYear" | "examVersionId" | "part" |
-  "difficulty" | "answerFormat" | "source" | "scoring" | "provenance";
+  "difficulty" | "answerFormat" | "source" | "scoring" | "provenance" | "publication";
 export type OriginalTaskInput = Omit<Task, Derived> & {
   difficulty?: Task["difficulty"];
   creationMethod?: ContentProvenance["creation_method"];
 };
 
 /** Deterministic author content uses the same versioned scoring registry as practice. */
-export function makeOriginalTask(data: OriginalTaskInput): Task {
+export function makeOriginalTask(data: OriginalTaskInput, collection: OriginalCollection = "base-bank"): Task {
   const { creationMethod = "original-deterministic-family", ...taskData } = data;
   const exam = getExamDefinition({ examType: data.examType[0], subjectId: "math", level: data.level });
   const number = exam?.numbers.find((entry) => entry.number === data.examNumber);
@@ -21,6 +22,7 @@ export function makeOriginalTask(data: OriginalTaskInput): Task {
   const scoring = getExamNumberXPScoringRule(exam.versionId, number.number);
   return {
     ...taskData,
+    publication: originalPublication(data.id, collection),
     provenance: originalProvenance(creationMethod),
     subjectId: "math",
     examYear: exam.year,

@@ -473,3 +473,24 @@
   .theory-reading-page .topic-lesson > .lesson-source-details { margin-top: 20px; margin-bottom: 0; }
   .theory-reading-focus :is(.theory-prerequisites-details, .theory-overview-about) { display: none; }
 }
+
+/* New fundamental checks reuse the existing reading column and font scale. */
+.lesson-learning-check {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.lesson-learning-check > details > summary {
+  display: list-item;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  padding-block: 10px;
+  color: var(--sage-dark);
+  font-weight: 600;
+  cursor: pointer;
+}
+.lesson-learning-check > details > summary:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}

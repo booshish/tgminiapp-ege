@@ -1,11 +1,19 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { contentReviewIssues } from "./content-review-evidence.mjs";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { createContentLoader } from "./content-source-loader.mjs";
 import { createComponentLoader } from "./component-source-loader.mjs";
 
 const load = createContentLoader();
+
+test("subject content passes the same publication and frozen review gates as mathematics", () => {
+  const { informaticsTasks } = load("src/lib/content/informatics-bank.ts");
+  const { getPublicationDecision } = load("src/lib/content-publication.ts");
+  for (const task of informaticsTasks) assert.equal(getPublicationDecision(task.publication).allowed, true, task.id);
+  assert.deepEqual(contentReviewIssues({ tasks: informaticsTasks, theoryTopics: [] }), []);
+});
 const { getSubjects } = load("src/lib/subjects.ts");
 const { subjectExamDefinitions } = load("src/lib/subject-models.ts");
 const { informaticsTasks } = load("src/lib/content/informatics-bank.ts");

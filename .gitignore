@@ -6,3 +6,4 @@ out/
 !.env.example
 test-results/
 playwright-report/
+.content-staging/

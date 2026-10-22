@@ -1,4 +1,5 @@
 import type { Task } from "../tasks";
+import { originalPublication } from "./original-publication";
 import { subjectExamDefinitions } from "../subject-models";
 import { originalProvenance } from "./provenance";
 
@@ -49,6 +50,7 @@ export const informaticsTasks: Task[] = (["ОГЭ", "ЕГЭ"] as const).flatMap(
     const text = (exam === "ОГЭ" && [2, 7].includes(number)) || (exam === "ЕГЭ" && number === 20);
     return {
       id: `${exam === "ОГЭ" ? "oge" : "ege"}-informatics-2027-n${number}-original-r1`,
+      publication: originalPublication(`${exam === "ОГЭ" ? "oge" : "ege"}-informatics-2027-n${number}-original-r1`, "informatics-bank"),
       subjectId: "informatics", examType: [exam], level: null, examNumber: number,
       examYear: 2027, examVersionId: definition.versionId, part: slot.part,
       topicId: `${definition.id}-n${number}`, prototypeId: `${definition.id}-n${number}-original`,

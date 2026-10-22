@@ -214,7 +214,7 @@ export function useMockExam(callbacks: MockCallbacks, enabled = true) {
         callbacksRef.current.onSelfAssessment(task, score);
         changeSession(session.id, (latest) => setMockSelfScore(latest, task, score));
         setActionError("");
-      } catch { setActionError("Не удалось сохранить самооценку. Попробуй ещё раз."); }
+      } catch { setActionError("Не удалось сохранить самопроверку. Попробуй ещё раз."); }
     },
   };
 }

@@ -1,3 +1,7 @@
+import { originalPublication } from "./content/original-publication";
+import { getPublicationDecision } from "./content-publication";
+import type { PublicationCandidate } from "./content-publication";
+import { foundationLearningChecks } from "./content/foundation-learning-checks";
 import type { Exam } from "@/lib/navigation";
 import { numberTheoryTopics } from "./content/number-theory";
 import { baseTheoryTopics } from "./content/base-theory";
@@ -6,6 +10,8 @@ import { originalProvenance, type ContentProvenance } from "./content/provenance
 
 export type TheoryTopic = {
   id: string;
+  publication: PublicationCandidate;
+  learningChecks?: (typeof foundationLearningChecks)[keyof typeof foundationLearningChecks];
   level?: "base" | "profile" | null;
   knowledgeChecks?: KnowledgeCheck[];
   provenance?: ContentProvenance;
@@ -31,7 +37,7 @@ export type TheoryTopic = {
 };
 
 /** Общая математическая база для обоих экзаменов, не полный курс ОГЭ или ЕГЭ. */
-const originalTheoryTopics: TheoryTopic[] = [
+const originalTheoryTopics: Omit<TheoryTopic, "publication" | "learningChecks">[] = [
   {
     id: "fractions",
     subjectId: "math",
@@ -672,6 +678,9 @@ const originalTheoryTopics: TheoryTopic[] = [
 
 export const theoryTopics: TheoryTopic[] = originalTheoryTopics.map((topic) => ({
   ...topic,
+  examples: foundationLearningChecks[topic.id as keyof typeof foundationLearningChecks] ? [...topic.examples, ...foundationLearningChecks[topic.id as keyof typeof foundationLearningChecks].examples] : topic.examples,
+  learningChecks: foundationLearningChecks[topic.id as keyof typeof foundationLearningChecks],
+  publication: originalPublication(topic.id, topic.level === "base" ? "base-theory" : topic.coverage === "foundation" ? "foundation-theory" : "number-theory"),
   provenance: originalProvenance("original-explanation"),
   knowledgeChecks: topic.knowledgeChecks ?? knowledgeChecks[topic.id] ?? [],
 }));
@@ -684,5 +693,9 @@ export const theoryTopicAliases: Readonly<Record<string, string>> = {
 
 export function getTheoryTopic(id: string): TheoryTopic | undefined {
   const resolved = theoryTopicAliases[id] ?? id;
-  return theoryTopics.find((topic) => topic.id === resolved);
+  return getPublishedTheoryTopics().find((topic) => topic.id === resolved);
+}
+
+export function getPublishedTheoryTopics(): TheoryTopic[] {
+  return theoryTopics.filter((topic) => topic.publication.id === topic.id && getPublicationDecision(topic.publication).allowed);
 }

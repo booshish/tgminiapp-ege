@@ -30,7 +30,7 @@ const baseKnowledgeChecks: Record<number, NonNullable<TheoryTopic["knowledgeChec
   21: { question: "Сколько двузначных чисел составляется из цифр 2, 4, 6, 8 без повторения цифры?", answer: "12.", explanation: "Первую цифру выбирают четырьмя способами, вторую — тремя оставшимися. Порядок важен: 24 и 42 различаются, поэтому 4 · 3 = 12." },
 };
 
-function guide(number: number, title: string, description: string, prerequisites: string[], sections: Section[], examples: Example[], difficulties: string[]): TheoryTopic {
+function guide(number: number, title: string, description: string, prerequisites: string[], sections: Section[], examples: Example[], difficulties: string[]): Omit<TheoryTopic, "publication"> {
   const id = `ege-base-number-${number}`;
   return {
     id, materialId: `${id}-guide`, subjectId: "math", part: 1, level: "base", coverage: "exam-topic",
@@ -43,7 +43,7 @@ function guide(number: number, title: string, description: string, prerequisites
 }
 
 /** Original explanations mapped to the project's 2026 baseline; no claim of a 2027 source review. */
-export const baseTheoryTopics: TheoryTopic[] = [
+export const baseTheoryTopics: Omit<TheoryTopic, "publication">[] = [
   guide(1, "Повседневные расчёты и единицы", "Считаем стоимость, расход и целое количество покупок.", ["decimals", "fractions"], [
     section("Что измеряем", ["Выпишите величину, которую спрашивают, и её единицу. Все данные одной величины приведите к общей единице: 1 м = 100 см, 1 кг = 1000 г, 1 ч = 60 мин. Цена за килограмм не умножается на массу в граммах без перевода.", "Отдельно отметьте неделимые объекты: бутылки, билеты и упаковки покупают целиком. Результат деления ещё не всегда является ответом."]),
     section("Два направления округления", ["Если нужно купить достаточно материала, дробное количество упаковок округляют вверх. Если спрашивают, сколько покупок позволяет бюджет, результат округляют вниз. Проверьте соседнее целое: оно должно либо уже не хватать, либо уже превышать бюджет."], [m`C=pn,\qquad n_{\max}=\left\lfloor\frac Bp\right\rfloor`]),

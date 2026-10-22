@@ -59,15 +59,15 @@ export function SelfAssessmentScreen({
     try {
       const result = onSelfAssessment(task, draftScore);
       if (result.deltaXP > 0) {
-        setFeedback(`Самооценка сохранена. +${result.deltaXP} XP`);
+        setFeedback(`Самопроверка сохранена. +${result.deltaXP} XP`);
       } else if (result.deltaXP < 0) {
-        setFeedback(`Самооценка исправлена. ${result.deltaXP} XP`);
+        setFeedback(`Самопроверка исправлена. ${result.deltaXP} XP`);
       } else {
-        setFeedback("Самооценка сохранена. XP не изменились.");
+        setFeedback("Самопроверка сохранена. XP не изменились.");
       }
     } catch {
       confirmedScore.current = null;
-      setFeedback("Не удалось сохранить самооценку. Попробуй подтвердить ещё раз.");
+      setFeedback("Не удалось сохранить самопроверку. Попробуй подтвердить ещё раз.");
     }
   }
 
@@ -134,11 +134,11 @@ export function SelfAssessmentScreen({
             <ClipboardCheck size={21} aria-hidden="true" />
             <div>
               <strong>
-                Самооценка: {selfAssessment.score} из {selfAssessment.maxScore} баллов
+                Самопроверка: {selfAssessment.score} из {selfAssessment.maxScore} баллов
               </strong>
               <p>
                 {focusMode
-                  ? "Это самооценка, не автоматическая проверка."
+                  ? "Это самопроверка, не автоматическая проверка."
                   : `Игровой опыт за эту задачу: ${selfAssessment.score} XP. Это не результат проверки экзаменатором.`}
               </p>
             </div>
@@ -176,7 +176,7 @@ export function SelfAssessmentScreen({
             </div>
             {!!task.selfCheckNotes?.length && (
               <div className="self-check-notes">
-                <h3>Ориентиры для самооценки</h3>
+                <h3>Ориентиры для самопроверки</h3>
                 <p>Авторские рекомендации, не официальная шкала критериев.</p>
                 <ul>
                   {task.selfCheckNotes.map((note) => <li key={note}>{note}</li>)}
@@ -212,7 +212,7 @@ export function SelfAssessmentScreen({
             ) : (
               <>
                 <fieldset className="self-score-picker">
-                  <legend>Первичные баллы — твоя самооценка</legend>
+                  <legend>Первичные баллы — твоя самопроверка</legend>
                   <div role="group" aria-label="Количество баллов за решение">
                     {Array.from({ length: maxScore + 1 }, (_, score) => (
                       <button
@@ -233,11 +233,11 @@ export function SelfAssessmentScreen({
                   </div>
                 </fieldset>
                 <p className="self-score-preview">
-                  Самооценка: {draftScore} из {maxScore} баллов
+                  Самопроверка: {draftScore} из {maxScore} баллов
                 </p>
                 <p className="self-score-explanation">
-                  1 балл самооценки = 1 игровой XP. При исправлении оценки меняется
-                  только разница. Самооценка не влияет на серию верных ответов.
+                  1 балл самопроверки = 1 игровой XP. При исправлении оценки меняется
+                  только разница. Самопроверка не влияет на серию верных ответов.
                 </p>
                 <button
                   type="button"
@@ -245,7 +245,7 @@ export function SelfAssessmentScreen({
                   disabled={!onSelfAssessment || selfAssessment?.score === draftScore}
                   onClick={confirmAssessment}
                 >
-                  Подтвердить самооценку
+                  Подтвердить самопроверку
                 </button>
                 {selfAssessment && (
                   <p className="task-input-help">
@@ -291,7 +291,7 @@ export function SelfAssessmentScreen({
         )}
       </nav>
       <p className="self-local-note">
-        Самооценка и XP сохраняются только в этом браузере. Это локальная демоверсия.
+        Самопроверка и XP сохраняются только в этом браузере. Это локальная демоверсия.
       </p>
     </section>
   );

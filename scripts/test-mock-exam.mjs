@@ -20,6 +20,14 @@ const start = Date.parse("2026-10-21T10:00:00Z");
 function fixtures(definition) {
   return definition.numbers.flatMap((number) => [1, 2].map((variant) => ({
     id: `${definition.id}-${number.number}-${variant}`,
+    publication: {
+      id: `${definition.id}-${number.number}-${variant}`,
+      provenance: { sourceIds: ["tochka-project-original"], authorship: "project-original",
+        sourceFiles: ["scripts/test-mock-exam.mjs"], attribution: ["Авторский материал проекта «Точка»"] },
+      validation: { status: "automated-reviewed", checkedAt: "2026-10-21",
+        evidence: ["scripts/test-mock-exam.mjs — synthetic fixture, not published course content"] },
+      releaseStatus: "ready",
+    },
     topicId: `fixture-${number.number}`, prototypeId: `fixture-${number.number}`,
     examType: [definition.examType], subjectId: "math", level: definition.level,
     examNumber: number.number, examYear: definition.year, examVersionId: definition.versionId,

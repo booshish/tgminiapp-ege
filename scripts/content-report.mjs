@@ -1,8 +1,9 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
+import { existsSync, mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from "node:fs";
+import { dirname, relative, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { createHash } from "node:crypto";
-import { loadContent, projectRoot } from "./content-source-loader.mjs";
+import { createContentLoader, loadContent, projectRoot } from "./content-source-loader.mjs";
+import { contentReviewIssues, readContentReviewManifest } from "./content-review-evidence.mjs";
 
 const baselinePath = resolve(projectRoot, "docs/content-baseline.json");
 export const officialSourceReview = {
@@ -81,7 +82,25 @@ export function buildCoverage(content) {
 }
 
 export function contentIntegrityIssues(content, coverage = buildCoverage(content)) {
-  const issues = [...coverage.missingLinks];
+  const issues = [...coverage.missingLinks, ...contentReviewIssues(content)];
+  const { getPublicationDecision } = createContentLoader()("src/lib/content-publication.ts");
+  for (const material of [...content.tasks, ...content.theoryTopics]) {
+    const decision = getPublicationDecision(material.publication);
+    if (material.publication?.id !== material.id) issues.push(`publication identity mismatch: ${material.id}`);
+    for (const reason of decision.reasons) issues.push(`publication blocked: ${material.id}: ${reason.code}`);
+    if (decision.allowed) {
+      for (const file of [...material.publication.provenance.sourceFiles, ...material.publication.validation.evidence]) {
+        if (!/^(src|scripts|docs)\//.test(file) || file.includes("\\") || file.split("/").includes("..")) {
+          issues.push(`invalid repository evidence: ${material.id}: ${file}`);
+        } else if (!existsSync(resolve(projectRoot, file))) {
+          issues.push(`missing repository evidence: ${material.id}: ${file}`);
+        } else {
+          const path = realpathSync(resolve(projectRoot, file));
+          if (relative(projectRoot, path).startsWith("..") || !statSync(path).isFile()) issues.push(`invalid repository evidence: ${material.id}: ${file}`);
+        }
+      }
+    }
+  }
   for (const [label, values] of [
     ["task", content.tasks.map((task) => task.id)],
     ["prototype", content.prototypes.map((prototype) => prototype.id)],
@@ -162,9 +181,13 @@ function markdown(baseline, current) {
 }
 
 export function exportSeed(content) {
+  const issues = contentIntegrityIssues(content);
+  if (issues.length) throw new Error(`Seed blocked: ${issues.join("; ")}`);
   const data = {
-    schemaVersion: 1, contentVersion: "2026-10-author-bank-v1",
+    schemaVersion: 2, contentVersion: "2026-10-author-bank-reviewed-v2",
     officialSourceReview,
+    sourceRegistry: createContentLoader()("src/lib/source-registry.ts").sourceRegistry,
+    contentReview: readContentReviewManifest(),
     exams: content.examDefinitions, prototypes: content.prototypes,
     tasks: content.tasks, theory: content.theoryTopics, theoryTopicAliases: content.theoryTopicAliases ?? {},
   };
@@ -187,9 +210,11 @@ function main() {
   const content = loadContent();
   const current = buildCoverage(content);
   const issues = contentIntegrityIssues(content, current);
-  if (args.includes("--check") && issues.length) throw new Error(`Content issues: ${issues.join("; ")}`);
-  writeFileSync(resolve(projectRoot, "docs/content-coverage.md"), markdown(baseline, current));
-  writeFileSync(resolve(projectRoot, "docs/content-coverage.json"), `${JSON.stringify({ officialSourceReview, before: baseline, after: current }, null, 2)}\n`);
+  if (issues.length) throw new Error(`Content issues: ${issues.join("; ")}`);
+  if (!args.includes("--check")) {
+    writeFileSync(resolve(projectRoot, "docs/content-coverage.md"), markdown(baseline, current));
+    writeFileSync(resolve(projectRoot, "docs/content-coverage.json"), `${JSON.stringify({ officialSourceReview, before: baseline, after: current }, null, 2)}\n`);
+  }
   if (args.includes("--seed")) {
     const target = args[args.indexOf("--seed") + 1];
     if (!target || target.startsWith("--")) throw new Error("Provide an output filename after --seed");

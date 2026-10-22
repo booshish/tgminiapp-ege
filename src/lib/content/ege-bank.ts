@@ -36,7 +36,7 @@ function add(
     difficulty: content.difficulty ?? (number <= 12 ? "standard" : "advanced"),
     answerRule: number <= 12 ? { type: "number", value: value! } : { type: "self" },
     ...(number > 12 ? { criteriaSourceUrl } : {}),
-  }));
+  }, "ege-bank"));
   egeGeneratorCases.push({ taskId: id, family, parameters });
 }
 
@@ -402,7 +402,7 @@ function addSupplement(
     title, prompt, answerDisplay, solution, selfCheckNotes,
     answerRule: { type: "self" }, criteriaSourceUrl,
     ...(conditionLatex ? { conditionLatex } : {}),
-  }));
+  }, "ege-bank"));
   egeSupplementIds.push(id);
 }
 
