@@ -101,7 +101,7 @@ function taskState(value: unknown, taskId: string): PracticeTaskState | null {
   if (!input || !task || typeof input.answer !== "string" || input.answer.length > 1024)
     return null;
   const restored = { ...emptyTaskState(), answer: input.answer };
-  if (task.part === 2) {
+  if (task.answerRule.type === "self") {
     // The confirmed grade belongs to the game ledger. Only restore this screen's draft.
     if (typeof input.selfSolutionVisible === "boolean")
       restored.selfSolutionVisible = input.selfSolutionVisible;

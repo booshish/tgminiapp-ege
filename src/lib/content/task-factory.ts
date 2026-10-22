@@ -29,7 +29,7 @@ export function makeOriginalTask(data: OriginalTaskInput, collection: OriginalCo
     examVersionId: exam.versionId,
     part: number.part,
     difficulty: data.difficulty ?? (number.part === 1 ? "standard" : "advanced"),
-    answerFormat: data.answerRule.type === "self" ? "extended" : data.answerRule.type,
+    answerFormat: data.answerRule.type === "self" ? "extended" : data.answerRule.type === "choices" ? "text" : data.answerRule.type,
     source: { kind: "author", label: "Авторское тренировочное задание · версия 1", revision: 1 },
     scoring: {
       status: scoring?.status ?? "pending-official-verification",

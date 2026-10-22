@@ -21,7 +21,7 @@ type EventContext = {
   examNumber?: number | null;
   examVersionId?: string;
   examYear?: number;
-  part?: 1 | 2 | null;
+  part?: 1 | 2 | 3 | null;
   answerFormat?: "short" | "extended";
 };
 

@@ -1,0 +1,872 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "sha256-canonical-content-v1",
+  "checkedAt": "2026-10-22",
+  "note": "Author answer review and automated checks; not independent expert or FIPI approval.",
+  "records": [
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n2-harbour-analysis-2-r1",
+      "contentSha256": "0861bceea123568ece8deef5b6a3d355d54de80e7eef27b16335cebe479cce97",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n3-harbour-analysis-3-r1",
+      "contentSha256": "4e17715096dfd7a9b8bdac93d321eb264d8f1620b8a7ea0a40bf7ca0ede79abc",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n10-harbour-analysis-10-r1",
+      "contentSha256": "8451d2250cd5df93fbb4fc5d4d2d9141f23ffac330a0bdf0435f20704f2287c0",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n11-harbour-analysis-11-r1",
+      "contentSha256": "1eeada0c1ce713ed6f25b695230ffd94f531100205b74e13d6473edc1e980826",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n12-harbour-analysis-12-r1",
+      "contentSha256": "2e62f450523ac40e7f4c6cf1c1e623aaa4235834c13f4f473eeef9d9e589e99e",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n2-library-analysis-2-r1",
+      "contentSha256": "b14cd547c236061bcc1e5a37b7be6375eae9186439f91260ba68fb9b216505bf",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n3-library-analysis-3-r1",
+      "contentSha256": "da3fcf8d404fd61902e9246e8c2efe7d7e931791676bd82db9f37a4f1ac0adad",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n10-library-analysis-10-r1",
+      "contentSha256": "26faa74714902e439223b851fb4056260f43d4d9c9471e01a4e98f8d6f02294b",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n11-library-analysis-11-r1",
+      "contentSha256": "39e968552ea0aea4313ff647d3ba5b914dfb1103df59b85ca6f67599f967ff70",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n12-library-analysis-12-r1",
+      "contentSha256": "f77870d34a0c4c768c6c9c45ed9f8368979da56bdbd2af45037cf2c903e624c4",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n2-station-analysis-2-r1",
+      "contentSha256": "78d9fe44eae2ac33376a597b4427cf370e8ca788895a8707174796c2dedfc58e",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n3-station-analysis-3-r1",
+      "contentSha256": "c4520f12340c8d921491e6454f1257ba2d3c1d7f7d09a07c08c5a43bbd022236",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n10-station-analysis-10-r1",
+      "contentSha256": "27577fe8ac20c2c72697fe6c450465646a303029f4679f5e95ac695b7e6d4af7",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n11-station-analysis-11-r1",
+      "contentSha256": "81b8388d2bb1f497523365b996ed9bc6242f8342441d248d89b5d09a833fbb03",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n12-station-analysis-12-r1",
+      "contentSha256": "08ceda5b28d7c5c9ee0a14861644db38c79050eb9e5ad98c99a3773fab9393f6",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n2-garden-analysis-2-r1",
+      "contentSha256": "3df700b2f28c948e22cf0c4df016136d9dc4484d4e382a6e4e42068422f699c5",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n3-garden-analysis-3-r1",
+      "contentSha256": "9d1fd20cf41da9381db3a37b15be92d353afc412e7b6f1247e0a657ba6ee6d93",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n10-garden-analysis-10-r1",
+      "contentSha256": "2b215d3063d9a64fe58b29e490987e5ecd11b8def45fc62a5b8f3da6e409d4a4",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n11-garden-analysis-11-r1",
+      "contentSha256": "18d2395a03ca6bdb1bdc383b35e52ea7e117e1492c7cb2b3b45828ccfce45712",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n12-garden-analysis-12-r1",
+      "contentSha256": "67fe0e16fa0b0ffd2e997e9d20c030941453246645c06bf4f72a2eaeffa19eb0",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n4-comma-rules-r1",
+      "contentSha256": "51718da006dfef0c79b0b7d2f7e487e53e49dcb32793a46c337dff5a6480b126",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n4-colon-dash-r1",
+      "contentSha256": "bad62ceb24312dd02475b2ec86febcea4b8f8ba75b316bf8e4fe4620f362d2ba",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n4-postposed-participle-r1",
+      "contentSha256": "6708e8fa64f8559de9b9e6dbc2c536d67ee25dbd286570004eb76a9a4b605a35",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n4-intro-and-repeat-r1",
+      "contentSha256": "7a92fe49c9d10ce3aa81440b185d1f617d032333167cadcb6c66e1bf1e460085",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n5-snow-road-r1",
+      "contentSha256": "e6d97305b7b932696ddb86554b2ee7b6641ce294436cf71eb179c8ff17ac5e17",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n5-windows-open-r1",
+      "contentSha256": "4ecdc351ea64eeef6013d4018dac8f4aacd8f95b9615bf216b5ea8432f62125e",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n5-address-and-intro-r1",
+      "contentSha256": "c98b91d371c072fdc471d93b189e00d8eccc91617847e7b03c8fdfd36f1a77bc",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n5-sun-and-wind-r1",
+      "contentSha256": "c502250fcd4582b5f370037d9274955b95f7be4c2d79661a4b4fe5ea8d714bae",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n6-orthography-soft-r1",
+      "contentSha256": "745659c0a38dbce3404cebae84b5cdac6af5dfccfe5e7d43d0c81042678791d8",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n6-orthography-nn-r1",
+      "contentSha256": "4a5ed9c21fbb8e2f6c753f934a40cb36303ba33f5b22d194f17390df22d0600a",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n6-orthography-roots-r1",
+      "contentSha256": "41ebfe7a6134a41fe5719181a0d5ab372c378362dc9c940526a8dc85ce1db482",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n6-orthography-endings-r1",
+      "contentSha256": "1fea2493be2138a70fed4dd42f2fdc136bc323d5a9c8399f141eee1560c1df6f",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n7-dawn-vowels-r1",
+      "contentSha256": "4f78599a997341f5e0caf8f97755c5a356013fcc49a626d23e9b8b3cfd4dc420",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n7-winter-vowels-r1",
+      "contentSha256": "f8d0db9d20162c60de694205e60a7638db0040ab4b81ac715bdf71a612d600a9",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n7-alternating-a-r1",
+      "contentSha256": "c369cb66c399930486f7ea282d02950dd3f84650c87726641278306c931723d4",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n7-forest-o-r1",
+      "contentSha256": "ea53ac0ba8a140b887a37b92e61e0d064fb4426e249303b16b35e5c5875e9b21",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n8-towels-genitive-r1",
+      "contentSha256": "75098f33d9bcc3199104214d45e64472d7396652beb4a6f151ae4754940058cb",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n8-both-dative-r1",
+      "contentSha256": "1ed2a5cc6f4aaa2f83d0f87b99f85885046b9540e5a6bb9ca648f6508011e152",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n8-rich-comparative-r1",
+      "contentSha256": "37f4364c9b4c78fb7ea6cb54c0eddd992dc71663b64db8ee28f377d112ae6c0f",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n8-boots-genitive-r1",
+      "contentSha256": "f7a057352a41e2ba8e20733077d8ee795837e58afc54ee16b719c47f1a8c04c2",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n9-mother-shawl-r1",
+      "contentSha256": "dbe7a33d00e9cb38f381d6ffbd62d35f646151f7a7a297b22be7cefe8c3eb1b7",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n9-leather-bag-r1",
+      "contentSha256": "5507632e22d0d498f9e50fc675830fdaea9915afae46e792db98ac6db25dd472",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n9-excited-speech-r1",
+      "contentSha256": "3cb9261738fc4d318bf6e7026d59ee2e4c371839eccf3e5887d7709766c217a3",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "oge-russian-2027-n9-mothers-voice-r1",
+      "contentSha256": "9876aa62c2b313d750a075e9836100a1fb530b81cb599f0f83dad41d9258b852",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n1-crystals-analysis-1-r1",
+      "contentSha256": "40223b6cd80ca9674b2b6a163c4ded9ee3c545a4717f906316b1ba96af15c7e4",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n2-crystals-analysis-2-r1",
+      "contentSha256": "f5ff7cdb66e3912633650aa7f1a8913c2c37ec7cf5045fb28b5a6a18bab679ee",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n3-crystals-analysis-3-r1",
+      "contentSha256": "c30043ac87e1d277d73d7be1925694d0f4da5ca29653d249b9a3f0a9e4b161d1",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n1-map-analysis-1-r1",
+      "contentSha256": "c144c7b906a05c30bd0685fcd8a67a09f1c8825143ca6342c51eb20df2af1a3f",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n2-map-analysis-2-r1",
+      "contentSha256": "ffcc3bf96144871270d19818d082e8d3b3a312203d7fd70e6e1d962bb5a09b1a",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n3-map-analysis-3-r1",
+      "contentSha256": "e5f9ba2752fdd50ea231c26a0bff2519696909e964a6fa6a87fc8ecd1852c9fb",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n4-stress-first-r1",
+      "contentSha256": "0c57213bac2a33fa6804cf5d2a5a5e40e7f46e62485f9bb2ab197f217e05e5f6",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n4-stress-second-r1",
+      "contentSha256": "3e1b1b8d017ef9ed3aeeb48e369cf23beb2f8b753b50cf773153b6ecce1cfcd7",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n5-dress-nephew-r1",
+      "contentSha256": "05c4935298987cb9e45e8c75740cb9232d83f86b1ccebf436c8bf10f0386dcce",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n5-effective-method-r1",
+      "contentSha256": "eb088cb9879fd1efbde6449f7727cef0c742fb01c542e922abee20c86543d379",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n6-vacant-place-r1",
+      "contentSha256": "1f88b2a2d9dff987a4db6d073828b749906b6baa1247e2e65ee26813e7019122",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n6-return-back-r1",
+      "contentSha256": "51c4052775fa79df0b90b18a7830a02593288c1061b9d946e31117ee8c1f4aa1",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n7-lie-down-r1",
+      "contentSha256": "0edaf78b8ebba0bc6cdbd84588bc9709b252e767c48c2309218b38c1e6312eaa",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n7-many-apples-r1",
+      "contentSha256": "19680828256c7cef5c55f74d8d794a617c4664866ca20e9103f8e55e29b461fb",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n8-syntax-nine-r1",
+      "contentSha256": "0778dbdd3587683350f7160a42b6a1b567555f629e406e350c9f7f31300ae229",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n8-syntax-agreement-r1",
+      "contentSha256": "3498096a4ab0b0f1b1cb74bf9d14bb9dafa95cb4fc1e2b13963264d1e451a1d1",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n9-roots-e-r1",
+      "contentSha256": "2a998184315bf1c1311c34ee1eed07ff40d0d7bdda7ad18aee619e1325b4d112",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n9-roots-a-r1",
+      "contentSha256": "3dd1707a80d9933e73460965b82d982777abc520fca05b1cd53a0366fa635354",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n10-prefix-sign-r1",
+      "contentSha256": "e4bb3d237244a192d379f8f020bd4482466c291896af08d9733500c602692aaf",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n10-prefix-meaning-r1",
+      "contentSha256": "c595dc6ff2fd4d99b329499cf61aca428d7955313b43e4d9d31e8d1221324d2e",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n11-suffix-check-r1",
+      "contentSha256": "ff47e0dfe71d58d0641edb2f6affd898fc830e9d2b238dc4de70c0536d560a96",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n11-suffix-before-vowels-r1",
+      "contentSha256": "2784ddfbbe8f63221d6bb0f48fc6fd9daad31b4bf864cdf3d166928729c70c88",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n12-verbs-endings-r1",
+      "contentSha256": "b25ae2f685da57e53d65db248b1a9a9cfee0aa2815769332a55b2a9da2738b24",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n12-participles-r1",
+      "contentSha256": "e6f8d264bf59d0b963444b0df4967a6b5b5792b33b5caa1f0a709cdbccfc5f21",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n13-not-separate-r1",
+      "contentSha256": "6187596f706fe94f75f7438ccbc7fa305741f4a2abd735bb3166dc65611aeeae",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n13-not-together-r1",
+      "contentSha256": "032eb344d2530a93bfab02da1e19c6a95e792460ddaa4c72e30610f7641501cd",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n14-adverbs-hyphen-r1",
+      "contentSha256": "d4a03fa81a291faa0e4468f176cae415b5ffaff2fb4110e90e6f03934f9a6ae8",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n14-prepositions-together-r1",
+      "contentSha256": "81665d5444f8d90da3f3f85950e5d3828b385d8a1f6abeaecbbc073071b206ec",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n15-nn-positions-r1",
+      "contentSha256": "1c977d78b097a706f37ea2d8f2f97d7386bf22b1ba4690241aed326ab8701eb9",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n15-short-forms-r1",
+      "contentSha256": "558582479c8f9f930c052c302d4fbe7cb89a98e858074796b10c41326aa17f3a",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n16-one-comma-r1",
+      "contentSha256": "097f745ee5a21539a7c670dbb06086d808782f6c06d50690472535bcccb4ea7b",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n16-opposition-comma-r1",
+      "contentSha256": "b75afb6bb932bf9900897cb62359a87b1eaa7346556b8bc5899e33832bfeea73",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n17-participle-and-gerund-r1",
+      "contentSha256": "314a42a2cfe40ac78dc751079cfc275f7ad59d0dab40c2f218d3d38a1387d92c",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n17-preposed-gerund-r1",
+      "contentSha256": "caab9fbb71fa876a5b439aaff5902fe39a5a66af8cba7260ce4c4f18e83fafeb",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n18-intro-certainty-r1",
+      "contentSha256": "590acb1105b2082e7064e9fd34ba9e0dc6c9185dca6c39b8ccfb3a0c53d6d352",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n18-seems-contrast-r1",
+      "contentSha256": "6242b6693650f8836e183dac92c46cccb4ca43ef5e571b8d5161561517a2d025",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n19-relative-insert-r1",
+      "contentSha256": "72ec960f1c4abf252986f6261cefc766b9208fe9e7597e66c845560c617b9ab4",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n19-homogeneous-clauses-r1",
+      "contentSha256": "fd2624bff88c082b43ed78180b6f655e90533631149cdd9e2fb6f89813829d98",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n20-conjunction-junction-r1",
+      "contentSha256": "ec39b9a12437b139762d2d95e39bb5ecf4f51ef2fd68879f1d5f80edf1297499",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n20-junction-with-to-r1",
+      "contentSha256": "1f28bc35947db5b0dfad63e2dbb0e8c39226c07138221a7d36344da0836324bb",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n21-same-colon-r1",
+      "contentSha256": "53621f05c54488cd40b8523d1a3a3bfcd412146e6cbed0108bc58bd10448a02c",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n21-same-dash-r1",
+      "contentSha256": "bd7d63e304c7824debf53280bbee1efff5d0faee13254caf458eb4a7f8be1552",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n22-devices-five-r1",
+      "contentSha256": "ca2aa793638ff38be71ff9673ccbd1623fa276347f87db81a0d8d933db84c173",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n22-devices-expression-r1",
+      "contentSha256": "fc133ee54e11a385bc3c1eb35a4b0a737ec377374456c0dd0d86aa00ad464723",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n23-clock-analysis-23-r1",
+      "contentSha256": "c7b588efbf12ed0f753fb241de07f1fad826a31553b505935fedcea0e84eec5c",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n24-clock-analysis-24-r1",
+      "contentSha256": "e75d53e3471fd3fe43553ddb3b0006544c1966fa665281809aea07d85f8f5ebd",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n25-clock-analysis-25-r1",
+      "contentSha256": "a290fc7c089d821591a2c2e7fb6b76e563b26e00e6bae48b431e071d22a63958",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n26-clock-analysis-26-r1",
+      "contentSha256": "e3958f283d1506b399e074e31aa8067f4c1d6ef9ee503edb5955cacb28f66a77",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n23-platform-analysis-23-r1",
+      "contentSha256": "05c9becd55b851831a2eb257f1974fb58cf74ac22f8e81ae047846240afa8faf",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n24-platform-analysis-24-r1",
+      "contentSha256": "8d8acf18345a7ca0696d2b0f6c59a323f3f255ca42890d73580cc57b67fc0fce",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n25-platform-analysis-25-r1",
+      "contentSha256": "04595d95a59d4e6c7f54079a2099359879639dbcb669155ed8249211994a08b9",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    },
+    {
+      "kind": "task",
+      "id": "ege-russian-2027-n26-platform-analysis-26-r1",
+      "contentSha256": "3757cf091508aa103ebe574f426795e6f81f24bfc5349d604bc76e91197e0ec4",
+      "reviewScope": "expansion-automated-checks",
+      "evidence": [
+        "scripts/test-russian-bank.mjs"
+      ]
+    }
+  ]
+}

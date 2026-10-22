@@ -52,7 +52,7 @@ export type TaskScreenProps = {
 
 /** Drafts belong to the practice session; revisiting a task never checks it again. */
 export function TaskScreen(props: TaskScreenProps) {
-  if (props.task.part === 2) {
+  if (props.task.answerRule.type === "self") {
     return <SelfAssessmentScreen key={props.task.id} {...props} />;
   }
   return <TaskAttempt key={props.task.id} {...props} />;
@@ -228,7 +228,7 @@ function TaskAttempt({
             />
           </div>
           <p id="task-input-help" className="task-input-help">
-            {task.answerRule.type === "text" ? "Формат ответа указан в условии. Порядок символов и слов важен." : isSetAnswer
+            {task.answerRule.type === "choices" ? task.answerRule.ordered ? "Цифры подряд в порядке букв из условия." : "Номера подряд без повторов; порядок не важен." : task.answerRule.type === "text" ? "Формат ответа указан в условии. Порядок символов и слов важен." : isSetAnswer
               ? "Запишите все корни через точку с запятой. Порядок не важен."
               : "Можно записать число или дробь. Точка и запятая равнозначны."}
           </p>

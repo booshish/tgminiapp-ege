@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-22",
+  "target": 900,
+  "before": {
+    "OGE": 0,
+    "EGE": 0
+  },
+  "after": {
+    "OGE": 44,
+    "EGE": 52
+  },
+  "remaining": 804,
+  "requirementStatus": "2027-draft-copy-reviewed-not-final",
+  "rows": [
+    {
+      "exam": "ОГЭ",
+      "number": 1,
+      "part": 1,
+      "title": "Сжатое изложение",
+      "before": 0,
+      "after": 0,
+      "blocker": "Нужны оригинальное аудио и проверенные критерии изложения.",
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 2,
+      "part": 2,
+      "title": "Грамматическая основа",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 3,
+      "part": 2,
+      "title": "Синтаксический анализ",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 4,
+      "part": 2,
+      "title": "Соответствие пунктуационных правил",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 5,
+      "part": 2,
+      "title": "Пунктуация в предложении",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 6,
+      "part": 2,
+      "title": "Объяснение написания",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 7,
+      "part": 2,
+      "title": "Пропущенные буквы",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 8,
+      "part": 2,
+      "title": "Грамматические нормы",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 9,
+      "part": 2,
+      "title": "Синонимия словосочетаний",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 10,
+      "part": 2,
+      "title": "Содержание текста",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 11,
+      "part": 2,
+      "title": "Средства выразительности",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 12,
+      "part": 2,
+      "title": "Лексический анализ",
+      "before": 0,
+      "after": 4,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ОГЭ",
+      "number": 13,
+      "part": 3,
+      "title": "Сочинение по тексту",
+      "before": 0,
+      "after": 0,
+      "blocker": "Нужны полноценный текст и сверенные критерии самопроверки сочинения.",
+      "source": {
+        "url": "https://pro-schools.ru/fipi/oge/spec/2027/ru-9-oge-2027-spec.pdf",
+        "pdfPage": 7
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 1,
+      "part": 1,
+      "title": "Связь предложений",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 2,
+      "part": 1,
+      "title": "Значение слова в контексте",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 3,
+      "part": 1,
+      "title": "Стилистика текста",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 4,
+      "part": 1,
+      "title": "Ударение",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 5,
+      "part": 1,
+      "title": "Паронимы",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 6,
+      "part": 1,
+      "title": "Лексические нормы",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 7,
+      "part": 1,
+      "title": "Грамматические нормы",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 8,
+      "part": 1,
+      "title": "Синтаксические нормы",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 9,
+      "part": 1,
+      "title": "Орфография корня",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 10,
+      "part": 1,
+      "title": "Приставки и разделительные знаки",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 11,
+      "part": 1,
+      "title": "Суффиксы",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 12,
+      "part": 1,
+      "title": "Окончания и причастия",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 13,
+      "part": 1,
+      "title": "НЕ и НИ",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 14,
+      "part": 1,
+      "title": "Слитно, раздельно, через дефис",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 15,
+      "part": 1,
+      "title": "Н и НН",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 16,
+      "part": 1,
+      "title": "Однородные члены и сложные предложения",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 17,
+      "part": 1,
+      "title": "Обособление",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 18,
+      "part": 1,
+      "title": "Вводные слова и обращения",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 19,
+      "part": 1,
+      "title": "Сложноподчинённое предложение",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 20,
+      "part": 1,
+      "title": "Разные виды связи",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 21,
+      "part": 1,
+      "title": "Пунктуационный анализ",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 22,
+      "part": 1,
+      "title": "Средства выразительности: соответствие",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 23,
+      "part": 1,
+      "title": "Содержание текста",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 24,
+      "part": 1,
+      "title": "Типы речи и информация",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 25,
+      "part": 1,
+      "title": "Лексика текста",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 26,
+      "part": 1,
+      "title": "Связь предложений текста",
+      "before": 0,
+      "after": 2,
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 9
+      }
+    },
+    {
+      "exam": "ЕГЭ",
+      "number": 27,
+      "part": 2,
+      "title": "Сочинение",
+      "before": 0,
+      "after": 0,
+      "blocker": "Нужны полноценный текст и сверенные критерии самопроверки сочинения.",
+      "source": {
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf",
+        "pdfPage": 10
+      }
+    }
+  ]
+}

@@ -20,7 +20,7 @@ export type View =
 export type Selection = {
   taskIndex?: number;
   taskId?: string;
-  part?: 1 | 2;
+  part?: 1 | 2 | 3;
   topicId?: string;
   prototypeId?: string;
   materialId?: string;
@@ -76,7 +76,7 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
           : 0,
     topicId: params.get("topic") || undefined,
     ...(taskId && /^[a-z0-9-]{1,160}$/.test(taskId) ? { taskId } : {}),
-    ...(part === "1" || part === "2" ? { part: Number(part) as 1 | 2 } : {}),
+    ...(part === "1" || part === "2" || part === "3" ? { part: Number(part) as 1 | 2 | 3 } : {}),
     prototypeId: params.get("prototype") || undefined,
     materialId: params.get("material") || undefined,
     invalidContext:
@@ -84,7 +84,8 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
       (subject !== null && (!isSubjectId(subject) || (exam === "ОГЭ" && subject === "chinese"))) ||
       (subject !== null && subject !== "math" && level !== null) ||
       (taskId !== null && !/^[a-z0-9-]{1,160}$/.test(taskId)) ||
-      (part !== null && part !== "1" && part !== "2") ||
+      (part !== null && part !== "1" && part !== "2" && part !== "3") ||
+      (part === "3" && !(exam === "ОГЭ" && subject === "russian")) ||
       (level !== null && level !== "base" && level !== "profile") ||
       (exam === "ОГЭ" && level !== null) ||
       (mode !== null && mode !== "number" && mode !== "topic") ||

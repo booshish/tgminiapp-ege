@@ -11,12 +11,13 @@ import { legacyTaskOrder } from "./content/legacy-task-order";
 import { baseTasks, basePrototypes } from "./content/base-bank";
 import { informaticsTasks, informaticsPrototypes } from "./content/informatics-bank";
 import { physicsTasks, physicsPrototypes } from "./content/physics-bank";
+import { russianTasks, russianPrototypes } from "./content/russian-bank";
 import type { SubjectId } from "./subjects";
 export type { SubjectId } from "./subjects";
 
 export type { Exam } from "./navigation";
 export type AnswerRule =
-  { type: "number"; value: string } | { type: "set"; values: string[] } | { type: "text"; value: string; caseInsensitive?: boolean } | { type: "self" };
+  { type: "number"; value: string } | { type: "set"; values: string[] } | { type: "text"; value: string; caseInsensitive?: boolean } | { type: "choices"; value: string; ordered: boolean } | { type: "self" };
 
 export type Task = {
   id: string;
@@ -163,7 +164,7 @@ function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
     examVersionId: definition.versionId,
     part: number?.part ?? null,
     difficulty: number ? (number.part === 1 ? "standard" : "advanced") : "foundation",
-    answerFormat: data.answerRule.type === "self" ? "extended" : data.answerRule.type,
+    answerFormat: data.answerRule.type === "self" ? "extended" : data.answerRule.type === "choices" ? "text" : data.answerRule.type,
     source: { kind: "author", label: "Авторская демозадача", revision: 1 },
     scoring: {
       status: scoringRule?.status ?? (number ? "pending-official-verification" : "not-applicable"),
@@ -1229,8 +1230,8 @@ export const tasks: Task[] = [
 ].sort((left, right) => (legacyOrder.get(left.id) ?? Infinity) - (legacyOrder.get(right.id) ?? Infinity));
 
 /** The original maths array/order stays untouched; universal practice opts into this bank. */
-export const practiceBank: Task[] = [...tasks, ...informaticsTasks, ...physicsTasks];
-export const practicePrototypes = [...prototypes, ...informaticsPrototypes, ...physicsPrototypes];
+export const practiceBank: Task[] = [...tasks, ...informaticsTasks, ...physicsTasks, ...russianTasks];
+export const practicePrototypes = [...prototypes, ...informaticsPrototypes, ...physicsPrototypes, ...russianPrototypes];
 
 /** Approval is evaluated once for this immutable bundled revision, not per filter row. */
 const selectableTasks = practiceBank.filter((task) => task.publication.id === task.id && getPublicationDecision(task.publication).allowed);
@@ -1346,6 +1347,14 @@ export function checkTaskAnswer(
       correct:
         expected !== null && rationalKey(answer) === rationalKey(expected),
     };
+  }
+
+  if (rule.type === "choices") {
+    const digits = input.trim();
+    if (!/^[1-9]+$/.test(digits)) return { valid: false, correct: false, message: "Запишите номера подряд, без пробелов и разделителей." };
+    if (!rule.ordered && new Set(digits).size !== digits.length) return { valid: false, correct: false, message: "Каждый номер укажите только один раз." };
+    const key = (value: string) => rule.ordered ? value : [...value].sort().join("");
+    return { valid: true, correct: key(digits) === key(rule.value) };
   }
 
   if (rule.type === "text") {

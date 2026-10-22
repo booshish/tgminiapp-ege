@@ -14,7 +14,7 @@ const { practiceBank, tasks, getPracticeTasks, checkTaskAnswer } = load("src/lib
 const { theoryTopics, allTheoryTopics, getTheoryTopic } = load("src/lib/theory.ts");
 const { subjectExamDefinitions } = load("src/lib/subject-models.ts");
 const { getPublicationDecision, } = load("src/lib/content-publication.ts");
-const nonMath = practiceBank.filter(task => task.subjectId !== "math");
+const nonMath = practiceBank.filter(task => task.subjectId !== "math" && task.subjectId !== "russian");
 
 test("subject release keeps mathematics intact and validates every new resource and review fingerprint", () => {
   assert.equal(tasks.length, 881); assert.equal(theoryTopics.length, 73);

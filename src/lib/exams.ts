@@ -10,7 +10,7 @@ export type ExamSelection = {
   subjectId?: SubjectId;
   level?: ExamLevel | null;
 };
-export type ExamPart = 1 | 2;
+export type ExamPart = 1 | 2 | 3;
 export type ExamNumberDefinition = {
   number: number;
   title: string;

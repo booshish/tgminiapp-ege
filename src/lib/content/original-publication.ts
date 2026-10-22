@@ -15,6 +15,7 @@ const collections = {
   "informatics-bank": { file: "src/lib/content/informatics-bank.ts", tests: ["scripts/test-subject-expansion.mjs"] },
   "physics-bank": { file: "src/lib/content/physics-bank.ts", tests: ["scripts/test-content-expansion.mjs"] },
   "subject-theory": { file: "src/lib/content/subject-theory.ts", tests: ["scripts/test-content-expansion.mjs"] },
+  "russian-bank": { file: "src/lib/content/russian-bank.ts", tests: ["scripts/test-russian-bank.mjs"] },
 } as const;
 export type OriginalCollection = keyof typeof collections;
 
@@ -28,7 +29,7 @@ export function originalPublication(id: string, collection: OriginalCollection):
     provenance: {
       sourceIds: ["tochka-project-original"],
       authorship: "project-original",
-      sourceFiles: collection === "foundation-theory"
+      sourceFiles: collection === "russian-bank" ? [record.file, "src/lib/content/russian-oge.ts", "src/lib/content/russian-ege.ts", "src/lib/content/russian-model.ts"] : collection === "foundation-theory"
         ? [record.file, "src/lib/content/foundation-learning-checks.ts"] : [record.file],
       attribution: ["Авторский материал проекта «Точка»"],
     },

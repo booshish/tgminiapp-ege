@@ -40,8 +40,8 @@ with sync_playwright() as playwright:
     def game():
         return page.evaluate("JSON.parse(localStorage.getItem('tochka-learning-v2')).game")
 
-    visit("catalog?exam=ОГЭ&subject=russian&mode=number")
-    assert "Русский язык" in page.locator(".info-note").first.inner_text()
+    visit("catalog?exam=ОГЭ&subject=biology&mode=number")
+    assert "Биология" in page.locator(".info-note").first.inner_text()
     assert page.locator(".catalog-number-card").count() == 0
     assert page.locator(".variant-launch-card").count() == 0
     page.locator(".catalog-subjects > summary").click()

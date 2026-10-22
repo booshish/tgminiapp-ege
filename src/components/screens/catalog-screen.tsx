@@ -128,7 +128,7 @@ export function CatalogScreen({
         <summary>Все предметы {selection.exam}</summary>
         <div className="catalog-topic-grid">
           {getSubjects(selection.exam).map(([id, title]) => <FeatureCard key={id} icon={BookOpen} label={title}
-            description={id === "math" ? "Действующая математика" : id === "informatics" || (id === "physics" && selection.exam === "ЕГЭ") ? "Проект 2027 · задания и открытые пробелы" : "Структура и задания готовятся"}
+            description={id === "math" ? "Действующая математика" : id === "informatics" || id === "russian" || (id === "physics" && selection.exam === "ЕГЭ") ? "Проект 2027 · задания и открытые пробелы" : "Структура и задания готовятся"}
             onClick={() => changeSubject(id)} />)}
         </div>
       </details>
@@ -228,7 +228,7 @@ export function CatalogScreen({
       {selection.mode === "number" ? (
         definition && definition.available !== false ? (
           <div className="catalog-parts">
-            {([1, 2] as const).filter((part) => definition.numbers.some((item) => item.part === part)).map((part) => (
+            {([1, 2, 3] as const).filter((part) => definition.numbers.some((item) => item.part === part)).map((part) => (
               <section
                 key={part}
                 className="catalog-part"
@@ -237,7 +237,7 @@ export function CatalogScreen({
                 <div className="catalog-part-heading">
                   <h3 id={`catalog-part-${part}`}>Часть {part}</h3>
                   <p>
-                    {part === 1
+                    {definition.numbers.filter(item => item.part === part).every(item => item.answerFormat === "short")
                       ? "Задания с коротким ответом"
                       : "Задания с развёрнутым решением"}
                   </p>
@@ -273,14 +273,14 @@ export function CatalogScreen({
                         <span className="catalog-card-title">{item.title}</span>
                         <span className="catalog-card-status">
                           {taskCount > 0
-                            ? `Задач: ${taskCount} · ${item.part === 2 ? "самопроверка" : "открыть практику"}`
+                            ? `Задач: ${taskCount} · ${item.answerFormat === "extended" ? "самопроверка" : "открыть практику"}`
                             : item.pendingReason ?? "Авторское задание ещё не подготовлено"}
                         </span>
                       </button>
                     );
                     })}
                 </div>
-                {part === 2 && (
+                {definition.numbers.some(item => item.part === part && item.answerFormat === "extended") && (
                   <p className="catalog-part-note">
                     Развёрнутые решения проверяешь самостоятельно по образцу.
                     Самопроверка не является автоматической оценкой экзамена.

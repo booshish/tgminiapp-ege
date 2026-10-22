@@ -12,7 +12,7 @@ export type CatalogSelection = {
   examNumber?: number;
   topicId?: string;
   prototypeId?: string;
-  part?: 1 | 2;
+  part?: 1 | 2 | 3;
 };
 
 export type PracticeTaskState = {
@@ -79,7 +79,7 @@ export function normalizeCatalogSelection(
   const examNumber = mode === "number" && typeof input.examNumber === "number" && Number.isInteger(input.examNumber)
     && input.examNumber > 0 && input.examNumber <= 99 ? input.examNumber : undefined;
   const part = examNumber ? getExamDefinition({ examType: exam, subjectId, level })?.numbers.find((entry) => entry.number === examNumber)?.part
-    : input.part === 1 || input.part === 2 ? input.part : undefined;
+    : input.part === 1 || input.part === 2 || (input.part === 3 && exam === "ОГЭ" && subjectId === "russian") ? input.part : undefined;
   return {
     exam,
     subjectId,
