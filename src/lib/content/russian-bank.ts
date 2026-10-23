@@ -6,6 +6,7 @@ import { ogeRussianEntries } from "./russian-oge";
 import { egeRussianEntries } from "./russian-ege";
 import { russianPack2 } from "./russian-pack2";
 import { russianPack3 } from "./russian-pack3";
+import { russianPack4 } from "./russian-pack4";
 
 export type RussianEntry = {
   number: number; slug: string; prompt: string; answer: string; explanation: string;
@@ -19,6 +20,7 @@ export const russianTasks: Task[] = [
   ...egeRussianEntries.map(entry => ({ exam: "ЕГЭ" as const, entry })),
   ...russianPack2,
   ...russianPack3,
+  ...russianPack4,
 ].map(({ exam, entry }) => {
     const id = `${exam === "ОГЭ" ? "oge" : "ege"}-russian-2027-n${entry.number}-${entry.slug}-r1`;
     const passage = entry.passage ? entry.passage.sentences.map((sentence,i) => `(${i+1}) ${sentence}`).join("\n") + "\n\n" : "";
@@ -30,7 +32,7 @@ export const russianTasks: Task[] = [
       prototypeId: `${exam === "ОГЭ" ? "oge" : "ege"}-russian-n${entry.number}-${entry.slug}`,
       title: russianTitles[exam][entry.number-1],
       prompt: passage + entry.prompt + "\n\n" + instruction,
-      answerRule: entry.mode === "word" ? { type: "text" as const, value: entry.answer, caseInsensitive: true } : { type: "choices" as const, value: entry.answer, ordered: entry.mode === "ordered" },
+      answerRule: entry.mode === "word" ? { type: "text" as const, value: entry.answer, caseInsensitive: true, ...(entry.slug.startsWith("p4-") && entry.answer.includes("ё") ? { yoEquivalent: true } : {}) } : { type: "choices" as const, value: entry.answer, ordered: entry.mode === "ordered" },
       answerFormat: "text", answerDisplay: entry.answer, difficulty: [8,20,21,22].includes(entry.number) && exam === "ЕГЭ" ? "advanced" : "standard",
       solution: [{ text: entry.explanation }],
       ...(entry.passage ? { sharedConditionId: entry.passage.id } : {}),

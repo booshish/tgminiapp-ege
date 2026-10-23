@@ -17,7 +17,7 @@ export type { SubjectId } from "./subjects";
 
 export type { Exam } from "./navigation";
 export type AnswerRule =
-  { type: "number"; value: string } | { type: "set"; values: string[] } | { type: "text"; value: string; caseInsensitive?: boolean } | { type: "choices"; value: string; ordered: boolean } | { type: "self" };
+  { type: "number"; value: string } | { type: "set"; values: string[] } | { type: "text"; value: string; caseInsensitive?: boolean; yoEquivalent?: boolean } | { type: "choices"; value: string; ordered: boolean } | { type: "self" };
 
 export type Task = {
   id: string;
@@ -1360,7 +1360,8 @@ export function checkTaskAnswer(
   if (rule.type === "text") {
     const normalize = (value: string) => {
       const text = value.normalize("NFC").trim().replace(/\s+/g, " ");
-      return rule.caseInsensitive ? text.toLocaleLowerCase("ru") : text;
+      const cased = rule.caseInsensitive ? text.toLocaleLowerCase("ru") : text;
+      return rule.yoEquivalent ? cased.replace(/ё/g, "е").replace(/Ё/g, "Е") : cased;
     };
     if (!input.trim()) return { valid: false, correct: false, message: "Введите ответ в формате, указанном в условии." };
     return { valid: true, correct: normalize(input) === normalize(rule.value) };
