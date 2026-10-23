@@ -1,0 +1,1063 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-23",
+  "scope": "ЕГЭ · русский язык · готовые комплекты с исходными текстами",
+  "status": "blocked-no-confirmed-external-commercial-reuse",
+  "reusedEvidenceFiles": [
+    "docs/content-sources.md",
+    "src/lib/source-registry.ts",
+    "docs/russian-content-progress.md"
+  ],
+  "repeatedSourceWebsiteAudit": false,
+  "newSourceDiscovery": {
+    "attempted": true,
+    "queries": [
+      "ЕГЭ русский язык задания текст ответы \"CC BY\"",
+      "ЕГЭ русский язык готовые варианты \"лицензия\" \"коммерческого\""
+    ],
+    "result": "web-tool-error-no-results-returned",
+    "confirmedNewSources": []
+  },
+  "localMaterialsChecked": [
+    "docs",
+    "public",
+    "/workspace/library-files",
+    "/workspace/shared"
+  ],
+  "accessibleLicensedExternalSets": [],
+  "requirements": {
+    "versionId": "ege-russian-2027-draft",
+    "year": 2027,
+    "verificationStatus": "draft-source-reviewed",
+    "canonicalOfficialZipVerified": false,
+    "sources": [
+      {
+        "title": "ФИПИ: индекс проектов",
+        "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory"
+      },
+      {
+        "title": "Прочитанная PDF-копия",
+        "url": "https://pro-schools.ru/fipi/ege/spec/2027/ru-11-ege-2027-spec.pdf"
+      }
+    ],
+    "note": "Previously reviewed draft-copy model; no new confirmation of final 2027 rules."
+  },
+  "summary": {
+    "existingEgeRussianTasks": 450,
+    "existingPassageGroups": 34,
+    "existingTextLinkedTasks": 119,
+    "families": [
+      {
+        "family": "introductory-text-1-3",
+        "setCount": 17,
+        "taskCount": 51,
+        "wordCountRange": [
+          45,
+          61
+        ],
+        "sentenceCountRange": [
+          4,
+          4
+        ]
+      },
+      {
+        "family": "reading-analysis-23-26",
+        "setCount": 17,
+        "taskCount": 68,
+        "wordCountRange": [
+          53,
+          94
+        ],
+        "sentenceCountRange": [
+          7,
+          8
+        ]
+      }
+    ],
+    "confirmedExternalCommercialSources": 0,
+    "licensedSetsAdded": 0,
+    "existingTasksUpdated": 0,
+    "originalTextsCreated": 0,
+    "originalQuestionsCreated": 0,
+    "runtimeFilesChanged": false
+  },
+  "externalRegistrySources": [
+    {
+      "id": "fipi-oge-structure",
+      "url": "https://fipi.ru/oge/demoversii-specifikacii-kodifikatory",
+      "originalRightsReviewDate": "2026-10-22",
+      "licenseType": "unknown",
+      "reviewStatus": "reference-only",
+      "permittedActions": [
+        "structural-reference"
+      ],
+      "evidence": [],
+      "commercialRepublicationConfirmed": false
+    },
+    {
+      "id": "fipi-ege-structure",
+      "url": "https://fipi.ru/ege/demoversii-specifikacii-kodifikatory",
+      "originalRightsReviewDate": "2026-10-22",
+      "licenseType": "unknown",
+      "reviewStatus": "reference-only",
+      "permittedActions": [
+        "structural-reference"
+      ],
+      "evidence": [],
+      "commercialRepublicationConfirmed": false
+    },
+    {
+      "id": "shkolkovo-public-reference",
+      "url": "https://shkolkovoonline.ru/",
+      "originalRightsReviewDate": "2026-10-21",
+      "licenseType": "unknown",
+      "reviewStatus": "unreviewed",
+      "permittedActions": [],
+      "evidence": [],
+      "commercialRepublicationConfirmed": false
+    }
+  ],
+  "additionalPriorSourceFindings": [
+    {
+      "url": "https://pro-schools.ru/",
+      "evidenceFile": "docs/content-sources.md",
+      "commercialRepublicationConfirmed": false
+    },
+    {
+      "url": "https://obrnadzor.gov.ru/",
+      "evidenceFile": "docs/content-sources.md",
+      "commercialRepublicationConfirmed": false
+    },
+    {
+      "url": "https://edu.gov.ru/terms_of_use/",
+      "evidenceFile": "docs/content-sources.md",
+      "commercialRepublicationConfirmed": false
+    }
+  ],
+  "limitations": [
+    "Open access and a public-domain literary text alone do not grant reuse rights for its questions, solutions or accompanying edition.",
+    "No official minimum passage length is inferred from the measured counts; numbers 1–3 and 23–26 are separate families.",
+    "Existing project-original practice is permitted, but this task prohibits creating new original text/question sets.",
+    "No approved replacement bundle or verified current essay rubric was available; no questions from different sources were combined."
+  ],
+  "sets": [
+    {
+      "passageId": "russian-original-crystals",
+      "packageId": "initial",
+      "sourceFile": "src/lib/content/russian-ege.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 52,
+      "taskIds": [
+        "ege-russian-2027-n1-crystals-analysis-1-r1",
+        "ege-russian-2027-n2-crystals-analysis-2-r1",
+        "ege-russian-2027-n3-crystals-analysis-3-r1"
+      ],
+      "contentSha256": "e6eef467973d6a084be340f4a314ec577693a1b83285a6ba20c9e5daec364ac9",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-original-map",
+      "packageId": "initial",
+      "sourceFile": "src/lib/content/russian-ege.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 56,
+      "taskIds": [
+        "ege-russian-2027-n1-map-analysis-1-r1",
+        "ege-russian-2027-n2-map-analysis-2-r1",
+        "ege-russian-2027-n3-map-analysis-3-r1"
+      ],
+      "contentSha256": "2c8bc65249e42082c4a60c56c4ca693287ce432625888a7c4976e9f195cd5cc7",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-original-clock",
+      "packageId": "initial",
+      "sourceFile": "src/lib/content/russian-ege.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 82,
+      "taskIds": [
+        "ege-russian-2027-n23-clock-analysis-23-r1",
+        "ege-russian-2027-n24-clock-analysis-24-r1",
+        "ege-russian-2027-n25-clock-analysis-25-r1",
+        "ege-russian-2027-n26-clock-analysis-26-r1"
+      ],
+      "contentSha256": "58d137c7a02a7bd8cafcc4d9c14347ecdd6107564e23d1a790969d49040b0105",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-original-platform",
+      "packageId": "initial",
+      "sourceFile": "src/lib/content/russian-ege.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 77,
+      "taskIds": [
+        "ege-russian-2027-n23-platform-analysis-23-r1",
+        "ege-russian-2027-n24-platform-analysis-24-r1",
+        "ege-russian-2027-n25-platform-analysis-25-r1",
+        "ege-russian-2027-n26-platform-analysis-26-r1"
+      ],
+      "contentSha256": "a3b666a20450d876005535dd2df2e2262fb770970efe7ea00296883c307f4dcf",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-sound-distance",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 45,
+      "taskIds": [
+        "ege-russian-2027-n1-p2-russian-sound-distance-1-r1",
+        "ege-russian-2027-n2-p2-russian-sound-distance-2-r1",
+        "ege-russian-2027-n3-p2-russian-sound-distance-3-r1"
+      ],
+      "contentSha256": "108b4b50f88a5371781f5f08a1c58a49c86af0eeb888ee910afe9b1820ab4ad5",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-soil-water",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 51,
+      "taskIds": [
+        "ege-russian-2027-n1-p2-russian-soil-water-1-r1",
+        "ege-russian-2027-n2-p2-russian-soil-water-2-r1",
+        "ege-russian-2027-n3-p2-russian-soil-water-3-r1"
+      ],
+      "contentSha256": "1d7576ab205bc4a1c2d4122201e450e0711843eade8933ad7ab99ef72d5948e6",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-dictionary-order",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 52,
+      "taskIds": [
+        "ege-russian-2027-n1-p2-russian-dictionary-order-1-r1",
+        "ege-russian-2027-n2-p2-russian-dictionary-order-2-r1",
+        "ege-russian-2027-n3-p2-russian-dictionary-order-3-r1"
+      ],
+      "contentSha256": "3d87065db0e30199accb93367d08b1396c79618c794aab87ebd417050ee5bf67",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-graph-scale",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 52,
+      "taskIds": [
+        "ege-russian-2027-n1-p2-russian-graph-scale-1-r1",
+        "ege-russian-2027-n2-p2-russian-graph-scale-2-r1",
+        "ege-russian-2027-n3-p2-russian-graph-scale-3-r1"
+      ],
+      "contentSha256": "7b8badae46e7ec41c7ffb20a232be4c3d62077edd8f6a5c8f3b69c7ddc3ccf9f",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-seed-moisture",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 47,
+      "taskIds": [
+        "ege-russian-2027-n1-p2-russian-seed-moisture-1-r1",
+        "ege-russian-2027-n2-p2-russian-seed-moisture-2-r1",
+        "ege-russian-2027-n3-p2-russian-seed-moisture-3-r1"
+      ],
+      "contentSha256": "4b2a42d699e93054b04f3e81d6b6992869e7ab4177c5cc3027271378942b49ab",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-shadow-position",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 46,
+      "taskIds": [
+        "ege-russian-2027-n1-p2-russian-shadow-position-1-r1",
+        "ege-russian-2027-n2-p2-russian-shadow-position-2-r1",
+        "ege-russian-2027-n3-p2-russian-shadow-position-3-r1"
+      ],
+      "contentSha256": "8abc7a06af342c68bab4d26186c99e8d25908104e218f2e629b0b729b651aa6d",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-bridge-notebook",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 94,
+      "taskIds": [
+        "ege-russian-2027-n23-p2-russian-bridge-notebook-23-r1",
+        "ege-russian-2027-n24-p2-russian-bridge-notebook-24-r1",
+        "ege-russian-2027-n25-p2-russian-bridge-notebook-25-r1",
+        "ege-russian-2027-n26-p2-russian-bridge-notebook-26-r1"
+      ],
+      "contentSha256": "bcab13eec3af3596f319303f1a4484c93afee2140374f2f9f4a9cb18ef045f1f",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-race-choice",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 67,
+      "taskIds": [
+        "ege-russian-2027-n23-p2-russian-race-choice-23-r1",
+        "ege-russian-2027-n24-p2-russian-race-choice-24-r1",
+        "ege-russian-2027-n25-p2-russian-race-choice-25-r1",
+        "ege-russian-2027-n26-p2-russian-race-choice-26-r1"
+      ],
+      "contentSha256": "b32a3350e2e3d0b7322201b1e11a75ee9c07b5101b38087b89fa5260bbf9c6ff",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-cup-repair",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 72,
+      "taskIds": [
+        "ege-russian-2027-n23-p2-russian-cup-repair-23-r1",
+        "ege-russian-2027-n24-p2-russian-cup-repair-24-r1",
+        "ege-russian-2027-n25-p2-russian-cup-repair-25-r1",
+        "ege-russian-2027-n26-p2-russian-cup-repair-26-r1"
+      ],
+      "contentSha256": "22971245b57cf0920c193fc9bb5cef4397bfcbfb65783d750a4ca686335009f3",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-queue-help",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 71,
+      "taskIds": [
+        "ege-russian-2027-n23-p2-russian-queue-help-23-r1",
+        "ege-russian-2027-n24-p2-russian-queue-help-24-r1",
+        "ege-russian-2027-n25-p2-russian-queue-help-25-r1",
+        "ege-russian-2027-n26-p2-russian-queue-help-26-r1"
+      ],
+      "contentSha256": "4c6610cdcfd88c66027ded567b07e203a4a1f408d4e67a986912969b0c67cab4",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-drawing-rain",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 72,
+      "taskIds": [
+        "ege-russian-2027-n23-p2-russian-drawing-rain-23-r1",
+        "ege-russian-2027-n24-p2-russian-drawing-rain-24-r1",
+        "ege-russian-2027-n25-p2-russian-drawing-rain-25-r1",
+        "ege-russian-2027-n26-p2-russian-drawing-rain-26-r1"
+      ],
+      "contentSha256": "6a97abf8091a081f11dc50157a36d99a76c61e799ca6b1c8225bdcdcc6002d49",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-orchard-memory",
+      "packageId": "pack2",
+      "sourceFile": "src/lib/content/russian-pack2-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 83,
+      "taskIds": [
+        "ege-russian-2027-n23-p2-russian-orchard-memory-23-r1",
+        "ege-russian-2027-n24-p2-russian-orchard-memory-24-r1",
+        "ege-russian-2027-n25-p2-russian-orchard-memory-25-r1",
+        "ege-russian-2027-n26-p2-russian-orchard-memory-26-r1"
+      ],
+      "contentSha256": "379c8fe7cddefbcbfca826dc169e883843bf3c7afaa30c664424c034ad4e1764",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-evaporation-dishes",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 55,
+      "taskIds": [
+        "ege-russian-2027-n1-p3-russian-evaporation-dishes-1-r1",
+        "ege-russian-2027-n2-p3-russian-evaporation-dishes-2-r1",
+        "ege-russian-2027-n3-p3-russian-evaporation-dishes-3-r1"
+      ],
+      "contentSha256": "42609994a72ff5ac143d3b0709a06f71fbdf570df6627a9227d1303047ee3211",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-herbarium-label",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 61,
+      "taskIds": [
+        "ege-russian-2027-n1-p3-russian-herbarium-label-1-r1",
+        "ege-russian-2027-n2-p3-russian-herbarium-label-2-r1",
+        "ege-russian-2027-n3-p3-russian-herbarium-label-3-r1"
+      ],
+      "contentSha256": "2e61498675bb309822fdd52763a9009b7e8314fc6d69f42560008bf9797aaba7",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-substitution-key",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 57,
+      "taskIds": [
+        "ege-russian-2027-n1-p3-russian-substitution-key-1-r1",
+        "ege-russian-2027-n2-p3-russian-substitution-key-2-r1",
+        "ege-russian-2027-n3-p3-russian-substitution-key-3-r1"
+      ],
+      "contentSha256": "6e7d73a35db0190134db9405f0f5baba2694c784b9bcfdaa9cc953b244843634",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-measurement-record",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 59,
+      "taskIds": [
+        "ege-russian-2027-n1-p3-russian-measurement-record-1-r1",
+        "ege-russian-2027-n2-p3-russian-measurement-record-2-r1",
+        "ege-russian-2027-n3-p3-russian-measurement-record-3-r1"
+      ],
+      "contentSha256": "bae327867f45d9055c46c10ad92330c51b96c73ea11452b4fd1f969da57f2053",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-debate-evidence",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 87,
+      "taskIds": [
+        "ege-russian-2027-n23-p3-russian-debate-evidence-23-r1",
+        "ege-russian-2027-n24-p3-russian-debate-evidence-24-r1",
+        "ege-russian-2027-n25-p3-russian-debate-evidence-25-r1",
+        "ege-russian-2027-n26-p3-russian-debate-evidence-26-r1"
+      ],
+      "contentSha256": "838078c35bbd53c049ce13694e59c83f496a48cda7be2b21c4fe5acc9f53986e",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-quartet-listening",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 82,
+      "taskIds": [
+        "ege-russian-2027-n23-p3-russian-quartet-listening-23-r1",
+        "ege-russian-2027-n24-p3-russian-quartet-listening-24-r1",
+        "ege-russian-2027-n25-p3-russian-quartet-listening-25-r1",
+        "ege-russian-2027-n26-p3-russian-quartet-listening-26-r1"
+      ],
+      "contentSha256": "705fdd8e43244a38dc0d5465460e5f0f7d3e3d1b44e82a68f4b32f108254ef23",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-newspaper-byline",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 90,
+      "taskIds": [
+        "ege-russian-2027-n23-p3-russian-newspaper-byline-23-r1",
+        "ege-russian-2027-n24-p3-russian-newspaper-byline-24-r1",
+        "ege-russian-2027-n25-p3-russian-newspaper-byline-25-r1",
+        "ege-russian-2027-n26-p3-russian-newspaper-byline-26-r1"
+      ],
+      "contentSha256": "cd8917168d77a1f9043c913c1ac55c08c2e8576cd15e6a7d8706b042ca2ed94f",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-beach-sculpture",
+      "packageId": "pack3",
+      "sourceFile": "src/lib/content/russian-pack3-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 8,
+      "wordCount": 83,
+      "taskIds": [
+        "ege-russian-2027-n23-p3-russian-beach-sculpture-23-r1",
+        "ege-russian-2027-n24-p3-russian-beach-sculpture-24-r1",
+        "ege-russian-2027-n25-p3-russian-beach-sculpture-25-r1",
+        "ege-russian-2027-n26-p3-russian-beach-sculpture-26-r1"
+      ],
+      "contentSha256": "12bc1bef70c245b2b9852fa8e969851c5806fe4da2823af51c833c2f2658914e",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-map-scale",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 54,
+      "taskIds": [
+        "ege-russian-2027-n1-p4-russian-map-scale-1-r1",
+        "ege-russian-2027-n2-p4-russian-map-scale-2-r1",
+        "ege-russian-2027-n3-p4-russian-map-scale-3-r1"
+      ],
+      "contentSha256": "7dd9bf904de7374102fdb773baff371cce58e5c3807a6b43712dc9178f529556",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-dictionary-entry",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 52,
+      "taskIds": [
+        "ege-russian-2027-n1-p4-russian-dictionary-entry-1-r1",
+        "ege-russian-2027-n2-p4-russian-dictionary-entry-2-r1",
+        "ege-russian-2027-n3-p4-russian-dictionary-entry-3-r1"
+      ],
+      "contentSha256": "67b29248a9cdc367aa116bcc27ae190ed236e6defc3a42a8564e07a8cdc5b716",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-shadow-observation",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 55,
+      "taskIds": [
+        "ege-russian-2027-n1-p4-russian-shadow-observation-1-r1",
+        "ege-russian-2027-n2-p4-russian-shadow-observation-2-r1",
+        "ege-russian-2027-n3-p4-russian-shadow-observation-3-r1"
+      ],
+      "contentSha256": "f66eb47d344f87b7b7eb0813c5d7a657cdc4035a415adb1608e9c6c093c06533",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-sort-algorithm",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 59,
+      "taskIds": [
+        "ege-russian-2027-n1-p4-russian-sort-algorithm-1-r1",
+        "ege-russian-2027-n2-p4-russian-sort-algorithm-2-r1",
+        "ege-russian-2027-n3-p4-russian-sort-algorithm-3-r1"
+      ],
+      "contentSha256": "2f83a3ec96997f0c0761e28573b6bb00ad3a7f6b09ff79ca3bd6cd1ede59d563",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-noise-comparison",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "introductory-text-1-3",
+      "examNumbers": [
+        1,
+        2,
+        3
+      ],
+      "sentenceCount": 4,
+      "wordCount": 47,
+      "taskIds": [
+        "ege-russian-2027-n1-p4-russian-noise-comparison-1-r1",
+        "ege-russian-2027-n2-p4-russian-noise-comparison-2-r1",
+        "ege-russian-2027-n3-p4-russian-noise-comparison-3-r1"
+      ],
+      "contentSha256": "9e535788fd8a6f655be995052f2ca2715857cd7fc4e86f42b240074af8f16aa3",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-photo-consent",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 7,
+      "wordCount": 63,
+      "taskIds": [
+        "ege-russian-2027-n23-p4-russian-photo-consent-23-r1",
+        "ege-russian-2027-n24-p4-russian-photo-consent-24-r1",
+        "ege-russian-2027-n25-p4-russian-photo-consent-25-r1",
+        "ege-russian-2027-n26-p4-russian-photo-consent-26-r1"
+      ],
+      "contentSha256": "8ebdd25e389df957e42370bd03417780ff6007ba46af052692b383b252514cfb",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-race-last-runner",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 7,
+      "wordCount": 60,
+      "taskIds": [
+        "ege-russian-2027-n23-p4-russian-race-last-runner-23-r1",
+        "ege-russian-2027-n24-p4-russian-race-last-runner-24-r1",
+        "ege-russian-2027-n25-p4-russian-race-last-runner-25-r1",
+        "ege-russian-2027-n26-p4-russian-race-last-runner-26-r1"
+      ],
+      "contentSha256": "36601b7590e12239a11ee38a25720a8ab31ff3403e96a9a528306ce0bdab39de",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-group-credit",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 7,
+      "wordCount": 53,
+      "taskIds": [
+        "ege-russian-2027-n23-p4-russian-group-credit-23-r1",
+        "ege-russian-2027-n24-p4-russian-group-credit-24-r1",
+        "ege-russian-2027-n25-p4-russian-group-credit-25-r1",
+        "ege-russian-2027-n26-p4-russian-group-credit-26-r1"
+      ],
+      "contentSha256": "8dd3f7ce9df3579024794b62b11c4d10b3b2a80846716238725283faaadc1a92",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-broken-cup",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 7,
+      "wordCount": 57,
+      "taskIds": [
+        "ege-russian-2027-n23-p4-russian-broken-cup-23-r1",
+        "ege-russian-2027-n24-p4-russian-broken-cup-24-r1",
+        "ege-russian-2027-n25-p4-russian-broken-cup-25-r1",
+        "ege-russian-2027-n26-p4-russian-broken-cup-26-r1"
+      ],
+      "contentSha256": "0d7e1eee9d9de6c7db9159970a7255002870c4300063df80b31f085f0e848716",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    },
+    {
+      "passageId": "russian-slow-reading",
+      "packageId": "pack4",
+      "sourceFile": "src/lib/content/russian-pack4-ege-texts.ts",
+      "family": "reading-analysis-23-26",
+      "examNumbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "sentenceCount": 7,
+      "wordCount": 76,
+      "taskIds": [
+        "ege-russian-2027-n23-p4-russian-slow-reading-23-r1",
+        "ege-russian-2027-n24-p4-russian-slow-reading-24-r1",
+        "ege-russian-2027-n25-p4-russian-slow-reading-25-r1",
+        "ege-russian-2027-n26-p4-russian-slow-reading-26-r1"
+      ],
+      "contentSha256": "ae2d8519402aa9afa9d2190d9da98ecc4fc59275b9fe19149ee9b4deb634d757",
+      "provenanceSourceIds": [
+        "tochka-project-original"
+      ],
+      "existingPracticePublicationAllowed": true,
+      "completeExamSetVerified": false,
+      "essay27Present": false,
+      "replacementStatus": "no-licensed-replacement-available-in-reviewed-materials"
+    }
+  ]
+}
