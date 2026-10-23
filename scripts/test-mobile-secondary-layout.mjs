@@ -53,7 +53,7 @@ test("phone review puts existing recommendations before collapsed method and kee
   before(mobile, "Что повторить", '<details class="study-review-details">');
   assert.match(mobile, /Пока нет навыков с ошибками/);
   const free = render(StudyToolsScreen, { ...props, isPremium: false }, true);
-  assert.match(free, /Новые похожие задачи — в Premium/);
+  assert.match(free, /Новые похожие задачи — в подписке «Плюс»/);
   assert.doesNotMatch(free, /Что повторить|study-review-details/);
 });
 
@@ -67,6 +67,6 @@ test("phone trainer leads with evidence-backed empty state, preserves explanator
   before(desktop, 'class="premium-panel trainer-overview"', 'class="analytics-section"');
   assert.doesNotMatch(desktop, /trainer-method-details/);
   const free = render(TrainerScreen, { ...props, isPremium: false }, true);
-  assert.match(free, /Подробнее о Premium/);
+  assert.match(free, /Подключить Плюс/);
   assert.doesNotMatch(free, /Что стоит повторить|topic-results/);
 });

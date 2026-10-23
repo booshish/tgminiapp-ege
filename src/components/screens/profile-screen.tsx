@@ -294,14 +294,14 @@ export function ProfileScreen({
         <section className="developer-panel">
           <h2>Режим для разработчика</h2>
           <p>
-            Переключатель показывает интерфейс Premium без покупки. Доступ
+            Переключатель показывает интерфейс Плюса без покупки. Доступ
             управляется в браузере и не защищён сервером. После перезагрузки
             снова включается Free.
           </p>
           <button className="button button-secondary" onClick={onToggleDemo}>
             {isPremium
               ? "Вернуться в Free"
-              : "Включить демонстрационный Premium"}
+              : "Включить демонстрацию Плюса"}
           </button>
         </section>
       )}

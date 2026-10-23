@@ -21,7 +21,7 @@ type Props = {
 const statusLabels: Record<SubscriptionStatus, string> = {
   free: "Free",
   trial: "Пробный период",
-  active: "Активный Premium",
+  active: "Плюс активен",
   expiring: "Заканчивается",
   expired: "Истёк",
 };
@@ -43,7 +43,7 @@ export function SubscriptionStatusCard({ onPremium, subscription = null, now = n
   return (
     <section className="settings-card subscription-status-card" aria-labelledby="subscription-status-title">
       <div className="section-title">
-        <h2 id="subscription-status-title">Подписка</h2>
+        <h2 id="subscription-status-title">Подписка «Плюс»</h2>
         <span className="tag" data-subscription-status={status.status}>{statusLabels[status.status]}</span>
       </div>
       {status.status === "free" ? (
@@ -51,20 +51,20 @@ export function SubscriptionStatusCard({ onPremium, subscription = null, now = n
           <p>Теория, стандартные задания, проверка и решения после ответа остаются бесплатными. XP, серии, избранное и ручной список ошибок тоже доступны.</p>
           <div className="subscription-account-note">
             <Layers3 size={20} aria-hidden="true" />
-            <p>Сейчас можно готовиться по математике. Предметы для Premium выбираются отдельно после подключения подписки.</p>
+            <p>Сейчас можно готовиться по математике. Предметы для подписки «Плюс» выбираются отдельно после подключения подписки.</p>
           </div>
           <p>Подписки и пробный доступ на {subscriptionPrices.trial.days} суток готовятся к запуску. Активировать их пока нельзя.</p>
         </>
       ) : (
         <>
           <p>{status.status === "expired"
-            ? "Доступ Premium завершён. Бесплатные занятия продолжаются, а твои данные и выбранные предметы сохранены."
+            ? "Доступ к Плюсу завершён. Бесплатные занятия продолжаются, а твои данные и выбранные предметы сохранены."
             : subscription?.kind === "trial"
-              ? "Пробный Premium без привязки карты. После окончания автоматически включится Free, списаний не будет."
-              : "Все доступные Premium-функции включены для выбранных предметов."}</p>
+              ? "Пробный доступ к Плюсу без привязки карты. После окончания автоматически включится Free, списаний не будет."
+              : "Все доступные функции Плюса включены для выбранных предметов."}</p>
           <dl className="subscription-account-facts">
             {status.endsAt && <div><dt><CalendarDays size={18} aria-hidden="true" />{status.status === "expired" ? "Доступ завершился" : "Доступ заканчивается"}</dt><dd>{dateLabel(status.endsAt)}</dd></div>}
-            <div><dt>Предметы Premium</dt><dd>{status.selectedSubjectIds.length ? status.selectedSubjectIds.map(subjectTitle).join(", ") : "Пока не выбраны"}</dd></div>
+            <div><dt>Предметы подписки «Плюс»</dt><dd>{status.selectedSubjectIds.length ? status.selectedSubjectIds.map(subjectTitle).join(", ") : "Пока не выбраны"}</dd></div>
             <div><dt>Свободные слоты</dt><dd>{freeSlots} из {status.slotCount}</dd></div>
             {status.isPremium && billingWindow && <div><dt>Замена предмета</dt><dd>{billingWindow.replacementUsed
               ? billingWindow.nextReplacementAt ? `Следующая — ${dateLabel(billingWindow.nextReplacementAt)}` : "Замена уже использована до конца доступа"
@@ -75,9 +75,9 @@ export function SubscriptionStatusCard({ onPremium, subscription = null, now = n
           <p>Управление предметами и продлением появится после подключения сервиса подписок.</p>
         </>
       )}
-      {developerPreview && <p className="subscription-developer-note">Открыт демонстрационный интерфейс Premium для разработки. Он не изменяет статус подписки и не является пробным периодом или покупкой.</p>}
-      <p>После окончания Premium история решений, XP и выбранные предметы не удаляются. Сейчас данные хранятся только в этом браузере.</p>
-      <button type="button" className="text-button" onClick={onPremium}>Подробнее о Premium <ArrowRight size={18} aria-hidden="true" /></button>
+      {developerPreview && <p className="subscription-developer-note">Открыт демонстрационный интерфейс Плюса для разработки. Он не изменяет статус подписки и не является пробным периодом или покупкой.</p>}
+      <p>После окончания подписки «Плюс» история решений, XP и выбранные предметы не удаляются. Сейчас данные хранятся только в этом браузере.</p>
+      <button type="button" className="text-button" onClick={onPremium}>Подключить Плюс <ArrowRight size={18} aria-hidden="true" /></button>
     </section>
   );
 }

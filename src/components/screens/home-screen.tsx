@@ -6,7 +6,6 @@ import {
   Bookmark,
   CircleX,
   ClipboardCheck,
-  CalendarClock,
   ListChecks,
   Sparkles,
   TrendingUp,
@@ -99,25 +98,24 @@ export function HomeScreen({ exam, subjectId = "math", onSubjectChange, onExamCh
           <FeatureCard
             icon={TrendingUp}
             label="Прогресс"
-            description="Результаты и история ответов в Premium"
+            description="Результаты и история ответов в подписке «Плюс»"
             onClick={() => onNavigate("progress")}
           />
           <FeatureCard
             icon={Sparkles}
             label="Мой тренер"
-            description="Интерфейс повторения тем для Premium"
+            description="Интерфейс повторения тем для подписки «Плюс»"
             onClick={() => onNavigate("trainer")}
             tone="feature-trainer"
           />
           <FeatureCard icon={Bookmark} label="Избранное" description="Сохранённые задания и конспекты" onClick={() => onNavigate("favorites")} />
           <FeatureCard icon={CircleX} label="Мои ошибки" description="Вернуться к задачам и разобрать теорию" onClick={() => onNavigate("mistakes")} />
           <FeatureCard icon={ClipboardCheck} label="Учебный вариант" description="Таймер, задания и сохранение ответов" onClick={() => onNavigate("mock")} />
-          <FeatureCard icon={CalendarClock} label="Умное повторение" description="Новые аналогичные задачи в Premium" onClick={() => onNavigate("review")} />
         </div>
       </section>
       <section className="premium-summary">
         <div>
-          <span className="eyebrow">PREMIUM</span>
+          <span className="eyebrow">ПЛЮС</span>
           <h2>Больше информации о подготовке</h2>
           <p>
             Результаты, история ошибок и инструменты повторения. Бесплатная
@@ -128,11 +126,11 @@ export function HomeScreen({ exam, subjectId = "math", onSubjectChange, onExamCh
           className="button button-secondary"
           onClick={() => onNavigate("premium")}
         >
-          Подробнее о Premium <ArrowRight size={18} />
+          Подключить Плюс <ArrowRight size={18} />
         </button>
       </section>
       <button type="button" className="text-button home-premium-link" onClick={() => onNavigate("premium")}>
-        Возможности Premium <ArrowRight size={17} aria-hidden="true" />
+        Возможности Плюса <ArrowRight size={17} aria-hidden="true" />
       </button>
     </div>
   );

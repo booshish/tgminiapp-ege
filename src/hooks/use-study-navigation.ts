@@ -54,6 +54,7 @@ export function useStudyNavigation() {
       if (selected.examNumber)
         params.set("number", String(selected.examNumber));
       if (selected.sessionId) params.set("session", selected.sessionId);
+      if (view === "favorites" && selected.bookmarkKind) params.set("kind", selected.bookmarkKind);
       const query = params.toString();
       const hash = `#/${view}${view === "tasks" ? `/${safeIndex}` : ""}${query ? `?${query}` : ""}`;
       if (window.location.hash === hash) return;

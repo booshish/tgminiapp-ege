@@ -291,7 +291,7 @@ export function applySubjectChange(
   if (previous) return command.kind === "replace" && previous.fromSubjectId === command.fromSubjectId && previous.toSubjectId === command.toSubjectId
     ? { ok: true, record, changed: false } : fail("request-conflict", "Этот идентификатор уже относится к другой операции.");
   const window = getBillingWindow(record, now);
-  if (!window) return fail("inactive", "Изменить предметы можно только во время действующего Premium.");
+  if (!window) return fail("inactive", "Изменить предметы можно только во время действующей подписки «Плюс».");
   const target = command.kind === "assign" ? command.subjectId : command.toSubjectId;
   if (!subjects.some((subject) => subject.id === target)) return fail("unsupported-subject", "Этот предмет пока не поддерживается.");
   if (command.kind === "assign") {

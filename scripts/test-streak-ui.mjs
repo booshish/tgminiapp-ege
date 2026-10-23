@@ -66,7 +66,7 @@ test("Progress exposes motivation for both tariffs while keeping Free analytics 
     const html = render(ProgressScreen, { state, game, isPremium, onPremium: noop, onStart: noop });
     assert.equal((html.match(/Серия верных: 2/g) ?? []).length, 2);
     if (!isPremium) {
-      assert.match(html, /Подробнее о Premium/);
+      assert.match(html, /Подключить Плюс/);
       assert.doesNotMatch(html, /Точность ответов|Всего попыток|class="stats-grid"/);
     }
   }

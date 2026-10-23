@@ -3,9 +3,9 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   BookOpen,
+  BadgePlus,
   Bookmark,
   CircleX,
-  CalendarClock,
   ClipboardCheck,
   ChevronRight,
   Grid2X2,
@@ -15,6 +15,8 @@ import {
   Coffee,
   ListChecks,
   Menu,
+  NotebookPen,
+  PanelLeftClose,
   ShieldCheck,
   Sparkles,
   TrendingUp,
@@ -67,6 +69,7 @@ import { viewTitles, type View } from "@/lib/navigation";
 import { getGameSummary, getSelfAssessment } from "@/lib/gamification";
 import "./appearance.css";
 import "./learning-features.css";
+import "./workspace-layout.css";
 
 const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "home", label: "Главная", icon: House },
@@ -78,10 +81,15 @@ const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "favorites", label: "Избранное", icon: Bookmark },
   { view: "mistakes", label: "Мои ошибки", icon: CircleX },
   { view: "mock", label: "Учебный вариант", icon: ClipboardCheck },
-  { view: "review", label: "Умное повторение", icon: CalendarClock },
+];
+const desktopNavigation = [
+  navigation[0], navigation[2], navigation[1],
+  { view: "favorites" as const, label: "Конспекты", icon: NotebookPen, bookmarkKind: "theory" as const },
+  navigation[4], navigation[7], navigation[5],
+  { view: "premium" as const, label: "Плюс", icon: BadgePlus },
 ];
 const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
-const phoneMoreOrder: View[] = ["mistakes", "favorites", "mock", "profile", "trainer", "review"];
+const phoneMoreOrder: View[] = ["mistakes", "favorites", "mock", "profile", "trainer"];
 
 export function StudyApp() {
   const phoneLayout = usePhoneLayout();
@@ -116,6 +124,8 @@ export function StudyApp() {
   const studyTools = useStudyTools();
   const [demoPremium, setDemoPremium] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [sidebarMode, setSidebarMode] = useState<"compact" | "expanded" | "hidden">("compact");
+  const [sidebarReady, setSidebarReady] = useState(false);
   const [now, setNow] = useState(() => new Date());
   const game = getGameSummary(state.game, now);
   const menuDialog = useRef<HTMLDialogElement>(null);
@@ -149,7 +159,7 @@ export function StudyApp() {
   const canConcentrate = route.view === "tasks"
     || (route.view === "theory" && Boolean(route.topicId));
   const concentrating = state.focusMode && canConcentrate;
-  const activeView = route.view === "tasks" ? "catalog" : route.view;
+  const activeView = route.view === "tasks" || route.view === "mock" || (route.view === "favorites" && route.bookmarkKind === "task") ? "catalog" : route.view === "review" ? "trainer" : route.view;
   const { currentTask, session } = practice;
   const openMockAttempt = mock.open;
   const currentIndex = currentTask
@@ -167,6 +177,18 @@ export function StudyApp() {
     safePointKey: `${pageKey}:${latestCheck?.id ?? ""}`,
     ready,
   });
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("tochka-sidebar-v1");
+      if (saved === "compact" || saved === "expanded" || saved === "hidden") setSidebarMode(saved);
+    } catch { /* Navigation remains usable without browser storage. */ }
+    setSidebarReady(true);
+  }, []);
+  useEffect(() => {
+    if (!sidebarReady) return;
+    try { localStorage.setItem("tochka-sidebar-v1", sidebarMode); } catch { /* Keep the in-memory preference. */ }
+  }, [sidebarMode, sidebarReady]);
 
   useEffect(() => {
     if (ready && practiceInitialized && route.view === "theory" && (state.exam !== theoryExam || practiceCatalog.subjectId !== theorySubject)) {
@@ -255,8 +277,6 @@ export function StudyApp() {
     if (menuDialog.current?.open) menuDialog.current.close();
     setMoreOpen(false);
     if (view === "catalog") {
-      // A return from another section resumes practice; tapping the active tab opens its catalog.
-      if (route.view !== "catalog" && route.view !== "tasks" && practice.resume()) return;
       practice.openCatalog();
     }
     else if (view === "theory") openTheory();
@@ -377,6 +397,7 @@ export function StudyApp() {
     <div
       className={`app-shell font-${state.fontScale}${concentrating ? " focus-mode" : ""}`}
       data-view={route.view}
+      data-sidebar={sidebarMode}
       data-can-concentrate={canConcentrate}
     >
       <a
@@ -389,7 +410,7 @@ export function StudyApp() {
       >
         Перейти к содержимому
       </a>
-      <aside className="sidebar">
+      <aside className="sidebar" id="desktop-sidebar" aria-label="Разделы сайта">
         <button
           className="brand-button"
           onClick={() => open("home")}
@@ -398,32 +419,46 @@ export function StudyApp() {
           <Brand />
         </button>
         <nav className="desktop-nav" aria-label="Основная навигация">
-          {navigation.map(({ view, label, icon: Icon }) => (
+          {desktopNavigation.map((item) => {
+            const { view, label, icon: Icon } = item;
+            const bookmarkKind = "bookmarkKind" in item ? item.bookmarkKind : undefined;
+            const active = activeView === view && (view !== "favorites" || route.bookmarkKind === "theory");
+            return (
             <button
               key={view}
-              className={activeView === view ? "active" : ""}
-              aria-current={activeView === view ? "page" : undefined}
-              onClick={() => open(view)}
+              type="button"
+              aria-label={label}
+              title={sidebarMode === "compact" ? label : undefined}
+              className={active ? "active" : ""}
+              aria-current={active ? "page" : undefined}
+              onClick={() => bookmarkKind ? navigate("favorites", { bookmarkKind }) : open(view)}
             >
               <Icon size={21} aria-hidden="true" />
-              {label}
-              {activeView === view && <span className="active-dot" />}
+              <span className="desktop-nav-label">{label}</span>
+              {active && <span className="active-dot" />}
             </button>
-          ))}
+          );})}
         </nav>
         <div className="sidebar-bottom">
-          <button className="sidebar-plan" onClick={openPremium}>
-            <Sparkles size={21} />
-            <span>
-              <strong>{isPremium ? "Демо Premium" : "Free"}</strong>
-              <small>Возможности тарифа</small>
-            </span>
-            <ChevronRight size={18} />
+          <button className="sidebar-plan" aria-label="Помощь и объяснения" title="Помощь и объяснения" onClick={openHelp}>
+            <CircleHelp size={21} aria-hidden="true" />
+            <span className="desktop-nav-label">Помощь</span>
           </button>
         </div>
       </aside>
       <div className="workspace">
         <header className="topbar">
+          <div className="desktop-menu-controls">
+            <button type="button" className="icon-button" aria-controls="desktop-sidebar"
+              aria-expanded={sidebarMode === "expanded"}
+              aria-label={sidebarMode === "expanded" ? "Свернуть меню" : sidebarMode === "hidden" ? "Показать меню" : "Развернуть меню"}
+              title={sidebarMode === "expanded" ? "Свернуть меню" : "Развернуть меню"}
+              onClick={() => setSidebarMode(sidebarMode === "expanded" ? "compact" : "expanded")}>
+              <Menu size={22} aria-hidden="true" />
+            </button>
+            {sidebarMode !== "hidden" && <button type="button" className="icon-button" aria-label="Скрыть боковую панель"
+              title="Скрыть боковую панель" onClick={() => setSidebarMode("hidden")}><PanelLeftClose size={21} aria-hidden="true" /></button>}
+          </div>
           <button
             className="mobile-brand brand-button"
             onClick={() => open("home")}
@@ -475,7 +510,7 @@ export function StudyApp() {
               <ShieldCheck size={20} />
               <span>
                 Режим разработки ·{" "}
-                {isPremium ? "Демонстрационный Premium" : "Free"}. Серверной
+                {isPremium ? "Демонстрационный Плюс" : "Free"}. Серверной
                 проверки подписки нет. Переключение — в профиле.
               </span>
             </div>
@@ -539,6 +574,11 @@ export function StudyApp() {
               mockReady={mock.ready}
               onVariant={startVariant}
               onResumeVariant={resumeVariant}
+              onOpenVariants={() => { catalogScroll.capture(); mock.open(null); navigate("mock", { exam: practice.catalog.exam, subjectId: practice.catalog.subjectId, level: practice.catalog.level }); }}
+              onMistakes={() => open("mistakes")}
+              onSaved={() => navigate("favorites", { bookmarkKind: "task" })}
+              onContinue={practice.resumeTarget ? continuePractice : undefined}
+              resumeLabel={practice.resumeTarget ? `№${practice.resumeTarget.task.examNumber ?? "—"} · ${practice.resumeTarget.task.title}` : undefined}
               game={game}
             />
           </div>
@@ -663,6 +703,10 @@ export function StudyApp() {
               game={game}
             />
           )}
+          {(route.view === "trainer" || route.view === "review") && <nav className="trainer-section-nav" aria-label="Мой тренер">
+            <button type="button" className={route.view === "trainer" ? "selected" : ""} aria-current={route.view === "trainer" ? "page" : undefined} onClick={() => open("trainer")}>Обзор тренера</button>
+            <button type="button" className={route.view === "review" ? "selected" : ""} aria-current={route.view === "review" ? "page" : undefined} onClick={() => open("review")}>Повторение</button>
+          </nav>}
           {route.view === "trainer" && (
             <TrainerScreen
               state={state}
@@ -705,8 +749,8 @@ export function StudyApp() {
           {route.view === "premium" && <PremiumScreen onBack={back} onProfile={() => open("profile")} />}
           {route.view === "help" && <HelpScreen onBack={returnFromHelp} />}
           {(["favorites", "mistakes", "review"] as const).map((view) => route.view === view && (
-            <StudyToolsScreen key={view} mode={view} events={state.events} tools={studyTools}
-              isPremium={isPremium} onTask={openTaskById} onTheory={openTheory} onPremium={openPremium} />
+            <StudyToolsScreen key={`${view}-${route.bookmarkKind ?? "all"}`} mode={view} bookmarkKind={route.bookmarkKind} events={state.events} tools={studyTools}
+              isPremium={isPremium} onTask={openTaskById} onTheory={openTheory} onBrowseTheory={() => openTheory()} onPremium={openPremium} />
           ))}
           {route.view === "mock" && (route.invalidContext || (route.subjectId !== undefined && route.subjectId !== "math") ? (
             <section className="empty-state" role="status"><h1>Вариант недоступен</h1><p>В ссылке указан неподдерживаемый предмет, экзамен или уровень. Выбери доступный вариант в «Заданиях».</p><button type="button" className="button button-primary" onClick={() => practice.openCatalog()}>К заданиям</button></section>
@@ -797,7 +841,7 @@ export function StudyApp() {
             >
               <Icon size={23} aria-hidden="true" />
               {phoneLayout ? <span className="menu-item-label">{label}</span> : label}
-              {phoneLayout && (view === "trainer" || view === "review") && <span className="menu-premium-label">Premium</span>}
+              {phoneLayout && view === "trainer" && <span className="menu-premium-label">Плюс</span>}
               <ChevronRight size={18} aria-hidden="true" />
             </button>
           ))}
@@ -808,7 +852,7 @@ export function StudyApp() {
           </button>
           <button onClick={() => open("premium")}>
             <Grid2X2 size={23} />
-            {phoneLayout ? "Точка Premium" : "Premium"}
+            Плюс
             <ChevronRight size={18} />
           </button>
         </nav>

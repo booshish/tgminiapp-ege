@@ -27,17 +27,22 @@ function ordered(html, labels) {
   }
 }
 
-test("phone More menu offers study tools first; tablet keeps its original navigation", () => {
+test("phone More keeps study tools; workspace has eight core sections and no standalone review", () => {
   const menu = (phone) => render(StudyApp, {}, phone).split('aria-label="Дополнительные разделы"')[1].split('</nav>')[0];
-  ordered(menu(true), ["Мои ошибки", "Избранное", "Учебный вариант", "Профиль", "Мой тренер", "Умное повторение", "Помощь и объяснения", "Точка Premium"]);
-  ordered(menu(false), ["Мой тренер", "Профиль", "Избранное", "Мои ошибки", "Учебный вариант", "Умное повторение", "Помощь и объяснения", "Premium"]);
-  assert.equal((menu(true).match(/class="menu-premium-label"/g) ?? []).length, 2);
+  ordered(menu(true), ["Мои ошибки", "Избранное", "Учебный вариант", "Профиль", "Мой тренер", "Помощь и объяснения", "Плюс"]);
+  ordered(menu(false), ["Мой тренер", "Профиль", "Избранное", "Мои ошибки", "Учебный вариант", "Помощь и объяснения", "Плюс"]);
+  assert.equal((menu(true).match(/class="menu-premium-label"/g) ?? []).length, 1);
+  const html = render(StudyApp, {}, false);
+  const desktop = html.split('aria-label="Основная навигация"')[1].split('</nav>')[0];
+  ordered(desktop, ["Главная", "Задания", "Теория", "Конспекты", "Мой тренер", "Мои ошибки", "Профиль", "Плюс"]);
+  assert.equal((desktop.match(/<button /g) ?? []).length, 8);
+  assert.doesNotMatch(desktop + menu(true), /Умное повторение/);
 });
 
 test("phone profile settings precede subscription and help with exactly two theme choices", () => {
   const props = { state: emptyLearningState, isPremium: false, demoAllowed: false, onToggleDemo: noop, onExamChange: noop, onFontScale: noop, onThemeChange: noop, onFocusModeChange: noop, onBreakReminderChange: noop, onHelp: noop, onClear: noop, onPremium: noop };
   const phone = render(ProfileScreen, props);
-  ordered(phone, ["Гостевой профиль", ">Настройки<", ">Оформление<", "Режим концентрации", "Напоминания о перерыве", ">Подписка<", "Помощь и объяснения", "Данные на устройстве"]);
+  ordered(phone, ["Гостевой профиль", ">Настройки<", ">Оформление<", "Режим концентрации", "Напоминания о перерыве", ">Подписка «Плюс»<", "Помощь и объяснения", "Данные на устройстве"]);
   const themes = phone.split('aria-label="Тема оформления"')[1].split('</div>')[0];
   assert.equal((themes.match(/<button/g) ?? []).length, 2);
   assert.match(themes, /Светлая/);

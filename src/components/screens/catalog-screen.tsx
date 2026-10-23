@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BookOpen, Hash, ListFilter, Shuffle } from "lucide-react";
+import { ArrowRight, BookOpen, Bookmark, CircleX, ClipboardCheck, Hash, ListFilter, Shuffle } from "lucide-react";
 import { ExamPicker, PageIntro, FeatureCard } from "@/components/ui";
 import { getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
@@ -24,6 +24,11 @@ type CatalogScreenProps = {
   mockReady?: boolean;
   onVariant?: (variantNumber: number, replace: boolean) => void;
   onResumeVariant?: (sessionId: string) => void;
+  onOpenVariants?: () => void;
+  onMistakes?: () => void;
+  onSaved?: () => void;
+  onContinue?: () => void;
+  resumeLabel?: string;
   game: GameSummary;
 };
 
@@ -37,6 +42,11 @@ export function CatalogScreen({
   mockReady,
   onVariant,
   onResumeVariant,
+  onOpenVariants,
+  onMistakes,
+  onSaved,
+  onContinue,
+  resumeLabel,
   game,
 }: CatalogScreenProps) {
   const isPhone = usePhoneLayout();
@@ -124,6 +134,21 @@ export function CatalogScreen({
       </PageIntro>
 
       <ExamPicker exam={selection.exam} onChange={changeExam} subjectId={selection.subjectId} onSubjectChange={changeSubject} />
+      <nav className="preparation-modes" aria-label="Режим подготовки">
+        <div className="preparation-mode">
+          <button type="button" onClick={() => {
+            changeMode("number");
+            document.querySelector(".catalog-list-heading")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}><Hash size={22} aria-hidden="true" /><strong>По номерам</strong><span>Выбрать номер и решить задание</span></button>
+          {onContinue && <button type="button" className="preparation-continue" onClick={onContinue}>Продолжить{resumeLabel && <span>{resumeLabel}</span>}</button>}
+        </div>
+        <div className="preparation-mode"><button type="button" onClick={onOpenVariants} disabled={!onOpenVariants || selection.subjectId !== "math"}>
+          <ClipboardCheck size={22} aria-hidden="true" /><strong>Решить вариант</strong>
+          <span>{selection.subjectId === "math" ? "Выбор, продолжение и результаты" : "Варианты по предмету готовятся"}</span>
+        </button></div>
+        <div className="preparation-mode"><button type="button" onClick={onMistakes} disabled={!onMistakes}><CircleX size={22} aria-hidden="true" /><strong>Работа над ошибками</strong><span>История ошибок и повторное решение</span></button></div>
+        <div className="preparation-mode"><button type="button" onClick={onSaved} disabled={!onSaved}><Bookmark size={22} aria-hidden="true" /><strong>Сохранённые задания</strong><span>Вернуться к своим закладкам</span></button></div>
+      </nav>
       <details className="catalog-subjects">
         <summary>Все предметы {selection.exam}</summary>
         <div className="catalog-topic-grid">

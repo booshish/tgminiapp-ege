@@ -4,8 +4,9 @@ import { useState } from "react";
 import { ArrowRight, Bookmark as BookmarkIcon, BookOpen, CalendarClock, Check, RotateCcw, Trash2 } from "lucide-react";
 import { PageIntro } from "@/components/ui";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
-import { tasks, taskTopicLabels, type Exam, type Task } from "@/lib/tasks";
-import { theoryTopics, getTheoryTopic } from "@/lib/theory";
+import { tasks, practiceBank, taskTopicLabels, type Exam, type Task } from "@/lib/tasks";
+import { theoryTopics, allTheoryTopics, getTheoryTopic } from "@/lib/theory";
+import { getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
 import type { LearningEvent } from "@/lib/learning-events";
 import type { StudyToolsController } from "@/hooks/use-study-tools";
 import {
@@ -21,18 +22,22 @@ type StudyToolsScreenProps = {
   onTask: (taskId: string) => void;
   onTheory: (topicId: string) => void;
   onPremium: () => void;
+  onBrowseTheory?: () => void;
+  bookmarkKind?: "task" | "theory";
 };
-const catalog = { tasks, topics: theoryTopics, resolveTopic: getTheoryTopic };
+const catalog = { tasks: practiceBank, topics: allTheoryTopics, resolveTopic: getTheoryTopic };
 const titleForTopic = (id: string) => getTheoryTopic(id)?.title ?? taskTopicLabels[id] ?? "Практика по теме";
 const numberLabel = (task: Task) => task.examNumber === null ? "Базовое упражнение" : `№${task.examNumber}`;
 const examLabel = (exam: Exam) => exam === "ЕГЭ" ? "ЕГЭ · Математика · Профиль" : "ОГЭ · Математика";
 
-export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onTheory, onPremium }: StudyToolsScreenProps) {
+export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onTheory, onPremium, bookmarkKind, onBrowseTheory }: StudyToolsScreenProps) {
   const isPhone = usePhoneLayout();
   const [exam, setExam] = useState<"all" | Exam>("all");
-  const [kind, setKind] = useState<"all" | "task" | "theory">("all");
+  const [kindFilter, setKind] = useState<"all" | "task" | "theory">("all");
+  const kind = bookmarkKind ?? kindFilter;
+  const [subject, setSubject] = useState<"all" | SubjectId>("all");
   const [unresolvedOnly, setUnresolvedOnly] = useState(true);
-  const title = mode === "favorites" ? "Избранное" : mode === "mistakes" ? "Мои ошибки" : "Умное повторение";
+  const title = mode === "favorites" ? bookmarkKind === "theory" ? "Конспекты" : bookmarkKind === "task" ? "Сохранённые задания" : "Избранное" : mode === "mistakes" ? "Мои ошибки" : "Повторение";
   const description = mode === "favorites"
     ? "Сохраняй задания и конспекты, чтобы вернуться к ним позже."
     : mode === "mistakes"
@@ -44,15 +49,18 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
       <PageIntro eyebrow="ПОВТОРЕНИЕ НАВЫКОВ" title={title}>{description}</PageIntro>
       <section className="study-tool-card premium-gate">
         <CalendarClock size={30} aria-hidden="true" />
-        <h2>Новые похожие задачи — в Premium</h2>
+        <h2>Новые похожие задачи — в подписке «Плюс»</h2>
         <p>Интервалы повторения меняются по результатам самостоятельных ответов. Подбор предлагает новые варианты по тому же навыку. Выбор остаётся за тобой.</p>
         <p>Ручной список «Мои ошибки», теория и обычная практика бесплатны.</p>
-        <button type="button" className="button button-primary" onClick={onPremium}>Подробнее о Premium <ArrowRight size={18} aria-hidden="true" /></button>
+        <button type="button" className="button button-primary" onClick={onPremium}>Подключить Плюс <ArrowRight size={18} aria-hidden="true" /></button>
       </section>
     </section>
   );
 
-  const bookmarks = tools.bookmarks.filter((item) => (exam === "all" || item.examType === exam) && (kind === "all" || item.kind === kind));
+  const bookmarks = tools.bookmarks.filter((item) => {
+    const itemSubject = item.kind === "task" ? practiceBank.find(task => task.id === item.itemId)?.subjectId : getTheoryTopic(item.itemId)?.subjectId;
+    return (exam === "all" || item.examType === exam) && (kind === "all" || item.kind === kind) && (subject === "all" || itemSubject === subject);
+  });
   const mistakes = mode === "mistakes" ? getMistakes(events, tasks).filter((item) =>
     (exam === "all" || item.task.examType[0] === exam) && (!unresolvedOnly || !item.corrected)) : [];
   const reviews = mode === "review" ? getReviewItems(events, tasks, isPremium).filter((item) => exam === "all" || item.task.examType[0] === exam) : [];
@@ -72,7 +80,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
 
   return (
     <section className="study-tools-page">
-      <PageIntro eyebrow={mode === "review" ? "ДЕМОНСТРАЦИОННЫЙ PREMIUM" : "МОЯ ПОДГОТОВКА"} title={title}>{description}</PageIntro>
+      <PageIntro eyebrow={mode === "review" ? "ДЕМОНСТРАЦИОННЫЙ ПЛЮС" : "МОЯ ПОДГОТОВКА"} title={title}>{description}</PageIntro>
       {!isPhone && storageNote}
       {tools.storageWarning && <p className="study-tools-warning" role="alert">Не удалось прочитать или сохранить закладки. Изменения могут остаться только до закрытия страницы; прежние недоступные данные автоматически не перезаписываются.</p>}
       <div className="study-tools-filters">
@@ -81,10 +89,14 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
             <option value="all">ОГЭ и ЕГЭ</option><option value="ОГЭ">ОГЭ</option><option value="ЕГЭ">ЕГЭ · Профиль</option>
           </select>
         </label>
-        <label>Предмет
+        {mode === "favorites" ? <label>Предмет
+          <select aria-label="Предмет закладок" value={subject} onChange={event => setSubject(event.target.value as "all" | SubjectId)}>
+            <option value="all">Все предметы</option>{getSubjects(exam === "all" ? "ЕГЭ" : exam).map(([id, label]) => <option key={id} value={id}>{label}</option>)}
+          </select>
+        </label> : <label>Предмет
           <select value="math" aria-label="Предмет: математика" disabled><option value="math">Математика</option></select>
-        </label>
-        {mode === "favorites" && <label>Материал
+        </label>}
+        {mode === "favorites" && !bookmarkKind && <label>Материал
           <select aria-label="Материал" value={kind} onChange={(event) => setKind(event.target.value as "all" | "task" | "theory")}>
             <option value="all">Всё избранное</option><option value="task">Задания</option><option value="theory">Теория</option>
           </select>
@@ -92,13 +104,14 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
       </div>
 
       {mode === "favorites" && (!tools.ready ? <p role="status">Загружаем закладки…</p> : bookmarks.length === 0 ? (
-        <div className="study-tool-card study-tools-empty"><BookmarkIcon size={28} aria-hidden="true" /><h2>Здесь пока нет материалов</h2><p>На странице задания или конспекта нажми «Сохранить». Если закладки уже есть, попробуй другой фильтр.</p></div>
+        <div className="study-tool-card study-tools-empty"><BookmarkIcon size={28} aria-hidden="true" /><h2>Здесь пока нет материалов</h2><p>На странице задания или конспекта нажми «Сохранить». Если закладки уже есть, попробуй другой фильтр.</p>{bookmarkKind === "theory" && onBrowseTheory && <button type="button" className="button button-secondary" onClick={onBrowseTheory}>Открыть библиотеку конспектов <ArrowRight size={18} aria-hidden="true" /></button>}</div>
       ) : <div className="study-tools-list">{bookmarks.map((bookmark) => {
         const material = resolveBookmark(bookmark, catalog);
         if (!material) return null;
-        const task = bookmark.kind === "task" ? tasks.find((item) => item.id === bookmark.itemId) : undefined;
+        const task = bookmark.kind === "task" ? practiceBank.find((item) => item.id === bookmark.itemId) : undefined;
+        const itemSubject = task?.subjectId ?? getTheoryTopic(bookmark.itemId)?.subjectId ?? "math";
         return <article className="study-tool-card" key={bookmark.key}>
-          <span className="study-tool-meta">{examLabel(bookmark.examType)}{task ? ` · ${numberLabel(task)}` : " · Теория"}</span>
+          <span className="study-tool-meta">{bookmark.examType} · {subjectTitle(itemSubject)}{task ? ` · ${numberLabel(task)}` : " · Теория"}</span>
           <h2>{material.title}</h2>
           {task && <p>{titleForTopic(task.topicId)}</p>}
           <div className="study-tool-actions">

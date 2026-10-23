@@ -44,7 +44,7 @@ const subscription = (changes = {}) => ({ schemaVersion: 1, authority: "server",
 test("Premium landing renders three informational plans without fake checkout or unavailable subjects", () => {
   const html = landing({ previewNow: new Date("2026-10-21T12:00:00Z") });
   const text = plain(html);
-  for (const title of ["Точка Premium", "Старт", "Оптимальный", "Свой набор", "Выгодный выбор"]) assert.ok(text.includes(title));
+  for (const title of ["Точка Плюс", "Старт", "Оптимальный", "Свой набор", "Выгодный выбор"]) assert.ok(text.includes(title));
   assert.equal((html.match(/class="premium-plan(?: premium-plan-featured)?"/g) ?? []).length, 3);
   assert.equal((html.match(/<button[^>]*disabled=""/g) ?? []).length, 4);
   assert.match(html, /<select[^>]*id="premium-custom-slots"[^>]*disabled=""/);
@@ -118,8 +118,8 @@ test("trial status is read-only and explains automatic Free without charges", ()
 
 test("trial headline has no card marketing while terms remain transparent and inactive", () => {
   const html = landing({ previewNow: new Date("2026-10-21T12:00:00Z") });
-  assert.match(html, /id="premium-trial-title">7 дней Premium<\/h2>/);
-  assert.doesNotMatch(html, /Premium без карты|1 ₽/);
+  assert.match(html, /id="premium-trial-title">7 дней Плюса<\/h2>/);
+  assert.doesNotMatch(html, /Плюс без карты|1 ₽/);
   assert.match(html, /class="premium-trial-terms"/);
   assert.match(plain(html), /привязка карты не требуется/);
   assert.match(plain(html), /без списаний и автоматического продления/);

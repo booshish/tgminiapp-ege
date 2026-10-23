@@ -30,6 +30,7 @@ export type Selection = {
   catalogMode?: "number" | "topic";
   examNumber?: number;
   sessionId?: string;
+  bookmarkKind?: "task" | "theory";
 };
 export type Route = Omit<Selection, "taskIndex"> & {
   view: View;
@@ -45,11 +46,11 @@ export const viewTitles: Record<View, string> = {
   trainer: "Мой тренер",
   progress: "Мои результаты",
   profile: "Мой профиль",
-  premium: "Premium",
+  premium: "Точка Плюс",
   help: "Помощь и объяснения",
   favorites: "Избранное",
   mistakes: "Мои ошибки",
-  review: "Умное повторение",
+  review: "Мой тренер · Повторение",
   mock: "Учебный вариант",
 };
 
@@ -66,6 +67,7 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
   const subject = params.get("subject");
   const taskId = params.get("task");
   const part = params.get("part");
+  const bookmarkKind = params.get("kind");
   return {
     view: Object.hasOwn(viewTitles, view) ? (view as View) : "home",
     taskIndex:
@@ -77,6 +79,7 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
     topicId: params.get("topic") || undefined,
     ...(taskId && /^[a-z0-9-]{1,160}$/.test(taskId) ? { taskId } : {}),
     ...(part === "1" || part === "2" || part === "3" ? { part: Number(part) as 1 | 2 | 3 } : {}),
+    ...(view === "favorites" && (bookmarkKind === "task" || bookmarkKind === "theory") ? { bookmarkKind } : {}),
     prototypeId: params.get("prototype") || undefined,
     materialId: params.get("material") || undefined,
     invalidContext:

@@ -54,22 +54,22 @@ export function ProgressScreen({
       <>
         <PageIntro eyebrow="РЕЗУЛЬТАТЫ ПРАКТИКИ" title="Мои результаты">
           Статистика ответов, история ошибок и динамика занятий доступны в
-          Premium.
+          подписке «Плюс».
         </PageIntro>
         <StreakSummary summary={game} />
         <section className="premium-gate">
           <span className="feature-icon">
             <ChartNoAxesCombined size={28} aria-hidden="true" />
           </span>
-          <span className="tag">Возможности Premium</span>
-          <h2>Статистика ответов в Premium</h2>
+          <span className="tag">Возможности Плюса</span>
+          <h2>Статистика ответов в подписке «Плюс»</h2>
           <p>
             Подробные результаты, история ошибок и динамика занятий доступны в
-            Premium. Здесь можно будет увидеть, как меняется твоя практика, и
+            подписке «Плюс». Здесь можно будет увидеть, как меняется твоя практика, и
             вернуться к темам, которые требуют внимания.
           </p>
           <button className="button button-primary" onClick={onPremium}>
-            Подробнее о Premium <ArrowRight size={18} aria-hidden="true" />
+            Подключить Плюс <ArrowRight size={18} aria-hidden="true" />
           </button>
         </section>
       </>
@@ -83,7 +83,7 @@ export function ProgressScreen({
 
   return (
     <>
-      <PageIntro eyebrow="ДЕМОНСТРАЦИОННЫЙ PREMIUM" title="Мои результаты">
+      <PageIntro eyebrow="ДЕМОНСТРАЦИОННЫЙ ПЛЮС" title="Мои результаты">
         Реальные ответы из этого браузера. Без примерных процентов и оценок
         готовности к экзамену.
       </PageIntro>

@@ -96,7 +96,7 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
           </article>
           <article>
             <RefreshCw size={24} strokeWidth={1.7} aria-hidden="true" />
-            <h3>Умное повторение</h3>
+            <h3>Повторение в тренере</h3>
             <p>Новые похожие задания и интервалы повторения по сохранённым ответам.</p>
             <span className="premium-feature-state">Работает в деморежиме</span>
           </article>
@@ -132,7 +132,7 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
       <header className="premium-landing-hero">
         <div>
           <span className="eyebrow">БОЛЬШЕ ПОДДЕРЖКИ В ПОДГОТОВКЕ</span>
-          <h1 id="premium-title">Точка Premium</h1>
+          <h1 id="premium-title">Точка Плюс</h1>
           <p>Разбирайся в ошибках, возвращайся к нужным темам и следи за результатами подготовки.</p>
         </div>
         <CoachIllustration className="premium-landing-mascot" />
@@ -158,7 +158,7 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
             const enoughSubjects = plan.slots <= supportedCount;
             return <article key={plan.id} className={`premium-plan${plan.id === "optimal" ? " premium-plan-featured" : ""}`} aria-labelledby={`premium-plan-${plan.id}`}>
               {plan.id === "optimal" && <span className="premium-plan-recommendation"><Check size={15} aria-hidden="true" />Выгодный выбор</span>}
-              <div className="premium-plan-heading"><h3 id={`premium-plan-${plan.id}`}>{plan.title}</h3><p>{plan.subtitle}</p></div>
+              <div className="premium-plan-heading"><h3 id={`premium-plan-${plan.id}`}>{plan.title}</h3><p>Точка Плюс · {plan.slots} {plan.slots === 1 ? "предмет" : plan.slots < 5 ? "предмета" : "предметов"}</p><p>{plan.subtitle}</p></div>
               <div className="premium-plan-price" aria-live="polite"><strong>{!calendar ? "—" : price === null ? "Не определена" : `${priceFormat.format(price)} ₽`}</strong><span>{!calendar ? "Уточняем срок" : period === "monthly" ? "в месяц" : "за весь период"}</span></div>
               {plan.id === "custom" && <div className="premium-custom-selection">
                 <label htmlFor="premium-custom-slots">Количество предметов</label>
@@ -169,16 +169,16 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
                 <p id="premium-custom-note" className="premium-secondary">{customOptions.length === 0 ? "Пример цены на 4 предмета. Набор пока недоступен." : period !== "monthly" ? "Для этого срока доступны только наборы с утверждённой ценой." : "Стоимость зависит от числа слотов."}</p>
               </div>}
               {plan.detail && <p className="premium-plan-description">{plan.detail}</p>}
-              <p className="premium-plan-includes"><Check size={18} aria-hidden="true" />Все доступные функции Premium</p>
+              <p className="premium-plan-includes"><Check size={18} aria-hidden="true" />Все доступные функции Плюса</p>
               <div className="premium-plan-footer">
                 {!enoughSubjects && plan.id !== "custom" && <p className="premium-secondary">Станет доступен, когда появятся новые предметы.</p>}
-                <button type="button" className="button premium-unavailable-button" disabled aria-describedby="premium-payment-note"><LockKeyhole size={17} aria-hidden="true" />Оплата пока недоступна</button>
+                <button type="button" className="button premium-unavailable-button" disabled title="Оплата пока недоступна" aria-describedby="premium-payment-note"><LockKeyhole size={17} aria-hidden="true" />Подключить Плюс</button>
               </div>
             </article>;
           })}
         </div>
         {isPhone && pricingNotes}
-        <p id="premium-payment-note" className="premium-payment-note">Это информационная страница. Оплата, аккаунты и серверная проверка подписки ещё не подключены. Точную стоимость и срок при покупке будет подтверждать сервер.</p>
+        <p id="premium-payment-note" className="premium-payment-note">Оплата пока недоступна. Это информационная страница. Оплата, аккаунты и серверная проверка подписки ещё не подключены. Точную стоимость и срок при покупке будет подтверждать сервер.</p>
       </section>
 
       {isPhone && features}
@@ -186,8 +186,8 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
       <section className="premium-trial" aria-labelledby="premium-trial-title">
         <div>
           <span className="eyebrow">ПРОБНЫЙ ПЕРИОД · ПЛАНИРУЕТСЯ</span>
-          <h2 id="premium-trial-title">{subscriptionPrices.trial.days} дней Premium</h2>
-          <p>Полный Premium на {subscriptionPrices.trial.slots} выбранных предмета. Затем — Free без списаний, с сохранением данных.</p>
+          <h2 id="premium-trial-title">{subscriptionPrices.trial.days} дней Плюса</h2>
+          <p>Подписка «Плюс» на {subscriptionPrices.trial.slots} выбранных предмета. Затем — Free без списаний, с сохранением данных.</p>
           <p className="premium-secondary">Один пробный период на пользователя. Он появится после подключения аккаунтов, проверки права на пробу и нужного набора предметов.</p>
           <details className="premium-trial-terms">
             <summary>Условия пробного периода</summary>
@@ -199,7 +199,7 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
 
       <section className="premium-rules" aria-label="Как будет работать подписка">
         <article><Layers3 size={23} aria-hidden="true" /><div><h3>Предметы занимают слоты</h3><p>Свободный слот можно будет заполнить позже без доплаты. Один выбранный предмет — заменить раз за расчётный месяц. Неиспользованные замены не накапливаются.</p></div></article>
-        <article><ShieldCheck size={23} aria-hidden="true" /><div><h3>Подготовка сохраняется</h3><p>После окончания Premium останутся XP, серии, ответы и выбранные предметы. Бесплатная подготовка продолжится, а Premium-данные вновь откроются после продления.</p></div></article>
+        <article><ShieldCheck size={23} aria-hidden="true" /><div><h3>Подготовка сохраняется</h3><p>После окончания подписки «Плюс» останутся XP, серии, ответы и выбранные предметы. Бесплатная подготовка продолжится, а данные Плюса вновь откроются после продления.</p></div></article>
       </section>
 
       <details className="premium-development">
@@ -212,7 +212,7 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
       </details>
       <section className="premium-free-note" aria-labelledby="premium-free-title">
         <h2 id="premium-free-title">Бесплатная подготовка остаётся бесплатной</h2>
-        <p>Вся теория, стандартные задания без лимита, проверка и решения после ответа, XP, серии, закладки, ручные «Мои ошибки» и базовые результаты учебных вариантов. Premium не добавляет множителей XP.</p>
+        <p>Вся теория, стандартные задания без лимита, проверка и решения после ответа, XP, серии, закладки, ручные «Мои ошибки» и базовые результаты учебных вариантов. Плюс не добавляет множителей XP.</p>
       </section>
       <div className="premium-page-actions">
         <button type="button" className="button button-primary" onClick={onBack}>Вернуться к обучению<ArrowRight size={18} aria-hidden="true" /></button>

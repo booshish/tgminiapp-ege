@@ -30,7 +30,7 @@ export function TrainerScreen({
   const isPhone = usePhoneLayout();
   const demoStatus = (
     <p className="muted">
-      В демонстрационном Premium работают интервалы повторения и
+      В демонстрации подписки «Плюс» работают интервалы повторения и
       рекомендации по сложности. Полная диагностика и персональный план ещё разрабатываются.
     </p>
   );
@@ -38,20 +38,20 @@ export function TrainerScreen({
     return (
       <>
         <PageIntro eyebrow="ПОВТОРЕНИЕ ПО ТЕМАМ" title="Мой тренер">
-          Результаты по темам и переход к повторению доступны в Premium.
+          Результаты по темам и переход к повторению доступны в подписке «Плюс».
         </PageIntro>
         <section className="premium-gate trainer-gate">
           <CoachIllustration className="premium-coach" />
-          <span className="tag">Возможности Premium</span>
+          <span className="tag">Возможности Плюса</span>
           <h2>Повторение на основе ответов</h2>
           <p>
             Тренер объединяет результаты практики и помогает вернуться к темам с
             повторяющимися ошибками. Подробные результаты и переход к повторению
-            доступны в Premium.
+            доступны в подписке «Плюс».
           </p>
           {!isPhone && demoStatus}
           <button className="button button-primary" onClick={onPremium}>
-            Подробнее о Premium <ArrowRight size={18} aria-hidden="true" />
+            Подключить Плюс <ArrowRight size={18} aria-hidden="true" />
           </button>
           {isPhone && <details className="trainer-method-details">
             <summary>Как работают рекомендации</summary>
@@ -83,11 +83,11 @@ export function TrainerScreen({
             готовности к экзамену.
           </p>
           <p className="muted">
-            «Умное повторение» предлагает новые похожие задачи и добровольные
+            Повторение в тренере предлагает новые похожие задачи и добровольные
             рекомендации по сложности. Это прозрачные учебные правила;
             персональный план пока не подключён.
           </p>
-          <button className="button button-primary" onClick={onReview}>Умное повторение <ArrowRight size={18} aria-hidden="true" /></button>
+          <button className="button button-primary" onClick={onReview}>Перейти к повторению <ArrowRight size={18} aria-hidden="true" /></button>
         </div>
       </section>
   );
@@ -112,7 +112,7 @@ export function TrainerScreen({
 
   return (
     <>
-      <PageIntro eyebrow="ДЕМОНСТРАЦИОННЫЙ PREMIUM" title="Мой тренер">
+      <PageIntro eyebrow="ДЕМОНСТРАЦИОННЫЙ ПЛЮС" title="Мой тренер">
         Темы для повторения по сохранённым ответам.
       </PageIntro>
       {!isPhone && overview}

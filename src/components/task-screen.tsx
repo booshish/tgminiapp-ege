@@ -138,6 +138,10 @@ function TaskAttempt({
     });
   }
 
+  const passageEnd = task.sharedConditionId && task.subjectId === "russian" && task.prompt.startsWith("(1)") ? task.prompt.indexOf("\n\n") : -1;
+  const sourceText = passageEnd > 0 ? task.prompt.slice(0, passageEnd) : null;
+  const question = sourceText ? task.prompt.slice(passageEnd + 2) : task.prompt;
+
   return (
     <section className="task-screen" data-subject={task.subjectId} aria-labelledby="task-heading">
       <div className="task-topbar">
@@ -162,8 +166,13 @@ function TaskAttempt({
         {!examNumber && <p className="task-title">{task.title}</p>}
       </header>
 
+      <div className={sourceText ? "task-reading-layout" : "task-single-layout"}>
+      {sourceText && <article className="task-source-text" aria-labelledby="task-source-heading">
+        <h2 id="task-source-heading">Исходный текст</h2>
+        <p className="task-prompt">{sourceText}</p>
+      </article>}
       <div className="task-card">
-        <p className="task-prompt">{task.prompt}</p>
+        <p className="task-prompt">{question}</p>
         {task.resources && <section aria-label="Материалы задания"><h2>Материалы задания</h2><ul>
           {task.resources.map((resource) => <li key={resource.name}><a download={resource.name} href={`data:text/plain;charset=utf-8,${encodeURIComponent(resource.content)}`}>{resource.name} · скачать</a></li>)}
         </ul></section>}
@@ -315,6 +324,8 @@ function TaskAttempt({
             </button>}
           </div>
         )}
+      </div>
+
       </div>
 
       {(!phoneLayout || !solutionVisible) && <nav
