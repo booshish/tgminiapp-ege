@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   BookOpen,
   BadgePlus,
@@ -82,11 +82,12 @@ const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "mistakes", label: "Мои ошибки", icon: CircleX },
   { view: "mock", label: "Учебный вариант", icon: ClipboardCheck },
 ];
+const plusMenuItem = { view: "premium" as const, label: "Плюс", icon: BadgePlus };
 const desktopNavigation = [
   navigation[0], navigation[2], navigation[1],
   { view: "favorites" as const, label: "Конспекты", icon: NotebookPen, bookmarkKind: "theory" as const },
   navigation[4], navigation[7], navigation[5],
-  { view: "premium" as const, label: "Плюс", icon: BadgePlus },
+  plusMenuItem,
 ];
 const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
 const phoneMoreOrder: View[] = ["mistakes", "favorites", "mock", "profile", "trainer"];
@@ -129,6 +130,14 @@ export function StudyApp() {
   const [now, setNow] = useState(() => new Date());
   const game = getGameSummary(state.game, now);
   const menuDialog = useRef<HTMLDialogElement>(null);
+  const closeMoreMenu = useCallback(() => {
+    if (menuDialog.current?.open) menuDialog.current.close();
+    setMoreOpen(false);
+  }, []);
+  const showMoreMenu = useCallback(() => {
+    if (menuDialog.current && !menuDialog.current.open) menuDialog.current.showModal();
+    setMoreOpen(true);
+  }, []);
   const catalogRef = useRef<HTMLDivElement>(null);
   const helpReturn = useRef<{
     hash: string;
@@ -230,6 +239,12 @@ export function StudyApp() {
     };
   }, []);
 
+  // History/query changes and phone/tablet transitions can bypass open(view).
+  // Remove the native modal's inert layer before focusing the new page.
+  useLayoutEffect(() => {
+    closeMoreMenu();
+  }, [route, phoneLayout, closeMoreMenu]);
+
   useLayoutEffect(() => {
     if (!ready) return;
     const returningFromHelp =
@@ -264,18 +279,10 @@ export function StudyApp() {
     restoreViewportPosition(focusPosition.current);
     focusPosition.current = null;
   }, [state.focusMode]);
-  useEffect(() => {
-    const dialog = menuDialog.current;
-    if (!dialog) return;
-    if (moreOpen && !dialog.open) dialog.showModal();
-    if (!moreOpen && dialog.open) dialog.close();
-  }, [moreOpen]);
-
   function open(view: View) {
     if (route.view === "catalog") catalogScroll.capture();
     // Remove the modal's inert state before the next screen receives focus.
-    if (menuDialog.current?.open) menuDialog.current.close();
-    setMoreOpen(false);
+    closeMoreMenu();
     if (view === "catalog") {
       practice.openCatalog();
     }
@@ -362,8 +369,7 @@ export function StudyApp() {
   }
   function openHelp() {
     if (route.view === "help") {
-      menuDialog.current?.close();
-      setMoreOpen(false);
+      closeMoreMenu();
       return;
     }
     helpReturn.current = {
@@ -804,28 +810,35 @@ export function StudyApp() {
               : ""
           }
           aria-haspopup="dialog"
+          aria-controls="mobile-menu"
           aria-expanded={moreOpen}
-          onClick={() => setMoreOpen(true)}
+          onClick={showMoreMenu}
         >
           <Menu size={22} />
           <span>Ещё</span>
         </button>
       </nav>
       <dialog
+        id="mobile-menu"
         ref={menuDialog}
         className="navigation-dialog"
         aria-labelledby="menu-title"
-        onClose={() => setMoreOpen(false)}
-        onCancel={() => setMoreOpen(false)}
+        onClose={(event) => {
+          // A queued close event may arrive after a quick reopen in Safari.
+          if (!event.currentTarget.open) setMoreOpen(false);
+        }}
+        onCancel={(event) => { event.preventDefault(); closeMoreMenu(); }}
         onClick={(event) => {
-          if (event.target === event.currentTarget) setMoreOpen(false);
+          if (event.target !== event.currentTarget) return;
+          const box = event.currentTarget.getBoundingClientRect();
+          if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) closeMoreMenu();
         }}
       >
         <div className="dialog-title">
           <h2 id="menu-title">Разделы</h2>
           <button
             className="icon-button"
-            onClick={() => setMoreOpen(false)}
+            onClick={closeMoreMenu}
             aria-label="Закрыть меню"
           >
             <X size={22} aria-hidden="true" />
@@ -841,7 +854,7 @@ export function StudyApp() {
             >
               <Icon size={23} aria-hidden="true" />
               {phoneLayout ? <span className="menu-item-label">{label}</span> : label}
-              {phoneLayout && view === "trainer" && <span className="menu-premium-label">Плюс</span>}
+              {phoneLayout && view === "trainer" && <span className="menu-premium-label">{plusMenuItem.label}</span>}
               <ChevronRight size={18} aria-hidden="true" />
             </button>
           ))}
@@ -850,10 +863,10 @@ export function StudyApp() {
             Помощь и объяснения
             <ChevronRight size={18} aria-hidden="true" />
           </button>
-          <button onClick={() => open("premium")}>
-            <Grid2X2 size={23} />
-            Плюс
-            <ChevronRight size={18} />
+          <button type="button" aria-label={plusMenuItem.label} onClick={() => open(plusMenuItem.view)}>
+            <Grid2X2 size={23} aria-hidden="true" />
+            <span className="menu-item-label">{plusMenuItem.label}</span>
+            <ChevronRight size={18} aria-hidden="true" />
           </button>
         </nav>
       </dialog>

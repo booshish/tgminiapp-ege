@@ -1,5 +1,16 @@
 .desktop-menu-controls { display: none; }
 
+/* Touch navigation: decorations never consume a neighbouring item's tap. */
+@media (pointer: coarse) {
+  .sidebar .desktop-nav > button, .navigation-dialog nav > button, .mobile-nav > button {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  .sidebar .desktop-nav > button > :is(svg, span),
+  .navigation-dialog nav > button > :is(svg, span),
+  .mobile-nav > button > :is(svg, span) { pointer-events: none; }
+}
+
 .preparation-modes {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
