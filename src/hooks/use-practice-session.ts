@@ -2,7 +2,9 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Exam, Route, Selection, View } from "@/lib/navigation";
-import { practiceBank as tasks } from "@/lib/tasks";
+import { practiceBank as tasks, getPracticeTasks } from "@/lib/tasks";
+import { ensureTaskPackages } from "@/lib/task-packages";
+import { useTaskPackages } from "@/hooks/use-task-packages";
 import { orderPracticeTasks } from "@/lib/practice-order";
 import {
   createPracticeSession,
@@ -74,10 +76,12 @@ function newSessionId() {
 export function usePracticeSession({
   route,
   navigate,
-  ready,
+  ready: progressReady,
   exam,
   setExam,
 }: Props) {
+  const packages = useTaskPackages(route, progressReady);
+  const ready = packages.ready;
   const [catalog, setCatalog] = useState<CatalogSelection>(
     defaultCatalogSelection,
   );
@@ -86,6 +90,10 @@ export function usePracticeSession({
   const [activeId, setActiveId] = useState<string | null>(null);
   const [initialized, setInitialized] = useState(false);
   const [storageWarning, setStorageWarning] = useState(false);
+  const [packageError, setPackageError] = useState("");
+  const starting = useRef(false);
+  const latestRoute = useRef(route);
+  latestRoute.current = route;
   const initialRead = useRef(false);
   const canPersist = useRef(false);
   const latest = useRef<StoredPractice | null>(null);
@@ -119,17 +127,17 @@ export function usePracticeSession({
   }, [ready, exam, route, setExam]);
 
   useEffect(() => {
-    if (!initialized || !canPersist.current || !latest.current) return;
+    if (!ready || !initialized || !canPersist.current || !latest.current) return;
     try {
       window.localStorage.setItem(practiceStorageKey, serializeStoredPractice(latest.current));
     } catch {
       setStorageWarning(true);
     }
-  }, [initialized, catalog, sessions, activeId, taskStates]);
+  }, [ready, initialized, catalog, sessions, activeId, taskStates]);
 
   useEffect(() => {
     const persist = () => {
-      if (!initialized || !canPersist.current || !latest.current) return;
+      if (!ready || !initialized || !canPersist.current || !latest.current) return;
       try {
         window.localStorage.setItem(practiceStorageKey, serializeStoredPractice(latest.current));
       } catch {
@@ -138,7 +146,7 @@ export function usePracticeSession({
     };
     window.addEventListener("pagehide", persist);
     return () => window.removeEventListener("pagehide", persist);
-  }, [initialized]);
+  }, [ready, initialized]);
 
   useEffect(() => {
     if (!initialized || route.view !== "catalog" || !route.exam) return;
@@ -318,9 +326,21 @@ export function usePracticeSession({
   }, [catalog, exam, navigate]);
 
   const start = useCallback(
-    (next: CatalogSelection, initialTaskId?: string, shuffleSeenIds?: readonly string[]) => {
+    async (next: CatalogSelection, initialTaskId?: string, shuffleSeenIds?: readonly string[]) => {
       const selection = normalizeCatalogSelection(next);
-      const previous = findRecentPracticeSession(sessions, selection, true, activeId);
+      if (starting.current) return;
+      starting.current = true;
+      const origin = latestRoute.current;
+      setPackageError("");
+      try {
+        await ensureTaskPackages({ examType: selection.exam, subjectId: selection.subjectId, examNumber: selection.examNumber, topicId: selection.topicId, prototypeId: selection.prototypeId }, initialTaskId);
+      } catch {
+        setPackageError("Не удалось загрузить пакет заданий. Повторите выбор номера. Черновики сохранены.");
+        return;
+      } finally { starting.current = false; }
+      if (latestRoute.current !== origin) return;
+      const recent = findRecentPracticeSession(sessions, selection, true, activeId);
+      const previous = recent ? { ...recent, taskIds: [...new Set([...recent.taskIds, ...getPracticeTasks({ examType: selection.exam, subjectId: selection.subjectId, level: selection.level, examNumber: selection.examNumber, topicId: selection.topicId, prototypeId: selection.prototypeId }).map((t) => t.id)])] } : undefined;
       if (previous && shuffleSeenIds === undefined && (!initialTaskId || previous.taskIds.includes(initialTaskId))) {
         setCatalog(selection);
         setExam(selection.exam);
@@ -436,7 +456,8 @@ export function usePracticeSession({
 
   return {
     catalog,
-    initialized,
+    initialized: initialized && ready,
+    contentError: packages.error || packageError,
     storageWarning,
     dismissStorageWarning,
     session,

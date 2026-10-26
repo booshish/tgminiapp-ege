@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-26",
+  "kind": "original-training-not-official-exam",
+  "reviews": [
+    {
+      "id": "oge-informatics-pilot-20261026-01",
+      "sha256": "8f1eb10ba511e68a1f5318c371c520acaec7d49e15be9cbde08c43dd96f3449e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-02",
+      "sha256": "25327dfdfbb0648e767d1884d686d8c85931e2b76d786a345af5cc7209aa80df",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-03",
+      "sha256": "934bca9a714571b6814dfe6bf92688eba8267e9c802dab33a0aff035888064c1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-04",
+      "sha256": "2932a3ea72e9ad3690b82bad73a118d67bc72ce4a946ba74ac7dc051c5a1c74d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-05",
+      "sha256": "c8f0ac2a406ca88fa2b16a43858261f451a562fafb930df3d0c976d232239950",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-06",
+      "sha256": "a240c783398e454135a3eab978b3dc033bc7d660dcdd3a65f99743870f99eb70",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-07",
+      "sha256": "9176ddeca3842010e8c3fc230e46f5c7bef591cce4b9d2b587364f42cfc052cd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-08",
+      "sha256": "17e83dd76c1c2dd82bb897d75fa7f882b0be31978eb21965be45e740b0c8fcef",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-09",
+      "sha256": "956ba88521e0ebc159db0f878a4ff2e5d5da1862422d52879b055426683710f5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-10",
+      "sha256": "146b57c684871027c98d9bb9fa5bcd211215e282f27e3130298b66cb5aea44d3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-11",
+      "sha256": "ee5bcecf75f63351c67e2d7d87bc894ac8b3471f1e1600aec62fc89d3e87cfbc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    },
+    {
+      "id": "oge-informatics-pilot-20261026-12",
+      "sha256": "697786608a5d8d1fba4af1d0aab141657058069ca439fef733405dd489ff468f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-task-pilot.mjs",
+        "scripts/original-informatics-pilot.mjs"
+      ]
+    }
+  ]
+}

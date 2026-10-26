@@ -8,7 +8,7 @@ import { getExamDefinition } from "@/lib/exams";
 import { VariantLaunchCard } from "@/components/variant-launch-card";
 import type { MockState } from "@/lib/mock-exam";
 import type { CatalogSelection } from "@/lib/practice";
-import { getPracticeTasks, practicePrototypes as prototypes, taskTopicLabels } from "@/lib/tasks";
+import { getPracticeTasks, getPracticeTaskCount, practicePrototypes as prototypes, taskTopicLabels } from "@/lib/tasks";
 import { getTheoryTopic, allTheoryTopics as theoryTopics } from "@/lib/theory";
 import { StreakSummary } from "@/components/game-motivation";
 import type { GameSummary } from "@/lib/gamification";
@@ -83,7 +83,7 @@ export function CatalogScreen({
   }
   const availablePrototypes = prototypes.filter(
     (prototype) =>
-      getPracticeTasks({ ...filter, prototypeId: prototype.id }).length > 0,
+      getPracticeTaskCount({ ...filter, prototypeId: prototype.id }) > 0,
   );
   const chosenPrototype = availablePrototypes.find(
     (prototype) => prototype.id === selection.prototypeId,
@@ -279,8 +279,7 @@ export function CatalogScreen({
                       prototypeId: undefined,
                     };
                     const taskCount =
-                      getPracticeTasks({ ...filter, examNumber: item.number })
-                        .length;
+                      getPracticeTaskCount({ ...filter, examNumber: item.number });
                     return (
                       <button
                         type="button"
@@ -342,11 +341,11 @@ export function CatalogScreen({
                     : undefined,
               };
               const hasTasks =
-                getPracticeTasks({
+                getPracticeTaskCount({
                   ...filter,
                   topicId: topic.id,
                   prototypeId: cardSelection.prototypeId,
-                }).length > 0;
+                }) > 0;
               return (
                 <button
                   type="button"

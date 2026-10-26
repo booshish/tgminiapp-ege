@@ -41,6 +41,7 @@ import { useMockExam } from "@/hooks/use-mock-exam";
 import { clearMockStorage } from "@/lib/mock-exam";
 import { useDemoProgress } from "@/hooks/use-demo-progress";
 import { useStudyNavigation } from "@/hooks/use-study-navigation";
+import { useTaskPackages } from "@/hooks/use-task-packages";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { usePracticeSession } from "@/hooks/use-practice-session";
 import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
@@ -98,6 +99,7 @@ export function StudyApp() {
     ? phoneMoreOrder.map((view) => navigation.find((item) => item.view === view)!)
     : navigation.slice(4);
   const { route, navigate, back } = useStudyNavigation();
+  const bootstrapPackages = useTaskPackages(route, true);
   const {
     state,
     ready,
@@ -113,7 +115,7 @@ export function StudyApp() {
     recordSolutionViewed,
     recordSolutionExposed,
     clearLocalData,
-  } = useDemoProgress();
+  } = useDemoProgress(bootstrapPackages.ready);
   const mock = useMockExam({
     onAnswer: recordAnswer,
     onSelfAssessment: (task, score) => confirmSelfAssessment(task, score, true),
@@ -122,7 +124,6 @@ export function StudyApp() {
       else recordSolutionExposed(task, sessionId);
     },
   }, ready);
-  const studyTools = useStudyTools();
   const [demoPremium, setDemoPremium] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const [sidebarMode, setSidebarMode] = useState<"compact" | "expanded" | "hidden">("compact");
@@ -153,6 +154,7 @@ export function StudyApp() {
     exam: state.exam,
     setExam,
   });
+  const studyTools = useStudyTools(practice.initialized);
   const catalogScroll = useCatalogScroll({
     visible: route.view === "catalog",
     listKey: catalogListKey(practice.catalog),
@@ -511,6 +513,7 @@ export function StudyApp() {
           tabIndex={-1}
           className={`main-content view-${route.view}`}
         >
+          {(bootstrapPackages.error || practice.contentError) && <p role="alert">{bootstrapPackages.error || practice.contentError}</p>}
           {demoAllowed && (
             <div className="developer-notice" role="note">
               <ShieldCheck size={20} />
@@ -652,13 +655,13 @@ export function StudyApp() {
                 }
                 value={session.states[currentTask.id] ?? emptyTaskState()}
                 onChange={practice.changeTask}
-                onAnswer={(task, input, correct, viewed) => task.subjectId === "math" ? recordAnswer(task, input, correct, viewed) : { id: crypto.randomUUID(), xpAwarded: 0 }}
+                onAnswer={recordAnswer}
                 maxPrimaryScore={
                   getTaskXPScoringRule(currentTask)?.maxPrimaryScore ?? null
                 }
                 selfAssessment={getSelfAssessment(state.game, currentTask.id)}
                 onSelfAssessment={confirmSelfAssessment}
-                onSolutionViewed={(task, attemptId) => { if (task.subjectId === "math") recordSolutionViewed(task, attemptId); }}
+                onSolutionViewed={recordSolutionViewed}
                 focusMode={concentrating}
                 onNext={() => practice.move(1)}
                 canNext={

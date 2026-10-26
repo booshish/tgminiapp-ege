@@ -28,7 +28,7 @@ function eventId() {
     : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
 }
 
-export function useDemoProgress() {
+export function useDemoProgress(enabled = true) {
   const [state, setState] = useState<LearningState>(emptyLearningState);
   const [ready, setReady] = useState(false);
   const [storageWarning, setStorageWarning] = useState(false);
@@ -87,7 +87,7 @@ export function useDemoProgress() {
   useEffect(() => {
     // A failed read must never be followed by writing an empty replacement.
     // Keep this decision stable when Strict Mode repeats mount effects.
-    if (initialReadAttempted.current) return;
+    if (!enabled || initialReadAttempted.current) return;
     initialReadAttempted.current = true;
     try {
       const raw = window.localStorage.getItem(storageKey);
@@ -119,7 +119,7 @@ export function useDemoProgress() {
       setStorageWarning(true);
     }
     setReady(true);
-  }, []);
+  }, [enabled]);
   useEffect(() => {
     const sync = (event: StorageEvent) => {
       if (

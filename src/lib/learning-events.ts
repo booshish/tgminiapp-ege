@@ -1,5 +1,5 @@
 import type { Exam, SubjectId } from "./tasks";
-import { checkTaskAnswer, prototypes, tasks } from "./tasks";
+import { checkTaskAnswer, practicePrototypes as prototypes, practiceBank as tasks } from "./tasks";
 import type { ExamLevel } from "./exams";
 import {
   emptyGameState,
@@ -174,7 +174,7 @@ function parseEventContext(
     !isIsoDate(value.createdAt) ||
     value.topicId !== task.topicId ||
     value.prototypeId !== task.prototypeId ||
-    value.subjectId !== "math" ||
+    value.subjectId !== task.subjectId ||
     (value.examType !== "ОГЭ" && value.examType !== "ЕГЭ") ||
     !(
       task.examType.includes(value.examType) ||
@@ -196,7 +196,7 @@ function parseEventContext(
     taskId: task.id,
     topicId: task.topicId,
     prototypeId: task.prototypeId,
-    subjectId: "math",
+    subjectId: task.subjectId,
     examType: value.examType,
     createdAt: value.createdAt,
     ...(hasExamMetadata

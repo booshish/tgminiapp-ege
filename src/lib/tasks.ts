@@ -13,6 +13,7 @@ import { informaticsTasks, informaticsPrototypes } from "./content/informatics-b
 import { physicsTasks, physicsPrototypes } from "./content/physics-bank";
 import { russianTasks, russianPrototypes } from "./content/russian-bank";
 import type { SubjectId } from "./subjects";
+import { taskPackageIndex } from "./task-package-index";
 export type { SubjectId } from "./subjects";
 
 export type { Exam } from "./navigation";
@@ -1265,6 +1266,28 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
       (!filter.topicId || task.topicId === filter.topicId) &&
       (!filter.prototypeId || task.prototypeId === filter.prototypeId),
   );
+}
+
+/** Tiny metadata counts include unloaded approved items, never fake Task objects. */
+export function getPracticeTaskCount(filter: PracticeTaskFilter): number {
+  if (!getExamDefinition(filter)?.available) return 0;
+  const present = new Set(practiceBank.map((t) => t.id));
+  return getPracticeTasks(filter).length + taskPackageIndex.flatMap((p) => p.tasks).filter((t) =>
+    !present.has(t.id) && t.examType[0] === filter.examType && t.subjectId === (filter.subjectId ?? "math") &&
+    (filter.examNumber === undefined || t.examNumber === filter.examNumber) &&
+    (!filter.topicId || t.topicId === filter.topicId) && (!filter.prototypeId || t.prototypeId === filter.prototypeId) &&
+    (filter.level == null || t.level === filter.level)).length;
+}
+
+/** Called only after verification against the build-pinned shard digest. Append-only. */
+export function registerTaskPackage(items: Task[]): void {
+  const metadata = taskPackageIndex.flatMap((p) => p.tasks);
+  if (!Array.isArray(items) || items.some((t) => !metadata.some((m) => m.id === t.id && m.subjectId === t.subjectId && m.examNumber === t.examNumber && m.examType[0] === t.examType[0]) ||
+    t.publication?.id !== t.id || !getPublicationDecision(t.publication).allowed)) throw Error("Unapproved task package");
+  const seen = new Set(practiceBank.map((t) => t.id));
+  for (const task of items) if (!seen.has(task.id)) {
+    practiceBank.push(task); selectableTasks.push(task); seen.add(task.id);
+  }
 }
 
 type Rational = { numerator: bigint; denominator: bigint };

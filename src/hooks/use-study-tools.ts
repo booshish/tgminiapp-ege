@@ -11,7 +11,7 @@ import {
 
 const catalog = { tasks, topics: theoryTopics, resolveTopic: getTheoryTopic };
 
-export function useStudyTools() {
+export function useStudyTools(enabled = true) {
   const [state, setState] = useState<StudyToolsState>(emptyStudyToolsState);
   const [ready, setReady] = useState(false);
   const [storageWarning, setStorageWarning] = useState(false);
@@ -20,7 +20,7 @@ export function useStudyTools() {
   const canPersist = useRef(false);
 
   useEffect(() => {
-    if (initialized.current) return;
+    if (!enabled || initialized.current) return;
     initialized.current = true;
     try {
       const raw = localStorage.getItem(studyToolsStorageKey) ?? localStorage.getItem(legacyStudyToolsStorageKey);
@@ -30,9 +30,10 @@ export function useStudyTools() {
       setState(latest.current);
     } catch { setStorageWarning(true); }
     setReady(true);
-  }, []);
+  }, [enabled]);
 
   useEffect(() => {
+    if (!enabled) return;
     const sync = (event: StorageEvent) => {
       if (event.key !== studyToolsStorageKey && event.key !== null) return;
       if (!canReadStudyToolsState(event.newValue)) { setStorageWarning(true); return; }
@@ -43,7 +44,7 @@ export function useStudyTools() {
     };
     window.addEventListener("storage", sync);
     return () => window.removeEventListener("storage", sync);
-  }, []);
+  }, [enabled]);
 
   const update = useCallback((change: (value: StudyToolsState) => StudyToolsState) => {
     if (!initialized.current) return;
