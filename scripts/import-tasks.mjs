@@ -51,7 +51,7 @@ export function structuralIssues(t, corpus = practiceBank) {
   for (const formula of [t.conditionLatex, ...(Array.isArray(t.solution) ? t.solution : []).map((s) => s?.latex)].filter(Boolean)) {
     try { katex.renderToString(formula, { throwOnError: true, trust: false }); } catch { errors.push("invalid-latex"); }
   }
-  if (t.resources !== undefined && (!Array.isArray(t.resources) || t.resources.some((r) => !text(r.name) || !text(r.content)))) errors.push("invalid-resource");
+  if (t.resources !== undefined && (!Array.isArray(t.resources) || t.resources.some((r) => !text(r?.name) || !text(r?.content)))) errors.push("invalid-resource");
   // Current renderer supports textual resources and its own typed diagram only.
   if (t.images || t.audio || t.attachments || /<\/?[a-z]|!\[|https?:\/\/\S+\.(png|jpg|svg|mp3)/i.test(t.prompt ?? "")) errors.push("unsupported-media-needs-review");
   if (t.diagram && (t.diagram.type !== "right-triangle" || ![t.diagram.adjacent, t.diagram.opposite].every((v) => typeof v === "number" && v > 0 && Number.isFinite(v)))) errors.push("invalid-diagram");
@@ -60,7 +60,7 @@ export function structuralIssues(t, corpus = practiceBank) {
 
 /** Editorial JSONL intake only. No writes to src/public, no changes to learner data. */
 export async function importTasks({ input, job, reviews = [], batchSize = 200, maxBatches = Infinity, corpus = practiceBank, registry = sourceRegistry }) {
-  if (!/^[a-z0-9-]+$/.test(job) || !Number.isInteger(batchSize) || batchSize < 1 || batchSize > 300) throw Error("Invalid job/batch size");
+  if (!/^[a-z0-9-]+$/.test(job) || !Number.isInteger(batchSize) || batchSize < 1 || batchSize > 300 || !Array.isArray(reviews)) throw Error("Invalid job/batch size/reviews");
   const directory = resolve(projectRoot, ".content-staging", `import-${job}`);
   mkdirSync(directory, { recursive: true });
   const lock = `${directory}/lock`;
@@ -99,7 +99,7 @@ export async function importTasks({ input, job, reviews = [], batchSize = 200, m
             const decision = getPublicationDecision(task.publication, registry);
             const rightsIssues = decision.reasons.filter((r) => !["draft", "math-review-pending", "expert-review-required", "missing-validation-evidence"].includes(r.code));
             if (!rightsIssues.length) state.counts.rightsAllowed++;
-            const review = reviews.find((r) => r.id === task.id && r.sha256 === contentFingerprint(task));
+            const review = reviews.find((r) => r?.id === task.id && r.sha256 === contentFingerprint(task));
             const verified = review && ["source-answer-and-solution", "independent-computation"].includes(review.method) &&
               Array.isArray(review.evidence) && review.evidence.length && review.evidence.every((p) => text(p) && !p.includes("..") && !p.startsWith("/") && existsSync(resolve(projectRoot, p)));
             const status = decision.allowed && verified ? "staged" : "review";

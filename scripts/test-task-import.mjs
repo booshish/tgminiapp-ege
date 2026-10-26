@@ -20,6 +20,7 @@ function fixture(i) {
 }
 test("intake rejects malformed structures, formulas, media and unsupported mappings", () => {
   assert.deepEqual(structuralIssues(fixture(1)), []);
+  assert.ok(structuralIssues({ ...fixture(1), resources: [null] }).includes("invalid-resource"));
   for (const patch of [{ examNumber: 999 }, { answerRule: { type: "number", value: "no" } }, { conditionLatex: "\\invalidcommand" }, { solution: {} }, { solution: [] }, { images: ["missing.png"] }, { diagram: { type: "right-triangle", adjacent: -1, opposite: 2 } }]) {
     assert.ok(structuralIssues({ ...fixture(1), ...patch }).length);
   }
