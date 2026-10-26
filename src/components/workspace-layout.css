@@ -63,20 +63,20 @@
 .task-reading-layout > .task-card { min-width: 0; margin: 0; }
 
 @media (min-width: 768px) {
-  .app-shell { --sidebar-width: 76px; }
-  .app-shell[data-sidebar="expanded"] { --sidebar-width: 236px; }
+  .app-shell { --sidebar-width: 68px; }
+  .app-shell[data-sidebar="expanded"] { --sidebar-width: 208px; }
   .app-shell[data-sidebar="hidden"] { --sidebar-width: 0px; }
   .app-shell .sidebar {
     display: flex;
     width: var(--sidebar-width);
-    padding: 20px 12px;
+    padding: 16px 10px;
     overflow-y: auto;
     overscroll-behavior: contain;
   }
   .app-shell[data-sidebar="hidden"] .sidebar { display: none; }
   .app-shell .workspace { margin-left: var(--sidebar-width); min-width: 0; padding-bottom: 0; }
-  .app-shell .desktop-nav { margin-top: 22px; gap: 6px; }
-  .app-shell .desktop-nav > button { min-height: 48px; padding: 12px; font-size: 15px; }
+  .app-shell .desktop-nav { margin-top: 18px; gap: 4px; }
+  .app-shell .desktop-nav > button { min-height: 44px; padding: 10px; font-size: 14px; }
   .app-shell .desktop-nav svg, .sidebar-plan svg { flex-shrink: 0; }
   .app-shell .sidebar-bottom { padding-top: 20px; }
   .app-shell .sidebar-plan { padding-top: 18px; font-size: 15px; }

@@ -22,6 +22,7 @@
     "quality:verify": "node scripts/exam-quality.mjs --verify",
     "content:matrix": "node scripts/math-release-report.mjs",
     "content:stage": "node scripts/stage-foundation-candidates.mjs",
+    "content:import": "node scripts/import-tasks.mjs",
     "exam:release:check": "node scripts/exam-release-check.mjs"
   },
   "dependencies": {
