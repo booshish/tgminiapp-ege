@@ -1,6 +1,7 @@
 import type { LearningEvent, AnswerEvent } from "./learning-events";
 import type { Task, Exam } from "./tasks";
 import type { TheoryTopic } from "./theory";
+import { getExamDefinition } from "./exams";
 
 export const studyToolsStorageKey = "tochka-study-tools-v2";
 export const legacyStudyToolsStorageKey = "tochka-study-tools-v1";
@@ -34,7 +35,7 @@ function isObject(value: unknown): value is Record<string, unknown> {
 }
 
 export function isAvailableTask(task: Task): boolean {
-  if (task.subjectId !== "math") return ["informatics", "physics", "russian"].includes(task.subjectId) && task.availability !== "history-only";
+  if (task.subjectId !== "math") return Boolean(getExamDefinition({examType:task.examType[0],subjectId:task.subjectId,level:task.level})?.available) && task.availability !== "history-only";
   return task.subjectId === "math" && task.availability !== "history-only" &&
     ((task.examType[0] === "ОГЭ" && task.level === null) ||
       (task.examType[0] === "ЕГЭ" && (task.level === "profile" || task.level === "base")));

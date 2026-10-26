@@ -1,0 +1,204 @@
+[
+  {
+    "id": "science-stage-a-20261026-1",
+    "model": {
+      "kind": "speed",
+      "distance": 280,
+      "time": 40,
+      "unit": "m/s"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-2",
+    "model": {
+      "kind": "density",
+      "grams": 270,
+      "cm3": 100,
+      "unit": "kg/m3"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-3",
+    "model": {
+      "kind": "heat",
+      "mass": 0.3,
+      "capacity": 4200,
+      "delta": 15,
+      "unit": "J"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-4",
+    "model": {
+      "kind": "ohm",
+      "voltage": 18,
+      "resistance": 12,
+      "unit": "A"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-5",
+    "model": {
+      "kind": "power",
+      "voltage": 220,
+      "current": 0.25,
+      "unit": "W"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-6",
+    "model": {
+      "kind": "period-order",
+      "atomicNumbers": [
+        15,
+        13,
+        14
+      ],
+      "unit": "ordered-indices"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-7",
+    "model": {
+      "kind": "element-percent",
+      "atoms": {
+        "Ca": 1,
+        "C": 1,
+        "O": 3
+      },
+      "element": "Ca",
+      "precision": 0,
+      "unit": "percent"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-8",
+    "model": {
+      "kind": "element-mass",
+      "atoms": {
+        "Ca": 1,
+        "C": 1,
+        "O": 3
+      },
+      "element": "Ca",
+      "compoundMass": 150,
+      "unit": "mg"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-9",
+    "model": {
+      "kind": "element-percent",
+      "atoms": {
+        "Ca": 1,
+        "S": 1,
+        "O": 4
+      },
+      "element": "S",
+      "precision": 1,
+      "unit": "percent"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-10",
+    "model": {
+      "kind": "element-mass",
+      "atoms": {
+        "Ca": 1,
+        "S": 1,
+        "O": 4
+      },
+      "element": "S",
+      "compoundMass": 680,
+      "unit": "mg"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-11",
+    "model": {
+      "kind": "solution",
+      "solutions": [
+        [
+          120,
+          10
+        ],
+        [
+          80,
+          20
+        ]
+      ],
+      "unit": "percent"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-12",
+    "model": {
+      "kind": "molarity",
+      "mass": 10,
+      "molarMass": 40,
+      "millilitres": 500,
+      "unit": "mol/L"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-13",
+    "model": {
+      "kind": "thermal",
+      "mass": 16,
+      "molarMass": 32,
+      "stoichiometricMoles": 1,
+      "heat": 572,
+      "unit": "kJ"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-14",
+    "model": {
+      "kind": "thermal-moles",
+      "moles": 2.5,
+      "heatPerMole": 178,
+      "unit": "kJ"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  },
+  {
+    "id": "science-stage-a-20261026-15",
+    "model": {
+      "kind": "gas-yield",
+      "mass": 3,
+      "impurityPercent": 20,
+      "molarMass": 24,
+      "molarVolume": 22.4,
+      "unit": "L"
+    },
+    "method": "independent-balance-or-inverse-substitution-with-units",
+    "expertReviewed": false
+  }
+]

@@ -11,6 +11,7 @@ const load = createContentLoader();
 const { practiceBank } = load("src/lib/tasks.ts");
 const { getPublicationDecision } = load("src/lib/content-publication.ts");
 const { sourceRegistry } = load("src/lib/source-registry.ts");
+const { getExamDefinition } = load("src/lib/exams.ts");
 const hash = (s) => createHash("sha256").update(s).digest("hex");
 const text = (s) => typeof s === "string" && Boolean(s.trim());
 const normalized = (t) => `${t.prompt ?? ""} ${t.conditionLatex ?? ""} ${JSON.stringify(t.resources ?? [])}`.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
@@ -31,9 +32,19 @@ export function structuralIssues(t, corpus = practiceBank) {
   const errors = [];
   for (const key of ["id", "title", "prompt", "answerDisplay", "topicId", "prototypeId", "examVersionId"]) if (!text(t[key])) errors.push(`missing:${key}`);
   if (!/^[a-z0-9-]+$/.test(t.id ?? "")) errors.push("invalid-id");
-  const model = corpus.find((m) => m.subjectId === t.subjectId && JSON.stringify(m.examType) === JSON.stringify(t.examType) &&
+  let model = corpus.find((m) => m.subjectId === t.subjectId && JSON.stringify(m.examType) === JSON.stringify(t.examType) &&
     m.level === t.level && m.examNumber === t.examNumber && m.examVersionId === t.examVersionId && m.examYear === t.examYear &&
     m.part === t.part && m.topicId === t.topicId && m.prototypeId === t.prototypeId);
+  // A newly reviewed subject need not have a fake seed Task to bootstrap import.
+  // Only an explicit trusted numbered contract in the exam registry may do so.
+  const definition = getExamDefinition({examType:t.examType?.[0],subjectId:t.subjectId,level:t.level});
+  const slot = definition?.numbers.find(n=>n.number===t.examNumber);
+  if (!model && definition?.available && definition.verificationStatus==="draft-source-reviewed" && slot?.practiceAnswerFormat &&
+      Array.isArray(t.examType) && t.examType.length===1 && t.examVersionId===definition.versionId && t.examYear===definition.year && t.part===slot.part &&
+      t.topicId===`${definition.id}-n${slot.number}` && t.prototypeId===`${definition.id}-n${slot.number}-original` &&
+      slot.answerRuleTypes?.includes(t.answerRule?.type)) {
+    model={answerFormat:slot.practiceAnswerFormat,scoring:{status:"pending-official-verification",maxPrimaryScore:slot.maxPrimaryScore}};
+  }
   if (!model) errors.push("unknown-exam-mapping");
   if (!Array.isArray(t.solution) || !t.solution.length || t.solution.some((s) => !text(s?.text))) errors.push("missing-solution");
   if (!t.source || !t.provenance || !t.publication || t.publication.id !== t.id || !t.publication.provenance) errors.push("missing-provenance");

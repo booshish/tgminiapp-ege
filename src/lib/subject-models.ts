@@ -1,5 +1,6 @@
 import type { ExamDefinition, ExamNumberDefinition } from "./exams";
 import { russianModels } from "./content/russian-model";
+import { scienceModels } from "./content/science-models";
 
 // Keep existing subject order; their content factories rely on their own entries.
 
@@ -50,3 +51,5 @@ subjectExamDefinitions.push({
     ...(i >= 4 ? { pendingReason: i < 20 ? "Ещё нет оригинального задания с проверенным форматом ответа и необходимыми ресурсами." : "Нужны оригинальное развёрнутое задание, решение и сверенные критерии самопроверки." } : {}),
   })),
 });
+// Append new models after every existing entry: preserve historical first-match/order consumers.
+subjectExamDefinitions.push(...scienceModels);

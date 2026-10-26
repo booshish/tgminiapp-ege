@@ -2,16 +2,17 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import ts from "typescript";
+import { createContentLoader } from "./content-source-loader.mjs";
 
 const source = await readFile(new URL("../src/lib/study-tools.ts", import.meta.url), "utf8");
-const { outputText, diagnostics = [] } = ts.transpileModule(source, {
+const { diagnostics = [] } = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2020 }, reportDiagnostics: true,
 });
 assert.equal(diagnostics.filter((item) => item.category === ts.DiagnosticCategory.Error).length, 0);
 const {
   emptyStudyToolsState, parseStudyToolsState, canReadStudyToolsState, toggleBookmark,
   getMistakes, independentAnswers, getReviewItems, getDifficultyRecommendations,
-} = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString("base64")}`);
+} = createContentLoader()("src/lib/study-tools.ts");
 
 function task(id, extras = {}) {
   return { id, topicId: "fractions", prototypeId: "fraction-arithmetic", subjectId: "math",

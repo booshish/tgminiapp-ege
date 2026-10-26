@@ -29,6 +29,19 @@ with sync_playwright() as p:
     assert len(requests) == 2 and all("n1-" in url for url in requests), requests
     checks.append("home_and_catalog_fetch_no_conditions_selection_fetches_only_one_number")
 
+    if prefix == "science-stage-a-":
+        for exam, subject, count in [("ОГЭ", "physics", 22), ("ОГЭ", "chemistry", 23), ("ЕГЭ", "chemistry", 34)]:
+            page.goto(f"{base}/#catalog?exam={exam}&subject={subject}&mode=number", wait_until="networkidle")
+            expect(page.locator(".exam-catalog:visible [data-catalog-number]")).to_have_count(count)
+            selected = [t for t in tasks if t["examType"][0] == exam and t["subjectId"] == subject]
+            for number in {t["examNumber"] for t in selected}:
+                card = page.locator(f'[data-catalog-number="{number}"]')
+                expect(card).to_be_enabled()
+                expected = sum(t["examNumber"] == number for t in selected)
+                expect(card).to_contain_text(f"Задач: {expected}")
+            expect(page.locator(f'[data-catalog-number="{17 if subject == "physics" else 23 if exam == "ОГЭ" else 34}"]')).to_be_disabled()
+        checks.append("all_three_new_catalogues_have_exact_number_counts_real_pilot_counts_and_blocked_expert_slots")
+
     for task in tasks:
         url = f'{base}/#tasks?exam={task["examType"][0]}&subject={task["subjectId"]}&mode=number&number={task["examNumber"]}&task={task["id"]}' + (f'&level={task["level"]}' if task["level"] else "")
         page.goto(url, wait_until="networkidle")

@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-26",
+  "kind": "original-training-not-official-exam",
+  "reviews": [
+    {
+      "id": "science-stage-a-20261026-1",
+      "sha256": "9d73e168409bc6296b2b6e4492a9cf1a27aa614bc08f41d296b604817d39464c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-2",
+      "sha256": "c0d84baba8e8a64e279ce85090251cc4bf6fe34bea1b1525c68c907dade78eb7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-3",
+      "sha256": "9847483a3ba8fc4df27c055537eb0fa7a82d4ca26529d5c5238852e51f3a6274",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-4",
+      "sha256": "80ae82728c98b9f4346e50e9b4310c79042fdaf213868a4ccb301c13dd02cd74",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-5",
+      "sha256": "98de5b43b7eb0022ca7347f21184d6e9c9278b5e76b12325f24b8bef4ed502e6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-6",
+      "sha256": "4784c69868f8652ef83660f4f301fa80f635a4fc809545ac41bb490b7a301468",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-7",
+      "sha256": "74ba3f1cce244678e2bfdcfbdfd0506793ac7ced3ac9def45e341e17f9041a98",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-8",
+      "sha256": "9a58f48e9cf2c50451e93972c482228b4d0af4791d496ab2e2ae9d1953161958",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-9",
+      "sha256": "2f34bf8793027397cb68932021f37d552916b6c329bb676927ca26ced3d1ff48",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-10",
+      "sha256": "b81c8ecd81b88cc8eeb72c584db6a65ae3eb11dbf0116a4429c0e4afc8968c07",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-11",
+      "sha256": "75d904678ec927ef8e50440fddc822239e35b2bc3e2771a69e5dcb7be7fb5b04",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-12",
+      "sha256": "f7e095d9c8c2c515eb020fd2e264116b699e90bb750afa669f598d0e596eb3b9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-13",
+      "sha256": "38c5db23b467c6189761ac417927900f6cdb16362170b10b5fa0879ee2e4a5c0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-14",
+      "sha256": "c7ce251b02a9742958e0e9fa8cca8855fc46389bf2360ae15d779f9e5afda9af",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    },
+    {
+      "id": "science-stage-a-20261026-15",
+      "sha256": "09c142ea17bbcd6cad95777eb661f7fc80ac8aa5ec730d654126430477b06001",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-science-stage-a.mjs",
+        "scripts/test-science-stage-a.mjs"
+      ]
+    }
+  ]
+}

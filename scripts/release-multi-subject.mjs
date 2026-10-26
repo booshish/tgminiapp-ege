@@ -75,7 +75,7 @@ export function subjectInventory(tasks=buildMultiSubjectTasks()) {
   return ["ОГЭ","ЕГЭ"].flatMap(exam=>getSubjects(exam).flatMap(([subjectId])=>(exam==="ЕГЭ"&&subjectId==="math"?["base","profile"]:[null]).map(level=>{
     const definition=getExamDefinition({examType:exam,subjectId,level});
     const published=tasks.filter(t=>t.examType[0]===exam&&t.subjectId===subjectId&&t.level===level);
-    return {exam,subjectId,subject:subjectTitle(subjectId),level,model:definition?.versionId??null,modelStatus:definition?.verificationStatus??"unavailable",newTasks:published.length,numbers:[...new Set(published.map(t=>t.examNumber))].sort((a,b)=>a-b),readiness:published.length?subjectId==="russian"?"pilot-only-linguistic-QA-required":"controlled-batches-only-not-all-types":"blocked-no-reviewed-exam-model",blocker:definition?"Audio, new image types and expert assessment are not certified by this pilot":"No source-reviewed specification/number mapping in the project"};
+    return {exam,subjectId,subject:subjectTitle(subjectId),level,model:definition?.versionId??null,modelStatus:definition?.verificationStatus??"unavailable",newTasks:published.length,numbers:[...new Set(published.map(t=>t.examNumber))].sort((a,b)=>a-b),readiness:published.length?subjectId==="russian"?"pilot-only-linguistic-QA-required":"controlled-batches-only-not-all-types":definition?"reviewed-model-other-batch":"blocked-no-reviewed-exam-model",blocker:definition?"Audio, new image types and expert assessment are not certified by this pilot":"No source-reviewed specification/number mapping in the project"};
   })));
 }
 if(process.argv[1] && import.meta.url===pathToFileURL(resolve(process.argv[1])).href){

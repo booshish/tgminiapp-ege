@@ -11,7 +11,8 @@ test("all 30 offered subject/exam/level pairs inventoried, eight supported batch
   const tasks=buildMultiSubjectTasks(), inventory=subjectInventory(tasks);
   assert.equal(tasks.length,40);assert.equal(inventory.length,30);
   assert.equal(inventory.filter(r=>r.newTasks===5).length,8);
-  assert.equal(inventory.filter(r=>r.readiness==="blocked-no-reviewed-exam-model").length,22);
+  assert.equal(inventory.filter(r=>r.readiness==="blocked-no-reviewed-exam-model").length,19);
+  assert.equal(inventory.filter(r=>r.readiness==="reviewed-model-other-batch").length,3);
   const {checkTaskAnswer}=createContentLoader()("src/lib/tasks.ts");
   for(const t of tasks){
     assert.deepEqual(structuralIssues(t),[]);
@@ -20,14 +21,15 @@ test("all 30 offered subject/exam/level pairs inventoried, eight supported batch
   }
   assert.ok(tasks.some(t=>t.conditionLatex));assert.ok(tasks.some(t=>t.answerRule.type==="choices"));assert.ok(tasks.some(t=>t.answerRule.type==="text"));
 });
-test("all 52 public IDs are unique and immutable; original 12 survive and 40 new hashes match checked source",()=>{
+test("frozen 52-task pilot survives additional releases; all public IDs remain unique",()=>{
   const load=createContentLoader(), {taskPackageIndex}=load("src/lib/task-package-index.ts");
   const all=taskPackageIndex.flatMap(p=>{
     const body=readFileSync(new URL(`../public/task-packages/${p.file}`,import.meta.url),"utf8");
     assert.equal(createHash("sha256").update(body).digest("hex"),p.sha256);
     const tasks=JSON.parse(body);assert.deepEqual(tasks.map(t=>t.id),p.tasks.map(t=>t.id));return tasks;
   });
-  assert.equal(all.length,52);assert.equal(new Set(all.map(t=>t.id)).size,52);
+  const frozen=all.filter(t=>t.id.startsWith("multi-subject-")||t.id.startsWith("oge-informatics-pilot-"));
+  assert.equal(frozen.length,52);assert.equal(new Set(all.map(t=>t.id)).size,all.length);
   assert.equal(all.filter(t=>t.id.startsWith("oge-informatics-pilot-")).length,12);
   for(const t of buildMultiSubjectTasks())assert.equal(contentFingerprint(all.find(x=>x.id===t.id)),contentFingerprint(t));
 });

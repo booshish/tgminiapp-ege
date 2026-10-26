@@ -1287,6 +1287,7 @@ export function registerTaskPackage(items: Task[]): void {
   const seen = new Set(practiceBank.map((t) => t.id));
   for (const task of items) if (!seen.has(task.id)) {
     practiceBank.push(task); selectableTasks.push(task); seen.add(task.id);
+    if (!practicePrototypes.some(p=>p.id===task.prototypeId)) practicePrototypes.push({id:task.prototypeId,topicId:task.topicId,title:task.title});
   }
 }
 

@@ -842,5 +842,236 @@ export const taskPackageIndex: {file: string; sha256: string; tasks: Pick<Task, 
         "prototypeId": "ege-russian-n16-one-comma"
       }
     ]
+  },
+  {
+    "file": "oge-physics-2027-draft-n6-828d9fd898740611.json",
+    "sha256": "828d9fd898740611a967d9039a93aeb426c87868ff1c405cdd87b6442d721752",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-1",
+        "subjectId": "physics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "oge-physics-n6",
+        "prototypeId": "oge-physics-n6-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-physics-2027-draft-n7-2d576b923e763810.json",
+    "sha256": "2d576b923e7638108d8477b1bf3f8baf9b94546baba2ab21faaba361c06ede7c",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-2",
+        "subjectId": "physics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "oge-physics-n7",
+        "prototypeId": "oge-physics-n7-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-physics-2027-draft-n8-75ac1147ae48d5fc.json",
+    "sha256": "75ac1147ae48d5fc942f87c2850302d7c7894eea40b5c08f3d577e1eac9da6e2",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-3",
+        "subjectId": "physics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-physics-n8",
+        "prototypeId": "oge-physics-n8-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-physics-2027-draft-n9-ab29155c23c437f1.json",
+    "sha256": "ab29155c23c437f1bcc4549e460823fd21a5db83b150e6cbb62df175818eecaf",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-4",
+        "subjectId": "physics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-physics-n9",
+        "prototypeId": "oge-physics-n9-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-physics-2027-draft-n10-6bda2f6985e99eab.json",
+    "sha256": "6bda2f6985e99eabbede725d049b97ff459123f77e3bf318afa930087a478a21",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-5",
+        "subjectId": "physics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-physics-n10",
+        "prototypeId": "oge-physics-n10-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n3-2f10949362d96120.json",
+    "sha256": "2f10949362d9612020074d10286f545f187fe99c193b5dec10b19f2bbc4c5e85",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-6",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "oge-chemistry-n3",
+        "prototypeId": "oge-chemistry-n3-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n18-f16376a17a6f94e6.json",
+    "sha256": "f16376a17a6f94e6a4c4d90c7569aceb166ec1c657f13ce667a8cb14e4da5bdb",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-7",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 18,
+        "topicId": "oge-chemistry-n18",
+        "prototypeId": "oge-chemistry-n18-original"
+      },
+      {
+        "id": "science-stage-a-20261026-9",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 18,
+        "topicId": "oge-chemistry-n18",
+        "prototypeId": "oge-chemistry-n18-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n19-0ac23aadac614074.json",
+    "sha256": "0ac23aadac614074d8a0d29ab5f6e726c29a3b9d505196fe2e00303b02ed23b0",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-8",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original"
+      },
+      {
+        "id": "science-stage-a-20261026-10",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-chemistry-2027-draft-n26-1468284573d6acf0.json",
+    "sha256": "1468284573d6acf0fcd5b13b62784a8b819698f257ba03e9cb0264c884156f01",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-11",
+        "subjectId": "chemistry",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 26,
+        "topicId": "ege-chemistry-n26",
+        "prototypeId": "ege-chemistry-n26-original"
+      },
+      {
+        "id": "science-stage-a-20261026-12",
+        "subjectId": "chemistry",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 26,
+        "topicId": "ege-chemistry-n26",
+        "prototypeId": "ege-chemistry-n26-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-chemistry-2027-draft-n27-e6e02f318eb9af3e.json",
+    "sha256": "e6e02f318eb9af3ebb3c873eb760e88c0f376d968bddcea43e87f646f953ace9",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-13",
+        "subjectId": "chemistry",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 27,
+        "topicId": "ege-chemistry-n27",
+        "prototypeId": "ege-chemistry-n27-original"
+      },
+      {
+        "id": "science-stage-a-20261026-14",
+        "subjectId": "chemistry",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 27,
+        "topicId": "ege-chemistry-n27",
+        "prototypeId": "ege-chemistry-n27-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-chemistry-2027-draft-n28-05d285b494b9f05b.json",
+    "sha256": "05d285b494b9f05bb929bcad76d4dd7bd9e9293a36368c8353eac31906d08508",
+    "tasks": [
+      {
+        "id": "science-stage-a-20261026-15",
+        "subjectId": "chemistry",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 28,
+        "topicId": "ege-chemistry-n28",
+        "prototypeId": "ege-chemistry-n28-original"
+      }
+    ]
   }
 ];

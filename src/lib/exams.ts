@@ -12,6 +12,11 @@ export type ExamSelection = {
 };
 export type ExamPart = 1 | 2 | 3;
 export type ExamNumberDefinition = {
+  /** Explicit import contract, set only after reviewing the numbered source plan. */
+  practiceAnswerFormat?: "number" | "text" | "extended";
+  answerRuleTypes?: ("number" | "choices" | "text" | "self")[];
+  evaluation?: { mode: "automatic" | "expert" | "experiment"; ordering?: "ordered" | "unordered"; note: string; criteriaUrl: string; criteriaPdfPage: number };
+  requiredResources?: string[];
   number: number;
   title: string;
   part: ExamPart;
@@ -22,6 +27,8 @@ export type ExamNumberDefinition = {
   sourceReference?: { url: string; pdfPage: number };
 };
 export type ExamDefinition = {
+  durationMinutes?: number;
+  maxPrimaryScore?: number;
   id: string;
   examType: Exam;
   subjectId: SubjectId;
