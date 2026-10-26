@@ -168,5 +168,679 @@ export const taskPackageIndex: {file: string; sha256: string; tasks: Pick<Task, 
         "prototypeId": "oge-informatics-n10-original"
       }
     ]
+  },
+  {
+    "file": "oge-math-2026-n6-3688e2b988162699.json",
+    "sha256": "3688e2b988162699035612fac59164d8ff7abb1c6835d88ab5f17156689fbba4",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-01",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "fractions",
+        "prototypeId": "fraction-arithmetic"
+      }
+    ]
+  },
+  {
+    "file": "oge-math-2026-n8-78b98bb97b215c19.json",
+    "sha256": "78b98bb97b215c19bb395d0e23bf838f9a42519f94c625acef4098d0d3f3fa17",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-02",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "powers-roots",
+        "prototypeId": "powers-and-roots"
+      }
+    ]
+  },
+  {
+    "file": "oge-math-2026-n9-ff362f17bf67c8f3.json",
+    "sha256": "ff362f17bf67c8f363e3dec927b8fecbb749d6453088210afe9b9e060b29b987",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-03",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "linear-equations",
+        "prototypeId": "linear-basic"
+      }
+    ]
+  },
+  {
+    "file": "oge-math-2026-n10-341a16e3da817e58.json",
+    "sha256": "341a16e3da817e5876d8d8db2492d5856387ebaf09b18c1eb0492f6af00f8a8e",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-04",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "probability",
+        "prototypeId": "classical-probability"
+      }
+    ]
+  },
+  {
+    "file": "oge-math-2026-n15-548d93094903a79b.json",
+    "sha256": "548d93094903a79bdf243062d38dc94caf84efd3e4e4daa964e3280f207d5876",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-05",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "geometry",
+        "prototypeId": "triangle-sine"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-base-2026-n1-8f135e1dd6530d03.json",
+    "sha256": "8f135e1dd6530d03bc5ccfea0563506fa63c829f2b7c5cb97ba9528f300270c2",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-06",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 1,
+        "topicId": "ege-base-number-1",
+        "prototypeId": "base-1-fraction-product"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-base-2026-n5-0f8b6f80312d1768.json",
+    "sha256": "0f8b6f80312d17680da5f7ea30727514df3a585481037ba0b85b16f7d9f9782c",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-07",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 5,
+        "topicId": "ege-base-number-5",
+        "prototypeId": "base-5-exactly-one-success"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-base-2026-n11-4bedb07870d85a30.json",
+    "sha256": "4bedb07870d85a30c464f0c19ea40f21ddfa3709cf9ed4b5e4116f5fb93d693a",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-08",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 11,
+        "topicId": "ege-base-number-11",
+        "prototypeId": "base-11-cylinder-volume"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-base-2026-n15-0fecb5c64d08b833.json",
+    "sha256": "0fecb5c64d08b8335c61e8b262cf4f3b882a76892390788f4503f1adac07f318",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-09",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 15,
+        "topicId": "ege-base-number-15",
+        "prototypeId": "base-15-sequential-percent"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-base-2026-n17-c16b4d91d0fd2c10.json",
+    "sha256": "c16b4d91d0fd2c106caff52665e2ce7c4e214f9fe7ee545ea8a1ad2115037583",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-10",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-base-number-17",
+        "prototypeId": "base-17-radical-root"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2026-n1-6e6a27254c66e77d.json",
+    "sha256": "6e6a27254c66e77d09cc3d89c4fba0d86ed9f8782048f47c29962793c25601f1",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-11",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 1,
+        "topicId": "geometry",
+        "prototypeId": "triangle-sine"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2026-n2-c69fbc9aebd122c4.json",
+    "sha256": "c69fbc9aebd122c4d724398716408fcfa85912044f06c5d57732bc732786f779",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-12",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 2,
+        "topicId": "ege-profile-number-2",
+        "prototypeId": "ege-2-dot-product"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2026-n3-bbd78f1365773142.json",
+    "sha256": "bbd78f1365773142c1cd3773440331cb1e742d7865e9f585e3c9fb92f01d41b6",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-13",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 3,
+        "topicId": "ege-profile-number-3",
+        "prototypeId": "ege-3-prism-diagonal"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2026-n4-29edb67d04c8b047.json",
+    "sha256": "29edb67d04c8b047253f50cd8a93e0514c4e1a9f3681ff54e4ebc4e411471792",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-14",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 4,
+        "topicId": "probability",
+        "prototypeId": "classical-probability"
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2026-n6-a62809c5be4df61f.json",
+    "sha256": "a62809c5be4df61f25abc1ea8cef63dc411dfaf3fe49d0b4d01143dd2389f29a",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-15",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 6,
+        "topicId": "powers-roots",
+        "prototypeId": "exponential-equation"
+      }
+    ]
+  },
+  {
+    "file": "oge-informatics-2027-draft-n1-ae9b3a12687f98a5.json",
+    "sha256": "ae9b3a12687f98a5b645fba0c951cb5142165090a05be7637d2712554d0ad1ed",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-16",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "oge-informatics-n1",
+        "prototypeId": "oge-informatics-n1-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-informatics-2027-draft-n3-1e118cb256a9c670.json",
+    "sha256": "1e118cb256a9c67096dc58458554af185ff69b6473c4c793c15e1c579c67b40a",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-17",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "oge-informatics-n3",
+        "prototypeId": "oge-informatics-n3-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-informatics-2027-draft-n5-561f45711cc2c64a.json",
+    "sha256": "561f45711cc2c64a6530b5ced16c870430a87355795321606d73295a35d86613",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-18",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-informatics-n5",
+        "prototypeId": "oge-informatics-n5-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-informatics-2027-draft-n6-fe50420c8d182c56.json",
+    "sha256": "fe50420c8d182c565c9f4cb5222b53d157ee2ac9b7d3326527097ae45d245400",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-19",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "oge-informatics-n6",
+        "prototypeId": "oge-informatics-n6-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-informatics-2027-draft-n10-b461cec6b355258d.json",
+    "sha256": "b461cec6b355258d6424d2425e5cc5f156df5c05f457f068e02209ad5335e103",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-20",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n4-31c3af30db1af6d5.json",
+    "sha256": "31c3af30db1af6d5b3d562d0ec437da0aca38f97a3a02534b5774989a91ceafd",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-21",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "ege-informatics-n4",
+        "prototypeId": "ege-informatics-n4-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n7-8029c86261447e1c.json",
+    "sha256": "8029c86261447e1c456c2f437b3cf5e397f330aa9990430695ba98acaefd6508",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-22",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-informatics-n7",
+        "prototypeId": "ege-informatics-n7-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n8-f4815d742a0b1ade.json",
+    "sha256": "f4815d742a0b1ade90e64a71f2f86acad4fc6f474b4f6e737bb1bba3adf41306",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-23",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "ege-informatics-n8",
+        "prototypeId": "ege-informatics-n8-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n14-ddbad60f15619e6a.json",
+    "sha256": "ddbad60f15619e6a25b0100d9fdb867f26581d56eb0776c180be20570e254171",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-24",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n23-46e7df1afdfaeabe.json",
+    "sha256": "46e7df1afdfaeabecb7ce0edc0ee1bddcd7d2704a5eb940655cd71f3d4155cbf",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-25",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "ege-informatics-n23",
+        "prototypeId": "ege-informatics-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-physics-2027-draft-n1-0c69e1caba39d8ab.json",
+    "sha256": "0c69e1caba39d8ab10468379d78b3f9d04d610578a653b831468c8d281d072fe",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-26",
+        "subjectId": "physics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "ege-physics-n1",
+        "prototypeId": "ege-physics-n1-original"
+      },
+      {
+        "id": "multi-subject-20261026-30",
+        "subjectId": "physics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "ege-physics-n1",
+        "prototypeId": "ege-physics-n1-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-physics-2027-draft-n2-13c376e7f8904bfe.json",
+    "sha256": "13c376e7f8904bfe37168ab5ead120b4648c6f9a0596e54812e466657206e387",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-27",
+        "subjectId": "physics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "ege-physics-n2",
+        "prototypeId": "ege-physics-n2-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-physics-2027-draft-n3-f488efcabe53e5e1.json",
+    "sha256": "f488efcabe53e5e18bc5b1c3e4428659cf501eb45ec29a8ff88b26fb4868b1d3",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-28",
+        "subjectId": "physics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "ege-physics-n3",
+        "prototypeId": "ege-physics-n3-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-physics-2027-draft-n4-40df024a9f1ba2f6.json",
+    "sha256": "40df024a9f1ba2f632e80eb98dab429ea04aabb3d74a630b8178ed2175a0beb4",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-29",
+        "subjectId": "physics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "ege-physics-n4",
+        "prototypeId": "ege-physics-n4-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-russian-2027-draft-n2-5533470bc664c779.json",
+    "sha256": "5533470bc664c7792022262760a3f7ba672ea4fb486f2a45ec6013885f76afc9",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-31",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "oge-russian-n2",
+        "prototypeId": "oge-russian-n2-harbour-analysis-2"
+      }
+    ]
+  },
+  {
+    "file": "oge-russian-2027-draft-n5-d5aff67dfff10e0b.json",
+    "sha256": "d5aff67dfff10e0b57d1ba00f3e66f6b5c0240b5cde1512f6a05abd0de705664",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-32",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-russian-n5",
+        "prototypeId": "oge-russian-n5-snow-road"
+      }
+    ]
+  },
+  {
+    "file": "oge-russian-2027-draft-n7-f66f8e7006c9b54b.json",
+    "sha256": "f66f8e7006c9b54bee9bdc5b45f4264bdf3ef8aa3ac80575f514c83be52044e9",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-33",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "oge-russian-n7",
+        "prototypeId": "oge-russian-n7-dawn-vowels"
+      }
+    ]
+  },
+  {
+    "file": "oge-russian-2027-draft-n8-6a62c1eea49a68be.json",
+    "sha256": "6a62c1eea49a68be5074b00b852ac49e3c99588a7c8f40559650d3d68a1e8699",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-34",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-russian-n8",
+        "prototypeId": "oge-russian-n8-towels-genitive"
+      }
+    ]
+  },
+  {
+    "file": "oge-russian-2027-draft-n9-6ca07ceceb9a6f3a.json",
+    "sha256": "6ca07ceceb9a6f3ab233204fa683dd1ff040289def957f25deabbf7b537e1f22",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-35",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-russian-n9",
+        "prototypeId": "oge-russian-n9-mother-shawl"
+      }
+    ]
+  },
+  {
+    "file": "ege-russian-2027-draft-n4-d88fb62c4f3bb542.json",
+    "sha256": "d88fb62c4f3bb542813e112ef9eacca33ccc48c1cdd0faa1221924a18762668b",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-36",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "ege-russian-n4",
+        "prototypeId": "ege-russian-n4-stress-first"
+      }
+    ]
+  },
+  {
+    "file": "ege-russian-2027-draft-n5-6da64a8f525a196f.json",
+    "sha256": "6da64a8f525a196f1b724bb7f212dedf90d7041134af8feb83144b330be9755f",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-37",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "ege-russian-n5",
+        "prototypeId": "ege-russian-n5-dress-nephew"
+      }
+    ]
+  },
+  {
+    "file": "ege-russian-2027-draft-n6-9b49f8443889a5d8.json",
+    "sha256": "9b49f8443889a5d8e0ed7b5760aaf9b3f2dc111751b8971dd4f21cc00e7a2726",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-38",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "ege-russian-n6",
+        "prototypeId": "ege-russian-n6-vacant-place"
+      }
+    ]
+  },
+  {
+    "file": "ege-russian-2027-draft-n7-bd8011433972eb11.json",
+    "sha256": "bd8011433972eb11ad5ec2a0107b4113742b1f777be722b4888cdd03f30e144c",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-39",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-russian-n7",
+        "prototypeId": "ege-russian-n7-lie-down"
+      }
+    ]
+  },
+  {
+    "file": "ege-russian-2027-draft-n16-55fd4e3be3b389d6.json",
+    "sha256": "55fd4e3be3b389d6a45649ac0237c0f422a5151e5fc48f82eacfa0df97e0cd1f",
+    "tasks": [
+      {
+        "id": "multi-subject-20261026-40",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "ege-russian-n16",
+        "prototypeId": "ege-russian-n16-one-comma"
+      }
+    ]
   }
 ];

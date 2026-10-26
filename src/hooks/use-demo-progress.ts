@@ -292,7 +292,7 @@ export function useDemoProgress(enabled = true) {
           topicId: task.topicId,
           prototypeId: task.prototypeId,
           examType: attempt.examType,
-          subjectId: "math",
+          subjectId: task.subjectId,
           ...(attempt.examVersionId
             ? {
                 examVersionId: attempt.examVersionId,

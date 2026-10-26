@@ -6,7 +6,9 @@ from playwright.sync_api import sync_playwright, expect
 
 base = os.environ.get("TOCHKA_QA_BASE_URL", "http://127.0.0.1:3002/tgminiapp-ege").rstrip("/")
 root = Path(__file__).resolve().parents[1]
-tasks = [t for f in sorted((root / "public/task-packages").glob("*.json")) for t in json.loads(f.read_text())]
+prefix = os.environ.get("TOCHKA_QA_TASK_PREFIX", "oge-informatics-pilot-")
+tasks = [t for f in sorted((root / "public/task-packages").glob("*.json")) for t in json.loads(f.read_text()) if t["id"].startswith(prefix)]
+assert tasks
 checks = []
 errors = []
 with sync_playwright() as p:
@@ -20,21 +22,21 @@ with sync_playwright() as p:
     expect(page.locator('#main-content[aria-busy="false"]')).to_be_visible()
     assert requests == [], requests
     page.goto(base + "/#catalog?exam=ОГЭ&subject=informatics&mode=number", wait_until="networkidle")
-    expect(page.locator('[data-catalog-number="1"]')).to_contain_text("Задач: 3")
+    expect(page.locator('[data-catalog-number="1"]')).to_contain_text("Задач: 4")
     assert requests == [], requests
     page.locator('[data-catalog-number="1"]').click()
     expect(page.locator("#task-answer")).to_be_visible()
-    assert len(requests) == 1 and "n1-" in requests[0], requests
+    assert len(requests) == 2 and all("n1-" in url for url in requests), requests
     checks.append("home_and_catalog_fetch_no_conditions_selection_fetches_only_one_number")
 
     for task in tasks:
-        url = f'{base}/#tasks?exam=ОГЭ&subject=informatics&mode=number&number={task["examNumber"]}&task={task["id"]}'
+        url = f'{base}/#tasks?exam={task["examType"][0]}&subject={task["subjectId"]}&mode=number&number={task["examNumber"]}&task={task["id"]}' + (f'&level={task["level"]}' if task["level"] else "")
         page.goto(url, wait_until="networkidle")
         expect(page.locator(".task-prompt")).to_contain_text(task["prompt"])
         page.locator("#task-answer").fill(task["answerDisplay"])
         page.get_by_role("button", name="Проверить ответ", exact=True).click()
         expect(page.locator(".task-verdict-correct")).to_be_visible()
-    checks.append("all_12_real_original_tasks_open_and_check_with_existing_answer_handler")
+    checks.append("all_selected_real_original_tasks_open_and_check_with_existing_answer_handler")
     ledger = page.evaluate("JSON.parse(localStorage.getItem('tochka-learning-v2'))")
     recorded_ids = {e["taskId"] for e in ledger["events"]}
     assert all(t["id"] in recorded_ids for t in tasks), recorded_ids

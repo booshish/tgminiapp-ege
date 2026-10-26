@@ -1,0 +1,406 @@
+[
+  {
+    "id": "multi-subject-20261026-01",
+    "model": [
+      "sum",
+      2.75,
+      1.625
+    ],
+    "computed": 4.375,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-02",
+    "model": [
+      "fraction",
+      121,
+      36,
+      11,
+      6
+    ],
+    "computed": 17,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-03",
+    "model": [
+      "equation",
+      7,
+      -19,
+      86
+    ],
+    "computed": 15,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-04",
+    "model": [
+      "ratio",
+      6,
+      9
+    ],
+    "computed": 0.6666666666666666,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-05",
+    "model": [
+      "iso-area",
+      13,
+      10
+    ],
+    "computed": 60,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-06",
+    "model": [
+      "product",
+      3.45,
+      1000
+    ],
+    "computed": 3450,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-07",
+    "model": [
+      "ratio",
+      4,
+      25
+    ],
+    "computed": 0.16,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-08",
+    "model": [
+      "product",
+      7,
+      8,
+      15
+    ],
+    "computed": 840,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-09",
+    "model": [
+      "percent",
+      2500,
+      12
+    ],
+    "computed": 2800,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-10",
+    "model": [
+      "equation",
+      4,
+      -12,
+      52
+    ],
+    "computed": 16,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-11",
+    "model": [
+      "pythagoras",
+      13,
+      5
+    ],
+    "computed": 12,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-12",
+    "model": [
+      "dot",
+      [
+        4,
+        -3
+      ],
+      [
+        -2,
+        5
+      ]
+    ],
+    "computed": -23,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-13",
+    "model": [
+      "product",
+      18,
+      11
+    ],
+    "computed": 198,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-14",
+    "model": [
+      "ratio",
+      7,
+      40
+    ],
+    "computed": 0.175,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-15",
+    "model": [
+      "power-equation",
+      5,
+      2,
+      125
+    ],
+    "computed": 5,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-16",
+    "model": [
+      "encoded",
+      96,
+      32
+    ],
+    "computed": 384,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-17",
+    "model": [
+      "interval-count",
+      14,
+      20
+    ],
+    "computed": 5,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-18",
+    "model": [
+      "commands",
+      6,
+      "122"
+    ],
+    "computed": 18,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-19",
+    "model": [
+      "recurrence",
+      2,
+      3
+    ],
+    "computed": 67,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-20",
+    "model": [
+      "base",
+      "231",
+      5
+    ],
+    "computed": 66,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-21",
+    "model": [
+      "word-bits",
+      "ГАВБА",
+      2
+    ],
+    "computed": 10,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-22",
+    "model": [
+      "image",
+      80,
+      48,
+      1
+    ],
+    "computed": 480,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-23",
+    "model": [
+      "enumerate-words"
+    ],
+    "computed": 32,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-24",
+    "model": [
+      "digit-sum",
+      93,
+      8
+    ],
+    "computed": 9,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-25",
+    "model": [
+      "programs",
+      2,
+      12
+    ],
+    "computed": 6,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-26",
+    "model": [
+      "coordinate",
+      -6,
+      3,
+      7
+    ],
+    "computed": 15,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-27",
+    "model": [
+      "force",
+      38,
+      14,
+      8
+    ],
+    "computed": 3,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-28",
+    "model": [
+      "product",
+      0.4,
+      15
+    ],
+    "computed": 6,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-29",
+    "model": [
+      "ratio",
+      9,
+      0.75
+    ],
+    "computed": 12,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-30",
+    "model": [
+      "velocity",
+      -12,
+      18,
+      5
+    ],
+    "computed": 6,
+    "scope": "independent-computation"
+  },
+  {
+    "id": "multi-subject-20261026-31",
+    "model": [
+      "russian",
+      "oge-basis"
+    ],
+    "computed": "135",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-32",
+    "model": [
+      "russian",
+      "oge-commas"
+    ],
+    "computed": "123",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-33",
+    "model": [
+      "russian",
+      "oge-letters"
+    ],
+    "computed": "234",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-34",
+    "model": [
+      "russian",
+      "oge-form"
+    ],
+    "computed": "блюдец",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-35",
+    "model": [
+      "russian",
+      "oge-phrase"
+    ],
+    "computed": "кольцоизсеребра",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-36",
+    "model": [
+      "russian",
+      "ege-stress"
+    ],
+    "computed": "24",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-37",
+    "model": [
+      "russian",
+      "ege-paronym"
+    ],
+    "computed": "памятливый",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-38",
+    "model": [
+      "russian",
+      "ege-pleonasm"
+    ],
+    "computed": "впервые",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-39",
+    "model": [
+      "russian",
+      "ege-form"
+    ],
+    "computed": "двухсот",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  },
+  {
+    "id": "multi-subject-20261026-40",
+    "model": [
+      "russian",
+      "ege-commas"
+    ],
+    "computed": "13",
+    "scope": "rule-annotations-and-targeted-linguistic-review-not-expert-certification"
+  }
+]

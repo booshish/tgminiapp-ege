@@ -28,9 +28,9 @@ export function compute(check) {
   }
 }
 
-export async function releasePilot() {
+export async function releasePilot(options = {}) {
   const load = createContentLoader(), { practiceBank } = load("src/lib/tasks.ts");
-  const tasks = entries.map(([number, prompt, answer, explanation, check], i) => {
+  const tasks = options.tasks ?? entries.map(([number, prompt, answer, explanation, check], i) => {
     assert.equal(String(compute(check)), answer);
     const model = practiceBank.find((t) => t.subjectId === "informatics" && t.examType[0] === "ОГЭ" && t.examNumber === number);
     assert.ok(model, `Reviewed model missing: ${number}`);
@@ -46,21 +46,29 @@ export async function releasePilot() {
     };
     return task;
   });
-  const reviews = tasks.map((t) => ({ id: t.id, sha256: contentFingerprint(t), method: "independent-computation", evidence: ["scripts/release-task-pilot.mjs", "scripts/original-informatics-pilot.mjs"] }));
+  const batchId = options.batchId ?? "original-informatics-20261026";
+  if (!/^[a-z0-9-]+$/.test(batchId)) throw Error("Invalid batch ID");
+  if (options.verify) tasks.forEach(options.verify);
+  const reviews = tasks.map((t) => ({ id: t.id, sha256: contentFingerprint(t), method: "independent-computation", evidence: options.evidence ?? ["scripts/release-task-pilot.mjs", "scripts/original-informatics-pilot.mjs"] }));
   const dir = resolve(projectRoot, ".content-staging/pilot-input"); mkdirSync(dir, { recursive: true });
-  const input = resolve(dir, "tasks.jsonl"); writeFileSync(input, tasks.map((t) => JSON.stringify(t)).join("\n") + "\n");
-  writeFileSync(resolve(projectRoot, "docs/pilot-task-review.json"), JSON.stringify({ date: "2026-10-26", kind: "original-training-not-official-exam", reviews }, null, 2) + "\n");
-  const result = await importTasks({ input, job: "original-informatics-20261026", reviews });
+  const input = resolve(dir, `${batchId}.jsonl`); writeFileSync(input, tasks.map((t) => JSON.stringify(t)).join("\n") + "\n");
+  writeFileSync(resolve(projectRoot, options.reviewFile ?? "docs/pilot-task-review.json"), JSON.stringify({ date: "2026-10-26", kind: "original-training-not-official-exam", reviews }, null, 2) + "\n");
+  const result = await importTasks({ input, job: batchId, reviews });
   assert.equal(result.counts.staged, tasks.length); assert.equal(result.counts.rejected, 0); assert.equal(result.counts.duplicates, 0);
   const records = Array.from({ length: result.batches }, (_, n) => JSON.parse(readFileSync(`${result.directory}/batch-${n}.json`, "utf8"))).flat();
   const approved = records.filter((r) => r.status === "staged").map((r) => r.task);
   assert.equal(approved.length, tasks.length);
-  const groups = Map.groupBy(approved, (t) => t.examNumber);
-  const shards = [];
+  const groups = Map.groupBy(approved, (t) => `${t.examVersionId}-n${t.examNumber}`);
+  const shards = [...load("src/lib/task-package-index.ts").taskPackageIndex];
   const output = resolve(projectRoot, "public/task-packages"); mkdirSync(output, { recursive: true });
   for (const [number, items] of groups) {
     const body = JSON.stringify(items), sha256 = createHash("sha256").update(body).digest("hex");
-    const file = `oge-informatics-n${number}-${sha256.slice(0, 16)}.json`;
+    const prior = shards.find(s => s.tasks.some(t => items.some(i => i.id === t.id)));
+    if (prior) {
+      assert.equal(prior.sha256,sha256,"Published IDs are immutable; use a new batch/ID");
+      continue;
+    }
+    const file = `${number}-${sha256.slice(0, 16)}.json`;
     if (existsSync(resolve(output, file))) assert.equal(readFileSync(resolve(output, file), "utf8"), body);
     else writeFileSync(resolve(output, file), body);
     shards.push({ file, sha256, tasks: items.map(({ id, subjectId, examType, level, examNumber, topicId, prototypeId }) => ({ id, subjectId, examType, level, examNumber, topicId, prototypeId })) });

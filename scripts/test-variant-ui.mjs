@@ -12,7 +12,7 @@ const { MockExamScreen } = load("src/components/screens/mock-exam-screen.tsx");
 const { emptyLearningState } = load("src/lib/learning-events.ts");
 const { getGameSummary } = load("src/lib/gamification.ts");
 const { examDefinitions } = load("src/lib/exams.ts");
-const { tasks, getPracticeTasks } = load("src/lib/tasks.ts");
+const { tasks, getPracticeTaskCount } = load("src/lib/tasks.ts");
 const engine = load("src/lib/mock-exam.ts");
 const noop = () => {};
 const game = getGameSummary(emptyLearningState.game);
@@ -42,7 +42,7 @@ test("catalogue puts the working full-variant entry after selection and before i
       assert.ok(html.indexOf('class="variant-launch-card"') < html.indexOf('data-catalog-number="1"'));
       assert.match(html, /Начать вариант/);
       assert.equal((html.match(/<option value="[1-5]"/g) ?? []).length, engine.getMockVariants(definition, tasks).length);
-      const firstCount = getPracticeTasks({ examType: definition.examType, subjectId: "math", level: definition.level, examNumber: 1 }).length;
+      const firstCount = getPracticeTaskCount({ examType: definition.examType, subjectId: "math", level: definition.level, examNumber: 1 });
       assert.ok(html.includes(`Задач: ${firstCount} ·`));
       if (definition.level === "base") assert.doesNotMatch(html, /id="catalog-part-2"|часть 2 — самопроверка/);
     }

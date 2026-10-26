@@ -187,7 +187,7 @@ function parseEventContext(
     (hasScoringMetadata &&
       (value.examVersionId !== task.examVersionId ||
         value.part !== task.part ||
-        value.answerFormat !== (task.part === 2 ? "extended" : "short") ||
+        value.answerFormat !== (task.answerFormat === "extended" ? "extended" : "short") ||
         (value.examYear !== undefined && value.examYear !== task.examYear)))
   )
     return null;
@@ -207,7 +207,7 @@ function parseEventContext(
           examVersionId: task.examVersionId,
           part: task.part,
           answerFormat:
-            task.part === 2 ? ("extended" as const) : ("short" as const),
+            task.answerFormat === "extended" ? ("extended" as const) : ("short" as const),
           ...(value.examYear !== undefined ? { examYear: task.examYear } : {}),
         }
       : {}),

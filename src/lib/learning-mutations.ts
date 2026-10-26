@@ -11,7 +11,7 @@ export function appendCheckedAnswer(
 ): { state: LearningState; id: string; xpAwarded: number } {
   if (!/^[a-zA-Z0-9:_-]{1,160}$/.test(id)) throw new Error("Invalid attempt ID");
   const checked = checkTaskAnswer(answer, task.answerRule);
-  if (!checked.valid || checked.correct !== correct || task.part === 2)
+  if (!checked.valid || checked.correct !== correct || task.answerRule.type === "self" || task.answerFormat === "extended" || (task.part === 2 && task.subjectId === "math"))
     throw new Error("Invalid checked answer");
   const saved = state.events.find((event) => event.id === id);
   if (saved) {

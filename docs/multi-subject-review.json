@@ -1,0 +1,366 @@
+{
+  "date": "2026-10-26",
+  "kind": "original-training-not-official-exam",
+  "reviews": [
+    {
+      "id": "multi-subject-20261026-01",
+      "sha256": "6154c19d27b53449b8c19c71263a36e903cc3c6582718b205b4f9e32899c998b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-02",
+      "sha256": "e9f570ff35c1b3a06b21a2ced6e3e19e4fe0a16220bd7125854f07ff2cdca51e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-03",
+      "sha256": "911466c7c47d804dc918104c0680a729619353c5c7b9b6c2cf947bcca74469ba",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-04",
+      "sha256": "4b2bf1faa528dc1fed70deadc3944c99724b026ee56246df5e9ed7b27c6d8bf9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-05",
+      "sha256": "eca73687f5c352c7ae2328377ad4273d5630fbf1b6e1fd88b22dd7ea2f37b96e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-06",
+      "sha256": "1d377fe554509d1ab32fc14f57ad817101849c55c5774b62293b35214a6b3d6b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-07",
+      "sha256": "f3b80d1952c83dc6c7b488af1d6f356dea71dbf3f0cc186653fb82acd157c40b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-08",
+      "sha256": "c9c35f234c1843858ac0ada909130e57d82bfef267db3382698a0140d639186c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-09",
+      "sha256": "c62b83ee620c1a5944e43b14ccf73fde6fc82df3039846e10f757e6c12baf56b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-10",
+      "sha256": "969e220e8358be36c429492ad6a1308334d169e4c99cdaf02a7c26b683418bec",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-11",
+      "sha256": "ebdcf01ad0e62f96049209245bd90be39a4baf0c4bf226c92e001f90cfd51a14",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-12",
+      "sha256": "728422361b23aa2177432913be6a9edef74340da4c95f32e47164b0f0621e559",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-13",
+      "sha256": "2cee9eda6cab3d2b72571411b59d1a905b410e12ebbf485fc8075f615b2ae315",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-14",
+      "sha256": "1d448790a91e0c243657c89bb5973d4700e7a1bdbe78968b38de2f7793f1bf41",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-15",
+      "sha256": "fdf7940a2bb0dca96814a7701e1e1efaeab8ac4936baafdbcb3575c793c95d1d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-16",
+      "sha256": "e5747018e2e392ea110dba2740a6066c3fe5fde5b5cc43bc6ac94a0b73782975",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-17",
+      "sha256": "2175a7bdc5402de3457337e76568c52c6785755c6294edf1ef7e61a0bc5a6f6c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-18",
+      "sha256": "c4916d495f3ce71077e0690a59118f7fe5fb163f7becc604d738e60e52518a34",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-19",
+      "sha256": "da3812438c9afe4ac21509103774700cfffcc39e70c5db44b957d95c3a6273b1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-20",
+      "sha256": "8f2e7097b3daeb9803718ef6c49bcce67334cadee32aae3f0455b2d7eadca19c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-21",
+      "sha256": "6fc883fbc78334193407e88ba5fa5076018a15711f1458e62853e4433c2dbb2c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-22",
+      "sha256": "a458a73186a2c074c9e4a996c31401edb2ecbcd62d96938d78607e4d37677dec",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-23",
+      "sha256": "a796d7dadf13b316bbc68856a4f818c11e16ed652e7249d6cc9a30c05444eaf1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-24",
+      "sha256": "f2e1893358144e6475cdc83e81abc83101a717fc0f1f584484e82ef5a14983a6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-25",
+      "sha256": "0376436f7fcaa64d5c909c161251de648a0c3441f5719c8c2812535179fd5f5b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-26",
+      "sha256": "4d2d051352a6b901cb1ef09e44f418b0c726a333dc5ac66f72349b9e73c3024b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-27",
+      "sha256": "30d56d417bcbc7f4620a1399512fb487815769417241553849726554f0aa89d6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-28",
+      "sha256": "8892b94ab418fbe91b16846f30a4671af0d9e09b9290ef4f0800f1d85604198e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-29",
+      "sha256": "85107a7a8705435b170b505cb096b8c238873df5433a12cf6b1b28a01d4b5e67",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-30",
+      "sha256": "013e5cb598a3e812146b3a1c6f4c913ebab91421a06c26178b8fdd6c0d12dbb0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-31",
+      "sha256": "99c1ec71bcca06cec97a0fbd72a30b4feecc200cf4a5ac189fb0398026bc12e2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-32",
+      "sha256": "d70b951b7b018167acc320c66bdbef8546ea1030ebf5ae23736f0e17b77a98b7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-33",
+      "sha256": "2e11eaa69d78702013231ef562d6e938e18e80c61f5859eddd151e222c303f39",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-34",
+      "sha256": "93a280a7b1384befa035e0a1b5d9f91b7d7691c331aa5a6debd277f5ee4609ea",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-35",
+      "sha256": "29b9e9b3649664afad7e4bc20e81a583ed36508dbe238eb83d9dd64e47659399",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-36",
+      "sha256": "7b8b471a146df6275b3e83375d2bc71c98dd50c2ff52faee9b83c3bfe9d4acaf",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-37",
+      "sha256": "30a6cf434c906ff3d4316e17f0ee8bfff5f61fdbb249e87f1b545acca1f27663",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-38",
+      "sha256": "3da7857ef84a2cc48fad92ab729ada4a0f054efbeabebd8887dd964260f1f692",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-39",
+      "sha256": "b19d564864f6fc1ee1f913b712c689fda30041ab38005c511c5ccc5ebf87cb11",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    },
+    {
+      "id": "multi-subject-20261026-40",
+      "sha256": "c82368073da8a103a5d9cb26682f9c80a18de3ec9281926c7e6a19b409b0b991",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/release-multi-subject.mjs",
+        "scripts/multi-subject-originals.mjs"
+      ]
+    }
+  ]
+}
