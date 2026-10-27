@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-27T15:54:00Z",
+  "sourceCommit": "0af43454f782dacca662dfc0e78eb02340b7dffe",
+  "modelCheckpoint": "a21e9b7799e249768b5b8f1076450d9dcc437a7e",
+  "pagesCommit": "30374ff1539eae8f83dfac94435045a6889e5d14",
+  "branch": "gh-pages",
+  "deployment": {
+    "runId": 40535322102,
+    "url": "https://github.com/booshish/tgminiapp-ege/actions/runs/40535322102",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": ["build", "report-build-status", "deploy"]
+  },
+  "siteUrl": "https://booshish.github.io/tgminiapp-ege/",
+  "newOriginalTasksInPublishedExport": 84,
+  "directionsWithNewOriginalTasks": 17,
+  "totalLazyTasksInPublishedExport": 151,
+  "immutableShards": 124,
+  "tests": {
+    "npmTest": { "passed": 400, "failed": 0 },
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuildPages": "passed",
+    "productionBrowser": { "groupsPassed": 7, "cataloguesChecked": 30, "newTasksOpenedAndSolved": 84, "pageErrors": 0 },
+    "browserWidths": [320, 390, 430, 768, 1024]
+  },
+  "remoteBrowserConfirmed": false,
+  "remoteBrowserLimitation": "Public Pages host is unavailable to the configured web tool and not allowed by the shell network policy. Successful native Pages deployment is confirmed; browser checks used the exact local production export. No access restrictions were bypassed.",
+  "contentScope": "Original training, not official FIPI KIM. Nineteen new numbered draft-copy plans; exhaustive codifier and expert-rubric review remains incomplete. No independent expert certification claimed."
+}
