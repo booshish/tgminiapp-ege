@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ExamDefinition } from "@/lib/exams";
-import { examDefinitions } from "@/lib/exams";
+import { historicalExamDefinitions as examDefinitions } from "@/lib/exams";
 import { tasks, type Task } from "@/lib/tasks";
 import {
   emptyMockState, finishMockSession, mockExamStorageKey,

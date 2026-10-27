@@ -43,9 +43,14 @@ export function createContentLoader({ revision } = {}) {
 
 export function loadContent(options) {
   const load = createContentLoader(options);
+  const exams = load("src/lib/exams.ts");
+  // Frozen source/publication reports use the source-era definitions. Current
+  // presentation placements are separately validated, never written into bodies.
   return {
     ...load("src/lib/tasks.ts"),
     ...load("src/lib/theory.ts"),
-    ...load("src/lib/exams.ts"),
+    ...exams,
+    activeExamDefinitions:exams.examDefinitions,
+    examDefinitions:exams.legacyExamDefinitions ?? exams.examDefinitions,
   };
 }

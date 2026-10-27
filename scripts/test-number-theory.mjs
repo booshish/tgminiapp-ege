@@ -16,7 +16,7 @@ test("Every supported exam number has its own original article and worked exampl
   assert.equal(new Set(theoryTopics.map((topic) => topic.materialId)).size, theoryTopics.length);
   for (const [exam, prefix, count, firstEnd] of [["ОГЭ", "oge", 25, 19], ["ЕГЭ", "ege-profile", 19, 12]]) {
     for (let n = 1; n <= count; n += 1) {
-      const topic = getTheoryTopic(`${prefix}-number-${n}`);
+      const topic = theoryTopics.find(t=>t.id===`${prefix}-number-${n}`);
       assert(topic, `${exam} №${n}`);
       assert.deepEqual(topic.examType, [exam]);
       assert.deepEqual(topic.examNumbers, [n]);

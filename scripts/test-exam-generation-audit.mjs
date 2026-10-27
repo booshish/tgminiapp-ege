@@ -66,9 +66,9 @@ test("all thirty pairs have per-number and subtype maps; unknown coverage blocks
     }
   }
   const profile=audit.directions.find(d=>d.id==="ege-math-profile");
-  assert.equal(profile.runtimeNumberCount,19);assert.equal(profile.targetNumberCount,20);assert.equal(profile.targetMaximum,33);
+  assert.equal(profile.runtimeNumberCount,20);assert.equal(profile.targetNumberCount,20);assert.equal(profile.targetMaximum,33);
   assert.equal(profile.numbers[5].title,"Случайные величины");assert.equal(profile.numbers[19].maxPrimaryScore,4);
-  assert.ok(profile.differences.some(d=>d.kind==="number-count"));
+  assert.ok(profile.differences.some(d=>d.kind==="source-to-active-crosswalk"));
   const russian=audit.directions.find(d=>d.id==="oge-russian");
   assert.equal(russian.derivedTaskScoreSum+russian.sharedScoringPools.reduce((sum,p)=>sum+p.maximum,0),38);
   assert.equal(russian.numbers[12].maxPrimaryScore,8);
@@ -121,7 +121,7 @@ test("published shard metadata and all 151 tasks remain byte-for-byte unchanged;
   assert.equal(tasks.length,151);assert.equal(new Set(tasks.map(t=>t.id)).size,151);
   assert.equal(tasks.some(t=>t.id.startsWith("audit-control-")),false);
   const {getExamDefinition}=load("src/lib/exams.ts");
-  assert.equal(getExamDefinition({examType:"ЕГЭ",subjectId:"math",level:"profile"}).versionId,"ege-math-profile-2026");
+  assert.equal(getExamDefinition({examType:"ЕГЭ",subjectId:"math",level:"profile"}).versionId,"ege-math-profile-2027-draft");
 });
 test("mass-generation gate authorizes only an explicit READY subtype, never an entire number or a finite editorial seed",()=>{
   const audit=generationAudit();

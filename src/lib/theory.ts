@@ -702,5 +702,20 @@ export function getTheoryTopic(id: string): TheoryTopic | undefined {
 }
 
 export function getPublishedTheoryTopics(): TheoryTopic[] {
-  return allTheoryTopics.filter((topic) => topic.publication.id === topic.id && getPublicationDecision(topic.publication).allowed);
+  return allTheoryTopics.filter((topic) => topic.publication.id === topic.id && getPublicationDecision(topic.publication).allowed).map(currentTheoryView);
+}
+
+const theoryViewCache = new WeakMap<TheoryTopic, TheoryTopic>();
+/** Presentation metadata only: source bodies, publication fingerprints and bookmark IDs remain immutable. */
+function currentTheoryView(topic: TheoryTopic): TheoryTopic {
+  if (topic.subjectId !== "math" || topic.coverage !== "exam-topic" || !topic.examNumbers || !topic.examType.includes("ЕГЭ")) return topic;
+  const cached = theoryViewCache.get(topic);
+  if (cached) return cached;
+  const profile: Record<number, number> = { 1:1,2:2,3:3,4:4,5:5,6:7,7:8,8:9,9:10,10:11,11:12,12:9,13:14,14:15,15:16,16:17,17:18,18:19,19:20 };
+  const base: Record<number, number[]> = { 1:[2],2:[4],4:[2],14:[1,14] };
+  const numbers = [...new Set(topic.examNumbers.flatMap(n => topic.level === "base" ? base[n] ?? [n] : [profile[n] ?? n]))];
+  const view: TheoryTopic = { ...topic, examNumbers:numbers, part:topic.level === "base" || numbers[0] <= 13 ? 1 : 2,
+    title:topic.title.replace(/№\s*\d+/, `№${numbers.join(", ")}`) };
+  theoryViewCache.set(topic, view);
+  return view;
 }

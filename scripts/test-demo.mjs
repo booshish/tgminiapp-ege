@@ -69,7 +69,7 @@ async function loadSourceModule(fileUrl) {
   return loading;
 }
 
-const { tasks, prototypes, getPracticeTasks, checkTaskAnswer, taskTopicLabels } = await import(
+const { tasks, prototypes, getPracticeTasks, getPracticeBankView, checkTaskAnswer, taskTopicLabels } = await import(
   await loadSourceModule(new URL("src/lib/tasks.ts", projectRoot))
 );
 const {
@@ -82,7 +82,7 @@ const {
   await loadSourceModule(new URL("src/lib/learning-events.ts", projectRoot))
 );
 
-const { examDefinitions, getExamDefinition, getAvailableExamDefinitions } = await import(
+const { examDefinitions, getExamDefinition, getLegacyExamDefinition, getAvailableExamDefinitions } = await import(
   await loadSourceModule(new URL("src/lib/exams.ts", projectRoot))
 );
 const { getTaskXPScoringRule, getExamNumberXPScoringRule, configuredXPScoringRules, verifiedXPScoringRules } = await import(
@@ -302,7 +302,7 @@ test("Практика строго разделена по экзамену, у
     assert.ok(all.length > 0, definition.id);
     assert.deepEqual(
       all,
-      tasks.filter(
+      getPracticeBankView().filter(
         (task) =>
           task.examType[0] === examType &&
           task.level === level &&
@@ -385,7 +385,7 @@ test("Каталоги разделены, а ограничение офици�
     [
       ["ОГЭ", null, 25],
       ["ЕГЭ", "base", 21],
-      ["ЕГЭ", "profile", 19],
+      ["ЕГЭ", "profile", 20],
     ],
   );
   assert.equal(getExamDefinition({ examType: "ЕГЭ" }).level, "profile");
@@ -401,16 +401,15 @@ test("Каталоги разделены, а ограничение офици�
         (_, index) => index + 1,
       ),
     );
-    assert.equal(definition.year, 2026);
-    assert.equal(definition.verificationStatus, "not-verified-online");
+    assert.equal(definition.year, 2027);
+    assert.equal(definition.verificationStatus, "draft-source-reviewed");
     assert.match(definition.verificationNote, /2027/);
-    assert.match(definition.verificationNote, /не подтвержден/);
+    assert.match(definition.verificationNote, /Проект|проект/);
     assert.ok(definition.sources.some((source) => new URL(source.url).hostname === "fipi.ru"));
     for (const source of definition.sources) {
       const url = new URL(source.url);
       assert.equal(url.protocol, "https:");
-      assert.ok(url.hostname === "fipi.ru" ||
-        (definition.level === "base" && url.hostname === "pro-schools.ru" && source.title.includes("Копия спецификации ФИПИ 2026")),
+      assert.ok(url.hostname === "fipi.ru" || (url.hostname === "examlab.ru" && source.title.includes("PDF-копия")),
       "Копия источника указана явно, а не представлена как оригинальный сайт ФИПИ");
     }
     for (const entry of definition.numbers) {
@@ -461,7 +460,7 @@ test("Фундаментальные упражнения без номера н
   for (const id of fundamentalIds)
     assert.equal(taskById(id).examNumber, null, id);
   for (const task of tasks) {
-    const definition = getExamDefinition({
+    const definition = getLegacyExamDefinition({
       examType: task.examType[0],
       level: task.level,
       subjectId: task.subjectId,
@@ -1284,8 +1283,10 @@ test("Доступны три учебных банка, прежние 16 за�
   assert.ok(current.every((task) => task.id.startsWith("base-2026-") && task.level === "base"));
   for (let number = 1; number <= 21; number++) {
     const pool = current.filter((task) => task.examNumber === number);
-    assert.ok(pool.length >= 20, `База №${number}`);
-    assert.ok(new Set(pool.map((task) => task.prototypeId)).size >= 2, `Разные подтипы базы №${number}`);
+    const rawPool=tasks.filter(t=>t.level==="base"&&t.availability!=="history-only"&&t.examNumber===number);
+    assert.ok(rawPool.length >= 20, `Исходный банк базы №${number} не потерян`);
+    assert.ok(new Set(rawPool.map((task) => task.prototypeId)).size >= 2, `Исходные подтипы базы №${number}`);
+    assert.ok(pool.length>0, `Совместимые задачи базы №${number}`);
   }
   const historical = tasks.filter((task) => task.level === "base" && task.availability === "history-only");
   assert.equal(historical.length, 16);
@@ -1299,9 +1300,9 @@ test("Доступны три учебных банка, прежние 16 за�
 test("Предварительные карты различают части, названия, короткие и развёрнутые ответы", () => {
   const oge = getExamDefinition({ examType: "ОГЭ" });
   const profile = getExamDefinition({ examType: "ЕГЭ", level: "profile" });
-  for (const [definition, boundary] of [[oge, 19], [profile, 12]]) {
-    assert.ok(definition.verificationNote.includes("Предварительная"));
-    assert.match(definition.verificationNote, /не подтвержден/);
+  for (const [definition, boundary] of [[oge, 19], [profile, 13]]) {
+    assert.match(definition.verificationNote, /Проект|проект/);
+    assert.match(definition.verificationNote, /не окончательная/);
     assert.ok(definition.versionId.includes(String(definition.year)));
     for (const number of definition.numbers) {
       assert.equal(number.part, number.number <= boundary ? 1 : 2);
@@ -1321,16 +1322,19 @@ test("Предварительные карты различают части, �
     }
   }
   const title = (definition, number) => definition.numbers.find((entry) => entry.number === number).title;
-  for (const pair of [[1, 17], [3, 14], [6, 13]])
-    assert.equal(title(profile, pair[0]), title(profile, pair[1]));
-  assert.equal(title(oge, 11), title(oge, 22));
+  assert.match(title(profile, 6), /Случайные/);
+  assert.match(title(profile, 13), /кратким ответом/);
+  assert.match(title(profile, 17), /обоснованием/);
+  assert.match(title(oge, 11), /Функции/);
+  assert.match(title(oge, 22), /Графики/);
   assert.equal(new Set([23, 24, 25].map((number) => title(oge, number))).size, 3);
-  assert.ok([1, 2, 3, 4, 5].every((number) => title(oge, number) === "Практические задачи"));
+  assert.ok([1, 2, 3, 4].every((number) => title(oge, number) === "Практические задачи"));
+  assert.equal(title(oge, 5), "Чтение данных");
 });
 
 test("Каждая демозадача содержит версию, часть, формат и честное авторское происхождение", () => {
   for (const task of tasks) {
-    const definition = getExamDefinition({ examType: task.examType[0], level: task.level });
+    const definition = getLegacyExamDefinition({ examType: task.examType[0], level: task.level });
     const number = definition.numbers.find((entry) => entry.number === task.examNumber);
     assert.equal(task.examVersionId, definition.versionId, task.id);
     assert.equal(task.part, number?.part ?? null, task.id);
@@ -1769,9 +1773,9 @@ test("Повреждённая практика не открывает чужо
     sessions: { [unavailable.id]: unavailable },
   }));
   const restoredBaseIds = baseState.sessions[unavailable.id].taskIds;
-  assert.equal(restoredBaseIds.includes("decimal-division"), false);
-  assert.deepEqual(restoredBaseIds, getPracticeTasks({ examType: "ЕГЭ", level: "base" }).map((task) => task.id),
-    "Повреждённая подборка восстанавливается только реальным банком выбранной базы");
+  assert.deepEqual(restoredBaseIds,["decimal-division"],"Историческая подборка сохраняет исходный ID вне актуальной практики");
+  assert.equal(baseState.sessions[unavailable.id].historicalContext,true);
+  assert.ok(!getPracticeTasks({examType:"ЕГЭ",level:"base"}).some(t=>restoredBaseIds.includes(t.id)));
   const unsafe = parseStoredPractice('{"version":1,"sessions":{"__proto__":{"id":"__proto__","selection":{"exam":"ОГЭ","subjectId":"math","mode":"number"},"taskIds":[]}},"activeId":"__proto__"}');
   assert.deepEqual(Object.keys(unsafe.sessions), []);
   assert.equal(unsafe.activeId, null);
@@ -1796,7 +1800,7 @@ test("Редактирование ошибки сохраняет факт пр
 
 test("Черновик самопроверки сохраняет работу и оценку, но не подделывает автопроверку", () => {
   const task = taskById("ege19-integer-pairs-self");
-  const catalog = normalizeCatalogSelection({ exam: "ЕГЭ", level: "profile", mode: "number", examNumber: 19 });
+  const catalog = normalizeCatalogSelection({ exam: "ЕГЭ", level: "profile", mode: "number", examNumber: 20 });
   let session = createPracticeSession("self-draft-session", catalog);
   session = updateSessionTask(session, task.id, {
     ...emptyTaskState(), answer: "", selfWork: "Пусть x и y — натуральные числа.",

@@ -72,6 +72,7 @@ export function getExamNumberXPScoringRule(
 }
 
 export function getTaskXPScoringRule(task: Task): XPScoringRule | null {
+  if(task.originExam)return getTaskXPScoringRule({...task,...task.originExam,originExam:undefined});
   if (task.examNumber === null || task.part === null || task.availability === "history-only") return null;
   const rule = getExamNumberXPScoringRule(task.examVersionId, task.examNumber);
   if (!rule || rule.examYear !== task.examYear || rule.subjectId !== task.subjectId

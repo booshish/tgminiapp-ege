@@ -2,6 +2,7 @@ import type { Exam } from "./navigation";
 import { getExamNumberXPScoringRule } from "./exam-scores";
 import { subjectExamDefinitions } from "./subject-models";
 import type { SubjectId } from "./subjects";
+import { mathModels2027 } from "./content/math-models-2027";
 export type { SubjectId } from "./subjects";
 
 export type ExamLevel = "base" | "profile";
@@ -92,7 +93,7 @@ function numbers(
 }
 
 /** Reference structure of 2026; no claim of a live official review or complete coverage. */
-export const examDefinitions: ExamDefinition[] = [
+export const legacyExamDefinitions: ExamDefinition[] = [
   {
     id: "oge-math",
     examType: "ОГЭ",
@@ -207,6 +208,17 @@ export const examDefinitions: ExamDefinition[] = [
     verificationNote,
   },
 ];
+
+export const examDefinitions: ExamDefinition[] = mathModels2027;
+
+/** Content factories and saved attempts retain their original metadata forever. */
+export function getLegacyExamDefinition(selection: ExamSelection): ExamDefinition | undefined {
+  return legacyExamDefinitions.find(d=>d.examType===selection.examType&&d.level===(selection.examType==="ОГЭ"?null:selection.level??"profile"));
+}
+export function getExamDefinitionByVersion(version: string): ExamDefinition | undefined {
+  return [...examDefinitions,...legacyExamDefinitions,...subjectExamDefinitions].find(d=>d.versionId===version);
+}
+export const historicalExamDefinitions = [...legacyExamDefinitions,...examDefinitions];
 
 export function getExamDefinition(
   selection: ExamSelection,

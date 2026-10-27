@@ -13,6 +13,7 @@ export const russianModels: ExamDefinition[] = (["ОГЭ", "ЕГЭ"] as const).m
   year: 2027, versionId: `${exam === "ОГЭ" ? "oge" : "ege"}-russian-2027-draft`, available: true,
   title: `${exam} · Русский язык`, verificationStatus: "draft-source-reviewed",
   maxPrimaryScore: exam === "ОГЭ" ? 38 : 50,
+  durationMinutes:exam === "ОГЭ" ? 235 : 210,
   ...(exam === "ОГЭ" ? { sharedScoringPools: [{ id: "literacy-and-factual-accuracy", maximum: 13, appliesTo: [1, 13], criteriaStatus: "pending-task-specific-review" as const }] } : {}),
   verificationNote: `Прочитана PDF-копия проекта 2027, не канонический ZIP. Это оригинальная практика, не полный вариант. ${exam === "ОГЭ" ? "Три части: №1, №2–12, №13. Максимум 38 включает 13 баллов общей грамотности изложения и сочинения, не распределённых между номерами." : "№1–26 — краткие ответы, №27 — сочинение; максимум 50."} Практика проверяет полный ответ, без экзаменационных частичных баллов и XP. Изложение и сочинения не подготовлены.`,
   sources: [{ title: "ФИПИ: индекс проектов", url: `https://fipi.ru/${exam === "ОГЭ" ? "oge" : "ege"}/demoversii-specifikacii-kodifikatory` }, { title: "Прочитанная PDF-копия", url: russianSources[exam] }],

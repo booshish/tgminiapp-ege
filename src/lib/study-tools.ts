@@ -44,7 +44,8 @@ export function isAvailableTask(task: Task): boolean {
 export function resolveBookmark(input: BookmarkInput, catalog: StudyToolsCatalog) {
   if (input.kind === "task") {
     const task = catalog.tasks.find((item) => item.id === input.itemId);
-    return task && isAvailableTask(task) && task.examType.includes(input.examType) ? task : undefined;
+    const retained = task?.originExam && task.originExam.availability !== "history-only";
+    return task && (isAvailableTask(task) || retained) && task.examType.includes(input.examType) ? task : undefined;
   }
   const topic = catalog.resolveTopic?.(input.itemId) ?? catalog.topics.find((item) => item.id === input.itemId);
   return topic && topic.examType.includes(input.examType) ? topic : undefined;
@@ -110,7 +111,7 @@ function orderedEvents(events: readonly LearningEvent[], bank: readonly Task[]) 
     if (!task || seen.has(event.id) || !Number.isFinite(Date.parse(event.createdAt)) ||
       event.examType !== task.examType[0] || event.subjectId !== task.subjectId ||
       event.topicId !== task.topicId || event.prototypeId !== task.prototypeId ||
-      (event.examVersionId !== undefined && event.examVersionId !== task.examVersionId)) return false;
+      (event.examVersionId !== undefined && event.examVersionId !== task.examVersionId && event.examVersionId !== task.originExam?.examVersionId)) return false;
     seen.add(event.id);
     return true;
   }).sort((a, b) => Date.parse(a.createdAt) - Date.parse(b.createdAt));

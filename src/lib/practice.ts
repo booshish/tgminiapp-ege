@@ -1,7 +1,7 @@
 import type { Exam } from "./navigation";
 import type { ExamLevel } from "./exams";
 import { getExamDefinition } from "./exams";
-import { getPracticeTasks } from "./tasks";
+import { getPracticeTasks, getPracticeBankView } from "./tasks";
 import { isSubjectId, type SubjectId } from "./subjects";
 
 export type CatalogSelection = {
@@ -38,6 +38,8 @@ export type PracticeSession = {
   visitOrder?: number;
   states: Record<string, PracticeTaskState>;
   invalidContext?: boolean;
+  /** Retained legacy material, never resumed as a current numbered exercise. */
+  historicalContext?: boolean;
 };
 
 export function emptyTaskState(): PracticeTaskState {
@@ -132,7 +134,7 @@ export function getSessionTaskId(session: PracticeSession): string | undefined {
 export function findRecentPracticeSession(
   sessions: Record<string, PracticeSession>, selection: CatalogSelection, exactContext = false, preferredId?: string | null,
 ): PracticeSession | undefined {
-  const matches = Object.values(sessions).filter((candidate) => !candidate.invalidContext && getSessionTaskId(candidate)
+  const matches = Object.values(sessions).filter((candidate) => !candidate.invalidContext && !candidate.historicalContext && getSessionTaskId(candidate)
     && candidate.selection.exam === selection.exam && candidate.selection.subjectId === selection.subjectId
     && candidate.selection.level === selection.level
     && (!exactContext || practiceContextKey(candidate.selection) === practiceContextKey(selection)));
@@ -152,7 +154,9 @@ export function createPracticeSession(
   selection: CatalogSelection,
   initialTaskId?: string,
 ): PracticeSession {
-  const taskIds = practiceTasks(selection).map((task) => task.id);
+  const historical = initialTaskId ? getPracticeBankView().find(t => t.id === initialTaskId && t.availability === "history-only"
+    && t.subjectId === selection.subjectId && t.examType.includes(selection.exam) && t.level === (selection.level ?? null)) : undefined;
+  const taskIds = historical ? [historical.id] : practiceTasks(selection).map((task) => task.id);
   const index = initialTaskId ? taskIds.indexOf(initialTaskId) : 0;
   return {
     id,
@@ -160,6 +164,7 @@ export function createPracticeSession(
     taskIds,
     lastPosition: Math.max(0, index),
     states: {},
+    ...(historical ? { historicalContext:true } : {}),
   };
 }
 

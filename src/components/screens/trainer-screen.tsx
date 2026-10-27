@@ -6,8 +6,8 @@ import { PageIntro } from "@/components/ui";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import "../trainer-mobile.css";
 import { getAnalytics, type LearningState } from "@/lib/learning-events";
-import { theoryTopics } from "@/lib/theory";
-import { tasks } from "@/lib/tasks";
+import { getPublishedTheoryTopics } from "@/lib/theory";
+import { getPracticeBankView } from "@/lib/tasks";
 import { independentAnswers } from "@/lib/study-tools";
 
 type TrainerScreenProps = {
@@ -27,6 +27,8 @@ export function TrainerScreen({
   onStart,
   onReview,
 }: TrainerScreenProps) {
+  const theoryTopics = getPublishedTheoryTopics();
+  const tasks = getPracticeBankView();
   const isPhone = usePhoneLayout();
   const demoStatus = (
     <p className="muted">

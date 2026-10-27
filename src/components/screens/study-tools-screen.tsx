@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ArrowRight, Bookmark as BookmarkIcon, BookOpen, CalendarClock, Check, RotateCcw, Trash2 } from "lucide-react";
 import { PageIntro } from "@/components/ui";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
-import { tasks, practiceBank, taskTopicLabels, type Exam, type Task } from "@/lib/tasks";
+import { getPracticeBankView, taskTopicLabels, type Exam, type Task } from "@/lib/tasks";
 import { theoryTopics, allTheoryTopics, getTheoryTopic } from "@/lib/theory";
 import { getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
 import type { LearningEvent } from "@/lib/learning-events";
@@ -25,12 +25,14 @@ type StudyToolsScreenProps = {
   onBrowseTheory?: () => void;
   bookmarkKind?: "task" | "theory";
 };
-const catalog = { tasks: practiceBank, topics: allTheoryTopics, resolveTopic: getTheoryTopic };
 const titleForTopic = (id: string) => getTheoryTopic(id)?.title ?? taskTopicLabels[id] ?? "Практика по теме";
-const numberLabel = (task: Task) => task.examNumber === null ? "Базовое упражнение" : `№${task.examNumber}`;
+const theoryForTask = (task: Task) => getTheoryTopic(task.activeTheoryTopicId ?? task.topicId);
+const numberLabel = (task: Task) => task.availability === "history-only" ? "Задание прежней модели" : task.examNumber === null ? "Базовое упражнение" : `№${task.examNumber}`;
 const examLabel = (exam: Exam) => exam === "ЕГЭ" ? "ЕГЭ · Математика · Профиль" : "ОГЭ · Математика";
 
 export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onTheory, onPremium, bookmarkKind, onBrowseTheory }: StudyToolsScreenProps) {
+  const tasks = getPracticeBankView();
+  const catalog = { tasks, topics: allTheoryTopics, resolveTopic:getTheoryTopic };
   const isPhone = usePhoneLayout();
   const [exam, setExam] = useState<"all" | Exam>("all");
   const [kindFilter, setKind] = useState<"all" | "task" | "theory">("all");
@@ -58,7 +60,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
   );
 
   const bookmarks = tools.bookmarks.filter((item) => {
-    const itemSubject = item.kind === "task" ? practiceBank.find(task => task.id === item.itemId)?.subjectId : getTheoryTopic(item.itemId)?.subjectId;
+    const itemSubject = item.kind === "task" ? tasks.find(task => task.id === item.itemId)?.subjectId : getTheoryTopic(item.itemId)?.subjectId;
     return (exam === "all" || item.examType === exam) && (kind === "all" || item.kind === kind) && (subject === "all" || itemSubject === subject);
   });
   const mistakes = mode === "mistakes" ? getMistakes(events, tasks).filter((item) =>
@@ -108,7 +110,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
       ) : <div className="study-tools-list">{bookmarks.map((bookmark) => {
         const material = resolveBookmark(bookmark, catalog);
         if (!material) return null;
-        const task = bookmark.kind === "task" ? practiceBank.find((item) => item.id === bookmark.itemId) : undefined;
+        const task = bookmark.kind === "task" ? tasks.find((item) => item.id === bookmark.itemId) : undefined;
         const itemSubject = task?.subjectId ?? getTheoryTopic(bookmark.itemId)?.subjectId ?? "math";
         return <article className="study-tool-card" key={bookmark.key}>
           <span className="study-tool-meta">{bookmark.examType} · {subjectTitle(itemSubject)}{task ? ` · ${numberLabel(task)}` : " · Теория"}</span>
@@ -126,11 +128,11 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
         {mistakes.length === 0 ? <div className="study-tool-card study-tools-empty"><Check size={28} aria-hidden="true" /><h2>Подходящих ошибок пока нет</h2><p>Здесь появятся задания после неверной автоматической проверки. Самопроверка второй части в этот список не входит.</p></div>
           : <div className="study-tools-list">{mistakes.map(({ task, corrected }) => <article className="study-tool-card" key={task.id}>
             <span className="study-tool-meta">{examLabel(task.examType[0])} · {numberLabel(task)}</span>
-            <h2>{task.title}</h2><p>{titleForTopic(task.topicId)}</p>
+            <h2>{task.title}</h2><p>{titleForTopic(task.activeTheoryTopicId ?? task.topicId)}</p>
             {corrected && <span className="tag">Ответ исправлен</span>}
             <div className="study-tool-actions">
               <button type="button" className="button button-primary" onClick={() => onTask(task.id)}>Открыть задание <ArrowRight size={18} aria-hidden="true" /></button>
-              {getTheoryTopic(task.topicId) && <button type="button" className="text-button" onClick={() => onTheory(getTheoryTopic(task.topicId)!.id)}><BookOpen size={18} aria-hidden="true" /> Связанная теория</button>}
+              {theoryForTask(task) && <button type="button" className="text-button" onClick={() => onTheory(theoryForTask(task)!.id)}><BookOpen size={18} aria-hidden="true" /> Связанная теория</button>}
             </div>
           </article>)}</div>}
       </>}
@@ -141,10 +143,10 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
         {reviews.length === 0 ? <div className="study-tool-card"><p>Пока нет навыков с ошибками в самостоятельных проверках. Продолжай обычную практику: рекомендации появятся по реальным ответам.</p></div>
           : <div className="study-tools-list">{reviews.map((item) => <article className="study-tool-card" key={item.key}>
             <span className="study-tool-meta">{examLabel(item.task.examType[0])} · {numberLabel(item.task)}</span>
-            <h3>{titleForTopic(item.task.topicId)}</h3>
+            <h3>{titleForTopic(item.task.activeTheoryTopicId ?? item.task.topicId)}</h3>
             <p>{item.due ? "Можно повторить сейчас" : `Следующее повторение: ${new Date(item.dueAt).toLocaleDateString("ru-RU")}`}</p>
             <div className="study-tool-actions">
-              {getTheoryTopic(item.task.topicId) && <button type="button" className="text-button" onClick={() => onTheory(getTheoryTopic(item.task.topicId)!.id)}><BookOpen size={18} aria-hidden="true" /> Повторить теорию</button>}
+              {theoryForTask(item.task) && <button type="button" className="text-button" onClick={() => onTheory(theoryForTask(item.task)!.id)}><BookOpen size={18} aria-hidden="true" /> Повторить теорию</button>}
               {item.nextTask ? <button type="button" className="button button-primary" onClick={() => onTask(item.nextTask!.id)}><RotateCcw size={17} aria-hidden="true" /> Новый похожий вариант</button> : <p className="muted">Новых похожих вариантов в банке пока нет. Можно повторить теорию; прежнюю задачу не выдаём за новую.</p>}
             </div>
           </article>)}</div>}

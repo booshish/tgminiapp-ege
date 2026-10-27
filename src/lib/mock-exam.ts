@@ -1,14 +1,15 @@
 import type { ExamDefinition } from "./exams";
 import { checkTaskAnswer, type Task } from "./tasks";
 import { getPublicationDecision } from "./content-publication";
+import { getTaskView } from "./task-placement";
 
 export const mockExamStorageKey = "tochka-mock-exams-v1";
 export const mockDurationMinutes = 235;
-export const mockDurationNote = "Учебная настройка: ОГЭ и ЕГЭ профиль — 235 минут, ЕГЭ база — 180 минут. Длительность и структура официального экзамена 2027 года требуют сверки с конкретными документами ФИПИ.";
+export const mockDurationNote = "Проекты 2027: ОГЭ и ЕГЭ профиль — 235 минут, ЕГЭ база — 180 минут. Неполный комплект или неподтверждённые критерии не выдаются за полный экзаменационный вариант.";
 
 /** Project settings, not a claim that the unavailable 2027 specifications were read. */
 export function getMockDurationMinutes(definition: ExamDefinition) {
-  return definition.examType === "ЕГЭ" && definition.level === "base" ? 180 : mockDurationMinutes;
+  return definition.durationMinutes??(definition.examType === "ЕГЭ" && definition.level === "base" ? 180 : mockDurationMinutes);
 }
 
 export type MockVariant = {
@@ -66,10 +67,12 @@ function usableTask(task: Task, definition: ExamDefinition, historicalAttempt = 
 }
 
 export function getMockCoverage(definition: ExamDefinition, bank: Task[]) {
+  if(definition.year===2027)bank=bank.map(getTaskView);
   // New selections require a current publication decision. Parsing earlier
   // sessions intentionally retains structural validation so a withdrawn task
   // does not erase a student's existing answers, scores or timer history.
   const available = bank.filter((task) => usableTask(task, definition) &&
+    (definition.year!==2027||task.part!==2||task.placementReview?.criteriaCompatible===true) &&
     task.publication?.id === task.id && getPublicationDecision(task.publication).allowed);
   const missingNumbers = definition.numbers.filter((number) => !available.some((task) => task.examNumber === number.number)).map((number) => number.number);
   const groups = new Set(available.filter((task) => task.examNumber === 1 && task.sharedConditionId).map((task) => task.sharedConditionId!));
@@ -244,6 +247,7 @@ export function checkMockAnswer(input: string, task: Task, strict = true) {
 }
 
 export function finishMockSession(session: MockSession, bank: Task[], now = Date.now()): MockSession {
+  if(session.examVersionId.endsWith("2027-draft"))bank=bank.map(getTaskView);
   if (session.finishedAt !== null) return session;
   if (!validTime(now) || now < session.startedAt) throw new Error("Invalid finish time");
   const results: MockSession["results"] = {};
@@ -266,6 +270,7 @@ export function setMockSelfScore(session: MockSession, task: Task, score: number
   return { ...session, selfScores: { ...session.selfScores, [task.id]: score } };
 }
 export function mockScoreSummary(session: MockSession, bank: Task[]) {
+  if(session.examVersionId.endsWith("2027-draft"))bank=bank.map(getTaskView);
   const automatic = Object.values(session.results).reduce((sum, result) => sum + result.primaryScore, 0);
   const self = Object.values(session.selfScores).reduce((sum, score) => sum + score, 0);
   const pendingSelf = session.taskIds.filter((id) => bank.find((task) => task.id === id)?.part === 2 && session.selfScores[id] === undefined).length;
@@ -285,6 +290,7 @@ export function parseMockState(raw: string | null, bank: Task[], definitions: Ex
   for (const value of input.sessions) {
     if (!isObject(value) || typeof value.id !== "string" || !/^[a-zA-Z0-9-]{1,100}$/.test(value.id) || sessions.some((entry) => entry.id === value.id)) throw new Error("Invalid mock session");
     const definition = definitions.find((entry) => entry.versionId === value.examVersionId);
+    const sessionBank=definition?.year===2027?bank.map(getTaskView):bank;
     // Legacy v1 attempts all used 235 minutes, including historical base attempts.
     const durationMinutes = value.durationMinutes === undefined ? mockDurationMinutes : value.durationMinutes;
     if (typeof durationMinutes !== "number" || !definition || ![mockDurationMinutes, getMockDurationMinutes(definition)].includes(durationMinutes)) throw new Error("Invalid mock duration");
@@ -293,7 +299,7 @@ export function parseMockState(raw: string | null, bank: Task[], definitions: Ex
         (typeof value.variantNumber !== "number" || !Number.isInteger(value.variantNumber) || value.variantNumber < 1 || value.variantNumber > 100 || value.variantId !== `${definition.versionId}-study-v1-${value.variantNumber}`)) throw new Error("Invalid mock variant identity");
     if (value.answerFormatVersion !== undefined && value.answerFormatVersion !== 1) throw new Error("Unsupported mock answer format");
     const taskIds = value.taskIds as unknown[];
-    if (new Set(taskIds).size !== taskIds.length || !taskIds.every((id, index) => typeof id === "string" && bank.some((task) => task.id === id && usableTask(task, definition, true) && task.examNumber === definition.numbers[index].number))) throw new Error("Unavailable mock content");
+    if (new Set(taskIds).size !== taskIds.length || !taskIds.every((id, index) => typeof id === "string" && sessionBank.some((task) => task.id === id && usableTask(task, definition, true) && task.examNumber === definition.numbers[index].number))) throw new Error("Unavailable mock content");
     if (definition.examType === "ОГЭ") {
       const groups = new Set(taskIds.slice(0, 5).map((id) => bank.find((task) => task.id === id)?.sharedConditionId));
       if (groups.size !== 1 || groups.has(undefined)) throw new Error("Mixed shared conditions");

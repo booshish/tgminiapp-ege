@@ -1,6 +1,6 @@
 import { originalPublication, type OriginalCollection } from "./original-publication";
 import type { Task } from "../tasks";
-import { getExamDefinition } from "../exams";
+import { getLegacyExamDefinition as getExamDefinition } from "../exams";
 import { getExamNumberXPScoringRule } from "../exam-scores";
 import { originalProvenance, type ContentProvenance } from "./provenance";
 

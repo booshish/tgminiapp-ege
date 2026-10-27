@@ -10,12 +10,14 @@ import {
 import { checkTaskAnswer, practiceBank as tasks } from "./tasks";
 import { isSubjectId } from "./subjects";
 import { getTaskXPScoringRule } from "./exam-scores";
+import { activeStructureVersion,getTaskView } from "./task-placement";
 
 export const practiceStorageKey = "tochka-practice-v1";
 export const catalogScrollStorageKey = "tochka-catalog-scroll-v1";
 
 export type StoredPractice = {
   version: 2;
+  structureVersion?: string;
   catalog: CatalogSelection;
   sessions: Record<string, PracticeSession>;
   activeId: string | null;
@@ -37,7 +39,7 @@ export function isReadablePracticeStorage(raw: string | null): boolean {
 
 /** Session.states is a screen projection; only taskStates is persisted. */
 export function serializeStoredPractice(value: StoredPractice): string {
-  return JSON.stringify({ ...value, sessions: Object.fromEntries(Object.entries(value.sessions)
+  return JSON.stringify({ ...value, structureVersion:activeStructureVersion, sessions: Object.fromEntries(Object.entries(value.sessions)
     .map(([id, session]) => [id, { ...session, states: undefined }])) });
 }
 
@@ -150,7 +152,7 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
   try {
     const input = object(JSON.parse(raw));
     if (!input || (input.version !== 1 && input.version !== 2)) return empty;
-    const catalog = selection(input.catalog) ?? empty.catalog;
+    let catalog = selection(input.catalog) ?? empty.catalog;
     const records = object(input.sessions);
     const sessions: Record<string, PracticeSession> = {};
     const taskStates: Record<string, PracticeTaskState> = {};
@@ -160,9 +162,23 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
     for (const [id, value] of entries) {
       if (!/^[a-zA-Z0-9-]{1,100}$/.test(id) || ["constructor", "prototype", "__proto__"].includes(id)) continue;
       const record = object(value);
-      const selected = selection(record?.selection);
+      let selected = selection(record?.selection);
       if (!record || !selected || record.id !== id || !Array.isArray(record.taskIds)) continue;
-      const availableIds = practiceTasks(selected).map((task) => task.id);
+      const anchorId = typeof record.lastTaskId === "string" ? record.lastTaskId : record.taskIds[typeof record.lastPosition === "number" ? record.lastPosition : 0];
+      const anchor = tasks.find(t => t.id === anchorId);
+      const matchesSelection = (t: (typeof tasks)[number]) => t.subjectId === selected!.subjectId && t.examType.includes(selected!.exam) && t.level === (selected!.level ?? null);
+      const historicalContext = Boolean(anchor && matchesSelection(anchor) && getTaskView(anchor).availability === "history-only");
+      if(input.structureVersion!==activeStructureVersion){
+        const position=typeof record.lastPosition==="number"?record.lastPosition:0;
+        const stable=typeof record.lastTaskId==="string"?record.lastTaskId:record.taskIds[position];
+        const rawTask=tasks.find(t=>t.id===stable),view=rawTask?getTaskView(rawTask):undefined;
+        if(view?.placementReview?.compatible&&view.examNumber!==null&&selected.mode==="number"){
+          const migrated=normalizeCatalogSelection({...selected,examNumber:view.examNumber,part:view.part});
+          if(input.activeId===id&&catalog.exam===selected.exam&&catalog.subjectId===selected.subjectId&&catalog.level===selected.level&&catalog.examNumber===selected.examNumber)catalog=migrated;
+          selected=migrated;
+        }
+      }
+      const availableIds = historicalContext ? record.taskIds.filter((id): id is string => typeof id === "string" && tasks.some(t => t.id === id && matchesSelection(t))) : practiceTasks(selected).map((task) => task.id);
       const available = new Set(availableIds);
       const savedIds = record.taskIds.filter((taskId): taskId is string =>
         typeof taskId === "string" && available.has(taskId),
@@ -188,6 +204,7 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
           ? restoredPosition
           : Math.max(0, Math.min(previousPosition, taskIds.length - 1)),
         ...(record.invalidContext === true ? { invalidContext: true } : {}),
+        ...(historicalContext ? { historicalContext:true } : {}),
         visitOrder: typeof record.visitOrder === "number" && Number.isSafeInteger(record.visitOrder) && record.visitOrder >= 0 ? record.visitOrder : entries.findIndex(([entryId]) => entryId === id) + 1,
       };
       sessions[id].lastTaskId = taskIds[sessions[id].lastPosition];
@@ -211,6 +228,7 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
     }
     return {
       version: 2,
+      structureVersion:activeStructureVersion,
       catalog,
       sessions,
       taskStates,

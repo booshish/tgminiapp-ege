@@ -86,8 +86,9 @@ export function SelfAssessmentScreen({
         <p className="eyebrow">
           {exam} · {subjectTitle(task.subjectId)}{levelLabel ? ` · ${levelLabel}` : ""}
         </p>
-        <h1 id="task-heading">Задание №{examNumber}</h1>
+        <h1 id="task-heading">{task.availability === "history-only" ? "Сохранённое задание" : `Задание №${examNumber}`}</h1>
         <p className="task-topic">Тема: {topicTitle}</p>
+        {task.availability === "history-only" && <p role="note">Сохранённое задание прежней модели, вне актуальной номерной практики 2027. Критерии относятся к исходному заданию.</p>}
         <p className="task-source">
           {task.source.label} · {task.examYear} · Часть 2 · Самопроверка
         </p>

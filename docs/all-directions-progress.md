@@ -1,5 +1,7 @@
 # Все 30 направлений — контрольная точка 2026-10-27
 
+Новая контрольная точка: [единая структура 2027](exam-2027-migration-progress.md), [таблица всех 30 направлений](exam-2027-migration.md). Ниже сохранена история предыдущего этапа; сведения о runtime математики 2026 заменены безопасной картой представления 2027, исходные задания не переписаны.
+
 ## Текущий этап: поэлементный аудит и READY/PARTIAL/BLOCKED
 
 Продолжение `54ca49b`, GitHub main проверен через подключение GitHub и совпадал с локальным HEAD. Актуальное состояние этого этапа — [exam-model-audit-progress.md](exam-model-audit-progress.md), таблица всех 30 — [generator-readiness-summary.md](generator-readiness-summary.md). Машинная карта **расширена в прежнем файле** `all-directions-readiness.json`, раздел `generatorAudit`; старые верхнеуровневые `directions.newPublishedTasks=84` остаются историей предыдущего выпуска, не числом новых задач аудита.

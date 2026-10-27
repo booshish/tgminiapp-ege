@@ -8,8 +8,8 @@ import { TriangleDiagram } from "@/components/illustrations";
 import type { MockExamController } from "@/hooks/use-mock-exam";
 import { VariantLaunchCard } from "@/components/variant-launch-card";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
-import { examDefinitions, type ExamLevel } from "@/lib/exams";
-import { tasks, type Task } from "@/lib/tasks";
+import { examDefinitions, getExamDefinitionByVersion, type ExamLevel } from "@/lib/exams";
+import { tasks as sourceTasks, getPracticeBankView, type Task } from "@/lib/tasks";
 import type { Exam } from "@/lib/navigation";
 import { elapsedMockMilliseconds, getMockTaskStatus, mockDurationNote, mockScoreSummary, remainingMockMilliseconds } from "@/lib/mock-exam";
 import "../mock-exam.css";
@@ -37,7 +37,8 @@ export function MockExamScreen({ mock, exam, level, onBack, onOpenTheory, onSele
   const [showAllHistory, setShowAllHistory] = useState(false);
   const definition = examDefinitions.find((entry) => entry.examType === selectedExam && entry.level === (selectedExam === "ЕГЭ" ? selectedLevel : null));
   const session = mock.active;
-  const sessionDefinition = session ? examDefinitions.find((entry) => entry.versionId === session.examVersionId) : null;
+  const tasks=session?.examVersionId.endsWith("2027-draft")?getPracticeBankView():sourceTasks;
+  const sessionDefinition = session ? getExamDefinitionByVersion(session.examVersionId) : null;
   const task = session ? tasks.find((entry) => entry.id === session.taskIds[session.position]) : null;
   const finished = Boolean(session && session.finishedAt !== null);
   const history = mock.state.sessions.filter((entry) => entry.finishedAt !== null).slice().reverse();
@@ -46,7 +47,7 @@ export function MockExamScreen({ mock, exam, level, onBack, onOpenTheory, onSele
 
   function openSession(id: string) {
     const entry = mock.state.sessions.find((attempt) => attempt.id === id);
-    const context = entry && examDefinitions.find((item) => item.versionId === entry.examVersionId);
+    const context = entry && getExamDefinitionByVersion(entry.examVersionId);
     if (context) {
       setSelectedExam(context.examType);
       setSelectedLevel(context.level ?? "profile");
@@ -94,9 +95,10 @@ export function MockExamScreen({ mock, exam, level, onBack, onOpenTheory, onSele
       <PageIntro eyebrow="САМОСТОЯТЕЛЬНАЯ ПОДГОТОВКА" title={session ? "Учебный вариант" : "Учебные варианты"}>
         {phoneLayout && session
           ? "Авторский учебный вариант."
-          : "Авторские задания по предварительной структуре 2026 года. Это учебная тренировка, а не подтверждённый официальный пробник ФИПИ."}
+          : "Авторские задания по проектам структуры 2027 года. Полный вариант доступен только при покрытии всех номеров и критериев."}
       </PageIntro>
       {mock.storageWarning && <p className="info-note" role="alert">Браузер не разрешил сохранить данные или прежняя запись требует восстановления. Она не перезаписана. Текущая работа может сохраниться только до закрытия страницы.</p>}
+      {sessionDefinition&&sessionDefinition.year<2027&&<p className="info-note">Ранее начатая попытка сохранена в исходном составе. Новая подготовка использует проект 2027; эта попытка не объявляется актуальным полным пробником.</p>}
       {mock.actionError && <div className="mock-error" role="alert"><p>{mock.actionError}</p>{session?.finishedAt !== null && session && <button type="button" className="button button-secondary" onClick={mock.retryPublish}>Сохранить результаты</button>}</div>}
       {!session ? (
         <>
@@ -114,7 +116,7 @@ export function MockExamScreen({ mock, exam, level, onBack, onOpenTheory, onSele
             <h2>Начатые варианты</h2>
             <p>Каждую попытку можно продолжить. Таймеры идут с момента начала, в том числе после выхода.</p>
             <ul className="mock-history">{unfinished.map((entry) => {
-              const title = examDefinitions.find((item) => item.versionId === entry.examVersionId)?.title ?? entry.examVersionId;
+              const title = getExamDefinitionByVersion(entry.examVersionId)?.title ?? "Сохранённый учебный вариант";
               const answered = entry.taskIds.filter((id) => entry.answers[id]?.trim()).length;
               return <li key={entry.id}><button type="button" onClick={() => openSession(entry.id)}><span><strong>{title}{entry.variantNumber ? ` · №${entry.variantNumber}` : ""}</strong><span>{new Date(entry.startedAt).toLocaleString("ru-RU")}</span></span><span>Ответов {answered} из {entry.taskIds.length}<ArrowRight size={18} aria-hidden="true" /></span></button></li>;
             })}</ul>
@@ -124,7 +126,7 @@ export function MockExamScreen({ mock, exam, level, onBack, onOpenTheory, onSele
             <p>Только на этом устройстве, без аккаунта и облачной синхронизации. Базовые результаты каждого варианта доступны бесплатно.</p>
             {history.length === 0 ? <p className="info-note">Завершённые варианты появятся здесь.</p> : <ul className="mock-history">
               {(showAllHistory ? history : history.slice(0, 10)).map((entry) => {
-                const title = examDefinitions.find((item) => item.versionId === entry.examVersionId)?.title;
+                const title = getExamDefinitionByVersion(entry.examVersionId)?.title;
                 const score = mockScoreSummary(entry, tasks);
                 return <li key={entry.id}><button type="button" onClick={() => openSession(entry.id)}><span><strong>{title}{entry.variantNumber ? ` · №${entry.variantNumber}` : ""}</strong><span>{new Date(entry.startedAt).toLocaleString("ru-RU")}</span></span><span>{score.automatic} автоматически{score.self ? ` + ${score.self} баллы самопроверки` : ""}<ArrowRight size={18} aria-hidden="true" /></span></button></li>;
               })}
@@ -186,7 +188,7 @@ export function MockExamScreen({ mock, exam, level, onBack, onOpenTheory, onSele
           {phoneLayout && (
             <details className="mock-source-note">
               <summary>О формате учебного варианта</summary>
-              <p>Авторские задания по предварительной структуре 2026 года. Это учебная тренировка, а не подтверждённый официальный пробник ФИПИ.</p>
+              <p>Авторские задания по {sessionDefinition.year === 2027 ? "проекту структуры 2027" : "исходной модели сохранённой попытки"}. Это учебная тренировка, а не подтверждённый официальный пробник ФИПИ.</p>
               <p>{mockDurationNote}</p>
               <p>Ответы сохраняются в этом браузере.{sessionDefinition.numbers.some((entry) => entry.part === 2) ? " Вторую часть ты оцениваешь самостоятельно." : " Все задания — с кратким ответом."}</p>
             </details>

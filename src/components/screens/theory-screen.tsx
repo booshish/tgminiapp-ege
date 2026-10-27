@@ -77,7 +77,7 @@ export function TheoryScreen({
           subjectId,
           level: subjectId === "math" && exam === "ЕГЭ" ? level ?? "profile" : undefined,
           examNumber: Number(number),
-        }).map((task) => getTheoryTopic(task.topicId)?.id ?? task.topicId),
+        }).map((task) => getTheoryTopic(task.activeTheoryTopicId ?? task.topicId)?.id ?? task.topicId),
       )
     : undefined;
   const visibleTopics = getPublishedTheoryTopics().filter(
@@ -86,7 +86,7 @@ export function TheoryScreen({
       item.subjectId === subjectId &&
       (subjectId !== "math" || item.coverage === "foundation" || exam !== "ЕГЭ" || (item.level ?? "profile") === (level ?? "profile")) &&
       item.part === part &&
-      (!matchingTaskTopics || item.examNumbers?.includes(Number(number)) || matchingTaskTopics.has(item.id)) &&
+      (!matchingTaskTopics || item.examNumbers?.includes(Number(number)) || (item.coverage === "foundation" && matchingTaskTopics.has(item.id))) &&
       (!normalizedQuery ||
         [item.title, item.description, ...item.sections.map((section) => section.title)]
           .join(" ")
@@ -261,7 +261,7 @@ export function TheoryScreen({
             </span>
             <h2>Выберите тему</h2>
             {!isPhone && <p>
-              {subjectId === "math" ? "Авторские материалы по номерам и школьной базе. Привязка к структуре 2026 года предварительная; отдельные методы не означают полного охвата всех экзаменационных подтипов." : "Авторские учебные материалы по прочитанным разделам проекта 2027. Это не полный курс и не утверждённые критерии экзамена; источник требований указан в конспекте."}
+              {subjectId === "math" ? "Авторские материалы по номерам проекта 2027 и школьной базе. Привязка проверена по совместимости; отдельные методы не означают полного охвата всех экзаменационных подтипов." : "Авторские учебные материалы по прочитанным разделам проекта 2027. Это не полный курс и не утверждённые критерии экзамена; источник требований указан в конспекте."}
             </p>}
           </div>
           <div className="topic-grid">
@@ -327,7 +327,7 @@ export function TheoryScreen({
           )}
           {isPhone && <details className="theory-mobile-details theory-catalog-about">
             <summary>О материалах <ChevronDown size={17} aria-hidden="true" /></summary>
-            <p>{subjectId === "math" ? "Авторские материалы по номерам и школьной базе. Привязка к структуре 2026 года предварительная; отдельные методы не означают полного охвата всех экзаменационных подтипов." : "Авторские учебные материалы по проекту 2027. Это не полный курс и не официальные критерии; источник указан в конспекте."}</p>
+            <p>{subjectId === "math" ? "Авторские материалы по номерам проекта 2027 и школьной базе. Привязка проверена по совместимости; отдельные методы не означают полного охвата всех экзаменационных подтипов." : "Авторские учебные материалы по проекту 2027. Это не полный курс и не официальные критерии; источник указан в конспекте."}</p>
           </details>}
         </>
       ) : (

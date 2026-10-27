@@ -4,7 +4,7 @@ import { challengeTasks, challengePrototypes } from "./content/challenge-bank";
 import { ogeTasks, ogePrototypes } from "./content/oge-bank";
 import { egeTasks, egePrototypes } from "./content/ege-bank";
 import type { Exam } from "./navigation";
-import { getExamDefinition, type ExamLevel, type ExamPart } from "./exams";
+import { getExamDefinition, getLegacyExamDefinition, type ExamLevel, type ExamPart } from "./exams";
 import { getExamNumberXPScoringRule } from "./exam-scores";
 import { originalProvenance, type ContentProvenance } from "./content/provenance";
 import { legacyTaskOrder } from "./content/legacy-task-order";
@@ -14,6 +14,7 @@ import { physicsTasks, physicsPrototypes } from "./content/physics-bank";
 import { russianTasks, russianPrototypes } from "./content/russian-bank";
 import type { SubjectId } from "./subjects";
 import { taskPackageIndex } from "./task-package-index";
+import { getTaskView, getMetadataPlacement } from "./task-placement";
 export type { SubjectId } from "./subjects";
 
 export type { Exam } from "./navigation";
@@ -22,6 +23,9 @@ export type AnswerRule =
 
 export type Task = {
   id: string;
+  originExam?: Pick<Task,"examVersionId"|"examYear"|"examNumber"|"part"|"scoring"|"availability">;
+  activeTheoryTopicId?: string;
+  placementReview?: {version:string;compatible:boolean;criteriaCompatible:boolean;reason:string};
   requirementsReference?: { url: string; pdfPage: number; year: number; status: "draft-copy-reviewed" };
   publication: PublicationCandidate;
   /** Historical examples remain readable but are not relabelled as current numbered tasks. */
@@ -142,7 +146,7 @@ type DerivedTaskMetadata =
   | "scoring";
 
 function defineTask(data: Omit<Task, DerivedTaskMetadata>): Task {
-  const definition = getExamDefinition({
+  const definition = getLegacyExamDefinition({
     examType: data.examType[0],
     subjectId: "math",
     level: data.level,
@@ -1255,7 +1259,7 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
     !definition.numbers.some((entry) => entry.number === filter.examNumber)
   )
     return [];
-  return selectableTasks.filter(
+  return selectableTasks.map(getTaskView).filter(
     (task) =>
       task.examType[0] === definition.examType &&
       task.subjectId === definition.subjectId &&
@@ -1274,9 +1278,16 @@ export function getPracticeTaskCount(filter: PracticeTaskFilter): number {
   const present = new Set(practiceBank.map((t) => t.id));
   return getPracticeTasks(filter).length + taskPackageIndex.flatMap((p) => p.tasks).filter((t) =>
     !present.has(t.id) && t.examType[0] === filter.examType && t.subjectId === (filter.subjectId ?? "math") &&
-    (filter.examNumber === undefined || t.examNumber === filter.examNumber) &&
+    getMetadataPlacement(t).available && (filter.examNumber === undefined || getMetadataPlacement(t).number === filter.examNumber) &&
     (!filter.topicId || t.topicId === filter.topicId) && (!filter.prototypeId || t.prototypeId === filter.prototypeId) &&
     (filter.level == null || t.level === filter.level)).length;
+}
+
+let viewBank: Task[] = [], viewLength=-1;
+/** Cached derived view, never a second stored bank or a mutation of source tasks. */
+export function getPracticeBankView(): Task[] {
+  if(viewLength!==practiceBank.length){viewBank=practiceBank.map(getTaskView);viewLength=practiceBank.length;}
+  return viewBank;
 }
 
 /** Called only after verification against the build-pinned shard digest. Append-only. */

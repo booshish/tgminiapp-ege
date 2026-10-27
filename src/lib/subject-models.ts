@@ -16,7 +16,7 @@ export const subjectExamDefinitions: ExamDefinition[] = (["ОГЭ", "ЕГЭ"] as
   id: `${exam === "ОГЭ" ? "oge" : "ege"}-informatics`, examType: exam, subjectId: "informatics", level: null,
   year: 2027, versionId: `${exam === "ОГЭ" ? "oge" : "ege"}-informatics-2027-draft`, available: true,
   title: `${exam} · Информатика`, verificationStatus: "draft-source-reviewed",
-  ...(exam === "ЕГЭ" ? { maxPrimaryScore: 29, durationMinutes: 235 } : {}),
+  ...(exam === "ЕГЭ" ? { maxPrimaryScore: 29, durationMinutes: 235 } : {maxPrimaryScore:21,durationMinutes:150}),
   verificationNote: "Проект ФИПИ 2027. Прочитана копия спецификации; идентичность каноническому архиву не проверена. Это авторские тренировочные задания. Неподготовленные номера обозначены отдельно.",
   sources: [{ title: "ФИПИ: проекты 2027", url: `https://fipi.ru/${exam === "ОГЭ" ? "oge" : "ege"}/demoversii-specifikacii-kodifikatory` }, { title: "Копия спецификации, обобщённый план", url: informaticsSources[exam] }],
   numbers: (exam === "ОГЭ" ? ogeTitles : egeTitles).map((title, i): ExamNumberDefinition => ({
@@ -40,6 +40,7 @@ subjectExamDefinitions.push(...russianModels);
 const physicsTitles = ["Движение по прямой", "Силы и ускорение", "Импульс и энергия", "Равновесие, колебания и волны", "Анализ механических процессов", "Соответствия в механике", "Частицы и температура", "Теплота и работа газа", "Анализ тепловых процессов", "Соответствия в тепловых процессах", "Заряды и постоянный ток", "Магнитное поле и индукция", "Контур и геометрическая оптика", "Анализ электромагнитных процессов", "Соответствия в электродинамике", "Атом и ядро", "Анализ квантовых явлений", "Физический смысл величин", "Показания приборов", "Планирование опыта", "Качественная задача: электродинамика", "Расчётная задача: механика", "Расчётная задача: тепловые явления", "Составная задача: термодинамика", "Составная задача: электродинамика", "Механика с обоснованием модели"];
 subjectExamDefinitions.push({
   id: "ege-physics", examType: "ЕГЭ", subjectId: "physics", level: null,
+  durationMinutes:235, maxPrimaryScore:45,
   year: 2027, versionId: "ege-physics-2027-draft", available: true,
   title: "ЕГЭ · Физика", verificationStatus: "draft-source-reviewed",
   verificationNote: "Проект 2027: сверены таблица содержания и план по PDF-копии спецификации, не каноническому архиву. Готовы тренировочные номера 1–4; остальные требуют отдельных заданий и проверки формата/критериев. Полных вариантов нет.",

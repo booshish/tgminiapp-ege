@@ -3,12 +3,14 @@ import { checkTaskAnswer } from "./tasks";
 import type { LearningState, AnswerEvent, SolutionEvent } from "./learning-events";
 import { getAttemptXPAward, recordGameAttempt } from "./gamification";
 import { getTaskXPScoringRule } from "./exam-scores";
+import { getTaskOrigin } from "./task-placement";
 
 /** Shared practice/mock transaction. Replaying the same request never creates an attempt. */
 export function appendCheckedAnswer(
   state: LearningState, task: Task, answer: string, correct: boolean,
   id: string, solutionSeenBeforeCheck = false, createdAt = new Date().toISOString(),
 ): { state: LearningState; id: string; xpAwarded: number } {
+  task=getTaskOrigin(task);
   if (!/^[a-zA-Z0-9:_-]{1,160}$/.test(id)) throw new Error("Invalid attempt ID");
   const checked = checkTaskAnswer(answer, task.answerRule);
   if (!checked.valid || checked.correct !== correct || task.answerRule.type === "self" || task.answerFormat === "extended" || (task.part === 2 && task.subjectId === "math"))
@@ -40,6 +42,7 @@ export function appendMockSolutionExposure(
   state: LearningState, task: Task, mockSessionId: string,
   createdAt = new Date().toISOString(),
 ): LearningState {
+  task=getTaskOrigin(task);
   if (task.part !== 1 || !/^[a-zA-Z0-9_-]{1,100}$/.test(mockSessionId))
     throw new Error("Invalid mock solution exposure");
   if (state.events.some((event) => event.kind === "solution_viewed" && event.taskId === task.id))

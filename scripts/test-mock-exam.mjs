@@ -11,8 +11,10 @@ const {
   getMockTaskStatus, skipMockTask, startMockAttempt,
   checkMockAnswer,
 } = load("src/lib/mock-exam.ts");
-const { getAvailableExamDefinitions, examDefinitions } = load("src/lib/exams.ts");
-const definitions = getAvailableExamDefinitions();
+// Historical engine/restore regressions intentionally retain their 2026 snapshots.
+// Current 2027 start/coverage is exercised in test-exam-migration-2027.mjs.
+const { legacyExamDefinitions:examDefinitions } = load("src/lib/exams.ts");
+const definitions = examDefinitions.filter(d=>d.available);
 const oge = definitions.find((definition) => definition.examType === "ОГЭ");
 const ege = definitions.find((definition) => definition.examType === "ЕГЭ" && definition.level === "profile");
 const start = Date.parse("2026-10-21T10:00:00Z");

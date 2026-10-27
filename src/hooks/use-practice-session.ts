@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Exam, Route, Selection, View } from "@/lib/navigation";
-import { practiceBank as tasks, getPracticeTasks } from "@/lib/tasks";
+import { getPracticeBankView, getPracticeTasks } from "@/lib/tasks";
 import { ensureTaskPackages } from "@/lib/task-packages";
 import { useTaskPackages } from "@/hooks/use-task-packages";
 import { orderPracticeTasks } from "@/lib/practice-order";
@@ -48,6 +48,7 @@ export function catalogRoute(selection: CatalogSelection): Selection {
 }
 
 function selectionFromRoute(route: Route, fallback: CatalogSelection) {
+  const task=route.taskId?getPracticeBankView().find(t=>t.id===route.taskId):undefined;
   return normalizeCatalogSelection(
     {
       ...fallback,
@@ -57,7 +58,7 @@ function selectionFromRoute(route: Route, fallback: CatalogSelection) {
       mode:
         route.catalogMode ??
         (route.examNumber ? "number" : route.topicId ? "topic" : fallback.mode),
-      examNumber: route.examNumber,
+      examNumber: task?.placementReview?.compatible?task.examNumber??undefined:route.examNumber,
       topicId: route.topicId,
       prototypeId: route.prototypeId,
       part: route.part,
@@ -80,6 +81,7 @@ export function usePracticeSession({
   exam,
   setExam,
 }: Props) {
+  const tasks=getPracticeBankView();
   const packages = useTaskPackages(route, progressReady);
   const ready = packages.ready;
   const [catalog, setCatalog] = useState<CatalogSelection>(
@@ -181,7 +183,7 @@ export function usePracticeSession({
         cachedSession.selection.exam === "ОГЭ" ||
         route.level === cachedSession.selection.level) &&
       (!route.examNumber ||
-        route.examNumber === cachedSession.selection.examNumber) &&
+        selectionFromRoute(route,cachedSession.selection).examNumber === cachedSession.selection.examNumber) &&
       (!route.topicId || route.topicId === cachedSession.selection.topicId) &&
       (!route.prototypeId ||
         route.prototypeId === cachedSession.selection.prototypeId) &&
@@ -379,7 +381,7 @@ export function usePracticeSession({
         sessionId: created.id,
       });
     },
-    [navigate, setExam, sessions, activeId, nextVisit],
+    [navigate, setExam, sessions, activeId, nextVisit, tasks],
   );
 
   const move = useCallback(
@@ -394,7 +396,7 @@ export function usePracticeSession({
         sessionId: session.id,
       });
     },
-    [navigate, session, position],
+    [navigate, session, position, tasks],
   );
 
   const changeTask = useCallback(
@@ -428,7 +430,7 @@ export function usePracticeSession({
       taskIndex: tasks.findIndex((task) => task.id === resumeTask.id), sessionId: resumeSession.id,
     });
     return true;
-  }, [resumeSession, resumeTask, navigate]);
+  }, [resumeSession, resumeTask, navigate, tasks]);
 
   const reset = useCallback(() => {
     try {

@@ -159,6 +159,7 @@ function TaskAttempt({
           {examNumber ? `Задание №${examNumber}` : "Учебное задание"}
         </h1>
         <p className="task-topic">Тема: {topicTitle}</p>
+        {task.availability === "history-only" && <p role="note">Сохранённое задание прежней модели. Не входит в актуальную номерную практику 2027; история и черновик сохранены.</p>}
         <p className="task-source">
           {task.source.label} · {task.examYear}
           {task.part ? ` · Часть ${task.part}` : " · Базовая тема"}

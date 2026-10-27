@@ -1,12 +1,14 @@
 import { taskPackageIndex } from "./task-package-index";
 import { registerTaskPackage, type Task, type PracticeTaskFilter } from "./tasks";
+import { getMetadataPlacement } from "./task-placement";
 
 const pending = new Map<string, Promise<void>>();
 export async function ensureTaskPackages(filter?: PracticeTaskFilter, savedText = ""): Promise<void> {
   const selected = taskPackageIndex.filter((p) => p.tasks.some((t) => savedText.includes(t.id) || (filter &&
     t.examType[0] === filter.examType && t.subjectId === filter.subjectId &&
+    (t.subjectId !== "math" || t.level === (filter.examType === "ЕГЭ" ? filter.level ?? "profile" : null)) &&
     (filter.examNumber !== undefined || filter.topicId || filter.prototypeId) &&
-    (filter.examNumber === undefined || t.examNumber === filter.examNumber) &&
+    getMetadataPlacement(t).available && (filter.examNumber === undefined || getMetadataPlacement(t).number === filter.examNumber) &&
     (!filter.topicId || filter.topicId === t.topicId) && (!filter.prototypeId || filter.prototypeId === t.prototypeId))));
   await Promise.all(selected.map((entry) => {
     if (!pending.has(entry.file)) {

@@ -56,7 +56,7 @@ import {
   loadHelpOrigin,
   clearHelpOrigin,
 } from "@/lib/help-navigation";
-import { practiceBank as tasks, taskTopicLabels } from "@/lib/tasks";
+import { getPracticeBankView, taskTopicLabels } from "@/lib/tasks";
 import { subjectTitle } from "@/lib/subjects";
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import {
@@ -64,7 +64,7 @@ import {
   emptyTaskState,
   type CatalogSelection,
 } from "@/lib/practice";
-import { examDefinitions, getExamDefinition, getExamLevelLabel, type ExamLevel } from "@/lib/exams";
+import { historicalExamDefinitions as examDefinitions, getExamDefinition, getExamLevelLabel, type ExamLevel } from "@/lib/exams";
 import { getTheoryTopic } from "@/lib/theory";
 import { viewTitles, type View } from "@/lib/navigation";
 import { getGameSummary, getSelfAssessment } from "@/lib/gamification";
@@ -94,6 +94,7 @@ const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
 const phoneMoreOrder: View[] = ["mistakes", "favorites", "mock", "profile", "trainer"];
 
 export function StudyApp() {
+  const tasks=getPracticeBankView();
   const phoneLayout = usePhoneLayout();
   const moreNavigation = phoneLayout
     ? phoneMoreOrder.map((view) => navigation.find((item) => item.view === view)!)
@@ -344,7 +345,7 @@ export function StudyApp() {
   }
   function openTaskById(taskId: string) {
     const task = tasks.find((item) => item.id === taskId);
-    if (!task || task.availability === "history-only" || !getExamDefinition({ examType: task.examType[0], subjectId: task.subjectId, level: task.level })?.available) return;
+    if (!task || !getExamDefinition({ examType: task.examType[0], subjectId: task.subjectId, level: task.level })?.available) return;
     practice.start({
       exam: task.examType[0], subjectId: task.subjectId, level: task.level ?? undefined,
       mode: task.examNumber === null ? "topic" : "number",
@@ -648,7 +649,7 @@ export function StudyApp() {
                 }
                 examNumber={currentTask.examNumber}
                 topicTitle={
-                  getTheoryTopic(currentTask.topicId)
+                  getTheoryTopic(currentTask.activeTheoryTopicId ?? currentTask.topicId)
                     ?.title ??
                   taskTopicLabels[currentTask.topicId] ??
                   currentTask.title

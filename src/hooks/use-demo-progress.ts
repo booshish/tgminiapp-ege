@@ -20,6 +20,7 @@ import {
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import type { Exam } from "@/lib/navigation";
 import { appendCheckedAnswer, appendMockSolutionExposure } from "@/lib/learning-mutations";
+import { getTaskOrigin } from "@/lib/task-placement";
 
 function eventId() {
   return typeof crypto !== "undefined" &&
@@ -214,6 +215,7 @@ export function useDemoProgress(enabled = true) {
   );
   const confirmSelfAssessment = useCallback(
     (task: Task, score: number, requirePersistence = false) => {
+      task=getTaskOrigin(task);
       const rule = getTaskXPScoringRule(task);
       if (
         !rule ||

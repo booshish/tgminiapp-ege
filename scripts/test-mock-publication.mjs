@@ -4,9 +4,9 @@ import { createContentLoader } from "./content-source-loader.mjs";
 
 const load = createContentLoader();
 const { tasks } = load("src/lib/tasks.ts");
-const { getAvailableExamDefinitions } = load("src/lib/exams.ts");
+const { legacyExamDefinitions } = load("src/lib/exams.ts");
 const { getMockCoverage, createMockSession, parseMockState, updateMockAnswer, finishMockSession } = load("src/lib/mock-exam.ts");
-const definitions = getAvailableExamDefinitions();
+const definitions = legacyExamDefinitions.filter(d=>d.available);
 const definition = definitions.find((exam) => exam.examType === "ЕГЭ" && exam.level === "profile");
 const task = tasks.find((entry) => entry.examVersionId === definition.versionId && entry.part === 1);
 const start = Date.parse("2026-10-21T10:00:00Z");
