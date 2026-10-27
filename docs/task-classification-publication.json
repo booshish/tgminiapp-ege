@@ -1,0 +1,13 @@
+{
+  "date":"2026-10-27",
+  "runtimeSourceCommit":"7bbcb7646a56a742dfbc239cad3fe3d4bc0d30af",
+  "pagesCommit":"b7d23435fba5c2be632d0daf15c8330682cb2853",
+  "pagesTree":"b30c066281f91b4c8a6d8be4caf43875ae5ea9cc",
+  "nativePages":{"id":40588338804,"status":"completed","conclusion":"success","url":"https://github.com/booshish/tgminiapp-ege/actions/runs/40588338804"},
+  "mainWorkflow":{"id":40588143265,"checksAndBuild":"success","deploy":"failure","reason":"Environment allows deployments only from gh-pages","settingsChanged":false},
+  "checks":{"fullTestsPassed":431,"fullTestsFailed":0,"taxonomyTestsPassedAfterLastMetadataLabelChange":9,"taxonomyCheck":"passed","lint":"passed-without-warnings","typecheck":"passed","productionBuild":"passed","browserFilters":{"groups":5,"pageErrors":0},"browserExistingTasks":{"groups":7,"directions":30,"tasks":84,"pageErrors":0},"browserScope":"Local production export/Chromium; no claim of physical-device Safari or remote hydration QA"},
+  "counts":{"directions":30,"mappedPositions":825,"positionsWithExistingTasks":214,"positionsWithDetailedReviewedSubtypes":119,"exhaustivelyClassifiedPositions":0,"subtypes":145,"topics":148,"subtopics":62,"existingSourceTasksWithMetadata":1967,"activeTasksWithDetailedClassification":713,"activeTasksNeedingDetailedEditorialClassification":1233,"unconfirmedOrigins":0,"originConfirmationScope":"Existing project authorship declarations/source files, not independent legal review","confirmedIndividualCodifierMappings":0,"generatorContracts":31,"newTasks":0,"thirdPartyImports":0},
+  "preservation":{"rawAuthoredBodiesAndIds":"unchanged","immutableShards":124,"lazyTasks":151,"bankAndImportArchitecture":"existing-only","XPStreakSubscriptionLogic":"unchanged","newFreePersonalAnalytics":false},
+  "resumeFrom":"docs/task-classification-progress.md",
+  "remaining":["Exhaustive significant subtype inventories for 825 positions","Detailed editorial classification for 1233 active tasks, including 910 Russian tasks","Individual FIPI codifier links; number-level references are not item-specific proof","Prior exam-2027 criteria/resource/new-profile-position gaps remain explicit"]
+}
