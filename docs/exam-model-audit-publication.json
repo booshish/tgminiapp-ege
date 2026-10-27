@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-27T18:34:28Z",
+  "runtimeSourceCommit": "f726143ba891c1e5ee9076f92add4d5e371efa55",
+  "pagesCommit": "b582fa2c5f43c1bd109327619f2d6376027f9a8c",
+  "deployment": {
+    "runId": 40560649806,
+    "url": "https://github.com/booshish/tgminiapp-ege/actions/runs/40560649806",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "mainWorkflow": {
+    "runId": 40560647806,
+    "buildAndChecks": "success",
+    "separateDeploy": "failure",
+    "workflowSettingsChanged": false
+  },
+  "audit": {
+    "directions": 30,
+    "targetNumbers": 825,
+    "fullyConfirmedModels": 0,
+    "namedSubtypes": 234,
+    "READY": 8,
+    "PARTIAL": 225,
+    "BLOCKED": 1,
+    "finiteSeedGroups": 71,
+    "additionalUnknownCoverageGates": 825,
+    "scoringRuleReviewedNumbers": 76,
+    "newGeneratorFunctions": 9,
+    "reusableFunctionsInventoried": 24
+  },
+  "controls": { "found": 72, "staged": 49, "duplicates": 23, "rejected": 0, "review": 0, "newPublicTasks": 0 },
+  "publishedLazyTasksPreserved": 151,
+  "tests": { "fullPassed": 410, "fullFailed": 0, "lint": "passed", "typecheck": "passed", "productionBuild": "passed", "productionBrowserGroups": 7, "cataloguesChecked": 30, "previousTasksOpenedAndSolved": 84, "pageErrors": 0, "offlineMapFollowupTestsPassed": 10 },
+  "followupScope": "Only offline readiness-map scripts, tests and documentation changed after the tested runtime export; no client-code changes.",
+  "remoteBrowserConfirmed": false,
+  "remoteBrowserLimitation": "Public Pages host is inaccessible from the configured environment. Native deployment and the exact local production export are verified; no remote browser smoke-test claimed."
+}

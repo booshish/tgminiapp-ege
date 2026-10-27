@@ -10,6 +10,21 @@ const localMathDocs={
   "ege-math-profile":"docs/fipi/МА-11 ЕГЭ 2027 СПЕЦ_профильный.pdf",
 };
 const fileHash=file=>createHash("sha256").update(readFileSync(resolve(projectRoot,file))).digest("hex");
+function requiredResourcesFor(modelId,number,slot){
+  const required=[...(slot?.requiredResources??[])];
+  // These dependencies were already documented in the Russian model/review,
+  // but were previously only prose and must not disappear from the machine map.
+  if(modelId==="oge-russian"){
+    if(number===1)required.push("Оригинальная аудиозапись и проверенный исходный текст изложения");
+    if([2,3].includes(number))required.push("Связный исходный текст для синтаксического анализа");
+    if(number>=10)required.push("Полноценный исходный текст с корректной нумерацией предложений");
+  }
+  if(modelId==="ege-russian"){
+    if(number<=3||number>=23)required.push("Полноценный исходный текст и согласованный комплект связанных заданий");
+    if(number===22)required.push("Полный набор оригинальных фрагментов для сопоставления средств выразительности");
+  }
+  return [...new Set(required)];
+}
 /** Extend the existing report, never replace the registry or renumber published IDs. */
 export function generationAudit(){
   const load=createContentLoader(),{getSubjects}=load("src/lib/subjects.ts"),{getExamDefinition}=load("src/lib/exams.ts");
@@ -47,7 +62,7 @@ export function generationAudit(){
       const criterion=subjectId==="math"?null:getExamAnswerContract(model.id,number);
       const source=local?{localFile:local,sha256:createHash("sha256").update(readFileSync(resolve(projectRoot,local))).digest("hex"),documentStatus:"local-draft-not-canonically-authenticated",pages:row.source_references?.map(r=>r.physical_page)??[]}:row.source_references??slot?.sourceReference??null;
       const maximum=row.max_primary_score??slot?.maxPrimaryScore??null;
-      const resources=slot?.requiredResources??[];
+      const resources=requiredResourcesFor(model.id,number,slot);
       const make=(subtype)=>{
         const cap=caps.find(c=>c.subtype===subtype),fixed=finite.find(f=>f.subtype===subtype);
         const inventoryComplete=false; // Complete codifier expansion has NOT been performed.
@@ -63,7 +78,7 @@ export function generationAudit(){
           scoring:criterion??{mode:slot?.answerFormat==="extended"?"expert-or-self-check-only":"unconfirmed",maximum,partialCredit:maximum>1?"not-inferred-from-maximum":false,alternatives:"must-be-established-per-item",formatting:"follow-reviewed-item-instructions",taskSpecificRubricComplete:false},
           hasGenerator,generationMethod:cap?{...cap.implementation,codeSha256:fileHash(cap.implementation.file)}:(fixed?{file:fixed.file,export:fixed.export,kind:"finite-parameter-family"}:hasSeed?{kind:"finite-editorial-seeds-not-scalable"}:null),parameterDomain:cap?.parameterDomain??(fixed?{kind:"existing-finite-cases-only",count:fixed.count}:null),
           answerVerification:cap?.verification??(fixed?{method:"existing-family-specific-independent-tests",file:finiteFactoryInventory.find(f=>f.file===fixed.file)?.verifier}:hasSeed?{method:"prior-item-specific-review-only-not-a-generator-proof"}:{method:"unavailable"}),
-          difficulty:cap?.difficulty??[],resources:{required:resources,available:!isUnknown&&missingResources.length===0,missing:missingResources,scope:cap?"within-validated-generator-domain":hasSeed?"existing-reviewed-seeds-only":"not-established"},
+          difficulty:cap?.difficulty??[],resources:{required:resources,available:isUnknown?false:!cap&&hasSeed&&resources.length?null:missingResources.length===0,missing:missingResources,requiresVerification:!cap&&hasSeed&&resources.length>0,scope:cap?"within-validated-generator-domain":hasSeed?"existing-seed-presence-does-not-certify-all-format-resources":"not-established"},
           status,limitations:[...(cap?.limits??[]),...(isUnknown?["Full codifier/subtype inventory not yet reviewed; no completeness claim"]:[]),...(subjectId==="math"?["Legacy task-to-2027 numbering/content mapping not certified; do not repurpose published IDs"]:[]),...(!criterion?["Exact scoring/partial-credit rule not yet registered for this format"]:[]),...(!hasGenerator?["No reusable validated parameterized generator for this subtype"]:[]),...(cap?.newThisStage&&!controlsCurrent?["Current independent control-batch receipt is missing"]:[]),...(cap?.requiresEditorialReview?["New facts or contexts require separate editorial verification"]:[])],
           existingTaskCount:isUnknown?0:relevant.length,finiteFamilyCaseCount:fixed?.count??0,extendedGuidance:getExtendedAnswerGuidance(model.id,number),
         };

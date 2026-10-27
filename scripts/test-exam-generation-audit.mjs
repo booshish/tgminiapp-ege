@@ -72,6 +72,10 @@ test("all thirty pairs have per-number and subtype maps; unknown coverage blocks
   const russian=audit.directions.find(d=>d.id==="oge-russian");
   assert.equal(russian.derivedTaskScoreSum+russian.sharedScoringPools.reduce((sum,p)=>sum+p.maximum,0),38);
   assert.equal(russian.numbers[12].maxPrimaryScore,8);
+  assert.ok(russian.numbers[0].subtypes.every(s=>s.resources.required.some(r=>r.includes("аудио"))));
+  const essay=audit.directions.find(d=>d.id==="ege-russian").numbers[26];
+  assert.ok(essay.subtypes.every(s=>s.resources.required.some(r=>r.includes("исходный текст"))));
+  assert.equal(essay.subtypes.some(s=>s.resources.required.some(r=>r.includes("аудио"))),false);
 });
 test("capability exports and finite generator families exist; no fake numeric-family mapping or missing evidence",async()=>{
   assert.equal(new Set(generatorCapabilities.map(c=>c.id)).size,generatorCapabilities.length);
