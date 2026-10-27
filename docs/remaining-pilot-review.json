@@ -1,0 +1,930 @@
+{
+  "date": "2026-10-27",
+  "kind": "original-training-not-official-exam",
+  "reviews": [
+    {
+      "id": "remaining-20261027-001",
+      "sha256": "b7621ed77139749096b065861836ca7369e18cdd55b03cb2a9ce312d638d57a7",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-002",
+      "sha256": "4c567dfacea84c359523278655435c3ca2d17ed3bd0b3c90bb18b8e1c8af6bd8",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-003",
+      "sha256": "1076dab04595379de67a96042440ba32eb5ffc571a60719cd5b582b439d19584",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-004",
+      "sha256": "f7b9c38d6a09882ef01a0c8098ae1f992e6a65da5e250d789bc7747824eac7da",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-005",
+      "sha256": "dae9cdc9a373c999ecd567ac174584bc38569261a95df5d23ab92c1054c6899c",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-006",
+      "sha256": "7dd24d6cd5503c400a3f368e1eb0828363cc40e25818b02b93cc9524ccc159c0",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-007",
+      "sha256": "b649ef94e05a6bb5abe73fd05a73873fb5b1c4243fab7f19b968ed405bb8256c",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-008",
+      "sha256": "9a658e805c1f81d4e80448edf8d247535e4bf93f4031c0c39b703fe60373f842",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-009",
+      "sha256": "7578a36894c7cfc9159b59f788ef04d82c20cc53969d3c41ac6f6cbc9318c85e",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-011",
+      "sha256": "ee73d4f592d43c66adbe7e6659739fa4d446d669927b00b1901e90a51840abad",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-012",
+      "sha256": "b65e52f9bf744d7fff5acccb9bad523f38a35b581d98132a2be094f36e97ca71",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-013",
+      "sha256": "7d7f0640866e5878deededa5330d4d501200fe1c76e6846007bec143316a54d4",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-014",
+      "sha256": "5e475045bec322756cbc9e3cf0efeb1a04d3843a5896c28d14693942e33a1b5d",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-015",
+      "sha256": "e9a2841a703ce0ac95541178e86a54d6cb8e943427af756f12269f77bfd806b5",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-016",
+      "sha256": "6320a2c036b0c1a5714cc54079dbe0038988ca2b701a99f9603010244b24382a",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-017",
+      "sha256": "dac84822288b53c1dcb089e74b353e89e0a35abfb485b27759ecbdfbfae8aba5",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-018",
+      "sha256": "ff96bf09ee84cec2cfeb382fd1333432ce71e12e7df58a62fc13a81876504019",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-019",
+      "sha256": "0b76c3a73fef50e72286b2b6ed6f5f9e5cffcc4e08aaa77155b1e0b5d0a0ae0d",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-020",
+      "sha256": "33a1eeee2ab095c07aaf5353a58081e7c48fb04af6526dab57fdeabe1e3052be",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-021",
+      "sha256": "552b07ff641bc552a8801b496811e21b95cf8be7069d030230229581fe61e4bb",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-022",
+      "sha256": "adbf7a84d86bc0fb77a8b7e9085c3eefe48b1489da5fc8e368ade5ca1736bce5",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-023",
+      "sha256": "48c1b7e0554690a2d82176366e5ac7680c418a71830e3af98920f20477256a12",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-024",
+      "sha256": "cb0423385c11cb3d5e350e477c58b6bbecc212e0f71e81fae6a91bcfc8ed4270",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-025",
+      "sha256": "711d28922e8493528539e10d0146fc20c434e9dc23f2c824bca7dec9a67e39b8",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-026",
+      "sha256": "433e80fd835d943f4cff9669848fcb66cebe691746c7ed300a6da8bfc6f50ffd",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-027",
+      "sha256": "76f10945751879180ad1786f4ae70bcc58250b989a5f2a20d913447dad3e5a26",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-028",
+      "sha256": "32a14d680d7f3a54c64253a761f126d1d4ea6c72023245b81445dd680a69546c",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-029",
+      "sha256": "7158b0ef5c6370fa7a4ae78bd7059eddf42fb9f3a63419ba5f9a8b9edf1c159f",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-030",
+      "sha256": "ca0b344614d5c7fbe1559ccf7cbb4bee33c559a20d21113014ba5f49695856e2",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-031",
+      "sha256": "e0a507ca0169f916448071a41853902597dc18998e1c1de79eaf28abeb104954",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-032",
+      "sha256": "a9170b0ee2dc4d16e3708069b66fe72374412b01d9f63389add3fba3752c512a",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-033",
+      "sha256": "5417e6706faefb6347e2a320ee95af50c23bb46db581eb25b66df571e6bb83c0",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-034",
+      "sha256": "8dc2f6065b994d0f8a527d03c8d3dfc3056e80ee244faf9c99f511c0469b6f9a",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-035",
+      "sha256": "6fdfa4c930cb1ae9ad00f9e3e2e90f24e348e8d8cefb1689abdd2718b13b7b61",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-036",
+      "sha256": "73324f5a44e0057b6734e00257dad7857ad76e746760fcac9d2c12054043fd9e",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-037",
+      "sha256": "ac09f6c44783d7932a2e1bc647c7b09f2838856fa89f3b4985af7d326a3f6b8a",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-038",
+      "sha256": "c89cb3c8ef704eab53e47f798fa482812368e1f566d067c7deb67e3e7109a629",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-039",
+      "sha256": "f3950c33ace4d5503d1510266816e067709f6f9b2b5512f4dbbb585c2599ac87",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-040",
+      "sha256": "6e55a59b6d3eeb17a5754a7cdd4c9449878d0cabafa84ef9be2bbe2c4cf753d1",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-041",
+      "sha256": "6b6f03b0301a9c010e7f3909d4e1a6179ec4dd901d6433e37f3b559613030ba2",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-042",
+      "sha256": "dc3aab6b70f0ce643c1a55850e223f26478f06783352f66e3db38a010d8f0777",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-043",
+      "sha256": "d678f5355181d75d254c42311a0211bdaafc091314369440bb74262ffa5a24e7",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-044",
+      "sha256": "8f15881c9c02ad8c150a1b3eaf9fd6397104d1afa443222f67a024df80d12155",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-045",
+      "sha256": "6312811ff9fe24d37d7859f1402a12f0fcb22dc619b9639605fbfe430e4d5311",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-046",
+      "sha256": "abb971a8361f60f084c56ecf7c54cc2b6a6e57b0443585f2cc082ec2296db3f0",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-047",
+      "sha256": "f5ed8a95c1647cf2f407fd81e6830f1bdb09bfb0082c4df406b0ac21af745101",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-048",
+      "sha256": "38755ec0566f51b9cf2841c235c0ca9c4018c07a40ffdc3569f9d180dd6eccae",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-049",
+      "sha256": "70c18ddc63ff5c5faaa90642c91d34e8bc136f9d250e454f9f8c1550de4c0617",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-050",
+      "sha256": "b564244547d371b67cb6b0a5319cf2143fab22b0fad63965ff439316dd275c63",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-051",
+      "sha256": "3c457a3b7087918bb765c45ee177336e06a586697c650275fb8d05675f061e79",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-052",
+      "sha256": "b084e88537b5b6684c1b08797fb4cbf3ddab3be21a713744cd788626d6581a96",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-053",
+      "sha256": "19ba8fa546c5e710965dfec904fa20339c3cfb692b72d11f31d5d86369a66893",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-054",
+      "sha256": "4c53d183526b17cf1aec7f08b9b698ca18a086846b911f67a0bf6f86299e0c8f",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-055",
+      "sha256": "051f384f797915ad3d387b5cfdaaeebc2c74177c1ec3bce26f4e435b64682753",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-056",
+      "sha256": "0959922f84e6da8c784305629b30c8148c42e7580e856a4d3aa812ec113d7b2d",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-057",
+      "sha256": "105ccd2f8f965c72d0019cb69d6fbb18b89c0fcbab936c38a891a2f984d86b4c",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-058",
+      "sha256": "e6ee5acd6ac384e43bf45bcb80f0ea7395fd3452c3f3eb342ada9ba53794a085",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-059",
+      "sha256": "e7d072d3eee19fc1524d96ca69928d49d4d5ee8bb79908cd84c4143b2fb9da7c",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-060",
+      "sha256": "48bf97e03c8381ef205baf9984d14309e06091ff27cc8da050db2156ea04ec1a",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-061",
+      "sha256": "05de5d4fa3b707b4534bcd487ebf0080e346d892b5c70341279756508c4b2f15",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-062",
+      "sha256": "ef8be1a24a63836d27eb3e264d52c41639a8391d787606c751b2f81e71c85ed9",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-063",
+      "sha256": "51830a158ed6fdb0c882faf6aafe4c7a7107e7d28e0adc39bd4dbe21611adddf",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-064",
+      "sha256": "e7f72daf3cff599cfb1531879182a63d7f0193a6b1be82128ce0b4a002c53747",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-065",
+      "sha256": "7dde79cad757d8b0b1a13aaee1916353c06a4a0197b3592beef0da41e576701b",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-066",
+      "sha256": "919cd9843e6c1e901a88fd91a927e57c5490fe3ad8999570397ec25cfef5e17b",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-067",
+      "sha256": "97776e37851a177355ef0c56f775a30556ee8e96e8889085590284bffda873df",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-068",
+      "sha256": "dab7a02949c7d99127f381bf78c3710e067b2112beb14a38facc7cab553bbe4b",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-069",
+      "sha256": "7f3388a420c1cdbddaca115353687cebc4a1e014ad6b74dd647104bf48cb97bc",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-070",
+      "sha256": "b283d7325a04a67d867d2dbf34180b011b4b5aacb4a02a8905a16613e7080ba0",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-071",
+      "sha256": "6ea98cfdb3bcb53ac4fa532e1e4aa89bcd4b790b54e6174a109263a24485fafd",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-072",
+      "sha256": "4651a12b468fcc53d5a503aef69de1a2bd0e53e9b51d257b4aea45ef4a30205b",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-073",
+      "sha256": "ae4080ebfaa809fb5bbcf1f0789c1dd419666c9cb55e6815f36fa6816cd7f596",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-074",
+      "sha256": "6328e550d7dfa344b13d8bc15bdf2e51efe040ea0cfb581df33416f0ff370097",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-075",
+      "sha256": "f8cb8fbc29f374c504e0d44af0c164b27281380f786d07a705c9f028f55eb5c6",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-076",
+      "sha256": "049bb40dc9ac2c17023b8906e5c06df4c51908b73662d96882f259ebaba36207",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-077",
+      "sha256": "784f8f009f3d5d690abffe32a98c75e87a8c856302cdf2b909f6e6d08019685f",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-078",
+      "sha256": "2a5136fd4feb3a51f6608684868fce6a1e2d4c8ed6ce63789a77b381aed8b380",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-079",
+      "sha256": "6cf5abc76075afc98f2f6dbf61d7310883b26d058d5a13030d392400367f9225",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-080",
+      "sha256": "ae166a0a90d18e5fcb671dda41f981d62778d4484127c8153019c0e573af4530",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-081",
+      "sha256": "dde8eaf523f16714e9ea4ec309bada7845b3fc9e803db349c55614d6cd511917",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-082",
+      "sha256": "061c271ac695b61083221a826d4ef9984fe57b47f8ad7be03f4d53a1bab66edf",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-083",
+      "sha256": "82fef4a44c1b7a407f90bbff2fee93de6649b7cf05211c61901cd2867e6b1689",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-084",
+      "sha256": "1ca5e370bf30ecea579378a7974196b8b571cdc5c4b28b18a78ca8f85c6dc032",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    },
+    {
+      "id": "remaining-20261027-085",
+      "sha256": "f783d7a2ad753e5c4ea4d72ba30ae2e2b8b0df41e95582573b20a4db04e78cce",
+      "method": "source-answer-and-solution",
+      "evidence": [
+        "scripts/test-remaining-pilot.mjs",
+        "scripts/verify-remaining-generators.mjs",
+        "scripts/humanities-originals.mjs",
+        "scripts/language-originals.mjs"
+      ]
+    }
+  ]
+}

@@ -42,6 +42,24 @@ with sync_playwright() as p:
             expect(page.locator(f'[data-catalog-number="{17 if subject == "physics" else 23 if exam == "ОГЭ" else 34}"]')).to_be_disabled()
         checks.append("all_three_new_catalogues_have_exact_number_counts_real_pilot_counts_and_blocked_expert_slots")
 
+    if prefix == "remaining-20261027-":
+        report = json.loads((root / "docs/all-directions-readiness.json").read_text())
+        for direction in report["directions"]:
+            exam, subject = direction["exam"], direction["subjectId"]
+            level = "&level=" + direction["level"] if direction["level"] else ""
+            before_requests = len(requests)
+            page.goto(f"{base}/#catalog?exam={exam}&subject={subject}&mode=number{level}", wait_until="networkidle")
+            expect(page.locator(".exam-catalog:visible [data-catalog-number]")).to_have_count(direction["numberCount"])
+            assert len(requests) == before_requests, (exam, subject, requests[before_requests:])
+            selected = [t for t in tasks if t["examType"][0] == exam and t["subjectId"] == subject]
+            for number in {t["examNumber"] for t in selected}:
+                card = page.locator(f'[data-catalog-number="{number}"]')
+                expect(card).to_be_enabled()
+                expect(card).to_contain_text(f'Задач: {sum(t["examNumber"] == number for t in selected)}')
+        page.goto(f"{base}/#catalog?exam=ЕГЭ&subject=geography&mode=number", wait_until="networkidle")
+        expect(page.locator('[data-catalog-number="14"]')).to_be_disabled()
+        checks.append("all_30_catalogues_have_registered_numbers_pilot_counts_no_background_fetch_and_no_map_substitute")
+
     for task in tasks:
         url = f'{base}/#tasks?exam={task["examType"][0]}&subject={task["subjectId"]}&mode=number&number={task["examNumber"]}&task={task["id"]}' + (f'&level={task["level"]}' if task["level"] else "")
         page.goto(url, wait_until="networkidle")
@@ -65,6 +83,17 @@ with sync_playwright() as p:
     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
     checks.append("reload_keeps_all_new_task_events_checked_answers_and_XP_no_duplicate_award")
     checks.append("new_task_bookmark_survives_reload_and_mobile_has_no_page_overflow")
+    if prefix == "remaining-20261027-":
+        for subject in ["english", "german", "french", "spanish", "chinese"]:
+            sample = next(t for t in tasks if t["subjectId"] == subject and t["examType"][0] == "ЕГЭ")
+            page.goto(f'{base}/#tasks?exam=ЕГЭ&subject={subject}&mode=number&number={sample["examNumber"]}&task={sample["id"]}', wait_until="networkidle")
+            expect(page.locator(".task-prompt")).to_contain_text(sample["prompt"])
+            for width in [320, 390, 430, 768, 1024]:
+                page.set_viewport_size({"width": width, "height": 844})
+                assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), (subject, width)
+        # Keep the original failure/retry test bound to the selected final task.
+        page.goto(f'{base}/#tasks?exam={tasks[-1]["examType"][0]}&subject={tasks[-1]["subjectId"]}&mode=number&number={tasks[-1]["examNumber"]}&task={tasks[-1]["id"]}', wait_until="networkidle")
+        checks.append("all_five_languages_render_at_320_390_430_768_1024_without_page_overflow")
     saved = ctx.storage_state()
     broken_ctx = browser.new_context(storage_state=saved)
     broken = broken_ctx.new_page()

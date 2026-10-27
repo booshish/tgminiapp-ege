@@ -49,10 +49,10 @@ export async function releasePilot(options = {}) {
   const batchId = options.batchId ?? "original-informatics-20261026";
   if (!/^[a-z0-9-]+$/.test(batchId)) throw Error("Invalid batch ID");
   if (options.verify) tasks.forEach(options.verify);
-  const reviews = tasks.map((t) => ({ id: t.id, sha256: contentFingerprint(t), method: "independent-computation", evidence: options.evidence ?? ["scripts/release-task-pilot.mjs", "scripts/original-informatics-pilot.mjs"] }));
+  const reviews = tasks.map((t) => ({ id: t.id, sha256: contentFingerprint(t), method: options.reviewMethod ?? "independent-computation", evidence: options.evidence ?? ["scripts/release-task-pilot.mjs", "scripts/original-informatics-pilot.mjs"] }));
   const dir = resolve(projectRoot, ".content-staging/pilot-input"); mkdirSync(dir, { recursive: true });
   const input = resolve(dir, `${batchId}.jsonl`); writeFileSync(input, tasks.map((t) => JSON.stringify(t)).join("\n") + "\n");
-  writeFileSync(resolve(projectRoot, options.reviewFile ?? "docs/pilot-task-review.json"), JSON.stringify({ date: "2026-10-26", kind: "original-training-not-official-exam", reviews }, null, 2) + "\n");
+  writeFileSync(resolve(projectRoot, options.reviewFile ?? "docs/pilot-task-review.json"), JSON.stringify({ date: options.reviewedAt ?? "2026-10-26", kind: "original-training-not-official-exam", reviews }, null, 2) + "\n");
   const result = await importTasks({ input, job: batchId, reviews });
   assert.equal(result.counts.staged, tasks.length); assert.equal(result.counts.rejected, 0); assert.equal(result.counts.duplicates, 0);
   const records = Array.from({ length: result.batches }, (_, n) => JSON.parse(readFileSync(`${result.directory}/batch-${n}.json`, "utf8"))).flat();

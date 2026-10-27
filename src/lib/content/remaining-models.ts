@@ -89,3 +89,57 @@ for (const exam of ["oge","ege"] as const) for (const subject of [...european,..
     }),
   });
 }
+
+/** Audited practice contracts; not permission to publish arbitrary generated text.
+ * See scripts/remaining-generators.mjs and the release review for content evidence.
+ * Everything outside this list stays closed to bootstrap imports.
+ */
+function practice(id:string,number:number,format:"number"|"text",rule:"number"|"choices"|"text",subtypes:string[],algorithm:boolean|string[]=false){
+  const slot=remainingModels.find(m=>m.id===id)?.numbers.find(n=>n.number===number);
+  if(!slot||slot.answerFormat!=="short")throw new Error(`Invalid reviewed contract ${id}/${number}`);
+  slot.practiceAnswerFormat=format;slot.answerRuleTypes=[rule];
+  const ready=new Set(algorithm===true?subtypes:Array.isArray(algorithm)?algorithm:[]);
+  const algorithmLimits=["Только валидированные параметры и проверенный справочник; новые факты требуют редакционной проверки"];
+  const editorialLimits=["Готовы только проверенные редакционные семена; новый контекст требует содержательной/языковой проверки"];
+  slot.generation={status:ready.size?"algorithm-ready":"editorial-review-required",subtypes,
+    subtypeReadiness:subtypes.map(subtype=>({subtype,status:ready.has(subtype)?"algorithm-ready":"editorial-review-required",limitations:ready.has(subtype)?algorithmLimits:editorialLimits})),
+    blockers:ready.size?algorithmLimits:editorialLimits};
+}
+practice("oge-biology",3,"text","choices",["taxonomic-rank-order"],true);
+practice("oge-biology",5,"text","choices",["germination-lab-sequence"]);
+practice("oge-biology",7,"text","choices",["organism-traits-from-description"]);
+practice("oge-biology",9,"text","choices",["plant-animal-cell-comparison"]);
+practice("ege-biology",3,"number","number",["gamete","daughter-mitosis"],true);
+practice("ege-biology",4,"number","number",["monohybrid-recessive","monohybrid-heterozygote"],true);
+practice("ege-biology",12,"text","choices",["taxonomic-rank-order"],true);
+practice("oge-geography",13,"number","number",["relative-humidity"],true);
+practice("oge-geography",16,"text","choices",["climate-table-inference"]);
+practice("oge-geography",24,"number","number",["population-balance"],true);
+for(const [n,subtype] of [[15,"reserve-production-ratio"],[16,"population-balance"]] as const)practice("ege-geography",n,"number","number",[subtype],true);
+const mapSlot=remainingModels.find(m=>m.id==="ege-geography")!.numbers[13];
+mapSlot.requiredResources=["Оригинальная карта часовых зон с проверенными правами и обозначениями"];
+mapSlot.pendingReason="Расчёт часов проверен, но он не заменяет чтение обязательной карты. Номер не публикуется до готовности настоящего ресурса.";
+for(const exam of ["oge","ege"]){
+  practice(`${exam}-history`,1,"text","choices",["events-to-years"],true);
+  practice(`${exam}-history`,2,"text","choices",["chronology-russia"],true);
+}
+practice("oge-history",3,"text","text",["historical-term-definition"]);
+practice("oge-history",5,"text","choices",["agrarian-terms-classification"]);
+practice("ege-history",3,"text","choices",["processes-to-events"]);
+practice("ege-history",5,"text","choices",["events-to-rulers"]);
+practice("oge-social-studies",2,"text","text",["economic-activity-generalization"]);
+practice("oge-social-studies",9,"text","choices",["limited-budget-choice","opportunity-cost","scarcity-choice"],["limited-budget-choice"]);
+practice("oge-social-studies",14,"text","choices",["short-run-fixed-variable-costs"],true);
+practice("ege-social-studies",6,"text","choices",["short-run-fixed-variable-costs","fixed-variable-costs-editorial"],["short-run-fixed-variable-costs"]);
+practice("ege-social-studies",7,"text","choices",["budget-constraint-judgments","firm-cost-judgments","alternative-cost-judgments"],["budget-constraint-judgments"]);
+for(const subject of european)for(const exam of ["oge","ege"])for(let i=0;i<5;i++)practice(`${exam}-${subject}`,(exam==="oge"?20:19)+i,"text","text",["source-checked-inflection-in-original-context"]);
+practice("ege-chinese",16,"text","choices",["classifier-bound-volume","classifier-sheet"]);
+practice("ege-chinese",17,"text","choices",["lexical-compatibility-read"]);
+practice("ege-chinese",19,"text","choices",["chinese-integer-tens","chinese-integer-hundreds"]);
+
+// Even pending numbers expose per-subtype gates. The initial list is deliberately
+// non-exhaustive until the full codifier has been reviewed, never inferred ready.
+for(const model of remainingModels)for(const slot of model.numbers){
+  const generation=slot.generation;
+  if(generation&&!generation.subtypeReadiness)generation.subtypeReadiness=generation.subtypes.map(subtype=>({subtype,status:generation.status,limitations:[...generation.blockers]}));
+}

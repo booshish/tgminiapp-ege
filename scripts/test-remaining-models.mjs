@@ -29,6 +29,8 @@ test("all thirty registered pairs resolve uniquely, nineteen additional draft pl
     assert.match(m.verificationNote,/Проект 2027/);
     for(const n of m.numbers){
       assert.ok(n.title&&n.responseKind&&n.pendingReason&&n.generation.subtypes.length);
+      assert.deepEqual(n.generation.subtypeReadiness.map(s=>s.subtype),n.generation.subtypes);
+      assert.ok(n.generation.subtypeReadiness.every(s=>s.limitations.length));
       assert.ok(n.sourceReference.pdfPage>0);
       assert.equal(n.evaluation.mode,n.answerFormat==="extended"?"expert":"automatic");
     }
@@ -42,6 +44,11 @@ test("interleaved expert slots, literary alternatives and separate oral numberin
   assert.equal(get("oge-social-studies").numbers[13].maxPrimaryScore,2);
   assert.equal(get("ege-biology").numbers[20].maxPrimaryScore,1);
   assert.equal(get("ege-biology").numbers[25].maxPrimaryScore,4);
+  const economy=get("oge-social-studies").numbers[8].generation;
+  assert.equal(economy.status,"algorithm-ready");
+  assert.equal(economy.subtypeReadiness.find(s=>s.subtype==="limited-budget-choice").status,"algorithm-ready");
+  assert.equal(economy.subtypeReadiness.find(s=>s.subtype==="opportunity-cost").status,"editorial-review-required");
+  assert.equal(get("ege-social-studies").numbers[6].generation.subtypeReadiness.find(s=>s.subtype==="firm-cost-judgments").status,"editorial-review-required");
   assert.deepEqual(get("oge-literature").numbers[0].officialLabels,["1.1","1.2"]);
   assert.equal(get("oge-literature").offeredTaskCount,12);
   for(const [id,written,oral] of [["oge-english",35,3],["ege-spanish",38,4],["ege-chinese",29,3]]){

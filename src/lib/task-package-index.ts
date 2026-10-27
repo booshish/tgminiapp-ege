@@ -1073,5 +1073,1337 @@ export const taskPackageIndex: {file: string; sha256: string; tasks: Pick<Task, 
         "prototypeId": "ege-chemistry-n28-original"
       }
     ]
+  },
+  {
+    "file": "oge-geography-2027-draft-n13-b0f480c69e5a5695.json",
+    "sha256": "b0f480c69e5a5695f7e6d6967d6097a8edb805a43ff5e838d094af97a63f265a",
+    "tasks": [
+      {
+        "id": "remaining-20261027-001",
+        "subjectId": "geography",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 13,
+        "topicId": "oge-geography-n13",
+        "prototypeId": "oge-geography-n13-original"
+      },
+      {
+        "id": "remaining-20261027-002",
+        "subjectId": "geography",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 13,
+        "topicId": "oge-geography-n13",
+        "prototypeId": "oge-geography-n13-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-geography-2027-draft-n24-d8d8424efa350c58.json",
+    "sha256": "d8d8424efa350c589dae2fdf815f9d0cebfdfbfa2a14614502ff31c5d717cee0",
+    "tasks": [
+      {
+        "id": "remaining-20261027-003",
+        "subjectId": "geography",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "oge-geography-n24",
+        "prototypeId": "oge-geography-n24-original"
+      },
+      {
+        "id": "remaining-20261027-004",
+        "subjectId": "geography",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "oge-geography-n24",
+        "prototypeId": "oge-geography-n24-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-geography-2027-draft-n16-0dedf384fa101e65.json",
+    "sha256": "0dedf384fa101e6532ceefe21f7ef5778dce99a418e04510b9da2f7a94b39c47",
+    "tasks": [
+      {
+        "id": "remaining-20261027-005",
+        "subjectId": "geography",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "oge-geography-n16",
+        "prototypeId": "oge-geography-n16-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-geography-2027-draft-n15-6890126d40df547b.json",
+    "sha256": "6890126d40df547b38274af757e23f629b1434b9647e771673e8bbbdb47c7947",
+    "tasks": [
+      {
+        "id": "remaining-20261027-006",
+        "subjectId": "geography",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "ege-geography-n15",
+        "prototypeId": "ege-geography-n15-original"
+      },
+      {
+        "id": "remaining-20261027-007",
+        "subjectId": "geography",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "ege-geography-n15",
+        "prototypeId": "ege-geography-n15-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-geography-2027-draft-n16-5cf6b6a7a3872b84.json",
+    "sha256": "5cf6b6a7a3872b84cb1718a034cd6dbf306b7d3901ecd1793f67c9ed180ffc25",
+    "tasks": [
+      {
+        "id": "remaining-20261027-008",
+        "subjectId": "geography",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "ege-geography-n16",
+        "prototypeId": "ege-geography-n16-original"
+      },
+      {
+        "id": "remaining-20261027-009",
+        "subjectId": "geography",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "ege-geography-n16",
+        "prototypeId": "ege-geography-n16-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-biology-2027-draft-n3-ba96b154e3d855b5.json",
+    "sha256": "ba96b154e3d855b50daf9a9b04b1e28d2dde6b4ea0bf752a09db4c0c7fbb9628",
+    "tasks": [
+      {
+        "id": "remaining-20261027-011",
+        "subjectId": "biology",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "ege-biology-n3",
+        "prototypeId": "ege-biology-n3-original"
+      },
+      {
+        "id": "remaining-20261027-012",
+        "subjectId": "biology",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "ege-biology-n3",
+        "prototypeId": "ege-biology-n3-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-biology-2027-draft-n4-3bcffe4aa07673f3.json",
+    "sha256": "3bcffe4aa07673f363f8745c68218ff6d63450c48964cb08507e51509840ac94",
+    "tasks": [
+      {
+        "id": "remaining-20261027-013",
+        "subjectId": "biology",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "ege-biology-n4",
+        "prototypeId": "ege-biology-n4-original"
+      },
+      {
+        "id": "remaining-20261027-014",
+        "subjectId": "biology",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "ege-biology-n4",
+        "prototypeId": "ege-biology-n4-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-biology-2027-draft-n12-16652247f65c8aba.json",
+    "sha256": "16652247f65c8abaadd334be63c80de1240774240de51cdc80b7e17381891507",
+    "tasks": [
+      {
+        "id": "remaining-20261027-015",
+        "subjectId": "biology",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 12,
+        "topicId": "ege-biology-n12",
+        "prototypeId": "ege-biology-n12-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n3-e6b7ec1370f82aa3.json",
+    "sha256": "e6b7ec1370f82aa36dc20eb9f2eb93275d47543e27a62461af0cf8184e9433d5",
+    "tasks": [
+      {
+        "id": "remaining-20261027-016",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "oge-biology-n3",
+        "prototypeId": "oge-biology-n3-original"
+      },
+      {
+        "id": "remaining-20261027-020",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "oge-biology-n3",
+        "prototypeId": "oge-biology-n3-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n5-bd60154af4729f97.json",
+    "sha256": "bd60154af4729f97bc38d0edbb7bf59dfc6963fd79248a344f3e6d47c65b8408",
+    "tasks": [
+      {
+        "id": "remaining-20261027-017",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-biology-n5",
+        "prototypeId": "oge-biology-n5-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n7-3bdd9361bbc310f9.json",
+    "sha256": "3bdd9361bbc310f91df71f0dd397448478a83a6815318813c2331fa2e28b6cfa",
+    "tasks": [
+      {
+        "id": "remaining-20261027-018",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "oge-biology-n7",
+        "prototypeId": "oge-biology-n7-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n9-daa3c862f1bcf92a.json",
+    "sha256": "daa3c862f1bcf92af9ecbf655c314a6150a0d247052dc650d815c7e7d09b3534",
+    "tasks": [
+      {
+        "id": "remaining-20261027-019",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-biology-n9",
+        "prototypeId": "oge-biology-n9-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-history-2027-draft-n1-e6bfa5a1d106f398.json",
+    "sha256": "e6bfa5a1d106f3981bdda601b6c00c48599fdc465a39fdb2b853e891d58731f3",
+    "tasks": [
+      {
+        "id": "remaining-20261027-021",
+        "subjectId": "history",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "oge-history-n1",
+        "prototypeId": "oge-history-n1-original"
+      },
+      {
+        "id": "remaining-20261027-025",
+        "subjectId": "history",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "oge-history-n1",
+        "prototypeId": "oge-history-n1-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-history-2027-draft-n2-3dbae431338dfc67.json",
+    "sha256": "3dbae431338dfc67a175fc822d7f042755de3da730701c024d1842d4f272294c",
+    "tasks": [
+      {
+        "id": "remaining-20261027-022",
+        "subjectId": "history",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "oge-history-n2",
+        "prototypeId": "oge-history-n2-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-history-2027-draft-n3-8e24955195862769.json",
+    "sha256": "8e2495519586276904ed00bc2a145679b94da277f616840315d12f3adf3c98ec",
+    "tasks": [
+      {
+        "id": "remaining-20261027-023",
+        "subjectId": "history",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "oge-history-n3",
+        "prototypeId": "oge-history-n3-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-history-2027-draft-n5-add767f0aa574545.json",
+    "sha256": "add767f0aa574545c8f13da7b9395c412d415a53acb23481272590053b482f7b",
+    "tasks": [
+      {
+        "id": "remaining-20261027-024",
+        "subjectId": "history",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-history-n5",
+        "prototypeId": "oge-history-n5-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-history-2027-draft-n1-8867d9e3bcfb38ce.json",
+    "sha256": "8867d9e3bcfb38ce5ad5cca2d89126691ad7620217383094919ef44360b8cf5e",
+    "tasks": [
+      {
+        "id": "remaining-20261027-026",
+        "subjectId": "history",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "ege-history-n1",
+        "prototypeId": "ege-history-n1-original"
+      },
+      {
+        "id": "remaining-20261027-030",
+        "subjectId": "history",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "ege-history-n1",
+        "prototypeId": "ege-history-n1-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-history-2027-draft-n2-fba49b0d8d5eabc4.json",
+    "sha256": "fba49b0d8d5eabc4631d8c01ddc1e9b09c980a559c7b88c9b0964c39b9206a89",
+    "tasks": [
+      {
+        "id": "remaining-20261027-027",
+        "subjectId": "history",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "ege-history-n2",
+        "prototypeId": "ege-history-n2-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-history-2027-draft-n3-25ef52e882c839cf.json",
+    "sha256": "25ef52e882c839cfe67eab3d486501b7a26aa1568d7c79d13e27b1be92610301",
+    "tasks": [
+      {
+        "id": "remaining-20261027-028",
+        "subjectId": "history",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 3,
+        "topicId": "ege-history-n3",
+        "prototypeId": "ege-history-n3-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-history-2027-draft-n5-a6d8020efb7795df.json",
+    "sha256": "a6d8020efb7795df916cca79e107549410644f1d17d0e4fc12e6259c32e9b8dc",
+    "tasks": [
+      {
+        "id": "remaining-20261027-029",
+        "subjectId": "history",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "ege-history-n5",
+        "prototypeId": "ege-history-n5-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n9-c7e70c63be64468e.json",
+    "sha256": "c7e70c63be64468ee336c25fb21b47f676361c57e98ef72ced9c23f8e63a9a1c",
+    "tasks": [
+      {
+        "id": "remaining-20261027-031",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original"
+      },
+      {
+        "id": "remaining-20261027-034",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original"
+      },
+      {
+        "id": "remaining-20261027-035",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n14-48b5fd3495f5247f.json",
+    "sha256": "48b5fd3495f5247f3a80ee07edcec1f9aa6ba5e9eeda51ea2447861dd82af8fa",
+    "tasks": [
+      {
+        "id": "remaining-20261027-032",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "oge-social-studies-n14",
+        "prototypeId": "oge-social-studies-n14-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n2-d85f8a0ed0cae022.json",
+    "sha256": "d85f8a0ed0cae022a992a44a5e50d1155cc1b40ca9344ad9b6366721f1951f31",
+    "tasks": [
+      {
+        "id": "remaining-20261027-033",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "oge-social-studies-n2",
+        "prototypeId": "oge-social-studies-n2-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-social-studies-2027-draft-n6-2abeeac3a18b0120.json",
+    "sha256": "2abeeac3a18b012071ff6d04da4e7020479101b61d66554c4b67a138c5cbc093",
+    "tasks": [
+      {
+        "id": "remaining-20261027-036",
+        "subjectId": "social-studies",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "ege-social-studies-n6",
+        "prototypeId": "ege-social-studies-n6-original"
+      },
+      {
+        "id": "remaining-20261027-040",
+        "subjectId": "social-studies",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "ege-social-studies-n6",
+        "prototypeId": "ege-social-studies-n6-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-social-studies-2027-draft-n7-1110f9d37f671694.json",
+    "sha256": "1110f9d37f671694207c765f41c8fb1ab979273c071acafad2318184b1d4c9bb",
+    "tasks": [
+      {
+        "id": "remaining-20261027-037",
+        "subjectId": "social-studies",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-social-studies-n7",
+        "prototypeId": "ege-social-studies-n7-original"
+      },
+      {
+        "id": "remaining-20261027-038",
+        "subjectId": "social-studies",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-social-studies-n7",
+        "prototypeId": "ege-social-studies-n7-original"
+      },
+      {
+        "id": "remaining-20261027-039",
+        "subjectId": "social-studies",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-social-studies-n7",
+        "prototypeId": "ege-social-studies-n7-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-english-2027-draft-n20-499c541c201cde6d.json",
+    "sha256": "499c541c201cde6dfb118dd5b1b61a476cb24692e3543a92e41ba035f09a6849",
+    "tasks": [
+      {
+        "id": "remaining-20261027-041",
+        "subjectId": "english",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "oge-english-n20",
+        "prototypeId": "oge-english-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-english-2027-draft-n21-fedf08863096dbd8.json",
+    "sha256": "fedf08863096dbd8f3831c2a697d1602026fa5ad351404da4b91f75c42b8d0e0",
+    "tasks": [
+      {
+        "id": "remaining-20261027-042",
+        "subjectId": "english",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "oge-english-n21",
+        "prototypeId": "oge-english-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-english-2027-draft-n22-075526565c212a98.json",
+    "sha256": "075526565c212a983b3ef5784ef58c7b4df7b24d0712453c1ca6b002c9a66988",
+    "tasks": [
+      {
+        "id": "remaining-20261027-043",
+        "subjectId": "english",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "oge-english-n22",
+        "prototypeId": "oge-english-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-english-2027-draft-n23-4e5a4c44ec86dd77.json",
+    "sha256": "4e5a4c44ec86dd77e27586ed04cd379e1d2bbb6a30b8643194f0e71f7c3cf702",
+    "tasks": [
+      {
+        "id": "remaining-20261027-044",
+        "subjectId": "english",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "oge-english-n23",
+        "prototypeId": "oge-english-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-english-2027-draft-n24-cbb50d39695c2485.json",
+    "sha256": "cbb50d39695c2485fd2e05bcf614574245ed1f7014313bc80f79a38f358a1603",
+    "tasks": [
+      {
+        "id": "remaining-20261027-045",
+        "subjectId": "english",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "oge-english-n24",
+        "prototypeId": "oge-english-n24-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-english-2027-draft-n19-5579b3b6fe92d801.json",
+    "sha256": "5579b3b6fe92d8012950f4d04f6375151ed73c178c30e54574bfbdef5b1e6fa2",
+    "tasks": [
+      {
+        "id": "remaining-20261027-046",
+        "subjectId": "english",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "ege-english-n19",
+        "prototypeId": "ege-english-n19-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-english-2027-draft-n20-92a4b8e4075e8b83.json",
+    "sha256": "92a4b8e4075e8b83196801f477a869435c11ea5c4846af48b5509759a3d170ac",
+    "tasks": [
+      {
+        "id": "remaining-20261027-047",
+        "subjectId": "english",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "ege-english-n20",
+        "prototypeId": "ege-english-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-english-2027-draft-n21-c885784db77e7d82.json",
+    "sha256": "c885784db77e7d82218952b33ed907d7164203dd020affa131c38523b5c6830a",
+    "tasks": [
+      {
+        "id": "remaining-20261027-048",
+        "subjectId": "english",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "ege-english-n21",
+        "prototypeId": "ege-english-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-english-2027-draft-n22-7bb6cb9371d65c7f.json",
+    "sha256": "7bb6cb9371d65c7f42289f402182e68b68e8bc35f53727aeca3da711f8c5ca1b",
+    "tasks": [
+      {
+        "id": "remaining-20261027-049",
+        "subjectId": "english",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "ege-english-n22",
+        "prototypeId": "ege-english-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-english-2027-draft-n23-30ef755d90ee88ac.json",
+    "sha256": "30ef755d90ee88aca100ffe6b929492a2d42e5f0ea96ee23a03c1beae3184730",
+    "tasks": [
+      {
+        "id": "remaining-20261027-050",
+        "subjectId": "english",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "ege-english-n23",
+        "prototypeId": "ege-english-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-german-2027-draft-n20-47986fbef192e0c7.json",
+    "sha256": "47986fbef192e0c71aee466f14ff5b6cc05b5d7e026297fe8032c18515600fbb",
+    "tasks": [
+      {
+        "id": "remaining-20261027-051",
+        "subjectId": "german",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "oge-german-n20",
+        "prototypeId": "oge-german-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-german-2027-draft-n21-88d9384bbdfc31f5.json",
+    "sha256": "88d9384bbdfc31f5d51e40b11bda7e5ffe4e832f2f2bde63272bd86e763d1035",
+    "tasks": [
+      {
+        "id": "remaining-20261027-052",
+        "subjectId": "german",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "oge-german-n21",
+        "prototypeId": "oge-german-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-german-2027-draft-n22-f781473c5d552a3a.json",
+    "sha256": "f781473c5d552a3a41ae6abef4fd9a39cd7784e21033e744f0cdf55686410b1a",
+    "tasks": [
+      {
+        "id": "remaining-20261027-053",
+        "subjectId": "german",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "oge-german-n22",
+        "prototypeId": "oge-german-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-german-2027-draft-n23-f54890b40c80da76.json",
+    "sha256": "f54890b40c80da76cf524b4bc81fbb315a0bf877bfe1016f40c915c895eee894",
+    "tasks": [
+      {
+        "id": "remaining-20261027-054",
+        "subjectId": "german",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "oge-german-n23",
+        "prototypeId": "oge-german-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-german-2027-draft-n24-03083db5b03004e2.json",
+    "sha256": "03083db5b03004e2e4962a0061dcca3208765785f10e0401bf19c2f7a05c6e76",
+    "tasks": [
+      {
+        "id": "remaining-20261027-055",
+        "subjectId": "german",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "oge-german-n24",
+        "prototypeId": "oge-german-n24-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-german-2027-draft-n19-a79be438ee9b9249.json",
+    "sha256": "a79be438ee9b9249cfd65dfa8e899e847fbf81c8534d6aa250facaf4d974d371",
+    "tasks": [
+      {
+        "id": "remaining-20261027-056",
+        "subjectId": "german",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "ege-german-n19",
+        "prototypeId": "ege-german-n19-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-german-2027-draft-n20-8d0ee353846036b8.json",
+    "sha256": "8d0ee353846036b8ee718021c9c71c48bd94721105585deedf9e0b19521ec486",
+    "tasks": [
+      {
+        "id": "remaining-20261027-057",
+        "subjectId": "german",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "ege-german-n20",
+        "prototypeId": "ege-german-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-german-2027-draft-n21-7687fdc6bfc172b9.json",
+    "sha256": "7687fdc6bfc172b9f74d196b388b552018589cb800efce697bfefd6bfe4d7ee3",
+    "tasks": [
+      {
+        "id": "remaining-20261027-058",
+        "subjectId": "german",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "ege-german-n21",
+        "prototypeId": "ege-german-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-german-2027-draft-n22-9d1b4f724191fc50.json",
+    "sha256": "9d1b4f724191fc5062e444d3fe9f0859feb24a4ecd76a4a88fcfd5c2fbde0e46",
+    "tasks": [
+      {
+        "id": "remaining-20261027-059",
+        "subjectId": "german",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "ege-german-n22",
+        "prototypeId": "ege-german-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-german-2027-draft-n23-f6c2a2cc38e274a9.json",
+    "sha256": "f6c2a2cc38e274a987272ddcf861ccab18f4a5ceadca744f9ec08b0070812699",
+    "tasks": [
+      {
+        "id": "remaining-20261027-060",
+        "subjectId": "german",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "ege-german-n23",
+        "prototypeId": "ege-german-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-french-2027-draft-n20-0bac3276382eb2cd.json",
+    "sha256": "0bac3276382eb2cd7c76eb9b2e0c6aebd10db3dddb20b6dd182486aa74dbc30a",
+    "tasks": [
+      {
+        "id": "remaining-20261027-061",
+        "subjectId": "french",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "oge-french-n20",
+        "prototypeId": "oge-french-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-french-2027-draft-n21-4618b0d3b814d924.json",
+    "sha256": "4618b0d3b814d9240e0172c44c1327779d70ac9619387cea5780dca16f57bbba",
+    "tasks": [
+      {
+        "id": "remaining-20261027-062",
+        "subjectId": "french",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "oge-french-n21",
+        "prototypeId": "oge-french-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-french-2027-draft-n22-80c8bfe9b213714d.json",
+    "sha256": "80c8bfe9b213714de7ecaab6b7e787182fb765ac854d148c97273c08491ac1d3",
+    "tasks": [
+      {
+        "id": "remaining-20261027-063",
+        "subjectId": "french",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "oge-french-n22",
+        "prototypeId": "oge-french-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-french-2027-draft-n23-e2246104c95e8464.json",
+    "sha256": "e2246104c95e846460cdc05b39e1b95813da4efc74b503d60f847af10e1070a2",
+    "tasks": [
+      {
+        "id": "remaining-20261027-064",
+        "subjectId": "french",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "oge-french-n23",
+        "prototypeId": "oge-french-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-french-2027-draft-n24-90a0192415395279.json",
+    "sha256": "90a0192415395279d64332af2fdc09eb467fb4cf68ddec703241da21a9fa2d1f",
+    "tasks": [
+      {
+        "id": "remaining-20261027-065",
+        "subjectId": "french",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "oge-french-n24",
+        "prototypeId": "oge-french-n24-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-french-2027-draft-n19-62d5844e6fd4bc53.json",
+    "sha256": "62d5844e6fd4bc53c0896f304090775a8b189629235dc8647d25b2c79a8d1e61",
+    "tasks": [
+      {
+        "id": "remaining-20261027-066",
+        "subjectId": "french",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "ege-french-n19",
+        "prototypeId": "ege-french-n19-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-french-2027-draft-n20-6b358d167b0ac38d.json",
+    "sha256": "6b358d167b0ac38df0922b7af5e759ea8a072f374f3f1fb1ecdb28a4dd67b8f9",
+    "tasks": [
+      {
+        "id": "remaining-20261027-067",
+        "subjectId": "french",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "ege-french-n20",
+        "prototypeId": "ege-french-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-french-2027-draft-n21-bb85554ecbaf31a1.json",
+    "sha256": "bb85554ecbaf31a13e7209a4871adbeacb7dbf379fb5c09c21f7c5988cc73474",
+    "tasks": [
+      {
+        "id": "remaining-20261027-068",
+        "subjectId": "french",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "ege-french-n21",
+        "prototypeId": "ege-french-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-french-2027-draft-n22-823cae8ecb207e03.json",
+    "sha256": "823cae8ecb207e03b404ec342327b22372dcfe0f4049dda716ab7bc99fa5fcae",
+    "tasks": [
+      {
+        "id": "remaining-20261027-069",
+        "subjectId": "french",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "ege-french-n22",
+        "prototypeId": "ege-french-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-french-2027-draft-n23-1c6930be6616264d.json",
+    "sha256": "1c6930be6616264d415f64014e0195d0de7baa72a4a2da8d08156559d380cb6d",
+    "tasks": [
+      {
+        "id": "remaining-20261027-070",
+        "subjectId": "french",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "ege-french-n23",
+        "prototypeId": "ege-french-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-spanish-2027-draft-n20-f0f76b8665e30dfc.json",
+    "sha256": "f0f76b8665e30dfcc9c679f6fbd573e2f91c0af7b773571059b214a4f8bfb07a",
+    "tasks": [
+      {
+        "id": "remaining-20261027-071",
+        "subjectId": "spanish",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "oge-spanish-n20",
+        "prototypeId": "oge-spanish-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-spanish-2027-draft-n21-3d7554723bb8a4b1.json",
+    "sha256": "3d7554723bb8a4b13bf819ca44d1b4a64d9c9e095c20d1dd3c5cce8cd0bee781",
+    "tasks": [
+      {
+        "id": "remaining-20261027-072",
+        "subjectId": "spanish",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "oge-spanish-n21",
+        "prototypeId": "oge-spanish-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-spanish-2027-draft-n22-de6c3c69e2273c07.json",
+    "sha256": "de6c3c69e2273c079baa6b4d0d21f327b1b1d1fdafcfda02c94acdc0648dedee",
+    "tasks": [
+      {
+        "id": "remaining-20261027-073",
+        "subjectId": "spanish",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "oge-spanish-n22",
+        "prototypeId": "oge-spanish-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-spanish-2027-draft-n23-079078d6180027f1.json",
+    "sha256": "079078d6180027f1865f950f961b6d24c85554a09bccd0bb7d3859bb785d232b",
+    "tasks": [
+      {
+        "id": "remaining-20261027-074",
+        "subjectId": "spanish",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "oge-spanish-n23",
+        "prototypeId": "oge-spanish-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "oge-spanish-2027-draft-n24-44a7e5793c865dc4.json",
+    "sha256": "44a7e5793c865dc4b70931fc8ff405b37c2048b359fdf047bc9e6a32213342d5",
+    "tasks": [
+      {
+        "id": "remaining-20261027-075",
+        "subjectId": "spanish",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "oge-spanish-n24",
+        "prototypeId": "oge-spanish-n24-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-spanish-2027-draft-n19-9408442cea0f8cb3.json",
+    "sha256": "9408442cea0f8cb3fe1dd1e6fa8855172975e8686b6963c3b08bd6420249cc2a",
+    "tasks": [
+      {
+        "id": "remaining-20261027-076",
+        "subjectId": "spanish",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "ege-spanish-n19",
+        "prototypeId": "ege-spanish-n19-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-spanish-2027-draft-n20-0f8e292a37f2267e.json",
+    "sha256": "0f8e292a37f2267edf8177494983245142ff850b31c07b9f5ba8af40bb5080d2",
+    "tasks": [
+      {
+        "id": "remaining-20261027-077",
+        "subjectId": "spanish",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 20,
+        "topicId": "ege-spanish-n20",
+        "prototypeId": "ege-spanish-n20-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-spanish-2027-draft-n21-f5b51965e0894634.json",
+    "sha256": "f5b51965e0894634afac077ea1561622a2e70c5b626f6f1b2be041fa74ff5390",
+    "tasks": [
+      {
+        "id": "remaining-20261027-078",
+        "subjectId": "spanish",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 21,
+        "topicId": "ege-spanish-n21",
+        "prototypeId": "ege-spanish-n21-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-spanish-2027-draft-n22-f453c01a17b3f0ba.json",
+    "sha256": "f453c01a17b3f0ba408c4e4ed1b9ec162e228d4af3fa8aa054fbcf4c337e83fc",
+    "tasks": [
+      {
+        "id": "remaining-20261027-079",
+        "subjectId": "spanish",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "ege-spanish-n22",
+        "prototypeId": "ege-spanish-n22-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-spanish-2027-draft-n23-e8e0509e9ee464bd.json",
+    "sha256": "e8e0509e9ee464bd1d436aa814a8283c3cf800dfffbf391b6a4af62acef51231",
+    "tasks": [
+      {
+        "id": "remaining-20261027-080",
+        "subjectId": "spanish",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 23,
+        "topicId": "ege-spanish-n23",
+        "prototypeId": "ege-spanish-n23-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-chinese-2027-draft-n16-84f7d44fe4c74032.json",
+    "sha256": "84f7d44fe4c74032d7c2660a9928705a337adc30e2cc45e79c5da11a6e874783",
+    "tasks": [
+      {
+        "id": "remaining-20261027-081",
+        "subjectId": "chinese",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "ege-chinese-n16",
+        "prototypeId": "ege-chinese-n16-original"
+      },
+      {
+        "id": "remaining-20261027-082",
+        "subjectId": "chinese",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "ege-chinese-n16",
+        "prototypeId": "ege-chinese-n16-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-chinese-2027-draft-n19-ef7d84b374f4f8a0.json",
+    "sha256": "ef7d84b374f4f8a050318ad4339ce1b141f00fb2c9c8b80e4ad9b842cc1f2de4",
+    "tasks": [
+      {
+        "id": "remaining-20261027-083",
+        "subjectId": "chinese",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "ege-chinese-n19",
+        "prototypeId": "ege-chinese-n19-original"
+      },
+      {
+        "id": "remaining-20261027-084",
+        "subjectId": "chinese",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "ege-chinese-n19",
+        "prototypeId": "ege-chinese-n19-original"
+      }
+    ]
+  },
+  {
+    "file": "ege-chinese-2027-draft-n17-ce5b1431003d1b82.json",
+    "sha256": "ce5b1431003d1b8228f159a218ace8ebe4a701bd03f87a3359e63266dc97e7f1",
+    "tasks": [
+      {
+        "id": "remaining-20261027-085",
+        "subjectId": "chinese",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 17,
+        "topicId": "ege-chinese-n17",
+        "prototypeId": "ege-chinese-n17-original"
+      }
+    ]
   }
 ];

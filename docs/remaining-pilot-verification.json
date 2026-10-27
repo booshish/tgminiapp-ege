@@ -1,0 +1,1673 @@
+{
+  "checkedAt": "2026-10-27",
+  "sourceFacts": {
+    "neva": {
+      "name": "Невская битва",
+      "year": 1240,
+      "person": "Александр Невский",
+      "url": "https://www.prlib.ru/node/619385"
+    },
+    "ice": {
+      "name": "Ледовое побоище",
+      "year": 1242,
+      "person": "Александр Невский",
+      "url": "https://www.prlib.ru/node/619144"
+    },
+    "kulikovo": {
+      "name": "Куликовская битва",
+      "year": 1380,
+      "person": "Дмитрий Донской",
+      "url": "https://www.prlib.ru/history/619523"
+    },
+    "ugra": {
+      "name": "Стояние на Угре",
+      "year": 1480,
+      "person": "Иван III",
+      "url": "https://www.prlib.ru/history/619708"
+    },
+    "romanov": {
+      "name": "Избрание Михаила Романова царём",
+      "year": 1613,
+      "person": "Михаил Романов",
+      "url": "https://www.prlib.ru/collection_romanovy"
+    },
+    "city": {
+      "name": "Основание Санкт-Петербурга",
+      "year": 1703,
+      "person": "Пётр I",
+      "url": "https://www.prlib.ru/history/619267"
+    },
+    "empire": {
+      "name": "Принятие Петром I императорского титула",
+      "year": 1721,
+      "person": "Пётр I",
+      "url": "https://www.prlib.ru/node/619684"
+    },
+    "emancipation": {
+      "name": "Подписание Александром II Манифеста об отмене крепостного права",
+      "year": 1861,
+      "person": "Александр II",
+      "url": "https://www.prlib.ru/history/619069"
+    }
+  },
+  "records": [
+    {
+      "id": "remaining-20261027-001",
+      "model": "oge-geography-2027-draft",
+      "number": 13,
+      "subtype": "relative-humidity",
+      "proof": {
+        "kind": "humidity",
+        "actual": 5.8,
+        "saturated": 8.3,
+        "temperature": 8,
+        "answerUnit": "percent"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-002",
+      "model": "oge-geography-2027-draft",
+      "number": 13,
+      "subtype": "relative-humidity",
+      "proof": {
+        "kind": "humidity",
+        "actual": 8.7,
+        "saturated": 17.4,
+        "temperature": 20,
+        "answerUnit": "percent"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-003",
+      "model": "oge-geography-2027-draft",
+      "number": 24,
+      "subtype": "population-balance",
+      "proof": {
+        "kind": "population-balance",
+        "start": 82000,
+        "end": 82310,
+        "births": 1050,
+        "deaths": 1190,
+        "answerUnit": "persons"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-004",
+      "model": "oge-geography-2027-draft",
+      "number": 24,
+      "subtype": "population-balance",
+      "proof": {
+        "kind": "population-balance",
+        "start": 45000,
+        "end": 44740,
+        "births": 480,
+        "deaths": 610,
+        "answerUnit": "persons"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-005",
+      "model": "oge-geography-2027-draft",
+      "number": 16,
+      "subtype": "climate-table-inference",
+      "proof": {
+        "kind": "climate-table",
+        "january": [
+          -5,
+          -12,
+          -22
+        ],
+        "july": [
+          17,
+          20,
+          23
+        ],
+        "longitude": [
+          35,
+          55,
+          75
+        ]
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-006",
+      "model": "ege-geography-2027-draft",
+      "number": 15,
+      "subtype": "reserve-production-ratio",
+      "proof": {
+        "kind": "reserve-years",
+        "reserves": 3.6,
+        "production": 45,
+        "answerUnit": "years"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-007",
+      "model": "ege-geography-2027-draft",
+      "number": 15,
+      "subtype": "reserve-production-ratio",
+      "proof": {
+        "kind": "reserve-years",
+        "reserves": 1.8,
+        "production": 30,
+        "answerUnit": "years"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-008",
+      "model": "ege-geography-2027-draft",
+      "number": 16,
+      "subtype": "population-balance",
+      "proof": {
+        "kind": "population-balance",
+        "start": 126000,
+        "end": 126890,
+        "births": 1420,
+        "deaths": 1650,
+        "answerUnit": "persons"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-009",
+      "model": "ege-geography-2027-draft",
+      "number": 16,
+      "subtype": "population-balance",
+      "proof": {
+        "kind": "population-balance",
+        "start": 287000,
+        "end": 285400,
+        "births": 2140,
+        "deaths": 3280,
+        "answerUnit": "persons"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-011",
+      "model": "ege-biology-2027-draft",
+      "number": 3,
+      "subtype": "gamete",
+      "proof": {
+        "kind": "chromosomes",
+        "diploid": 18,
+        "process": "gamete"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-012",
+      "model": "ege-biology-2027-draft",
+      "number": 3,
+      "subtype": "daughter-mitosis",
+      "proof": {
+        "kind": "chromosomes",
+        "diploid": 24,
+        "process": "daughter-mitosis"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-013",
+      "model": "ege-biology-2027-draft",
+      "number": 4,
+      "subtype": "monohybrid-recessive",
+      "proof": {
+        "kind": "cross",
+        "parentA": "Aa",
+        "parentB": "Aa",
+        "target": "recessive"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-014",
+      "model": "ege-biology-2027-draft",
+      "number": 4,
+      "subtype": "monohybrid-heterozygote",
+      "proof": {
+        "kind": "cross",
+        "parentA": "Aa",
+        "parentB": "aa",
+        "target": "heterozygote"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-015",
+      "model": "ege-biology-2027-draft",
+      "number": 12,
+      "subtype": "taxonomic-rank-order",
+      "proof": {
+        "kind": "taxonomy",
+        "items": [
+          {
+            "label": "Семейство",
+            "rank": 4
+          },
+          {
+            "label": "Царство",
+            "rank": 0
+          },
+          {
+            "label": "Вид",
+            "rank": 6
+          },
+          {
+            "label": "Класс",
+            "rank": 2
+          },
+          {
+            "label": "Тип",
+            "rank": 1
+          },
+          {
+            "label": "Род",
+            "rank": 5
+          }
+        ]
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-016",
+      "model": "oge-biology-2027-draft",
+      "number": 3,
+      "subtype": "taxonomic-rank-order",
+      "proof": {
+        "kind": "taxonomy",
+        "items": [
+          {
+            "label": "Тип",
+            "rank": 1
+          },
+          {
+            "label": "Вид",
+            "rank": 6
+          },
+          {
+            "label": "Отряд",
+            "rank": 3
+          },
+          {
+            "label": "Царство",
+            "rank": 0
+          },
+          {
+            "label": "Класс",
+            "rank": 2
+          }
+        ]
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-017",
+      "model": "oge-biology-2027-draft",
+      "number": 5,
+      "subtype": "germination-lab-sequence",
+      "proof": {
+        "kind": "protocol",
+        "edges": [
+          [
+            5,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "size": 6
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-018",
+      "model": "oge-biology-2027-draft",
+      "number": 7,
+      "subtype": "organism-traits-from-description",
+      "proof": {
+        "kind": "facts-selection",
+        "facts": [
+          true,
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        "source": "https://openstax.org/books/biology-2e/pages/29-6-mammals"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-019",
+      "model": "oge-biology-2027-draft",
+      "number": 9,
+      "subtype": "plant-animal-cell-comparison",
+      "proof": {
+        "kind": "facts-selection",
+        "facts": [
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ],
+        "source": "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells"
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-020",
+      "model": "oge-biology-2027-draft",
+      "number": 3,
+      "subtype": "taxonomic-rank-order",
+      "proof": {
+        "kind": "taxonomy",
+        "items": [
+          {
+            "label": "Кошка домашняя",
+            "rank": 6
+          },
+          {
+            "label": "Млекопитающие",
+            "rank": 2
+          },
+          {
+            "label": "Хордовые",
+            "rank": 1
+          },
+          {
+            "label": "Кошки (Felis)",
+            "rank": 5
+          },
+          {
+            "label": "Хищные",
+            "rank": 3
+          },
+          {
+            "label": "Животные",
+            "rank": 0
+          }
+        ]
+      },
+      "method": "independent-inverse-enumeration-or-targeted-fact-review",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-021",
+      "model": "oge-history-2027-draft",
+      "number": 1,
+      "subtype": "events-to-years",
+      "proof": {
+        "kind": "history-matching",
+        "ids": [
+          "ugra",
+          "city",
+          "ice"
+        ],
+        "years": [
+          1380,
+          1242,
+          1703,
+          1480,
+          1613
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-022",
+      "model": "oge-history-2027-draft",
+      "number": 2,
+      "subtype": "chronology-russia",
+      "proof": {
+        "kind": "history-order",
+        "ids": [
+          "romanov",
+          "ice",
+          "emancipation",
+          "kulikovo"
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-023",
+      "model": "oge-history-2027-draft",
+      "number": 3,
+      "subtype": "historical-term-definition",
+      "proof": {
+        "kind": "historical-term",
+        "key": "барщина",
+        "source": "https://bse.sci-lib.com/article099036.html"
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-024",
+      "model": "oge-history-2027-draft",
+      "number": 5,
+      "subtype": "agrarian-terms-classification",
+      "proof": {
+        "kind": "facts-selection",
+        "facts": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "source": "https://www.prlib.ru/collection_romanovy"
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-025",
+      "model": "oge-history-2027-draft",
+      "number": 1,
+      "subtype": "events-to-years",
+      "proof": {
+        "kind": "history-matching",
+        "ids": [
+          "emancipation",
+          "empire",
+          "neva"
+        ],
+        "years": [
+          1721,
+          1240,
+          1861,
+          1703,
+          1480
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-026",
+      "model": "ege-history-2027-draft",
+      "number": 1,
+      "subtype": "events-to-years",
+      "proof": {
+        "kind": "history-matching",
+        "ids": [
+          "romanov",
+          "kulikovo",
+          "empire"
+        ],
+        "years": [
+          1703,
+          1721,
+          1380,
+          1613,
+          1242,
+          1861
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-027",
+      "model": "ege-history-2027-draft",
+      "number": 2,
+      "subtype": "chronology-russia",
+      "proof": {
+        "kind": "history-order",
+        "ids": [
+          "city",
+          "ugra",
+          "neva"
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-028",
+      "model": "ege-history-2027-draft",
+      "number": 3,
+      "subtype": "processes-to-events",
+      "proof": {
+        "kind": "history-processes",
+        "ids": [
+          "ugra",
+          "romanov",
+          "city",
+          "emancipation"
+        ],
+        "options": [
+          "ice",
+          "ugra",
+          "romanov",
+          "city",
+          "emancipation",
+          "kulikovo"
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-029",
+      "model": "ege-history-2027-draft",
+      "number": 5,
+      "subtype": "events-to-rulers",
+      "proof": {
+        "kind": "history-rulers",
+        "ids": [
+          "ice",
+          "kulikovo",
+          "ugra",
+          "emancipation"
+        ],
+        "people": [
+          "Пётр I",
+          "Александр II",
+          "Иван III",
+          "Дмитрий Донской",
+          "Михаил Романов",
+          "Александр Невский"
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-030",
+      "model": "ege-history-2027-draft",
+      "number": 1,
+      "subtype": "events-to-years",
+      "proof": {
+        "kind": "history-matching",
+        "ids": [
+          "neva",
+          "emancipation",
+          "ugra"
+        ],
+        "years": [
+          1613,
+          1480,
+          1240,
+          1721,
+          1380,
+          1861
+        ]
+      },
+      "method": "reference-facts-and-independent-order-or-matching-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-031",
+      "model": "oge-social-studies-2027-draft",
+      "number": 9,
+      "subtype": "limited-budget-choice",
+      "proof": {
+        "kind": "budget",
+        "budget": 900,
+        "prices": [
+          170,
+          140
+        ],
+        "baskets": [
+          [
+            5,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "source": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-032",
+      "model": "oge-social-studies-2027-draft",
+      "number": 14,
+      "subtype": "short-run-fixed-variable-costs",
+      "proof": {
+        "kind": "cost-matching",
+        "order": [
+          3,
+          0,
+          4,
+          2,
+          1
+        ],
+        "categories": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "source": "https://openstax.org/books/principles-economics-3e/pages/7-3-costs-in-the-short-run"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-033",
+      "model": "oge-social-studies-2027-draft",
+      "number": 2,
+      "subtype": "economic-activity-generalization",
+      "proof": {
+        "kind": "economic-term",
+        "key": "производство",
+        "source": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-034",
+      "model": "oge-social-studies-2027-draft",
+      "number": 9,
+      "subtype": "opportunity-cost",
+      "proof": {
+        "kind": "facts-selection",
+        "facts": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "source": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-035",
+      "model": "oge-social-studies-2027-draft",
+      "number": 9,
+      "subtype": "scarcity-choice",
+      "proof": {
+        "kind": "facts-selection",
+        "facts": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "source": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-036",
+      "model": "ege-social-studies-2027-draft",
+      "number": 6,
+      "subtype": "short-run-fixed-variable-costs",
+      "proof": {
+        "kind": "cost-matching",
+        "order": [
+          1,
+          4,
+          2,
+          0,
+          3
+        ],
+        "categories": [
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        "source": "https://openstax.org/books/principles-economics-3e/pages/7-3-costs-in-the-short-run"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-037",
+      "model": "ege-social-studies-2027-draft",
+      "number": 7,
+      "subtype": "budget-constraint-judgments",
+      "proof": {
+        "kind": "economic-judgments",
+        "budget": 1800,
+        "priceA": 300,
+        "priceB": 200,
+        "source": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-038",
+      "model": "ege-social-studies-2027-draft",
+      "number": 7,
+      "subtype": "firm-cost-judgments",
+      "proof": {
+        "kind": "firm-costs",
+        "fixed": 25000,
+        "variable": 1600,
+        "quantity": 10,
+        "claimedTotal": 41000,
+        "source": "https://openstax.org/books/principles-economics-3e/pages/7-3-costs-in-the-short-run"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-039",
+      "model": "ege-social-studies-2027-draft",
+      "number": 7,
+      "subtype": "alternative-cost-judgments",
+      "proof": {
+        "kind": "facts-selection",
+        "facts": [
+          true,
+          false,
+          true,
+          true,
+          false
+        ],
+        "source": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-040",
+      "model": "ege-social-studies-2027-draft",
+      "number": 6,
+      "subtype": "fixed-variable-costs-editorial",
+      "proof": {
+        "kind": "fixed-cost-editorial",
+        "categories": [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "source": "https://openstax.org/books/principles-economics-3e/pages/7-3-costs-in-the-short-run"
+      },
+      "method": "targeted-concept-review-and-numerical-or-rule-check",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-041",
+      "model": "oge-english-2027-draft",
+      "number": 20,
+      "subtype": "grammar-buy:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "buy:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "Last Saturday our school opened a small charity market. I ___ a handmade notebook there. Its cover showed the river near our town. I now use it to plan our science club meetings.",
+        "lemma": "buy"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-042",
+      "model": "oge-english-2027-draft",
+      "number": 21,
+      "subtype": "grammar-write:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "write:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "Our class prepared a guide to the school garden last month. Lena ___ the introduction on Tuesday. The other pupils added their photographs on Wednesday. We displayed the finished guide by the entrance.",
+        "lemma": "write"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-043",
+      "model": "oge-english-2027-draft",
+      "number": 22,
+      "subtype": "grammar-go:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "go:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "The city museum invited our astronomy club to a special exhibition. We ___ there after lunch last Friday. A volunteer showed us an old telescope. Everyone returned to school before the evening bus arrived.",
+        "lemma": "go"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-044",
+      "model": "oge-english-2027-draft",
+      "number": 23,
+      "subtype": "grammar-make:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "make:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "We needed a shelter for the weather instruments in our garden. Anton ___ a wooden box for them during the spring holiday. His sister painted it white. The instruments stayed dry during the next storm.",
+        "lemma": "make"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-045",
+      "model": "oge-english-2027-draft",
+      "number": 24,
+      "subtype": "grammar-find:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "find:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "Our team was checking the footpath beside the lake yesterday. Dasha ___ an empty bird nest under an old tree. We photographed it without moving it. Later, our biology teacher helped us discuss how birds build shelters.",
+        "lemma": "find"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-046",
+      "model": "ege-english-2027-draft",
+      "number": 19,
+      "subtype": "grammar-take:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "take:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "At the end of our town history project, we wanted a record of the old station. I ___ several photographs of the building last Sunday. The caretaker showed us the waiting room. We added the pictures to our digital exhibition.",
+        "lemma": "take"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-047",
+      "model": "ege-english-2027-draft",
+      "number": 20,
+      "subtype": "grammar-give:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "give:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "We finished repairing the village reading room in June. The librarian ___ each volunteer a thank-you card at the final meeting. Mine had a drawing of a book on it. I put it above my desk when I came home.",
+        "lemma": "give"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-048",
+      "model": "ege-english-2027-draft",
+      "number": 21,
+      "subtype": "grammar-see:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "see:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "Our walking group visited the wetland reserve yesterday morning. We ___ a heron near a shallow pool. It remained perfectly still for several minutes. Our guide asked everyone to watch quietly from the path.",
+        "lemma": "see"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-049",
+      "model": "ege-english-2027-draft",
+      "number": 22,
+      "subtype": "grammar-meet:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "meet:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "A young engineer came to talk about accessible transport at our school. I ___ her in the workshop after the lecture yesterday. We discussed a model ramp built by our team. Her practical advice helped us improve the design.",
+        "lemma": "meet"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-050",
+      "model": "ege-english-2027-draft",
+      "number": 23,
+      "subtype": "grammar-think:past",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "english",
+        "normKey": "think:past",
+        "source": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+        "context": "Our first idea for the exhibition was a set of large posters. Yesterday I ___ about a smaller display that visitors could carry. I drew the plan in my notebook. Today our team is comparing the two designs.",
+        "lemma": "think"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-051",
+      "model": "oge-german-2027-draft",
+      "number": 20,
+      "subtype": "grammar-sein:ich",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "sein:ich",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Ich arbeite jeden Mittwoch in unserer Schulbibliothek. Dort ___ ich für die neuen Bücher verantwortlich. Zuerst sortiere ich sie nach Themen. Danach stelle ich eine kleine Empfehlungsliste für meine Klasse zusammen.",
+        "lemma": "sein"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-052",
+      "model": "oge-german-2027-draft",
+      "number": 21,
+      "subtype": "grammar-sein:du",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "sein:du",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "In unserem Theaterprojekt spielt jeder eine andere Rolle. Heute ___ du für die Beleuchtung zuständig. Wir proben zuerst die letzte Szene. Danach besprechen wir gemeinsam, ob die Bühne hell genug ist.",
+        "lemma": "sein"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-053",
+      "model": "oge-german-2027-draft",
+      "number": 22,
+      "subtype": "grammar-sein:er",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "sein:er",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Unser Nachbar repariert alte Fahrräder in seiner Werkstatt. Am Samstag ___ er meistens schon um acht Uhr dort. Jugendliche aus dem Viertel helfen ihm. Gemeinsam machen sie kaputte Räder wieder sicher.",
+        "lemma": "sein"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-054",
+      "model": "oge-german-2027-draft",
+      "number": 23,
+      "subtype": "grammar-sein:wir",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "sein:wir",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Wir untersuchen die Geräusche in unserer Stadt. Heute ___ wir im Park unterwegs. Eine Gruppe zählt die vorbeifahrenden Fahrräder. Eine andere notiert, wann die Vögel besonders laut singen.",
+        "lemma": "sein"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-055",
+      "model": "oge-german-2027-draft",
+      "number": 24,
+      "subtype": "grammar-sein:ihr",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "sein:ihr",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Unsere Klasse plant ein Fest für neue Schülerinnen und Schüler. Für die Musik ___ ihr verantwortlich. Die andere Gruppe bereitet die Spiele vor. Am Ende vergleichen wir unsere Pläne und verteilen die Aufgaben.",
+        "lemma": "sein"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-056",
+      "model": "ege-german-2027-draft",
+      "number": 19,
+      "subtype": "grammar-haben:er",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "haben:er",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Paul sammelt Geschichten über das alte Bahnhofsgebäude. Heute ___ er einen Termin mit einer ehemaligen Mitarbeiterin. Er bereitet seine Fragen sorgfältig vor. Später möchte er daraus einen kurzen Bericht für die Schulzeitung schreiben.",
+        "lemma": "haben"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-057",
+      "model": "ege-german-2027-draft",
+      "number": 20,
+      "subtype": "grammar-haben:sie-pl",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "haben:sie-pl",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Die Kinder betreuen einen kleinen Schulgarten. Für jede Pflanze ___ sie ein eigenes Schild. Auf den Schildern stehen der Name und das Pflanzdatum. So können auch Besucher die verschiedenen Beete verstehen.",
+        "lemma": "haben"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-058",
+      "model": "ege-german-2027-draft",
+      "number": 21,
+      "subtype": "grammar-haben:ich",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "haben:ich",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Ich dokumentiere die Renovierung unseres Jugendzentrums. Für die Fotos ___ ich eine kleine Kamera. Jeden Abend wähle ich drei Bilder aus. Dazu schreibe ich kurze Erklärungen für Menschen, die nicht dabei sein können.",
+        "lemma": "haben"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-059",
+      "model": "ege-german-2027-draft",
+      "number": 22,
+      "subtype": "grammar-haben:du",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "haben:du",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Wir entwerfen einen neuen Plan für den Schulhof. Welche Ideen ___ du für eine ruhige Leseecke? Die Sportgruppe plant bereits einen Platz für Ballspiele. Morgen stellen wir alle Vorschläge in der Klasse vor.",
+        "lemma": "haben"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-060",
+      "model": "ege-german-2027-draft",
+      "number": 23,
+      "subtype": "grammar-haben:ihr",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "german",
+        "normKey": "haben:ihr",
+        "source": "https://deutsch.lingolia.com/de/grammatik/verben/sein-haben",
+        "context": "Ihr baut ein Modell für die Ausstellung über erneuerbare Energie. Dafür ___ ihr einen Motor und mehrere Kabel. Die Werkstatt bleibt bis fünf Uhr geöffnet. Danach räumen alle Gruppen gemeinsam die Tische auf.",
+        "lemma": "haben"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-061",
+      "model": "oge-french-2027-draft",
+      "number": 20,
+      "subtype": "grammar-être:ils",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "être:ils",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Les élèves préparent une exposition sur leur quartier. Aujourd’hui, ils ___ dans la salle de dessin. Chacun choisit un bâtiment à présenter. Ensuite, le groupe prépare les légendes pour les visiteurs.",
+        "lemma": "être"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-062",
+      "model": "oge-french-2027-draft",
+      "number": 21,
+      "subtype": "grammar-avoir:nous",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "avoir:nous",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Notre classe organise une collecte de livres pour un centre de loisirs. Nous ___ déjà plusieurs cartons à trier. Les livres pour enfants occupent la première table. Demain, nous préparerons une affiche pour expliquer notre projet.",
+        "lemma": "avoir"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-063",
+      "model": "oge-french-2027-draft",
+      "number": 22,
+      "subtype": "grammar-aller:vous",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "aller:vous",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Vous participez au club de sciences du collège. Chaque jeudi, vous ___ dans le jardin pour relever la température. Une élève note les résultats. Le groupe compare ensuite les observations de toute la semaine.",
+        "lemma": "aller"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-064",
+      "model": "oge-french-2027-draft",
+      "number": 23,
+      "subtype": "grammar-faire:elles",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "faire:elles",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Deux amies préparent le journal de leur école. Chaque mois, elles ___ une enquête auprès des élèves. Cette fois, le sujet est la cour de récréation. Elles présentent ensuite les réponses pendant une réunion.",
+        "lemma": "faire"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-065",
+      "model": "oge-french-2027-draft",
+      "number": 24,
+      "subtype": "grammar-être:nous",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "être:nous",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Nous aidons à préparer une visite du vieux moulin. Ce matin, nous ___ devant la porte pour accueillir les premières familles. Le guide distribue un petit plan. Puis la visite commence dans la cour.",
+        "lemma": "être"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-066",
+      "model": "ege-french-2027-draft",
+      "number": 19,
+      "subtype": "grammar-avoir:tu",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "avoir:tu",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Tu prépares un reportage sur le marché du quartier. Pour interroger les commerçants, tu ___ une liste de questions très précise. Ton amie prend les photographies. Vous choisirez ensemble les images pour le journal.",
+        "lemma": "avoir"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-067",
+      "model": "ege-french-2027-draft",
+      "number": 20,
+      "subtype": "grammar-aller:ils",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "aller:ils",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Les membres du club de lecture aiment rencontrer de nouveaux auteurs. Une fois par mois, ils ___ à la bibliothèque municipale. Ils écoutent une présentation puis posent leurs questions. Un petit compte rendu paraît ensuite sur le site du collège.",
+        "lemma": "aller"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-068",
+      "model": "ege-french-2027-draft",
+      "number": 21,
+      "subtype": "grammar-faire:je",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "faire:je",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Je participe à un atelier de réparation de vélos. Chaque samedi, je ___ les vérifications les plus simples avec un adulte. Nous contrôlons les freins avant de toucher aux roues. La sécurité reste notre priorité.",
+        "lemma": "faire"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-069",
+      "model": "ege-french-2027-draft",
+      "number": 22,
+      "subtype": "grammar-être:vous",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "être:vous",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Vous préparez le spectacle de fin d’année avec les plus jeunes élèves. Aujourd’hui, vous ___ responsables de leur accueil. Les costumes attendent dans une autre salle. La répétition commencera après la pause.",
+        "lemma": "être"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-070",
+      "model": "ege-french-2027-draft",
+      "number": 23,
+      "subtype": "grammar-avoir:elles",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "french",
+        "normKey": "avoir:elles",
+        "source": "https://francais.lingolia.com/fr/grammaire/les-temps/le-present",
+        "context": "Les deux équipes travaillent sur des maquettes de ponts. Pour l’instant, elles ___ le même matériel sur leurs tables. Les formes choisies sont pourtant très différentes. Les essais permettront de comparer la solidité des constructions.",
+        "lemma": "avoir"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-071",
+      "model": "oge-spanish-2027-draft",
+      "number": 20,
+      "subtype": "grammar-ser:yo",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "ser:yo",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Cada viernes ayudo en la biblioteca de mi barrio. Allí yo ___ responsable del rincón de revistas. Primero ordeno los números nuevos. Después preparo una lista de recomendaciones para los visitantes más jóvenes.",
+        "lemma": "ser"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-072",
+      "model": "oge-spanish-2027-draft",
+      "number": 21,
+      "subtype": "grammar-estar:tú",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "estar:tú",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "El grupo prepara una exposición sobre el río. Hoy tú ___ en la sala de informática para organizar las fotografías. Otro compañero revisa los textos. Al final de la tarde vamos a comparar las dos partes del trabajo.",
+        "lemma": "estar"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-073",
+      "model": "oge-spanish-2027-draft",
+      "number": 22,
+      "subtype": "grammar-ir:nosotros",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "ir:nosotros",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Nuestro club observa las aves del parque. Todos los domingos nosotros ___ al estanque con un profesor. Cada participante lleva un cuaderno. Después compartimos las observaciones sin molestar a los animales.",
+        "lemma": "ir"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-074",
+      "model": "oge-spanish-2027-draft",
+      "number": 23,
+      "subtype": "grammar-ser:ellos",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "ser:ellos",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Dos alumnos coordinan el periódico del instituto. Ellos ___ los responsables de elegir los temas. Esta semana quieren hablar de los espacios de lectura. Antes de escribir, escuchan las ideas de otras clases.",
+        "lemma": "ser"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-075",
+      "model": "oge-spanish-2027-draft",
+      "number": 24,
+      "subtype": "grammar-estar:yo",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "estar:yo",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Hoy preparo una visita para los nuevos socios del club. Ahora yo ___ junto a la entrada para recibirlos. Mi compañera explica las actividades en el patio. Cuando llegue todo el mundo, empezaremos el recorrido.",
+        "lemma": "estar"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-076",
+      "model": "ege-spanish-2027-draft",
+      "number": 19,
+      "subtype": "grammar-ir:ella",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "ir:ella",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Clara investiga la historia de las tiendas de su calle. Cada martes ella ___ al archivo municipal para consultar documentos. Un empleado le explica cómo buscar. Después, Clara escribe un resumen para su clase.",
+        "lemma": "ir"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-077",
+      "model": "ege-spanish-2027-draft",
+      "number": 20,
+      "subtype": "grammar-ser:vosotros",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "ser:vosotros",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Vosotros participáis en la organización de la feria de ciencias. Este año vosotros ___ los encargados de presentar las maquetas. Otro equipo prepara los experimentos. Todos ensayamos la presentación antes de abrir las puertas.",
+        "lemma": "ser"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-078",
+      "model": "ege-spanish-2027-draft",
+      "number": 21,
+      "subtype": "grammar-estar:ellos",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "estar:ellos",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Los voluntarios limpian y ordenan el pequeño teatro del barrio. En este momento ellos ___ detrás del escenario. Allí revisan las cajas de decorados. Más tarde comprobarán las luces con una persona adulta.",
+        "lemma": "estar"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-079",
+      "model": "ege-spanish-2027-draft",
+      "number": 22,
+      "subtype": "grammar-ir:tú",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "ir:tú",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Estamos preparando una guía de rutas para bicicletas. Cada miércoles tú ___ al centro juvenil para dibujar los mapas. Tu amiga comprueba las distancias. Luego publicamos una versión que los vecinos pueden comentar.",
+        "lemma": "ir"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-080",
+      "model": "ege-spanish-2027-draft",
+      "number": 23,
+      "subtype": "grammar-ser:nosotros",
+      "proof": {
+        "kind": "language-inflection",
+        "subject": "spanish",
+        "normKey": "ser:nosotros",
+        "source": "https://espanol.lingolia.com/es/gramatica/tiempos/presente",
+        "context": "Nuestro instituto colabora con un huerto comunitario. Nosotros ___ el equipo que prepara los carteles de las plantas. Queremos que cualquier visitante entienda la información. Por eso revisamos juntos cada descripción antes de colocarla.",
+        "lemma": "ser"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-081",
+      "model": "ege-chinese-2027-draft",
+      "number": 16,
+      "subtype": "classifier-bound-volume",
+      "proof": {
+        "kind": "classifier",
+        "noun": "小说",
+        "options": [
+          "张",
+          "本",
+          "条",
+          "只"
+        ],
+        "source": "https://mandarincorner.org/measure-words/"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-082",
+      "model": "ege-chinese-2027-draft",
+      "number": 16,
+      "subtype": "classifier-sheet",
+      "proof": {
+        "kind": "classifier",
+        "noun": "白纸",
+        "options": [
+          "本",
+          "只",
+          "张",
+          "条"
+        ],
+        "source": "https://mandarincorner.org/measure-words/"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-083",
+      "model": "ege-chinese-2027-draft",
+      "number": 19,
+      "subtype": "chinese-integer-tens",
+      "proof": {
+        "kind": "chinese-integer",
+        "addends": [
+          20,
+          15
+        ],
+        "options": [
+          "五十三",
+          "三十",
+          "三十五",
+          "三百五十"
+        ]
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-084",
+      "model": "ege-chinese-2027-draft",
+      "number": 19,
+      "subtype": "chinese-integer-hundreds",
+      "proof": {
+        "kind": "chinese-integer",
+        "addends": [
+          80,
+          24
+        ],
+        "options": [
+          "一百四十",
+          "一百零四",
+          "一百四十四",
+          "十四"
+        ]
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    },
+    {
+      "id": "remaining-20261027-085",
+      "model": "ege-chinese-2027-draft",
+      "number": 17,
+      "subtype": "lexical-compatibility-read",
+      "proof": {
+        "kind": "chinese-lexeme",
+        "options": [
+          "喝",
+          "看",
+          "穿",
+          "吃"
+        ],
+        "source": "https://en.wiktionary.org/wiki/看"
+      },
+      "method": "targeted-reference-paradigm-and-original-context-review-not-expert",
+      "expertReviewed": false,
+      "scope": "Only this authored training item; not all exam subtypes or expert assessment"
+    }
+  ]
+}

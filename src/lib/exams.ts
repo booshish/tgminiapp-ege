@@ -16,7 +16,17 @@ export type ExamNumberDefinition = {
   officialLabels?: string[];
   section?: string;
   responseKind?: "numeric" | "word" | "selection" | "matching" | "sequence" | "essay" | "written" | "oral";
-  generation?: { status: "editorial-review-required" | "resource-required" | "algorithm-ready"; subtypes: string[]; blockers: string[] };
+  generation?: {
+    /** Number-level summary: algorithm-ready means at least ONE subtype, not all. */
+    status: "editorial-review-required" | "resource-required" | "algorithm-ready";
+    subtypes: string[];
+    subtypeReadiness?: {
+      subtype: string;
+      status: "editorial-review-required" | "resource-required" | "algorithm-ready";
+      limitations: string[];
+    }[];
+    blockers: string[];
+  };
   /** Explicit import contract, set only after reviewing the numbered source plan. */
   practiceAnswerFormat?: "number" | "text" | "extended";
   answerRuleTypes?: ("number" | "choices" | "text" | "self")[];
