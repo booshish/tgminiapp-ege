@@ -42,7 +42,9 @@ export type ExamNumberDefinition = {
   sourceReference?: { url: string; pdfPage: number };
 };
 export type ExamDefinition = {
-  sourceReview?: { scope: "numbered-specification"; canonicalArchiveVerified: false; criteriaComplete: false; reviewedAt: string; limitations: string[] };
+  sourceReview?: { scope: "numbered-specification" | "full-specification-and-criteria"; canonicalArchiveVerified: boolean; criteriaComplete: boolean; reviewedAt: string; limitations: string[] };
+  /** Cross-answer criteria must not be silently assigned to one task's maximum. */
+  sharedScoringPools?: { id: string; maximum: number; appliesTo: number[]; criteriaStatus: "pending-task-specific-review" }[];
   sessions?: { name: string; minutes: number }[];
   offeredTaskCount?: number;
   durationMinutes?: number;

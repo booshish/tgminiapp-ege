@@ -1,4 +1,24 @@
 /** Original training statements, not copied exam materials. Models already reviewed in the project. */
+import assert from "node:assert/strict";
+
+export function informationVolumeTemplate(symbols,bits){
+  assert.ok(Number.isInteger(symbols)&&symbols>=1&&symbols<=1000000);assert.ok([8,16,32].includes(bits));
+  const bytes=symbols*(bits>>3);
+  return ["oge-informatics",1,`Учебная запись содержит ${symbols} символов, включая пробелы. Каждый символ занимает ровно ${bits} бит; заголовка, сжатия и служебных данных нет. Найдите объём записи в байтах.`,String(bytes),`На один символ приходится ${bits/8} байт. Умножение этого числа на количество символов даёт ${bytes} байт.`,{kind:"information-volume",symbols,bits}];
+}
+export function radixValueTemplate(digits,radix){
+  assert.ok(Number.isInteger(radix)&&radix>=2&&radix<=16&&typeof digits==="string"&&/^[1-9A-F][0-9A-F]{0,7}$/.test(digits));
+  const values=[...digits].map(c=>"0123456789ABCDEF".indexOf(c));assert.ok(values.every(n=>n<radix));
+  const value=values.reduce((n,d)=>n*radix+d,0);assert.ok(Number.isSafeInteger(value)&&value<=1e9);
+  return ["oge-informatics",10,`Число ${digits} записано в системе счисления с основанием ${radix}. Запишите его значение в десятичной системе. Буквы A–F, если они встречаются, обозначают значения 10–15.`,String(value),`Разрядные веса — степени ${radix}. Последовательно умножаем накопленное значение на основание и прибавляем следующую цифру; получается ${value}.`,{kind:"radix-value",digits,radix}];
+}
+export function radixDigitCountTemplate(base,exponent,offset){
+  assert.ok(Number.isInteger(base)&&base>=2&&base<=16&&Number.isInteger(exponent)&&exponent>=3&&exponent<=30);
+  assert.ok(Number.isInteger(offset)&&offset>=1&&offset<base*base);
+  const tail=base*base-offset,symbol=(base-1).toString(base).toUpperCase();
+  const count=exponent-2+Number(Math.floor(tail/base)===base-1)+Number(tail%base===base-1);
+  return ["ege-informatics",14,`Дано целое число N = ${base}^${exponent} − ${offset}. Сколько цифр ${symbol} содержит запись N в системе счисления с основанием ${base}? Ведущих нулей в записи нет.`,String(count),`Представим число как (${base}^${exponent-2}−1)·${base}²+${tail}. Первые ${exponent-2} цифр равны ${symbol}; отдельно рассматриваем две последние цифры остатка ${tail}. Всего таких цифр ${count}.`,{kind:"radix-digit-count",base,exponent,offset}];
+}
 export const entries = [
   [1, "В электронном дневнике заметка занимает 72 символа, включая пробелы. Каждый символ записан ровно 16 битами; служебных данных нет. Сколько байт занимает заметка?", "144", "На символ приходится 16 / 8 = 2 байта. Поэтому 72 · 2 = 144 байта.", { kind: "bits", symbols: 72, bits: 16 }],
   [1, "Сообщение записано кодом с фиксированной длиной 32 бита на символ. Его объём без заголовков — 284 байта. Сколько символов в сообщении?", "71", "Один символ занимает 32 / 8 = 4 байта. Число символов равно 284 / 4 = 71.", { kind: "symbols", bytes: 284, bits: 32 }],

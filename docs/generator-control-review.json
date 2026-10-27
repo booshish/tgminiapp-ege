@@ -1,0 +1,1133 @@
+{
+  "checkedAt": "2026-10-27",
+  "kind": "original-training-control-batches-not-publication",
+  "implementationSha256": {
+    "scripts/release-science-stage-a.mjs": "89bdae144da6d57db2d620105ee719b546b53e7215c64664629d68cb88d6d82a",
+    "scripts/original-informatics-pilot.mjs": "284b3cc814431e1e6af628fd015aa2f75ec6170726a3e3b8561495a2b5d597a9",
+    "scripts/check-generator-controls.mjs": "019bba76df930b75ebc7499974fd4aaea3d7b604bb46e6e6b8df9de63ef17b29"
+  },
+  "passed": true,
+  "controls": 72,
+  "families": 12,
+  "newFunctions": 9,
+  "independentVerification": "parsed statements, inverse substitution, units, atomic mass and stoichiometric balances, independent positional expansion / BigInt; altered-key rejection",
+  "expertReviewClaimed": false,
+  "intake": {
+    "job": "generator-controls-20261027-v3",
+    "counts": {
+      "found": 72,
+      "rightsAllowed": 49,
+      "staged": 49,
+      "duplicates": 23,
+      "rejected": 0,
+      "review": 0
+    },
+    "publicTasksAdded": 0
+  },
+  "records": [
+    {
+      "family": "ohm-current",
+      "model": "oge-physics",
+      "number": 9,
+      "proof": {
+        "kind": "ohm",
+        "voltage": 6,
+        "resistance": 3,
+        "unit": "A"
+      },
+      "sha256": "4c6d3e613f63f91fbcfcacb26ac9b7ad62156bcff4d39253b629cfdac476f4ca",
+      "id": "audit-control-20261027-ohm-current-1",
+      "answer": "2"
+    },
+    {
+      "family": "carbonate-element-mass",
+      "model": "oge-chemistry",
+      "number": 19,
+      "proof": {
+        "kind": "element-mass",
+        "atoms": {
+          "Ca": 1,
+          "C": 1,
+          "O": 3
+        },
+        "element": "Ca",
+        "compoundMass": 3,
+        "unit": "mg"
+      },
+      "sha256": "6c816e2b8288b32d83c1c4c4eda00077b926c47a762d7ed8ddc0c8ad82ec352b",
+      "id": "audit-control-20261027-carbonate-element-mass-1",
+      "answer": "1.2"
+    },
+    {
+      "family": "dilute-solution-mixture",
+      "model": "ege-chemistry",
+      "number": 26,
+      "proof": {
+        "kind": "solution",
+        "solutions": [
+          [
+            80,
+            2
+          ],
+          [
+            80,
+            14
+          ]
+        ],
+        "unit": "percent"
+      },
+      "sha256": "958fe5e8f5e5426a5d3d5785faa7e54f451c13d5c7bcf761cf5086d6b10731a2",
+      "id": "audit-control-20261027-dilute-solution-mixture-1",
+      "answer": "8"
+    },
+    {
+      "family": "uniform-speed",
+      "model": "oge-physics",
+      "number": 6,
+      "proof": {
+        "kind": "speed",
+        "distance": 90,
+        "time": 10,
+        "unit": "m/s"
+      },
+      "sha256": "2fc86ea4e1665850cb8d79b8c6a25dcb4f91a2430ab441534eb8d67a15c1f145",
+      "id": "audit-control-20261027-uniform-speed-1",
+      "answer": "9"
+    },
+    {
+      "family": "density-SI-conversion",
+      "model": "oge-physics",
+      "number": 7,
+      "proof": {
+        "kind": "density",
+        "grams": 27,
+        "cm3": 10,
+        "unit": "kg/m3"
+      },
+      "sha256": "4669c475cf24273aaff934aa4b8a61762fc69317aead33fd38a563841b2bc9d3",
+      "id": "audit-control-20261027-density-si-conversion-1",
+      "answer": "2700"
+    },
+    {
+      "family": "water-heating-no-phase-change",
+      "model": "oge-physics",
+      "number": 8,
+      "proof": {
+        "kind": "heat",
+        "mass": 0.2,
+        "capacity": 4200,
+        "delta": 30,
+        "unit": "J"
+      },
+      "sha256": "0be8cd14eb42094d5f1c238aa68835364868e9fd0575870ad75a316092bb367e",
+      "id": "audit-control-20261027-water-heating-no-phase-change-1",
+      "answer": "25200"
+    },
+    {
+      "family": "DC-power",
+      "model": "oge-physics",
+      "number": 10,
+      "proof": {
+        "kind": "power",
+        "voltage": 6,
+        "current": 0.25,
+        "unit": "W"
+      },
+      "sha256": "840ebdd65fd1a1ea04b5630ea459571db1543d2d2fde1fe86a6e2e10e2682025",
+      "id": "audit-control-20261027-dc-power-1",
+      "answer": "1.5"
+    },
+    {
+      "family": "stoichiometric-heat",
+      "model": "ege-chemistry",
+      "number": 27,
+      "proof": {
+        "kind": "thermal",
+        "mass": 8,
+        "molarMass": 32,
+        "stoichiometricMoles": 1,
+        "heat": 572,
+        "unit": "kJ"
+      },
+      "sha256": "72db9e9a98820541749f1a149f0d502efbfca39ed694979ed7cd19898f799a09",
+      "id": "audit-control-20261027-stoichiometric-heat-1",
+      "answer": "143"
+    },
+    {
+      "family": "gas-from-impure-metal",
+      "model": "ege-chemistry",
+      "number": 28,
+      "proof": {
+        "kind": "gas-yield",
+        "mass": 2.4,
+        "impurityPercent": 0,
+        "molarMass": 24,
+        "molarVolume": 22.4,
+        "unit": "L"
+      },
+      "sha256": "f32b9eff6a441fa9e629161a1a6d69dedff2dceda89c97c20b6d6d42687f180d",
+      "id": "audit-control-20261027-gas-from-impure-metal-1",
+      "answer": "2.24"
+    },
+    {
+      "family": "fixed-width-information-volume",
+      "model": "oge-informatics",
+      "number": 1,
+      "proof": {
+        "kind": "information-volume",
+        "symbols": 47,
+        "bits": 8
+      },
+      "sha256": "29bd57a5de9f2dea3f5fa169f453832787d89ef89f2f7ab2204223a1ba41a05f",
+      "id": "audit-control-20261027-fixed-width-information-volume-1",
+      "answer": "47"
+    },
+    {
+      "family": "positional-value-conversion",
+      "model": "oge-informatics",
+      "number": 10,
+      "proof": {
+        "kind": "radix-value",
+        "digits": "10101",
+        "radix": 2
+      },
+      "sha256": "6b39254bafaa7e22e06bf96e8d3244cb3cf66f8554670a4900c2c5418bac3b9e",
+      "id": "audit-control-20261027-positional-value-conversion-1",
+      "answer": "21"
+    },
+    {
+      "family": "power-minus-offset-digit-count",
+      "model": "ege-informatics",
+      "number": 14,
+      "proof": {
+        "kind": "radix-digit-count",
+        "base": 2,
+        "exponent": 5,
+        "offset": 1
+      },
+      "sha256": "6bd6380bdd47a3bc181ff8846b2e28552ab1aca03cf8f9cbf8e58e1060dee124",
+      "id": "audit-control-20261027-power-minus-offset-digit-count-1",
+      "answer": "5"
+    },
+    {
+      "family": "ohm-current",
+      "model": "oge-physics",
+      "number": 9,
+      "proof": {
+        "kind": "ohm",
+        "voltage": 9,
+        "resistance": 3,
+        "unit": "A"
+      },
+      "sha256": "32dbf5ee945c3b3cf581298255f9f22e4d25e4f6b34332adc65032d83c33ed03",
+      "id": "audit-control-20261027-ohm-current-2",
+      "answer": "3"
+    },
+    {
+      "family": "carbonate-element-mass",
+      "model": "oge-chemistry",
+      "number": 19,
+      "proof": {
+        "kind": "element-mass",
+        "atoms": {
+          "Ca": 1,
+          "C": 1,
+          "O": 3
+        },
+        "element": "Ca",
+        "compoundMass": 40,
+        "unit": "mg"
+      },
+      "sha256": "faf172776d0e77a8829e5754db6c62d05b8d54a33a8aa3ccaa7cb9baa2ec826d",
+      "id": "audit-control-20261027-carbonate-element-mass-2",
+      "answer": "16"
+    },
+    {
+      "family": "dilute-solution-mixture",
+      "model": "ege-chemistry",
+      "number": 26,
+      "proof": {
+        "kind": "solution",
+        "solutions": [
+          [
+            100,
+            3
+          ],
+          [
+            100,
+            15
+          ]
+        ],
+        "unit": "percent"
+      },
+      "sha256": "10bae0ca8a24a9ff98e4c85e6e9c6396187ea27d7f4107c2b87afa1374f9ef49",
+      "id": "audit-control-20261027-dilute-solution-mixture-2",
+      "answer": "9"
+    },
+    {
+      "family": "uniform-speed",
+      "model": "oge-physics",
+      "number": 6,
+      "proof": {
+        "kind": "speed",
+        "distance": 120,
+        "time": 10,
+        "unit": "m/s"
+      },
+      "sha256": "dd4128e2fd3ed6dd2fe10decf6b46517ad1b62222c79285b31f0c40292057fa2",
+      "id": "audit-control-20261027-uniform-speed-2",
+      "answer": "12"
+    },
+    {
+      "family": "density-SI-conversion",
+      "model": "oge-physics",
+      "number": 7,
+      "proof": {
+        "kind": "density",
+        "grams": 156,
+        "cm3": 20,
+        "unit": "kg/m3"
+      },
+      "sha256": "13ac44dc0804f675e7b059822751bd12504d366bdfe8052df88093fe20ce80de",
+      "id": "audit-control-20261027-density-si-conversion-2",
+      "answer": "7800"
+    },
+    {
+      "family": "water-heating-no-phase-change",
+      "model": "oge-physics",
+      "number": 8,
+      "proof": {
+        "kind": "heat",
+        "mass": 0.3,
+        "capacity": 4200,
+        "delta": 31,
+        "unit": "J"
+      },
+      "sha256": "24ae0b5ce113673ac15a6d8eb3b9ffa3cc7dfcffedd35a7ee821f3f95006dc3b",
+      "id": "audit-control-20261027-water-heating-no-phase-change-2",
+      "answer": "39060"
+    },
+    {
+      "family": "DC-power",
+      "model": "oge-physics",
+      "number": 10,
+      "proof": {
+        "kind": "power",
+        "voltage": 12,
+        "current": 0.5,
+        "unit": "W"
+      },
+      "sha256": "28a6f8a787bee4a5ced837072c6bae5d16a349fe4b73be299587875b6dd3a55d",
+      "id": "audit-control-20261027-dc-power-2",
+      "answer": "6"
+    },
+    {
+      "family": "stoichiometric-heat",
+      "model": "ege-chemistry",
+      "number": 27,
+      "proof": {
+        "kind": "thermal",
+        "mass": 16,
+        "molarMass": 32,
+        "stoichiometricMoles": 1,
+        "heat": 572,
+        "unit": "kJ"
+      },
+      "sha256": "68454c7b5fa59db8098838262f4503f0b3b9292b511d00816ca9aee83cc453b3",
+      "id": "audit-control-20261027-stoichiometric-heat-2",
+      "answer": "286"
+    },
+    {
+      "family": "gas-from-impure-metal",
+      "model": "ege-chemistry",
+      "number": 28,
+      "proof": {
+        "kind": "gas-yield",
+        "mass": 4.8,
+        "impurityPercent": 10,
+        "molarMass": 24,
+        "molarVolume": 22.4,
+        "unit": "L"
+      },
+      "sha256": "74f9744c07309891be0a6cc0a95dd11662ef7e4b3118483ab0f799908418d6fb",
+      "id": "audit-control-20261027-gas-from-impure-metal-2",
+      "answer": "4.032"
+    },
+    {
+      "family": "fixed-width-information-volume",
+      "model": "oge-informatics",
+      "number": 1,
+      "proof": {
+        "kind": "information-volume",
+        "symbols": 66,
+        "bits": 16
+      },
+      "sha256": "d0a076b33b40d789a780faea52b916a46ede0cf2c7746ca1c183122aac9a49da",
+      "id": "audit-control-20261027-fixed-width-information-volume-2",
+      "answer": "132"
+    },
+    {
+      "family": "positional-value-conversion",
+      "model": "oge-informatics",
+      "number": 10,
+      "proof": {
+        "kind": "radix-value",
+        "digits": "2012",
+        "radix": 3
+      },
+      "sha256": "8f5f9e52ffe164c37d6f53a057b2eb97f4649b5fce15c83ded067bd9ad183d6b",
+      "id": "audit-control-20261027-positional-value-conversion-2",
+      "answer": "59"
+    },
+    {
+      "family": "power-minus-offset-digit-count",
+      "model": "ege-informatics",
+      "number": 14,
+      "proof": {
+        "kind": "radix-digit-count",
+        "base": 3,
+        "exponent": 7,
+        "offset": 3
+      },
+      "sha256": "5242f04b1558406981879acd0117b6a8e82b555ee88e3e44b9205cca79db00c9",
+      "id": "audit-control-20261027-power-minus-offset-digit-count-2",
+      "answer": "6"
+    },
+    {
+      "family": "ohm-current",
+      "model": "oge-physics",
+      "number": 9,
+      "proof": {
+        "kind": "ohm",
+        "voltage": 12,
+        "resistance": 3,
+        "unit": "A"
+      },
+      "sha256": "35008bc4b538a87d21b600b5245f300c0329cdb81cb5d750c1f3498b80106eed",
+      "id": "audit-control-20261027-ohm-current-3",
+      "answer": "4"
+    },
+    {
+      "family": "carbonate-element-mass",
+      "model": "oge-chemistry",
+      "number": 19,
+      "proof": {
+        "kind": "element-mass",
+        "atoms": {
+          "Ca": 1,
+          "C": 1,
+          "O": 3
+        },
+        "element": "Ca",
+        "compoundMass": 77,
+        "unit": "mg"
+      },
+      "sha256": "cc3c9916ae5b806201f08f4cd118a07d7305a6e794cf2d36afc24ffe365ce62a",
+      "id": "audit-control-20261027-carbonate-element-mass-3",
+      "answer": "30.8"
+    },
+    {
+      "family": "dilute-solution-mixture",
+      "model": "ege-chemistry",
+      "number": 26,
+      "proof": {
+        "kind": "solution",
+        "solutions": [
+          [
+            120,
+            4
+          ],
+          [
+            120,
+            16
+          ]
+        ],
+        "unit": "percent"
+      },
+      "sha256": "00dd076a9bcfd1f78cd7a7f4cc9f829f2e1007505d3c4b6c1f46255a67dc4301",
+      "id": "audit-control-20261027-dilute-solution-mixture-3",
+      "answer": "10"
+    },
+    {
+      "family": "uniform-speed",
+      "model": "oge-physics",
+      "number": 6,
+      "proof": {
+        "kind": "speed",
+        "distance": 150,
+        "time": 10,
+        "unit": "m/s"
+      },
+      "sha256": "14bf6d03075287b7cc538de878db708a13931ba70d96f169da4a14074b827b85",
+      "id": "audit-control-20261027-uniform-speed-3",
+      "answer": "15"
+    },
+    {
+      "family": "density-SI-conversion",
+      "model": "oge-physics",
+      "number": 7,
+      "proof": {
+        "kind": "density",
+        "grams": 267,
+        "cm3": 30,
+        "unit": "kg/m3"
+      },
+      "sha256": "e07385eb7c8a1d614ca9d98d13e07658b316a58a6eae4e94642bd6853f171a8b",
+      "id": "audit-control-20261027-density-si-conversion-3",
+      "answer": "8900"
+    },
+    {
+      "family": "water-heating-no-phase-change",
+      "model": "oge-physics",
+      "number": 8,
+      "proof": {
+        "kind": "heat",
+        "mass": 0.4,
+        "capacity": 4200,
+        "delta": 32,
+        "unit": "J"
+      },
+      "sha256": "4f7147bf01995f058f71acc8cebd41f9109630bfc867f28a8ea81b0028beaa21",
+      "id": "audit-control-20261027-water-heating-no-phase-change-3",
+      "answer": "53760"
+    },
+    {
+      "family": "DC-power",
+      "model": "oge-physics",
+      "number": 10,
+      "proof": {
+        "kind": "power",
+        "voltage": 18,
+        "current": 0.75,
+        "unit": "W"
+      },
+      "sha256": "9404ef9655a2ceec0d9356be0bf6fb5d4b8495ba7d4790ef8cff76871d3193ac",
+      "id": "audit-control-20261027-dc-power-3",
+      "answer": "13.5"
+    },
+    {
+      "family": "stoichiometric-heat",
+      "model": "ege-chemistry",
+      "number": 27,
+      "proof": {
+        "kind": "thermal",
+        "mass": 24,
+        "molarMass": 32,
+        "stoichiometricMoles": 1,
+        "heat": 572,
+        "unit": "kJ"
+      },
+      "sha256": "fcfb01a0734a709104a3e0d6bf0d25eb68dde3b1e4167401f691a938ba39a981",
+      "id": "audit-control-20261027-stoichiometric-heat-3",
+      "answer": "429"
+    },
+    {
+      "family": "gas-from-impure-metal",
+      "model": "ege-chemistry",
+      "number": 28,
+      "proof": {
+        "kind": "gas-yield",
+        "mass": 7.2,
+        "impurityPercent": 20,
+        "molarMass": 24,
+        "molarVolume": 22.4,
+        "unit": "L"
+      },
+      "sha256": "de79c8dd245b45eed88c1076c24965b5477ec4a442e8e5830a810e0c536fb16e",
+      "id": "audit-control-20261027-gas-from-impure-metal-3",
+      "answer": "5.376"
+    },
+    {
+      "family": "fixed-width-information-volume",
+      "model": "oge-informatics",
+      "number": 1,
+      "proof": {
+        "kind": "information-volume",
+        "symbols": 85,
+        "bits": 32
+      },
+      "sha256": "c9aebde01dcdb2612d79c921602ccef88ee2c6b0f0299065fe159c7b255cfa05",
+      "id": "audit-control-20261027-fixed-width-information-volume-3",
+      "answer": "340"
+    },
+    {
+      "family": "positional-value-conversion",
+      "model": "oge-informatics",
+      "number": 10,
+      "proof": {
+        "kind": "radix-value",
+        "digits": "735",
+        "radix": 8
+      },
+      "sha256": "a25d43da046dea9764458bb9f36c9bc12b09e1d1aa0ba1a43278d0276410657b",
+      "id": "audit-control-20261027-positional-value-conversion-3",
+      "answer": "477"
+    },
+    {
+      "family": "power-minus-offset-digit-count",
+      "model": "ege-informatics",
+      "number": 14,
+      "proof": {
+        "kind": "radix-digit-count",
+        "base": 5,
+        "exponent": 9,
+        "offset": 7
+      },
+      "sha256": "5860b65537ed636441375f320b2ca9620cfc72e288af6f7e8171282f7c620c9f",
+      "id": "audit-control-20261027-power-minus-offset-digit-count-3",
+      "answer": "7"
+    },
+    {
+      "family": "ohm-current",
+      "model": "oge-physics",
+      "number": 9,
+      "proof": {
+        "kind": "ohm",
+        "voltage": 15,
+        "resistance": 3,
+        "unit": "A"
+      },
+      "sha256": "d77473da011e6daf430ddab00c8ba42c18ca82e4c7b95c263a736be3bb7cc8dd",
+      "id": "audit-control-20261027-ohm-current-4",
+      "answer": "5"
+    },
+    {
+      "family": "carbonate-element-mass",
+      "model": "oge-chemistry",
+      "number": 19,
+      "proof": {
+        "kind": "element-mass",
+        "atoms": {
+          "Ca": 1,
+          "C": 1,
+          "O": 3
+        },
+        "element": "Ca",
+        "compoundMass": 114,
+        "unit": "mg"
+      },
+      "sha256": "cab8c614c5d42ad6c1ba5d56f2111f8e2d627781facc886ea512d1c15beb4dc6",
+      "id": "audit-control-20261027-carbonate-element-mass-4",
+      "answer": "45.6"
+    },
+    {
+      "family": "dilute-solution-mixture",
+      "model": "ege-chemistry",
+      "number": 26,
+      "proof": {
+        "kind": "solution",
+        "solutions": [
+          [
+            140,
+            5
+          ],
+          [
+            140,
+            17
+          ]
+        ],
+        "unit": "percent"
+      },
+      "sha256": "3ed4159fc48cadc6915d13c0c5a7951382fb42e8408160e05dd57cf3f95b402e",
+      "id": "audit-control-20261027-dilute-solution-mixture-4",
+      "answer": "11"
+    },
+    {
+      "family": "uniform-speed",
+      "model": "oge-physics",
+      "number": 6,
+      "proof": {
+        "kind": "speed",
+        "distance": 180,
+        "time": 10,
+        "unit": "m/s"
+      },
+      "sha256": "b8da2ef8846b97ba60c8552f1e4366e55233551f8b2b0879b27479f3bf1e6911",
+      "id": "audit-control-20261027-uniform-speed-4",
+      "answer": "18"
+    },
+    {
+      "family": "density-SI-conversion",
+      "model": "oge-physics",
+      "number": 7,
+      "proof": {
+        "kind": "density",
+        "grams": 108,
+        "cm3": 40,
+        "unit": "kg/m3"
+      },
+      "sha256": "6909da8bc7548c9bedcb7045ef4c59c56d3d2f36e947832cf785e45df9d85bf3",
+      "id": "audit-control-20261027-density-si-conversion-4",
+      "answer": "2700"
+    },
+    {
+      "family": "water-heating-no-phase-change",
+      "model": "oge-physics",
+      "number": 8,
+      "proof": {
+        "kind": "heat",
+        "mass": 0.5,
+        "capacity": 4200,
+        "delta": 33,
+        "unit": "J"
+      },
+      "sha256": "ce348c9a443075fc162dc5135f8b656a4162a8ecf7a0956c440480dd421e7d3d",
+      "id": "audit-control-20261027-water-heating-no-phase-change-4",
+      "answer": "69300"
+    },
+    {
+      "family": "DC-power",
+      "model": "oge-physics",
+      "number": 10,
+      "proof": {
+        "kind": "power",
+        "voltage": 24,
+        "current": 1,
+        "unit": "W"
+      },
+      "sha256": "510f20328369950adb11178522044784b583e633d569aa702954d0369c699087",
+      "id": "audit-control-20261027-dc-power-4",
+      "answer": "24"
+    },
+    {
+      "family": "stoichiometric-heat",
+      "model": "ege-chemistry",
+      "number": 27,
+      "proof": {
+        "kind": "thermal",
+        "mass": 32,
+        "molarMass": 32,
+        "stoichiometricMoles": 1,
+        "heat": 572,
+        "unit": "kJ"
+      },
+      "sha256": "fa517102cedba6a5ae8accdc4f6ab81548e81cfd06f599a896b8b7187d679b76",
+      "id": "audit-control-20261027-stoichiometric-heat-4",
+      "answer": "572"
+    },
+    {
+      "family": "gas-from-impure-metal",
+      "model": "ege-chemistry",
+      "number": 28,
+      "proof": {
+        "kind": "gas-yield",
+        "mass": 9.6,
+        "impurityPercent": 30,
+        "molarMass": 24,
+        "molarVolume": 22.4,
+        "unit": "L"
+      },
+      "sha256": "7dc69c41168b321e6fd6f0678ce074ee63b83d5e3fe0244dc5c48b0c3e0cf8b9",
+      "id": "audit-control-20261027-gas-from-impure-metal-4",
+      "answer": "6.272"
+    },
+    {
+      "family": "fixed-width-information-volume",
+      "model": "oge-informatics",
+      "number": 1,
+      "proof": {
+        "kind": "information-volume",
+        "symbols": 104,
+        "bits": 8
+      },
+      "sha256": "4badef67474f0f860621efc2c3911863c491fc152efcdefe0719da4eb319ae0c",
+      "id": "audit-control-20261027-fixed-width-information-volume-4",
+      "answer": "104"
+    },
+    {
+      "family": "positional-value-conversion",
+      "model": "oge-informatics",
+      "number": 10,
+      "proof": {
+        "kind": "radix-value",
+        "digits": "3A2",
+        "radix": 16
+      },
+      "sha256": "4f66c23a40935423cd73f15163f942cb80f514a3b317f06cb49191e1653d9804",
+      "id": "audit-control-20261027-positional-value-conversion-4",
+      "answer": "930"
+    },
+    {
+      "family": "power-minus-offset-digit-count",
+      "model": "ege-informatics",
+      "number": 14,
+      "proof": {
+        "kind": "radix-digit-count",
+        "base": 8,
+        "exponent": 11,
+        "offset": 13
+      },
+      "sha256": "975108802bea191de08da92e39a7ebb52c8677cf24f7abf2cf2a28e214f6a5a7",
+      "id": "audit-control-20261027-power-minus-offset-digit-count-4",
+      "answer": "9"
+    },
+    {
+      "family": "ohm-current",
+      "model": "oge-physics",
+      "number": 9,
+      "proof": {
+        "kind": "ohm",
+        "voltage": 18,
+        "resistance": 3,
+        "unit": "A"
+      },
+      "sha256": "94af855fef52a3626b1e56ea1723eda34bf1e25cc9409f6973ca37aa48078f5e",
+      "id": "audit-control-20261027-ohm-current-5",
+      "answer": "6"
+    },
+    {
+      "family": "carbonate-element-mass",
+      "model": "oge-chemistry",
+      "number": 19,
+      "proof": {
+        "kind": "element-mass",
+        "atoms": {
+          "Ca": 1,
+          "C": 1,
+          "O": 3
+        },
+        "element": "Ca",
+        "compoundMass": 151,
+        "unit": "mg"
+      },
+      "sha256": "03b614396979a174fb060137638ebdd82da60834b48bcb20efe5df6c61bf723f",
+      "id": "audit-control-20261027-carbonate-element-mass-5",
+      "answer": "60.4"
+    },
+    {
+      "family": "dilute-solution-mixture",
+      "model": "ege-chemistry",
+      "number": 26,
+      "proof": {
+        "kind": "solution",
+        "solutions": [
+          [
+            160,
+            6
+          ],
+          [
+            160,
+            18
+          ]
+        ],
+        "unit": "percent"
+      },
+      "sha256": "54c80a19d40eefacf0bd08f3438473318678c8502b58206cc4bb1fda91c9c6bc",
+      "id": "audit-control-20261027-dilute-solution-mixture-5",
+      "answer": "12"
+    },
+    {
+      "family": "uniform-speed",
+      "model": "oge-physics",
+      "number": 6,
+      "proof": {
+        "kind": "speed",
+        "distance": 210,
+        "time": 10,
+        "unit": "m/s"
+      },
+      "sha256": "dac771d570e4dbf7f260317d5f36e2cf737d05ed9729d17e8c4103de07681b9a",
+      "id": "audit-control-20261027-uniform-speed-5",
+      "answer": "21"
+    },
+    {
+      "family": "density-SI-conversion",
+      "model": "oge-physics",
+      "number": 7,
+      "proof": {
+        "kind": "density",
+        "grams": 390,
+        "cm3": 50,
+        "unit": "kg/m3"
+      },
+      "sha256": "7b61c6cede530ed52d234fdbda21b21b46d44829ddbdb85b542e0257510514a3",
+      "id": "audit-control-20261027-density-si-conversion-5",
+      "answer": "7800"
+    },
+    {
+      "family": "water-heating-no-phase-change",
+      "model": "oge-physics",
+      "number": 8,
+      "proof": {
+        "kind": "heat",
+        "mass": 0.6,
+        "capacity": 4200,
+        "delta": 34,
+        "unit": "J"
+      },
+      "sha256": "33045cb67800973488176dae6915aaf588907040ca00a41ceb1851b2e6037770",
+      "id": "audit-control-20261027-water-heating-no-phase-change-5",
+      "answer": "85680"
+    },
+    {
+      "family": "DC-power",
+      "model": "oge-physics",
+      "number": 10,
+      "proof": {
+        "kind": "power",
+        "voltage": 30,
+        "current": 1.25,
+        "unit": "W"
+      },
+      "sha256": "5b0710bf10023b4b0a0a3e8a7b83978aec03b31d2dd2aefea910e172a79de55f",
+      "id": "audit-control-20261027-dc-power-5",
+      "answer": "37.5"
+    },
+    {
+      "family": "stoichiometric-heat",
+      "model": "ege-chemistry",
+      "number": 27,
+      "proof": {
+        "kind": "thermal",
+        "mass": 40,
+        "molarMass": 32,
+        "stoichiometricMoles": 1,
+        "heat": 572,
+        "unit": "kJ"
+      },
+      "sha256": "b498e323c874910f1d65d0bc4050d3ef67d235c0efd767fe082d4f790721f35b",
+      "id": "audit-control-20261027-stoichiometric-heat-5",
+      "answer": "715"
+    },
+    {
+      "family": "gas-from-impure-metal",
+      "model": "ege-chemistry",
+      "number": 28,
+      "proof": {
+        "kind": "gas-yield",
+        "mass": 12,
+        "impurityPercent": 40,
+        "molarMass": 24,
+        "molarVolume": 22.4,
+        "unit": "L"
+      },
+      "sha256": "4bf8e645146d62da9e63a62c33e152b5379743ed4606e1f127b64198cb37b941",
+      "id": "audit-control-20261027-gas-from-impure-metal-5",
+      "answer": "6.72"
+    },
+    {
+      "family": "fixed-width-information-volume",
+      "model": "oge-informatics",
+      "number": 1,
+      "proof": {
+        "kind": "information-volume",
+        "symbols": 123,
+        "bits": 16
+      },
+      "sha256": "d51deebfef3ded8e84e1de0bb104baf15596c6f758f9d2f1931a9b21fffbf3da",
+      "id": "audit-control-20261027-fixed-width-information-volume-5",
+      "answer": "246"
+    },
+    {
+      "family": "positional-value-conversion",
+      "model": "oge-informatics",
+      "number": 10,
+      "proof": {
+        "kind": "radix-value",
+        "digits": "12101",
+        "radix": 4
+      },
+      "sha256": "98653fe5c6287bfed9693a5f6bdf419469d3a4f58249514a36cdde7b88321273",
+      "id": "audit-control-20261027-positional-value-conversion-5",
+      "answer": "401"
+    },
+    {
+      "family": "power-minus-offset-digit-count",
+      "model": "ege-informatics",
+      "number": 14,
+      "proof": {
+        "kind": "radix-digit-count",
+        "base": 10,
+        "exponent": 13,
+        "offset": 21
+      },
+      "sha256": "80757273445748fee1ac099d579b01340e0e5bf2429afd866c1c5accb46789e7",
+      "id": "audit-control-20261027-power-minus-offset-digit-count-5",
+      "answer": "12"
+    },
+    {
+      "family": "ohm-current",
+      "model": "oge-physics",
+      "number": 9,
+      "proof": {
+        "kind": "ohm",
+        "voltage": 21,
+        "resistance": 3,
+        "unit": "A"
+      },
+      "sha256": "df03b38ce140684a9e4b8927b3fd387c556c8967251988c3f481e6be31d1c926",
+      "id": "audit-control-20261027-ohm-current-6",
+      "answer": "7"
+    },
+    {
+      "family": "carbonate-element-mass",
+      "model": "oge-chemistry",
+      "number": 19,
+      "proof": {
+        "kind": "element-mass",
+        "atoms": {
+          "Ca": 1,
+          "C": 1,
+          "O": 3
+        },
+        "element": "Ca",
+        "compoundMass": 188,
+        "unit": "mg"
+      },
+      "sha256": "e820cdd21a1f8048c797d9c5bc0d74474618c83eb10680b892495969ce5b1222",
+      "id": "audit-control-20261027-carbonate-element-mass-6",
+      "answer": "75.2"
+    },
+    {
+      "family": "dilute-solution-mixture",
+      "model": "ege-chemistry",
+      "number": 26,
+      "proof": {
+        "kind": "solution",
+        "solutions": [
+          [
+            180,
+            7
+          ],
+          [
+            180,
+            19
+          ]
+        ],
+        "unit": "percent"
+      },
+      "sha256": "9bb8d6011b06ddb1b8220d9d50d5e08098452ae401a3d540e2a257ad18939239",
+      "id": "audit-control-20261027-dilute-solution-mixture-6",
+      "answer": "13"
+    },
+    {
+      "family": "uniform-speed",
+      "model": "oge-physics",
+      "number": 6,
+      "proof": {
+        "kind": "speed",
+        "distance": 240,
+        "time": 10,
+        "unit": "m/s"
+      },
+      "sha256": "9ab36d4ef3b709b05e6669b014233ca90756927457f57c8e5dea5ca487efae8d",
+      "id": "audit-control-20261027-uniform-speed-6",
+      "answer": "24"
+    },
+    {
+      "family": "density-SI-conversion",
+      "model": "oge-physics",
+      "number": 7,
+      "proof": {
+        "kind": "density",
+        "grams": 534,
+        "cm3": 60,
+        "unit": "kg/m3"
+      },
+      "sha256": "75b68b993bbaf25befcf82bd7e9db44a945585b26855a6ff7418d96f6c597af5",
+      "id": "audit-control-20261027-density-si-conversion-6",
+      "answer": "8900"
+    },
+    {
+      "family": "water-heating-no-phase-change",
+      "model": "oge-physics",
+      "number": 8,
+      "proof": {
+        "kind": "heat",
+        "mass": 0.7,
+        "capacity": 4200,
+        "delta": 35,
+        "unit": "J"
+      },
+      "sha256": "daae933aa8d8f826a2ec3b395b61d820e3773d534496a811b9b110765b3c9799",
+      "id": "audit-control-20261027-water-heating-no-phase-change-6",
+      "answer": "102900"
+    },
+    {
+      "family": "DC-power",
+      "model": "oge-physics",
+      "number": 10,
+      "proof": {
+        "kind": "power",
+        "voltage": 36,
+        "current": 1.5,
+        "unit": "W"
+      },
+      "sha256": "75986320d448e756e2cb93dc753da9d639c8bcb81c6efa4697d0c92da54ec42d",
+      "id": "audit-control-20261027-dc-power-6",
+      "answer": "54"
+    },
+    {
+      "family": "stoichiometric-heat",
+      "model": "ege-chemistry",
+      "number": 27,
+      "proof": {
+        "kind": "thermal",
+        "mass": 48,
+        "molarMass": 32,
+        "stoichiometricMoles": 1,
+        "heat": 572,
+        "unit": "kJ"
+      },
+      "sha256": "ec52290d2fae2a6748d41363a2f9871a81144558837f0fe01bf4f143d09b6125",
+      "id": "audit-control-20261027-stoichiometric-heat-6",
+      "answer": "858"
+    },
+    {
+      "family": "gas-from-impure-metal",
+      "model": "ege-chemistry",
+      "number": 28,
+      "proof": {
+        "kind": "gas-yield",
+        "mass": 14.4,
+        "impurityPercent": 50,
+        "molarMass": 24,
+        "molarVolume": 22.4,
+        "unit": "L"
+      },
+      "sha256": "a2c9b9cf725c0ca8cd0183d30e87f6398d2a5b3c51e16de9ddb286a0226b0899",
+      "id": "audit-control-20261027-gas-from-impure-metal-6",
+      "answer": "6.72"
+    },
+    {
+      "family": "fixed-width-information-volume",
+      "model": "oge-informatics",
+      "number": 1,
+      "proof": {
+        "kind": "information-volume",
+        "symbols": 142,
+        "bits": 32
+      },
+      "sha256": "3758af454dd00b1a49994a4a40274c7057c8aeaecd6f465fc1dadb83a8813df6",
+      "id": "audit-control-20261027-fixed-width-information-volume-6",
+      "answer": "568"
+    },
+    {
+      "family": "positional-value-conversion",
+      "model": "oge-informatics",
+      "number": 10,
+      "proof": {
+        "kind": "radix-value",
+        "digits": "A3B",
+        "radix": 16
+      },
+      "sha256": "3d31cbf1f6f7d26f37c4ea9dec7acdd17ffb4c6dd26a0fef3262315e26bf378e",
+      "id": "audit-control-20261027-positional-value-conversion-6",
+      "answer": "2619"
+    },
+    {
+      "family": "power-minus-offset-digit-count",
+      "model": "ege-informatics",
+      "number": 14,
+      "proof": {
+        "kind": "radix-digit-count",
+        "base": 16,
+        "exponent": 15,
+        "offset": 45
+      },
+      "sha256": "e2372af19f1585f334406112ccfab3bd8738bdec91de2c41c28e093b40cc9727",
+      "id": "audit-control-20261027-power-minus-offset-digit-count-6",
+      "answer": "13"
+    }
+  ]
+}

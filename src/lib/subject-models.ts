@@ -16,6 +16,7 @@ export const subjectExamDefinitions: ExamDefinition[] = (["ОГЭ", "ЕГЭ"] as
   id: `${exam === "ОГЭ" ? "oge" : "ege"}-informatics`, examType: exam, subjectId: "informatics", level: null,
   year: 2027, versionId: `${exam === "ОГЭ" ? "oge" : "ege"}-informatics-2027-draft`, available: true,
   title: `${exam} · Информатика`, verificationStatus: "draft-source-reviewed",
+  ...(exam === "ЕГЭ" ? { maxPrimaryScore: 29, durationMinutes: 235 } : {}),
   verificationNote: "Проект ФИПИ 2027. Прочитана копия спецификации; идентичность каноническому архиву не проверена. Это авторские тренировочные задания. Неподготовленные номера обозначены отдельно.",
   sources: [{ title: "ФИПИ: проекты 2027", url: `https://fipi.ru/${exam === "ОГЭ" ? "oge" : "ege"}/demoversii-specifikacii-kodifikatory` }, { title: "Копия спецификации, обобщённый план", url: informaticsSources[exam] }],
   numbers: (exam === "ОГЭ" ? ogeTitles : egeTitles).map((title, i): ExamNumberDefinition => ({

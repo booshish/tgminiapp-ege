@@ -7,22 +7,52 @@ import { releasePilot } from "./release-task-pilot.mjs";
 
 /** Own numerical template. Its key is independently checked by U=IR below. */
 export function ohmTemplate(voltage=18,resistance=12) {
-  assert.ok(Number.isFinite(voltage)&&voltage>0&&Number.isFinite(resistance)&&resistance>0);
+  assert.ok(Number.isFinite(voltage)&&voltage>=1&&voltage<=240&&Number.isFinite(resistance)&&resistance>=.1&&resistance<=1e6);
   const current=voltage/resistance;
-  assert.ok(Number.isFinite(current)&&current>0);
+  assert.ok(Number.isFinite(current)&&current>=.0001&&current<=20);
   assert.equal(Number(current.toFixed(4)),current,"Use a short terminating decimal or define explicit rounding in a different template");
   return ["oge-physics",9,`На участке цепи с сопротивлением ${resistance} Ом поддерживают напряжение ${voltage} В. Найдите силу постоянного тока в амперах. Участок подчиняется закону Ома.`,String(voltage/resistance),`По закону Ома I = U/R = ${voltage}/${resistance} А. Проверка: I·R должно вернуть исходное напряжение.`,{kind:"ohm",voltage,resistance,unit:"A"}];
 }
 export function carbonateTemplate(mass=250) {
-  assert.ok(Number.isFinite(mass)&&mass>0&&mass<=10000);
-  return ["oge-chemistry",19,`Для учебного анализа взяли ${mass} мг чистого CaCO₃. Используйте Ar(Ca)=40, Ar(C)=12, Ar(O)=16. Найдите массу кальция в образце в миллиграммах.`,String(mass*0.4),"На кальций приходится 40 из 100 единиц формульной массы. Массу образца умножаем на 0,4.",{kind:"element-mass",atoms:{Ca:1,C:1,O:3},element:"Ca",compoundMass:mass,unit:"mg"}];
+  assert.ok(Number.isInteger(mass)&&mass>0&&mass<=10000);
+  // 3 * 0.4 previously produced the invalid long key 1.2000000000000002.
+  const key=mass*2/5;
+  return ["oge-chemistry",19,`Для учебного анализа взяли ${mass} мг чистого CaCO₃. Используйте Ar(Ca)=40, Ar(C)=12, Ar(O)=16. Найдите массу кальция в образце в миллиграммах.`,String(key),"На кальций приходится 40 из 100 единиц формульной массы. Массу образца умножаем на 0,4.",{kind:"element-mass",atoms:{Ca:1,C:1,O:3},element:"Ca",compoundMass:mass,unit:"mg"}];
 }
 export function solutionTemplate(m1=120,w1=10,m2=80,w2=20) {
   // Conservative dilute aqueous NaCl range, not arbitrary 0..100% 'solutions'.
-  assert.ok([m1,m2].every(x=>Number.isFinite(x)&&x>0)&&[w1,w2].every(x=>Number.isFinite(x)&&x>=0&&x<=20));
+  assert.ok([m1,m2].every(x=>Number.isFinite(x)&&x>=1&&x<=10000)&&[w1,w2].every(x=>Number.isFinite(x)&&x>=0&&x<=20));
   const key=(m1*w1+m2*w2)/(m1+m2);
   assert.equal(Number(key.toFixed(4)),key,"Choose parameters with a finite, short decimal key");
   return ["ege-chemistry",26,`При 20 °C смешали ${m1} г водного раствора NaCl с массовой долей ${w1}% и ${m2} г раствора той же соли с массовой долей ${w2}%. Потерь и реакций нет. Найдите массовую долю соли после смешивания, в процентах.`,String(key),"Массы растворённой соли складываются, как и массы растворов. Отношение первой суммы ко второй выражаем в процентах.",{kind:"solution",solutions:[[m1,w1],[m2,w2]],unit:"percent"}];
+}
+
+// The same tuple schema, validator and importer as the original science pilot.
+const bounded=(value,min,max)=>assert.ok(Number.isFinite(value)&&value>=min&&value<=max,"Outside reviewed physical domain");
+const shortKey=value=>{const key=Number(value.toFixed(4));assert.ok(Math.abs(key-value)<1e-9,"A defined rounding rule or short exact key is required");return String(key);};
+export function speedTemplate(distance,time){
+  bounded(distance,1,10000);bounded(time,1,3600);bounded(distance/time,.1,50);
+  return ["oge-physics",6,`Тележка двигалась равномерно по прямой и прошла ${distance} м за ${time} с. Найдите её скорость в м/с.`,shortKey(distance/time),`Для равномерного движения v=s/t=${distance}/${time} м/с. Подстановка v·t должна дать пройденный путь.`,{kind:"speed",distance,time,unit:"m/s"}];
+}
+export function densityTemplate(cm3,density){
+  bounded(cm3,1,1000);assert.ok([2700,7800,8900].includes(density));const grams=density*cm3/1000;
+  return ["oge-physics",7,`Сплошной однородный металлический образец имеет объём ${cm3} см³ и массу ${shortKey(grams)} г. Найдите плотность в кг/м³.`,String(density),"Переведите граммы в килограммы и кубические сантиметры в кубические метры; разделите массу на объём. Обратное произведение плотности на объём возвращает массу.",{kind:"density",grams,cm3,unit:"kg/m3"}];
+}
+export function heatTemplate(mass,start,end){
+  bounded(mass,.1,5);bounded(start,5,75);bounded(end,10,90);assert.ok(end>start);const capacity=4200,delta=end-start;
+  return ["oge-physics",8,`В теплоизолированном сосуде ${mass} кг жидкой воды нагрели от ${start} до ${end} °C. Кипения и потерь нет; c=4200 Дж/(кг·°C). Какое количество теплоты получила вода, в джоулях?`,shortKey(capacity*mass*delta),`При отсутствии фазового перехода Q=cmΔT, где ΔT=${delta} °C. Проверка: Q/(cm) возвращает разность температур.`,{kind:"heat",mass,capacity,delta,unit:"J"}];
+}
+export function powerTemplate(voltage,current){
+  bounded(voltage,3,48);bounded(current,.05,5);
+  return ["oge-physics",10,`Устройство питается постоянным током: напряжение ${voltage} В, сила тока ${current} А. Вычислите электрическую мощность в ваттах.`,shortKey(voltage*current),"Мощность постоянного тока P=UI. Проверка размерностей: В·А=Вт; P/I возвращает напряжение.",{kind:"power",voltage,current,unit:"W"}];
+}
+export function thermochemistryTemplate(oxygenMass){
+  bounded(oxygenMass,1,640);
+  return ["ege-chemistry",27,`Для теоретического расчёта дано термохимическое уравнение 2H₂(г) + O₂(г) = 2H₂O(ж) + 572 кДж. С избытком водорода полностью прореагировало ${oxygenMass} г O₂. M(O₂)=32 г/моль. Сколько теплоты выделилось, в кДж?`,shortKey(oxygenMass/32*572),"По уравнению один моль кислорода соответствует 572 кДж. Массу кислорода переводим в моли, затем используем пропорцию. Это расчёт, не инструкция к опыту.",{kind:"thermal",mass:oxygenMass,molarMass:32,stoichiometricMoles:1,heat:572,unit:"kJ"}];
+}
+export function gasYieldTemplate(mass,impurityPercent){
+  bounded(mass,.5,100);bounded(impurityPercent,0,50);
+  return ["ege-chemistry",28,`В расчётной модели ${mass} г технического Mg содержат ${impurityPercent}% инертных примесей. Чистый Mg полностью реагирует с избытком HCl: Mg + 2HCl → MgCl₂ + H₂. M(Mg)=24 г/моль, Vₘ=22,4 л/моль при заданных условиях. Примеси не реагируют; потерь газа нет. Найдите объём H₂ в литрах.`,shortKey(mass*(100-impurityPercent)/100/24*22.4),"Сначала определяем массу чистого Mg, затем его количество вещества. По уравнению n(H₂)=n(Mg); объём равен количеству вещества, умноженному на заданный молярный объём.",{kind:"gas-yield",mass,impurityPercent,molarMass:24,molarVolume:22.4,unit:"L"}];
 }
 export const scienceEntries = [
   ["oge-physics",6,"На прямом участке учебного трека тележка двигалась равномерно и за 40 с прошла 280 м. Определите её скорость в м/с.","7","При равномерном движении v = s/t = 280/40 = 7 м/с. Произведение 7 м/с на 40 с возвращает 280 м.",{kind:"speed",distance:280,time:40,unit:"m/s"}],
