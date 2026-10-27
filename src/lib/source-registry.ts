@@ -6,6 +6,8 @@ export type SourceEvidence = {
   description: string;
 };
 export type SourceRecord = {
+  /** Explicit origin, not inferred from a structural-reference link or similarity. */
+  taskOriginCategory?: "tochka-original"|"fipi-open-bank"|"fipi-demo"|"egkr"|"official-past-exams"|"other-verified";
   id: string;
   title: string;
   url: string | null;

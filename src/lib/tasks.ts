@@ -15,6 +15,7 @@ import { russianTasks, russianPrototypes } from "./content/russian-bank";
 import type { SubjectId } from "./subjects";
 import { taskPackageIndex } from "./task-package-index";
 import { getTaskView, getMetadataPlacement } from "./task-placement";
+import { matchesTaskTaxonomy, type TaxonomyFilters } from "./task-taxonomy";
 export type { SubjectId } from "./subjects";
 
 export type { Exam } from "./navigation";
@@ -1241,7 +1242,7 @@ export const practicePrototypes = [...prototypes, ...informaticsPrototypes, ...p
 /** Approval is evaluated once for this immutable bundled revision, not per filter row. */
 const selectableTasks = practiceBank.filter((task) => task.publication.id === task.id && getPublicationDecision(task.publication).allowed);
 
-export type PracticeTaskFilter = {
+export type PracticeTaskFilter = TaxonomyFilters & {
   examType: Exam;
   subjectId?: SubjectId;
   level?: ExamLevel | null;
@@ -1268,7 +1269,7 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
       (filter.examNumber === undefined ||
         task.examNumber === filter.examNumber) &&
       (!filter.topicId || task.topicId === filter.topicId) &&
-      (!filter.prototypeId || task.prototypeId === filter.prototypeId),
+      (!filter.prototypeId || task.prototypeId === filter.prototypeId) && matchesTaskTaxonomy(task,filter),
   );
 }
 
@@ -1280,7 +1281,7 @@ export function getPracticeTaskCount(filter: PracticeTaskFilter): number {
     !present.has(t.id) && t.examType[0] === filter.examType && t.subjectId === (filter.subjectId ?? "math") &&
     getMetadataPlacement(t).available && (filter.examNumber === undefined || getMetadataPlacement(t).number === filter.examNumber) &&
     (!filter.topicId || t.topicId === filter.topicId) && (!filter.prototypeId || t.prototypeId === filter.prototypeId) &&
-    (filter.level == null || t.level === filter.level)).length;
+    t.level === getExamDefinition(filter)?.level && matchesTaskTaxonomy(t,filter)).length;
 }
 
 let viewBank: Task[] = [], viewLength=-1;

@@ -3,8 +3,9 @@ import type { ExamLevel } from "./exams";
 import { getExamDefinition } from "./exams";
 import { getPracticeTasks, getPracticeBankView } from "./tasks";
 import { isSubjectId, type SubjectId } from "./subjects";
+import { taxonomyFilterKeys, type TaxonomyFilters } from "./task-taxonomy";
 
-export type CatalogSelection = {
+export type CatalogSelection = TaxonomyFilters & {
   exam: Exam;
   subjectId: SubjectId;
   level?: ExamLevel;
@@ -90,6 +91,7 @@ export function normalizeCatalogSelection(
     examNumber,
     topicId: mode === "topic" ? id(input.topicId) : undefined,
     prototypeId: id(input.prototypeId),
+    ...(mode==="number"&&examNumber?Object.fromEntries(taxonomyFilterKeys.filter(key=>id(input[key])).map(key=>[key,id(input[key])])):{}),
     ...(part ? { part } : {}),
   };
 }
@@ -102,6 +104,7 @@ export function catalogListKey(selection: CatalogSelection): string {
     selection.level ?? "",
     selection.mode,
     selection.prototypeId ?? "",
+    ...taxonomyFilterKeys.map(key=>selection[key]??""),
   ].join(":");
 }
 
@@ -113,6 +116,7 @@ export function practiceTasks(selection: CatalogSelection) {
     examNumber: selection.mode === "number" ? selection.examNumber : undefined,
     topicId: selection.mode === "topic" ? selection.topicId : undefined,
     prototypeId: selection.prototypeId,
+    ...Object.fromEntries(taxonomyFilterKeys.map(key=>[key,selection[key]])),
   }).filter((task) => !selection.part || task.part === selection.part);
 }
 
@@ -123,7 +127,7 @@ export function practiceContextKey(selection: CatalogSelection): string {
     ? definition?.numbers.find((entry) => entry.number === selection.examNumber)?.part : undefined);
   return JSON.stringify([selection.exam, selection.subjectId, selection.level ?? null, part ?? null,
     selection.mode, selection.mode === "number" ? selection.examNumber ?? null : selection.topicId ?? null,
-    selection.prototypeId ?? null]);
+    selection.prototypeId ?? null,...taxonomyFilterKeys.map(key=>selection[key]??null)]);
 }
 
 export function getSessionTaskId(session: PracticeSession): string | undefined {

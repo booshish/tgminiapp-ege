@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { practiceBank as tasks } from "@/lib/tasks";
+import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
 import {
   parseStudyRoute,
   type Route,
@@ -46,6 +47,7 @@ export function useStudyNavigation() {
       if (selected.taskId) params.set("task", selected.taskId);
       if (selected.part) params.set("part", String(selected.part));
       if (selected.prototypeId) params.set("prototype", selected.prototypeId);
+      for(const key of taxonomyFilterKeys)if(selected[key])params.set(key,selected[key]!);
       if (selected.materialId) params.set("material", selected.materialId);
       if (selected.exam) params.set("exam", selected.exam);
       if (selected.subjectId) params.set("subject", selected.subjectId);

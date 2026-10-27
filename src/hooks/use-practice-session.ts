@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Exam, Route, Selection, View } from "@/lib/navigation";
 import { getPracticeBankView, getPracticeTasks } from "@/lib/tasks";
+import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
 import { ensureTaskPackages } from "@/lib/task-packages";
 import { useTaskPackages } from "@/hooks/use-task-packages";
 import { orderPracticeTasks } from "@/lib/practice-order";
@@ -43,6 +44,7 @@ export function catalogRoute(selection: CatalogSelection): Selection {
     examNumber: selection.examNumber,
     topicId: selection.topicId,
     prototypeId: selection.prototypeId,
+    subtypeId:selection.subtypeId,taxonomyTopicId:selection.taxonomyTopicId,subtopicId:selection.subtopicId,sourceCategoryId:selection.sourceCategoryId,
     part: selection.part,
   };
 }
@@ -61,6 +63,7 @@ function selectionFromRoute(route: Route, fallback: CatalogSelection) {
       examNumber: task?.placementReview?.compatible?task.examNumber??undefined:route.examNumber,
       topicId: route.topicId,
       prototypeId: route.prototypeId,
+      subtypeId:route.subtypeId,taxonomyTopicId:route.taxonomyTopicId,subtopicId:route.subtopicId,sourceCategoryId:route.sourceCategoryId,
       part: route.part,
     },
     fallback.exam,
@@ -187,6 +190,7 @@ export function usePracticeSession({
       (!route.topicId || route.topicId === cachedSession.selection.topicId) &&
       (!route.prototypeId ||
         route.prototypeId === cachedSession.selection.prototypeId) &&
+      taxonomyFilterKeys.every(key=>!route[key]||route[key]===cachedSession.selection[key]) &&
       (!route.catalogMode ||
         practiceContextKey(selectionFromRoute(route, cachedSession.selection)) ===
           practiceContextKey(cachedSession.selection)) &&
@@ -335,14 +339,14 @@ export function usePracticeSession({
       const origin = latestRoute.current;
       setPackageError("");
       try {
-        await ensureTaskPackages({ examType: selection.exam, subjectId: selection.subjectId, examNumber: selection.examNumber, topicId: selection.topicId, prototypeId: selection.prototypeId }, initialTaskId);
+        await ensureTaskPackages({ ...selection,examType: selection.exam, level:selection.level }, initialTaskId);
       } catch {
         setPackageError("Не удалось загрузить пакет заданий. Повторите выбор номера. Черновики сохранены.");
         return;
       } finally { starting.current = false; }
       if (latestRoute.current !== origin) return;
       const recent = findRecentPracticeSession(sessions, selection, true, activeId);
-      const previous = recent ? { ...recent, taskIds: [...new Set([...recent.taskIds, ...getPracticeTasks({ examType: selection.exam, subjectId: selection.subjectId, level: selection.level, examNumber: selection.examNumber, topicId: selection.topicId, prototypeId: selection.prototypeId }).map((t) => t.id)])] } : undefined;
+      const previous = recent ? { ...recent, taskIds: [...new Set([...recent.taskIds, ...getPracticeTasks({...selection, examType: selection.exam }).map((t) => t.id)])] } : undefined;
       if (previous && shuffleSeenIds === undefined && (!initialTaskId || previous.taskIds.includes(initialTaskId))) {
         setCatalog(selection);
         setExam(selection.exam);

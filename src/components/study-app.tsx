@@ -44,6 +44,7 @@ import { useStudyNavigation } from "@/hooks/use-study-navigation";
 import { useTaskPackages } from "@/hooks/use-task-packages";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { usePracticeSession } from "@/hooks/use-practice-session";
+import { NumberTrainingFilters } from "@/components/number-training-filters";
 import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
 import { useBreakReminder } from "@/hooks/use-break-reminder";
 import {
@@ -633,7 +634,8 @@ export function StudyApp() {
               <section className="empty-state" role="status">
                 <h1>Открываем подборку</h1>
               </section>
-            ) : currentTask ? (
+            ) : currentTask ? (<>
+              {!session.historicalContext&&<NumberTrainingFilters key={JSON.stringify(session.selection)} selection={session.selection} onApply={selected=>void practice.start(selected)} />}
               <TaskScreen
                 key={`${session.id}:${currentTask.id}`}
                 task={currentTask}
@@ -672,9 +674,10 @@ export function StudyApp() {
                 onPrevious={() => practice.move(-1)}
                 canPrevious={practice.position > 0}
                 onBack={practice.returnToCatalog}
-              />
+              /></>
             ) : (
               <section className="empty-state">
+                {!session.invalidContext&&<NumberTrainingFilters key={JSON.stringify(session.selection)} selection={session.selection} onApply={selected=>void practice.start(selected)} />}
                 <h1>
                   {session.invalidContext
                     ? "Подборка недоступна"

@@ -23,6 +23,8 @@
     "content:matrix": "node scripts/math-release-report.mjs",
     "content:stage": "node scripts/stage-foundation-candidates.mjs",
     "content:import": "node scripts/import-tasks.mjs",
+    "taxonomy:report": "node scripts/build-task-taxonomy.mjs",
+    "taxonomy:check": "node scripts/build-task-taxonomy.mjs --check",
     "exam:release:check": "node scripts/exam-release-check.mjs"
   },
   "dependencies": {

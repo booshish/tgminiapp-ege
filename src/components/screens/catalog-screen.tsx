@@ -8,6 +8,7 @@ import { getExamDefinition } from "@/lib/exams";
 import { VariantLaunchCard } from "@/components/variant-launch-card";
 import type { MockState } from "@/lib/mock-exam";
 import type { CatalogSelection } from "@/lib/practice";
+import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
 import { getPracticeTasks, getPracticeTaskCount, practicePrototypes as prototypes, taskTopicLabels } from "@/lib/tasks";
 import { getTheoryTopic, allTheoryTopics as theoryTopics } from "@/lib/theory";
 import { StreakSummary } from "@/components/game-motivation";
@@ -35,7 +36,7 @@ type CatalogScreenProps = {
 export function CatalogScreen({
   selection,
   onChange,
-  onStart,
+  onStart:startPractice,
   onTheory,
   onShuffle,
   mockState,
@@ -49,6 +50,7 @@ export function CatalogScreen({
   resumeLabel,
   game,
 }: CatalogScreenProps) {
+  const onStart=(next:CatalogSelection)=>startPractice({...next,...Object.fromEntries(taxonomyFilterKeys.map(key=>[key,undefined]))});
   const isPhone = usePhoneLayout();
   const definition = getExamDefinition({
     examType: selection.exam,
@@ -222,7 +224,7 @@ export function CatalogScreen({
 
       {selection.mode === "topic" && (
         <label className="catalog-prototype-filter" htmlFor="catalog-prototype">
-          <span>Тип задания</span>
+          <span>Авторская подборка</span>
           <select
             id="catalog-prototype"
             className="practice-filter-select"
@@ -240,7 +242,7 @@ export function CatalogScreen({
               });
             }}
           >
-            <option value="">Все типы заданий</option>
+            <option value="">Все подборки</option>
             {availablePrototypes.map((prototype) => (
               <option key={prototype.id} value={prototype.id}>
                 {prototype.title}

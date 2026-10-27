@@ -1,6 +1,7 @@
 export type Exam = "ЕГЭ" | "ОГЭ";
 import type { ExamLevel } from "./exams";
 import { isSubjectId, type SubjectId } from "./subjects";
+import { taxonomyFilterKeys, type TaxonomyFilters } from "./task-taxonomy";
 
 export type View =
   | "home"
@@ -17,7 +18,7 @@ export type View =
   | "review"
   | "mock";
 
-export type Selection = {
+export type Selection = TaxonomyFilters & {
   taskIndex?: number;
   taskId?: string;
   part?: 1 | 2 | 3;
@@ -81,8 +82,10 @@ export function parseStudyRoute(hash: string, taskCount: number): Route {
     ...(part === "1" || part === "2" || part === "3" ? { part: Number(part) as 1 | 2 | 3 } : {}),
     ...(view === "favorites" && (bookmarkKind === "task" || bookmarkKind === "theory") ? { bookmarkKind } : {}),
     prototypeId: params.get("prototype") || undefined,
+    ...Object.fromEntries(taxonomyFilterKeys.filter(key=>params.has(key)).map(key=>[key,params.get(key)||undefined])),
     materialId: params.get("material") || undefined,
     invalidContext:
+      taxonomyFilterKeys.some(key=>params.has(key)&&!/^[a-z0-9-]{1,100}$/.test(params.get(key)??"")) ||
       (exam !== null && exam !== "ОГЭ" && exam !== "ЕГЭ") ||
       (subject !== null && (!isSubjectId(subject) || (exam === "ОГЭ" && subject === "chinese"))) ||
       (subject !== null && subject !== "math" && level !== null) ||
