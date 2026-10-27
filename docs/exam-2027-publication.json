@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-27",
+  "runtimeSourceCommit": "639fbc2fea2612ae296498d9fc64d72090d21533",
+  "pagesCommit": "39b9536bd3b1fd5fca3291cecce0c9ecdb656538",
+  "pagesTree": "1677ea41685da8da75e6c445532441bafdbfc447",
+  "nativePagesRun": {
+    "id": 40583628866,
+    "url": "https://github.com/booshish/tgminiapp-ege/actions/runs/40583628866",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": {"build":"success","deploy":"success","report-build-status":"success"}
+  },
+  "mainWorkflow": {
+    "id":40583486492,
+    "url":"https://github.com/booshish/tgminiapp-ege/actions/runs/40583486492",
+    "checksAndBuild":"success",
+    "deploy":"failure",
+    "reason":"Invalid deployment branch; Environment deployments are only allowed from gh-pages",
+    "settingsChanged":false
+  },
+  "checks": {
+    "npmTest":{"passed":422,"failed":0},
+    "lint":"passed-without-warnings",
+    "typecheck":"passed",
+    "productionBuild":"build:pages-passed",
+    "finalBrowserPublishedPackages":{"groups":7,"catalogues":30,"existingTasks":84,"pageErrors":0},
+    "finalBrowserMigration":{"groups":7,"pageErrors":0},
+    "browserScope":"Local final production export in Chromium, not remote browser hydration or physical iPhone/iPad"
+  },
+  "content": {
+    "newTasks":0,
+    "unchangedSourceTasks":1967,
+    "unchangedLazyTasks":151,
+    "unchangedShards":124,
+    "retainedInActivePracticeIncludingFoundations":1946,
+    "retainedNumberedTasks":1939,
+    "movedWithoutChangingIds":186,
+    "newlyHistoryOnly":5,
+    "previouslyHistoryOnly":16,
+    "activeDraftDirections":30,
+    "activePositions":825,
+    "fullBaseStudyVariants":5
+  },
+  "limitations":[
+    "2027 documents remain draft, not finally approved",
+    "All per-item criteria/codifiers/resources are not fully confirmed",
+    "Profile positions 6,13,17 need compatible original tasks in a separate content stage",
+    "New complete OGE/profile mocks are blocked pending criteria/content; historical attempts retain original snapshots",
+    "Current social-studies OGE uses its reviewed 2027 model; a complete 2026 item crosswalk is not certified"
+  ],
+  "resumeFrom":"docs/exam-2027-migration-progress.md"
+}
