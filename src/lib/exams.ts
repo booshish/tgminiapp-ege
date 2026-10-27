@@ -12,10 +12,15 @@ export type ExamSelection = {
 };
 export type ExamPart = 1 | 2 | 3;
 export type ExamNumberDefinition = {
+  /** Official alternatives / oral numbering; number remains a stable internal slot. */
+  officialLabels?: string[];
+  section?: string;
+  responseKind?: "numeric" | "word" | "selection" | "matching" | "sequence" | "essay" | "written" | "oral";
+  generation?: { status: "editorial-review-required" | "resource-required" | "algorithm-ready"; subtypes: string[]; blockers: string[] };
   /** Explicit import contract, set only after reviewing the numbered source plan. */
   practiceAnswerFormat?: "number" | "text" | "extended";
   answerRuleTypes?: ("number" | "choices" | "text" | "self")[];
-  evaluation?: { mode: "automatic" | "expert" | "experiment"; ordering?: "ordered" | "unordered"; note: string; criteriaUrl: string; criteriaPdfPage: number };
+  evaluation?: { mode: "automatic" | "expert" | "experiment"; ordering?: "ordered" | "unordered"; note: string; criteriaUrl: string; criteriaPdfPage?: number; criteriaSection?: string };
   requiredResources?: string[];
   number: number;
   title: string;
@@ -27,6 +32,9 @@ export type ExamNumberDefinition = {
   sourceReference?: { url: string; pdfPage: number };
 };
 export type ExamDefinition = {
+  sourceReview?: { scope: "numbered-specification"; canonicalArchiveVerified: false; criteriaComplete: false; reviewedAt: string; limitations: string[] };
+  sessions?: { name: string; minutes: number }[];
+  offeredTaskCount?: number;
   durationMinutes?: number;
   maxPrimaryScore?: number;
   id: string;

@@ -11,8 +11,8 @@ test("all 30 offered subject/exam/level pairs inventoried, eight supported batch
   const tasks=buildMultiSubjectTasks(), inventory=subjectInventory(tasks);
   assert.equal(tasks.length,40);assert.equal(inventory.length,30);
   assert.equal(inventory.filter(r=>r.newTasks===5).length,8);
-  assert.equal(inventory.filter(r=>r.readiness==="blocked-no-reviewed-exam-model").length,19);
-  assert.equal(inventory.filter(r=>r.readiness==="reviewed-model-other-batch").length,3);
+  assert.equal(inventory.filter(r=>r.readiness==="blocked-no-reviewed-exam-model").length,0);
+  assert.equal(inventory.filter(r=>r.readiness==="reviewed-model-other-batch").length,22);
   const {checkTaskAnswer}=createContentLoader()("src/lib/tasks.ts");
   for(const t of tasks){
     assert.deepEqual(structuralIssues(t),[]);

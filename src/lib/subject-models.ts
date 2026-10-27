@@ -1,6 +1,7 @@
 import type { ExamDefinition, ExamNumberDefinition } from "./exams";
 import { russianModels } from "./content/russian-model";
 import { scienceModels } from "./content/science-models";
+import { remainingModels } from "./content/remaining-models";
 
 // Keep existing subject order; their content factories rely on their own entries.
 
@@ -53,3 +54,4 @@ subjectExamDefinitions.push({
 });
 // Append new models after every existing entry: preserve historical first-match/order consumers.
 subjectExamDefinitions.push(...scienceModels);
+subjectExamDefinitions.push(...remainingModels);
