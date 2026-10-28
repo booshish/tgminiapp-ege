@@ -2,7 +2,7 @@ import {
   defaultCatalogSelection,
   emptyTaskState,
   normalizeCatalogSelection,
-  practiceTasks,
+  practiceTaskIds,
   type CatalogSelection,
   type PracticeSession,
   type PracticeTaskState,
@@ -178,7 +178,7 @@ export function parseStoredPractice(raw: string | null): StoredPractice {
           selected=migrated;
         }
       }
-      const availableIds = historicalContext ? record.taskIds.filter((id): id is string => typeof id === "string" && tasks.some(t => t.id === id && matchesSelection(t))) : practiceTasks(selected).map((task) => task.id);
+      const availableIds = historicalContext ? record.taskIds.filter((id): id is string => typeof id === "string" && tasks.some(t => t.id === id && matchesSelection(t))) : practiceTaskIds(selected);
       const available = new Set(availableIds);
       const savedIds = record.taskIds.filter((taskId): taskId is string =>
         typeof taskId === "string" && available.has(taskId),

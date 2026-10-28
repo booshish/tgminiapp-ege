@@ -2,9 +2,9 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Exam, Route, Selection, View } from "@/lib/navigation";
-import { getPracticeBankView, getPracticeTasks } from "@/lib/tasks";
+import { getPracticeBankView } from "@/lib/tasks";
 import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
-import { ensureTaskPackages } from "@/lib/task-packages";
+import { ensureTaskIds } from "@/lib/task-packages";
 import { useTaskPackages } from "@/hooks/use-task-packages";
 import { orderPracticeTasks } from "@/lib/practice-order";
 import {
@@ -12,6 +12,7 @@ import {
   findRecentPracticeSession,
   getSessionTaskId,
   practiceContextKey,
+  practiceTaskIds,
   rememberPracticePosition,
   defaultCatalogSelection,
   normalizeCatalogSelection,
@@ -340,15 +341,16 @@ export function usePracticeSession({
       starting.current = true;
       const origin = latestRoute.current;
       setPackageError("");
+      const recent = findRecentPracticeSession(sessions, selection, true, activeId);
+      const candidate = initialTaskId ?? (recent ? getSessionTaskId(recent) : undefined) ?? practiceTaskIds(selection)[0];
       try {
-        await ensureTaskPackages({ ...selection,examType: selection.exam, level:selection.level }, initialTaskId);
+        await ensureTaskIds(candidate ? [candidate] : []);
       } catch {
         setPackageError("Не удалось загрузить пакет заданий. Повторите выбор номера. Черновики сохранены.");
         return;
       } finally { starting.current = false; }
       if (latestRoute.current !== origin) return;
-      const recent = findRecentPracticeSession(sessions, selection, true, activeId);
-      const previous = recent ? { ...recent, taskIds: [...new Set([...recent.taskIds, ...getPracticeTasks({...selection, examType: selection.exam }).map((t) => t.id)])] } : undefined;
+      const previous = recent ? { ...recent, taskIds: [...new Set([...recent.taskIds, ...practiceTaskIds(selection)])] } : undefined;
       if (previous && shuffleSeenIds === undefined && (!initialTaskId || previous.taskIds.includes(initialTaskId))) {
         setCatalog(selection);
         setExam(selection.exam);
@@ -390,19 +392,28 @@ export function usePracticeSession({
     [navigate, setExam, sessions, activeId, nextVisit, tasks],
   );
 
+  const openTask = useCallback(async (taskId:string) => {
+    if(!session?.taskIds.includes(taskId)||starting.current)return;
+    starting.current=true;
+    const origin=latestRoute.current;
+    setPackageError("");
+    try {
+      await ensureTaskIds([taskId]);
+      if(latestRoute.current!==origin)return;
+      navigate("tasks",{...catalogRoute(session.selection),taskId,
+        taskIndex:getPracticeBankView().findIndex(task=>task.id===taskId),sessionId:session.id});
+    } catch {setPackageError("Не удалось загрузить задание. Повторите выбор. Черновики сохранены.");}
+    finally {starting.current=false;}
+  },[session,navigate]);
+
   const move = useCallback(
     (offset: -1 | 1) => {
       if (!session) return;
       const nextId = session.taskIds[position + offset];
       if (!nextId) return;
-      navigate("tasks", {
-        ...catalogRoute(session.selection),
-        taskIndex: tasks.findIndex((task) => task.id === nextId),
-        taskId: nextId,
-        sessionId: session.id,
-      });
+      void openTask(nextId);
     },
-    [navigate, session, position, tasks],
+    [openTask, session, position],
   );
 
   const changeTask = useCallback(
@@ -476,6 +487,7 @@ export function usePracticeSession({
     openCatalog,
     start,
     move,
+    openTask,
     changeTask,
     returnToCatalog,
     resume,

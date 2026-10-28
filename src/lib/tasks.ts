@@ -1249,6 +1249,7 @@ export type PracticeTaskFilter = TaxonomyFilters & {
   examNumber?: number;
   topicId?: string;
   prototypeId?: string;
+  part?: ExamPart;
 };
 
 /** Never replace an empty selection with another exam, level, number or topic. */
@@ -1269,19 +1270,26 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
       (filter.examNumber === undefined ||
         task.examNumber === filter.examNumber) &&
       (!filter.topicId || task.topicId === filter.topicId) &&
-      (!filter.prototypeId || task.prototypeId === filter.prototypeId) && matchesTaskTaxonomy(task,filter),
+      (!filter.prototypeId || task.prototypeId === filter.prototypeId) && (!filter.part || task.part === filter.part) && matchesTaskTaxonomy(task,filter),
   );
 }
 
 /** Tiny metadata counts include unloaded approved items, never fake Task objects. */
-export function getPracticeTaskCount(filter: PracticeTaskFilter): number {
-  if (!getExamDefinition(filter)?.available) return 0;
-  const present = new Set(practiceBank.map((t) => t.id));
-  return getPracticeTasks(filter).length + taskPackageIndex.flatMap((p) => p.tasks).filter((t) =>
-    !present.has(t.id) && t.examType[0] === filter.examType && t.subjectId === (filter.subjectId ?? "math") &&
+export function getPracticeTaskIds(filter: PracticeTaskFilter): string[] {
+  const definition = getExamDefinition(filter);
+  if (!definition?.available || (filter.examNumber !== undefined && !definition.numbers.some(n=>n.number===filter.examNumber))) return [];
+  const metadata = taskPackageIndex.flatMap(p=>p.tasks);
+  const packaged = new Set(metadata.map(t=>t.id));
+  // Stable order does not depend on which shard happened to arrive first.
+  return [...getPracticeTasks(filter).filter(t=>!packaged.has(t.id)).map(t=>t.id), ...metadata.filter((t) =>
+    t.examType[0] === filter.examType && t.subjectId === (filter.subjectId ?? "math") &&
     getMetadataPlacement(t).available && (filter.examNumber === undefined || getMetadataPlacement(t).number === filter.examNumber) &&
     (!filter.topicId || t.topicId === filter.topicId) && (!filter.prototypeId || t.prototypeId === filter.prototypeId) &&
-    t.level === getExamDefinition(filter)?.level && matchesTaskTaxonomy(t,filter)).length;
+    (!filter.part || definition.numbers.find(n=>n.number===getMetadataPlacement(t).number)?.part===filter.part) &&
+    t.level === definition.level && matchesTaskTaxonomy(t,filter)).map(t=>t.id)];
+}
+export function getPracticeTaskCount(filter: PracticeTaskFilter): number {
+  return getPracticeTaskIds(filter).length;
 }
 
 let viewBank: Task[] = [], viewLength=-1;

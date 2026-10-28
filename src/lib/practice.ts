@@ -1,7 +1,7 @@
 import type { Exam } from "./navigation";
 import type { ExamLevel } from "./exams";
 import { getExamDefinition } from "./exams";
-import { getPracticeTasks, getPracticeBankView } from "./tasks";
+import { getPracticeTasks, getPracticeTaskIds, getPracticeBankView } from "./tasks";
 import { isSubjectId, type SubjectId } from "./subjects";
 import { taxonomyFilterKeys, type TaxonomyFilters } from "./task-taxonomy";
 
@@ -120,6 +120,14 @@ export function practiceTasks(selection: CatalogSelection) {
   }).filter((task) => !selection.part || task.part === selection.part);
 }
 
+/** Candidate identities from metadata; never force-download their conditions. */
+export function practiceTaskIds(selection: CatalogSelection) {
+  return getPracticeTaskIds({examType:selection.exam,subjectId:selection.subjectId,level:selection.level,
+    examNumber:selection.mode==="number"?selection.examNumber:undefined,
+    topicId:selection.mode==="topic"?selection.topicId:undefined,prototypeId:selection.prototypeId,part:selection.part,
+    ...Object.fromEntries(taxonomyFilterKeys.map(key=>[key,selection[key]]))});
+}
+
 /** Number parts come from the current exam definition, never from a global index. */
 export function practiceContextKey(selection: CatalogSelection): string {
   const definition = getExamDefinition({ examType: selection.exam, subjectId: selection.subjectId, level: selection.level });
@@ -160,7 +168,7 @@ export function createPracticeSession(
 ): PracticeSession {
   const historical = initialTaskId ? getPracticeBankView().find(t => t.id === initialTaskId && t.availability === "history-only"
     && t.subjectId === selection.subjectId && t.examType.includes(selection.exam) && t.level === (selection.level ?? null)) : undefined;
-  const taskIds = historical ? [historical.id] : practiceTasks(selection).map((task) => task.id);
+  const taskIds = historical ? [historical.id] : practiceTaskIds(selection);
   const index = initialTaskId ? taskIds.indexOf(initialTaskId) : 0;
   return {
     id,
