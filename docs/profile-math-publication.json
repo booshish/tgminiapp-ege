@@ -1,0 +1,73 @@
+{
+  "verifiedAt": "2026-10-28T09:49:17Z",
+  "status": "published-native-gh-pages-success",
+  "siteUrl": "https://booshish.github.io/tgminiapp-ege/",
+  "runtimeSourceCommit": "e4e886425335c59aa15fb905b6017460d1785206",
+  "ghPagesCommit": "28a2b7cd349bdac9b191b6373cbd5b81c852f6e1",
+  "staticTree": "7b9bcb0e75c87898168ef3b3a5d0a3c481d83a87",
+  "nativePages": {
+    "runId": 40666987871,
+    "url": "https://github.com/booshish/tgminiapp-ege/actions/runs/40666987871",
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "28a2b7cd349bdac9b191b6373cbd5b81c852f6e1"
+  },
+  "sourceCI": {
+    "runId": 40666419591,
+    "validationJob": 122741950884,
+    "validationConclusion": "success",
+    "mainDeploymentJob": 122743224297,
+    "mainDeploymentConclusion": "failure",
+    "reason": "Invalid deployment branch and no branch protection rules set in the environment. Deployments are only allowed from gh-pages",
+    "resolution": "Existing native gh-pages publication succeeded. Environment and deployment configuration were not changed."
+  },
+  "counts": {
+    "oldActiveProfileTasks": 198,
+    "newOriginalProfileTasksActuallyPublished": 2036,
+    "activeProfileTasksAfter": 2234,
+    "numbersCovered": 20,
+    "newTemplates": 41,
+    "newParameterizedFactoryAPIs": 1,
+    "shortAnswerReadyTemplateContracts": 27,
+    "extendedPartialTemplateContracts": 14,
+    "candidatesIndependentlyChecked": 2840,
+    "duplicatesExcludedByUnchangedGate": 804,
+    "rejectedForErrors": 0,
+    "reviewPending": 0,
+    "stagingOnlyUnpublishedInThisBatch": 0,
+    "publishedTasksWithCheckedAnswersAndSolutions": 2036,
+    "externalExpertReviews": 0,
+    "newImmutableShards": 20,
+    "oldImmutableShardsPreserved": 124,
+    "totalExportShardsWithVerifiedHashes": 144,
+    "totalLazyTasksAllSubjectsInExport": 2187
+  },
+  "checks": {
+    "fullNpmTest": {"passed": 438, "failed": 0, "skipped": 0},
+    "lint": "passed-no-warnings",
+    "typecheck": "passed",
+    "taxonomyCheck": "passed",
+    "productionBuildPages": "passed",
+    "gitDiffCheck": "passed",
+    "independentControlBatch": {"candidates": 164, "families": 41, "passed": true},
+    "independentFullBatch": {"candidates": 2840, "passed": true, "method": "separate-Python-SymPy-exact-arithmetic-symbolic-identities-derivatives-and-enumeration"},
+    "browserProfileRelease": {"passedGroups": 5, "samples": 41, "families": 41, "catalogueNumbers": 20, "pageErrors": 0, "widths": [320, 390, 430, 768, 1024, 1440]},
+    "browserExistingTaxonomy": {"passedGroups": 5, "pageErrors": 0},
+    "browserScope": "Chromium on the exact local production export deployed by the successful native Pages run; not physical Safari/iPhone/iPad and not a remote-site hydration test",
+    "oldBank": "All 1816 bundled records and the original 124 shards / 151 lazy records remain unchanged; new IDs are append-only"
+  },
+  "rights": {
+    "origin": "original-material-created-for-project",
+    "thirdPartyTasksImported": 0,
+    "fipiUse": "Exam structure and draft scoring requirements only. No demo conditions/illustrations/solutions republished.",
+    "legalScope": "Project authorship declaration, not independent legal advice"
+  },
+  "remaining": {
+    "fullProfileMockAvailable": false,
+    "unregisteredMockCriteriaNumbers": [14, 15, 16, 17, 18, 19, 20],
+    "number17": "Draft 0/1/2 guidance included in original practice notes; interactive primary-score/XP configuration not expanded",
+    "otherExtendedNumbers": "Author checklists are not represented as confirmed official item-level rubrics",
+    "subtypeInventoryComplete": false,
+    "next": "Review item-level draft rubrics 14–20, then broaden 4/5/13/17 and deeper subtypes. Do not rerun r1 as a new import; use --check and the existing exact subtype generation order."
+  }
+}
