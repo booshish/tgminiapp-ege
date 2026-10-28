@@ -20,4 +20,4 @@
 
 ## Публикация
 
-Подтверждение фактического результата gh-pages записывается в `docs/topic-picker-publication.json`. GitHub Actions/Environments и процесс публикации не менялись. Публичный домен Pages недоступен для прямой проверки из среды из-за сетевой политики; браузерные сценарии относятся к production-экспорту, удалённая публикация проверяется native Pages run для точного коммита.
+Публикация подтверждена: source `31f16cd`, gh-pages `8f2fa5d`, [native Pages run 40776374328](https://github.com/booshish/tgminiapp-ege/actions/runs/40776374328) — completed/success. Подробности в `docs/topic-picker-publication.json`. Все 167 файлов production-пакетов совпали с SHA-256 metadata index. GitHub Actions/Environments и процесс публикации не менялись. Публичный домен Pages недоступен для прямой проверки из среды из-за сетевой политики; браузерные сценарии относятся к production-экспорту, удалённая публикация подтверждена native Pages run для точного коммита.

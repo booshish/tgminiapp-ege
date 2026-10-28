@@ -1,0 +1,30 @@
+{
+  "status": "published",
+  "date": "2026-10-28",
+  "sourceCommit": "31f16cd4493083376616c2b967f3aea676285e5e",
+  "pagesCommit": "8f2fa5d495cb55472e93bcb78d8830388b6a7be6",
+  "staticTree": "5dbe7c4e771810171a00cb3bd98b88aca257d3ee",
+  "nativePagesRun": 40776374328,
+  "nativePagesRunUrl": "https://github.com/booshish/tgminiapp-ege/actions/runs/40776374328",
+  "nativePagesConclusion": "success",
+  "fullTests": {"passed": 448, "failed": 0, "skipped": 0},
+  "lint": "passed",
+  "typecheck": "passed",
+  "productionBuild": "build:pages passed",
+  "diffCheck": "passed",
+  "allExportShardsSha256Verified": 167,
+  "taskBankTaxonomyDataAndPackageIndexChanged": false,
+  "browser": {
+    "groups": 8,
+    "pageErrors": 0,
+    "scope": "Exact local production export: immediate composed filters, counts, open/close/Escape/focus, draft/bookmark/checked result persistence, reload without repeated XP, same-number catalogue return and history, empty results, unreviewed classifications, number/subject changes, direct numbered URL without task ID, repeated touch taps",
+    "themes": ["light", "dark"],
+    "widths": [320, 375, 390, 430, 768, 1024],
+    "overflow": false,
+    "controlsAtLeast44x44": true,
+    "panelOverlaysAnswer": false,
+    "physicalIphoneSafari": "not tested",
+    "remoteBrowser": "Unavailable under the execution environment network policy; successful publication confirmed by native GitHub Pages run for exact pagesCommit"
+  },
+  "checkpoint": "docs/topic-picker-progress.md"
+}
