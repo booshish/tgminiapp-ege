@@ -1,5 +1,7 @@
 # Пополнение — контрольная точка
 
+**Опубликовано 1171 новое задание:** source `ec68e6c`, gh-pages `80f5e2e`; [Pages run 40767901439](https://github.com/booshish/tgminiapp-ege/actions/runs/40767901439) — success. Все 152 экспортированных shards сверены по SHA256. Квитанция — `priority-refill-publication.json`. Это завершённый расчётный этап, не завершение наполнения всех шести предметов ОГЭ.
+
 Итоговая проверка локального выпуска: `npm test` **441/441**, fail/skip 0; lint, typecheck, `taxonomy:check`, production `build:pages`, `git diff --check` успешны. Chromium на точном export: 12 новых семейств, фильтры, ответы, решения и reload событий/XP без повторного начисления; ошибок страниц 0. Старые 144 shards и bundled-записи проверены как неизменные. Удалённая публикация подтверждается отдельной квитанцией.
 
 Статус сайта проверяется в priority-refill-publication.json; до неё release означает локальные immutable-пакеты. Все модели — предварительные проекты 2027, не утверждённые КИМ.
