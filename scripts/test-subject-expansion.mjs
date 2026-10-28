@@ -121,7 +121,7 @@ test("Existing catalogue and task components render subjects, pending resources 
   const noop=()=>{};const game=components("src/lib/gamification.ts").getGameSummary(components("src/lib/learning-events.ts").emptyLearningState.game);
   for(const exam of ["ОГЭ","ЕГЭ"]){
     const html=renderToStaticMarkup(createElement(CatalogScreen,{selection:{exam,subjectId:"informatics",mode:"number"},onChange:noop,onStart:noop,onTheory:noop,game}));
-    assert.equal((html.match(/class="feature-card /g)||[]).length,getSubjects(exam).length);
+    assert.equal((html.match(/class="feature-card /g)||[]).length,exam==="ОГЭ"?6:3);
     assert.equal((html.match(/data-catalog-number=/g)||[]).length,exam==="ОГЭ"?16:27);
     assert.doesNotMatch(html,/class="variant-launch-card"|catalog-level-switch/);
     assert.match(html,/disabled=""/);

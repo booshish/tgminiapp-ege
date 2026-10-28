@@ -6,6 +6,21 @@ export const subjects = [
   ["french", "Французский язык"], ["spanish", "Испанский язык"], ["chinese", "Китайский язык"],
 ] as const;
 export type SubjectId = typeof subjects[number][0];
+export type DirectionStatus = "active" | "planned" | "hidden";
+/** Product availability only; never a claim of content completeness or an entitlement. */
+export function directionStatus(exam: "ОГЭ" | "ЕГЭ", subject: string): DirectionStatus {
+  const active = exam === "ОГЭ"
+    ? ["math", "russian", "informatics", "biology", "chemistry", "social-studies"]
+    : ["math", "russian", "informatics"];
+  if (active.includes(subject)) return "active";
+  return exam === "ЕГЭ" && ["chemistry", "biology", "history"].includes(subject) ? "planned" : "hidden";
+}
+export function isActiveSubject(exam: "ОГЭ" | "ЕГЭ", subject: string) {
+  return directionStatus(exam, subject) === "active";
+}
+export function getActiveSubjects(exam: "ОГЭ" | "ЕГЭ") {
+  return getSubjects(exam).filter(([id]) => isActiveSubject(exam, id));
+}
 export function isSubjectId(value: unknown): value is SubjectId {
   return subjects.some(([id]) => id === value);
 }

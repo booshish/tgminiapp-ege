@@ -2,7 +2,7 @@
 
 import { ArrowRight, BookOpen, Bookmark, CircleX, ClipboardCheck, Hash, ListFilter, Shuffle } from "lucide-react";
 import { ExamPicker, PageIntro, FeatureCard } from "@/components/ui";
-import { getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
+import { getActiveSubjects as getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { getExamDefinition } from "@/lib/exams";
 import { VariantLaunchCard } from "@/components/variant-launch-card";

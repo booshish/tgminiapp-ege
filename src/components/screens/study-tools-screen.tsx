@@ -6,7 +6,7 @@ import { PageIntro } from "@/components/ui";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { getPracticeBankView, taskTopicLabels, type Exam, type Task } from "@/lib/tasks";
 import { theoryTopics, allTheoryTopics, getTheoryTopic } from "@/lib/theory";
-import { getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
+import { getActiveSubjects as getSubjects, isActiveSubject, subjectTitle, type SubjectId } from "@/lib/subjects";
 import type { LearningEvent } from "@/lib/learning-events";
 import type { StudyToolsController } from "@/hooks/use-study-tools";
 import {
@@ -31,7 +31,7 @@ const numberLabel = (task: Task) => task.availability === "history-only" ? "За
 const examLabel = (exam: Exam) => exam === "ЕГЭ" ? "ЕГЭ · Математика · Профиль" : "ОГЭ · Математика";
 
 export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onTheory, onPremium, bookmarkKind, onBrowseTheory }: StudyToolsScreenProps) {
-  const tasks = getPracticeBankView();
+  const tasks = getPracticeBankView().filter(task => isActiveSubject(task.examType[0], task.subjectId));
   const catalog = { tasks, topics: allTheoryTopics, resolveTopic:getTheoryTopic };
   const isPhone = usePhoneLayout();
   const [exam, setExam] = useState<"all" | Exam>("all");
@@ -61,7 +61,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
 
   const bookmarks = tools.bookmarks.filter((item) => {
     const itemSubject = item.kind === "task" ? tasks.find(task => task.id === item.itemId)?.subjectId : getTheoryTopic(item.itemId)?.subjectId;
-    return (exam === "all" || item.examType === exam) && (kind === "all" || item.kind === kind) && (subject === "all" || itemSubject === subject);
+    return Boolean(itemSubject && isActiveSubject(item.examType, itemSubject)) && (exam === "all" || item.examType === exam) && (kind === "all" || item.kind === kind) && (subject === "all" || itemSubject === subject);
   });
   const mistakes = mode === "mistakes" ? getMistakes(events, tasks).filter((item) =>
     (exam === "all" || item.task.examType[0] === exam) && (!unresolvedOnly || !item.corrected)) : [];
@@ -93,7 +93,7 @@ export function StudyToolsScreen({ mode, events, isPremium, tools, onTask, onThe
         </label>
         {mode === "favorites" ? <label>Предмет
           <select aria-label="Предмет закладок" value={subject} onChange={event => setSubject(event.target.value as "all" | SubjectId)}>
-            <option value="all">Все предметы</option>{getSubjects(exam === "all" ? "ЕГЭ" : exam).map(([id, label]) => <option key={id} value={id}>{label}</option>)}
+<option value="all">Все предметы</option>{getSubjects(exam === "all" ? "ОГЭ" : exam).map(([id, label]) => <option key={id} value={id}>{label}</option>)}
           </select>
         </label> : <label>Предмет
           <select value="math" aria-label="Предмет: математика" disabled><option value="math">Математика</option></select>

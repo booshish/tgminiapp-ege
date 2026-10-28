@@ -2,7 +2,7 @@ import { ArrowUpRight, ChevronDown, Flower2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import type { Exam } from "@/lib/navigation";
-import { getSubjects, type SubjectId } from "@/lib/subjects";
+import { getActiveSubjects as getSubjects, type SubjectId } from "@/lib/subjects";
 
 export function Brand() {
   return (

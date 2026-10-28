@@ -6,7 +6,7 @@ import { CoachIllustration } from "@/components/illustrations";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import {
   getSubscriptionPrice, subscriptionPrices, subscriptionTimezone,
-  supportedSubscriptionSubjects, type ExamSeasonConfig, type SubscriptionPeriod,
+  selectableSubscriptionSubjects as supportedSubscriptionSubjects, type ExamSeasonConfig, type SubscriptionPeriod,
 } from "@/lib/subscription-config";
 import { getSubscriptionCalendar } from "@/lib/subscriptions";
 import "../premium-screen.css";

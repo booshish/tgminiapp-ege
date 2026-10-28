@@ -8,6 +8,7 @@ import "../trainer-mobile.css";
 import { getAnalytics, type LearningState } from "@/lib/learning-events";
 import { getPublishedTheoryTopics } from "@/lib/theory";
 import { getPracticeBankView } from "@/lib/tasks";
+import { isActiveSubject } from "@/lib/subjects";
 import { independentAnswers } from "@/lib/study-tools";
 
 type TrainerScreenProps = {
@@ -28,7 +29,7 @@ export function TrainerScreen({
   onReview,
 }: TrainerScreenProps) {
   const theoryTopics = getPublishedTheoryTopics();
-  const tasks = getPracticeBankView();
+  const tasks = getPracticeBankView().filter(task => isActiveSubject(task.examType[0], task.subjectId));
   const isPhone = usePhoneLayout();
   const demoStatus = (
     <p className="muted">

@@ -1,0 +1,7411 @@
+{
+  "directions": [
+    {
+      "id": "oge-math",
+      "status": "active",
+      "version": "oge-math-2027-draft",
+      "tasks": 252,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-1-plan-perimeter"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 2,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-2-plan-house-area"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 3,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-3-plan-lawn-area"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 4,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-4-plan-tiles"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 5,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-5-plan-fence-cost"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 6,
+          "tasks": 18,
+          "subtypes": [
+            "math-subtype-oge-6-fraction-sum",
+            "math-subtype-oge-6-multi-step-fractions"
+          ],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 7,
+          "tasks": 10,
+          "subtypes": [],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 8,
+          "tasks": 13,
+          "subtypes": [
+            "math-subtype-oge-8-difference-squares"
+          ],
+          "answersAndSolutions": 13,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 9,
+          "tasks": 17,
+          "subtypes": [
+            "math-subtype-oge-9-quadratic-larger-root",
+            "math-subtype-oge-9-rational-domain"
+          ],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 10,
+          "tasks": 13,
+          "subtypes": [
+            "math-subtype-oge-10-not-red-ball"
+          ],
+          "answersAndSolutions": 13,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 11,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-11-line-through-points"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 12,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-12-kinetic-energy"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 13,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-13-integer-in-system"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 14,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-14-arithmetic-term"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 15,
+          "tasks": 13,
+          "subtypes": [
+            "math-subtype-oge-15-isosceles-angle"
+          ],
+          "answersAndSolutions": 13,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 16,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-16-circle-chord"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 17,
+          "tasks": 10,
+          "subtypes": [
+            "math-subtype-oge-17-rhombus-area"
+          ],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 18,
+          "tasks": 10,
+          "subtypes": [],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 19,
+          "tasks": 10,
+          "subtypes": [],
+          "answersAndSolutions": 10,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 20,
+          "tasks": 6,
+          "subtypes": [
+            "math-subtype-oge-20-rational-equation"
+          ],
+          "answersAndSolutions": 6,
+          "extended": 6,
+          "theory": 1
+        },
+        {
+          "number": 21,
+          "tasks": 5,
+          "subtypes": [
+            "math-subtype-oge-21-joint-work"
+          ],
+          "answersAndSolutions": 5,
+          "extended": 5,
+          "theory": 1
+        },
+        {
+          "number": 22,
+          "tasks": 5,
+          "subtypes": [
+            "math-subtype-oge-22-line-with-hole"
+          ],
+          "answersAndSolutions": 5,
+          "extended": 5,
+          "theory": 1
+        },
+        {
+          "number": 23,
+          "tasks": 5,
+          "subtypes": [
+            "math-subtype-oge-23-altitude-projections"
+          ],
+          "answersAndSolutions": 5,
+          "extended": 5,
+          "theory": 1
+        },
+        {
+          "number": 24,
+          "tasks": 5,
+          "subtypes": [
+            "math-subtype-oge-24-trapezoid-midpoints",
+            "math-subtype-oge-24-two-tangents",
+            "math-subtype-oge-24-acute-altitudes",
+            "math-subtype-oge-24-incircle-tangents"
+          ],
+          "answersAndSolutions": 5,
+          "extended": 5,
+          "theory": 1
+        },
+        {
+          "number": 25,
+          "tasks": 5,
+          "subtypes": [
+            "math-subtype-oge-25-right-incircle-area"
+          ],
+          "answersAndSolutions": 5,
+          "extended": 5,
+          "theory": 1
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены"
+      ]
+    },
+    {
+      "id": "oge-russian",
+      "status": "active",
+      "version": "oge-russian-2027-draft",
+      "tasks": 455,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 42,
+          "subtypes": [],
+          "answersAndSolutions": 42,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 41,
+          "subtypes": [],
+          "answersAndSolutions": 41,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 41,
+          "subtypes": [],
+          "answersAndSolutions": 41,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 42,
+          "subtypes": [],
+          "answersAndSolutions": 42,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 41,
+          "subtypes": [],
+          "answersAndSolutions": 41,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 42,
+          "subtypes": [],
+          "answersAndSolutions": 42,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 42,
+          "subtypes": [],
+          "answersAndSolutions": 42,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 41,
+          "subtypes": [],
+          "answersAndSolutions": 41,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 41,
+          "subtypes": [],
+          "answersAndSolutions": 41,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 41,
+          "subtypes": [],
+          "answersAndSolutions": 41,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 41,
+          "subtypes": [],
+          "answersAndSolutions": 41,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-physics",
+      "status": "hidden",
+      "version": "oge-physics-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-chemistry",
+      "status": "active",
+      "version": "oge-chemistry-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-biology",
+      "status": "active",
+      "version": "oge-biology-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 2,
+          "subtypes": [
+            "biology-subtype-taxonomic-rank-order"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 1,
+          "subtypes": [
+            "biology-subtype-germination-lab-sequence"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 1,
+          "subtypes": [
+            "biology-subtype-organism-traits-from-description"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 1,
+          "subtypes": [
+            "biology-subtype-plant-animal-cell-comparison"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-geography",
+      "status": "hidden",
+      "version": "oge-geography-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 2,
+          "subtypes": [
+            "geography-subtype-relative-humidity"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 1,
+          "subtypes": [
+            "geography-subtype-climate-table-inference"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 2,
+          "subtypes": [
+            "geography-subtype-population-balance"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-history",
+      "status": "hidden",
+      "version": "oge-history-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 2,
+          "subtypes": [
+            "history-subtype-events-to-years"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 1,
+          "subtypes": [
+            "history-subtype-chronology-russia"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-social-studies",
+      "status": "active",
+      "version": "oge-social-studies-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 3,
+          "subtypes": [
+            "social-studies-subtype-limited-budget-choice"
+          ],
+          "answersAndSolutions": 3,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 1,
+          "subtypes": [
+            "social-studies-subtype-short-run-fixed-variable-costs"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-informatics",
+      "status": "active",
+      "version": "oge-informatics-2027-draft",
+      "tasks": 29,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 4,
+          "subtypes": [],
+          "answersAndSolutions": 4,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 2,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 3,
+          "tasks": 4,
+          "subtypes": [],
+          "answersAndSolutions": 4,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 4,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 5,
+          "tasks": 4,
+          "subtypes": [],
+          "answersAndSolutions": 4,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 6,
+          "tasks": 4,
+          "subtypes": [],
+          "answersAndSolutions": 4,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 7,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 8,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 9,
+          "tasks": 3,
+          "subtypes": [],
+          "answersAndSolutions": 3,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 10,
+          "tasks": 4,
+          "subtypes": [],
+          "answersAndSolutions": 4,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 11,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 12,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-literature",
+      "status": "hidden",
+      "version": "oge-literature-2027-draft",
+      "tasks": 0,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-english",
+      "status": "hidden",
+      "version": "oge-english-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-german",
+      "status": "hidden",
+      "version": "oge-german-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-french",
+      "status": "hidden",
+      "version": "oge-french-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "oge-spanish",
+      "status": "hidden",
+      "version": "oge-spanish-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-math-base",
+      "status": "active",
+      "version": "ege-math-base-2027-draft",
+      "tasks": 425,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 6,
+          "subtypes": [
+            "math-subtype-fraction-product"
+          ],
+          "answersAndSolutions": 6,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 2,
+          "tasks": 35,
+          "subtypes": [],
+          "answersAndSolutions": 35,
+          "extended": 0,
+          "theory": 2
+        },
+        {
+          "number": 3,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-table-ratio",
+            "math-subtype-frequency-table",
+            "math-subtype-table-maximum",
+            "math-subtype-table-mean"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 4,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-braking-formula",
+            "math-subtype-temperature-formula",
+            "math-subtype-tariff-formula",
+            "math-subtype-power-time"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 5,
+          "tasks": 21,
+          "subtypes": [
+            "math-subtype-exactly-one-success",
+            "math-subtype-at-least-one-success"
+          ],
+          "answersAndSolutions": 21,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 6,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-conditions-table",
+            "math-subtype-tariff-table"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 7,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-derivative-signs",
+            "math-subtype-line-value",
+            "math-subtype-piecewise-graph",
+            "math-subtype-tangent-slope"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 8,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-logical-counterexample"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 9,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-floor-tiles"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 10,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-circle-area",
+            "math-subtype-hypotenuse",
+            "math-subtype-trapezoid-area"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 11,
+          "tasks": 21,
+          "subtypes": [
+            "math-subtype-cube-surface",
+            "math-subtype-box-volume"
+          ],
+          "answersAndSolutions": 21,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 12,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-isosceles-angle",
+            "math-subtype-similarity-side"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 13,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-cube-cutting",
+            "math-subtype-pyramid-volume",
+            "math-subtype-box-diagonal"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 14,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-fraction-division",
+            "math-subtype-fraction-sum",
+            "math-subtype-decimal-difference"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 15,
+          "tasks": 21,
+          "subtypes": [
+            "math-subtype-sequential-percent",
+            "math-subtype-percent-comparison",
+            "math-subtype-discount",
+            "math-subtype-whole-from-percent"
+          ],
+          "answersAndSolutions": 21,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 16,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-logarithm-value",
+            "math-subtype-algebraic-fraction",
+            "math-subtype-radical-sum",
+            "math-subtype-power-quotient"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 17,
+          "tasks": 21,
+          "subtypes": [
+            "math-subtype-radical-root",
+            "math-subtype-rational-root",
+            "math-subtype-quadratic-root",
+            "math-subtype-exponential-root"
+          ],
+          "answersAndSolutions": 21,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 18,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-exponential-count",
+            "math-subtype-integer-interval",
+            "math-subtype-quadratic-integers"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 19,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-last-digit",
+            "math-subtype-digits",
+            "math-subtype-remainder-search"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 20,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-catch-up",
+            "math-subtype-mixture",
+            "math-subtype-meeting",
+            "math-subtype-joint-work"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 21,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-coin-search",
+            "math-subtype-pigeonhole"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 0,
+          "theory": 1
+        }
+      ],
+      "fullMock": true,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены"
+      ]
+    },
+    {
+      "id": "ege-math-profile",
+      "status": "active",
+      "version": "ege-math-profile-2027-draft",
+      "tasks": 2234,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 213,
+          "subtypes": [
+            "math-subtype-right-triangle-area",
+            "math-subtype-trapezoid-area"
+          ],
+          "answersAndSolutions": 213,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 194,
+          "subtypes": [
+            "math-subtype-dot-product",
+            "math-subtype-vector-length"
+          ],
+          "answersAndSolutions": 194,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 203,
+          "subtypes": [
+            "math-subtype-prism-diagonal",
+            "math-subtype-pyramid-volume",
+            "math-subtype-rectangular-prism-volume",
+            "math-subtype-cone-volume-coefficient"
+          ],
+          "answersAndSolutions": 203,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 17,
+          "subtypes": [
+            "math-subtype-one-draw",
+            "math-subtype-complement"
+          ],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 26,
+          "subtypes": [
+            "math-subtype-exactly-one",
+            "math-subtype-at-least-one",
+            "math-subtype-total-probability-production"
+          ],
+          "answersAndSolutions": 26,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 278,
+          "subtypes": [
+            "math-subtype-finite-distribution-expectation",
+            "math-subtype-two-point-variance",
+            "math-subtype-two-point-standard-deviation"
+          ],
+          "answersAndSolutions": 278,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 218,
+          "subtypes": [
+            "math-subtype-exponential",
+            "math-subtype-logarithmic",
+            "math-subtype-ege-6-logarithm-domain",
+            "math-subtype-linear-logarithmic-equation",
+            "math-subtype-affine-exponential-equation"
+          ],
+          "answersAndSolutions": 218,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 205,
+          "subtypes": [
+            "math-subtype-radical-identity",
+            "math-subtype-power-rules",
+            "math-subtype-ege-7-conjugate-fractions",
+            "math-subtype-radical-conjugate-product",
+            "math-subtype-radical-reciprocal-sum"
+          ],
+          "answersAndSolutions": 205,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 223,
+          "subtypes": [
+            "math-subtype-derivative-point",
+            "math-subtype-parallel-tangent",
+            "math-subtype-quadratic-maximum",
+            "math-subtype-cubic-minimum",
+            "math-subtype-cubic-local-minimum"
+          ],
+          "answersAndSolutions": 223,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 184,
+          "subtypes": [
+            "math-subtype-accelerated-motion",
+            "math-subtype-joule-law"
+          ],
+          "answersAndSolutions": 184,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 113,
+          "subtypes": [
+            "math-subtype-catch-up",
+            "math-subtype-joint-work",
+            "math-subtype-river-round-trip"
+          ],
+          "answersAndSolutions": 113,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 192,
+          "subtypes": [
+            "math-subtype-linear-function",
+            "math-subtype-inverse-function",
+            "math-subtype-quadratic-function-point"
+          ],
+          "answersAndSolutions": 192,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 25,
+          "subtypes": [
+            "math-subtype-equal-principal-loan-total",
+            "math-subtype-compound-deposit"
+          ],
+          "answersAndSolutions": 25,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 22,
+          "subtypes": [
+            "math-subtype-trig-roots-selection",
+            "math-subtype-exponential-two-roots-selection"
+          ],
+          "answersAndSolutions": 22,
+          "extended": 22,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 21,
+          "subtypes": [
+            "math-subtype-prism-line-plane-angle",
+            "math-subtype-prism-line-plane-tangent",
+            "math-subtype-triorthogonal-tetrahedron-section"
+          ],
+          "answersAndSolutions": 21,
+          "extended": 21,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 23,
+          "subtypes": [
+            "math-subtype-rational-inequality",
+            "math-subtype-rational-three-points",
+            "math-subtype-logarithmic-quadratic-inequality"
+          ],
+          "answersAndSolutions": 23,
+          "extended": 23,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 20,
+          "subtypes": [
+            "math-subtype-quadratic-profit-optimization",
+            "math-subtype-inventory-cost-optimization"
+          ],
+          "answersAndSolutions": 20,
+          "extended": 20,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 19,
+          "subtypes": [
+            "math-subtype-two-tangents-area",
+            "math-subtype-right-triangle-altitude-proof",
+            "math-subtype-tangent-chord-similarity"
+          ],
+          "answersAndSolutions": 19,
+          "extended": 19,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 23,
+          "subtypes": [
+            "math-subtype-parameter-positive-roots",
+            "math-subtype-parameter-absolute-value-level",
+            "math-subtype-parameter-two-positive-roots"
+          ],
+          "answersAndSolutions": 23,
+          "extended": 23,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 15,
+          "subtypes": [
+            "math-subtype-integer-product-shift",
+            "math-subtype-integer-shifted-factorization",
+            "math-subtype-integer-consecutive-sum"
+          ],
+          "answersAndSolutions": 15,
+          "extended": 15,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-russian",
+      "status": "active",
+      "version": "ege-russian-2027-draft",
+      "tasks": 455,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 19,
+          "subtypes": [],
+          "answersAndSolutions": 19,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 18,
+          "subtypes": [],
+          "answersAndSolutions": 18,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 17,
+          "subtypes": [],
+          "answersAndSolutions": 17,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-physics",
+      "status": "hidden",
+      "version": "ege-physics-2027-draft",
+      "tasks": 9,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 3,
+          "subtypes": [],
+          "answersAndSolutions": 3,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 2,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 3,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 4,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-chemistry",
+      "status": "planned",
+      "version": "ege-chemistry-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-biology",
+      "status": "planned",
+      "version": "ege-biology-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 2,
+          "subtypes": [
+            "biology-subtype-gamete",
+            "biology-subtype-daughter-mitosis"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 2,
+          "subtypes": [
+            "biology-subtype-monohybrid-recessive",
+            "biology-subtype-monohybrid-heterozygote"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 1,
+          "subtypes": [
+            "biology-subtype-taxonomic-rank-order"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-geography",
+      "status": "hidden",
+      "version": "ege-geography-2027-draft",
+      "tasks": 4,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 2,
+          "subtypes": [
+            "geography-subtype-reserve-production-ratio"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 2,
+          "subtypes": [
+            "geography-subtype-population-balance"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-history",
+      "status": "planned",
+      "version": "ege-history-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 2,
+          "subtypes": [
+            "history-subtype-events-to-years"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 1,
+          "subtypes": [
+            "history-subtype-chronology-russia"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-social-studies",
+      "status": "hidden",
+      "version": "ege-social-studies-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 2,
+          "subtypes": [
+            "social-studies-subtype-short-run-fixed-variable-costs"
+          ],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 3,
+          "subtypes": [
+            "social-studies-subtype-budget-constraint-judgments"
+          ],
+          "answersAndSolutions": 3,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-informatics",
+      "status": "active",
+      "version": "ege-informatics-2027-draft",
+      "tasks": 24,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 2,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 5,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 6,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 7,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 8,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 11,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 12,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 13,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 14,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 15,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 16,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 1
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-literature",
+      "status": "hidden",
+      "version": "ege-literature-2027-draft",
+      "tasks": 0,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-english",
+      "status": "hidden",
+      "version": "ege-english-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "english-subtype-past-simple-irregular"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 39,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 40,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 41,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 42,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-german",
+      "status": "hidden",
+      "version": "ege-german-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "german-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 39,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 40,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 41,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 42,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-french",
+      "status": "hidden",
+      "version": "ege-french-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "french-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 39,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 40,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 41,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 42,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-spanish",
+      "status": "hidden",
+      "version": "ege-spanish-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 1,
+          "subtypes": [
+            "spanish-subtype-finite-verb-forms"
+          ],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 33,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 34,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 35,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 36,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 37,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 38,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 39,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 40,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 41,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 42,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    },
+    {
+      "id": "ege-chinese",
+      "status": "hidden",
+      "version": "ege-chinese-2027-draft",
+      "tasks": 5,
+      "numbers": [
+        {
+          "number": 1,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 2,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 3,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 4,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 5,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 6,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 7,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 8,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 9,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 10,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 11,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 12,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 13,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 14,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 15,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 16,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 17,
+          "tasks": 1,
+          "subtypes": [],
+          "answersAndSolutions": 1,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 18,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 19,
+          "tasks": 2,
+          "subtypes": [],
+          "answersAndSolutions": 2,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 20,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 21,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 22,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 23,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 24,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 25,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 26,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 27,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 28,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 29,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 30,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 31,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        },
+        {
+          "number": 32,
+          "tasks": 0,
+          "subtypes": [],
+          "answersAndSolutions": 0,
+          "extended": 0,
+          "theory": 0
+        }
+      ],
+      "fullMock": false,
+      "fullyReady": false,
+      "blockers": [
+        "Проект 2027, не утверждённая модель",
+        "Полные перечни подтипов и поэлементные критерии не подтверждены",
+        "Есть пустые номера",
+        "Есть номера без теории"
+      ]
+    }
+  ],
+  "counts": {
+    "active": 10,
+    "planned": 3,
+    "hidden": 17
+  }
+}

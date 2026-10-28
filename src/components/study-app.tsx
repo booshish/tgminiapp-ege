@@ -58,7 +58,7 @@ import {
   clearHelpOrigin,
 } from "@/lib/help-navigation";
 import { getPracticeBankView, taskTopicLabels } from "@/lib/tasks";
-import { subjectTitle } from "@/lib/subjects";
+import { subjectTitle, isActiveSubject } from "@/lib/subjects";
 import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import {
   catalogListKey,
@@ -403,6 +403,24 @@ export function StudyApp() {
     setFocusMode(!state.focusMode);
   }
 
+  const linkedTask = route.taskId ? tasks.find(task => task.id === route.taskId) : undefined;
+  const linkedTopic = route.topicId ? getTheoryTopic(route.topicId) : undefined;
+  const selectedExam = route.exam ?? linkedTask?.examType[0] ?? linkedTopic?.examType[0] ?? state.exam;
+  const selectedSubject = route.subjectId ?? linkedTask?.subjectId ?? linkedTopic?.subjectId ?? practice.catalog.subjectId;
+  if (!isActiveSubject(selectedExam, selectedSubject)
+    || (route.view === "tasks" && currentTask && !isActiveSubject(currentTask.examType[0], currentTask.subjectId))
+    || (linkedTask && !isActiveSubject(linkedTask.examType[0], linkedTask.subjectId))
+    || (linkedTopic && !isActiveSubject(selectedExam, linkedTopic.subjectId))) return (
+    <main className="empty-state">
+      <Brand />
+      <h1>Направление временно недоступно</h1>
+      <p>Материалы, история, закладки и подписка сохранены. Выбери доступное направление подготовки.</p>
+      <button className="button button-primary" onClick={() => {
+        practice.changeCatalog({exam: selectedExam, subjectId: "math", mode: "number", ...(selectedExam === "ЕГЭ" ? {level: "profile" as const} : {})});
+        navigate("catalog", {exam: selectedExam, subjectId: "math", level: selectedExam === "ЕГЭ" ? "profile" : undefined});
+      }}>Выбрать направление</button>
+    </main>
+  );
   return (
     <div
       className={`app-shell font-${state.fontScale}${concentrating ? " focus-mode" : ""}`}

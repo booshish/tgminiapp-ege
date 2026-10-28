@@ -1,4 +1,5 @@
 import { getAvailableExamDefinitions } from "./exams";
+import { isActiveSubject } from "./subjects";
 
 export type SubscriptionPeriod = "monthly" | "season" | "summer";
 export type SeasonPricePhase = "autumn" | "january";
@@ -22,6 +23,9 @@ const subjectTitles: Readonly<Record<string, string>> = { math: "Математ�
 export const supportedSubscriptionSubjects: readonly SubscriptionSubject[] = [
   ...new Set(getAvailableExamDefinitions().map((exam) => exam.subjectId)),
 ].map((id) => ({ id, title: subjectTitles[id] ?? id }));
+/** Selection only. Existing purchased slots and entitlement validation retain the full registry. */
+export const selectableSubscriptionSubjects = supportedSubscriptionSubjects.filter(s =>
+  isActiveSubject("ОГЭ", s.id) || isActiveSubject("ЕГЭ", s.id));
 
 export type ExamSeasonConfig = {
   year: number;
