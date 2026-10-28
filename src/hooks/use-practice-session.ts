@@ -196,6 +196,8 @@ export function usePracticeSession({
           practiceContextKey(cachedSession.selection)) &&
       (Boolean(route.sessionId) ||
         cachedSession.taskIds.length === 0 ||
+        (route.taskIndex < 0 && !route.taskId && Boolean(route.examNumber || route.topicId) &&
+          practiceContextKey(selectionFromRoute(route, cachedSession.selection)) === practiceContextKey(cachedSession.selection)) ||
         Boolean(routeTask && cachedSession.taskIds.includes(routeTask.id))));
   const contextMatches =
     !cachedSession ||

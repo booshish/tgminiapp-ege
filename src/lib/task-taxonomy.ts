@@ -26,13 +26,20 @@ export function matchesTaskTaxonomy(task:{id:string},filter:TaxonomyFilters){
   const c=getTaskClassification(task.id);if(!c)return false;
   return (!filter.subtypeId||c.subtypeId===filter.subtypeId)&&(!filter.taxonomyTopicId||c.topicId===filter.taxonomyTopicId)&&(!filter.subtopicId||c.subtopicId===filter.subtopicId)&&(!filter.sourceCategoryId||c.sourceCategoryId===filter.sourceCategoryId);
 }
+/** Clear thematic constraints, not the independently selected provenance. */
+export function clearNumberThemes(filters:TaxonomyFilters):TaxonomyFilters {
+  return {taxonomyTopicId:undefined,subtopicId:undefined,subtypeId:undefined,sourceCategoryId:filters.sourceCategoryId};
+}
 /** Metadata only. Opening filters never downloads task conditions or answers. */
 export function getNumberTaxonomyOptions(selection:ExamSelection&{examNumber?:number}&TaxonomyFilters){
   const model=getExamDefinition(selection);
   const entries=Object.entries(taskTaxonomyData.assignments).filter(([,r])=>r[0]===model?.id&&r[1]===selection.examNumber);
   const options=(kind:TaxonomyNode["kind"],column:2|3|4)=>{
-    const scoped=entries.filter(([,r])=>column===2||(!selection.taxonomyTopicId||r[2]===selection.taxonomyTopicId)&&(column!==4||!selection.subtopicId||r[3]===selection.subtopicId));
-    return [...new Set(scoped.map(([,r])=>r[column]).filter((id):id is string=>Boolean(id)))].map(id=>({id,title:taxonomyNodes[id].title,count:scoped.filter(([,r])=>r[column]===id).length,parentId:taxonomyNodes[id].parentId,kind})).sort((a,b)=>a.title.localeCompare(b.title,"ru"));
+    const scoped=entries.filter(([,r])=>(!selection.sourceCategoryId||r[5]===selection.sourceCategoryId)&&(column===2||(!selection.taxonomyTopicId||r[2]===selection.taxonomyTopicId)&&(column!==4||!selection.subtopicId||r[3]===selection.subtopicId)));
+    // Unreviewed broad labels stay in the general bank, not a claimed detailed taxonomy.
+    const reviewed=scoped.filter(([,r])=>r[3]&&r[4]);
+    return [...new Set(reviewed.map(([,r])=>r[column]).filter((id):id is string=>Boolean(id)))].map(id=>({id,title:taxonomyNodes[id].title,count:scoped.filter(([,r])=>r[column]===id).length,parentId:taxonomyNodes[id].parentId,kind})).sort((a,b)=>a.title.localeCompare(b.title,"ru"));
   };
-  return {topics:options("topic",2),subtopics:options("subtopic",3),subtypes:options("subtype",4),sources:taskSourceCategories.map(s=>({...s,count:entries.filter(([,r])=>r[5]===s.id).length})),total:entries.length,matching:entries.filter(([id])=>matchesTaskTaxonomy({id},selection)).length,needsReview:entries.filter(([,r])=>!r[3]||!r[4]).length};
+  const sourceScope=entries.filter(([id])=>matchesTaskTaxonomy({id},{...selection,sourceCategoryId:undefined}));
+  return {topics:options("topic",2),subtopics:options("subtopic",3),subtypes:options("subtype",4),sources:taskSourceCategories.map(s=>({...s,count:sourceScope.filter(([,r])=>r[5]===s.id).length})),total:entries.length,matching:entries.filter(([id])=>matchesTaskTaxonomy({id},selection)).length,needsReview:entries.filter(([,r])=>!r[3]||!r[4]).length};
 }

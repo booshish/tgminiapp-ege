@@ -50,7 +50,10 @@ export function CatalogScreen({
   resumeLabel,
   game,
 }: CatalogScreenProps) {
-  const onStart=(next:CatalogSelection)=>startPractice({...next,...Object.fromEntries(taxonomyFilterKeys.map(key=>[key,undefined]))});
+  const onStart=(next:CatalogSelection)=>{
+    const sameNumber=next.mode==="number"&&selection.mode==="number"&&next.exam===selection.exam&&next.subjectId===selection.subjectId&&next.level===selection.level&&next.examNumber===selection.examNumber;
+    startPractice(sameNumber?next:{...next,...Object.fromEntries(taxonomyFilterKeys.map(key=>[key,undefined]))});
+  };
   const isPhone = usePhoneLayout();
   const definition = getExamDefinition({
     examType: selection.exam,

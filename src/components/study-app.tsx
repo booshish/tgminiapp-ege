@@ -45,6 +45,7 @@ import { useTaskPackages } from "@/hooks/use-task-packages";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { usePracticeSession } from "@/hooks/use-practice-session";
 import { NumberTrainingFilters } from "@/components/number-training-filters";
+import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
 import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
 import { useBreakReminder } from "@/hooks/use-break-reminder";
 import {
@@ -653,7 +654,7 @@ export function StudyApp() {
                 <h1>Открываем подборку</h1>
               </section>
             ) : currentTask ? (<>
-              {!session.historicalContext&&<NumberTrainingFilters key={JSON.stringify(session.selection)} selection={session.selection} onApply={selected=>void practice.start(selected)} />}
+              {!session.historicalContext&&<NumberTrainingFilters key={`${session.selection.exam}:${session.selection.subjectId}:${session.selection.level}:${session.selection.examNumber}`} selection={session.selection} onApply={selected=>practice.start(selected)} />}
               <TaskScreen
                 key={`${session.id}:${currentTask.id}`}
                 task={currentTask}
@@ -695,11 +696,11 @@ export function StudyApp() {
               /></>
             ) : (
               <section className="empty-state">
-                {!session.invalidContext&&<NumberTrainingFilters key={JSON.stringify(session.selection)} selection={session.selection} onApply={selected=>void practice.start(selected)} />}
+                {!session.invalidContext&&<NumberTrainingFilters key={`${session.selection.exam}:${session.selection.subjectId}:${session.selection.level}:${session.selection.examNumber}`} selection={session.selection} onApply={selected=>practice.start(selected)} />}
                 <h1>
                   {session.invalidContext
                     ? "Подборка недоступна"
-                    : "Задания скоро появятся"}
+                    : taxonomyFilterKeys.some(key=>session.selection[key]) ? "По выбранным фильтрам заданий нет" : "Задания скоро появятся"}
                 </h1>
                 {!session.invalidContext && (
                   <p>
@@ -715,7 +716,7 @@ export function StudyApp() {
                 <p>
                   {session.invalidContext
                     ? "В ссылке указан неподдерживаемый экзамен, предмет или уровень. Выбери доступную подборку в каталоге."
-                    : "Выбери другую тему или тип задания из демонстрационного банка."}
+                    : "Выбери «Все темы» или сбрось фильтры, чтобы вернуться к общему банку этого номера."}
                 </p>
                 <button
                   className="button button-primary"
