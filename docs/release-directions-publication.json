@@ -1,0 +1,18 @@
+{
+  "status": "published",
+  "sourceCommit": "9a7c6298c63e19e7b2c961ff4f5fef233c0a4975",
+  "pagesCommit": "1af2c65e727d957d7db3e9b076ec4665e8864101",
+  "staticTree": "e0e397071170bdad966da7f9228e535b1c199bd0",
+  "nativePagesRun": 40762889286,
+  "nativePagesConclusion": "success",
+  "activeDirections": 10,
+  "plannedDirections": 3,
+  "hiddenDirections": 17,
+  "tests": {"passed": 440, "failed": 0, "skipped": 0},
+  "lint": "passed",
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "browser": "Local Chromium export: active selectors, planned/hidden links, return to active catalogue; seeded legacy hidden selection preserves task drafts and session IDs",
+  "data": "No task, shard, model, generator, classification ID, price, XP algorithm or existing subscription record was changed",
+  "readiness": "Product active is not completeness certification. Only EGE base currently has a full mock; all ten retain documented content/criteria limitations."
+}
