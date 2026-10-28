@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-28",
+  "kind": "original-training-not-official-exam",
+  "reviews": [
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1354",
+      "sha256": "295ecaa35282169189a5262a435ab074c93a934e20803b955781a5db46883b6e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1355",
+      "sha256": "a195425cee46a110ba34977e9aa81c45f45e129801a7d707fbc143700e32367d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1356",
+      "sha256": "d18f36418c64fe7f0672f64e788ffb9d8186046d98a294419e80833d08f850c9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1357",
+      "sha256": "680517147621632ffc5375c903bab979643960f039d6709d17c63a127af6cbcb",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1358",
+      "sha256": "6f737c038d4e32e249ae187b611922d9f6df466e52bc26ba149a8d70150c3cae",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1359",
+      "sha256": "4f1d62365e8eab839d967cf9ec89503408360afcdc7b777beb6dd138bb665f4d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1360",
+      "sha256": "2fc865b93e0095ad3843948a36e04f3c88fe4a558c66f5a15617028f741a5bad",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1361",
+      "sha256": "32feb3ff72d40cc5b6da4b328a8f24b8dbbc5a631d2b7586ad2dd60a5b1e9da6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1362",
+      "sha256": "8b0ddc7574a5b45307a234129f293241e1f26768c3a3dec69c11739287272952",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1363",
+      "sha256": "b24da941038e4b22ed2df6c3513cfda2928910879a9c666ed0afc238511511ef",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1364",
+      "sha256": "21294d4e8c4c18d9cd4711be48d4b8c99d71d169a0a9859d26e531e3e88ed519",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1365",
+      "sha256": "77e56f4fe815fdf073e8fe941cc0201341f8f159c89c0d4bd0c32c0b85119ded",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1366",
+      "sha256": "ecc4d8e477e143e320c873a76ea43c57141c079b49747626000325525d7517ea",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1367",
+      "sha256": "f27419854e761447659326bfeac3c887f64280e4b5815a99a128fc5051a0ff23",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1368",
+      "sha256": "96caf10dff6cd7623c5f51ade9aa9102032ba7e601232127d7fe546f85b7acbb",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1369",
+      "sha256": "73ab226ebb07a1302fc8f9c42d2e597af9aacdef957240f11d8658e1df0afab5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1370",
+      "sha256": "02ee9210b27830b3a3f81eee36a643fca101ab3625fe67f9c6b6e811f78ad4b7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1371",
+      "sha256": "e064da4721fd56e660e51666988b4bcb7edc61daa94503e047a6b879b3dcc7c5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1372",
+      "sha256": "a840a26eea8b396db0529733bf24fd1b5ef08c5ff8f39af480419e24eaa2936c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1373",
+      "sha256": "c302e5d41cd8f696667257b0d2fc645e79903648c67dfbb4fa38c22e531c3acb",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    }
+  ]
+}

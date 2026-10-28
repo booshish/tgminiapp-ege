@@ -44264,5 +44264,13563 @@ export const taskPackageIndex: {file: string; sha256: string; tasks: (Pick<Task,
         "examYear": 2027
       }
     ]
+  },
+  {
+    "file": "ege-math-base-2027-draft-n17-69fdb0c76c3c25e1.json",
+    "sha256": "69fdb0c76c3c25e1792ebad42186fda735f06d2525bc41853097cd9f0dfa1e97",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-10",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-19",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-37",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-46",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-55",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-64",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-73",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-82",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-91",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-100",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-109",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-118",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-127",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-136",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-145",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-154",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-163",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-181",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-190",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-199",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-208",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-217",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-226",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-235",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-253",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-271",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-280",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-289",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-298",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-307",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-316",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-325",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-334",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-343",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-352",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-361",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-370",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-379",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-406",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-424",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-442",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-451",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-460",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-469",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-478",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-487",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-496",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-505",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-523",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-532",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-559",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-577",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-586",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-613",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-622",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-631",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-640",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-649",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-658",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-667",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-676",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-694",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-730",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-739",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-757",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-766",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-784",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-793",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-802",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-811",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-820",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-829",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-838",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-847",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-883",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-901",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-910",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-928",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-937",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-964",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-973",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-982",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-991",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1000",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1009",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1018",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1036",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1063",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1081",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1090",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1108",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1126",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1135",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1144",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1153",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1162",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1171",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1180",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1189",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1207",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1216",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1234",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-base-17-quadratic-greater-root-1243",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "base",
+        "examNumber": 17,
+        "topicId": "ege-math-base-n17",
+        "prototypeId": "ege-math-base-n17-original",
+        "examVersionId": "ege-math-base-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-math-2027-draft-n9-ac7897721fc26d27.json",
+    "sha256": "ac7897721fc26d27a5a578f23597bf92595e95c789335b500c34382b12318a41",
+    "tasks": [
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-2",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-11",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-20",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-29",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-38",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-47",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-56",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-65",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-74",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-83",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-92",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-101",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-110",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-119",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-128",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-137",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-146",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-155",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-164",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-173",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-182",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-191",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-200",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-209",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-218",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-227",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-236",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-245",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-254",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-263",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-272",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-281",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-290",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-299",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-308",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-317",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-326",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-335",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-344",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-353",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-362",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-371",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-380",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-389",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-398",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-407",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-416",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-425",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-434",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-443",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-452",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-461",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-470",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-479",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-488",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-497",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-506",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-515",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-524",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-533",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-542",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-551",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-560",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-569",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-578",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-587",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-596",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-605",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-614",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-623",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-632",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-641",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-650",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-659",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-668",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-677",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-686",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-695",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-704",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-713",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-722",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-731",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-740",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-749",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-758",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-767",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-776",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-785",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-794",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-803",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-812",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-821",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-830",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-839",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-848",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-857",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-866",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-875",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-884",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-893",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-902",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-911",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-920",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-929",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-938",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-947",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-956",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-965",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-974",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-983",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-992",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1001",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1010",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1019",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1028",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1037",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1046",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1055",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1064",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1073",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1082",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1091",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1100",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1109",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1118",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1127",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1136",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1145",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1154",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1163",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1172",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1181",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1190",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1199",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1208",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1217",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1226",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1235",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1244",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-math-9-linear-both-sides-1253",
+        "subjectId": "math",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-math-n9",
+        "prototypeId": "oge-math-n9-original",
+        "examVersionId": "oge-math-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n14-25c44a66cb66663c.json",
+    "sha256": "25c44a66cb66663cdafc7d19bb42f536d765cd3e82ba98cc8ddda76dc79bd714",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-3",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-12",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-21",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-30",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-39",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-48",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-57",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-66",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-75",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-84",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-93",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-102",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-111",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-120",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-129",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-138",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-147",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-156",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-165",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-174",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-183",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-192",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-201",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-210",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-219",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-228",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-237",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-246",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-255",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-264",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-273",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-282",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-291",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-300",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-309",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-318",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-327",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-336",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-345",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-354",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-363",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-372",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-381",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-390",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-399",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-408",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-417",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-426",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-435",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-444",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-453",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-462",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-471",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-480",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-489",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-498",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-507",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-516",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-525",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-534",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-543",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-552",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-561",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-570",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-579",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-588",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-597",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-606",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-615",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-624",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-633",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-642",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-651",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-660",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-669",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-687",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-696",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-714",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-723",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-741",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-786",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-795",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-813",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-822",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-831",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-849",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-858",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-867",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-876",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-885",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-894",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-903",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-912",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-921",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-930",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-939",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-948",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-957",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-966",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-975",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-984",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-993",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1002",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1011",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1020",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1029",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1038",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1047",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1056",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1065",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1074",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1083",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1092",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1101",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1110",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1119",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1128",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1137",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1146",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1155",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1164",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1173",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1182",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1191",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1209",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1218",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1236",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1245",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-14-difference-of-powers-digits-1254",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "ege-informatics-n14",
+        "prototypeId": "ege-informatics-n14-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-informatics-2027-draft-n10-f08022342d58bae6.json",
+    "sha256": "f08022342d58bae6fecdea7ff5bba33934607f249894ef82be68f97cd2da8d79",
+    "tasks": [
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-4",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-13",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-22",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-31",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-40",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-49",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-58",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-67",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-76",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-85",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-94",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-103",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-112",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-121",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-130",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-139",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-148",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-157",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-166",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-175",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-184",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-193",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-202",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-211",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-220",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-229",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-238",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-247",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-256",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-265",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-274",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-283",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-292",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-301",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-310",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-319",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-328",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-337",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-346",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-355",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-364",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-373",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-382",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-391",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-400",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-409",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-418",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-427",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-436",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-445",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-454",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-463",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-472",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-481",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-490",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-499",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-508",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-517",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-526",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-535",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-544",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-553",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-562",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-571",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-580",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-589",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-598",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-616",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-625",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-634",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-643",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-661",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-670",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-679",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-688",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-697",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-706",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-715",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-724",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-733",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-742",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-751",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-760",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-769",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-778",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-787",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-805",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-814",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-823",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-832",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-850",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-859",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-868",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-877",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-886",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-895",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-904",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-913",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-922",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-931",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-949",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-958",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-967",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-976",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-985",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-994",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1003",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1021",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1030",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1039",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1048",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1057",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1066",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1075",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1093",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1102",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1111",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1120",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1129",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1138",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1147",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1156",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1165",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1174",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1183",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1192",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1210",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1219",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1228",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1237",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1246",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-informatics-10-positional-integer-value-1255",
+        "subjectId": "informatics",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-informatics-n10",
+        "prototypeId": "oge-informatics-n10-original",
+        "examVersionId": "oge-informatics-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n19-ded2302447d92c85.json",
+    "sha256": "ded2302447d92c853ced09a3b7ab6c69b17607eb9a2e6e36866c9121a6b42fa8",
+    "tasks": [
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-5",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-14",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-23",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-32",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-41",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-50",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-59",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-68",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-77",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-86",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-95",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-104",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-113",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-122",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-131",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-140",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-149",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-158",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-chemistry-19-sodium-in-carbonate-mixture-167",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 19,
+        "topicId": "oge-chemistry-n19",
+        "prototypeId": "oge-chemistry-n19-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n9-678cf7056309d289.json",
+    "sha256": "678cf7056309d289351875bb7a261420ecd9f9db26c828bd1f60c5b9e70e9e3d",
+    "tasks": [
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-6",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-15",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-24",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-33",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-42",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-51",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-60",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-69",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-78",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-87",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-96",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-105",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-114",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-123",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-132",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-141",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-150",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-159",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-168",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-177",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-186",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-195",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-204",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-213",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-222",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-231",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-240",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-249",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-258",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-267",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-276",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-285",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-294",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-303",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-312",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-321",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-330",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-339",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-348",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-357",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-366",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-375",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-384",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-393",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-402",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-411",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-420",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-429",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-438",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-447",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-456",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-465",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-474",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-483",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-492",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-501",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-510",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-519",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-528",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-537",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-546",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-555",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-564",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-573",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-582",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-591",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-600",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-609",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-618",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-627",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-636",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-645",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-654",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-663",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-672",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-681",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-690",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-699",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-708",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-717",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-726",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-735",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-744",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-753",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-762",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-771",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-780",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-789",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-798",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-807",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-816",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-825",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-834",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-843",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-852",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-861",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-870",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-879",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-888",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-897",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-906",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-915",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-924",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-933",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-942",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-951",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-960",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-969",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-978",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-987",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-996",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1005",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1014",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1023",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1032",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1041",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1050",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1059",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1068",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1077",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1086",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1095",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1104",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1113",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1122",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1131",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1140",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1149",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1158",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1167",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1176",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1194",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1203",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1212",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1221",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1230",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1239",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1248",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-social-studies-9-limited-budget-choice-1257",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-social-studies-n9",
+        "prototypeId": "oge-social-studies-n9-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2027-draft-n4-15c79ad2bffddff7.json",
+    "sha256": "15c79ad2bffddff728ddeee1469c948ea0d1ca8ecbe5972f7fc456e83ff1605d",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-math-profile-4-grid-diagonal-region-7",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 4,
+        "topicId": "ege-math-profile-n4",
+        "prototypeId": "ege-math-profile-n4-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-4-grid-diagonal-region-16",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 4,
+        "topicId": "ege-math-profile-n4",
+        "prototypeId": "ege-math-profile-n4-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-4-grid-diagonal-region-25",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 4,
+        "topicId": "ege-math-profile-n4",
+        "prototypeId": "ege-math-profile-n4-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-4-grid-diagonal-region-34",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 4,
+        "topicId": "ege-math-profile-n4",
+        "prototypeId": "ege-math-profile-n4-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2027-draft-n11-f2287bf6d5a0df03.json",
+    "sha256": "f2287bf6d5a0df03d9cd07d5a3c5eebcd0ec0172567952a237eb601145350336",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-8",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-17",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-26",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-35",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-44",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-53",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-62",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-71",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-80",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-89",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-98",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-107",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-116",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-125",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-134",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-143",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-152",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-161",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-170",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-179",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-188",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-197",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-206",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-215",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-224",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-233",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-242",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-251",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-260",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-269",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-278",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-287",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-296",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-305",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-314",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-323",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-332",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-341",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-368",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-377",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-395",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-404",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-413",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-422",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-431",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-440",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-449",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-458",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-467",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-476",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-485",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-494",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-503",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-512",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-521",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-530",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-548",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-557",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-575",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-584",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-602",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-611",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-620",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-629",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-638",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-647",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-656",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-665",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-701",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-710",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-719",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-728",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-755",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-764",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-782",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-791",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-800",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-809",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-818",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-827",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-836",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-845",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-854",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-863",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-872",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-881",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-890",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-908",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-917",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-926",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-935",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-944",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-953",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-962",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-971",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-980",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-998",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1007",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1016",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1025",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1043",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1061",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1079",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1088",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1097",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1106",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1115",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1133",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1142",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1151",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1169",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1178",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1187",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1196",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1223",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1241",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-11-river-unknown-own-speed-1250",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 11,
+        "topicId": "ege-math-profile-n11",
+        "prototypeId": "ege-math-profile-n11-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2027-draft-n13-107dd0a7e3b4d42f.json",
+    "sha256": "107dd0a7e3b4d42ff3cef88903d077dbdccccb693fd2d31ae39b5f4b3414d930",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-9",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-18",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-27",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-36",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-45",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-54",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-63",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-72",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-81",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-90",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-99",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-108",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-117",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-126",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-135",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-144",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-153",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-162",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-171",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-180",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-189",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-198",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-207",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-216",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-225",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-234",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-243",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-252",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-261",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-270",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-279",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-288",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-297",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-306",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-315",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-324",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-333",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-342",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-351",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-360",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-369",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-378",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-387",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-396",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-405",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-414",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-423",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-432",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-441",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-450",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-459",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-468",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-477",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-486",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-495",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-504",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-513",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-522",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-531",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-540",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-549",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-558",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-567",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-576",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-585",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-594",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-603",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-612",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-621",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-630",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-639",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-648",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-657",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-666",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-675",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-684",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-693",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-702",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-711",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-720",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-729",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-738",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-747",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-756",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-765",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-774",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-783",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-792",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-801",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-810",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-819",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-828",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-837",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-846",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-855",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-864",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-873",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-882",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-891",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-900",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-909",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-918",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-927",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-936",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-945",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-954",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-963",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-972",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-981",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-990",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-999",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1008",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1017",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1026",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1035",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1044",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1053",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1062",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1071",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1080",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1089",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1098",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1107",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1116",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1125",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1134",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1143",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1152",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1161",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1170",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1179",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1188",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1197",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1206",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1215",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1224",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1233",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1242",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1251",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-13-two-year-changing-rate-loan-1260",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 13,
+        "topicId": "ege-math-profile-n13",
+        "prototypeId": "ege-math-profile-n13-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-russian-2027-draft-n8-2722410ee3593abc.json",
+    "sha256": "2722410ee3593abcb281ad2ef5a6e70e841d508884f885e3bf4822561d74db63",
+    "tasks": [
+      {
+        "id": "round-20261028-oge-russian-8-inflection-context-review-1261",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-russian-n8",
+        "prototypeId": "oge-russian-n8-towels-genitive",
+        "examVersionId": "oge-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-russian-8-inflection-context-review-1262",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-russian-n8",
+        "prototypeId": "oge-russian-n8-towels-genitive",
+        "examVersionId": "oge-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-russian-8-inflection-context-review-1263",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-russian-n8",
+        "prototypeId": "oge-russian-n8-towels-genitive",
+        "examVersionId": "oge-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-russian-8-inflection-context-review-1264",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-russian-n8",
+        "prototypeId": "oge-russian-n8-towels-genitive",
+        "examVersionId": "oge-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-russian-8-inflection-context-review-1265",
+        "subjectId": "russian",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-russian-n8",
+        "prototypeId": "oge-russian-n8-towels-genitive",
+        "examVersionId": "oge-russian-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-russian-2027-draft-n7-61e19137eebbbafb.json",
+    "sha256": "61e19137eebbbafbee7200a1ef10bf2e3c2003e69eeef4647f2e108299a0be5f",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-russian-7-inflection-context-review-1266",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-russian-n7",
+        "prototypeId": "ege-russian-n7-lie-down",
+        "examVersionId": "ege-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-russian-7-inflection-context-review-1267",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-russian-n7",
+        "prototypeId": "ege-russian-n7-lie-down",
+        "examVersionId": "ege-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-russian-7-inflection-context-review-1268",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-russian-n7",
+        "prototypeId": "ege-russian-n7-lie-down",
+        "examVersionId": "ege-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-russian-7-inflection-context-review-1269",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-russian-n7",
+        "prototypeId": "ege-russian-n7-lie-down",
+        "examVersionId": "ege-russian-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-russian-7-inflection-context-review-1270",
+        "subjectId": "russian",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "ege-russian-n7",
+        "prototypeId": "ege-russian-n7-lie-down",
+        "examVersionId": "ege-russian-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n9-05fc187ebc855c8a.json",
+    "sha256": "05fc187ebc855c8a94c4b281e037cc6c92a756e03b81cb124724453c40b2ff15",
+    "tasks": [
+      {
+        "id": "round-20261028-oge-biology-9-cell-comparison-editorial-1271",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-biology-n9",
+        "prototypeId": "oge-biology-n9-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-oge-biology-9-cell-comparison-editorial-1272",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-biology-n9",
+        "prototypeId": "oge-biology-n9-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n7-8d7122bb013e4e62.json",
+    "sha256": "8d7122bb013e4e6282dcbad08edb792ddbb10873ebb607a6436a21115641f93b",
+    "tasks": [
+      {
+        "id": "round-20261028-oge-biology-7-organism-description-editorial-1273",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "oge-biology-n7",
+        "prototypeId": "oge-biology-n7-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-math-profile-2027-draft-n5-c8dd5f6e04b93b3d.json",
+    "sha256": "c8dd5f6e04b93b3d6e46995a4c6a3d4d415adfd412b88dcd314518b464ec00e4",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1274",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1275",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1276",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1277",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1278",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1279",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1280",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1281",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1282",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1283",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1284",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1285",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1286",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1287",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1288",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1289",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1290",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1291",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1292",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1293",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1294",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1295",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1296",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1297",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1298",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1299",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1300",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1301",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1302",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1303",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1304",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1305",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1306",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1307",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1308",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1309",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1310",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1311",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1312",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1313",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1314",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1315",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1316",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1317",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1318",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1319",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1320",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1321",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1322",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1323",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1324",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1325",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1326",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1327",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1328",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1329",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1330",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1331",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1332",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1333",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1334",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1335",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1336",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1337",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1338",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1339",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1340",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1341",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1342",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1343",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1344",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1345",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1346",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1347",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1348",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1349",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1350",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1351",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1353",
+        "subjectId": "math",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": "profile",
+        "examNumber": 5,
+        "topicId": "ege-math-profile-n5",
+        "prototypeId": "ege-math-profile-n5-original",
+        "examVersionId": "ege-math-profile-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n9-4efd113f5d499151.json",
+    "sha256": "4efd113f5d499151112c55ecad1fef28d5225fa70d0c78c84c8e3626872574bb",
+    "tasks": [
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1354",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1355",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1356",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1357",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1358",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1359",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1360",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1361",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1362",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1363",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1364",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1365",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1366",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1367",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1368",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1369",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1370",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1371",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1372",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "round-20261028-ege-informatics-9-spreadsheet-one-pair-sum-1373",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "ege-informatics-n9",
+        "prototypeId": "ege-informatics-n9-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      }
+    ]
   }
 ];

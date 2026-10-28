@@ -1,0 +1,726 @@
+{
+  "date": "2026-10-28",
+  "kind": "original-training-not-official-exam",
+  "reviews": [
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1274",
+      "sha256": "397aadc744b6cb11af407f63f7f71228bab05e059ea148698dc091b403bf4e1f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1275",
+      "sha256": "26fc39b9e311eb883df677e1c0b7111cff400aff4b38aca06f47deb7cccd57c9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1276",
+      "sha256": "31d5e360fe941f777b23df1b32b73b884cee1f7b43ec3b56898b5c430fc2bbb3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1277",
+      "sha256": "fbdad0122131f6bf506c066add9baf1349d1eb09a9bfb69af3471fbbcb1caee6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1278",
+      "sha256": "f44fe696f15159da7eede187e391149b5c97aa94bd72fc598df2d6b9458004a9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1279",
+      "sha256": "ca5ef96bc5c7275651538d28b2c988d69f1da110a13e558c10ea1f1aeb6267d3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1280",
+      "sha256": "801af3424e6ea3eb24d0ca4592add1a108531e41b6e3212ad5b53cf8f94297f0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1281",
+      "sha256": "a45656a3fc3e1ae1a90e30c56e231a26563eebb121753a0839d4b3fa4f55c408",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1282",
+      "sha256": "aae488c8c8f7467dd042522a3bb034e9595175a3c075d6768873410c9c50af7c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1283",
+      "sha256": "77a570c8e25ff97160ba2fffb4f6d7287b15fc75928e95249eb482c703b4e705",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1284",
+      "sha256": "9e98423f5fe6fd0f1693c2c6d489c560ce65965f35eec4b109fd7a87a3480287",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1285",
+      "sha256": "1523aff5c29b8abb5a3784f1f1fc1cfe2d2e9a41fc9201a7010d8f4aa78eeeff",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1286",
+      "sha256": "82fb4bf38f898799c3ce718d269ba8cd0df2a50de6d88dfe654f79ff12a69493",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1287",
+      "sha256": "5d1ada0773ca6b9afbe92ab53b5d8c265244e98cd628e214ba00d5b7ccff1bde",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1288",
+      "sha256": "5d3d65134cab0ec72589b7960b39aab33fdd316747ea3bb504e50a7d54bcad87",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1289",
+      "sha256": "01c29f8b0338f089c70b03d08d572033c725f3a91d08baa06ecfff5b6db55801",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1290",
+      "sha256": "5b78d05514aa3202bfb6e3ccad289e3b40f30764eeac58451be8278cfeddf12a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1291",
+      "sha256": "8003580b8f6a4200baef78330f24768d50df6133533041486a304caf958162ff",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1292",
+      "sha256": "ad04fa94a019642c31947d0baa1eeb83b5eb968b1462c5100e1107a72203c734",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1293",
+      "sha256": "eda04504745c9f125f7e5ea3f077cb833b2ea91275c39ec0102f071e5ddf1284",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1294",
+      "sha256": "810f3d6ceb4f7a22f166b6b087f7053e1a81f0b5dfaaf642b8fe782ea1606b4f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1295",
+      "sha256": "55ecae7364b57ddb885fd0dcc551cbec936689cfe9186bb1e38d4d8c7a2c42d1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1296",
+      "sha256": "e47e3e9faed7ae2436743da7928e49f4833e0d37e9407aae1a0406207a5ca017",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1297",
+      "sha256": "c26db759a307380a39c2f3496e896fa6fb8165b7e005bfb71b95bcf821743fb5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1298",
+      "sha256": "00ad8228f8728f4dd27927661a32c5e5352e77aeae478dc245f787e3f8f57a3a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1299",
+      "sha256": "e05087d659e62d93fdd2beaa939d89aedfc08d3ec7bbfa69c86ec2df52800331",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1300",
+      "sha256": "8b285235eca451f7bbee3862964d15237982a33b48b01e6ebaf798b9645de98b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1301",
+      "sha256": "5678f4ac9ca2e10eb3fab673d332e586f395c7263f5bdb5db7eca9dee798d33a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1302",
+      "sha256": "34676defce741ec3df028547aaa875feb850aa1773a38dedff07df490afb5c58",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1303",
+      "sha256": "2678d4663cc226dd059205708cec723d4624af87a43efdd07a2315ee036ccf4e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1304",
+      "sha256": "bf965f48301ebf466e42aee308a53ad4f7b16ddab450937afef6e38da672cfb0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1305",
+      "sha256": "c24fa3e87e85487af915dc5f19cca18cc5bf812768b6801a00799832904a2141",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1306",
+      "sha256": "2d6937daa45aa31ee3c24c98564b75a7c27dad4a1e7cb1a0054d99349fe7946a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1307",
+      "sha256": "909a73832a79b28cbce7d53da082c2a9bd0ab759476f75c1b2a01a956037d36c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1308",
+      "sha256": "a2d4d26899af9d74be78c20ba4db5bb14bd33375e866b00de19b8f478767c5d2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1309",
+      "sha256": "86cda56898fea489e60569276b9eeca9e6536a13976bb73158f9ddf06dbe04b9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1310",
+      "sha256": "b4f635d3e693fe5b48897defd3f516987649377d2a0b141456ebf48c7b315d00",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1311",
+      "sha256": "b1cf775755d6d42a335c0eff8a9ebafcf99fd4e9410ec0a9e70f6f633f21b36f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1312",
+      "sha256": "5e2a6b623e48f8277d5f0c65734cb94ba85204e1127b47bd93d339c3bad9c3ca",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1313",
+      "sha256": "61b4ba6214b6a83775bb624361b8cbfe6887706f21d945aaa574138a80cda3ce",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1314",
+      "sha256": "f7d0f688e4532b4c398c03b77f0c527171c9726fc5057490e0f4a3f99f80624d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1315",
+      "sha256": "5672998fa196fc32aa3c518b456295605e9a60c2694835fa80f84be6c8100ad0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1316",
+      "sha256": "b7aaac3ffddbf4c9b6266fd515de9a1e9116c21a29de78aacdd8d9667e1890ba",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1317",
+      "sha256": "a4feb683ffb3b77c56f14fc74329a3700f9ecd4ba6105d5c8f2a4ff2feaffc11",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1318",
+      "sha256": "2ed3abd86d6e3511d0337c7469d1c160e7941b6da473283c46ada1084eb545e2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1319",
+      "sha256": "6033abe32d657ac9c66377770abfbd1e28a43285ede7fb7e1fad128fe323b899",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1320",
+      "sha256": "11f0fbf18c44c0fd16a0f07273058e7d155f89502a1f8ea6a104a534e6d298d8",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1321",
+      "sha256": "73314a42a66348da50d4f21e7214058d70785e70732c94cd141d3ec9d924edbb",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1322",
+      "sha256": "6ecabd09bf8d414a62c43d86fe2cc941d503f552474b8c55b643ff3a2d25eb0b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1323",
+      "sha256": "bf7f19ab29f2f4d915b206aa23b28f6dc0cc249b97104ae8f1cc1e206a36f506",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1324",
+      "sha256": "bad0be9af66d3bbf0399f8f815b70b56ea2aa0c4f5bfba00c1e21149d4e41bd9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1325",
+      "sha256": "048314469b18764e9e8f48bf69d280f91ed738085ba5b2987462924127a28d96",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1326",
+      "sha256": "a58dc98ad4933d5588097d7e1e9727f9bcff6140bf1e962e4e737db06e46dd27",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1327",
+      "sha256": "65ba48833ecd69a6371336368583a843cc3a2251d62a7f3f7dbb389e07051c9f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1328",
+      "sha256": "f37866da3725713ff268302edac2ac7089139becad04cec3fe0c0307e99641d9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1329",
+      "sha256": "a2f2b66882877ece2106008a2c5f07ffac171ec6a8d5e3e96b71a983ce33dc42",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1330",
+      "sha256": "d75a4c8f1df09a6f351a6c42b6d3b154b123ccf899f362799f0ae99782a4791f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1331",
+      "sha256": "2bb7fac72873b134a5e26b63319c77039f48013d6fb853fc8650b4f103097ec2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1332",
+      "sha256": "448f4780b15afcb693ec4c1987dfdf1931bba8593d24bd297b62adcf4f037afa",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1333",
+      "sha256": "ed49ded2cedea68e3e7c70a8a2e6e05e6c004676fe27c6dc0b95ead890d81ab7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1334",
+      "sha256": "3d0d173c719ae9060b4369ad7f3575b0222358f6e6e4a1d22991528198b8a85e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1335",
+      "sha256": "ab893280e8c664e865f24ab11eadb76b9bf196a65c989103a0cb6a180bdfea4d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1336",
+      "sha256": "31fe9b96ad45cc0792e2b32949cf6889a103249244cd601d61a9271df3ecccf6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1337",
+      "sha256": "e36ea53152340e89e30b3429cc364135bd6d020f2ff486f6057e271c910f6039",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1338",
+      "sha256": "0e86c263a55b7cae465f034582ceff623459b9bfc65821b3768bd0fea6ef2bf1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1339",
+      "sha256": "8fa92c8834d09debb8bfabbbdad8115ff35a2d3371d071d4c2b1879f9759eb19",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1340",
+      "sha256": "8762c6998bd0518f3511fbc993ea8fb81639931d9eace5743bef47cf7e54a2bd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1341",
+      "sha256": "3a24debd7be30d17e57541b75eedda97e7e52a7eb67b8baac91553c08ca1bb15",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1342",
+      "sha256": "cc32cc4f334acd8cb19887210a7fe7815759ad2b2e20011e3608b914264ed26c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1343",
+      "sha256": "ad42454ea7c6eace3029e0ca3ceb0b60ee22b0149d29fa596d8e46573478a0ef",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1344",
+      "sha256": "9f40e180bebe2c9d17b8efc5bad1bae19d01e5d6b2a3d08f2ad2f2d74c120537",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1345",
+      "sha256": "75f7463ca74a5e04f1eedb10a5b9b10ac47cc3dc2f2ab900ecceb3745fa68932",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1346",
+      "sha256": "60844df9f02c7b3b18249efb83c1d7688cb0cfcc4f50dea969451cdea1ba2dbd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1347",
+      "sha256": "8996fe1814dbf5bf5bf8b8d128430e05041c023b76897dba6ffb59c0de2a992e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1348",
+      "sha256": "faf6f5dc4b646bec86221e01ea7b207a216e95b4bf5dd6fbf8a47e290f92e921",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1349",
+      "sha256": "7547216a7aa2ccd90862251d7f22c1418506391790e399b34d40207db099f9da",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1350",
+      "sha256": "217c1d8d697ca1fc79a9126570cbddd09e66559cc94a90843d39177eb3e7fdc7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1351",
+      "sha256": "9f5e75e87b8787a88cb9f884111cb338f7a65bca4521d82041b7aeaaec65f5f9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1352",
+      "sha256": "8607b000e0a42b6c709d60018407f9bb1167ab7420413d4b33474e3c73d082da",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    },
+    {
+      "id": "round-20261028-ege-math-profile-5-posterior-from-two-groups-1353",
+      "sha256": "ed1facc9d167a651087cfd6f9a1dcb39120296d680e064cd51e022c4dc275495",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-round-cycle.py",
+        "docs/round-cycle-verification.json"
+      ]
+    }
+  ]
+}

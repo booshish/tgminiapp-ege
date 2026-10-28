@@ -89,7 +89,9 @@ export function buildTaskTaxonomy(){
   const profileReceipt=existsSync(profilePath)?JSON.parse(readFileSync(profilePath,"utf8")):null;
   const refillPath=resolve(projectRoot,"docs/priority-refill-verification.json");
   const refillRecords=existsSync(refillPath)?JSON.parse(readFileSync(refillPath,"utf8")).records:[];
-  const profileReviews=new Map([...(profileReceipt?.records??[]),...refillRecords].map(r=>[r.id,r]));
+  const cyclePath=resolve(projectRoot,"docs/round-cycle-verification.json");
+  const cycleRecords=existsSync(cyclePath)?JSON.parse(readFileSync(cyclePath,"utf8")).records:[];
+  const profileReviews=new Map([...(profileReceipt?.records??[]),...refillRecords,...cycleRecords].map(r=>[r.id,r]));
   const nodes={},assignments={},records=[];
   function node(kind,subject,title,parentId){const id=`${subject}-${kind}-${hash(`${parentId??""}|${title}`)}`;const value={id,kind,subjectId:subject,title,...(parentId?{parentId}: {})};if(nodes[id])assert.deepEqual(nodes[id],value);else nodes[id]=value;return id;}
   for(const raw of bank){
@@ -105,7 +107,9 @@ export function buildTaskTaxonomy(){
       }
     }
     const profile=profileReviews.get(raw.id);
-    if(profile){assert.equal(contentFingerprint(raw),profile.sha256,`Stale profile classification: ${raw.id}`);family=profile.family;triple=profile.triple;evidence=raw.id.startsWith("refill-")?"docs/priority-refill-verification.json":"docs/profile-math-verification.json";}
+    if(profile){assert.equal(contentFingerprint(raw),profile.sha256,`Stale profile classification: ${raw.id}`);family=profile.family;triple=profile.triple;evidence=raw.id.startsWith("round-")?"docs/round-cycle-verification.json":raw.id.startsWith("refill-")?"docs/priority-refill-verification.json":"docs/profile-math-verification.json";}
+    if(profile?.family==="organism-description-editorial"){family="organism-traits-from-description";triple=labels[family];}
+    if(profile?.family==="cell-comparison-editorial"){const processes=profile.proof.key==="245";family=processes?"plant-animal-shared-cell-processes":"plant-animal-shared-cell-structures";triple=["Клетка",processes?"Клеточный метаболизм":"Клеточные структуры",processes?"Общие клеточные процессы растений и животных":"Общие клеточные структуры растений и животных"];}
     const topicId=node("topic",task.subjectId,triple?.[0]??slot?.title??"Школьная математическая база");
     const subtopicId=triple?node("subtopic",task.subjectId,triple[1],topicId):null;
     const subtypeId=triple?`${task.subjectId}-subtype-${slug(family)}`:null;

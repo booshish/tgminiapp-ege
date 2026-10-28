@@ -18,7 +18,7 @@ export function createContentLoader({ revision } = {}) {
     const repoPath = relative(projectRoot, sourcePath).replaceAll("\\", "/");
     if (repoPath.startsWith("../")) throw new Error("Source must stay in this project");
     const source = revision
-      ? execFileSync("git", ["show", `${revision}:${repoPath}`], { cwd: projectRoot, encoding: "utf8" })
+      ? execFileSync("git", ["show", `${revision}:${repoPath}`], { cwd: projectRoot, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 })
       : readFileSync(sourcePath, "utf8");
     const { outputText, diagnostics } = ts.transpileModule(source, {
       fileName: sourcePath,

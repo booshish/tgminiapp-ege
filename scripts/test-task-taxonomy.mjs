@@ -10,15 +10,16 @@ const load=createContentLoader(),bank=load("src/lib/tasks.ts"),taxonomy=load("sr
 const report=JSON.parse(readFileSync(resolve(projectRoot,"docs/task-classification-map.json"),"utf8"));
 const profileRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/profile-math-release.json"),"utf8"));
 const refillRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/priority-refill-release.json"),"utf8"));
+const cycleRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/round-cycle-release.json"),"utf8"));
 const selected={examType:"ЕГЭ",subjectId:"math",level:"profile",examNumber:9};
 
 test("taxonomy is a reproducible metadata overlay for 30 directions/825 positions, not a second task bank",()=>{
   assert.deepEqual(buildTaskTaxonomy(),report);
   assert.equal(report.directions.length,30);assert.equal(report.directions.flatMap(d=>d.numbers).length,825);
-  assert.equal(report.counts.sourceTasks,1967+profileRelease.newTasks+refillRelease.approvedIds.length);assert.equal(report.counts.fullyClassifiedNumbers,0);
-  assert.equal(report.counts.reviewedDetailedTasks,713+profileRelease.newTasks+refillRelease.approvedIds.length);assert.equal(report.counts.numbersWithReviewedSubtypes,124);
+  assert.equal(report.counts.sourceTasks,1967+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length);assert.equal(report.counts.fullyClassifiedNumbers,0);
+  assert.equal(report.counts.reviewedDetailedTasks,713+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length);assert.equal(report.counts.numbersWithReviewedSubtypes,130);
   const data=load("src/lib/content/task-taxonomy-data.ts").taskTaxonomyData;
-  assert.equal(Object.keys(data.assignments).length,1967+profileRelease.newTasks+refillRelease.approvedIds.length);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
+  assert.equal(Object.keys(data.assignments).length,1967+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
 });
 test("stable taxonomy IDs resolve valid topic→subtopic relations; sources never become subtypes",()=>{
   for(const node of Object.values(report.nodes)){
@@ -47,7 +48,7 @@ test("real multi-subtype number filters compose by topic/subtopic/subtype/source
   assert.ok(bank.getPracticeTasks(selected).length>tasks.length);
 });
 test("Russian per-card prototypes are not invented linguistic subtypes or automatically expert-reviewed",()=>{
-  const records=report.records.filter(r=>r.modelId.endsWith("-russian"));assert.equal(records.length,910);
+  const records=report.records.filter(r=>r.modelId.endsWith("-russian")&&!r.taskId.startsWith("round-"));assert.equal(records.length,910);
   assert.ok(records.every(r=>!r.subtypeId&&r.reviewStatus==="needs-editorial-review"));
   assert.equal(taxonomy.getNumberTaxonomyOptions({examType:"ЕГЭ",subjectId:"russian",examNumber:4}).subtypes.length,0);
   assert.ok(report.records.every(r=>r.codifier.status==="pending-individual-mapping"));
