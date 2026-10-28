@@ -50,6 +50,12 @@ jobs:
       - name: Проверить типы
         run: npm run typecheck
 
+      - name: Установить точную математическую проверку
+        run: |
+          python3 -m venv "$RUNNER_TEMP/tochka-math-qa"
+          "$RUNNER_TEMP/tochka-math-qa/bin/python" -m pip install -r scripts/requirements-math-qa.txt
+          echo "$RUNNER_TEMP/tochka-math-qa/bin" >> "$GITHUB_PATH"
+
       - name: Проверить задания и сохранения
         run: npm test
 

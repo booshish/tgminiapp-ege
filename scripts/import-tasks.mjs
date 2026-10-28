@@ -12,6 +12,18 @@ const { practiceBank } = load("src/lib/tasks.ts");
 const { getPublicationDecision } = load("src/lib/content-publication.ts");
 const { sourceRegistry } = load("src/lib/source-registry.ts");
 const { getExamDefinition } = load("src/lib/exams.ts");
+/** Editorial-side only: deduplicate against ALL published shards, not just bundled seeds. */
+export function publishedCorpus() {
+  const { taskPackageIndex } = createContentLoader()("src/lib/task-package-index.ts");
+  const lazy = taskPackageIndex.flatMap(p => {
+    const bytes = readFileSync(resolve(projectRoot, "public/task-packages", p.file));
+    if (createHash("sha256").update(bytes).digest("hex") !== p.sha256) throw Error(`Corrupt published shard: ${p.file}`);
+    return JSON.parse(bytes.toString("utf8"));
+  });
+  const corpus = [...practiceBank, ...lazy];
+  if (new Set(corpus.map(t => t.id)).size !== corpus.length) throw Error("Duplicate published IDs");
+  return corpus;
+}
 const hash = (s) => createHash("sha256").update(s).digest("hex");
 const text = (s) => typeof s === "string" && Boolean(s.trim());
 const normalized = (t) => `${t.prompt ?? ""} ${t.conditionLatex ?? ""} ${JSON.stringify(t.resources ?? [])}`.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
@@ -70,7 +82,7 @@ export function structuralIssues(t, corpus = practiceBank) {
 }
 
 /** Editorial JSONL intake only. No writes to src/public, no changes to learner data. */
-export async function importTasks({ input, job, reviews = [], batchSize = 200, maxBatches = Infinity, corpus = practiceBank, registry = sourceRegistry }) {
+export async function importTasks({ input, job, reviews = [], batchSize = 200, maxBatches = Infinity, corpus = publishedCorpus(), registry = sourceRegistry }) {
   if (!/^[a-z0-9-]+$/.test(job) || !Number.isInteger(batchSize) || batchSize < 1 || batchSize > 300 || !Array.isArray(reviews)) throw Error("Invalid job/batch size/reviews");
   const directory = resolve(projectRoot, ".content-staging", `import-${job}`);
   mkdirSync(directory, { recursive: true });

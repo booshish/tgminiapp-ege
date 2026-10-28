@@ -35,7 +35,9 @@ export function generationAudit(){
   const requirements=JSON.parse(readFileSync(resolve(projectRoot,"docs/exam-requirements.json"),"utf8"));
   const controlsPath=resolve(projectRoot,"docs/generator-control-review.json");
   const controlReview=existsSync(controlsPath)?JSON.parse(readFileSync(controlsPath,"utf8")):null;
-  const controlsVerifiedFor=cap=>Boolean(controlReview?.passed&&controlReview.records.filter(r=>r.family===cap.subtype).length===6&&[cap.implementation.file,"scripts/check-generator-controls.mjs"].every(file=>controlReview.implementationSha256?.[file]===createHash("sha256").update(readFileSync(resolve(projectRoot,file))).digest("hex")));
+  const profilePath=resolve(projectRoot,"docs/profile-math-verification.json");
+  const profileReview=existsSync(profilePath)?JSON.parse(readFileSync(profilePath,"utf8")):null;
+  const controlsVerifiedFor=cap=>cap.profileRelease?Boolean(profileReview?.control.families[cap.subtype]===4&&profileReview.independent.families[cap.subtype]>0&&[cap.implementation.file,cap.verification.file].every(file=>profileReview.implementationSha256?.[file]===fileHash(file))):Boolean(controlReview?.passed&&controlReview.records.filter(r=>r.family===cap.subtype).length===6&&[cap.implementation.file,"scripts/check-generator-controls.mjs"].every(file=>controlReview.implementationSha256?.[file]===createHash("sha256").update(readFileSync(resolve(projectRoot,file))).digest("hex")));
   const families=finiteFactoryInventory.filter(f=>f.exports.some(e=>e.endsWith("GeneratorCases"))).flatMap(factory=>{
     const file=factory.file,bank=load(file),caseExport=factory.exports.find(e=>e.endsWith("GeneratorCases"));
     const taskExport=factory.exports.find(e=>e.endsWith("Tasks")),byId=new Map(bank[taskExport].map(t=>[t.id,t]));
@@ -59,7 +61,7 @@ export function generationAudit(){
       const declared=slot?.practiceAnswerFormat?slot.generation?.subtypes??[]:[];
       const relevant=originals.filter(t=>t.examNumber===number);
       const known=[...new Set([...declared,...caps.map(c=>c.subtype),...finite.map(f=>f.subtype),...(relevant.length&&!declared.length&&!caps.length&&!finite.length?["reviewed-finite-seeds"]:[])])];
-      const criterion=subjectId==="math"?null:getExamAnswerContract(model.id,number);
+      const criterion=subjectId==="math"?model.id==="ege-math-profile"&&number<=13?{mode:"exact-numeric",maximum:1,partialCredit:false,alternatives:"reviewed-per-item",formatting:"integer-or-finite-decimal",taskSpecificRubricComplete:true,source:{file:local,section:"Правила оценивания части 1, печатные страницы 9–10",status:"draft-not-final"}}:null:getExamAnswerContract(model.id,number);
       const source=local?{localFile:local,sha256:createHash("sha256").update(readFileSync(resolve(projectRoot,local))).digest("hex"),documentStatus:"local-draft-not-canonically-authenticated",pages:row.source_references?.map(r=>r.physical_page)??[]}:row.source_references??slot?.sourceReference??null;
       const maximum=row.max_primary_score??slot?.maxPrimaryScore??null;
       const resources=requiredResourcesFor(model.id,number,slot);
@@ -70,14 +72,14 @@ export function generationAudit(){
         const hasGenerator=!isUnknown&&Boolean(cap),hasSeed=!isUnknown&&Boolean(relevant.length||fixed);
         const missingResources=cap?.resourcesProvided===false?resources.length?resources:["Original resource required"]:hasSeed?[]:resources;
         const controlsCurrent=cap?controlsVerifiedFor(cap):false;
-        const ready=Boolean(cap&&criterion&&cap.verification.independent&&!cap.requiresEditorialReview&&cap.resourcesProvided&&subjectId!=="math"&&(!cap.newThisStage||controlsCurrent));
+        const ready=Boolean(cap&&criterion&&cap.verification.independent&&!cap.requiresEditorialReview&&cap.resourcesProvided&&(subjectId!=="math"||cap.profileRelease&&controlsCurrent)&&(!cap.newThisStage||controlsCurrent));
         const status=isUnknown||missingResources.length||(!hasGenerator&&!hasSeed)?"BLOCKED":ready?"READY":"PARTIAL";
         return {exam,subjectId,level,modelId:model.id,targetYear:2027,number,officialLabels:slot?.officialLabels??[String(number)],subtype,recordKind:isUnknown?"coverage-gate":subtype==="reviewed-finite-seeds"?"finite-seed-group":"named-subtype",
           checkedSkill:title,skillScope:"brief-numbered-plan-not-exhaustive-codifier",knowledgeCodes:row.content_codes??[],requirementCodes:row.requirement_codes??[],conditionFormat:resources.length?"text-with-declared-resources":"text-or-formula",answerFormat:row.answer_format??slot?.answerFormat??null,answerKind:slot?.responseKind??(criterion?.mode==="exact-numeric"?"numeric":criterion?.mode==="two-cell-pair"?"two-position-numeric-answer":"not-yet-confirmed-per-subtype"),maxPrimaryScore:maximum,
           officialReview:{status:local?"local-draft-plan-reviewed":model.verificationStatus==="draft-source-reviewed"?"draft-copy-numbered-plan-reviewed":"unconfirmed",source,criteriaStatus:criterion?"specific-general-scoring-rule-reviewed":"pending",canonicalArchiveVerified:false,exhaustiveSubtypeCatalogue:inventoryComplete},
           scoring:criterion??{mode:slot?.answerFormat==="extended"?"expert-or-self-check-only":"unconfirmed",maximum,partialCredit:maximum>1?"not-inferred-from-maximum":false,alternatives:"must-be-established-per-item",formatting:"follow-reviewed-item-instructions",taskSpecificRubricComplete:false},
-          hasGenerator,generationMethod:cap?{...cap.implementation,codeSha256:fileHash(cap.implementation.file)}:(fixed?{file:fixed.file,export:fixed.export,kind:"finite-parameter-family"}:hasSeed?{kind:"finite-editorial-seeds-not-scalable"}:null),parameterDomain:cap?.parameterDomain??(fixed?{kind:"existing-finite-cases-only",count:fixed.count}:null),
-          answerVerification:cap?.verification??(fixed?{method:"existing-family-specific-independent-tests",file:finiteFactoryInventory.find(f=>f.file===fixed.file)?.verifier}:hasSeed?{method:"prior-item-specific-review-only-not-a-generator-proof"}:{method:"unavailable"}),
+          hasGenerator,generationMethod:cap?{...cap.implementation,...(cap.selector?{selector:cap.selector}:{}),codeSha256:fileHash(cap.implementation.file)}:(fixed?{file:fixed.file,export:fixed.export,kind:"finite-parameter-family"}:hasSeed?{kind:"finite-editorial-seeds-not-scalable"}:null),parameterDomain:cap?.parameterDomain??(fixed?{kind:"existing-finite-cases-only",count:fixed.count}:null),
+          answerVerification:cap?{...cap.verification,...(cap.profileRelease?{codeSha256:fileHash(cap.verification.file)}:{})}:(fixed?{method:"existing-family-specific-independent-tests",file:finiteFactoryInventory.find(f=>f.file===fixed.file)?.verifier}:hasSeed?{method:"prior-item-specific-review-only-not-a-generator-proof"}:{method:"unavailable"}),
           difficulty:cap?.difficulty??[],resources:{required:resources,available:isUnknown?false:!cap&&hasSeed&&resources.length?null:missingResources.length===0,missing:missingResources,requiresVerification:!cap&&hasSeed&&resources.length>0,scope:cap?"within-validated-generator-domain":hasSeed?"existing-seed-presence-does-not-certify-all-format-resources":"not-established"},
           status,limitations:[...(cap?.limits??[]),...(isUnknown?["Full codifier/subtype inventory not yet reviewed; no completeness claim"]:[]),...(subjectId==="math"?["Only frozen IDs have reviewed 2027 placements; new generated conditions need skill/format review and a current scoring contract"]:[]),...(!criterion?["Exact scoring/partial-credit rule not yet registered for this format"]:[]),...(!hasGenerator?["No reusable validated parameterized generator for this subtype"]:[]),...(cap?.newThisStage&&!controlsCurrent?["Current independent control-batch receipt is missing"]:[]),...(cap?.requiresEditorialReview?["New facts or contexts require separate editorial verification"]:[])],
           existingTaskCount:isUnknown?0:relevant.length,finiteFamilyCaseCount:fixed?.count??0,extendedGuidance:getExtendedAnswerGuidance(model.id,number),
@@ -101,6 +103,7 @@ export function requireReadyGenerator(audit,modelId,number,subtype){
   if(!row||row.status!=="READY"||!row.hasGenerator||!row.answerVerification.independent)throw Error(`Mass generation is blocked: ${modelId}/${number}/${subtype}`);
   const cap=generatorCapabilities.find(c=>c.model===modelId&&c.number===number&&c.subtype===subtype);
   if(!cap||row.generationMethod.file!==cap.implementation.file||row.generationMethod.export!==cap.implementation.export||row.generationMethod.codeSha256!==fileHash(cap.implementation.file))throw Error("Generator evidence is stale; regenerate and recheck the readiness audit");
+  if(cap.profileRelease&&row.answerVerification.codeSha256!==fileHash(cap.verification.file))throw Error("Independent verifier evidence is stale");
   return row;
 }
 

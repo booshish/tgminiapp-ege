@@ -1,0 +1,3 @@
+# Editorial/release QA only, not a website runtime dependency.
+sympy==1.14.0
+mpmath==1.3.0

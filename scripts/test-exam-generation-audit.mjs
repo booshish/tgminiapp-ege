@@ -2,7 +2,6 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync,existsSync } from "node:fs";
 import { createHash } from "node:crypto";
-import { execFileSync } from "node:child_process";
 import { resolve } from "node:path";
 import { createContentLoader,projectRoot } from "./content-source-loader.mjs";
 import { generationAudit,auditBaseline,requireReadyGenerator } from "./exam-generation-audit.mjs";
@@ -53,7 +52,7 @@ test("2026 official physics guidance stays a fallback for expert/self-check, nev
 test("all thirty pairs have per-number and subtype maps; unknown coverage blocks whole-number READY",()=>{
   const audit=generationAudit();assert.equal(audit.directions.length,30);assert.equal(audit.counts.targetNumbers,825);
   assert.equal(audit.counts.unknownCoverageGates,825);assert.equal(audit.counts.fullyConfirmedModels,0);assert.equal(audit.counts.newFunctions,9);
-  assert.equal(audit.counts.scoringRuleReviewedNumbers,76);
+  assert.equal(audit.counts.scoringRuleReviewedNumbers,89);
   assert.equal(new Set(audit.directions.map(d=>d.id)).size,30);
   for(const d of audit.directions)for(const n of d.numbers){
     assert.notEqual(n.status,"READY");assert.equal(n.exhaustiveSubtypeCatalogue,false);
@@ -112,9 +111,9 @@ test("new informatics subtypes verify arithmetic over many parameters and reject
 });
 test("published shard metadata and all 151 tasks remain byte-for-byte unchanged; control IDs never publish",()=>{
   const indexPath="src/lib/task-package-index.ts";
-  assert.equal(readFileSync(resolve(projectRoot,indexPath),"utf8"),execFileSync("git",["show",`${auditBaseline}:${indexPath}`],{cwd:projectRoot,encoding:"utf8"}));
-  const {taskPackageIndex}=load(indexPath);assert.equal(taskPackageIndex.length,124);
-  const tasks=taskPackageIndex.flatMap(p=>{
+  const priorIndex=createContentLoader({revision:auditBaseline})(indexPath).taskPackageIndex;
+  const {taskPackageIndex}=load(indexPath);assert.deepEqual(taskPackageIndex.slice(0,priorIndex.length),priorIndex);assert.equal(priorIndex.length,124);
+  const tasks=priorIndex.flatMap(p=>{
     const body=readFileSync(resolve(projectRoot,"public/task-packages",p.file));
     assert.equal(createHash("sha256").update(body).digest("hex"),p.sha256);return JSON.parse(body);
   });

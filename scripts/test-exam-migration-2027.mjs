@@ -26,9 +26,10 @@ test("all authored task bodies, IDs, order, answer keys and 124 immutable shards
   assert.deepEqual(source.practiceBank.map(t=>t.id),previous.map(t=>t.id));
   source.practiceBank.forEach((t,i)=>assert.equal(contentFingerprint(t),contentFingerprint(previous[i]),t.id));
   const index=load("src/lib/task-package-index.ts").taskPackageIndex;
-  assert.deepEqual(index,old("src/lib/task-package-index.ts").taskPackageIndex);
-  assert.equal(index.length,124);let count=0;
-  for(const p of index){const bytes=readFileSync(resolve(projectRoot,"public/task-packages",p.file));assert.equal(createHash("sha256").update(bytes).digest("hex"),p.sha256);count+=JSON.parse(bytes).length;}
+  const priorIndex=old("src/lib/task-package-index.ts").taskPackageIndex;
+  assert.deepEqual(index.slice(0,priorIndex.length),priorIndex);
+  assert.equal(priorIndex.length,124);let count=0;
+  for(const p of priorIndex){const bytes=readFileSync(resolve(projectRoot,"public/task-packages",p.file));assert.equal(createHash("sha256").update(bytes).digest("hex"),p.sha256);count+=JSON.parse(bytes).length;}
   assert.equal(count,151);
 });
 test("profile placement uses skills: extrema→9, functions→12; extended finance never masquerades as short №13",()=>{

@@ -51,7 +51,7 @@ test("all published shard hashes and IDs remain intact, with frozen previous 67 
     const tasks=JSON.parse(body);assert.deepEqual(tasks.map(t=>t.id),p.tasks.map(t=>t.id));return tasks;
   });
   assert.equal(new Set(all.map(t=>t.id)).size,all.length);
-  assert.equal(all.filter(t=>!t.id.startsWith("remaining-20261027-")).length,67);
+  assert.equal(all.filter(t=>/^(oge-informatics-pilot-|multi-subject-20261026-|science-stage-a-)/.test(t.id)).length,67);
   // Before release, generated tasks are tested above. After release, every byte is checked.
   const released=all.filter(t=>t.id.startsWith("remaining-20261027-"));
   if(released.length){assert.equal(released.length,84);for(const t of buildRemainingTasks())assert.equal(contentFingerprint(all.find(p=>p.id===t.id)),contentFingerprint(t));}

@@ -1,0 +1,487 @@
+{
+  "checkedAt": "2026-10-28",
+  "model": "ege-math-profile-2027-draft",
+  "rows": [
+    {
+      "number": 1,
+      "before": 15,
+      "added": 198,
+      "after": 213,
+      "subtypesCovered": 2,
+      "subtypeCounts": {
+        "needs-editorial-review": 3,
+        "math-subtype-right-triangle-area": 105,
+        "math-subtype-trapezoid-area": 105
+      },
+      "pendingClassification": 3,
+      "generators": [
+        {
+          "subtype": "right-triangle-area",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "trapezoid-area",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "before": 13,
+      "added": 181,
+      "after": 194,
+      "subtypesCovered": 2,
+      "subtypeCounts": {
+        "math-subtype-dot-product": 104,
+        "math-subtype-vector-length": 89,
+        "needs-editorial-review": 1
+      },
+      "pendingClassification": 1,
+      "generators": [
+        {
+          "subtype": "dot-product",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "vector-length",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "before": 13,
+      "added": 190,
+      "after": 203,
+      "subtypesCovered": 4,
+      "subtypeCounts": {
+        "math-subtype-prism-diagonal": 6,
+        "math-subtype-pyramid-volume": 6,
+        "needs-editorial-review": 1,
+        "math-subtype-rectangular-prism-volume": 98,
+        "math-subtype-cone-volume-coefficient": 92
+      },
+      "pendingClassification": 1,
+      "generators": [
+        {
+          "subtype": "rectangular-prism-volume",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "cone-volume-coefficient",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "before": 15,
+      "added": 2,
+      "after": 17,
+      "subtypesCovered": 2,
+      "subtypeCounts": {
+        "needs-editorial-review": 3,
+        "math-subtype-one-draw": 7,
+        "math-subtype-complement": 7
+      },
+      "pendingClassification": 3,
+      "generators": [
+        {
+          "subtype": "one-draw",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "complement",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "before": 12,
+      "added": 14,
+      "after": 26,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "math-subtype-exactly-one": 11,
+        "math-subtype-at-least-one": 6,
+        "math-subtype-total-probability-production": 9
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "exactly-one",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "total-probability-production",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "before": 0,
+      "added": 278,
+      "after": 278,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "math-subtype-finite-distribution-expectation": 94,
+        "math-subtype-two-point-variance": 85,
+        "math-subtype-two-point-standard-deviation": 99
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "finite-distribution-expectation",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "two-point-variance",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "two-point-standard-deviation",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "before": 18,
+      "added": 200,
+      "after": 218,
+      "subtypesCovered": 5,
+      "subtypeCounts": {
+        "needs-editorial-review": 3,
+        "math-subtype-exponential": 6,
+        "math-subtype-logarithmic": 6,
+        "math-subtype-ege-6-logarithm-domain": 3,
+        "math-subtype-linear-logarithmic-equation": 100,
+        "math-subtype-affine-exponential-equation": 100
+      },
+      "pendingClassification": 3,
+      "generators": [
+        {
+          "subtype": "linear-logarithmic-equation",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "affine-exponential-equation",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "before": 19,
+      "added": 186,
+      "after": 205,
+      "subtypesCovered": 5,
+      "subtypeCounts": {
+        "needs-editorial-review": 4,
+        "math-subtype-radical-identity": 6,
+        "math-subtype-power-rules": 6,
+        "math-subtype-ege-7-conjugate-fractions": 3,
+        "math-subtype-radical-conjugate-product": 94,
+        "math-subtype-radical-reciprocal-sum": 92
+      },
+      "pendingClassification": 4,
+      "generators": [
+        {
+          "subtype": "radical-conjugate-product",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "radical-reciprocal-sum",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "before": 24,
+      "added": 199,
+      "after": 223,
+      "subtypesCovered": 5,
+      "subtypeCounts": {
+        "math-subtype-derivative-point": 6,
+        "math-subtype-parallel-tangent": 6,
+        "math-subtype-quadratic-maximum": 105,
+        "math-subtype-cubic-minimum": 6,
+        "math-subtype-cubic-local-minimum": 100
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "cubic-local-minimum",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "quadratic-maximum",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "before": 12,
+      "added": 172,
+      "after": 184,
+      "subtypesCovered": 2,
+      "subtypeCounts": {
+        "math-subtype-accelerated-motion": 91,
+        "math-subtype-joule-law": 93
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "joule-law",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "accelerated-motion",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "before": 12,
+      "added": 101,
+      "after": 113,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "math-subtype-catch-up": 6,
+        "math-subtype-joint-work": 17,
+        "math-subtype-river-round-trip": 90
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "joint-work",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "river-round-trip",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "before": 12,
+      "added": 180,
+      "after": 192,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "math-subtype-linear-function": 104,
+        "math-subtype-inverse-function": 6,
+        "math-subtype-quadratic-function-point": 82
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "quadratic-function-point",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "linear-function",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "before": 0,
+      "added": 25,
+      "after": 25,
+      "subtypesCovered": 2,
+      "subtypeCounts": {
+        "math-subtype-equal-principal-loan-total": 6,
+        "math-subtype-compound-deposit": 19
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "equal-principal-loan-total",
+          "readiness": "READY"
+        },
+        {
+          "subtype": "compound-deposit",
+          "readiness": "READY"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "before": 6,
+      "added": 16,
+      "after": 22,
+      "subtypesCovered": 2,
+      "subtypeCounts": {
+        "needs-editorial-review": 2,
+        "math-subtype-trig-roots-selection": 13,
+        "math-subtype-exponential-two-roots-selection": 7
+      },
+      "pendingClassification": 2,
+      "generators": [
+        {
+          "subtype": "trig-roots-selection",
+          "readiness": "PARTIAL"
+        },
+        {
+          "subtype": "exponential-two-roots-selection",
+          "readiness": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "before": 5,
+      "added": 16,
+      "after": 21,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "math-subtype-prism-line-plane-angle": 4,
+        "needs-editorial-review": 1,
+        "math-subtype-prism-line-plane-tangent": 9,
+        "math-subtype-triorthogonal-tetrahedron-section": 7
+      },
+      "pendingClassification": 1,
+      "generators": [
+        {
+          "subtype": "prism-line-plane-tangent",
+          "readiness": "PARTIAL"
+        },
+        {
+          "subtype": "triorthogonal-tetrahedron-section",
+          "readiness": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "before": 5,
+      "added": 18,
+      "after": 23,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "math-subtype-rational-inequality": 4,
+        "needs-editorial-review": 1,
+        "math-subtype-rational-three-points": 10,
+        "math-subtype-logarithmic-quadratic-inequality": 8
+      },
+      "pendingClassification": 1,
+      "generators": [
+        {
+          "subtype": "rational-three-points",
+          "readiness": "PARTIAL"
+        },
+        {
+          "subtype": "logarithmic-quadratic-inequality",
+          "readiness": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "before": 0,
+      "added": 20,
+      "after": 20,
+      "subtypesCovered": 2,
+      "subtypeCounts": {
+        "math-subtype-quadratic-profit-optimization": 10,
+        "math-subtype-inventory-cost-optimization": 10
+      },
+      "pendingClassification": 0,
+      "generators": [
+        {
+          "subtype": "quadratic-profit-optimization",
+          "readiness": "PARTIAL"
+        },
+        {
+          "subtype": "inventory-cost-optimization",
+          "readiness": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "before": 6,
+      "added": 13,
+      "after": 19,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "needs-editorial-review": 2,
+        "math-subtype-two-tangents-area": 4,
+        "math-subtype-right-triangle-altitude-proof": 9,
+        "math-subtype-tangent-chord-similarity": 4
+      },
+      "pendingClassification": 2,
+      "generators": [
+        {
+          "subtype": "right-triangle-altitude-proof",
+          "readiness": "PARTIAL"
+        },
+        {
+          "subtype": "tangent-chord-similarity",
+          "readiness": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "before": 5,
+      "added": 18,
+      "after": 23,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "math-subtype-parameter-positive-roots": 4,
+        "needs-editorial-review": 1,
+        "math-subtype-parameter-absolute-value-level": 8,
+        "math-subtype-parameter-two-positive-roots": 10
+      },
+      "pendingClassification": 1,
+      "generators": [
+        {
+          "subtype": "parameter-absolute-value-level",
+          "readiness": "PARTIAL"
+        },
+        {
+          "subtype": "parameter-two-positive-roots",
+          "readiness": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "before": 6,
+      "added": 9,
+      "after": 15,
+      "subtypesCovered": 3,
+      "subtypeCounts": {
+        "needs-editorial-review": 2,
+        "math-subtype-integer-product-shift": 4,
+        "math-subtype-integer-shifted-factorization": 8,
+        "math-subtype-integer-consecutive-sum": 1
+      },
+      "pendingClassification": 2,
+      "generators": [
+        {
+          "subtype": "integer-shifted-factorization",
+          "readiness": "PARTIAL"
+        },
+        {
+          "subtype": "integer-consecutive-sum",
+          "readiness": "PARTIAL"
+        }
+      ]
+    }
+  ],
+  "totalBefore": 198,
+  "totalAdded": 2036,
+  "totalAfter": 2234,
+  "emptyNumbers": [],
+  "subtypeInventoryComplete": false
+}

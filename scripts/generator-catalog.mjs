@@ -1,3 +1,4 @@
+import { profileFamilies } from './profile-math-generators.mjs';
 /** Capability records for EXISTING factories, not a second generation engine.
  * READY is computed by the audit, never inferred from five published seeds.
  */
@@ -68,6 +69,10 @@ const domains={
   radixDigitCountTemplate:{base:{min:2,max:16,integer:true},exponent:{min:3,max:30,integer:true},offset:{min:1,maxExclusive:"base squared",integer:true},constraints:["two-digit tail decomposition", "BigInt independent verification"]},
 };
 for(const c of generatorCapabilities)c.parameterDomain=domains[c.implementation.export];
+for(const family of profileFamilies)generatorCapabilities.push(capability('ege-math-profile',family.number,family.subtype,'scripts/profile-math-generators.mjs','generateProfileBatch','scripts/verify-profile-math.py','separate-python-exact-arithmetic-sympy-enumeration',{
+  profileRelease:true,selector:{number:family.number,subtype:family.subtype},difficulty:[family.number<=13?'standard':'advanced'],
+  parameterDomain:{count:{min:1,max:1000,integer:true},a:{min:1,max:47,integer:true},b:{min:1,max:43,integer:true},constraints:['Bounded deterministic traversal; candidate count is not guaranteed unique published count','Existing duplicate gate and independent verifier required for every new batch']},limits:family.limitations,
+}));
 
 /** Fixed banks are inventoried as finite editorial families, not scalable APIs. */
 export const finiteFactoryInventory=[

@@ -52,7 +52,7 @@ test("science shards load by number, preserve existing bank, bookmarks and check
   const before=bank.practiceBank.map(t=>t.id), fetchOriginal=globalThis.fetch;
   const {taskPackageIndex}=load("src/lib/task-package-index.ts");
   const ids=taskPackageIndex.flatMap(p=>p.tasks.map(t=>t.id));
-  const previous=ids.filter(id=>!id.startsWith("remaining-20261027-"));assert.equal(previous.length,67);assert.equal(new Set(ids).size,ids.length);
+  const previous=ids.filter(id=>/^(oge-informatics-pilot-|multi-subject-20261026-|science-stage-a-)/.test(id));assert.equal(previous.length,67);assert.equal(new Set(ids).size,ids.length);
   const target=buildScienceTasks().find(t=>t.subjectId==="chemistry"&&t.examType[0]==="ЕГЭ");
   globalThis.fetch=async(url)=>new Response(readFileSync(new URL(`../public${url}`,import.meta.url),"utf8"));
   try{

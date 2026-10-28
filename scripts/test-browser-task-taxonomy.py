@@ -11,7 +11,9 @@ fixture=json.loads(subprocess.check_output(["node","--input-type=module","-e",r'
 import{createContentLoader}from"./scripts/content-source-loader.mjs";
 const l=createContentLoader(),t=l("src/lib/tasks.ts"),tax=l("src/lib/task-taxonomy.ts");
 const selection={examType:"ЕГЭ",subjectId:"math",level:"profile",examNumber:9};
-const subtypeId=tax.getNumberTaxonomyOptions(selection).subtypes[0].id;
+// A disjoint bundled family: checking it must not overwrite the original task's
+// shared draft by selecting and answering that SAME stable ID in both contexts.
+const subtypeId="math-subtype-parallel-tangent";
 const filtered=t.getPracticeTasks({...selection,subtypeId}),c=tax.getTaskClassification(filtered[0].id);
 console.log(JSON.stringify({subtypeId,topicId:c.topicId,subtopicId:c.subtopicId,expected:filtered.map(t=>t.id),answers:Object.fromEntries(filtered.map(t=>[t.id,t.answerRule.value])),allCount:t.getPracticeTaskCount(selection)}));
 '''],cwd=root,text=True))

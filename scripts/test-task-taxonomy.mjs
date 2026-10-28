@@ -8,15 +8,16 @@ import { contentFingerprint } from "./content-review-evidence.mjs";
 import { generationAudit,planSubtypeGeneration } from "./exam-generation-audit.mjs";
 const load=createContentLoader(),bank=load("src/lib/tasks.ts"),taxonomy=load("src/lib/task-taxonomy.ts");
 const report=JSON.parse(readFileSync(resolve(projectRoot,"docs/task-classification-map.json"),"utf8"));
+const profileRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/profile-math-release.json"),"utf8"));
 const selected={examType:"ЕГЭ",subjectId:"math",level:"profile",examNumber:9};
 
 test("taxonomy is a reproducible metadata overlay for 30 directions/825 positions, not a second task bank",()=>{
   assert.deepEqual(buildTaskTaxonomy(),report);
   assert.equal(report.directions.length,30);assert.equal(report.directions.flatMap(d=>d.numbers).length,825);
-  assert.equal(report.counts.sourceTasks,1967);assert.equal(report.counts.fullyClassifiedNumbers,0);
-  assert.equal(report.counts.reviewedDetailedTasks,713);assert.equal(report.counts.numbersWithReviewedSubtypes,119);
+  assert.equal(report.counts.sourceTasks,1967+profileRelease.newTasks);assert.equal(report.counts.fullyClassifiedNumbers,0);
+  assert.equal(report.counts.reviewedDetailedTasks,713+profileRelease.newTasks);assert.equal(report.counts.numbersWithReviewedSubtypes,122);
   const data=load("src/lib/content/task-taxonomy-data.ts").taskTaxonomyData;
-  assert.equal(Object.keys(data.assignments).length,1967);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
+  assert.equal(Object.keys(data.assignments).length,1967+profileRelease.newTasks);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
 });
 test("stable taxonomy IDs resolve valid topic→subtopic relations; sources never become subtypes",()=>{
   for(const node of Object.values(report.nodes)){
@@ -35,7 +36,7 @@ test("source evidence is explicit: all current originals remain originals, never
 });
 test("real multi-subtype number filters compose by topic/subtopic/subtype/source and never fall back to other tasks",()=>{
   const options=taxonomy.getNumberTaxonomyOptions(selected);assert.ok(options.subtypes.length>=4);
-  const subtypeId=options.subtypes[0].id;
+  const subtypeId="math-subtype-derivative-point";
   const tasks=bank.getPracticeTasks({...selected,subtypeId});assert.ok(tasks.length>0);assert.equal(tasks.length,bank.getPracticeTaskCount({...selected,subtypeId}));
   const c=taxonomy.getTaskClassification(tasks[0].id);
   const filter={...selected,subtypeId,taxonomyTopicId:c.topicId,subtopicId:c.subtopicId,sourceCategoryId:"tochka-original"};
@@ -52,7 +53,7 @@ test("Russian per-card prototypes are not invented linguistic subtypes or automa
 });
 test("filtered contexts and stable task drafts survive routes/reload and remain separate from all-number sessions",()=>{
   const practice=load("src/lib/practice.ts"),storage=load("src/lib/practice-storage.ts"),{parseStudyRoute}=load("src/lib/navigation.ts");
-  const subtypeId=taxonomy.getNumberTaxonomyOptions(selected).subtypes[0].id;
+  const subtypeId="math-subtype-derivative-point";
   const selection=practice.normalizeCatalogSelection({...selected,exam:"ЕГЭ",mode:"number",subtypeId,sourceCategoryId:"tochka-original"});
   const all={...selection,subtypeId:undefined,sourceCategoryId:undefined};
   assert.notEqual(practice.practiceContextKey(selection),practice.practiceContextKey(all));
@@ -69,7 +70,8 @@ test("current 2027 placements and every authored task body/answer/ID remain byte
   const old=createContentLoader({revision:"ae9003dc3576431fbc6bbba9acae17d106cdb1cb"});
   const prior=old("src/lib/tasks.ts").practiceBank;
   assert.equal(bank.practiceBank.length,prior.length);bank.practiceBank.forEach((t,i)=>assert.equal(contentFingerprint(t),contentFingerprint(prior[i]),t.id));
-  assert.deepEqual(load("src/lib/task-package-index.ts").taskPackageIndex,old("src/lib/task-package-index.ts").taskPackageIndex);
+  const priorPackages=old("src/lib/task-package-index.ts").taskPackageIndex;
+  assert.deepEqual(load("src/lib/task-package-index.ts").taskPackageIndex.slice(0,priorPackages.length),priorPackages);
   assert.equal(taxonomy.getTaskClassification("multi-subject-20261026-25").number,13);
   for(const t of bank.tasks.filter(t=>t.level==="profile"&&t.examNumber===16))assert.equal(taxonomy.getTaskClassification(t.id).number,null);
 });
@@ -83,7 +85,7 @@ test("lazy facets count unloaded metadata accurately; selecting a subtype fetche
   try {await ensureTaskPackages(filter);assert.equal(b.getPracticeTasks(filter).length,expected);assert.equal(b.getPracticeTaskCount(filter),expected);assert.ok(requested.length>0);const n=requested.length;await ensureTaskPackages(filter);assert.equal(requested.length,n);}finally{globalThis.fetch=original;}
 });
 test("generation orders select an exact READY subtype and bounded quantity through the existing gate",()=>{
-  assert.equal(report.generators.length,31);assert.ok(report.generators.every(g=>g.subtypeId&&g.topicId&&g.subtopicId&&g.answerFormat&&g.verification));
+  assert.equal(report.generators.length,72);assert.ok(report.generators.every(g=>g.subtypeId&&g.topicId&&g.subtopicId&&g.answerFormat&&g.verification));
   const audit=generationAudit(),request=planSubtypeGeneration(audit,{modelId:"ege-chemistry",number:26,subtype:"dilute-solution-mixture",count:120});assert.equal(request.count,120);assert.equal(request.subtype,"dilute-solution-mixture");
   for(const count of [0,-1,1.5,1001,"100"])assert.throws(()=>planSubtypeGeneration(audit,{modelId:"ege-chemistry",number:26,subtype:"dilute-solution-mixture",count}));
   assert.throws(()=>planSubtypeGeneration(audit,{modelId:"ege-geography",number:14,subtype:"time-zone-conversion",count:5}));

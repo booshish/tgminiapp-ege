@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { readFileSync,writeFileSync } from "node:fs";
+import { existsSync,readFileSync,writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { createContentLoader,projectRoot } from "./content-source-loader.mjs";
@@ -41,6 +41,7 @@ const labels={
   "power-minus-offset-digit-count":["Системы счисления","Цифры позиционной записи","Число цифр в разности степени и числа"],
 };
 const mathConcepts=[
+  ["Математический анализ","Производная и экстремумы",/кубическ.*функци/iu],
   ["Геометрия на плоскости","Окружность",/окружност|касательн.*окруж|хорд/iu],
   ["Геометрия на плоскости","Треугольники",/треуголь|гипотенуз|катет|пифагор|высот.*проекц/iu],
   ["Геометрия на плоскости","Четырёхугольники",/трапец|ромб|параллелограмм/iu],
@@ -84,6 +85,9 @@ export function buildTaskTaxonomy(){
   const proofs=JSON.parse(readFileSync(resolve(projectRoot,"docs/remaining-pilot-verification.json"),"utf8")).records;
   const reviewed=new Map(proofs.map(r=>[r.id,{...r,evidence:"docs/remaining-pilot-verification.json"}]));
   const reviewHashes=new Map(JSON.parse(readFileSync(resolve(projectRoot,"docs/remaining-pilot-review.json"),"utf8")).reviews.map(r=>[r.id,r.sha256]));
+  const profilePath=resolve(projectRoot,"docs/profile-math-verification.json");
+  const profileReceipt=existsSync(profilePath)?JSON.parse(readFileSync(profilePath,"utf8")):null;
+  const profileReviews=new Map((profileReceipt?.records??[]).map(r=>[r.id,r]));
   const nodes={},assignments={},records=[];
   function node(kind,subject,title,parentId){const id=`${subject}-${kind}-${hash(`${parentId??""}|${title}`)}`;const value={id,kind,subjectId:subject,title,...(parentId?{parentId}: {})};if(nodes[id])assert.deepEqual(nodes[id],value);else nodes[id]=value;return id;}
   for(const raw of bank){
@@ -98,6 +102,8 @@ export function buildTaskTaxonomy(){
         else {family="finite-verb-forms";triple=["Грамматика","Личные формы глагола","Согласование формы глагола с подлежащим"];}
       }
     }
+    const profile=profileReviews.get(raw.id);
+    if(profile){assert.equal(contentFingerprint(raw),profile.sha256,`Stale profile classification: ${raw.id}`);family=profile.family;triple=profile.triple;evidence="docs/profile-math-verification.json";}
     const topicId=node("topic",task.subjectId,triple?.[0]??slot?.title??"Школьная математическая база");
     const subtopicId=triple?node("subtopic",task.subjectId,triple[1],topicId):null;
     const subtypeId=triple?`${task.subjectId}-subtype-${slug(family)}`:null;
@@ -121,10 +127,17 @@ export function buildTaskTaxonomy(){
     })};
   })));
   const generators=audit.directions.flatMap(d=>d.numbers.flatMap(n=>n.subtypes.filter(s=>s.hasGenerator).map(s=>{
-    const triple=labels[s.subtype],topicId=triple?node("topic",d.subjectId,triple[0]):null,subtopicId=triple?node("subtopic",d.subjectId,triple[1],topicId):null;
+    const profile=profileReceipt?.generators.find(g=>d.id==="ege-math-profile"&&g.number===n.number&&g.subtype===s.subtype);
+    const triple=labels[s.subtype]??(profile?[profile.topic,profile.subtopic,profile.title]:null),topicId=triple?node("topic",d.subjectId,triple[0]):null,subtopicId=triple?node("subtopic",d.subjectId,triple[1],topicId):null;
     const subtypeId=triple?`${d.subjectId}-subtype-${slug(s.subtype)}`:null;if(subtypeId&&!nodes[subtypeId])nodes[subtypeId]={id:subtypeId,kind:"subtype",subjectId:d.subjectId,title:triple[2]};
     return {generatorId:`${d.id}:${n.number}:${s.subtype}`,modelId:d.id,number:n.number,subtype:s.subtype,subtypeId,topicId,subtopicId,answerFormat:s.answerFormat,verification:s.answerVerification,implementation:s.generationMethod,readiness:s.status,limitations:s.limitations};
   })));
+  if(existsSync(profilePath))for(const g of JSON.parse(readFileSync(profilePath,"utf8")).generators){
+    if(generators.some(row=>row.generatorId===`ege-math-profile:${g.number}:${g.subtype}`))continue;
+    const topicId=node("topic","math",g.topic),subtopicId=node("subtopic","math",g.subtopic,topicId),subtypeId=`math-subtype-${slug(g.subtype)}`;
+    if(!nodes[subtypeId])nodes[subtypeId]={id:subtypeId,kind:"subtype",subjectId:"math",title:g.title};
+    generators.push({generatorId:`ege-math-profile:${g.number}:${g.subtype}`,modelId:"ege-math-profile",number:g.number,subtype:g.subtype,subtypeId,topicId,subtopicId,answerFormat:g.number<=13?"number":"extended",verification:g.verification,implementation:{file:"scripts/profile-math-generators.mjs",export:"generateProfileBatch",selector:{number:g.number,subtype:g.subtype}},readiness:g.status,limitations:g.limitations});
+  }
   const active=records.filter(t=>t.active),numbers=directions.flatMap(d=>d.numbers);
   return {schemaVersion:1,checkedAt:"2026-10-27",structureVersion:"2027-placement-v1",nodes,assignments,records,directions,generators,sourceRecords:sourceRegistry,counts:{directions:directions.length,numbers:numbers.length,numbersWithTasks:numbers.filter(n=>n.taskCount).length,numbersWithReviewedSubtypes:numbers.filter(n=>n.groups.some(g=>g.subtypeId)).length,fullyClassifiedNumbers:0,subtypes:Object.values(nodes).filter(n=>n.kind==="subtype").length,topics:Object.values(nodes).filter(n=>n.kind==="topic").length,subtopics:Object.values(nodes).filter(n=>n.kind==="subtopic").length,sourceTasks:records.length,activeTasks:active.length,reviewedDetailedTasks:active.filter(t=>t.subtypeId).length,broadTopicOnlyTasks:active.filter(t=>!t.subtypeId).length,unconfirmedOriginTasks:records.filter(t=>t.source.category==="unconfirmed").length,individualCodifierMappingsConfirmed:0,generatorContracts:generators.length},limitations:["Классификация авторских семейств не является исчерпывающей официальной типологией ФИПИ", "Без прямого подтверждения подтип/подтема остаются пустыми; общая тема не объявляется полным покрытием", "Все связи с кодификатором пока уровня номера; индивидуальная привязка требует содержательной проверки", "Происхождение собственных задач подтверждено декларацией и файлами проекта, не независимой правовой экспертизой", "Год экзамена не выдаётся за год происхождения материала", "Новые материалы не создавались и не импортировались"]};
 }
