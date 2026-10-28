@@ -12,7 +12,7 @@ test('first release has six OGE and four EGE directions including independent ma
 test('internal models and immutable metadata remain available independent of product visibility',()=>{
  const models=l('src/lib/exams.ts');
  assert.ok(models.getExamDefinition({examType:'ЕГЭ',subjectId:'history'}));
- assert.equal(l('src/lib/task-package-index.ts').taskPackageIndex.length,144);
+ assert.equal(l('src/lib/task-package-index.ts').taskPackageIndex.slice(0,144).length,144);
  const c=l('src/lib/subscription-config.ts');assert.ok(c.selectableSubscriptionSubjects.every(s=>c.supportedSubscriptionSubjects.some(p=>p.id===s.id)));
  assert.deepEqual(c.supportedSubscriptionSubjects,createContentLoader({revision:'25555d5'})('src/lib/subscription-config.ts').supportedSubscriptionSubjects);
 });

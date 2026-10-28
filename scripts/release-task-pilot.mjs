@@ -53,7 +53,7 @@ export async function releasePilot(options = {}) {
   const dir = resolve(projectRoot, ".content-staging/pilot-input"); mkdirSync(dir, { recursive: true });
   const input = resolve(dir, `${batchId}.jsonl`); writeFileSync(input, tasks.map((t) => JSON.stringify(t)).join("\n") + "\n");
   writeFileSync(resolve(projectRoot, options.reviewFile ?? "docs/pilot-task-review.json"), JSON.stringify({ date: options.reviewedAt ?? "2026-10-26", kind: "original-training-not-official-exam", reviews }, null, 2) + "\n");
-  const result = await importTasks({ input, job: batchId, reviews });
+  const result = await importTasks({ input, job: batchId, reviews, batchSize: options.batchSize ?? 200 });
   assert.equal(result.counts.staged + (options.allowDuplicates ? result.counts.duplicates : 0), tasks.length);
   assert.equal(result.counts.rejected, 0); assert.equal(result.counts.review, 0);
   if (!options.allowDuplicates) assert.equal(result.counts.duplicates, 0);

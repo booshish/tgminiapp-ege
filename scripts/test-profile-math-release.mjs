@@ -41,7 +41,8 @@ test('every 2027 profile number has original new conditions, solutions and seman
   const map=read('docs/task-classification-map.json'),classification=new Map(map.records.map(r=>[r.taskId,r]));
   const inventory=profileInventory(all);
   assert.equal(release.before.reduce((n,r)=>n+r.count,0),198);
-  assert.equal(inventory.reduce((n,r)=>n+r.count,0),2234);
+  const refill=read('docs/priority-refill-release.json');
+  assert.equal(inventory.reduce((n,r)=>n+r.count,0),2234+refill.stats.filter(s=>s.exam==='ЕГЭ').reduce((n,s)=>n+s.added,0));
   const newCounts={6:278,13:25,17:20};
   for(let number=1;number<=20;number++){
     const current=tasks.filter(t=>t.examNumber===number);assert.ok(current.length>0);

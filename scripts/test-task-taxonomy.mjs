@@ -9,15 +9,16 @@ import { generationAudit,planSubtypeGeneration } from "./exam-generation-audit.m
 const load=createContentLoader(),bank=load("src/lib/tasks.ts"),taxonomy=load("src/lib/task-taxonomy.ts");
 const report=JSON.parse(readFileSync(resolve(projectRoot,"docs/task-classification-map.json"),"utf8"));
 const profileRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/profile-math-release.json"),"utf8"));
+const refillRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/priority-refill-release.json"),"utf8"));
 const selected={examType:"ЕГЭ",subjectId:"math",level:"profile",examNumber:9};
 
 test("taxonomy is a reproducible metadata overlay for 30 directions/825 positions, not a second task bank",()=>{
   assert.deepEqual(buildTaskTaxonomy(),report);
   assert.equal(report.directions.length,30);assert.equal(report.directions.flatMap(d=>d.numbers).length,825);
-  assert.equal(report.counts.sourceTasks,1967+profileRelease.newTasks);assert.equal(report.counts.fullyClassifiedNumbers,0);
-  assert.equal(report.counts.reviewedDetailedTasks,713+profileRelease.newTasks);assert.equal(report.counts.numbersWithReviewedSubtypes,122);
+  assert.equal(report.counts.sourceTasks,1967+profileRelease.newTasks+refillRelease.approvedIds.length);assert.equal(report.counts.fullyClassifiedNumbers,0);
+  assert.equal(report.counts.reviewedDetailedTasks,713+profileRelease.newTasks+refillRelease.approvedIds.length);assert.equal(report.counts.numbersWithReviewedSubtypes,124);
   const data=load("src/lib/content/task-taxonomy-data.ts").taskTaxonomyData;
-  assert.equal(Object.keys(data.assignments).length,1967+profileRelease.newTasks);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
+  assert.equal(Object.keys(data.assignments).length,1967+profileRelease.newTasks+refillRelease.approvedIds.length);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
 });
 test("stable taxonomy IDs resolve valid topic→subtopic relations; sources never become subtypes",()=>{
   for(const node of Object.values(report.nodes)){

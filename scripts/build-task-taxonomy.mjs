@@ -87,7 +87,9 @@ export function buildTaskTaxonomy(){
   const reviewHashes=new Map(JSON.parse(readFileSync(resolve(projectRoot,"docs/remaining-pilot-review.json"),"utf8")).reviews.map(r=>[r.id,r.sha256]));
   const profilePath=resolve(projectRoot,"docs/profile-math-verification.json");
   const profileReceipt=existsSync(profilePath)?JSON.parse(readFileSync(profilePath,"utf8")):null;
-  const profileReviews=new Map((profileReceipt?.records??[]).map(r=>[r.id,r]));
+  const refillPath=resolve(projectRoot,"docs/priority-refill-verification.json");
+  const refillRecords=existsSync(refillPath)?JSON.parse(readFileSync(refillPath,"utf8")).records:[];
+  const profileReviews=new Map([...(profileReceipt?.records??[]),...refillRecords].map(r=>[r.id,r]));
   const nodes={},assignments={},records=[];
   function node(kind,subject,title,parentId){const id=`${subject}-${kind}-${hash(`${parentId??""}|${title}`)}`;const value={id,kind,subjectId:subject,title,...(parentId?{parentId}: {})};if(nodes[id])assert.deepEqual(nodes[id],value);else nodes[id]=value;return id;}
   for(const raw of bank){
@@ -103,7 +105,7 @@ export function buildTaskTaxonomy(){
       }
     }
     const profile=profileReviews.get(raw.id);
-    if(profile){assert.equal(contentFingerprint(raw),profile.sha256,`Stale profile classification: ${raw.id}`);family=profile.family;triple=profile.triple;evidence="docs/profile-math-verification.json";}
+    if(profile){assert.equal(contentFingerprint(raw),profile.sha256,`Stale profile classification: ${raw.id}`);family=profile.family;triple=profile.triple;evidence=raw.id.startsWith("refill-")?"docs/priority-refill-verification.json":"docs/profile-math-verification.json";}
     const topicId=node("topic",task.subjectId,triple?.[0]??slot?.title??"Школьная математическая база");
     const subtopicId=triple?node("subtopic",task.subjectId,triple[1],topicId):null;
     const subtypeId=triple?`${task.subjectId}-subtype-${slug(family)}`:null;

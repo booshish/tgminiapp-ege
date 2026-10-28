@@ -1,0 +1,405 @@
+[
+  {
+    "exam": "ЕГЭ",
+    "subject": "math",
+    "number": 4,
+    "before": 17,
+    "added": 174,
+    "after": 191,
+    "families": [
+      "grid-rectangle",
+      "interval-union"
+    ],
+    "beforeCoverage": {
+      "tasks": 17,
+      "difficulty": {
+        "standard": 17
+      },
+      "subtypes": {
+        "pending": 3,
+        "math-subtype-one-draw": 7,
+        "math-subtype-complement": 7
+      },
+      "withSolution": 17
+    },
+    "afterCoverage": {
+      "tasks": 191,
+      "difficulty": {
+        "standard": 191
+      },
+      "subtypes": {
+        "pending": 3,
+        "math-subtype-one-draw": 7,
+        "math-subtype-complement": 7,
+        "math-subtype-grid-rectangle": 6,
+        "math-subtype-interval-union": 168
+      },
+      "withSolution": 191
+    }
+  },
+  {
+    "exam": "ЕГЭ",
+    "subject": "math",
+    "number": 5,
+    "before": 26,
+    "added": 230,
+    "after": 256,
+    "families": [
+      "series-parallel-reliability",
+      "without-replacement-same-colour",
+      "three-trials-exactly-two"
+    ],
+    "beforeCoverage": {
+      "tasks": 26,
+      "difficulty": {
+        "standard": 26
+      },
+      "subtypes": {
+        "math-subtype-exactly-one": 11,
+        "math-subtype-at-least-one": 6,
+        "math-subtype-total-probability-production": 9
+      },
+      "withSolution": 26
+    },
+    "afterCoverage": {
+      "tasks": 256,
+      "difficulty": {
+        "standard": 256
+      },
+      "subtypes": {
+        "math-subtype-exactly-one": 11,
+        "math-subtype-at-least-one": 6,
+        "math-subtype-total-probability-production": 9,
+        "math-subtype-series-parallel-reliability": 9,
+        "math-subtype-without-replacement-same-colour": 1,
+        "math-subtype-three-trials-exactly-two": 220
+      },
+      "withSolution": 256
+    }
+  },
+  {
+    "exam": "ЕГЭ",
+    "subject": "math",
+    "number": 11,
+    "before": 113,
+    "added": 185,
+    "after": 298,
+    "families": [
+      "mixture-concentration",
+      "catch-up-distance"
+    ],
+    "beforeCoverage": {
+      "tasks": 113,
+      "difficulty": {
+        "standard": 113
+      },
+      "subtypes": {
+        "math-subtype-catch-up": 6,
+        "math-subtype-joint-work": 17,
+        "math-subtype-river-round-trip": 90
+      },
+      "withSolution": 113
+    },
+    "afterCoverage": {
+      "tasks": 298,
+      "difficulty": {
+        "standard": 298
+      },
+      "subtypes": {
+        "math-subtype-catch-up": 6,
+        "math-subtype-joint-work": 17,
+        "math-subtype-river-round-trip": 90,
+        "math-subtype-mixture-concentration": 72,
+        "math-subtype-catch-up-distance": 113
+      },
+      "withSolution": 298
+    }
+  },
+  {
+    "exam": "ЕГЭ",
+    "subject": "math",
+    "number": 13,
+    "before": 25,
+    "added": 440,
+    "after": 465,
+    "families": [
+      "deposit-with-cashflows",
+      "progressive-charge"
+    ],
+    "beforeCoverage": {
+      "tasks": 25,
+      "difficulty": {
+        "standard": 25
+      },
+      "subtypes": {
+        "math-subtype-equal-principal-loan-total": 6,
+        "math-subtype-compound-deposit": 19
+      },
+      "withSolution": 25
+    },
+    "afterCoverage": {
+      "tasks": 465,
+      "difficulty": {
+        "standard": 465
+      },
+      "subtypes": {
+        "math-subtype-equal-principal-loan-total": 6,
+        "math-subtype-compound-deposit": 19,
+        "math-subtype-deposit-with-cashflows": 220,
+        "math-subtype-progressive-charge": 220
+      },
+      "withSolution": 465
+    }
+  },
+  {
+    "exam": "ОГЭ",
+    "subject": "math",
+    "number": null,
+    "before": 252,
+    "added": 100,
+    "after": 352,
+    "families": [
+      "fraction-combination"
+    ],
+    "beforeCoverage": {
+      "tasks": 252,
+      "difficulty": {
+        "standard": 208,
+        "foundation": 7,
+        "advanced": 37
+      },
+      "subtypes": {
+        "pending": 62,
+        "math-subtype-oge-1-plan-perimeter": 10,
+        "math-subtype-oge-2-plan-house-area": 10,
+        "math-subtype-oge-3-plan-lawn-area": 10,
+        "math-subtype-oge-4-plan-tiles": 10,
+        "math-subtype-oge-5-plan-fence-cost": 10,
+        "math-subtype-oge-6-fraction-sum": 10,
+        "math-subtype-oge-8-difference-squares": 10,
+        "math-subtype-oge-9-quadratic-larger-root": 10,
+        "math-subtype-oge-10-not-red-ball": 10,
+        "math-subtype-oge-11-line-through-points": 10,
+        "math-subtype-oge-12-kinetic-energy": 10,
+        "math-subtype-oge-13-integer-in-system": 10,
+        "math-subtype-oge-14-arithmetic-term": 10,
+        "math-subtype-oge-15-isosceles-angle": 10,
+        "math-subtype-oge-16-circle-chord": 10,
+        "math-subtype-oge-17-rhombus-area": 10,
+        "math-subtype-oge-20-rational-equation": 4,
+        "math-subtype-oge-21-joint-work": 4,
+        "math-subtype-oge-22-line-with-hole": 4,
+        "math-subtype-oge-23-altitude-projections": 4,
+        "math-subtype-oge-24-trapezoid-midpoints": 1,
+        "math-subtype-oge-24-two-tangents": 1,
+        "math-subtype-oge-24-acute-altitudes": 1,
+        "math-subtype-oge-24-incircle-tangents": 1,
+        "math-subtype-oge-25-right-incircle-area": 4,
+        "math-subtype-oge-6-multi-step-fractions": 3,
+        "math-subtype-oge-9-rational-domain": 3
+      },
+      "withSolution": 252
+    },
+    "afterCoverage": {
+      "tasks": 352,
+      "difficulty": {
+        "standard": 308,
+        "foundation": 7,
+        "advanced": 37
+      },
+      "subtypes": {
+        "pending": 62,
+        "math-subtype-oge-1-plan-perimeter": 10,
+        "math-subtype-oge-2-plan-house-area": 10,
+        "math-subtype-oge-3-plan-lawn-area": 10,
+        "math-subtype-oge-4-plan-tiles": 10,
+        "math-subtype-oge-5-plan-fence-cost": 10,
+        "math-subtype-oge-6-fraction-sum": 10,
+        "math-subtype-oge-8-difference-squares": 10,
+        "math-subtype-oge-9-quadratic-larger-root": 10,
+        "math-subtype-oge-10-not-red-ball": 10,
+        "math-subtype-oge-11-line-through-points": 10,
+        "math-subtype-oge-12-kinetic-energy": 10,
+        "math-subtype-oge-13-integer-in-system": 10,
+        "math-subtype-oge-14-arithmetic-term": 10,
+        "math-subtype-oge-15-isosceles-angle": 10,
+        "math-subtype-oge-16-circle-chord": 10,
+        "math-subtype-oge-17-rhombus-area": 10,
+        "math-subtype-oge-20-rational-equation": 4,
+        "math-subtype-oge-21-joint-work": 4,
+        "math-subtype-oge-22-line-with-hole": 4,
+        "math-subtype-oge-23-altitude-projections": 4,
+        "math-subtype-oge-24-trapezoid-midpoints": 1,
+        "math-subtype-oge-24-two-tangents": 1,
+        "math-subtype-oge-24-acute-altitudes": 1,
+        "math-subtype-oge-24-incircle-tangents": 1,
+        "math-subtype-oge-25-right-incircle-area": 4,
+        "math-subtype-oge-6-multi-step-fractions": 3,
+        "math-subtype-oge-9-rational-domain": 3,
+        "math-subtype-fraction-combination": 100
+      },
+      "withSolution": 352
+    }
+  },
+  {
+    "exam": "ОГЭ",
+    "subject": "informatics",
+    "number": null,
+    "before": 29,
+    "added": 22,
+    "after": 51,
+    "families": [
+      "executor-two-operations"
+    ],
+    "beforeCoverage": {
+      "tasks": 29,
+      "difficulty": {
+        "standard": 29
+      },
+      "subtypes": {
+        "pending": 29
+      },
+      "withSolution": 29
+    },
+    "afterCoverage": {
+      "tasks": 51,
+      "difficulty": {
+        "standard": 51
+      },
+      "subtypes": {
+        "pending": 29,
+        "informatics-subtype-executor-two-operations": 22
+      },
+      "withSolution": 51
+    }
+  },
+  {
+    "exam": "ОГЭ",
+    "subject": "chemistry",
+    "number": null,
+    "before": 5,
+    "added": 20,
+    "after": 25,
+    "families": [
+      "dilution-mass-fraction"
+    ],
+    "beforeCoverage": {
+      "tasks": 5,
+      "difficulty": {
+        "standard": 5
+      },
+      "subtypes": {
+        "pending": 5
+      },
+      "withSolution": 5
+    },
+    "afterCoverage": {
+      "tasks": 25,
+      "difficulty": {
+        "standard": 25
+      },
+      "subtypes": {
+        "pending": 5,
+        "chemistry-subtype-dilution-mass-fraction": 20
+      },
+      "withSolution": 25
+    }
+  },
+  {
+    "exam": "ОГЭ",
+    "subject": "russian",
+    "number": null,
+    "before": 455,
+    "added": 0,
+    "after": 455,
+    "families": [],
+    "beforeCoverage": {
+      "tasks": 455,
+      "difficulty": {
+        "standard": 455
+      },
+      "subtypes": {
+        "pending": 455
+      },
+      "withSolution": 455
+    },
+    "afterCoverage": {
+      "tasks": 455,
+      "difficulty": {
+        "standard": 455
+      },
+      "subtypes": {
+        "pending": 455
+      },
+      "withSolution": 455
+    }
+  },
+  {
+    "exam": "ОГЭ",
+    "subject": "biology",
+    "number": null,
+    "before": 5,
+    "added": 0,
+    "after": 5,
+    "families": [],
+    "beforeCoverage": {
+      "tasks": 5,
+      "difficulty": {
+        "foundation": 5
+      },
+      "subtypes": {
+        "biology-subtype-taxonomic-rank-order": 2,
+        "biology-subtype-germination-lab-sequence": 1,
+        "biology-subtype-organism-traits-from-description": 1,
+        "biology-subtype-plant-animal-cell-comparison": 1
+      },
+      "withSolution": 5
+    },
+    "afterCoverage": {
+      "tasks": 5,
+      "difficulty": {
+        "foundation": 5
+      },
+      "subtypes": {
+        "biology-subtype-taxonomic-rank-order": 2,
+        "biology-subtype-germination-lab-sequence": 1,
+        "biology-subtype-organism-traits-from-description": 1,
+        "biology-subtype-plant-animal-cell-comparison": 1
+      },
+      "withSolution": 5
+    }
+  },
+  {
+    "exam": "ОГЭ",
+    "subject": "social-studies",
+    "number": null,
+    "before": 5,
+    "added": 0,
+    "after": 5,
+    "families": [],
+    "beforeCoverage": {
+      "tasks": 5,
+      "difficulty": {
+        "foundation": 5
+      },
+      "subtypes": {
+        "social-studies-subtype-limited-budget-choice": 1,
+        "pending": 3,
+        "social-studies-subtype-short-run-fixed-variable-costs": 1
+      },
+      "withSolution": 5
+    },
+    "afterCoverage": {
+      "tasks": 5,
+      "difficulty": {
+        "foundation": 5
+      },
+      "subtypes": {
+        "social-studies-subtype-limited-budget-choice": 1,
+        "pending": 3,
+        "social-studies-subtype-short-run-fixed-variable-costs": 1
+      },
+      "withSolution": 5
+    }
+  }
+]

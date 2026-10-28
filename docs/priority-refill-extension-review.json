@@ -1,0 +1,1986 @@
+{
+  "date": "2026-10-28",
+  "kind": "original-training-not-official-exam",
+  "reviews": [
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1590",
+      "sha256": "7ad3471597706188c0dd4750953af415441657ddab9e1f6808fc7bc73b132523",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1591",
+      "sha256": "9edbd18760fb7894da66ffbd018925c0bd614abd8a44928211e231aae6a85743",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1592",
+      "sha256": "78010b5b73c1c2ad86fdc8de4653d81f51d7b94df8616fcb9f580cb3867884d3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1593",
+      "sha256": "3ca2fd2c889dd614ef73eeac5449fac35a4533790f73c4a0347f31544020a877",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1594",
+      "sha256": "f24567ef9395418cc7e2a8a29097efebb9e3e797a9506d1b8796f7d6ee5e8f48",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1595",
+      "sha256": "92f850938a4715aae6865d9b8424dd829f242f5ccf8d3f0a32d8c9bc4cb37957",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1596",
+      "sha256": "b04d4db0ebe72a768c8694194e960a8eeaca660925aed71a0f9c4d0a97e3a37e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1597",
+      "sha256": "6f6a80e1511a70fe8300f88da4aedd420d8be88e28b39b6415562539d2bf7bfc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1598",
+      "sha256": "9727b7b6ec705a251c768190940cafd087bc5120cd34ead02de372a64c812abc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1599",
+      "sha256": "ab87e0e40313e32f7ba1dc81da7a9755d15631479e554568efb1093b78c1a7f0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1600",
+      "sha256": "1abae0d19888eaa2077832e968fff70355add00a3e17c721c9fa6b4aec12db07",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1601",
+      "sha256": "fc32afb8a253e0488fd25c39fc9c34328cee73e30cb7bf8f2f05a755ae3d38d6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1602",
+      "sha256": "ab1c9870db6a072ed5869fcac27d42db028dca499d3ea8f461217964de00c963",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1603",
+      "sha256": "1be4053ee44455be455c5dbffea44e4ad91ea85a41a956ab54dd6ee2a7a9df44",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1604",
+      "sha256": "09b65aa4ceff2e5e6532b56b1f993347c20f5c5bd27f444e5cc8cb193de44ae5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1605",
+      "sha256": "0ca8f99981841c5808c6f7493419080933eda98453112b19725921ebc05ebbb3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1606",
+      "sha256": "bf654dcb8fcc9de0fcd08d1794ed0097d5292724d35f6ad6a3e03e5b2a7e47c0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1607",
+      "sha256": "c84a2358cbd1fefb6d33504d3578646445d95f51926d16853a8cd3cea1b591e4",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1608",
+      "sha256": "91153a5272a7af86e53032dc7a98c794abe57f062bad46905c3831733b772e7d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1609",
+      "sha256": "8c430ebd13238f9e73e81a837d01b10b9ac7de1e02710536e7190c29f96f6cd2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1610",
+      "sha256": "8022bf1da1fa8d09339a47214fb0d6def018a7c7a65d0d83832875aee7bb5f0e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1611",
+      "sha256": "f29a152a07157f4af10a859ea3edb77fb30b02a4c5b5f0599a5e37c77d40058f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1612",
+      "sha256": "8c9ed738a282d695481efe057a59c70331bf9e9948bd9756e87941cde78d5eed",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1613",
+      "sha256": "ff845c8d3ccad7cc8af8829eaac2e5c30d26b9522d7517468f2b511b0a1a4280",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1614",
+      "sha256": "4274ee5a13ee20337c83aaa8147f3d4c2e68541e8248ac7b3c310f9b6a05b831",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1615",
+      "sha256": "f3b5548babc29956a099310f0029b73d05eb3d5bf817acacb5bed26206a81564",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1616",
+      "sha256": "80c77dcb56c1e5bdad980dde11122679d73ac40ba23ce1f7e15d736e9cbafd23",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1617",
+      "sha256": "86ac81412311bc31005162cbd764a706fa4699ff00dc511a7e82ab360fe17bb3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1618",
+      "sha256": "eeb9662e45900538818332d6ab3589d6ad3e8fac893f208f8c6bfa70c49a821b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1619",
+      "sha256": "d9636eafef800a6f1a219ba64c39b86348291173b3821d42450b8f34bbe377c8",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1620",
+      "sha256": "c17e1f618e9c6812c8e39985c9b276d8e1d63d2e3a280ce1b23b030eec706ace",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1621",
+      "sha256": "a4a243d9e8015d38d2f70ea104648af6d160c195cb0a76425920ae70a80eb3d8",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1622",
+      "sha256": "9c0c15cff7933632765e9be08f532b75322e6952cb275dda39ec9b9aef997915",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1623",
+      "sha256": "3e9194cf0cf387798b396e6755cf09c82f250b9712bb3825ca88387c3641b838",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1624",
+      "sha256": "bca2698c9ab8f77f7054f3d1e6610538e976f8bd2fcbecb3b28a438fe6d4a365",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1625",
+      "sha256": "1dadd13843c49e337a463411e94df5d897b09f643d74763c20983e8cf4964e23",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1626",
+      "sha256": "78f400fe30df2dcd034ea30ae2558a570be0f246aaa91e86c0c108d89d8048ae",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1627",
+      "sha256": "77bbcadd4f695996351dadd445d5dd1162b079b8f90c6a562b29b3febdd06a30",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1628",
+      "sha256": "703a96f8de23ce872cd810f20c5799f4bcedf0c6a8bba868f01a251668285817",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1629",
+      "sha256": "17678bbff5cfe16c2f6e82755fc5f5393956b6c10ec29edfeea73407f3e7eb44",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1630",
+      "sha256": "cffc77b392ef04de788d5bf3f0c41feea03ff73fb4dfc923ded5450a2a8baf5b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1631",
+      "sha256": "24782a476e2b6ebb33e4819667e0520e7ae9c339d4e434c01dc13007ae5ad160",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1632",
+      "sha256": "a695c40190266504ee24d4a3de703142fed3eb8da79b99c407561cbf9dc46b24",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1633",
+      "sha256": "9edc7d4a80081d9a222cb511ed7e1bcc1251405c879aa23fb23bae387fec2bef",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1634",
+      "sha256": "0df3bc7f56d3724c35a54c07719aabccdcc667b31837bd3f07ff9bee2185c759",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1635",
+      "sha256": "b4c2106642170a67ba00ded38aab677389e0353b1118a7f67d33c434aa37e008",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1636",
+      "sha256": "b9015a533dfb55a803585e4cfdf257eb86274402c00343a060cc8817ba912ef4",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1637",
+      "sha256": "50b2c4faa62d1f90d5e394cc803e8b7e5b112286b05654c055175c49f2d2322b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1638",
+      "sha256": "5a62349efb055f9e6850716b3d437c88d8d2f0c02afcf87b6ea973d0d49a03df",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1639",
+      "sha256": "90c85059b923b9df01e7806f18abba0fa3288102c795c33d25a835056dbfc429",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1640",
+      "sha256": "baa3bb39bba812d8398a1f290aac0db90ef3a3e4907ff74b6906898087bd5f49",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1641",
+      "sha256": "edeb07634a5ceeb70ae35d048650d8ef3fa03bdddd4c5788f92cfda57304eb1b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1642",
+      "sha256": "90e95edc883e0d9f1ab10b16875c90e9903c2a6ebf964ae0f6c564f6af5a6061",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1643",
+      "sha256": "1b599aebc4ccfa8cc6a644251ab8b35c880548d4b881217731c81a356ec58b88",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1644",
+      "sha256": "88312bd4b01c33a200dc76884b673b8ecfab600d194f80c66b1d7d4ca6fd69b3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1645",
+      "sha256": "82f5acc5ed4dfed07c1367cb5c7aa1006947bcf30f631da82151af094e752244",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1646",
+      "sha256": "2d04dfd0fb71ccbcab8e1b2e95e7ecf093d1db319a1f43a2f8a6975ce21f65c3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1647",
+      "sha256": "ad1475579122c0717864d5813fb027159cd350f8e5edea071b2778a179f3545d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1648",
+      "sha256": "407935295a42788b6eecb2b92852e28a70a5f820b7af80b0f8c697a5f42ab9c0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1649",
+      "sha256": "12fec3e128aae5dbc63092fbf54ae466d0ee596de1fd14d976f25da6fd79c2e5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1650",
+      "sha256": "61a9ed16d4fa0a92759fff7e79c01b98a9b2cc4b35ab08123682e541f16e299f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1651",
+      "sha256": "1de97017ea9cd2428a3e92e752e14d6163721e13a2ff1a4679b83a17f808a344",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1652",
+      "sha256": "e100984e0bba345253b91d7c9449db90399e90f7bdf181eaeb54ee7cf87ff5f8",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1653",
+      "sha256": "bb7b09cf224ec4ee628c68c539a7b7e06b90198999a9f55183c1451f48a00ed7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1654",
+      "sha256": "4e8b4c271e1f6c9a9cdaaf51b91abba350a94f42e287c2aa251eb54edccd2dd7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1655",
+      "sha256": "a33807f59e9cb2a2af131a14505d89283077c9cc260b9cb433ace1c9088ec4c6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1656",
+      "sha256": "e192e2e3422f1bbd21ee3c3f03a2b536cdff25ee0de023948d6854c1db2d529c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1657",
+      "sha256": "827bf07d3add33511f0239e94e452556a625b9362e31452098020d504b97615d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1658",
+      "sha256": "536ba570185ed5c4f771ceba8cc884b630407ce3b9a843fc52762937a471ee29",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1659",
+      "sha256": "0cba4128aeafa1ed7651de34b53ab8ab3001fb90420558a3911a625f61f9a296",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1660",
+      "sha256": "48d30c0e9160d6e3d81e39e7c58ccd9da85ac1eacf2f6481c00b0c0f128528cb",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1661",
+      "sha256": "533d2cdd1cc8a28bd0410a0ab9159995a0172da51d7cc566fced86ba4e07d513",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1662",
+      "sha256": "d1475ffc7a0a7013c04ce50695fcc12d6a543154b44b216d7ef36f83e5e1e1c3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1663",
+      "sha256": "f2efef33eb0fb62fa068f34289ec664258b23af40fed481248b9c174128f0ff2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1664",
+      "sha256": "63c4800cccf575b90c81e8643dd0e26d955905ba881054c8358c312cbec71a2c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1665",
+      "sha256": "b7a813aeee5b9367f5ea2d4aa1c31df31c6d013d0d4d604d5d244e8051183438",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1666",
+      "sha256": "812b7fada95ef959bed65286ae2787795803709af926e4c1175a6498d0acc254",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1667",
+      "sha256": "e868804c52d9d03af44642dd058a0ae150c107a40623f53ef656b6b00dcbeabc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1668",
+      "sha256": "891415c02d9b757dbf430c5daeec15cf3fc747e53e05f6cbe16d8a969b173014",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1669",
+      "sha256": "1eb6c65d7556cc6e2cdbed95ca97ed37700f71913e147272413dd30622b40707",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1670",
+      "sha256": "93c00c1f4c2b53e690686f2ae3ea3444b61f2181529638ce99a2a700701fade4",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1671",
+      "sha256": "c92ff7724f06cc6175b82fc77ce7514d7d4afa11632f63ac96daa2456c1a670c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1672",
+      "sha256": "63f29b9cd7d862d1c677f6b0b47be4258fc0df8df3f64568b8e52a7c1f5e6ef2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1673",
+      "sha256": "3294e9a829700f19de83718656dbf78d8d24704d1d3f9b185c55c5ade708df31",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1674",
+      "sha256": "aeca85383772b44982c74487d338347a2c052c6b4a7c8b477af14e2c0309c880",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1675",
+      "sha256": "fef3ba07e1a6c9e9ce570ca93bc89ee7240622958c8d066c7ce1c40b95545778",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1676",
+      "sha256": "10f109d4b546907c93e72178f7e3a2c4a61e1774f0a4a24c9ac5ab6776ab46d0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1677",
+      "sha256": "d18d06827ccb74dc6f0e950f227f5f07e7c6beee36ac7d3ad9dd6e82b54510fd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1678",
+      "sha256": "6c408834af41a3d6e2b58e8c1ba496e48f3f4b1429676e184146bcf3869c22cd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1679",
+      "sha256": "ac73672bdc5475bb9b2d9dc651619548fb8613d0a92937220a93af0b3eaee199",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1680",
+      "sha256": "5860c08c6932fa8594c54a6d5e2760470f16306888914fdc301654b6cfd67a46",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1681",
+      "sha256": "5a2b3bb203ad9515c316fd2e97f90f8ca64c09ed545dc435171768ddac40232c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1682",
+      "sha256": "a026ed273a0ba5f73a7b9ee4d2b7ea21a4d1ebe478fd7daea9a28e7304f85a83",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1683",
+      "sha256": "3b014cb97c80cef793b161481adfff2bfd4017d5e4962e226cca8651892d4afb",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1684",
+      "sha256": "065799ce19a5436854565a8a547ebf1fcd179eaf3b4b64997b9e2c63b549226b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1685",
+      "sha256": "77ede475e48620fafff5f050808a87b86c9394af13ebb40b52d937976d7b0b97",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1686",
+      "sha256": "4586a7ac2bc38bbb60c16bc7b58b77a9fb9b0c7e55be805a8b00b3322310985f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1687",
+      "sha256": "56b0bde2117c1f9f67f09942409ea3c89bb37e3edf7faae901c59d08e0dc852b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1688",
+      "sha256": "24bf940d3b3afd62fa05372d79da9225e42e14406b6a755146649745f408e007",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1689",
+      "sha256": "564dc807dc989964ed38de49486b67542dc4f399ac74124f5adef058143ee4a9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1690",
+      "sha256": "8e9941a967173fee68fce8dc4cfd723894f787cad8413320e1ff4a48c57bebe4",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1691",
+      "sha256": "f1cbc1a37bcf85f9bcca2e44588444cbb1e14da240cde8b4753544912908f1c7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1692",
+      "sha256": "c573ce1ffd6d08e9834735284bf85f0cefc0eaa601f18ddeed0a046f5d3e63a9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1693",
+      "sha256": "cf4542fb7471c3658f8fc3571273228f8d4fc5c7371d8bbcdfed9d689b10a77e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1694",
+      "sha256": "ae9c7444618471ad071d72fb6654a1457b6a3a33908f23bef0c92976ed77c514",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1695",
+      "sha256": "ea7945629a8e9eec73c338f77fe85601aa017918b28edf623d6aaf8463afc981",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1696",
+      "sha256": "6f228544b717ab3afbf6ffa01e433a86daa2c14c51e270b38986876bc770aae4",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1697",
+      "sha256": "64777db6e4af880f8588c7025a9188a9b9beebcc69d6cb9adfe39f93a97b1f0e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1698",
+      "sha256": "084db44c9330ecd739864769c3ecf2a2efbb2fefadc82293ffaa5579e57339ca",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1699",
+      "sha256": "b621447140668c24ca202cbc86d8f96d630d339c55e219c1faddb659d9c65ca6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1700",
+      "sha256": "041c901bf3fff5c286ae379d2cb67a767511d058570cdb38de44bead253c6fe7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1701",
+      "sha256": "2ad247acccd253fe35ff6d3c3c190614abdc20435d8de198f189825e1ef25e71",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1702",
+      "sha256": "283b901451afe2a2f109fcaff4cac68b786951252a444d3ca81ab4c116bb856d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1703",
+      "sha256": "36d4bb26c9f061ab0c060de92d8e418deca84ccb2a9789f497a909c6b9de9d5a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1704",
+      "sha256": "12c8722015d28a53cb25d68af4fafb401533de3fff9a938b6992d49dd2784988",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1705",
+      "sha256": "4f880f7e797a95cf91a791b6bc84c2e8e3eb50c3501f819acb57a4a58880312b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1706",
+      "sha256": "62266218a828bbf7a04883ae0f0bdb952cc5321993e33e1e96b2be11075a6f78",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1707",
+      "sha256": "c68abd2ddd3a95eaf89ca7bf982ac28342e47b8a5f0e0f42a6eae91ee6499bd2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1708",
+      "sha256": "3c529cb32e8f90ca68aa835f0384dfa6054a67574031b0301d91defea40bcfb6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1709",
+      "sha256": "eadcd6420904b0a5de69408667ee0bc8dbb5c051190e61f3e795b81dbc51d112",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1710",
+      "sha256": "87919977e2916f66ea8195a4fa19829c65f1bb8f2a0c464fb87da3bae4ee4182",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1711",
+      "sha256": "1f0f960b0fd2bf09d742295d572d4514705fac1cdbb41af6e1bee9f5a68f01c3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1712",
+      "sha256": "8b82d9684c1ec6003683cbad8de762812eead816b3b79e58b879597a9819cf77",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1713",
+      "sha256": "74d0d0ff2460445d8ef2ca8c76edec5143631255cd6108e47fe8f00718acbd2f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1714",
+      "sha256": "4fe7d02d42782176c1099073bb1c5e13970e33b4b371138cb01a2110258c5ecc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1715",
+      "sha256": "c0b09d8a7ea9249bc1ff0cd721edd8b9d32df09c501cd7d371f68f053e75d8ba",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1716",
+      "sha256": "76417e5c9c3ab55c10172e1b1cc0c9fcf847e5d10c43e44b483a7391786737aa",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1717",
+      "sha256": "d040de7b848b3c4da31d814753bd78611f771e48e4d38b1c07fcd61d3d653027",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1718",
+      "sha256": "1ea042921324b60ad3c3a1f015315dd5a53e09a06dd7d3a95e99a5c092f14690",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1719",
+      "sha256": "22a7e834f55098a688e279449d3c0a6d9e61308933caac8718d7e07e427158a5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1720",
+      "sha256": "84e0b21417af215de5e23b88a03bf57cc878bcdccb0b7054c88eb5b9ac96d310",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1721",
+      "sha256": "92ac6a5e3e4ebd20810def8590e0eb4d3bf416f0ff1a23dfeb232ca5c502d9d9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1722",
+      "sha256": "cf613b4f3f687c50d2ae9101b35b1273b9a7caa75da85c9ce614911380539b73",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1723",
+      "sha256": "da4ab39e5e348e64ab3b9e587b288ec557135a94c24f1c468bc7d85e295a5c94",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1724",
+      "sha256": "cb0fd6b45ab433fa3b8d19feb2c4cc8f75131d8520671b92c66c3b2173dafe09",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1725",
+      "sha256": "d5330f05eb6087336097ad1e2800b5f4a9f31355c25b8b4876f7e51c4e91cf4b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1726",
+      "sha256": "01b725c1920fc6cff807bd2e7b5ac8dafdd8b4aaf816c7170a2b1838ed359af1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1727",
+      "sha256": "d7675a17dc0021e2be1fadf70e3b5e192443a2142c722761e64cd7e72eb4ccc5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1728",
+      "sha256": "5cce89ed8e460b541fb1c3e7ef8444a2db871574155efdeb80ecc0bfe4632792",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1729",
+      "sha256": "dc2a21e3844040103ad77af32c5804f6680ade73ed60f7c6069ee6ea47924b9a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1730",
+      "sha256": "e818f1193ae86b6d0ccb3e51bb07438b1939ad12e982995170f1c18aeeb30843",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1731",
+      "sha256": "ed598387fb7061b1403e127f8ca2a572339ba82f1aa70a4ef6309aa2f9d3b633",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1732",
+      "sha256": "398446c50d42e3a68efc959c8eea856c5dea4ddbce4e4042503df9d942f63afe",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1733",
+      "sha256": "edce6b7a80cee88ad833fa07770a2b18107ca5b45e62ffc47325f5955549b746",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1734",
+      "sha256": "cd2b09f8a950cc576203153a2367a284d3629740ed0399f8a0cf2d1a02b25387",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1735",
+      "sha256": "82b627442e6fd349c9b385fb1862be9a19a7d3f6391b9e022ea6e324078a9a50",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1736",
+      "sha256": "d14d77541c990f85d7cf4409337c3f8c7fdeb52fb0f49325237438fbf56c20b1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1737",
+      "sha256": "4f49c6ffdc29f23c0538acaff8808b9f5b6cff3f9d0a512fe3f8b87ece08bd43",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1738",
+      "sha256": "e6289bcf6b54803728d114358102cdaa9a2fa17b1eac2ebb6b05df9c9ea36203",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1739",
+      "sha256": "e8eb4672e6fc50f7121cd705f44b51381be22444c3ed4995f3649422f82ececc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1740",
+      "sha256": "50072b779428a74a9904acf6c77fc86664e9844620e132f6b6dd555215af2b68",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1741",
+      "sha256": "0dba0194ef19c8269239d3031a3475414207e6e33cb9423d6280d57e4ac4a7cd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1742",
+      "sha256": "aa0f050ee9a26210f61b6080e2cff9802a6fd84ece012018ecf0cddae4857884",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1743",
+      "sha256": "4bc510bd4ee40c823b1ff5fa887ff862d40fbfb54080bbc5403f438f24a5db3b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1744",
+      "sha256": "896566f636e48b738ae5158818ddc8c0cb5aae2a8fa93b05beb73575b1c5f2df",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1745",
+      "sha256": "3bcf434644d05eeb3224e58c3781836b856b2fb7401ac7daac388f084b4cbd6a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1746",
+      "sha256": "af7072ffa89e3d642692c1573c9a97e58e98939ba0be649e13fb9c35c0d16fb6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1747",
+      "sha256": "cafebd217834c925bc211b9881ad1c7e88cda4a839e8dee855ba87972bc8f3e7",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1748",
+      "sha256": "a04bdc1daedf555e818ad5b54ec7f958f38485e040df801fc21d025ce6dd9fb9",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1749",
+      "sha256": "1cb60fc9ac5db03ea82bb219ed31d2f28b7f1d2c16b7a9c570ccd85b0ebc983a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1750",
+      "sha256": "4ef313630ff2abffec6cb99b8d4c84c24881fc96c1347ac99e50d4b770d9bf82",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1751",
+      "sha256": "6107f7d2262d0439360914935e09807ec9d8611ba4d28c5a3be2b40a4d3bd773",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1752",
+      "sha256": "618b2c8b4fc2e01b7d6672c4395ed7dde9df78d7cbcca1cacfea9849c76c8345",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1753",
+      "sha256": "bab190a74e99cea76b13b97009859f1e23b79163ce5d8610b41e6f3a7791fb01",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1754",
+      "sha256": "3e985fc639d6b4bbfb4f530b0c0ac6c3d096d388f93eccdcbf6e5463b450291f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1755",
+      "sha256": "e12abc8d2b1f081c0bda2260578a3ea6bb8e7a26c7a73a1ef69e11b2e3f0642e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1756",
+      "sha256": "1821d95263ea2d3fb4ca9bf85e4c55288eafdb3492e0a3597d863e1d69ae1e9c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1757",
+      "sha256": "00c85273bcb7846ccede555437233e97e64d88fde30868f8f28187f6c5d1fa48",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1758",
+      "sha256": "0c29a727dc1cff22afad1c636c182fdbce2e9619171c0bb651712ea190c54abe",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1759",
+      "sha256": "5bc4806b40fc1b8864b6eca356707a9bc4353d8dd3b9abc43fe517fe3918e982",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1760",
+      "sha256": "548c9faa0d3605a26245a87271bcf8a2030a8b7aaec2d3d1c9fda1c515abed6b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1761",
+      "sha256": "cc3a9f4e6c84b4567215c10ddfe7c094ef868dea7d55b6275b298dfbfb1b1269",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1762",
+      "sha256": "77eb3983fc92c2725bd169fa172435a949fb508373fba340724bc3e8709f1be6",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1763",
+      "sha256": "426ec67cbe944c18e1ebb9319ce13171800660ff3e0c5050d240dc35bfc89e5e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1764",
+      "sha256": "2526bbc258adf5f1a85bb79d4ec29b32bad03fad64977a30fc0f5d347e806b61",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1765",
+      "sha256": "a3d221828cdb4fc5b61777874e52072c397980faf97d1964a2059cdd6ae191d2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1766",
+      "sha256": "df3dc544e2ddde6154cb3e0030e57a10f077eb0c29b5f6cc017bb241613eae63",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1767",
+      "sha256": "f1969d5977168a7cc40f1b1c4a26e55f8337524fe78018b110d18dba51c52deb",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1768",
+      "sha256": "34dab244152af3bdb9628e2e5d805a4637c03ad0a77d9353cc28e554011550f5",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1769",
+      "sha256": "c8462d8c6df254bfe058665c483efa2f3d309a296b3623488c62ca23b0ac0ef1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1770",
+      "sha256": "fb1d677ad49fea7584376b47b8341d788cf95816bfd58e30054d80bc6602fbdd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1771",
+      "sha256": "32a2aebc0b4c787bc55631ad34963bb630ccf9d36b01b48668db281d39ed2a42",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1772",
+      "sha256": "eed71c7a9176e3bc7bd6e02f85a147e9d2a1e659e2bec66ee99a53a86e8146f8",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1773",
+      "sha256": "eaed4e6da2449b49a1724afc0b2274737d9307e1ab1b4a94f66f2179eefae586",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1774",
+      "sha256": "583ad26716adbbd0e91ee1d4a239ee0ecd6e06b410ec59116ddee9532d516a70",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1775",
+      "sha256": "2c6d67c3a07270faff85849acdeffc9c3bf7e41aa3c74726e65492120c00a3c8",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1776",
+      "sha256": "b7ae849499716c3ea6af027cb7c4b7c5ac61f4f03d1526b7b0d082a942913287",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1777",
+      "sha256": "c5532863aa3bdbe88fb1b3d3953364ad9b3f90dfcf61b70bfa0b098fa04c3db2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1778",
+      "sha256": "3b3b32e18f0c02a5b8fd2de4c6fe1aaa4ea0e5a88998adb4177f5dc624f50ab1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1779",
+      "sha256": "ba8ed0a242c42ae1f58aafe4d0bd5d31f86ca3590b8bc290d8760d24ca067d6b",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1780",
+      "sha256": "a57f60300eee7f8e4999dd5dceddfe9f96f83b4a90dbdcc5635af23ba5ea3161",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1781",
+      "sha256": "549c23ef988bfb1daff71fa2f52d823aa43604084d7f6357d8022010a6381caf",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1782",
+      "sha256": "e8758a3c2894f4c0c0f999c943e4679f293a4bf7aed9ddde8ab06532140730bc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1783",
+      "sha256": "d004375aac40a99827997e2dea505ee3a23356d5cef953835bb0e894d4c7d526",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1784",
+      "sha256": "8e022ba189ece3176ec79c801a78432c7bbe026324fbd36ef156e1767da7d80c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1785",
+      "sha256": "93f35e647f040e13c1f8e0d29dd448a9dcd4b10846d4634d7358db9a28210dc1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1786",
+      "sha256": "e7fa88abac2804dce4d7a0dad79acee0c83d4ea1755afd3d2474346d93385a27",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1787",
+      "sha256": "e8a26e66dcb8919c041abaf22b6edfd7473bd75dcfaa37193181dfbce2c9a51e",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1788",
+      "sha256": "52d16f0fb66e472edf87698830d79b227fb8dea6c70ba10f5de6f61b41eae9cd",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1789",
+      "sha256": "e115437830e1a5261f3fc630ad2f1de5bed802138f67d18641f73df6f63c2e3c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1790",
+      "sha256": "15025f0103dcf53846e749422530fdc09876bd37c55029eecf194ee178232e7c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1791",
+      "sha256": "c7531adfa8d0146953e86b031e99e8a441f5562fb8deb198913ac3c76898a43d",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1792",
+      "sha256": "a617d59e502efc10bbb2c28ad36f0cdc7e2c908d5533786f92d003ea8a3f7a78",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1793",
+      "sha256": "f753567366f7276abfda62e80715ad7df481518bfe2f46a559f80cabba2f4865",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1794",
+      "sha256": "0840876a47a1a731abc4819666a5591db18603167365832a4de58ec376284761",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1795",
+      "sha256": "6ed9910972c60bd7c1edba79f6a284829193ab3c3d957f0496ce6431b50cb944",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1796",
+      "sha256": "be86df227a19936292995cca480279329ab88a2707c951d337e0c3f4337b69f0",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1797",
+      "sha256": "838a3ca2159986e4c1cca07b97c8c50bfb64559f527d15f50047584e9ebc0db2",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1798",
+      "sha256": "65630b80e4cc767711208ff27b86d6d4d9fe1ec48c21b33c3c6043a68c98a9cc",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1799",
+      "sha256": "e180f748ffaed7c0a33c9156b3cbd7faaaf30f6a3ac9b746fbefe49e94cf6104",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1800",
+      "sha256": "621827a5563f7bdedcbdf0e3b63e1d3ce0ec2c02f390d1b4a32c3bf34c978cab",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1801",
+      "sha256": "a2362ebae43690fc99e4bfcbf58704c61db45e352e604a69b1491bb5632107e1",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1802",
+      "sha256": "71a361cc62955b20225b6fb3954835296a979e257156a60a022c2a0db97a251c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1803",
+      "sha256": "eaea14772a3fc27fbdc11a97e17d18e014913f00aa88ee06e0d7ee5b6623736f",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1804",
+      "sha256": "8ca7cccf2b2ac2004103f6388a8fc481ee126f8a6afe88103e095f34fa8a642a",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1805",
+      "sha256": "88b1de175c6923b3c27ee37fcfcdb8b5859effb17ed413d48b29a016eff15a6c",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1806",
+      "sha256": "60db3c1ef47ba7fa3ebd907810b75a05fdf95378283bda8e7c2a792d020ca7be",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1807",
+      "sha256": "d9d07b78e758488235b737f1b318cce4aa80654fae5022ffba7b826d214f7265",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1808",
+      "sha256": "b6e44938eb395c05a35b4c16704af98bbbeab8af83a9e22478a6ad9c5f37edf3",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    },
+    {
+      "id": "refill-20261028-ege-math-profile-5-three-trials-exactly-two-1809",
+      "sha256": "20c2240af83210a2bc51c66705485a1b7cb6048dcdf01a111e90f83e02192a32",
+      "method": "independent-computation",
+      "evidence": [
+        "scripts/verify-priority-refill.py",
+        "docs/priority-refill-verification.json"
+      ]
+    }
+  ]
+}

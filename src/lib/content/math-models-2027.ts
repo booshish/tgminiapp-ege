@@ -17,6 +17,7 @@ export const mathModels2027: ExamDefinition[] = (["oge","base","profile"] as con
     sources:[{title:"ФИПИ: проекты 2027",url:`https://fipi.ru/${oge?"oge":"ege"}/demoversii-specifikacii-kodifikatory`},{title:"Прочитанная PDF-копия, не канонический архив",url:spec}],
     numbers:titles[kind].split("|").map((title,i)=>({number:i+1,title,part:i<firstPart?1:2,answerFormat:i<firstPart?"short":"extended",responseKind:i<firstPart?"numeric":"written",maxPrimaryScore:scores[i],scoringStatus:"not-configured",
       ...(kind==="profile"?{practiceAnswerFormat:i<firstPart?"number" as const:"extended" as const,answerRuleTypes:i<firstPart?["number" as const]:["self" as const]}:{}),
+      ...(kind==="oge"&&[6,9,10].includes(i+1)?{practiceAnswerFormat:"number" as const,answerRuleTypes:["number" as const]}:{}),
       sourceReference:{url:spec,pdfPage:oge?i<19?9:10:base?i<9?5:6:i<3?7:i<6?8:i<13?9:i<16?10:i===16?11:i===17?12:i===18?13:14},
       evaluation:{mode:i<firstPart?"automatic":"expert",criteriaUrl:spec,note:i<firstPart?"Полный ключ в формате конкретного задания. Первичные баллы не являются XP.":"Требуется полное решение и поэлементная самопроверка/эксперт. Наличие старой авторской памятки не подтверждает критерии 2027."},
       ...(kind==="profile"&&i+1===17?{pendingReason:"Авторские тренировки с самопроверкой доступны. Полный пробник требует подтверждения критериев всех развёрнутых номеров проекта 2027."}:{}),
