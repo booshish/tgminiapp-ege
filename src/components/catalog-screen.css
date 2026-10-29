@@ -330,3 +330,19 @@
 .catalog-subjects > summary { cursor: pointer; min-height: 44px; padding: 12px 0; font-weight: 600; }
 .catalog-subjects .catalog-topic-grid { margin-top: 12px; }
 .catalog-number-card:disabled { cursor: default; opacity: .7; }
+
+/* Only the picker uses the whole workspace. Keep task reading limits intact.
+   Intrinsic columns also respond to the expanded/hidden sidebar, not just vw. */
+.app-shell .main-content.view-catalog {
+  max-width: none;
+  padding-left: max(clamp(12px, 2vw, 24px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(12px, 2vw, 24px), env(safe-area-inset-right, 0px));
+}
+.exam-catalog .catalog-number-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+@media (max-width: 767px) {
+  .exam-catalog .catalog-number-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  }
+}
