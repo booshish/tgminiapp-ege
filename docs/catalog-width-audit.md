@@ -25,3 +25,7 @@
 Production-регрессии: существующие 9 групп практики и 8 групп taxonomy прошли, pageErrors 0; оба режима, фильтры, черновики, закладки, самопроверка, отсутствие повторного XP, все 10 активных направлений. Полный `npm test`: 466/466, ошибок и пропусков 0. `npm run lint`, `npm run typecheck`, `npm run build:pages`, `git diff --check` успешны. После финальной настройки минимальной ширины мобильной карточки production export и адресная браузерная проверка повторены. Публикация фиксируется ниже после подтверждения Pages.
 
 Повторение: запустить static export под `/tgminiapp-ege` на порту 3002, затем `python scripts/test-browser-catalog-width.py --phase after`. Для baseline можно задать `TOCHKA_QA_BASE_URL` на отдельный неизменённый export. Сценарий не меняет банк.
+
+## Подтверждение публикации
+
+Исходный коммит `1a90a642d3c981a49dc7ba17cab9b51281937c9c` отправлен в main. Точный проверенный export опубликован обычным fast-forward в gh-pages: `8081715271ac5611628c26f9c2fda766ac405d99`, tree `6ad3780755f911775921d2f5f641d4bbcd2852a0`. [Native Pages run 40922403704](https://github.com/booshish/tgminiapp-ege/actions/runs/40922403704) — completed/success, все три jobs build/deploy/report-build-status успешны. Настройки Pages и Actions не менялись. Это подтверждение штатной публикации ветки, не удалённый browser smoke: github.io недоступен сетевой политике данной среды. Отдельный main workflow «Публикация Точки» не использован как подтверждение этого branch deploy.
