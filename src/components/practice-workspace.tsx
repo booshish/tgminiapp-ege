@@ -14,11 +14,11 @@ import "./practice-workspace.css";
 
 type Navigation={onNext:()=>void;canNext:boolean;onPrevious:()=>void;canPrevious:boolean};
 type Props={selection:CatalogSelection;taskIds:string[];task?:Task;drafts:Record<string,PracticeTaskState>;learning:LearningState;historical?:boolean;
-  onApply:(selection:CatalogSelection)=>Promise<void>;onOpenTask:(id:string)=>Promise<boolean|void>;onBack:()=>void;children:(nav:Navigation)=>ReactNode};
+  focusExit?:ReactNode;onApply:(selection:CatalogSelection)=>Promise<void>;onOpenTask:(id:string)=>Promise<boolean|void>;onBack:()=>void;children:(nav:Navigation)=>ReactNode};
 const zeroPosition=():PracticeViewPosition=>({page:0,top:0,ancestors:[]});
 
 /** Presentation only: the existing session, drafts and answer engine remain authoritative. */
-export function PracticeWorkspace({selection,taskIds,task,drafts,learning,historical,onApply,onOpenTask,onBack,children}:Props){
+export function PracticeWorkspace({selection,taskIds,task,drafts,learning,historical,focusExit,onApply,onOpenTask,onBack,children}:Props){
   const key=practiceContextKey(selection);
   const [preferences,setPreferences]=useState<PracticeViewPreferences>(emptyPracticeView);
   const [initialized,setInitialized]=useState(false);
@@ -127,7 +127,9 @@ export function PracticeWorkspace({selection,taskIds,task,drafts,learning,histor
         <button type="button" aria-pressed={preferences.mode==="feed"} onClick={()=>chooseMode("feed")}>Лента</button>
       </div>
       <label className="practice-hide-solved"><input type="checkbox" checked={preferences.hideSolved} onChange={event=>setHide(event.target.checked)}/>Скрыть решённые</label>
+      {focusExit}
     </div>
+    <div className="practice-content" id="practice-content">
     {!historical&&<NumberTrainingFilters selection={selection} onApply={async selected=>{
       remember();const nextKey=practiceContextKey(selected);update(p=>({...p,positions:{...p.positions,[nextKey]:zeroPosition()}}));await onApply(selected);
     }}/>}
@@ -161,5 +163,6 @@ export function PracticeWorkspace({selection,taskIds,task,drafts,learning,histor
         <button type="button" className="button button-secondary" disabled={!page.next||pageReady!==pageKey} onClick={()=>turnPage(page.page+1)}>Дальше по ленте</button>
       </nav>}
     </>}
+    </div>
   </section>;
 }

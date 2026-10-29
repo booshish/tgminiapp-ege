@@ -137,3 +137,30 @@
   padding-right: max(12px, env(safe-area-inset-right, 0px));
 }
 .app-shell.focus-mode .focus-toggle { min-height: 44px; min-width: 64px; }
+
+/* A dedicated control row and a separate scrollport: no overlay on conditions.
+   Other concentration screens keep their existing header and scrolling. */
+.app-shell.focus-mode:has(.practice-workspace) .topbar { display: none; }
+.app-shell.focus-mode .main-content.view-tasks {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: max(10px, env(safe-area-inset-top, 0px));
+}
+.app-shell.focus-mode .practice-workspace {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.app-shell.focus-mode .practice-view-controls { align-items: center; }
+.practice-focus-exit { margin-left: auto; }
+.practice-content { min-width: 0; }
+.app-shell.focus-mode .practice-content {
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+@media (max-width: 600px) {
+  .app-shell.focus-mode .practice-view-controls .practice-hide-solved { width: auto; flex: 1 1 12rem; }
+}

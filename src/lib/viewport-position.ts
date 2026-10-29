@@ -14,6 +14,11 @@ export function captureViewportPosition(): ViewportPosition {
   ) {
     containers.push({ element, left: element.scrollLeft, top: element.scrollTop });
   }
+  // Append, rather than prepend: existing saved ancestor indices stay stable.
+  const practiceContent = document.getElementById("practice-content");
+  if (practiceContent?.id === "practice-content") {
+    containers.push({ element: practiceContent, left: practiceContent.scrollLeft, top: practiceContent.scrollTop });
+  }
   return { left: window.scrollX, top: window.scrollY, containers };
 }
 

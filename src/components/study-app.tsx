@@ -262,6 +262,7 @@ export function StudyApp() {
     if (helpOrigin && helpOrigin.hash === window.location.hash) {
       restoreViewportPosition(helpOrigin.position);
     } else if (route.view !== "catalog") {
+      document.getElementById("practice-content")?.scrollTo({ top: 0, left: 0, behavior: "auto" });
       window.scrollTo({ top: 0, behavior: "auto" });
       for (
         let container: HTMLElement | null =
@@ -507,7 +508,7 @@ export function StudyApp() {
               <UserRound size={22} />
             </button>
           </div>
-          {canConcentrate && (
+          {canConcentrate && !(concentrating && route.view === "tasks" && session && !session.invalidContext) && (
             <button
               type="button"
               className="focus-toggle"
@@ -656,6 +657,7 @@ export function StudyApp() {
               </section>
             ) : !session.invalidContext ? (
               <PracticeWorkspace selection={session.selection} taskIds={session.taskIds} task={currentTask}
+                focusExit={concentrating ? <button type="button" className="focus-toggle practice-focus-exit" aria-label="Выйти из режима концентрации" aria-pressed="true" onClick={toggleConcentration}><X size={21} aria-hidden="true"/><span>Выйти</span></button> : undefined}
                 drafts={session.states} learning={state} historical={session.historicalContext}
                 onApply={selected=>practice.start(selected,practiceTaskIds(selected)[0])} onOpenTask={practice.openTask} onBack={practice.returnToCatalog}>
               {nav=>currentTask?<TaskScreen

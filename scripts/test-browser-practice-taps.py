@@ -46,6 +46,20 @@ with sync_playwright() as p:
                 assert page.evaluate('Math.abs(document.querySelector(".number-training-filters").getBoundingClientRect().left-document.querySelector(".task-card").getBoundingClientRect().left)<1')
                 answer.focus()
                 page.get_by_role('button', name='Фокус: включить режим концентрации', exact=True).tap()
+                assert page.evaluate('''() => {
+                    const row=document.querySelector('.practice-view-controls').getBoundingClientRect();
+                    const content=document.querySelector('.practice-content').getBoundingClientRect();
+                    const exit=document.querySelector('.practice-focus-exit').getBoundingClientRect();
+                    const modes=document.querySelector('.segmented-control').getBoundingClientRect();
+                    return content.top>=row.bottom-1 && (innerWidth<=600 || Math.abs((exit.top+exit.bottom-modes.top-modes.bottom)/2)<1);
+                }''')
+                for fraction in [0, .5, 1]:
+                    assert page.evaluate('''fraction => {
+                        const content=document.querySelector('.practice-content');
+                        content.scrollTop=(content.scrollHeight-content.clientHeight)*fraction;
+                        const r=document.querySelector('.practice-focus-exit').getBoundingClientRect();
+                        return r.top>=0 && r.bottom<=content.getBoundingClientRect().top+1;
+                    }''', fraction)
                 answer.scroll_into_view_if_needed()
                 answer.focus()
                 exit_button = page.get_by_role('button', name='Выйти из режима концентрации', exact=True)
