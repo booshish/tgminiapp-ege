@@ -110,3 +110,18 @@
   .preparation-mode strong { font-size: 15px; }
   .preparation-mode span { font-size: 13px; }
 }
+
+/* Solver only: use the workspace remaining beside the sidebar in either mode.
+   Keep intrinsic diagram sizes and the long-text reading/answer split intact. */
+.app-shell .main-content.view-tasks,
+.app-shell.focus-mode .main-content.view-tasks {
+  max-width: none;
+  padding-left: max(clamp(12px, 2vw, 24px), env(safe-area-inset-left, 0px));
+  padding-right: max(clamp(12px, 2vw, 24px), env(safe-area-inset-right, 0px));
+}
+.app-shell .view-tasks .task-screen,
+.app-shell .view-tasks :is(.practice-view-controls, .practice-feed, .practice-feed-pagination, .practice-empty) {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
