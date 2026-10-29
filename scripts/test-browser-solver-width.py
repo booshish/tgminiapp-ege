@@ -67,8 +67,8 @@ with sync_playwright() as p:
             # Existing concentration mode also fills the working area.
             page.get_by_role('button', name='Фокус: включить режим концентрации', exact=True).click()
             if args.phase == 'after':
-                # Focus reserves a native scrollbar gutter inside its scrollport.
-                assert page.evaluate('innerWidth-document.querySelector(".task-screen").clientWidth <= 66')
+                # Focus reserves only the compact exit's side lane (64px + gap).
+                assert page.evaluate('innerWidth-document.querySelector(".task-screen").clientWidth <= 125')
             page.get_by_role('button', name='Выйти из режима концентрации', exact=True).click()
             if resource == 'a[download]':
                 with page.expect_download() as download:

@@ -136,7 +136,7 @@ with sync_playwright() as p:
             for el in page.locator(".number-training-filters select,.number-training-filters button").all():
                 if el.is_visible():assert el.bounding_box()["height"]>=44 and el.bounding_box()["width"]>=44
             # The panel is in normal document flow, never over the answer area.
-            panel=page.locator(".number-training-filters").bounding_box()
+            panel=page.locator(".number-filter-panel").bounding_box()
             answer=page.locator("#task-answer").bounding_box()
             assert panel["y"]+panel["height"]<=answer["y"],(theme,width)
             if width==390:

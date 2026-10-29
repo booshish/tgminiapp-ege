@@ -142,25 +142,41 @@
    Other concentration screens keep their existing header and scrolling. */
 .app-shell.focus-mode:has(.practice-workspace) .topbar { display: none; }
 .app-shell.focus-mode .main-content.view-tasks {
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
   padding-top: max(10px, env(safe-area-inset-top, 0px));
 }
 .app-shell.focus-mode .practice-workspace {
-  flex: 1;
-  min-height: 0;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 64px;
+  column-gap: 12px;
+  align-items: start;
 }
 .app-shell.focus-mode .practice-view-controls { align-items: center; }
-.practice-focus-exit { margin-left: auto; }
+.practice-focus-exit {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  position: sticky;
+  top: max(10px, env(safe-area-inset-top, 0px));
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  align-self: start;
+}
 .practice-content { min-width: 0; }
 .app-shell.focus-mode .practice-content {
-  overflow: auto;
-  overscroll-behavior: contain;
-  scrollbar-gutter: stable;
+  grid-column: 1;
 }
+.practice-heading-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; min-width: 0; min-height: 64px; margin-bottom: 12px; }
+.practice-heading-row > span { overflow-wrap: anywhere; color: var(--muted); }
+.practice-workspace > .practice-view-controls { gap: 8px 16px; margin-bottom: 16px; min-width: 0; }
+.practice-view-controls .number-training-filters,
+.practice-view-controls .number-filter-toolbar { display: contents; }
+.practice-view-controls .number-filter-panel,
+.practice-view-controls .number-filter-empty { flex-basis: 100%; }
+.practice-view-controls .segmented-control { max-width: 100%; min-width: 0; flex-wrap: wrap; }
+.practice-workspace .task-topbar .back-link,
+.practice-workspace .task-heading-block > .eyebrow { display: none; }
+.practice-workspace .task-topbar:not(:has(.bookmark-button)) { display: none; }
+.practice-workspace .task-heading-block { margin-bottom: 16px; }
 @media (max-width: 600px) {
   .app-shell.focus-mode .practice-view-controls .practice-hide-solved { width: auto; flex: 1 1 12rem; }
 }

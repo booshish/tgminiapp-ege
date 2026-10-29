@@ -10,6 +10,7 @@ import { captureViewportPosition, restoreViewportPosition } from "@/lib/viewport
 import { NumberTrainingFilters } from "./number-training-filters";
 import { TaskCondition } from "./task-condition";
 import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
+import { subjectTitle } from "@/lib/subjects";
 import "./practice-workspace.css";
 
 type Navigation={onNext:()=>void;canNext:boolean;onPrevious:()=>void;canPrevious:boolean};
@@ -121,18 +122,22 @@ export function PracticeWorkspace({selection,taskIds,task,drafts,learning,histor
   if(!initialized)return <p role="status">Открываем практику…</p>;
 
   return <section className="practice-workspace" aria-label="Практика выбранного номера">
+    <div className="practice-heading-row">
+      <button type="button" className="back-link" onClick={onBack}><span aria-hidden="true">←</span> К выбору заданий</button>
+      <span>{selection.exam} · {subjectTitle(selection.subjectId)}{selection.level ? ` · ${selection.level === "profile" ? "Профильный" : "Базовый"} уровень` : ""}</span>
+    </div>
+    {focusExit}
     <div className="practice-view-controls">
       <div className="segmented-control" role="group" aria-label="Режим практики">
         <button type="button" aria-pressed={preferences.mode==="one"} onClick={()=>chooseMode("one")}>По одному</button>
         <button type="button" aria-pressed={preferences.mode==="feed"} onClick={()=>chooseMode("feed")}>Лента</button>
       </div>
       <label className="practice-hide-solved"><input type="checkbox" checked={preferences.hideSolved} onChange={event=>setHide(event.target.checked)}/>Скрыть решённые</label>
-      {focusExit}
-    </div>
-    <div className="practice-content" id="practice-content">
     {!historical&&<NumberTrainingFilters selection={selection} onApply={async selected=>{
       remember();const nextKey=practiceContextKey(selected);update(p=>({...p,positions:{...p.positions,[nextKey]:zeroPosition()}}));await onApply(selected);
     }}/>}
+    </div>
+    <div className="practice-content" id="practice-content">
     {storageWarning&&<p role="status">Не удалось сохранить настройки просмотра. Черновики и результаты хранятся отдельно и не сбрасываются.</p>}
     {error&&<p role="alert">{error} <button type="button" className="text-button" onClick={()=>setRetry(value=>value+1)}>Повторить загрузку</button></p>}
     {ids.length===0&&<section className="empty-state practice-empty" role="status">

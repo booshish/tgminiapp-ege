@@ -43,22 +43,22 @@ with sync_playwright() as p:
                 for mode in ['Лента', 'По одному']:
                     page.get_by_role('button', name=mode, exact=True).tap()
                 expect(answer).to_have_value('2718')
-                assert page.evaluate('Math.abs(document.querySelector(".number-training-filters").getBoundingClientRect().left-document.querySelector(".task-card").getBoundingClientRect().left)<1')
                 answer.focus()
                 page.get_by_role('button', name='Фокус: включить режим концентрации', exact=True).tap()
+                page.evaluate('window.scrollTo(0,0)')
                 assert page.evaluate('''() => {
                     const row=document.querySelector('.practice-view-controls').getBoundingClientRect();
                     const content=document.querySelector('.practice-content').getBoundingClientRect();
                     const exit=document.querySelector('.practice-focus-exit').getBoundingClientRect();
-                    const modes=document.querySelector('.segmented-control').getBoundingClientRect();
-                    return content.top>=row.bottom-1 && (innerWidth<=600 || Math.abs((exit.top+exit.bottom-modes.top-modes.bottom)/2)<1);
+                    const heading=document.querySelector('.practice-heading-row').getBoundingClientRect();
+                    return content.top>=row.bottom-1 && exit.left>=content.right && (innerWidth<=600 || Math.abs((exit.top+exit.bottom-heading.top-heading.bottom)/2)<2);
                 }''')
                 for fraction in [0, .5, 1]:
                     assert page.evaluate('''fraction => {
                         const content=document.querySelector('.practice-content');
-                        content.scrollTop=(content.scrollHeight-content.clientHeight)*fraction;
+                        window.scrollTo(0,(document.documentElement.scrollHeight-innerHeight)*fraction);
                         const r=document.querySelector('.practice-focus-exit').getBoundingClientRect();
-                        return r.top>=0 && r.bottom<=content.getBoundingClientRect().top+1;
+                        return r.top>=0 && r.left>=content.getBoundingClientRect().right;
                     }''', fraction)
                 answer.scroll_into_view_if_needed()
                 answer.focus()

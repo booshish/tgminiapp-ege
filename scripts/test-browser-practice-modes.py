@@ -204,7 +204,9 @@ with sync_playwright() as p:
         for width in [320,390,430,768,1024]:
             page.set_viewport_size({"width":width,"height":844})
             assert page.evaluate("document.documentElement.scrollWidth<=innerWidth+1"),(theme,width)
-            for button in page.locator(".practice-view-controls button,.practice-feed-card button").all():
+            # The disclosure now belongs to the shared control row; hidden
+            # panel actions have no box. Still measure every visible control.
+            for button in page.locator(".practice-view-controls button:visible,.practice-feed-card button:visible").all():
                 assert button.bounding_box()["height"]>=44 and button.bounding_box()["width"]>=44
         page.screenshot(path=f'/tmp/practice-feed-{theme}.png',full_page=False)
     checks.append("light_dark_320_390_430_768_1024_no_overflow_large_touch_controls")
