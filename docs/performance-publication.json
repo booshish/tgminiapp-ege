@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-29",
+  "baselineSourceCommit": "49a1fd777e12b668e72dfdb4ccf0d88e0769938c",
+  "sourceCommit": "7923df0d6a56c8870759dc244e418ba7785f05b1",
+  "pagesCommit": "3f03400f8ecd82d2cc9ef8410ef940aab2c864e8",
+  "pagesTree": "6c1fcf7f7c82006539428aa8de3b4e71f70bf12d",
+  "workflow": {
+    "id": 40895771313,
+    "url": "https://github.com/booshish/tgminiapp-ege/actions/runs/40895771313",
+    "headSha": "3f03400f8ecd82d2cc9ef8410ef940aab2c864e8",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": {
+      "build": "success",
+      "deploy": "success",
+      "report-build-status": "success"
+    }
+  },
+  "checks": {
+    "targetedTests": { "passed": 30, "failed": 0 },
+    "fullTests": { "passed": 466, "failed": 0, "skipped": 0 },
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "taxonomyCheck": "passed",
+    "browserPracticeModeGroups": 9,
+    "browserTaxonomyGroups": 8,
+    "browserPageErrors": 0,
+    "retentionRoundTrips": 20,
+    "packageSha256Checked": 202,
+    "unchangedBankAndModelsDiff": "passed"
+  },
+  "bank": {
+    "rawRecords": 6279,
+    "bundledRecords": 1816,
+    "lazyRecords": 4463,
+    "immutableShards": 202,
+    "newTasks": 0,
+    "profileMathActiveNumberedTasks": 3603,
+    "profileMathNewTasks": 0,
+    "publishedIdsAndContentsUnchanged": true,
+    "storageSchemasUnchanged": true
+  },
+  "measurements": {
+    "details": "performance-measurements.json",
+    "method": "Local production export, mobile Chromium 390x844, CPU x4, disabled HTTP cache, two complete runs per version; action latency to two animation frames, not INP or TTI",
+    "coldCatalogueMedianMs": { "before": 20083.504587997595, "after": 1951.688325501891 },
+    "inputMedianMs": { "before": 2242.949999999255, "after": 53.95000000111759 },
+    "nextTaskMedianMs": { "before": 7066.300000000745, "after": 248.800048828125 },
+    "heapAfter40TransitionsMedianBytes": { "before": 16808438, "after": 17988224 },
+    "initialJsRawBytes": { "before": 5000068, "after": 5001565 }
+  },
+  "limitations": [
+    "No physical iPhone, Safari or Telegram WebView measurements",
+    "Public github.io browser smoke blocked by environment network policy; exact local production export tested and remote native Pages success confirmed separately",
+    "No network throttling; gzip size is an estimate, not observed CDN transfer",
+    "Initial JavaScript remains large and long tasks are not eliminated",
+    "Bounded indexes add approximately 1.13 MiB of measured post-session heap",
+    "Retention scenario is limited and does not prove absence of every memory leak"
+  ]
+}
