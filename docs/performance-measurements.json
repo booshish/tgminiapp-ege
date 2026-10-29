@@ -1,0 +1,384 @@
+{
+  "baselineCommit": "49a1fd7",
+  "before": {
+    "method": {
+      "cpuThrottle": 4,
+      "viewport": [
+        390,
+        844
+      ],
+      "chromium": "/usr/bin/chromium",
+      "runs": 2,
+      "network": "local HTTP, browser cache disabled; no network throttling",
+      "latency": "Playwright action through two animation frames; not Web Vitals INP",
+      "reactProfiler": "not enabled in production build"
+    },
+    "coldCatalogMs": {
+      "n": 2,
+      "median": 20083.504587997595,
+      "p95": 20171.279988997412
+    },
+    "actions": {
+      "first_task": {
+        "n": 2,
+        "median": 4797,
+        "p95": 4963.39999999851
+      },
+      "check_answer": {
+        "n": 2,
+        "median": 2490.9500000011176,
+        "p95": 2496
+      },
+      "show_solution": {
+        "n": 2,
+        "median": 2463.7499999981374,
+        "p95": 2546.7999999970198
+      },
+      "skip": {
+        "n": 80,
+        "median": 7066.300000000745,
+        "p95": 9363.5
+      },
+      "filter:Тема заданий": {
+        "n": 2,
+        "median": 6971.449999999255,
+        "p95": 8343.39999999851
+      },
+      "filter:Подтема заданий": {
+        "n": 2,
+        "median": 6819.8499999996275,
+        "p95": 7970
+      },
+      "filter:Подтип заданий": {
+        "n": 2,
+        "median": 5002.449999999255,
+        "p95": 5125.39999999851
+      },
+      "filter:Источник заданий": {
+        "n": 2,
+        "median": 5326.0999999996275,
+        "p95": 5376.5
+      },
+      "all_themes": {
+        "n": 2,
+        "median": 5306.89999999851,
+        "p95": 5459.89999999851
+      },
+      "feed": {
+        "n": 2,
+        "median": 195.80000000074506,
+        "p95": 197.80000000074506
+      },
+      "feed_page": {
+        "n": 6,
+        "median": 206.34999999962747,
+        "p95": 228.90000000223517
+      }
+    },
+    "inputToTwoFramesMs": {
+      "n": 48,
+      "median": 2242.949999999255,
+      "p95": 2500.400000002235
+    },
+    "longTasksPerRun": {
+      "n": 2,
+      "median": 151.5,
+      "p95": 153
+    },
+    "longTaskTimePerRunMs": {
+      "n": 2,
+      "median": 426698,
+      "p95": 429358
+    },
+    "practiceWritesPerRun": {
+      "n": 2,
+      "median": 116,
+      "p95": 116
+    },
+    "practiceWriteMs": {
+      "n": 232,
+      "median": 0.7999999988824129,
+      "p95": 1.6000000014901161
+    },
+    "practiceSerializationMs": {
+      "n": 232,
+      "median": 0.09999999776482582,
+      "p95": 0.8999999985098839
+    },
+    "heapInitialBytes": {
+      "n": 2,
+      "median": 15111042,
+      "p95": 15114476
+    },
+    "heapAfter40Bytes": {
+      "n": 2,
+      "median": 16808438,
+      "p95": 16810332
+    },
+    "heapAfterReloadBytes": {
+      "n": 2,
+      "median": 15146178,
+      "p95": 15214676
+    },
+    "initialAssets": {
+      "js": {
+        "requests": 7,
+        "rawBytes": 5000068,
+        "gzipEstimateBytes": 723800
+      },
+      "css": {
+        "requests": 4,
+        "rawBytes": 279400,
+        "gzipEstimateBytes": 129082
+      }
+    },
+    "bundledTasks": 1816,
+    "initialDataRequests": 0,
+    "workloadDataRequests": [
+      2,
+      2
+    ],
+    "workloadDataBytes": [
+      266493,
+      266493
+    ],
+    "workloadTaskBodies": [
+      141,
+      141
+    ],
+    "pageErrors": [],
+    "reload": "State/draft restore asserted; no comparative latency reported because the original before-run timer used different document origins."
+  },
+  "after": {
+    "method": {
+      "cpuThrottle": 4,
+      "viewport": [
+        390,
+        844
+      ],
+      "chromium": "/usr/bin/chromium",
+      "runs": 2,
+      "network": "local HTTP, browser cache disabled; no network throttling",
+      "latency": "Playwright action through two animation frames; not Web Vitals INP",
+      "reactProfiler": "not enabled in production build"
+    },
+    "coldCatalogMs": {
+      "n": 2,
+      "median": 1951.688325501891,
+      "p95": 1981.9913730025291
+    },
+    "actions": {
+      "first_task": {
+        "n": 2,
+        "median": 394.849853515625,
+        "p95": 411.89990234375
+      },
+      "check_answer": {
+        "n": 2,
+        "median": 205.550048828125,
+        "p95": 212.60009765625
+      },
+      "show_solution": {
+        "n": 2,
+        "median": 203.25,
+        "p95": 211.39990234375
+      },
+      "skip": {
+        "n": 80,
+        "median": 248.800048828125,
+        "p95": 312.099853515625
+      },
+      "filter:Тема заданий": {
+        "n": 2,
+        "median": 327.300048828125,
+        "p95": 338.2001953125
+      },
+      "filter:Подтема заданий": {
+        "n": 2,
+        "median": 273.050048828125,
+        "p95": 281.800048828125
+      },
+      "filter:Подтип заданий": {
+        "n": 2,
+        "median": 261.050048828125,
+        "p95": 274.5
+      },
+      "filter:Источник заданий": {
+        "n": 2,
+        "median": 274.449951171875,
+        "p95": 303.199951171875
+      },
+      "all_themes": {
+        "n": 2,
+        "median": 307.2498779296875,
+        "p95": 316.2998046875
+      },
+      "feed": {
+        "n": 2,
+        "median": 192.4500732421875,
+        "p95": 195
+      },
+      "feed_page": {
+        "n": 6,
+        "median": 213.2000732421875,
+        "p95": 258.099853515625
+      }
+    },
+    "inputToTwoFramesMs": {
+      "n": 48,
+      "median": 53.95000000111759,
+      "p95": 77.19999999925494
+    },
+    "longTasksPerRun": {
+      "n": 2,
+      "median": 74.5,
+      "p95": 76
+    },
+    "longTaskTimePerRunMs": {
+      "n": 2,
+      "median": 8176.5,
+      "p95": 8195
+    },
+    "practiceWritesPerRun": {
+      "n": 2,
+      "median": 116,
+      "p95": 116
+    },
+    "practiceWriteMs": {
+      "n": 232,
+      "median": 0.10000000149011612,
+      "p95": 1.199999999254942
+    },
+    "practiceSerializationMs": {
+      "n": 232,
+      "median": 0.09999999776482582,
+      "p95": 0.8000000007450581
+    },
+    "heapInitialBytes": {
+      "n": 2,
+      "median": 15750938,
+      "p95": 15756936
+    },
+    "heapAfter40Bytes": {
+      "n": 2,
+      "median": 17988224,
+      "p95": 17995152
+    },
+    "heapAfterReloadBytes": {
+      "n": 2,
+      "median": 15763256,
+      "p95": 15778684
+    },
+    "initialAssets": {
+      "js": {
+        "requests": 7,
+        "rawBytes": 5001565,
+        "gzipEstimateBytes": 724372
+      },
+      "css": {
+        "requests": 4,
+        "rawBytes": 279400,
+        "gzipEstimateBytes": 129082
+      }
+    },
+    "bundledTasks": 1816,
+    "initialDataRequests": 0,
+    "workloadDataRequests": [
+      2,
+      2
+    ],
+    "workloadDataBytes": [
+      266493,
+      266493
+    ],
+    "workloadTaskBodies": [
+      141,
+      141
+    ],
+    "pageErrors": [],
+    "reload": "State/draft restore asserted; no comparative latency reported because the original before-run timer used different document origins."
+  },
+  "modelBefore": {
+    "node": "v24.19.0",
+    "bankRecords": 1816,
+    "metadataRecords": 4463,
+    "candidateIds": 157,
+    "candidates": {
+      "n": 100,
+      "medianMs": 0.7347409999999854,
+      "p95Ms": 0.8021610000000692,
+      "totalMs": 83.42262099999903
+    },
+    "facets": {
+      "n": 100,
+      "medianMs": 1.515480000000025,
+      "p95Ms": 1.6144779999999628,
+      "totalMs": 155.1081039999999
+    },
+    "catalogueCounts": {
+      "n": 30,
+      "medianMs": 17.910472000000027,
+      "p95Ms": 48.38098200000013,
+      "totalMs": 680.9602799999996
+    },
+    "serialization": {
+      "n": 100,
+      "medianMs": 0.5365430000001652,
+      "p95Ms": 0.5908949999998185,
+      "totalMs": 71.15963299999794
+    },
+    "serializedBytes": 161792,
+    "candidateOrderPreserved": true
+  },
+  "modelAfter": {
+    "node": "v24.19.0",
+    "bankRecords": 1816,
+    "metadataRecords": 4463,
+    "candidateIds": 157,
+    "candidates": {
+      "n": 100,
+      "medianMs": 0.0012019999999210995,
+      "p95Ms": 0.0036260000001675508,
+      "totalMs": 0.1455909999992855
+    },
+    "facets": {
+      "n": 100,
+      "medianMs": 1.5282979999999498,
+      "p95Ms": 1.7103010000000722,
+      "totalMs": 165.65873900000042
+    },
+    "catalogueCounts": {
+      "n": 30,
+      "medianMs": 0.02475700000013603,
+      "p95Ms": 0.042623000000048705,
+      "totalMs": 0.820517000000109
+    },
+    "serialization": {
+      "n": 100,
+      "medianMs": 0.5307040000000143,
+      "p95Ms": 0.604654999999866,
+      "totalMs": 53.596217999999226
+    },
+    "serializedBytes": 161792,
+    "candidateOrderPreserved": true
+  },
+  "retentionCheck": {
+    "modeRoundTrips": 20,
+    "heapBeforeBytes": 15776620,
+    "heapAfterBytes": 16140232,
+    "heapDeltaBytes": 363612,
+    "listenerCountsBefore": {
+      "window": 21,
+      "document": 140
+    },
+    "listenerCountsAfter": {
+      "window": 21,
+      "document": 140
+    },
+    "listenerTypesEqual": true,
+    "additionalShardRequests": 0,
+    "feedCards": 12,
+    "pageErrors": [],
+    "scope": "window/document listeners and collected JS heap, not a complete heap-snapshot leak proof"
+  }
+}

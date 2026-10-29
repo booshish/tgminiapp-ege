@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { ArrowRight, BookOpen, Bookmark, CircleX, ClipboardCheck, Hash, ListFilter, Shuffle } from "lucide-react";
 import { ExamPicker, PageIntro, FeatureCard } from "@/components/ui";
 import { getActiveSubjects as getSubjects, subjectTitle, type SubjectId } from "@/lib/subjects";
@@ -9,7 +10,7 @@ import { VariantLaunchCard } from "@/components/variant-launch-card";
 import type { MockState } from "@/lib/mock-exam";
 import type { CatalogSelection } from "@/lib/practice";
 import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
-import { getPracticeTasks, getPracticeTaskCount, practicePrototypes as prototypes, taskTopicLabels } from "@/lib/tasks";
+import { getPracticeTasks, getPracticeTaskCount, practiceBank, practicePrototypes as prototypes, taskTopicLabels } from "@/lib/tasks";
 import { getTheoryTopic, allTheoryTopics as theoryTopics } from "@/lib/theory";
 import { StreakSummary } from "@/components/game-motivation";
 import type { GameSummary } from "@/lib/gamification";
@@ -65,6 +66,12 @@ export function CatalogScreen({
     subjectId: selection.subjectId,
     level: selection.level,
   };
+  const bankRevision=practiceBank.length;
+  const prototypeRevision=prototypes.length;
+  // This screen intentionally remains mounted to preserve its scroll/selection.
+  // Draft keystrokes elsewhere must not rerun its whole prototype catalogue.
+  const {availableTopics,availablePrototypes}=useMemo(()=>{
+  const filter={examType:selection.exam,subjectId:selection.subjectId,level:selection.level};
   const availableTasks = getPracticeTasks(filter);
   const availableTopics = theoryTopics
     .filter((topic) => topic.subjectId === selection.subjectId)
@@ -90,6 +97,8 @@ export function CatalogScreen({
     (prototype) =>
       getPracticeTaskCount({ ...filter, prototypeId: prototype.id }) > 0,
   );
+  return {availableTopics,availablePrototypes,bankRevision,prototypeRevision};
+  },[selection.exam,selection.subjectId,selection.level,bankRevision,prototypeRevision]);
   const chosenPrototype = availablePrototypes.find(
     (prototype) => prototype.id === selection.prototypeId,
   );

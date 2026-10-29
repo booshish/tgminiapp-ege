@@ -1252,6 +1252,41 @@ export type PracticeTaskFilter = TaxonomyFilters & {
   part?: ExamPart;
 };
 
+type SelectionRecord = Pick<Task, "id" | "examType" | "subjectId" | "level" | "examNumber" | "topicId" | "prototypeId">;
+type SelectionIndex<T> = { direction: Map<string,T[]>; number: Map<string,T[]>; topic: Map<string,T[]>; prototype: Map<string,T[]> };
+const directionKey = (t: {examType: Exam; subjectId: SubjectId; level: ExamLevel|null}) => JSON.stringify([t.examType,t.subjectId,t.level]);
+function indexSelections<T extends SelectionRecord>(items: readonly T[], number: (item:T)=>number|null): SelectionIndex<T> {
+  const index:SelectionIndex<T>={direction:new Map(),number:new Map(),topic:new Map(),prototype:new Map()};
+  const add=(map:Map<string,T[]>,key:string,item:T)=>{const group=map.get(key);if(group)group.push(item);else map.set(key,[item]);};
+  for(const item of items){
+    const key=directionKey({examType:item.examType[0],subjectId:item.subjectId,level:item.level});
+    add(index.direction,key,item);add(index.number,JSON.stringify([key,number(item)]),item);
+    add(index.topic,JSON.stringify([key,item.topicId]),item);add(index.prototype,JSON.stringify([key,item.prototypeId]),item);
+  }
+  return index;
+}
+function selectionPool<T>(index:SelectionIndex<T>,definition: {examType:Exam;subjectId:SubjectId;level:ExamLevel|null},filter:PracticeTaskFilter):readonly T[]{
+  const key=directionKey(definition);
+  return filter.prototypeId?index.prototype.get(JSON.stringify([key,filter.prototypeId]))??[]
+    :filter.examNumber!==undefined?index.number.get(JSON.stringify([key,filter.examNumber]))??[]
+    :filter.topicId?index.topic.get(JSON.stringify([key,filter.topicId]))??[]:index.direction.get(key)??[];
+}
+// Build-pinned metadata only, with references to the existing registry, not copied conditions.
+const packageMetadata=taskPackageIndex.flatMap(p=>p.tasks);
+const packageMetadataById=new Map(packageMetadata.map(t=>[t.id,t]));
+const metadataSelections=indexSelections(packageMetadata.filter(t=>getMetadataPlacement(t).available),t=>getMetadataPlacement(t).number);
+let selectableRevision=-1, selectableSelections:SelectionIndex<Task>;
+function loadedSelections(){
+  if(selectableRevision!==selectableTasks.length){
+    selectableSelections=indexSelections(selectableTasks.map(getTaskView).filter(t=>t.availability!=="history-only"),t=>t.examNumber);
+    selectableRevision=selectableTasks.length;
+  }
+  return selectableSelections;
+}
+// Presentation query cache, invalidated by actual append-only registration; never persisted.
+const candidateQueries=new Map<string,readonly string[]>();
+let candidateRevision=-1;
+
 /** Never replace an empty selection with another exam, level, number or topic. */
 export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
   const definition = getExamDefinition(filter);
@@ -1261,7 +1296,7 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
     !definition.numbers.some((entry) => entry.number === filter.examNumber)
   )
     return [];
-  return selectableTasks.map(getTaskView).filter(
+  return selectionPool(loadedSelections(),definition,filter).filter(
     (task) =>
       task.examType[0] === definition.examType &&
       task.subjectId === definition.subjectId &&
@@ -1276,20 +1311,29 @@ export function getPracticeTasks(filter: PracticeTaskFilter): Task[] {
 
 /** Tiny metadata counts include unloaded approved items, never fake Task objects. */
 export function getPracticeTaskIds(filter: PracticeTaskFilter): string[] {
+  // Callers own mutable session arrays; never expose the cached identity list.
+  return [...practiceCandidateIds(filter)];
+}
+function practiceCandidateIds(filter:PracticeTaskFilter):readonly string[]{
   const definition = getExamDefinition(filter);
   if (!definition?.available || (filter.examNumber !== undefined && !definition.numbers.some(n=>n.number===filter.examNumber))) return [];
-  const metadata = taskPackageIndex.flatMap(p=>p.tasks);
-  const packaged = new Set(metadata.map(t=>t.id));
+  if(candidateRevision!==selectableTasks.length){candidateQueries.clear();candidateRevision=selectableTasks.length;}
+  const key=JSON.stringify([definition.id,filter.examNumber,filter.topicId,filter.prototypeId,filter.part,filter.subtypeId,filter.taxonomyTopicId,filter.subtopicId,filter.sourceCategoryId]);
+  const cached=candidateQueries.get(key);
+  if(cached){candidateQueries.delete(key);candidateQueries.set(key,cached);return cached;}
   // Stable order does not depend on which shard happened to arrive first.
-  return [...getPracticeTasks(filter).filter(t=>!packaged.has(t.id)).map(t=>t.id), ...metadata.filter((t) =>
+  const ids=[...getPracticeTasks(filter).filter(t=>!packageMetadataById.has(t.id)).map(t=>t.id), ...selectionPool(metadataSelections,definition,filter).filter((t) =>
     t.examType[0] === filter.examType && t.subjectId === (filter.subjectId ?? "math") &&
     getMetadataPlacement(t).available && (filter.examNumber === undefined || getMetadataPlacement(t).number === filter.examNumber) &&
     (!filter.topicId || t.topicId === filter.topicId) && (!filter.prototypeId || t.prototypeId === filter.prototypeId) &&
     (!filter.part || definition.numbers.find(n=>n.number===getMetadataPlacement(t).number)?.part===filter.part) &&
     t.level === definition.level && matchesTaskTaxonomy(t,filter)).map(t=>t.id)];
+  candidateQueries.set(key,ids);
+  if(candidateQueries.size>256)candidateQueries.delete(candidateQueries.keys().next().value!);
+  return ids;
 }
 export function getPracticeTaskCount(filter: PracticeTaskFilter): number {
-  return getPracticeTaskIds(filter).length;
+  return practiceCandidateIds(filter).length;
 }
 
 let viewBank: Task[] = [], viewLength=-1;
@@ -1301,9 +1345,8 @@ export function getPracticeBankView(): Task[] {
 
 /** Called only after verification against the build-pinned shard digest. Append-only. */
 export function registerTaskPackage(items: Task[]): void {
-  const metadata = taskPackageIndex.flatMap((p) => p.tasks);
-  if (!Array.isArray(items) || items.some((t) => !metadata.some((m) => m.id === t.id && m.subjectId === t.subjectId && m.examNumber === t.examNumber && m.examType[0] === t.examType[0]) ||
-    t.publication?.id !== t.id || !getPublicationDecision(t.publication).allowed)) throw Error("Unapproved task package");
+  if (!Array.isArray(items) || items.some((t) => {const m=packageMetadataById.get(t.id);return !m || m.subjectId !== t.subjectId || m.examNumber !== t.examNumber || m.examType[0] !== t.examType[0] ||
+    t.publication?.id !== t.id || !getPublicationDecision(t.publication).allowed;})) throw Error("Unapproved task package");
   const seen = new Set(practiceBank.map((t) => t.id));
   for (const task of items) if (!seen.has(task.id)) {
     practiceBank.push(task); selectableTasks.push(task); seen.add(task.id);
