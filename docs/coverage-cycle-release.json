@@ -9478,5 +9478,8 @@
     }
   ],
   "semanticReview": "Finite editorial comparison of topics/solutions and small bounded file families plus existing corpus-wide lexical gate; no claim of embedding/AI semantic certification.",
-  "publication": "source-shards-ready-deploy-not-yet-confirmed"
+  "publication": "github-pages-success",
+  "publicationReceipt": "docs/coverage-cycle-publication.json",
+  "sourceCommit": "fc7f6397a4c22a96342bf0279f2137375e9940fa",
+  "pagesCommit": "de7107ccfa852f671f99a92570815d5511a8b1dc"
 }

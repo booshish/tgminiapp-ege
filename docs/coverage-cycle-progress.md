@@ -1,5 +1,7 @@
 # Закрытие пустых номеров — 29.10.2026
 
+Публикация подтверждена: source `fc7f6397a4c22a96342bf0279f2137375e9940fa`, gh-pages `de7107ccfa852f671f99a92570815d5511a8b1dc`, tree `212026e59aba6b45fa22545da6f3093977213b9f`. [Native Pages 40886696239](https://github.com/booshish/tgminiapp-ege/actions/runs/40886696239) — completed/success; build, deploy и report-build-status успешны. В удалённом дереве 202 пакета, включая новые химические, биологические и файловые задачи. Реально опубликовано **69 новых заданий**. Квитанция — [coverage-cycle-publication.json](coverage-cycle-publication.json).
+
 ## Подтверждённые проверки текущего выпуска
 
 - Адресные тесты: 19/19. Полный `npm test`: 463/463, ошибок и пропусков 0. Lint без предупреждений, typecheck, `build:pages`, `taxonomy:check`, `git diff --check` прошли.
