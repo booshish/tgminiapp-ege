@@ -7,6 +7,17 @@ export const subjects = [
 ] as const;
 export type SubjectId = typeof subjects[number][0];
 export type DirectionStatus = "active" | "planned" | "hidden";
+/** Editorial policy, independent of student availability and entitlements.
+ * Resume only after a separate explicit product decision. No CLI bypass. */
+export const contentExpansionPauses: Readonly<Record<string, string>> = {
+  "ege-math-profile": "Пополнение приостановлено по решению владельца; существующий банк остаётся доступным",
+};
+export function assertContentExpansionAllowed(modelId: string) {
+  if (contentExpansionPauses[modelId]) throw Error(`Content expansion paused: ${modelId}. ${contentExpansionPauses[modelId]}`);
+}
+export function isContentExpansionPaused(modelId: string) {
+  return Boolean(contentExpansionPauses[modelId]);
+}
 /** Product availability only; never a claim of content completeness or an entitlement. */
 export function directionStatus(exam: "ОГЭ" | "ЕГЭ", subject: string): DirectionStatus {
   const active = exam === "ОГЭ"

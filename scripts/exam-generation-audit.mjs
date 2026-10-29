@@ -109,6 +109,7 @@ export function requireReadyGenerator(audit,modelId,number,subtype){
 
 /** A bounded order for the existing importer/generator pipeline, not a second engine. */
 export function planSubtypeGeneration(audit,{modelId,number,subtype,count}){
+  createContentLoader()("src/lib/subjects.ts").assertContentExpansionAllowed(modelId);
   if(!Number.isSafeInteger(count)||count<1||count>1000)throw Error("One controlled batch must contain 1..1000 tasks");
   const row=requireReadyGenerator(audit,modelId,number,subtype);
   return {schemaVersion:1,modelId,number,subtype,count,answerFormat:row.answerFormat,implementation:row.generationMethod,verification:row.answerVerification,publication:"existing-JSONL-staging-review-gate-required"};
@@ -117,6 +118,7 @@ export function planSubtypeGeneration(audit,{modelId,number,subtype,count}){
 export function generationAuditMarkdown(audit){
   const c=audit.counts;
   const lines=["# Карта генераторов: текущий аудит", "", `Моделей: ${c.directions}; целевых номеров: ${c.targetNumbers}; полностью подтверждённых моделей: ${c.fullyConfirmedModels}.`, "", `Именованных подтипов: ${c.knownSubtypes}: READY ${c.READY}, PARTIAL ${c.PARTIAL}, BLOCKED ${c.BLOCKED}. Отдельно: ${c.finiteSeedGroups} групп конечных редакционных семян и ${c.unknownCoverageGates} барьеров непроверенного покрытия — это не выдуманные подтипы.`, "", `Правила оценивания сверены адресно для ${c.scoringRuleReviewedNumbers} номеров, не для всех ${c.targetNumbers}. ${c.uniqueParameterizedFunctions} повторно используемые функции / ${c.parameterizedCapabilities} контракта применения. Новые функции в этом миграционном этапе не добавлялись.`, "", "READY относится только к указанному ограниченному тренировочному подтипу и проекту 2027; не к утверждённому экзамену, всем уровням сложности или всему номеру. Полнота кодификаторов не заявляется. Все 30 активных моделей — проекты 2027; исходные тела прежних заданий и ID сохранены отдельно от представления.", "", "| Направление | Runtime / цель: номеров | Именованные READY / PARTIAL / BLOCKED | Дополнительные ограничения |", "| --- | ---: | ---: | --- |"];
+  lines.push("", "Приоритет владельца от 29.10.2026: ege-math-profile — пополнение приостановлено. READY ниже означает техническую возможность, НЕ разрешение на новый выпуск. Не выполнять старые рекомендации о наполнении профильных №4/5/6/11/13/17. Планирование проверяет src/lib/subjects.ts. Следующие партии: только остальные 9 активных направлений; сначала пустые номера русского, информатики, биологии, химии и обществознания.", "");
   for(const d of audit.directions){
     const rows=d.numbers.flatMap(n=>n.subtypes).filter(s=>s.recordKind==="named-subtype");
     const counts=["READY","PARTIAL","BLOCKED"].map(status=>rows.filter(r=>r.status===status).length).join(" / ");

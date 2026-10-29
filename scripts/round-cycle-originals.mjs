@@ -1,11 +1,14 @@
 import {createContentLoader} from './content-source-loader.mjs';
 import {publishedCorpus} from './import-tasks.mjs';
 export function roundCycleRows(){
- const l=createContentLoader(),bank=publishedCorpus(),{getExamDefinition}=l('src/lib/exams.ts'),{originalProvenance}=l('src/lib/content/provenance.ts'),rows=[];
+ const l=createContentLoader(),bank=publishedCorpus(),{getExamDefinition}=l('src/lib/exams.ts'),{originalProvenance}=l('src/lib/content/provenance.ts'),{isContentExpansionPaused}=l('src/lib/subjects.ts'),rows=[];
+ let ordinal=0;
  function add(exam,subject,level,number,family,triple,prompt,answer,steps,proof,rule='number',latex){
   const model=getExamDefinition({examType:exam,subjectId:subject,level}),slot=model.numbers[number-1];
   const seed=bank.find(t=>t.examType[0]===exam&&t.subjectId===subject&&t.level===level&&t.examNumber===number&&t.examVersionId===model.versionId);
-  const id=`round-20261028-${model.id}-${number}-${family}-${rows.length+1}`;
+  const position=++ordinal; // Keep every other direction's stable IDs unchanged when a direction pauses.
+  if(isContentExpansionPaused(model.id))return;
+  const id=`round-20261028-${model.id}-${number}-${family}-${position}`;
   const task={id,examType:[exam],subjectId:subject,level,examYear:2027,examVersionId:model.versionId,examNumber:number,part:slot.part,topicId:seed?.topicId??`${model.id}-n${number}`,prototypeId:seed?.prototypeId??`${model.id}-n${number}-original`,title:triple[2],prompt,answerDisplay:String(answer),answerRule:rule==='number'?{type:'number',value:String(answer)}:rule==='word'?{type:'text',value:String(answer),caseInsensitive:true}:{type:'choices',value:String(answer),ordered:rule==='ordered'},answerFormat:rule==='number'?'number':'text',difficulty:'standard',solution:steps.map(text=>({text})),...(latex?{conditionLatex:latex}:{}),scoring:seed?.scoring??{status:'pending-official-verification',maxPrimaryScore:slot.maxPrimaryScore},source:{kind:'author',label:'Оригинальная тренировка «Точки» · проект 2027, не официальный КИМ',revision:1},provenance:originalProvenance('original-individual-task'),requirementsReference:{...slot.sourceReference,year:2027,status:'draft-copy-reviewed'},publication:{id,releaseStatus:'ready',provenance:{sourceIds:['tochka-project-original'],authorship:'project-original',sourceFiles:['scripts/round-cycle-originals.mjs'],attribution:['Авторский материал проекта «Точка»']},validation:{status:'automated-reviewed',checkedAt:'2026-10-28',evidence:['scripts/verify-round-cycle.py','docs/round-cycle-verification.json']}}};
   rows.push({task,family,triple,proof:{kind:family,...proof}});
  }

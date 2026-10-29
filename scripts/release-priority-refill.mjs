@@ -6,7 +6,10 @@ import {releasePilot} from './release-task-pilot.mjs';
 import {publishedCorpus,structuralIssues} from './import-tasks.mjs';
 import {contentFingerprint} from './content-review-evidence.mjs';
 import {createContentLoader} from './content-source-loader.mjs';
-const rows=refillRows(),load=createContentLoader(),view=load('src/lib/task-placement.ts').getTaskView;
+const load=createContentLoader();
+// This historical mixed release targets profile math. Do not generate its old quotas again.
+load('src/lib/subjects.ts').assertContentExpansionAllowed('ege-math-profile');
+const rows=refillRows(),view=load('src/lib/task-placement.ts').getTaskView;
 const reportFile='docs/priority-refill-release.json',corpus=publishedCorpus();
 for(const row of rows)assert.deepEqual(structuralIssues(row.task,corpus),[],row.task.id);
 const controls=[];

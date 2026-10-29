@@ -12,6 +12,15 @@ const { practiceBank } = load("src/lib/tasks.ts");
 const { getPublicationDecision } = load("src/lib/content-publication.ts");
 const { sourceRegistry } = load("src/lib/source-registry.ts");
 const { getExamDefinition } = load("src/lib/exams.ts");
+const { isContentExpansionPaused, assertContentExpansionAllowed } = load("src/lib/subjects.ts");
+// Match both current and historical versions; changing the year cannot bypass a pause.
+export function expansionModelId(task) {
+  if (task?.subjectId === "math" && task?.level === "profile" && Array.isArray(task?.examType) && task.examType.includes("ЕГЭ")) return "ege-math-profile";
+  return typeof task?.examVersionId === "string" ? task.examVersionId.replace(/-\d{4}.*$/, "") : "";
+}
+export function assertTaskExpansionAllowed(task) {
+  assertContentExpansionAllowed(expansionModelId(task));
+}
 /** Editorial-side only: deduplicate against ALL published shards, not just bundled seeds. */
 export function publishedCorpus() {
   const { taskPackageIndex } = createContentLoader()("src/lib/task-package-index.ts");
@@ -96,7 +105,10 @@ export async function importTasks({ input, job, reviews = [], batchSize = 200, m
     const state = existsSync(checkpoint) ? JSON.parse(readFileSync(checkpoint, "utf8")) : { schemaVersion: 1, identity, lines: 0, batches: 0, counts: { found: 0, rightsAllowed: 0, staged: 0, duplicates: 0, rejected: 0, review: 0 } };
     if (state.identity !== identity) throw Error("Input/review/registry/bank changed; use a new job ID");
     const seen = new Map(corpus.map((t) => [t.id, normalized(t)]));
-    for (let i = 0; i < state.batches; i++) for (const r of JSON.parse(readFileSync(`${directory}/batch-${i}.json`, "utf8"))) if (["staged", "review"].includes(r.status)) seen.set(r.task.id, normalized(r.task));
+    for (let i = 0; i < state.batches; i++) for (const r of JSON.parse(readFileSync(`${directory}/batch-${i}.json`, "utf8"))) if (["staged", "review"].includes(r.status)) {
+      assertTaskExpansionAllowed(r.task); // A pre-pause checkpoint cannot resume new paused content.
+      seen.set(r.task.id, normalized(r.task));
+    }
     let line = 0, batches = 0, pending = [];
     const flush = () => {
       if (!pending.length) return;
@@ -113,6 +125,7 @@ export async function importTasks({ input, job, reviews = [], batchSize = 200, m
       try { task = JSON.parse(raw); } catch { record = { line, status: "rejected", issues: ["invalid-json"] }; }
       if (!record) {
         const issues = structuralIssues(task, corpus);
+        if (isContentExpansionPaused(expansionModelId(task))) issues.push("content-expansion-paused");
         if (issues.length) record = { line, status: "rejected", issues, task };
         else {
           const statement = normalized(task);

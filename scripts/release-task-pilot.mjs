@@ -5,7 +5,7 @@ import { resolve } from "node:path";
 import { entries } from "./original-informatics-pilot.mjs";
 import { createContentLoader, projectRoot } from "./content-source-loader.mjs";
 import { contentFingerprint } from "./content-review-evidence.mjs";
-import { importTasks } from "./import-tasks.mjs";
+import { importTasks, assertTaskExpansionAllowed } from "./import-tasks.mjs";
 
 // Independent executable checks: enumerate logical domains and graph paths,
 // interpret commands/loops, accumulate positional values rather than trust answer strings.
@@ -46,6 +46,7 @@ export async function releasePilot(options = {}) {
     };
     return task;
   });
+  tasks.forEach(assertTaskExpansionAllowed); // Before reviews, input files or publication writes, including resume.
   const batchId = options.batchId ?? "original-informatics-20261026";
   if (!/^[a-z0-9-]+$/.test(batchId)) throw Error("Invalid batch ID");
   if (options.verify) tasks.forEach(options.verify);

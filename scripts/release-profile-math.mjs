@@ -30,6 +30,7 @@ export function profileInventory(corpus=publishedCorpus()) {
 }
 function writeJSON(file,value){writeFileSync(resolve(projectRoot,file),JSON.stringify(value,null,2)+'\n');}
 export async function releaseProfileMath({checkOnly=false}={}) {
+  if(!checkOnly)createContentLoader()('src/lib/subjects.ts').assertContentExpansionAllowed('ege-math-profile');
   const rows=generateProfileBatch(),corpus=publishedCorpus();
   const control=verifyProfileRows(generateProfileBatch({control:true}));
   const independent=verifyProfileRows(rows);

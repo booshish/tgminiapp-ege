@@ -64,9 +64,8 @@ test('all old IDs, conditions, answers and 124 immutable shards remain unchanged
   for(const p of prior)assert.equal(createHash('sha256').update(readFileSync(resolve(projectRoot,'public/task-packages',p.file))).digest('hex'),p.sha256);
 });
 test('exact READY subtype orders use the existing capability registry; unreviewed extended criteria cannot unlock mocks',()=>{
-  const audit=generationAudit(),order=planSubtypeGeneration(audit,{modelId:'ege-math-profile',number:6,subtype:'two-point-variance',count:75});
-  assert.deepEqual(order.implementation.selector,{number:6,subtype:'two-point-variance'});
-  assert.equal(generateProfileBatch({...order.implementation.selector,perFamily:order.count}).length,75);
+  const audit=generationAudit();
+  assert.throws(()=>planSubtypeGeneration(audit,{modelId:'ege-math-profile',number:6,subtype:'two-point-variance',count:75}),/Content expansion paused/);
   assert.throws(()=>planSubtypeGeneration(audit,{modelId:'ege-math-profile',number:17,subtype:'quadratic-profit-optimization',count:75}));
   const l=createContentLoader(),definition=l('src/lib/exams.ts').getExamDefinition({examType:'ЕГЭ',subjectId:'math',level:'profile'}),mock=l('src/lib/mock-exam.ts');
   assert.deepEqual(mock.getMockCoverage(definition,all).missingNumbers,[14,15,16,17,18,19,20]);
