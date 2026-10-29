@@ -17,6 +17,16 @@ with sync_playwright() as p:
             return page.url
         def ledger():
             return page.evaluate('JSON.parse(localStorage.getItem("tochka-learning-v2"))')
+        def aligned():
+            assert page.evaluate('''() => {
+                const r=s=>document.querySelector(s).getBoundingClientRect();
+                const left=r('.practice-heading-row').left;
+                const aligned=['.practice-view-controls','#task-heading','.task-card'].every(s=>Math.abs(r(s).left-left)<1);
+                const checkbox=r('.practice-hide-solved input'),label=r('.practice-hide-solved');
+                const centered=Math.abs((checkbox.top+checkbox.bottom-label.top-label.bottom)/2)<1;
+                const buttons=[...document.querySelectorAll('.segmented-control button')];
+                return aligned && centered && buttons.every(b=>getComputedStyle(b).whiteSpace==='nowrap') && document.documentElement.scrollWidth<=innerWidth;
+            }''')
         page.evaluate('(t)=>document.documentElement.dataset.theme=t', theme)
         initial = ledger()
         original = current()
@@ -43,9 +53,12 @@ with sync_playwright() as p:
                 for mode in ['Лента', 'По одному']:
                     page.get_by_role('button', name=mode, exact=True).tap()
                 expect(answer).to_have_value('2718')
+                aligned()
                 answer.focus()
                 page.get_by_role('button', name='Фокус: включить режим концентрации', exact=True).tap()
                 page.evaluate('window.scrollTo(0,0)')
+                aligned()
+                expect(page.locator('.task-topbar .bookmark-button')).to_be_visible()
                 assert page.evaluate('''() => {
                     const row=document.querySelector('.practice-view-controls').getBoundingClientRect();
                     const content=document.querySelector('.practice-content').getBoundingClientRect();
@@ -80,6 +93,21 @@ with sync_playwright() as p:
         page.get_by_role('button', name='Выйти из режима концентрации', exact=True).tap()
         assert page.evaluate('localStorage.getItem("tochka-practice-v1")') == checked
         assert ledger()['events'] == checked_events
+        page.set_viewport_size({'width': 820, 'height': 1180})
+        # Layout-only long-label/zoom fixtures; no task, taxonomy or storage edits.
+        page.locator('.practice-heading-row > span').evaluate('(e)=>e.textContent="ЕГЭ · Обществознание · Длинное название направления подготовки"')
+        page.locator('.number-topic-current').evaluate('(e)=>e.textContent="Длинное название темы и подтемы для проверки переноса"')
+        for zoom in [1, 1.25, 1.5]:
+            page.evaluate('(z)=>document.documentElement.style.zoom=String(z)', zoom)
+            aligned()
+        page.evaluate('document.documentElement.style.zoom="1"')
+        page.screenshot(path=f'/workspace/scratch/panel-grid-{theme}.png')
+        page.get_by_role('button', name='Фокус: включить режим концентрации', exact=True).tap()
+        for zoom in [1, 1.25, 1.5]:
+            page.evaluate('(z)=>document.documentElement.style.zoom=String(z)', zoom)
+            aligned()
+        page.evaluate('document.documentElement.style.zoom="1"')
+        page.screenshot(path=f'/workspace/scratch/panel-grid-focus-{theme}.png')
         ctx.close()
     browser.close()
 assert not errors, errors

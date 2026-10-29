@@ -144,13 +144,15 @@
 .app-shell.focus-mode .main-content.view-tasks {
   padding-top: max(10px, env(safe-area-inset-top, 0px));
 }
-.app-shell.focus-mode .practice-workspace {
+.practice-workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 64px;
-  column-gap: 12px;
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
 }
-.app-shell.focus-mode .practice-view-controls { align-items: center; }
+.app-shell.focus-mode .practice-workspace { grid-template-columns: minmax(0, 1fr) 64px; column-gap: 12px; }
+.practice-heading-row { grid-column: 1; grid-row: 1; }
+.practice-view-controls { grid-column: 1; grid-row: 2; }
+.practice-content { grid-column: 1; grid-row: 3; }
 .practice-focus-exit {
   grid-column: 2;
   grid-row: 1 / span 3;
@@ -166,17 +168,29 @@
   grid-column: 1;
 }
 .practice-heading-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; min-width: 0; min-height: 64px; margin-bottom: 12px; }
-.practice-heading-row > span { overflow-wrap: anywhere; color: var(--muted); }
-.practice-workspace > .practice-view-controls { gap: 8px 16px; margin-bottom: 16px; min-width: 0; }
+.practice-heading-row > .back-link { flex: 0 0 auto; white-space: nowrap; }
+.practice-heading-row > span { flex: 0 1 auto; min-width: 0; overflow-wrap: anywhere; color: var(--muted); }
+.practice-workspace > .practice-view-controls { align-items: center; gap: 10px 16px; margin: 0 0 16px; min-width: 0; }
 .practice-view-controls .number-training-filters,
 .practice-view-controls .number-filter-toolbar { display: contents; }
 .practice-view-controls .number-filter-panel,
 .practice-view-controls .number-filter-empty { flex-basis: 100%; }
-.practice-view-controls .segmented-control { max-width: 100%; min-width: 0; flex-wrap: wrap; }
+.practice-view-controls .segmented-control { max-width: 100%; min-width: 0; flex: 0 0 auto; flex-wrap: nowrap; align-items: center; }
+.practice-view-controls .segmented-control button { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; padding: 10px 12px; }
+.practice-view-controls .practice-hide-solved { flex: 0 0 auto; width: auto; white-space: nowrap; align-items: center; }
+.practice-view-controls .number-topic-toggle { flex: 0 1 auto; align-items: center; }
+.practice-view-controls .number-topic-current { overflow-wrap: anywhere; }
+.practice-view-controls .number-filter-count { flex: 0 0 auto; width: max-content; max-width: 100%; white-space: normal; align-self: center; }
 .practice-workspace .task-topbar .back-link,
 .practice-workspace .task-heading-block > .eyebrow { display: none; }
 .practice-workspace .task-topbar:not(:has(.bookmark-button)) { display: none; }
 .practice-workspace .task-heading-block { margin-bottom: 16px; }
-@media (max-width: 600px) {
-  .app-shell.focus-mode .practice-view-controls .practice-hide-solved { width: auto; flex: 1 1 12rem; }
+.practice-workspace .task-screen { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; align-items: start; container-type: inline-size; }
+.practice-workspace .task-screen > * { grid-column: 1 / -1; }
+.practice-workspace .task-screen > .task-heading-block { grid-column: 1; grid-row: 1; }
+.practice-workspace .task-screen > .task-topbar { grid-column: 2; grid-row: 1; margin: 0; }
+.app-shell.focus-mode .practice-workspace .bookmark-button { display: inline-flex; }
+@container (max-width: 20rem) {
+  .practice-workspace .task-screen > .task-heading-block { grid-column: 1 / -1; }
+  .practice-workspace .task-screen > .task-topbar { grid-column: 1 / -1; grid-row: 2; justify-self: end; margin-bottom: 12px; }
 }
