@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-29",
+  "sourceCommit": "42b940591949ccb3fdbdcfd44eddbc0a591cfed4",
+  "policyCommit": "0c7e30c",
+  "sourceBranch": "main",
+  "pagesCommit": "894367b4e28d35318cdd150f057a7299b44a5118",
+  "pagesTree": "f8d5b4211662237888adda5a27926b55d988943b",
+  "workflowRunId": 40842889258,
+  "workflowUrl": "https://github.com/booshish/tgminiapp-ege/actions/runs/40842889258",
+  "workflowStatus": "completed",
+  "workflowConclusion": "success",
+  "jobs": { "build": "success", "deploy": "success", "report-build-status": "success" },
+  "siteUrl": "https://booshish.github.io/tgminiapp-ege/",
+  "remoteBrowserSmoke": "not-performed-public-host-not-in-environment-network-policy",
+  "localExactProductionExportBrowser": { "practiceGroups": 9, "taxonomyGroups": 8, "pageErrors": 0, "widths": [320, 375, 390, 430, 768, 1024], "themes": ["light", "dark"], "engine": "Chromium with touch emulation; not physical iOS or Safari" },
+  "tests": { "npm test": { "passed": 459, "failed": 0, "skipped": 0 }, "npm run lint": "passed", "npm run typecheck": "passed", "npm run build:pages": "passed", "git diff --check": "passed" },
+  "unchangedPublishedData": { "baselineCommit": "e4c34ad", "shardsVerifiedInPublicAndExport": 167, "lazyRecords": 4394, "bundledBankAndTaxonomyData": "unchanged", "publishedIds": "unchanged" },
+  "profileExpansion": { "modelId": "ege-math-profile", "status": "paused-until-separate-explicit-owner-instruction", "activeNumberedTasks": 3603, "newTasks": 0, "studentAvailability": "active", "policyFile": "src/lib/subjects.ts" },
+  "newTasksByDirection": { "oge-math": 0, "oge-russian": 0, "oge-informatics": 0, "oge-biology": 0, "oge-chemistry": 0, "oge-social-studies": 0, "ege-math-base": 0, "ege-russian": 0, "ege-informatics": 0, "ege-math-profile": 0 },
+  "newStagingTasks": 0,
+  "nextContentPriority": "Remaining nine active directions only: empty biology, chemistry, social-studies, informatics and Russian numbers before missing topics/subtypes; existing reviewed JSONL pipeline. No profile quotas."
+}
