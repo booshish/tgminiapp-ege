@@ -120,8 +120,20 @@
   padding-right: max(clamp(12px, 2vw, 24px), env(safe-area-inset-right, 0px));
 }
 .app-shell .view-tasks .task-screen,
+.app-shell .view-tasks .number-training-filters,
 .app-shell .view-tasks :is(.practice-view-controls, .practice-feed, .practice-feed-pagination, .practice-empty) {
   width: 100%;
   max-width: none;
   min-width: 0;
 }
+
+/* Keep the only exit available while reading or editing a long focused task. */
+.app-shell.focus-mode .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  max-width: none;
+  padding-left: max(12px, env(safe-area-inset-left, 0px));
+  padding-right: max(12px, env(safe-area-inset-right, 0px));
+}
+.app-shell.focus-mode .focus-toggle { min-height: 44px; min-width: 64px; }
