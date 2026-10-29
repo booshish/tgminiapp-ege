@@ -11,3 +11,5 @@
 Проверки: адресные unit practice-view 7/7; production build успешен, taps успешен без pageErrors. Полный набор и результаты публикации фиксируются после завершения. Реальные Safari/iPad и системная клавиатура недоступны; используется Chromium touch emulation, не выдаваемая за реальное устройство. Сетевой доступ к github.io ограничен: подтверждается локальный точный export и удалённый native Pages отдельно.
 
 Итог: npm test 466/466, failed/skipped 0; lint, typecheck, build:pages и diff --check успешны. 9 групп браузерных practice-modes и 52 геометрических случая solver-width с ресурсами прошли, pageErrors 0. Адресный taps прогон подтверждает размещение/неперекрытие и сохранения. Полные проверки выполнены один раз после окончательного изменения production-кода.
+
+Публикация подтверждена: source 1cb33f784dca47aae7cd07fe0105c83f3617557e, gh-pages 4d1944aa6fe8eed33696cb01a20c159d64864d34. [Native Pages 40935685916](https://github.com/booshish/tgminiapp-ege/actions/runs/40935685916) completed/success. Конфигурация Actions и Pages не менялась.
