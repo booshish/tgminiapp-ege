@@ -28,3 +28,7 @@
 Все 16 JavaScript-файлов production export имеют прежние SHA256 относительно предыдущего gh-pages; новая React-логика, подписки и вычисления не добавлены. Дополнительный CPU-профиль не снимался: это проверка отсутствия новых JS-механизмов, не обещание ускорения.
 
 Команды проверки: `python scripts/test-browser-solver-width.py --phase after`, `python scripts/test-browser-practice-modes.py`, `python scripts/test-browser-task-taxonomy.py`, `npm test`, `npm run lint`, `npm run typecheck`, `npm run build:pages`. Static server: `/tgminiapp-ege` на 3002; TOCHKA_QA_BASE_URL переопределяет адрес. Полный npm test: 466/466, failed/skipped 0 (217615 мс). Lint, typecheck, production build и git diff --check успешны. Браузерные сценарии также завершены успешно. Публикация фиксируется после подтверждения Pages.
+
+## Публикация подтверждена
+
+Source: `74c6d23fdfd5c0d504cbde07b7405ae584051d62` в main. Точный проверенный export: gh-pages `44bd08e86fce55585a587b5e87ad88ef32034599`, tree `f18be0c02f34ee8dc4e3533c4b6f71e65e634363`. [Native Pages 40926546380](https://github.com/booshish/tgminiapp-ege/actions/runs/40926546380): completed/success. Настройки Actions/Pages не менялись. Прямой browser smoke github.io ограничен сетевой политикой среды; успешный native deploy и проверка точного локального export подтверждены отдельно. Main workflow не используется как подтверждение данного branch deploy.
