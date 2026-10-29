@@ -109,6 +109,11 @@ practice("oge-biology",3,"text","choices",["taxonomic-rank-order"],true);
 practice("oge-biology",5,"text","choices",["germination-lab-sequence"]);
 practice("oge-biology",7,"text","choices",["organism-traits-from-description"]);
 practice("oge-biology",9,"text","choices",["plant-animal-cell-comparison"]);
+// Bounded editorial packet: draft demo printed pp.5,9–11,15–16.
+for(const [number,subtype] of [[2,"organism-kingdom-matching"],[8,"biological-table-gap"],[10,"biological-text-gaps"],[11,"organism-group-matching"],[12,"biological-judgments"],[15,"physiological-explanation-choice"],[17,"human-traits-selection"],[18,"human-systems-matching"]] as const){
+  practice("oge-biology",number,"text","choices",[subtype]);
+}
+remainingModels.find(m=>m.id==="oge-biology")!.numbers[7].responseKind="selection";
 practice("ege-biology",3,"number","number",["gamete","daughter-mitosis"],true);
 practice("ege-biology",4,"number","number",["monohybrid-recessive","monohybrid-heterozygote"],true);
 practice("ege-biology",12,"text","choices",["taxonomic-rank-order"],true);
@@ -130,6 +135,10 @@ practice("ege-history",5,"text","choices",["events-to-rulers"]);
 practice("oge-social-studies",2,"text","text",["economic-activity-generalization"]);
 practice("oge-social-studies",9,"text","choices",["limited-budget-choice","opportunity-cost","scarcity-choice"],["limited-budget-choice"]);
 practice("oge-social-studies",14,"text","choices",["short-run-fixed-variable-costs"],true);
+// Draft demo printed pp.5,7,11: single choice/A-B judgments, not essays.
+for(const [number,subtype] of [[4,"culture-identification"],[5,"socialization-situation"],[6,"social-judgments"],[10,"economic-judgments"],[11,"state-characteristics"],[13,"rights-classification"],[15,"legal-branch-situation"],[16,"constitutional-basics"]] as const){
+  practice("oge-social-studies",number,"text","choices",[subtype]);
+}
 practice("ege-social-studies",6,"text","choices",["short-run-fixed-variable-costs","fixed-variable-costs-editorial"],["short-run-fixed-variable-costs"]);
 practice("ege-social-studies",7,"text","choices",["budget-constraint-judgments","firm-cost-judgments","alternative-cost-judgments"],["budget-constraint-judgments"]);
 for(const subject of european)for(const exam of ["oge","ege"])for(let i=0;i<5;i++)practice(`${exam}-${subject}`,(exam==="oge"?20:19)+i,"text","text",["source-checked-inflection-in-original-context"]);

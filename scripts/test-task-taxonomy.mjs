@@ -11,15 +11,18 @@ const report=JSON.parse(readFileSync(resolve(projectRoot,"docs/task-classificati
 const profileRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/profile-math-release.json"),"utf8"));
 const refillRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/priority-refill-release.json"),"utf8"));
 const cycleRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/round-cycle-release.json"),"utf8"));
+const coverageRelease=JSON.parse(readFileSync(resolve(projectRoot,"docs/coverage-cycle-release.json"),"utf8"));
+const priorTotal=1967+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length;
+const newlyCovered=coverageRelease.after.reduce((sum,d)=>sum+d.numbers.filter(n=>n.count&&!coverageRelease.before.find(b=>b.id===d.id).numbers.find(b=>b.number===n.number).count).length,0);
 const selected={examType:"ЕГЭ",subjectId:"math",level:"profile",examNumber:9};
 
 test("taxonomy is a reproducible metadata overlay for 30 directions/825 positions, not a second task bank",()=>{
   assert.deepEqual(buildTaskTaxonomy(),report);
   assert.equal(report.directions.length,30);assert.equal(report.directions.flatMap(d=>d.numbers).length,825);
-  assert.equal(report.counts.sourceTasks,1967+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length);assert.equal(report.counts.fullyClassifiedNumbers,0);
-  assert.equal(report.counts.reviewedDetailedTasks,713+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length);assert.equal(report.counts.numbersWithReviewedSubtypes,130);
+  assert.equal(report.counts.sourceTasks,priorTotal+coverageRelease.approvedIds.length);assert.equal(report.counts.fullyClassifiedNumbers,0);
+  assert.equal(report.counts.reviewedDetailedTasks,713+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length+coverageRelease.approvedIds.length);assert.equal(report.counts.numbersWithReviewedSubtypes,130+newlyCovered);
   const data=load("src/lib/content/task-taxonomy-data.ts").taskTaxonomyData;
-  assert.equal(Object.keys(data.assignments).length,1967+profileRelease.newTasks+refillRelease.approvedIds.length+cycleRelease.approvedIds.length);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
+  assert.equal(Object.keys(data.assignments).length,priorTotal+coverageRelease.approvedIds.length);assert.equal(JSON.stringify(data).includes('"prompt"'),false);assert.equal(JSON.stringify(data).includes('"answerRule"'),false);
 });
 test("stable taxonomy IDs resolve valid topic→subtopic relations; sources never become subtypes",()=>{
   for(const node of Object.values(report.nodes)){

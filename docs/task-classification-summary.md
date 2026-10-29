@@ -7,11 +7,11 @@
 | oge-math | 25 | 22 | 430 | 62; №6, 7, 8, 9, 10, 15, 18, 19, 20, 21, 22, 23, 24, 25 |
 | oge-russian | 13 | 1 | 5 | 455; №2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 |
 | oge-physics | 22 | 0 | 0 | 5; №6, 7, 8, 9, 10 |
-| oge-chemistry | 23 | 2 | 39 | 5; №3, 18, 19 |
-| oge-biology | 26 | 4 | 8 | 0; №— |
+| oge-chemistry | 23 | 18 | 70 | 5; №3, 18, 19 |
+| oge-biology | 26 | 12 | 24 | 0; №— |
 | oge-geography | 30 | 3 | 5 | 0; №— |
 | oge-history | 23 | 2 | 3 | 2; №3, 5 |
-| oge-social-studies | 20 | 2 | 141 | 3; №2, 9 |
+| oge-social-studies | 20 | 10 | 157 | 3; №2, 9 |
 | oge-informatics | 16 | 2 | 154 | 29; №1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 |
 | oge-literature | 5 | 0 | 0 | 0; №— |
 | oge-english | 38 | 5 | 5 | 0; №— |
@@ -27,7 +27,7 @@
 | ege-geography | 29 | 2 | 4 | 0; №— |
 | ege-history | 22 | 2 | 3 | 2; №3, 5 |
 | ege-social-studies | 25 | 2 | 2 | 3; №6, 7 |
-| ege-informatics | 27 | 2 | 149 | 24; №1, 2, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 23, 25 |
+| ege-informatics | 27 | 5 | 155 | 24; №1, 2, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 23, 25 |
 | ege-literature | 11 | 0 | 0 | 0; №— |
 | ege-english | 42 | 5 | 5 | 0; №— |
 | ege-german | 42 | 5 | 5 | 0; №— |

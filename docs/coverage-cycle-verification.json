@@ -1,0 +1,1221 @@
+{
+  "date": "2026-10-29",
+  "modelStatus": "draft-2027-not-final",
+  "references": {
+    "chemistry": [
+      "https://openstax.org/books/chemistry-2e/pages/2-2-atomic-structure-and-symbolism",
+      "https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions"
+    ],
+    "biology": [
+      "https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells",
+      "https://openstax.org/books/biology-2e/pages/24-1-characteristics-of-fungi",
+      "https://openstax.org/books/biology-2e/pages/34-1-digestive-systems",
+      "https://openstax.org/books/biology-2e/pages/40-1-overview-of-the-circulatory-system"
+    ],
+    "social-studies": [
+      "https://openstax.org/books/introduction-sociology-3e/pages/4-1-types-of-societies",
+      "http://www.constitution.ru/10003000/10003000-1.htm",
+      "http://www.constitution.ru/10003000/10003000-2.htm",
+      "http://www.constitution.ru/10003000/10003000-7.htm"
+    ]
+  },
+  "controls": [
+    {
+      "verified": 25,
+      "fileChecks": {
+        "verified": 0,
+        "records": []
+      },
+      "editorial": 25,
+      "externalExpertReviewed": 0,
+      "notes": {
+        "chemistry": "Checked every option and reaction condition. Carbonate + calcium hydroxide excludes excess CO2; CuO is not treated as soluble/amphoteric; nitrate is not split into N/O ions. Reagent-pair items require BOTH reactions; alternative distinguishing reagents are explicitly considered. NH4+ + OH− needs warming. First identification item compares appearance/gas, not white precipitate shades; sufficient concentrations declared. Oxidation states and electron directions independently recomputed where numerical. This is finite editorial QA, not a general chemistry theorem prover.",
+        "biology": "Checked all organisms, every A/B statement and all distractors. Birds/placental mammals develop directly; frog, butterfly and perch have larval stages. Mature HUMAN erythrocytes specified; epithelial cell specified so absence of a nucleus in an erythrocyte cannot create ambiguity. Peripheral nodes/nerves distinguished from CNS; pulmonary vessels classified by circuit rather than oxygen content. Gaps refer to the four explicit letters, not sentence numbers. No image-dependent slot is replaced by a text question.",
+        "social-studies": "Checked definitions, all four alternatives and A/B truth combinations. Status and role distinguished; vertical/horizontal mobility constraints explicit; regime, form of government and territorial structure not conflated. Law questions ask stable school concepts; no case-specific legal advice. Constitution facts: article15 supremacy, article20 life, article32 electoral rights, article110 executive power. External expert validation not performed."
+      }
+    },
+    {
+      "verified": 25,
+      "fileChecks": {
+        "verified": 0,
+        "records": []
+      },
+      "editorial": 25,
+      "externalExpertReviewed": 0,
+      "notes": {
+        "chemistry": "Checked every option and reaction condition. Carbonate + calcium hydroxide excludes excess CO2; CuO is not treated as soluble/amphoteric; nitrate is not split into N/O ions. Reagent-pair items require BOTH reactions; alternative distinguishing reagents are explicitly considered. NH4+ + OH− needs warming. First identification item compares appearance/gas, not white precipitate shades; sufficient concentrations declared. Oxidation states and electron directions independently recomputed where numerical. This is finite editorial QA, not a general chemistry theorem prover.",
+        "biology": "Checked all organisms, every A/B statement and all distractors. Birds/placental mammals develop directly; frog, butterfly and perch have larval stages. Mature HUMAN erythrocytes specified; epithelial cell specified so absence of a nucleus in an erythrocyte cannot create ambiguity. Peripheral nodes/nerves distinguished from CNS; pulmonary vessels classified by circuit rather than oxygen content. Gaps refer to the four explicit letters, not sentence numbers. No image-dependent slot is replaced by a text question.",
+        "social-studies": "Checked definitions, all four alternatives and A/B truth combinations. Status and role distinguished; vertical/horizontal mobility constraints explicit; regime, form of government and territorial structure not conflated. Law questions ask stable school concepts; no case-specific legal advice. Constitution facts: article15 supremacy, article20 life, article32 electoral rights, article110 executive power. External expert validation not performed."
+      }
+    },
+    {
+      "verified": 20,
+      "fileChecks": {
+        "verified": 6,
+        "records": [
+          {
+            "id": "coverage-20261029-ege-informatics-17-adjacent-file-1",
+            "method": "independent-python-file-parser-and-algorithm",
+            "answer": "186 19580"
+          },
+          {
+            "id": "coverage-20261029-ege-informatics-17-adjacent-file-2",
+            "method": "independent-python-file-parser-and-algorithm",
+            "answer": "249 -18890"
+          },
+          {
+            "id": "coverage-20261029-ege-informatics-22-process-file-1",
+            "method": "independent-python-file-parser-and-algorithm",
+            "answer": "4"
+          },
+          {
+            "id": "coverage-20261029-ege-informatics-22-process-file-2",
+            "method": "independent-python-file-parser-and-algorithm",
+            "answer": "6"
+          },
+          {
+            "id": "coverage-20261029-ege-informatics-24-expression-file-1",
+            "method": "independent-python-file-parser-and-algorithm",
+            "answer": "30"
+          },
+          {
+            "id": "coverage-20261029-ege-informatics-24-expression-file-2",
+            "method": "independent-python-file-parser-and-algorithm",
+            "answer": "43"
+          }
+        ]
+      },
+      "editorial": 14,
+      "externalExpertReviewed": 0,
+      "notes": {
+        "chemistry": "Checked every option and reaction condition. Carbonate + calcium hydroxide excludes excess CO2; CuO is not treated as soluble/amphoteric; nitrate is not split into N/O ions. Reagent-pair items require BOTH reactions; alternative distinguishing reagents are explicitly considered. NH4+ + OH− needs warming. First identification item compares appearance/gas, not white precipitate shades; sufficient concentrations declared. Oxidation states and electron directions independently recomputed where numerical. This is finite editorial QA, not a general chemistry theorem prover.",
+        "biology": "Checked all organisms, every A/B statement and all distractors. Birds/placental mammals develop directly; frog, butterfly and perch have larval stages. Mature HUMAN erythrocytes specified; epithelial cell specified so absence of a nucleus in an erythrocyte cannot create ambiguity. Peripheral nodes/nerves distinguished from CNS; pulmonary vessels classified by circuit rather than oxygen content. Gaps refer to the four explicit letters, not sentence numbers. No image-dependent slot is replaced by a text question.",
+        "social-studies": "Checked definitions, all four alternatives and A/B truth combinations. Status and role distinguished; vertical/horizontal mobility constraints explicit; regime, form of government and territorial structure not conflated. Law questions ask stable school concepts; no case-specific legal advice. Constitution facts: article15 supremacy, article20 life, article32 electoral rights, article110 executive power. External expert validation not performed."
+      }
+    }
+  ],
+  "externalExpertReviewed": 0,
+  "records": [
+    {
+      "id": "coverage-20261029-oge-chemistry-1-sulfur-substance",
+      "sha256": "168a93e419a7a25f346ad82112c402d1752a465edd54c7aa082a515a2d1a56ae",
+      "family": "element-substance",
+      "triple": [
+        "Основные понятия химии",
+        "Элемент и простое вещество",
+        "Различение элемента и вещества"
+      ],
+      "proof": {
+        "slug": "sulfur-substance",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-1-iron-substance",
+      "sha256": "b5804766ee30a20286f46066365889121673756842442b65ff97e269a734da26",
+      "family": "element-substance",
+      "triple": [
+        "Основные понятия химии",
+        "Элемент и простое вещество",
+        "Различение элемента и вещества"
+      ],
+      "proof": {
+        "slug": "iron-substance",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-2-shells-magnesium",
+      "sha256": "10723c2c1a1cd47aca77d6b853ca3be50012ae07f6b6e04c6147d01041b065ec",
+      "family": "atomic-shell-period-charge",
+      "triple": [
+        "Строение вещества",
+        "Электронная оболочка",
+        "Период и заряд ядра по распределению электронов"
+      ],
+      "proof": {
+        "kind": "electron-shells",
+        "shells": [
+          2,
+          8,
+          2
+        ],
+        "slug": "shells-magnesium",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-2-shells-oxygen",
+      "sha256": "65adc0e84fd124a34e66aad56f4977fc08c805b30be36d3b9b6c28766c48ed26",
+      "family": "atomic-shell-period-charge",
+      "triple": [
+        "Строение вещества",
+        "Электронная оболочка",
+        "Период и заряд ядра по распределению электронов"
+      ],
+      "proof": {
+        "kind": "electron-shells",
+        "shells": [
+          2,
+          6
+        ],
+        "slug": "shells-oxygen",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-4-sulfur-oxidation",
+      "sha256": "2c25f535d630d16775ebe9d01ef7a677dcbd9a9a1208a7a8caaa360d17a51ba8",
+      "family": "oxidation-state-matching",
+      "triple": [
+        "Строение вещества",
+        "Степени окисления",
+        "Степень окисления по электронейтральности"
+      ],
+      "proof": {
+        "kind": "oxidation",
+        "balances": [
+          [
+            2,
+            -1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "values": [
+          -2,
+          4,
+          6
+        ],
+        "slug": "sulfur-oxidation",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-4-nitrogen-oxidation",
+      "sha256": "9130ac5b8d8b0503f984fdc15cd7d82fab51b368f247f5e83e193322b0ec37b7",
+      "family": "oxidation-state-matching",
+      "triple": [
+        "Строение вещества",
+        "Степени окисления",
+        "Степень окисления по электронейтральности"
+      ],
+      "proof": {
+        "slug": "nitrogen-oxidation",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-5-ionic-compounds",
+      "sha256": "3118b3426eaeeda67b1214cbc919ec698c5f1759a3d7b9f158e02725e3a671eb",
+      "family": "bond-type-selection",
+      "triple": [
+        "Строение вещества",
+        "Химическая связь",
+        "Распознавание типа химической связи"
+      ],
+      "proof": {
+        "slug": "ionic-compounds",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-5-nonpolar-molecules",
+      "sha256": "8eedf5ced4d18871ff76de56e69ae9db3d87f240981fd212cf9f0b0681e607d5",
+      "family": "bond-type-selection",
+      "triple": [
+        "Строение вещества",
+        "Химическая связь",
+        "Распознавание типа химической связи"
+      ],
+      "proof": {
+        "slug": "nonpolar-molecules",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-6-magnesium-argon",
+      "sha256": "dd82617ae4a87531d8b78a7df11db6befccdad61dccfe19f8739038bf2e98e60",
+      "family": "element-comparison",
+      "triple": [
+        "Периодический закон",
+        "Свойства элементов",
+        "Сравнение электронного строения и свойств"
+      ],
+      "proof": {
+        "slug": "magnesium-argon",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-6-potassium-calcium",
+      "sha256": "e545b3a5530701c592bcd7e3c04dc0a03ff9e70bafddf0bd1457618bcadcf9e5",
+      "family": "element-comparison",
+      "triple": [
+        "Периодический закон",
+        "Свойства элементов",
+        "Сравнение электронного строения и свойств"
+      ],
+      "proof": {
+        "slug": "potassium-calcium",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-7-acid-oxide-salt",
+      "sha256": "aee678fab9d0b94157298acf0d6c954e43692ef96eaf887ec8711fee9a9410da",
+      "family": "inorganic-class-ordered",
+      "triple": [
+        "Неорганические вещества",
+        "Классы соединений",
+        "Распознавание классов веществ"
+      ],
+      "proof": {
+        "slug": "acid-oxide-salt",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-7-base-acid",
+      "sha256": "8fc9414370a8e25f3a761d94992e5cc16e6c2e567b43583c7ca2a8571763c14c",
+      "family": "inorganic-class-ordered",
+      "triple": [
+        "Неорганические вещества",
+        "Классы соединений",
+        "Распознавание классов веществ"
+      ],
+      "proof": {
+        "slug": "base-acid",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-8-sodium-oxide-properties",
+      "sha256": "ca6b93079d2dc72ba7f591d1c9c658744e7359308b9225baa58cd66edb5c5e6c",
+      "family": "oxide-reactivity",
+      "triple": [
+        "Неорганические вещества",
+        "Химические свойства оксидов",
+        "Выбор реагентов для основного оксида"
+      ],
+      "proof": {
+        "slug": "sodium-oxide-properties",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-8-copper-oxide-properties",
+      "sha256": "f119a7f9cf92e76f609afd16c65649be098aa7586d277dceec78deabcc92d4bb",
+      "family": "oxide-reactivity",
+      "triple": [
+        "Неорганические вещества",
+        "Химические свойства оксидов",
+        "Выбор реагентов для основного оксида"
+      ],
+      "proof": {
+        "slug": "copper-oxide-properties",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-9-reaction-products-a",
+      "sha256": "7bcb3589d39a1ea7722c72f5f82329ee212a1cc34383132632307312f3486939",
+      "family": "reaction-product-matching",
+      "triple": [
+        "Химические реакции",
+        "Продукты реакций",
+        "Соответствие реагентов и продуктов"
+      ],
+      "proof": {
+        "slug": "reaction-products-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-9-reaction-products-b",
+      "sha256": "4357abee4fd18b31a8433626d2fadcbb5b6a220d5f726af5e22166f067ea77d2",
+      "family": "reaction-product-matching",
+      "triple": [
+        "Химические реакции",
+        "Продукты реакций",
+        "Соответствие реагентов и продуктов"
+      ],
+      "proof": {
+        "slug": "reaction-products-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-10-reagent-pairs-a",
+      "sha256": "b8bacebda48cb79e45f81d9d6d74d31976d502e460752104e12c507c7f599c4b",
+      "family": "reagent-pair-matching",
+      "triple": [
+        "Химические реакции",
+        "Реакционная способность",
+        "Выбор пары взаимодействующих реагентов"
+      ],
+      "proof": {
+        "slug": "reagent-pairs-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-10-reagent-pairs-b",
+      "sha256": "94b6f194b4aff0af591083a42df0733973e9a6138216da116904b719a0c23754",
+      "family": "reagent-pair-matching",
+      "triple": [
+        "Химические реакции",
+        "Реакционная способность",
+        "Выбор пары взаимодействующих реагентов"
+      ],
+      "proof": {
+        "slug": "reagent-pairs-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-a",
+      "sha256": "33a7526911a949d74d33fb89d3c0ebfb9755accd5a2a9783e5956c8acc802044",
+      "family": "redox-recognition",
+      "triple": [
+        "Химические реакции",
+        "Окисление и восстановление",
+        "Распознавание ОВР по изменению степеней окисления"
+      ],
+      "proof": {
+        "slug": "redox-reaction-selection-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-b",
+      "sha256": "7b03f1188205eae9201aeb09f4f7b18e2dd28ed4e5678f46950a35e98766f6e2",
+      "family": "redox-recognition",
+      "triple": [
+        "Химические реакции",
+        "Окисление и восстановление",
+        "Распознавание ОВР по изменению степеней окисления"
+      ],
+      "proof": {
+        "slug": "redox-reaction-selection-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-12-reaction-signs-a",
+      "sha256": "f164506b24c2e5ba9a209d64a56a79b730bcb8e647e5c16479bfb78fa0202f4b",
+      "family": "reaction-sign-matching",
+      "triple": [
+        "Химические реакции",
+        "Наблюдаемые признаки",
+        "Соответствие реагентов и наблюдения"
+      ],
+      "proof": {
+        "slug": "reaction-signs-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-12-reaction-signs-b",
+      "sha256": "839e95aca5b02ebe1139baa5bebe005f779cf848ab219fd6f91eb0d4c806b6de",
+      "family": "reaction-sign-matching",
+      "triple": [
+        "Химические реакции",
+        "Наблюдаемые признаки",
+        "Соответствие реагентов и наблюдения"
+      ],
+      "proof": {
+        "slug": "reaction-signs-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-13-calcium-dissociation",
+      "sha256": "8ac0752276af1d9386e3526446ee042c524f3e15f3fca0aab11013ea236e80ea",
+      "family": "dissociation-amounts",
+      "triple": [
+        "Растворы",
+        "Электролитическая диссоциация",
+        "Ионы и их количество"
+      ],
+      "proof": {
+        "slug": "calcium-dissociation",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-13-potassium-sulfate-dissociation",
+      "sha256": "829161855817ddac86cf8b7db831622ab09b869d29a9d54df1158d2ab8d4d355",
+      "family": "dissociation-amounts",
+      "triple": [
+        "Растворы",
+        "Электролитическая диссоциация",
+        "Ионы и их количество"
+      ],
+      "proof": {
+        "slug": "potassium-sulfate-dissociation",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-14-carbonate-net-ionic",
+      "sha256": "61a5edf5ddf1a63dfc9477f2959b716b5973edc3e430a7b8663727337994dbb7",
+      "family": "net-ionic-reactants",
+      "triple": [
+        "Растворы",
+        "Ионные уравнения",
+        "Подбор веществ по сокращённому уравнению"
+      ],
+      "proof": {
+        "slug": "carbonate-net-ionic",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-14-silver-net-ionic",
+      "sha256": "6b18b3a8e18c7d22db771cc6b2f7cc9d397d99f064ce9a8d687372820ff30b60",
+      "family": "net-ionic-reactants",
+      "triple": [
+        "Растворы",
+        "Ионные уравнения",
+        "Подбор веществ по сокращённому уравнению"
+      ],
+      "proof": {
+        "slug": "silver-net-ionic",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-15-electron-process-a",
+      "sha256": "18982831ffbd6bf07f46e75e963754f53ae55eb07a270aa4dd4d784b1463065f",
+      "family": "electron-transfer-classification",
+      "triple": [
+        "Химические реакции",
+        "Окисление и восстановление",
+        "Направление переноса электронов"
+      ],
+      "proof": {
+        "kind": "electron-direction",
+        "changes": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            6,
+            4
+          ]
+        ],
+        "slug": "electron-process-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-15-electron-process-b",
+      "sha256": "ad91116956abbcb93551a103b9e357a9ddc533cef00f344067ea606493eb39a2",
+      "family": "electron-transfer-classification",
+      "triple": [
+        "Химические реакции",
+        "Окисление и восстановление",
+        "Направление переноса электронов"
+      ],
+      "proof": {
+        "kind": "electron-direction",
+        "changes": [
+          [
+            -1,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "slug": "electron-process-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-16-lab-safety-a",
+      "sha256": "d021aa956fd9145e006f2107d9571ff7dca22e9ede01d22cd65c8b6b77eeeefd",
+      "family": "school-lab-safety",
+      "triple": [
+        "Методы химии",
+        "Лабораторная безопасность",
+        "Безопасное обращение с веществами"
+      ],
+      "proof": {
+        "slug": "lab-safety-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-16-lab-safety-b",
+      "sha256": "9560b4c0f48396ac26eb9eeb0c6c35614367ee4616662196c05fdfa306cb25a6",
+      "family": "school-lab-safety",
+      "triple": [
+        "Методы химии",
+        "Лабораторная безопасность",
+        "Безопасное обращение с веществами"
+      ],
+      "proof": {
+        "slug": "lab-safety-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-17-identify-solutions-a",
+      "sha256": "70a56c556e592a10528a140539b973d458c472a12b30badf57dd509d3e23e71d",
+      "family": "qualitative-reagent-matching",
+      "triple": [
+        "Методы химии",
+        "Качественные реакции",
+        "Различение растворов одним реагентом"
+      ],
+      "proof": {
+        "slug": "identify-solutions-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-chemistry-17-identify-solutions-b",
+      "sha256": "8909db10af5927f75ffe3c9ef0019b42aa56b1bf5e196641416bb747a2a70864",
+      "family": "qualitative-reagent-matching",
+      "triple": [
+        "Методы химии",
+        "Качественные реакции",
+        "Различение растворов одним реагентом"
+      ],
+      "proof": {
+        "slug": "identify-solutions-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-2-kingdom-organisms-a",
+      "sha256": "c416a11d043731ff14d5c6294c41fb03f085109c6ab1e3fa8d674a28a40a525d",
+      "family": "organism-kingdom-matching",
+      "triple": [
+        "Многообразие организмов",
+        "Царства живой природы",
+        "Соответствие организма и царства"
+      ],
+      "proof": {
+        "slug": "kingdom-organisms-a",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-2-kingdom-organisms-b",
+      "sha256": "49a06c6270cc43e065bdecb43c86e7b8110f3d95bc14b79f089d229649e2d45f",
+      "family": "organism-kingdom-matching",
+      "triple": [
+        "Многообразие организмов",
+        "Царства живой природы",
+        "Соответствие организма и царства"
+      ],
+      "proof": {
+        "slug": "kingdom-organisms-b",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-8-table-organelle",
+      "sha256": "5c970e234f591a59e6c98ab8f1e9aca804f2ae5c0209a73c2303b6e32423531f",
+      "family": "biological-table-gap",
+      "triple": [
+        "Клетка",
+        "Структура и функция",
+        "Пропуск в биологической таблице"
+      ],
+      "proof": {
+        "slug": "table-organelle",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-8-table-tissue",
+      "sha256": "dbf3e2114bea2cfcbed32eaab850acfb5f8e5a26c6d5bebdf68dce1f0e935798",
+      "family": "biological-table-gap",
+      "triple": [
+        "Организм человека",
+        "Ткани",
+        "Пропуск в биологической таблице"
+      ],
+      "proof": {
+        "slug": "table-tissue",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-10-leaf-text",
+      "sha256": "18734f7b62a115bf544eb08fa8f5edcd38a3aa659a28ccf2cd1f64e85b026af9",
+      "family": "biological-text-gaps",
+      "triple": [
+        "Растения",
+        "Фотосинтез и испарение",
+        "Термины в связном биологическом тексте"
+      ],
+      "proof": {
+        "slug": "leaf-text",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-10-digestion-text",
+      "sha256": "a53dfbb2ca046996d2336a0dc61470982a925c8e70b724a78d684dc1086f060b",
+      "family": "biological-text-gaps",
+      "triple": [
+        "Организм человека",
+        "Пищеварение",
+        "Термины в связном биологическом тексте"
+      ],
+      "proof": {
+        "slug": "digestion-text",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-11-development-types",
+      "sha256": "197102bbfe2e49e9e7693c464dfbdc743b33dcf5ab53aafad03bbb0faed3c7bf",
+      "family": "animal-development-matching",
+      "triple": [
+        "Животные",
+        "Развитие организмов",
+        "Соответствие животного и типа развития"
+      ],
+      "proof": {
+        "slug": "development-types",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-11-plant-groups",
+      "sha256": "08d0b4e5e6284b04508424809a837db14a7b44b529635874cb2dabc4ea8da5c1",
+      "family": "plant-division-matching",
+      "triple": [
+        "Растения",
+        "Отделы растений",
+        "Соответствие растения и отдела"
+      ],
+      "proof": {
+        "slug": "plant-groups",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-12-bacteria-judgments",
+      "sha256": "5871697db3cc99a5d9ba41caff911b2b01028ecd9132735c312fdfa8e1c65327",
+      "family": "biological-judgments",
+      "triple": [
+        "Клетка",
+        "Прокариоты",
+        "Оценка двух биологических суждений"
+      ],
+      "proof": {
+        "slug": "bacteria-judgments",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-12-fungi-judgments",
+      "sha256": "28feb5fb285cadfca4c0589ba5b5b315170929b8dedb6c6338c0b566a3d46825",
+      "family": "biological-judgments",
+      "triple": [
+        "Многообразие организмов",
+        "Грибы",
+        "Оценка двух биологических суждений"
+      ],
+      "proof": {
+        "slug": "fungi-judgments",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-15-sweating-function",
+      "sha256": "cdccd414e6597208cc096ebffea6c1fbdf3912088f64bf85b53bc42f6bc072b0",
+      "family": "physiological-explanation-choice",
+      "triple": [
+        "Организм человека",
+        "Терморегуляция",
+        "Объяснение физиологического процесса"
+      ],
+      "proof": {
+        "slug": "sweating-function",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-15-breathing-exercise",
+      "sha256": "0d76ac635b40a21f0d544bbcf06ecb1dbd8f61da63d3854b43928c2cd30aee78",
+      "family": "physiological-explanation-choice",
+      "triple": [
+        "Организм человека",
+        "Дыхание",
+        "Объяснение физиологического процесса"
+      ],
+      "proof": {
+        "slug": "breathing-exercise",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-17-erythrocyte-traits",
+      "sha256": "762e5dc73252a5221c38ca11e82173201eb0896cd751df7d5ef4821a95c2afec",
+      "family": "human-blood-cell-traits",
+      "triple": [
+        "Организм человека",
+        "Кровь",
+        "Множественный выбор признаков клеток человека"
+      ],
+      "proof": {
+        "slug": "erythrocyte-traits",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-17-skeletal-muscle-traits",
+      "sha256": "467b30d01caa5bfdbb8167d59018ed949fb1393dfe4b99cb1ce37fa885112cb8",
+      "family": "human-muscle-tissue-traits",
+      "triple": [
+        "Организм человека",
+        "Мышечная ткань",
+        "Множественный выбор признаков тканей человека"
+      ],
+      "proof": {
+        "slug": "skeletal-muscle-traits",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-18-circulation-types",
+      "sha256": "5e72a88c2c4f977fd837164b483e8159f1137b68a6fbd04b38c2143505cd420e",
+      "family": "human-systems-matching",
+      "triple": [
+        "Организм человека",
+        "Кровообращение",
+        "Соответствие структуры и системы"
+      ],
+      "proof": {
+        "slug": "circulation-types",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-biology-18-nervous-parts",
+      "sha256": "ca1864b512c9bec262d544460d1d6f4f9805c620e324d8d87fbc26fdd6f26381",
+      "family": "human-systems-matching",
+      "triple": [
+        "Организм человека",
+        "Нервная система",
+        "Соответствие структуры и системы"
+      ],
+      "proof": {
+        "slug": "nervous-parts",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-4-culture-scientific-test",
+      "sha256": "d8b9c073d00beaa5cb4f73c076bc37918ac7f8104b449c0249ffa57b5af8eb86",
+      "family": "science-identification",
+      "triple": [
+        "Духовная культура",
+        "Наука",
+        "Распознавание признаков науки"
+      ],
+      "proof": {
+        "slug": "culture-scientific-test",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-4-culture-art",
+      "sha256": "02c28b804a0eb98bdf05043bad22dee828831d2c03ab0ed11bd43fd7bea29190",
+      "family": "art-identification",
+      "triple": [
+        "Духовная культура",
+        "Искусство",
+        "Распознавание форм духовной культуры"
+      ],
+      "proof": {
+        "slug": "culture-art",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-5-socialization-responsibility",
+      "sha256": "bff05803227560f5f78463cc07723ca87a878fcab78b9d534a4ee906ba3cdb88",
+      "family": "personality-socialization",
+      "triple": [
+        "Человек и общество",
+        "Социализация",
+        "Социальные качества личности"
+      ],
+      "proof": {
+        "slug": "socialization-responsibility",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-5-social-role",
+      "sha256": "c73f93722f00d9564cf858139dca3b8e469dee1f00073242cbbdb6670b9182a8",
+      "family": "social-role-identification",
+      "triple": [
+        "Человек и общество",
+        "Социальные роли",
+        "Социальные позиции и ожидаемое поведение"
+      ],
+      "proof": {
+        "slug": "social-role",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-6-mobility-judgments",
+      "sha256": "5fb5c97b2697cea7d928fee0f9ccd1b20141a667424347f8e583ca31c5620000",
+      "family": "social-judgments",
+      "triple": [
+        "Социальные отношения",
+        "Социальная мобильность",
+        "Оценка двух социальных суждений"
+      ],
+      "proof": {
+        "slug": "mobility-judgments",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-6-education-judgments",
+      "sha256": "183402b359cc269c5e0da91015e186d4d83bf4a7e13c9c02b4aef193a3d73c3a",
+      "family": "social-judgments",
+      "triple": [
+        "Духовная культура",
+        "Образование",
+        "Оценка двух социальных суждений"
+      ],
+      "proof": {
+        "slug": "education-judgments",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-10-market-price-signal",
+      "sha256": "634c978bc8ed6883c25201c7c0a58070f52ab50b8ad60512312fa5bf7f92a572",
+      "family": "economic-judgments",
+      "triple": [
+        "Экономика",
+        "Рынок",
+        "Оценка экономических суждений"
+      ],
+      "proof": {
+        "slug": "market-price-signal",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-10-money-functions",
+      "sha256": "a4f4408e89230e8dfd5e5fdf766a733e5b131cb0b0deba5b34d85eac8f00271c",
+      "family": "money-function-identification",
+      "triple": [
+        "Экономика",
+        "Деньги",
+        "Распознавание функций денег"
+      ],
+      "proof": {
+        "slug": "money-functions",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-11-democracy-signs",
+      "sha256": "26d5144945a1590d6d6fea337285bdf4205d0257d481031591571a8990bea948",
+      "family": "political-regime-identification",
+      "triple": [
+        "Политика",
+        "Политические режимы",
+        "Режим по совокупности признаков"
+      ],
+      "proof": {
+        "slug": "democracy-signs",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-11-federation-sign",
+      "sha256": "ec8e374b6cad8044166c4fbd8bfe186faac17719fd2c6cef46a29d372aa831f7",
+      "family": "territorial-structure-identification",
+      "triple": [
+        "Политика",
+        "Государственное устройство",
+        "Различение характеристик государства"
+      ],
+      "proof": {
+        "slug": "federation-sign",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-13-personal-right",
+      "sha256": "c2ea77acc248f9adfae50908105af6aa71aea85556a9639cffbd1a04ed4a7be0",
+      "family": "rights-classification",
+      "triple": [
+        "Право",
+        "Права человека",
+        "Классификация прав"
+      ],
+      "proof": {
+        "slug": "personal-right",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-13-political-right",
+      "sha256": "a51521cd883096e9e54da7dd229807ff5d1c83000180be13a36d5e9dd36e4a87",
+      "family": "rights-classification",
+      "triple": [
+        "Право",
+        "Права человека",
+        "Классификация прав"
+      ],
+      "proof": {
+        "slug": "political-right",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-15-civil-situation",
+      "sha256": "53d9325779da207c8f9fbd3a540cd15894d89cad26c449fa693e4d2eaefdf2e7",
+      "family": "legal-branch-situation",
+      "triple": [
+        "Право",
+        "Отрасли права",
+        "Правовая ситуация и отрасль"
+      ],
+      "proof": {
+        "slug": "civil-situation",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-15-labour-situation",
+      "sha256": "f38e571a0f639d31c52fde7520219c34cea0f144b2832bb6136a1f9d36a5855f",
+      "family": "legal-branch-situation",
+      "triple": [
+        "Право",
+        "Отрасли права",
+        "Правовая ситуация и отрасль"
+      ],
+      "proof": {
+        "slug": "labour-situation",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-16-executive-body",
+      "sha256": "6c9e26d9fc88fa901ab637f8761564c956066862e6bba1730ae2b27715387b57",
+      "family": "state-power-branches",
+      "triple": [
+        "Политика",
+        "Органы государственной власти РФ",
+        "Разделение властей"
+      ],
+      "proof": {
+        "slug": "executive-body",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-oge-social-studies-16-constitution-supremacy",
+      "sha256": "bf8790b8ac97d18442768759282df0efd34cbd18676e44e89dd6d356595cba9d",
+      "family": "constitution-hierarchy",
+      "triple": [
+        "Право",
+        "Конституционные основы",
+        "Место Конституции в системе права"
+      ],
+      "proof": {
+        "slug": "constitution-supremacy",
+        "review": "targeted-author-editorial-review-not-external-expert"
+      },
+      "method": "targeted-author-editorial-review-not-external-expert"
+    },
+    {
+      "id": "coverage-20261029-ege-informatics-17-adjacent-file-1",
+      "sha256": "fc7f98aa2e617947db33c2e25b7885624c601dfa21a4b983e607af28ffdbf5ca",
+      "family": "adjacent-file",
+      "triple": [
+        "Файловые алгоритмы",
+        "Соседние пары",
+        "Отбор пар числового файла"
+      ],
+      "proof": {
+        "kind": "adjacent-file",
+        "variant": 0,
+        "slug": "adjacent-file-1",
+        "review": "independent-python-files"
+      },
+      "method": "independent-python-files"
+    },
+    {
+      "id": "coverage-20261029-ege-informatics-17-adjacent-file-2",
+      "sha256": "85231ba59670967d414df7be053d77464f40b5a5b4a93bb82104f42728c08c38",
+      "family": "adjacent-file",
+      "triple": [
+        "Файловые алгоритмы",
+        "Соседние пары",
+        "Отбор пар числового файла"
+      ],
+      "proof": {
+        "kind": "adjacent-file",
+        "variant": 1,
+        "slug": "adjacent-file-2",
+        "review": "independent-python-files"
+      },
+      "method": "independent-python-files"
+    },
+    {
+      "id": "coverage-20261029-ege-informatics-22-process-file-1",
+      "sha256": "1c119d7d24f981ddb6ca0aea3c8eb3365cc18a42b7631ee42f4f40c81261fc3b",
+      "family": "process-file",
+      "triple": [
+        "Файловые алгоритмы",
+        "Параллельные процессы",
+        "Количество одновременно работающих процессов"
+      ],
+      "proof": {
+        "kind": "process-file",
+        "ms": 7,
+        "slug": "process-file-1",
+        "review": "independent-python-files"
+      },
+      "method": "independent-python-files"
+    },
+    {
+      "id": "coverage-20261029-ege-informatics-22-process-file-2",
+      "sha256": "6d111e592f31b39be62292f3bee1556badc59780c3699a5ec5ef9e23b712b5ce",
+      "family": "process-file",
+      "triple": [
+        "Файловые алгоритмы",
+        "Параллельные процессы",
+        "Количество одновременно работающих процессов"
+      ],
+      "proof": {
+        "kind": "process-file",
+        "ms": 13,
+        "slug": "process-file-2",
+        "review": "independent-python-files"
+      },
+      "method": "independent-python-files"
+    },
+    {
+      "id": "coverage-20261029-ege-informatics-24-expression-file-1",
+      "sha256": "2f4f9083c71314afe25023c6ae639117a7160846581a19591ea9888d6fa7f179",
+      "family": "expression-file",
+      "triple": [
+        "Файловые алгоритмы",
+        "Обработка строк",
+        "Распознавание арифметического выражения"
+      ],
+      "proof": {
+        "kind": "expression-file",
+        "slug": "expression-file-1",
+        "review": "independent-python-files"
+      },
+      "method": "independent-python-files"
+    },
+    {
+      "id": "coverage-20261029-ege-informatics-24-expression-file-2",
+      "sha256": "e5437cfdfd16475d500e8051211a1dfb4404c8d7be8c154568dfaa8466793b35",
+      "family": "expression-file",
+      "triple": [
+        "Файловые алгоритмы",
+        "Обработка строк",
+        "Распознавание арифметического выражения"
+      ],
+      "proof": {
+        "kind": "expression-file",
+        "slug": "expression-file-2",
+        "review": "independent-python-files"
+      },
+      "method": "independent-python-files"
+    }
+  ]
+}

@@ -2562,6 +2562,683 @@
       "subjectId": "informatics",
       "title": "Отбор строк по частотам и суммам"
     },
+    "chemistry-topic-228aba4011ef": {
+      "id": "chemistry-topic-228aba4011ef",
+      "kind": "topic",
+      "subjectId": "chemistry",
+      "title": "Основные понятия химии"
+    },
+    "chemistry-subtopic-d16c266c7a36": {
+      "id": "chemistry-subtopic-d16c266c7a36",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Элемент и простое вещество",
+      "parentId": "chemistry-topic-228aba4011ef"
+    },
+    "chemistry-subtype-element-substance": {
+      "id": "chemistry-subtype-element-substance",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Различение элемента и вещества"
+    },
+    "chemistry-topic-865b80fa5454": {
+      "id": "chemistry-topic-865b80fa5454",
+      "kind": "topic",
+      "subjectId": "chemistry",
+      "title": "Строение вещества"
+    },
+    "chemistry-subtopic-4222acf044dc": {
+      "id": "chemistry-subtopic-4222acf044dc",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Электронная оболочка",
+      "parentId": "chemistry-topic-865b80fa5454"
+    },
+    "chemistry-subtype-atomic-shell-period-charge": {
+      "id": "chemistry-subtype-atomic-shell-period-charge",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Период и заряд ядра по распределению электронов"
+    },
+    "chemistry-subtopic-59b8756b87f2": {
+      "id": "chemistry-subtopic-59b8756b87f2",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Степени окисления",
+      "parentId": "chemistry-topic-865b80fa5454"
+    },
+    "chemistry-subtype-oxidation-state-matching": {
+      "id": "chemistry-subtype-oxidation-state-matching",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Степень окисления по электронейтральности"
+    },
+    "chemistry-subtopic-f0e27fe080c7": {
+      "id": "chemistry-subtopic-f0e27fe080c7",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Химическая связь",
+      "parentId": "chemistry-topic-865b80fa5454"
+    },
+    "chemistry-subtype-bond-type-selection": {
+      "id": "chemistry-subtype-bond-type-selection",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Распознавание типа химической связи"
+    },
+    "chemistry-topic-9a0e741e3cad": {
+      "id": "chemistry-topic-9a0e741e3cad",
+      "kind": "topic",
+      "subjectId": "chemistry",
+      "title": "Периодический закон"
+    },
+    "chemistry-subtopic-25affd0b734b": {
+      "id": "chemistry-subtopic-25affd0b734b",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Свойства элементов",
+      "parentId": "chemistry-topic-9a0e741e3cad"
+    },
+    "chemistry-subtype-element-comparison": {
+      "id": "chemistry-subtype-element-comparison",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Сравнение электронного строения и свойств"
+    },
+    "chemistry-topic-5fb96e7c8941": {
+      "id": "chemistry-topic-5fb96e7c8941",
+      "kind": "topic",
+      "subjectId": "chemistry",
+      "title": "Неорганические вещества"
+    },
+    "chemistry-subtopic-e67abf197558": {
+      "id": "chemistry-subtopic-e67abf197558",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Классы соединений",
+      "parentId": "chemistry-topic-5fb96e7c8941"
+    },
+    "chemistry-subtype-inorganic-class-ordered": {
+      "id": "chemistry-subtype-inorganic-class-ordered",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Распознавание классов веществ"
+    },
+    "chemistry-subtopic-b8763a13046b": {
+      "id": "chemistry-subtopic-b8763a13046b",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Химические свойства оксидов",
+      "parentId": "chemistry-topic-5fb96e7c8941"
+    },
+    "chemistry-subtype-oxide-reactivity": {
+      "id": "chemistry-subtype-oxide-reactivity",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Выбор реагентов для основного оксида"
+    },
+    "chemistry-topic-7bb978e0fd05": {
+      "id": "chemistry-topic-7bb978e0fd05",
+      "kind": "topic",
+      "subjectId": "chemistry",
+      "title": "Химические реакции"
+    },
+    "chemistry-subtopic-0d9a673ae349": {
+      "id": "chemistry-subtopic-0d9a673ae349",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Продукты реакций",
+      "parentId": "chemistry-topic-7bb978e0fd05"
+    },
+    "chemistry-subtype-reaction-product-matching": {
+      "id": "chemistry-subtype-reaction-product-matching",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Соответствие реагентов и продуктов"
+    },
+    "chemistry-subtopic-13b8ca815d5d": {
+      "id": "chemistry-subtopic-13b8ca815d5d",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Реакционная способность",
+      "parentId": "chemistry-topic-7bb978e0fd05"
+    },
+    "chemistry-subtype-reagent-pair-matching": {
+      "id": "chemistry-subtype-reagent-pair-matching",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Выбор пары взаимодействующих реагентов"
+    },
+    "chemistry-subtopic-1fa3cc5180d6": {
+      "id": "chemistry-subtopic-1fa3cc5180d6",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Окисление и восстановление",
+      "parentId": "chemistry-topic-7bb978e0fd05"
+    },
+    "chemistry-subtype-redox-recognition": {
+      "id": "chemistry-subtype-redox-recognition",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Распознавание ОВР по изменению степеней окисления"
+    },
+    "chemistry-subtopic-22fd2ea79ec9": {
+      "id": "chemistry-subtopic-22fd2ea79ec9",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Наблюдаемые признаки",
+      "parentId": "chemistry-topic-7bb978e0fd05"
+    },
+    "chemistry-subtype-reaction-sign-matching": {
+      "id": "chemistry-subtype-reaction-sign-matching",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Соответствие реагентов и наблюдения"
+    },
+    "chemistry-subtopic-8a15fc855ac9": {
+      "id": "chemistry-subtopic-8a15fc855ac9",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Электролитическая диссоциация",
+      "parentId": "chemistry-topic-5a8d783c408d"
+    },
+    "chemistry-subtype-dissociation-amounts": {
+      "id": "chemistry-subtype-dissociation-amounts",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Ионы и их количество"
+    },
+    "chemistry-subtopic-fb71d71fcc4c": {
+      "id": "chemistry-subtopic-fb71d71fcc4c",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Ионные уравнения",
+      "parentId": "chemistry-topic-5a8d783c408d"
+    },
+    "chemistry-subtype-net-ionic-reactants": {
+      "id": "chemistry-subtype-net-ionic-reactants",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Подбор веществ по сокращённому уравнению"
+    },
+    "chemistry-subtype-electron-transfer-classification": {
+      "id": "chemistry-subtype-electron-transfer-classification",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Направление переноса электронов"
+    },
+    "chemistry-topic-0c9499436959": {
+      "id": "chemistry-topic-0c9499436959",
+      "kind": "topic",
+      "subjectId": "chemistry",
+      "title": "Методы химии"
+    },
+    "chemistry-subtopic-f3208d820bc9": {
+      "id": "chemistry-subtopic-f3208d820bc9",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Лабораторная безопасность",
+      "parentId": "chemistry-topic-0c9499436959"
+    },
+    "chemistry-subtype-school-lab-safety": {
+      "id": "chemistry-subtype-school-lab-safety",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Безопасное обращение с веществами"
+    },
+    "chemistry-subtopic-8c5070cee41f": {
+      "id": "chemistry-subtopic-8c5070cee41f",
+      "kind": "subtopic",
+      "subjectId": "chemistry",
+      "title": "Качественные реакции",
+      "parentId": "chemistry-topic-0c9499436959"
+    },
+    "chemistry-subtype-qualitative-reagent-matching": {
+      "id": "chemistry-subtype-qualitative-reagent-matching",
+      "kind": "subtype",
+      "subjectId": "chemistry",
+      "title": "Различение растворов одним реагентом"
+    },
+    "biology-topic-1023af0f33e6": {
+      "id": "biology-topic-1023af0f33e6",
+      "kind": "topic",
+      "subjectId": "biology",
+      "title": "Многообразие организмов"
+    },
+    "biology-subtopic-accac3d60fbc": {
+      "id": "biology-subtopic-accac3d60fbc",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Царства живой природы",
+      "parentId": "biology-topic-1023af0f33e6"
+    },
+    "biology-subtype-organism-kingdom-matching": {
+      "id": "biology-subtype-organism-kingdom-matching",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Соответствие организма и царства"
+    },
+    "biology-subtopic-b6ed789a972b": {
+      "id": "biology-subtopic-b6ed789a972b",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Структура и функция",
+      "parentId": "biology-topic-ace91239d1cc"
+    },
+    "biology-subtype-biological-table-gap": {
+      "id": "biology-subtype-biological-table-gap",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Пропуск в биологической таблице"
+    },
+    "biology-topic-e6551d66a325": {
+      "id": "biology-topic-e6551d66a325",
+      "kind": "topic",
+      "subjectId": "biology",
+      "title": "Организм человека"
+    },
+    "biology-subtopic-61623ee9402c": {
+      "id": "biology-subtopic-61623ee9402c",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Ткани",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "biology-topic-faecd6908e5c": {
+      "id": "biology-topic-faecd6908e5c",
+      "kind": "topic",
+      "subjectId": "biology",
+      "title": "Растения"
+    },
+    "biology-subtopic-54574266488c": {
+      "id": "biology-subtopic-54574266488c",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Фотосинтез и испарение",
+      "parentId": "biology-topic-faecd6908e5c"
+    },
+    "biology-subtype-biological-text-gaps": {
+      "id": "biology-subtype-biological-text-gaps",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Термины в связном биологическом тексте"
+    },
+    "biology-subtopic-1fa4a97a4304": {
+      "id": "biology-subtopic-1fa4a97a4304",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Пищеварение",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "biology-topic-274370720c47": {
+      "id": "biology-topic-274370720c47",
+      "kind": "topic",
+      "subjectId": "biology",
+      "title": "Животные"
+    },
+    "biology-subtopic-7a78c2a289e7": {
+      "id": "biology-subtopic-7a78c2a289e7",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Развитие организмов",
+      "parentId": "biology-topic-274370720c47"
+    },
+    "biology-subtype-animal-development-matching": {
+      "id": "biology-subtype-animal-development-matching",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Соответствие животного и типа развития"
+    },
+    "biology-subtopic-17e1e984bd99": {
+      "id": "biology-subtopic-17e1e984bd99",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Отделы растений",
+      "parentId": "biology-topic-faecd6908e5c"
+    },
+    "biology-subtype-plant-division-matching": {
+      "id": "biology-subtype-plant-division-matching",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Соответствие растения и отдела"
+    },
+    "biology-subtopic-5c56906c980b": {
+      "id": "biology-subtopic-5c56906c980b",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Прокариоты",
+      "parentId": "biology-topic-ace91239d1cc"
+    },
+    "biology-subtype-biological-judgments": {
+      "id": "biology-subtype-biological-judgments",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Оценка двух биологических суждений"
+    },
+    "biology-subtopic-b52742b640ba": {
+      "id": "biology-subtopic-b52742b640ba",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Грибы",
+      "parentId": "biology-topic-1023af0f33e6"
+    },
+    "biology-subtopic-cd6e6e3e338e": {
+      "id": "biology-subtopic-cd6e6e3e338e",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Терморегуляция",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "biology-subtype-physiological-explanation-choice": {
+      "id": "biology-subtype-physiological-explanation-choice",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Объяснение физиологического процесса"
+    },
+    "biology-subtopic-4293f8f0be8e": {
+      "id": "biology-subtopic-4293f8f0be8e",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Дыхание",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "biology-subtopic-761d2852dbe5": {
+      "id": "biology-subtopic-761d2852dbe5",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Кровь",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "biology-subtype-human-blood-cell-traits": {
+      "id": "biology-subtype-human-blood-cell-traits",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Множественный выбор признаков клеток человека"
+    },
+    "biology-subtopic-046854a65527": {
+      "id": "biology-subtopic-046854a65527",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Мышечная ткань",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "biology-subtype-human-muscle-tissue-traits": {
+      "id": "biology-subtype-human-muscle-tissue-traits",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Множественный выбор признаков тканей человека"
+    },
+    "biology-subtopic-b1ae1d449cdb": {
+      "id": "biology-subtopic-b1ae1d449cdb",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Кровообращение",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "biology-subtype-human-systems-matching": {
+      "id": "biology-subtype-human-systems-matching",
+      "kind": "subtype",
+      "subjectId": "biology",
+      "title": "Соответствие структуры и системы"
+    },
+    "biology-subtopic-b8450158cf08": {
+      "id": "biology-subtopic-b8450158cf08",
+      "kind": "subtopic",
+      "subjectId": "biology",
+      "title": "Нервная система",
+      "parentId": "biology-topic-e6551d66a325"
+    },
+    "social-studies-topic-e93fe2c28b06": {
+      "id": "social-studies-topic-e93fe2c28b06",
+      "kind": "topic",
+      "subjectId": "social-studies",
+      "title": "Духовная культура"
+    },
+    "social-studies-subtopic-8f5c47b3f3e9": {
+      "id": "social-studies-subtopic-8f5c47b3f3e9",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Наука",
+      "parentId": "social-studies-topic-e93fe2c28b06"
+    },
+    "social-studies-subtype-science-identification": {
+      "id": "social-studies-subtype-science-identification",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Распознавание признаков науки"
+    },
+    "social-studies-subtopic-134d4511eb98": {
+      "id": "social-studies-subtopic-134d4511eb98",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Искусство",
+      "parentId": "social-studies-topic-e93fe2c28b06"
+    },
+    "social-studies-subtype-art-identification": {
+      "id": "social-studies-subtype-art-identification",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Распознавание форм духовной культуры"
+    },
+    "social-studies-topic-e679d5a8a156": {
+      "id": "social-studies-topic-e679d5a8a156",
+      "kind": "topic",
+      "subjectId": "social-studies",
+      "title": "Человек и общество"
+    },
+    "social-studies-subtopic-f52144d7174d": {
+      "id": "social-studies-subtopic-f52144d7174d",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Социализация",
+      "parentId": "social-studies-topic-e679d5a8a156"
+    },
+    "social-studies-subtype-personality-socialization": {
+      "id": "social-studies-subtype-personality-socialization",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Социальные качества личности"
+    },
+    "social-studies-subtopic-016429f04ad5": {
+      "id": "social-studies-subtopic-016429f04ad5",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Социальные роли",
+      "parentId": "social-studies-topic-e679d5a8a156"
+    },
+    "social-studies-subtype-social-role-identification": {
+      "id": "social-studies-subtype-social-role-identification",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Социальные позиции и ожидаемое поведение"
+    },
+    "social-studies-topic-61ca78d0cc90": {
+      "id": "social-studies-topic-61ca78d0cc90",
+      "kind": "topic",
+      "subjectId": "social-studies",
+      "title": "Социальные отношения"
+    },
+    "social-studies-subtopic-cfb236e279bb": {
+      "id": "social-studies-subtopic-cfb236e279bb",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Социальная мобильность",
+      "parentId": "social-studies-topic-61ca78d0cc90"
+    },
+    "social-studies-subtype-social-judgments": {
+      "id": "social-studies-subtype-social-judgments",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Оценка двух социальных суждений"
+    },
+    "social-studies-subtopic-6fe76275467d": {
+      "id": "social-studies-subtopic-6fe76275467d",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Образование",
+      "parentId": "social-studies-topic-e93fe2c28b06"
+    },
+    "social-studies-subtopic-4fd41499d5e0": {
+      "id": "social-studies-subtopic-4fd41499d5e0",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Рынок",
+      "parentId": "social-studies-topic-e7b80a347084"
+    },
+    "social-studies-subtype-economic-judgments": {
+      "id": "social-studies-subtype-economic-judgments",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Оценка экономических суждений"
+    },
+    "social-studies-subtopic-ba91bad697ba": {
+      "id": "social-studies-subtopic-ba91bad697ba",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Деньги",
+      "parentId": "social-studies-topic-e7b80a347084"
+    },
+    "social-studies-subtype-money-function-identification": {
+      "id": "social-studies-subtype-money-function-identification",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Распознавание функций денег"
+    },
+    "social-studies-topic-8f6ee41d719a": {
+      "id": "social-studies-topic-8f6ee41d719a",
+      "kind": "topic",
+      "subjectId": "social-studies",
+      "title": "Политика"
+    },
+    "social-studies-subtopic-e763bbe40437": {
+      "id": "social-studies-subtopic-e763bbe40437",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Политические режимы",
+      "parentId": "social-studies-topic-8f6ee41d719a"
+    },
+    "social-studies-subtype-political-regime-identification": {
+      "id": "social-studies-subtype-political-regime-identification",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Режим по совокупности признаков"
+    },
+    "social-studies-subtopic-7c6e2b3bc8bb": {
+      "id": "social-studies-subtopic-7c6e2b3bc8bb",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Государственное устройство",
+      "parentId": "social-studies-topic-8f6ee41d719a"
+    },
+    "social-studies-subtype-territorial-structure-identification": {
+      "id": "social-studies-subtype-territorial-structure-identification",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Различение характеристик государства"
+    },
+    "social-studies-topic-e9aff3fcdda3": {
+      "id": "social-studies-topic-e9aff3fcdda3",
+      "kind": "topic",
+      "subjectId": "social-studies",
+      "title": "Право"
+    },
+    "social-studies-subtopic-2b754190b894": {
+      "id": "social-studies-subtopic-2b754190b894",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Права человека",
+      "parentId": "social-studies-topic-e9aff3fcdda3"
+    },
+    "social-studies-subtype-rights-classification": {
+      "id": "social-studies-subtype-rights-classification",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Классификация прав"
+    },
+    "social-studies-subtopic-f5de9e428017": {
+      "id": "social-studies-subtopic-f5de9e428017",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Отрасли права",
+      "parentId": "social-studies-topic-e9aff3fcdda3"
+    },
+    "social-studies-subtype-legal-branch-situation": {
+      "id": "social-studies-subtype-legal-branch-situation",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Правовая ситуация и отрасль"
+    },
+    "social-studies-subtopic-f870f7504fa2": {
+      "id": "social-studies-subtopic-f870f7504fa2",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Органы государственной власти РФ",
+      "parentId": "social-studies-topic-8f6ee41d719a"
+    },
+    "social-studies-subtype-state-power-branches": {
+      "id": "social-studies-subtype-state-power-branches",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Разделение властей"
+    },
+    "social-studies-subtopic-51c0d75a3b13": {
+      "id": "social-studies-subtopic-51c0d75a3b13",
+      "kind": "subtopic",
+      "subjectId": "social-studies",
+      "title": "Конституционные основы",
+      "parentId": "social-studies-topic-e9aff3fcdda3"
+    },
+    "social-studies-subtype-constitution-hierarchy": {
+      "id": "social-studies-subtype-constitution-hierarchy",
+      "kind": "subtype",
+      "subjectId": "social-studies",
+      "title": "Место Конституции в системе права"
+    },
+    "informatics-topic-2f43186d9890": {
+      "id": "informatics-topic-2f43186d9890",
+      "kind": "topic",
+      "subjectId": "informatics",
+      "title": "Файловые алгоритмы"
+    },
+    "informatics-subtopic-8ae0dd0c37fa": {
+      "id": "informatics-subtopic-8ae0dd0c37fa",
+      "kind": "subtopic",
+      "subjectId": "informatics",
+      "title": "Соседние пары",
+      "parentId": "informatics-topic-2f43186d9890"
+    },
+    "informatics-subtype-adjacent-file": {
+      "id": "informatics-subtype-adjacent-file",
+      "kind": "subtype",
+      "subjectId": "informatics",
+      "title": "Отбор пар числового файла"
+    },
+    "informatics-subtopic-f0c5d22ea4ff": {
+      "id": "informatics-subtopic-f0c5d22ea4ff",
+      "kind": "subtopic",
+      "subjectId": "informatics",
+      "title": "Параллельные процессы",
+      "parentId": "informatics-topic-2f43186d9890"
+    },
+    "informatics-subtype-process-file": {
+      "id": "informatics-subtype-process-file",
+      "kind": "subtype",
+      "subjectId": "informatics",
+      "title": "Количество одновременно работающих процессов"
+    },
+    "informatics-subtopic-acc428328299": {
+      "id": "informatics-subtopic-acc428328299",
+      "kind": "subtopic",
+      "subjectId": "informatics",
+      "title": "Обработка строк",
+      "parentId": "informatics-topic-2f43186d9890"
+    },
+    "informatics-subtype-expression-file": {
+      "id": "informatics-subtype-expression-file",
+      "kind": "subtype",
+      "subjectId": "informatics",
+      "title": "Распознавание арифметического выражения"
+    },
     "physics-topic-15e621eee2d1": {
       "id": "physics-topic-15e621eee2d1",
       "kind": "topic",
@@ -2688,12 +3365,6 @@
       "kind": "subtype",
       "subjectId": "chemistry",
       "title": "Баланс вещества при смешивании"
-    },
-    "chemistry-topic-7bb978e0fd05": {
-      "id": "chemistry-topic-7bb978e0fd05",
-      "kind": "topic",
-      "subjectId": "chemistry",
-      "title": "Химические реакции"
     },
     "chemistry-subtopic-6eab5cc5730b": {
       "id": "chemistry-subtopic-6eab5cc5730b",
@@ -52426,6 +53097,558 @@
       "informatics-topic-d06e9a5aac2e",
       "informatics-subtopic-1104fed37784",
       "informatics-subtype-spreadsheet-one-pair-sum",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-1-sulfur-substance": [
+      "oge-chemistry",
+      1,
+      "chemistry-topic-228aba4011ef",
+      "chemistry-subtopic-d16c266c7a36",
+      "chemistry-subtype-element-substance",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-1-iron-substance": [
+      "oge-chemistry",
+      1,
+      "chemistry-topic-228aba4011ef",
+      "chemistry-subtopic-d16c266c7a36",
+      "chemistry-subtype-element-substance",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-2-shells-magnesium": [
+      "oge-chemistry",
+      2,
+      "chemistry-topic-865b80fa5454",
+      "chemistry-subtopic-4222acf044dc",
+      "chemistry-subtype-atomic-shell-period-charge",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-4-sulfur-oxidation": [
+      "oge-chemistry",
+      4,
+      "chemistry-topic-865b80fa5454",
+      "chemistry-subtopic-59b8756b87f2",
+      "chemistry-subtype-oxidation-state-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-4-nitrogen-oxidation": [
+      "oge-chemistry",
+      4,
+      "chemistry-topic-865b80fa5454",
+      "chemistry-subtopic-59b8756b87f2",
+      "chemistry-subtype-oxidation-state-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-5-ionic-compounds": [
+      "oge-chemistry",
+      5,
+      "chemistry-topic-865b80fa5454",
+      "chemistry-subtopic-f0e27fe080c7",
+      "chemistry-subtype-bond-type-selection",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-5-nonpolar-molecules": [
+      "oge-chemistry",
+      5,
+      "chemistry-topic-865b80fa5454",
+      "chemistry-subtopic-f0e27fe080c7",
+      "chemistry-subtype-bond-type-selection",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-6-magnesium-argon": [
+      "oge-chemistry",
+      6,
+      "chemistry-topic-9a0e741e3cad",
+      "chemistry-subtopic-25affd0b734b",
+      "chemistry-subtype-element-comparison",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-6-potassium-calcium": [
+      "oge-chemistry",
+      6,
+      "chemistry-topic-9a0e741e3cad",
+      "chemistry-subtopic-25affd0b734b",
+      "chemistry-subtype-element-comparison",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-7-acid-oxide-salt": [
+      "oge-chemistry",
+      7,
+      "chemistry-topic-5fb96e7c8941",
+      "chemistry-subtopic-e67abf197558",
+      "chemistry-subtype-inorganic-class-ordered",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-7-base-acid": [
+      "oge-chemistry",
+      7,
+      "chemistry-topic-5fb96e7c8941",
+      "chemistry-subtopic-e67abf197558",
+      "chemistry-subtype-inorganic-class-ordered",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-8-sodium-oxide-properties": [
+      "oge-chemistry",
+      8,
+      "chemistry-topic-5fb96e7c8941",
+      "chemistry-subtopic-b8763a13046b",
+      "chemistry-subtype-oxide-reactivity",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-8-copper-oxide-properties": [
+      "oge-chemistry",
+      8,
+      "chemistry-topic-5fb96e7c8941",
+      "chemistry-subtopic-b8763a13046b",
+      "chemistry-subtype-oxide-reactivity",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-9-reaction-products-a": [
+      "oge-chemistry",
+      9,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-0d9a673ae349",
+      "chemistry-subtype-reaction-product-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-9-reaction-products-b": [
+      "oge-chemistry",
+      9,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-0d9a673ae349",
+      "chemistry-subtype-reaction-product-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-10-reagent-pairs-a": [
+      "oge-chemistry",
+      10,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-13b8ca815d5d",
+      "chemistry-subtype-reagent-pair-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-10-reagent-pairs-b": [
+      "oge-chemistry",
+      10,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-13b8ca815d5d",
+      "chemistry-subtype-reagent-pair-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-11-redox-reaction-selection-a": [
+      "oge-chemistry",
+      11,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-1fa3cc5180d6",
+      "chemistry-subtype-redox-recognition",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-11-redox-reaction-selection-b": [
+      "oge-chemistry",
+      11,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-1fa3cc5180d6",
+      "chemistry-subtype-redox-recognition",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-12-reaction-signs-a": [
+      "oge-chemistry",
+      12,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-22fd2ea79ec9",
+      "chemistry-subtype-reaction-sign-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-12-reaction-signs-b": [
+      "oge-chemistry",
+      12,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-22fd2ea79ec9",
+      "chemistry-subtype-reaction-sign-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-13-calcium-dissociation": [
+      "oge-chemistry",
+      13,
+      "chemistry-topic-5a8d783c408d",
+      "chemistry-subtopic-8a15fc855ac9",
+      "chemistry-subtype-dissociation-amounts",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-13-potassium-sulfate-dissociation": [
+      "oge-chemistry",
+      13,
+      "chemistry-topic-5a8d783c408d",
+      "chemistry-subtopic-8a15fc855ac9",
+      "chemistry-subtype-dissociation-amounts",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-14-carbonate-net-ionic": [
+      "oge-chemistry",
+      14,
+      "chemistry-topic-5a8d783c408d",
+      "chemistry-subtopic-fb71d71fcc4c",
+      "chemistry-subtype-net-ionic-reactants",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-14-silver-net-ionic": [
+      "oge-chemistry",
+      14,
+      "chemistry-topic-5a8d783c408d",
+      "chemistry-subtopic-fb71d71fcc4c",
+      "chemistry-subtype-net-ionic-reactants",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-15-electron-process-a": [
+      "oge-chemistry",
+      15,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-1fa3cc5180d6",
+      "chemistry-subtype-electron-transfer-classification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-15-electron-process-b": [
+      "oge-chemistry",
+      15,
+      "chemistry-topic-7bb978e0fd05",
+      "chemistry-subtopic-1fa3cc5180d6",
+      "chemistry-subtype-electron-transfer-classification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-16-lab-safety-a": [
+      "oge-chemistry",
+      16,
+      "chemistry-topic-0c9499436959",
+      "chemistry-subtopic-f3208d820bc9",
+      "chemistry-subtype-school-lab-safety",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-16-lab-safety-b": [
+      "oge-chemistry",
+      16,
+      "chemistry-topic-0c9499436959",
+      "chemistry-subtopic-f3208d820bc9",
+      "chemistry-subtype-school-lab-safety",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-17-identify-solutions-a": [
+      "oge-chemistry",
+      17,
+      "chemistry-topic-0c9499436959",
+      "chemistry-subtopic-8c5070cee41f",
+      "chemistry-subtype-qualitative-reagent-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-chemistry-17-identify-solutions-b": [
+      "oge-chemistry",
+      17,
+      "chemistry-topic-0c9499436959",
+      "chemistry-subtopic-8c5070cee41f",
+      "chemistry-subtype-qualitative-reagent-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-2-kingdom-organisms-a": [
+      "oge-biology",
+      2,
+      "biology-topic-1023af0f33e6",
+      "biology-subtopic-accac3d60fbc",
+      "biology-subtype-organism-kingdom-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-2-kingdom-organisms-b": [
+      "oge-biology",
+      2,
+      "biology-topic-1023af0f33e6",
+      "biology-subtopic-accac3d60fbc",
+      "biology-subtype-organism-kingdom-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-8-table-organelle": [
+      "oge-biology",
+      8,
+      "biology-topic-ace91239d1cc",
+      "biology-subtopic-b6ed789a972b",
+      "biology-subtype-biological-table-gap",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-8-table-tissue": [
+      "oge-biology",
+      8,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-61623ee9402c",
+      "biology-subtype-biological-table-gap",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-10-leaf-text": [
+      "oge-biology",
+      10,
+      "biology-topic-faecd6908e5c",
+      "biology-subtopic-54574266488c",
+      "biology-subtype-biological-text-gaps",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-10-digestion-text": [
+      "oge-biology",
+      10,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-1fa4a97a4304",
+      "biology-subtype-biological-text-gaps",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-11-development-types": [
+      "oge-biology",
+      11,
+      "biology-topic-274370720c47",
+      "biology-subtopic-7a78c2a289e7",
+      "biology-subtype-animal-development-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-11-plant-groups": [
+      "oge-biology",
+      11,
+      "biology-topic-faecd6908e5c",
+      "biology-subtopic-17e1e984bd99",
+      "biology-subtype-plant-division-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-12-bacteria-judgments": [
+      "oge-biology",
+      12,
+      "biology-topic-ace91239d1cc",
+      "biology-subtopic-5c56906c980b",
+      "biology-subtype-biological-judgments",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-12-fungi-judgments": [
+      "oge-biology",
+      12,
+      "biology-topic-1023af0f33e6",
+      "biology-subtopic-b52742b640ba",
+      "biology-subtype-biological-judgments",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-15-sweating-function": [
+      "oge-biology",
+      15,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-cd6e6e3e338e",
+      "biology-subtype-physiological-explanation-choice",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-15-breathing-exercise": [
+      "oge-biology",
+      15,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-4293f8f0be8e",
+      "biology-subtype-physiological-explanation-choice",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-17-erythrocyte-traits": [
+      "oge-biology",
+      17,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-761d2852dbe5",
+      "biology-subtype-human-blood-cell-traits",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-17-skeletal-muscle-traits": [
+      "oge-biology",
+      17,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-046854a65527",
+      "biology-subtype-human-muscle-tissue-traits",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-18-circulation-types": [
+      "oge-biology",
+      18,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-b1ae1d449cdb",
+      "biology-subtype-human-systems-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-biology-18-nervous-parts": [
+      "oge-biology",
+      18,
+      "biology-topic-e6551d66a325",
+      "biology-subtopic-b8450158cf08",
+      "biology-subtype-human-systems-matching",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-4-culture-scientific-test": [
+      "oge-social-studies",
+      4,
+      "social-studies-topic-e93fe2c28b06",
+      "social-studies-subtopic-8f5c47b3f3e9",
+      "social-studies-subtype-science-identification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-4-culture-art": [
+      "oge-social-studies",
+      4,
+      "social-studies-topic-e93fe2c28b06",
+      "social-studies-subtopic-134d4511eb98",
+      "social-studies-subtype-art-identification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-5-socialization-responsibility": [
+      "oge-social-studies",
+      5,
+      "social-studies-topic-e679d5a8a156",
+      "social-studies-subtopic-f52144d7174d",
+      "social-studies-subtype-personality-socialization",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-5-social-role": [
+      "oge-social-studies",
+      5,
+      "social-studies-topic-e679d5a8a156",
+      "social-studies-subtopic-016429f04ad5",
+      "social-studies-subtype-social-role-identification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-6-mobility-judgments": [
+      "oge-social-studies",
+      6,
+      "social-studies-topic-61ca78d0cc90",
+      "social-studies-subtopic-cfb236e279bb",
+      "social-studies-subtype-social-judgments",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-6-education-judgments": [
+      "oge-social-studies",
+      6,
+      "social-studies-topic-e93fe2c28b06",
+      "social-studies-subtopic-6fe76275467d",
+      "social-studies-subtype-social-judgments",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-10-market-price-signal": [
+      "oge-social-studies",
+      10,
+      "social-studies-topic-e7b80a347084",
+      "social-studies-subtopic-4fd41499d5e0",
+      "social-studies-subtype-economic-judgments",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-10-money-functions": [
+      "oge-social-studies",
+      10,
+      "social-studies-topic-e7b80a347084",
+      "social-studies-subtopic-ba91bad697ba",
+      "social-studies-subtype-money-function-identification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-11-democracy-signs": [
+      "oge-social-studies",
+      11,
+      "social-studies-topic-8f6ee41d719a",
+      "social-studies-subtopic-e763bbe40437",
+      "social-studies-subtype-political-regime-identification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-11-federation-sign": [
+      "oge-social-studies",
+      11,
+      "social-studies-topic-8f6ee41d719a",
+      "social-studies-subtopic-7c6e2b3bc8bb",
+      "social-studies-subtype-territorial-structure-identification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-13-personal-right": [
+      "oge-social-studies",
+      13,
+      "social-studies-topic-e9aff3fcdda3",
+      "social-studies-subtopic-2b754190b894",
+      "social-studies-subtype-rights-classification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-13-political-right": [
+      "oge-social-studies",
+      13,
+      "social-studies-topic-e9aff3fcdda3",
+      "social-studies-subtopic-2b754190b894",
+      "social-studies-subtype-rights-classification",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-15-civil-situation": [
+      "oge-social-studies",
+      15,
+      "social-studies-topic-e9aff3fcdda3",
+      "social-studies-subtopic-f5de9e428017",
+      "social-studies-subtype-legal-branch-situation",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-15-labour-situation": [
+      "oge-social-studies",
+      15,
+      "social-studies-topic-e9aff3fcdda3",
+      "social-studies-subtopic-f5de9e428017",
+      "social-studies-subtype-legal-branch-situation",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-16-executive-body": [
+      "oge-social-studies",
+      16,
+      "social-studies-topic-8f6ee41d719a",
+      "social-studies-subtopic-f870f7504fa2",
+      "social-studies-subtype-state-power-branches",
+      "tochka-original"
+    ],
+    "coverage-20261029-oge-social-studies-16-constitution-supremacy": [
+      "oge-social-studies",
+      16,
+      "social-studies-topic-e9aff3fcdda3",
+      "social-studies-subtopic-51c0d75a3b13",
+      "social-studies-subtype-constitution-hierarchy",
+      "tochka-original"
+    ],
+    "coverage-20261029-ege-informatics-17-adjacent-file-1": [
+      "ege-informatics",
+      17,
+      "informatics-topic-2f43186d9890",
+      "informatics-subtopic-8ae0dd0c37fa",
+      "informatics-subtype-adjacent-file",
+      "tochka-original"
+    ],
+    "coverage-20261029-ege-informatics-17-adjacent-file-2": [
+      "ege-informatics",
+      17,
+      "informatics-topic-2f43186d9890",
+      "informatics-subtopic-8ae0dd0c37fa",
+      "informatics-subtype-adjacent-file",
+      "tochka-original"
+    ],
+    "coverage-20261029-ege-informatics-22-process-file-1": [
+      "ege-informatics",
+      22,
+      "informatics-topic-2f43186d9890",
+      "informatics-subtopic-f0c5d22ea4ff",
+      "informatics-subtype-process-file",
+      "tochka-original"
+    ],
+    "coverage-20261029-ege-informatics-22-process-file-2": [
+      "ege-informatics",
+      22,
+      "informatics-topic-2f43186d9890",
+      "informatics-subtopic-f0c5d22ea4ff",
+      "informatics-subtype-process-file",
+      "tochka-original"
+    ],
+    "coverage-20261029-ege-informatics-24-expression-file-1": [
+      "ege-informatics",
+      24,
+      "informatics-topic-2f43186d9890",
+      "informatics-subtopic-acc428328299",
+      "informatics-subtype-expression-file",
+      "tochka-original"
+    ],
+    "coverage-20261029-ege-informatics-24-expression-file-2": [
+      "ege-informatics",
+      24,
+      "informatics-topic-2f43186d9890",
+      "informatics-subtopic-acc428328299",
+      "informatics-subtype-expression-file",
       "tochka-original"
     ]
   },
@@ -327913,6 +329136,2766 @@
         }
       },
       "sourceContentSha256": "c302e5d41cd8f696667257b0d2fc645e79903648c67dfbb4fa38c22e531c3acb"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-1-sulfur-substance",
+      "modelId": "oge-chemistry",
+      "number": 1,
+      "active": true,
+      "topicId": "chemistry-topic-228aba4011ef",
+      "subtopicId": "chemistry-subtopic-d16c266c7a36",
+      "subtypeId": "chemistry-subtype-element-substance",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Различение элемента и вещества",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-1-sulfur-substance",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "168a93e419a7a25f346ad82112c402d1752a465edd54c7aa082a515a2d1a56ae"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-1-iron-substance",
+      "modelId": "oge-chemistry",
+      "number": 1,
+      "active": true,
+      "topicId": "chemistry-topic-228aba4011ef",
+      "subtopicId": "chemistry-subtopic-d16c266c7a36",
+      "subtypeId": "chemistry-subtype-element-substance",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Различение элемента и вещества",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-1-iron-substance",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "b5804766ee30a20286f46066365889121673756842442b65ff97e269a734da26"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-2-shells-magnesium",
+      "modelId": "oge-chemistry",
+      "number": 2,
+      "active": true,
+      "topicId": "chemistry-topic-865b80fa5454",
+      "subtopicId": "chemistry-subtopic-4222acf044dc",
+      "subtypeId": "chemistry-subtype-atomic-shell-period-charge",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Период и заряд ядра по распределению электронов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-2-shells-magnesium",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "10723c2c1a1cd47aca77d6b853ca3be50012ae07f6b6e04c6147d01041b065ec"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-4-sulfur-oxidation",
+      "modelId": "oge-chemistry",
+      "number": 4,
+      "active": true,
+      "topicId": "chemistry-topic-865b80fa5454",
+      "subtopicId": "chemistry-subtopic-59b8756b87f2",
+      "subtypeId": "chemistry-subtype-oxidation-state-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Степень окисления по электронейтральности",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-4-sulfur-oxidation",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "2c25f535d630d16775ebe9d01ef7a677dcbd9a9a1208a7a8caaa360d17a51ba8"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-4-nitrogen-oxidation",
+      "modelId": "oge-chemistry",
+      "number": 4,
+      "active": true,
+      "topicId": "chemistry-topic-865b80fa5454",
+      "subtopicId": "chemistry-subtopic-59b8756b87f2",
+      "subtypeId": "chemistry-subtype-oxidation-state-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Степень окисления по электронейтральности",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-4-nitrogen-oxidation",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "9130ac5b8d8b0503f984fdc15cd7d82fab51b368f247f5e83e193322b0ec37b7"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-5-ionic-compounds",
+      "modelId": "oge-chemistry",
+      "number": 5,
+      "active": true,
+      "topicId": "chemistry-topic-865b80fa5454",
+      "subtopicId": "chemistry-subtopic-f0e27fe080c7",
+      "subtypeId": "chemistry-subtype-bond-type-selection",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание типа химической связи",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-5-ionic-compounds",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "3118b3426eaeeda67b1214cbc919ec698c5f1759a3d7b9f158e02725e3a671eb"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-5-nonpolar-molecules",
+      "modelId": "oge-chemistry",
+      "number": 5,
+      "active": true,
+      "topicId": "chemistry-topic-865b80fa5454",
+      "subtopicId": "chemistry-subtopic-f0e27fe080c7",
+      "subtypeId": "chemistry-subtype-bond-type-selection",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание типа химической связи",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-5-nonpolar-molecules",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "8eedf5ced4d18871ff76de56e69ae9db3d87f240981fd212cf9f0b0681e607d5"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-6-magnesium-argon",
+      "modelId": "oge-chemistry",
+      "number": 6,
+      "active": true,
+      "topicId": "chemistry-topic-9a0e741e3cad",
+      "subtopicId": "chemistry-subtopic-25affd0b734b",
+      "subtypeId": "chemistry-subtype-element-comparison",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Сравнение электронного строения и свойств",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-6-magnesium-argon",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "dd82617ae4a87531d8b78a7df11db6befccdad61dccfe19f8739038bf2e98e60"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-6-potassium-calcium",
+      "modelId": "oge-chemistry",
+      "number": 6,
+      "active": true,
+      "topicId": "chemistry-topic-9a0e741e3cad",
+      "subtopicId": "chemistry-subtopic-25affd0b734b",
+      "subtypeId": "chemistry-subtype-element-comparison",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Сравнение электронного строения и свойств",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-6-potassium-calcium",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "e545b3a5530701c592bcd7e3c04dc0a03ff9e70bafddf0bd1457618bcadcf9e5"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-7-acid-oxide-salt",
+      "modelId": "oge-chemistry",
+      "number": 7,
+      "active": true,
+      "topicId": "chemistry-topic-5fb96e7c8941",
+      "subtopicId": "chemistry-subtopic-e67abf197558",
+      "subtypeId": "chemistry-subtype-inorganic-class-ordered",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание классов веществ",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-7-acid-oxide-salt",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "aee678fab9d0b94157298acf0d6c954e43692ef96eaf887ec8711fee9a9410da"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-7-base-acid",
+      "modelId": "oge-chemistry",
+      "number": 7,
+      "active": true,
+      "topicId": "chemistry-topic-5fb96e7c8941",
+      "subtopicId": "chemistry-subtopic-e67abf197558",
+      "subtypeId": "chemistry-subtype-inorganic-class-ordered",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание классов веществ",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-7-base-acid",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "8fc9414370a8e25f3a761d94992e5cc16e6c2e567b43583c7ca2a8571763c14c"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-8-sodium-oxide-properties",
+      "modelId": "oge-chemistry",
+      "number": 8,
+      "active": true,
+      "topicId": "chemistry-topic-5fb96e7c8941",
+      "subtopicId": "chemistry-subtopic-b8763a13046b",
+      "subtypeId": "chemistry-subtype-oxide-reactivity",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Выбор реагентов для основного оксида",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-8-sodium-oxide-properties",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "ca6b93079d2dc72ba7f591d1c9c658744e7359308b9225baa58cd66edb5c5e6c"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-8-copper-oxide-properties",
+      "modelId": "oge-chemistry",
+      "number": 8,
+      "active": true,
+      "topicId": "chemistry-topic-5fb96e7c8941",
+      "subtopicId": "chemistry-subtopic-b8763a13046b",
+      "subtypeId": "chemistry-subtype-oxide-reactivity",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Выбор реагентов для основного оксида",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-8-copper-oxide-properties",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 6
+        }
+      },
+      "sourceContentSha256": "f119a7f9cf92e76f609afd16c65649be098aa7586d277dceec78deabcc92d4bb"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-9-reaction-products-a",
+      "modelId": "oge-chemistry",
+      "number": 9,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-0d9a673ae349",
+      "subtypeId": "chemistry-subtype-reaction-product-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие реагентов и продуктов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-9-reaction-products-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "7bcb3589d39a1ea7722c72f5f82329ee212a1cc34383132632307312f3486939"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-9-reaction-products-b",
+      "modelId": "oge-chemistry",
+      "number": 9,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-0d9a673ae349",
+      "subtypeId": "chemistry-subtype-reaction-product-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие реагентов и продуктов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-9-reaction-products-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "4357abee4fd18b31a8433626d2fadcbb5b6a220d5f726af5e22166f067ea77d2"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-10-reagent-pairs-a",
+      "modelId": "oge-chemistry",
+      "number": 10,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-13b8ca815d5d",
+      "subtypeId": "chemistry-subtype-reagent-pair-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Выбор пары взаимодействующих реагентов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-10-reagent-pairs-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "b8bacebda48cb79e45f81d9d6d74d31976d502e460752104e12c507c7f599c4b"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-10-reagent-pairs-b",
+      "modelId": "oge-chemistry",
+      "number": 10,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-13b8ca815d5d",
+      "subtypeId": "chemistry-subtype-reagent-pair-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Выбор пары взаимодействующих реагентов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-10-reagent-pairs-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "94b6f194b4aff0af591083a42df0733973e9a6138216da116904b719a0c23754"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-a",
+      "modelId": "oge-chemistry",
+      "number": 11,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-1fa3cc5180d6",
+      "subtypeId": "chemistry-subtype-redox-recognition",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание ОВР по изменению степеней окисления",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "33a7526911a949d74d33fb89d3c0ebfb9755accd5a2a9783e5956c8acc802044"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-b",
+      "modelId": "oge-chemistry",
+      "number": 11,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-1fa3cc5180d6",
+      "subtypeId": "chemistry-subtype-redox-recognition",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание ОВР по изменению степеней окисления",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "7b03f1188205eae9201aeb09f4f7b18e2dd28ed4e5678f46950a35e98766f6e2"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-12-reaction-signs-a",
+      "modelId": "oge-chemistry",
+      "number": 12,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-22fd2ea79ec9",
+      "subtypeId": "chemistry-subtype-reaction-sign-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие реагентов и наблюдения",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-12-reaction-signs-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "f164506b24c2e5ba9a209d64a56a79b730bcb8e647e5c16479bfb78fa0202f4b"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-12-reaction-signs-b",
+      "modelId": "oge-chemistry",
+      "number": 12,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-22fd2ea79ec9",
+      "subtypeId": "chemistry-subtype-reaction-sign-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие реагентов и наблюдения",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-12-reaction-signs-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "839e95aca5b02ebe1139baa5bebe005f779cf848ab219fd6f91eb0d4c806b6de"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-13-calcium-dissociation",
+      "modelId": "oge-chemistry",
+      "number": 13,
+      "active": true,
+      "topicId": "chemistry-topic-5a8d783c408d",
+      "subtopicId": "chemistry-subtopic-8a15fc855ac9",
+      "subtypeId": "chemistry-subtype-dissociation-amounts",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Ионы и их количество",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-13-calcium-dissociation",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "8ac0752276af1d9386e3526446ee042c524f3e15f3fca0aab11013ea236e80ea"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-13-potassium-sulfate-dissociation",
+      "modelId": "oge-chemistry",
+      "number": 13,
+      "active": true,
+      "topicId": "chemistry-topic-5a8d783c408d",
+      "subtopicId": "chemistry-subtopic-8a15fc855ac9",
+      "subtypeId": "chemistry-subtype-dissociation-amounts",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Ионы и их количество",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-13-potassium-sulfate-dissociation",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "829161855817ddac86cf8b7db831622ab09b869d29a9d54df1158d2ab8d4d355"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-14-carbonate-net-ionic",
+      "modelId": "oge-chemistry",
+      "number": 14,
+      "active": true,
+      "topicId": "chemistry-topic-5a8d783c408d",
+      "subtopicId": "chemistry-subtopic-fb71d71fcc4c",
+      "subtypeId": "chemistry-subtype-net-ionic-reactants",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Подбор веществ по сокращённому уравнению",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-14-carbonate-net-ionic",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "61a5edf5ddf1a63dfc9477f2959b716b5973edc3e430a7b8663727337994dbb7"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-14-silver-net-ionic",
+      "modelId": "oge-chemistry",
+      "number": 14,
+      "active": true,
+      "topicId": "chemistry-topic-5a8d783c408d",
+      "subtopicId": "chemistry-subtopic-fb71d71fcc4c",
+      "subtypeId": "chemistry-subtype-net-ionic-reactants",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Подбор веществ по сокращённому уравнению",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-14-silver-net-ionic",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "6b18b3a8e18c7d22db771cc6b2f7cc9d397d99f064ce9a8d687372820ff30b60"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-15-electron-process-a",
+      "modelId": "oge-chemistry",
+      "number": 15,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-1fa3cc5180d6",
+      "subtypeId": "chemistry-subtype-electron-transfer-classification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Направление переноса электронов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-15-electron-process-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "18982831ffbd6bf07f46e75e963754f53ae55eb07a270aa4dd4d784b1463065f"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-15-electron-process-b",
+      "modelId": "oge-chemistry",
+      "number": 15,
+      "active": true,
+      "topicId": "chemistry-topic-7bb978e0fd05",
+      "subtopicId": "chemistry-subtopic-1fa3cc5180d6",
+      "subtypeId": "chemistry-subtype-electron-transfer-classification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Направление переноса электронов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-15-electron-process-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "ad91116956abbcb93551a103b9e357a9ddc533cef00f344067ea606493eb39a2"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-16-lab-safety-a",
+      "modelId": "oge-chemistry",
+      "number": 16,
+      "active": true,
+      "topicId": "chemistry-topic-0c9499436959",
+      "subtopicId": "chemistry-subtopic-f3208d820bc9",
+      "subtypeId": "chemistry-subtype-school-lab-safety",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Безопасное обращение с веществами",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-16-lab-safety-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "d021aa956fd9145e006f2107d9571ff7dca22e9ede01d22cd65c8b6b77eeeefd"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-16-lab-safety-b",
+      "modelId": "oge-chemistry",
+      "number": 16,
+      "active": true,
+      "topicId": "chemistry-topic-0c9499436959",
+      "subtopicId": "chemistry-subtopic-f3208d820bc9",
+      "subtypeId": "chemistry-subtype-school-lab-safety",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Безопасное обращение с веществами",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-16-lab-safety-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "9560b4c0f48396ac26eb9eeb0c6c35614367ee4616662196c05fdfa306cb25a6"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-17-identify-solutions-a",
+      "modelId": "oge-chemistry",
+      "number": 17,
+      "active": true,
+      "topicId": "chemistry-topic-0c9499436959",
+      "subtopicId": "chemistry-subtopic-8c5070cee41f",
+      "subtypeId": "chemistry-subtype-qualitative-reagent-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Различение растворов одним реагентом",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-17-identify-solutions-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "70a56c556e592a10528a140539b973d458c472a12b30badf57dd509d3e23e71d"
+    },
+    {
+      "taskId": "coverage-20261029-oge-chemistry-17-identify-solutions-b",
+      "modelId": "oge-chemistry",
+      "number": 17,
+      "active": true,
+      "topicId": "chemistry-topic-0c9499436959",
+      "subtopicId": "chemistry-subtopic-8c5070cee41f",
+      "subtypeId": "chemistry-subtype-qualitative-reagent-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Различение растворов одним реагентом",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-chemistry-17-identify-solutions-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/hi-9-oge-2027-spec.pdf",
+          "pdfPage": 7
+        }
+      },
+      "sourceContentSha256": "8909db10af5927f75ffe3c9ef0019b42aa56b1bf5e196641416bb747a2a70864"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-2-kingdom-organisms-a",
+      "modelId": "oge-biology",
+      "number": 2,
+      "active": true,
+      "topicId": "biology-topic-1023af0f33e6",
+      "subtopicId": "biology-subtopic-accac3d60fbc",
+      "subtypeId": "biology-subtype-organism-kingdom-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие организма и царства",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-2-kingdom-organisms-a",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "c416a11d043731ff14d5c6294c41fb03f085109c6ab1e3fa8d674a28a40a525d"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-2-kingdom-organisms-b",
+      "modelId": "oge-biology",
+      "number": 2,
+      "active": true,
+      "topicId": "biology-topic-1023af0f33e6",
+      "subtopicId": "biology-subtopic-accac3d60fbc",
+      "subtypeId": "biology-subtype-organism-kingdom-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие организма и царства",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-2-kingdom-organisms-b",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "49a06c6270cc43e065bdecb43c86e7b8110f3d95bc14b79f089d229649e2d45f"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-8-table-organelle",
+      "modelId": "oge-biology",
+      "number": 8,
+      "active": true,
+      "topicId": "biology-topic-ace91239d1cc",
+      "subtopicId": "biology-subtopic-b6ed789a972b",
+      "subtypeId": "biology-subtype-biological-table-gap",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Пропуск в биологической таблице",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-8-table-organelle",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "5c970e234f591a59e6c98ab8f1e9aca804f2ae5c0209a73c2303b6e32423531f"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-8-table-tissue",
+      "modelId": "oge-biology",
+      "number": 8,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-61623ee9402c",
+      "subtypeId": "biology-subtype-biological-table-gap",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Пропуск в биологической таблице",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-8-table-tissue",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "dbf3e2114bea2cfcbed32eaab850acfb5f8e5a26c6d5bebdf68dce1f0e935798"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-10-leaf-text",
+      "modelId": "oge-biology",
+      "number": 10,
+      "active": true,
+      "topicId": "biology-topic-faecd6908e5c",
+      "subtopicId": "biology-subtopic-54574266488c",
+      "subtypeId": "biology-subtype-biological-text-gaps",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Термины в связном биологическом тексте",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-10-leaf-text",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "18734f7b62a115bf544eb08fa8f5edcd38a3aa659a28ccf2cd1f64e85b026af9"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-10-digestion-text",
+      "modelId": "oge-biology",
+      "number": 10,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-1fa4a97a4304",
+      "subtypeId": "biology-subtype-biological-text-gaps",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Термины в связном биологическом тексте",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-10-digestion-text",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "a53dfbb2ca046996d2336a0dc61470982a925c8e70b724a78d684dc1086f060b"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-11-development-types",
+      "modelId": "oge-biology",
+      "number": 11,
+      "active": true,
+      "topicId": "biology-topic-274370720c47",
+      "subtopicId": "biology-subtopic-7a78c2a289e7",
+      "subtypeId": "biology-subtype-animal-development-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие животного и типа развития",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-11-development-types",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "197102bbfe2e49e9e7693c464dfbdc743b33dcf5ab53aafad03bbb0faed3c7bf"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-11-plant-groups",
+      "modelId": "oge-biology",
+      "number": 11,
+      "active": true,
+      "topicId": "biology-topic-faecd6908e5c",
+      "subtopicId": "biology-subtopic-17e1e984bd99",
+      "subtypeId": "biology-subtype-plant-division-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие растения и отдела",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-11-plant-groups",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "08d0b4e5e6284b04508424809a837db14a7b44b529635874cb2dabc4ea8da5c1"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-12-bacteria-judgments",
+      "modelId": "oge-biology",
+      "number": 12,
+      "active": true,
+      "topicId": "biology-topic-ace91239d1cc",
+      "subtopicId": "biology-subtopic-5c56906c980b",
+      "subtypeId": "biology-subtype-biological-judgments",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Оценка двух биологических суждений",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-12-bacteria-judgments",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "5871697db3cc99a5d9ba41caff911b2b01028ecd9132735c312fdfa8e1c65327"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-12-fungi-judgments",
+      "modelId": "oge-biology",
+      "number": 12,
+      "active": true,
+      "topicId": "biology-topic-1023af0f33e6",
+      "subtopicId": "biology-subtopic-b52742b640ba",
+      "subtypeId": "biology-subtype-biological-judgments",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Оценка двух биологических суждений",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-12-fungi-judgments",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "28feb5fb285cadfca4c0589ba5b5b315170929b8dedb6c6338c0b566a3d46825"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-15-sweating-function",
+      "modelId": "oge-biology",
+      "number": 15,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-cd6e6e3e338e",
+      "subtypeId": "biology-subtype-physiological-explanation-choice",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Объяснение физиологического процесса",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-15-sweating-function",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "cdccd414e6597208cc096ebffea6c1fbdf3912088f64bf85b53bc42f6bc072b0"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-15-breathing-exercise",
+      "modelId": "oge-biology",
+      "number": 15,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-4293f8f0be8e",
+      "subtypeId": "biology-subtype-physiological-explanation-choice",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Объяснение физиологического процесса",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-15-breathing-exercise",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "0d76ac635b40a21f0d544bbcf06ecb1dbd8f61da63d3854b43928c2cd30aee78"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-17-erythrocyte-traits",
+      "modelId": "oge-biology",
+      "number": 17,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-761d2852dbe5",
+      "subtypeId": "biology-subtype-human-blood-cell-traits",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Множественный выбор признаков клеток человека",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-17-erythrocyte-traits",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "762e5dc73252a5221c38ca11e82173201eb0896cd751df7d5ef4821a95c2afec"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-17-skeletal-muscle-traits",
+      "modelId": "oge-biology",
+      "number": 17,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-046854a65527",
+      "subtypeId": "biology-subtype-human-muscle-tissue-traits",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Множественный выбор признаков тканей человека",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-17-skeletal-muscle-traits",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "467b30d01caa5bfdbb8167d59018ed949fb1393dfe4b99cb1ce37fa885112cb8"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-18-circulation-types",
+      "modelId": "oge-biology",
+      "number": 18,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-b1ae1d449cdb",
+      "subtypeId": "biology-subtype-human-systems-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие структуры и системы",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-18-circulation-types",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "5e72a88c2c4f977fd837164b483e8159f1137b68a6fbd04b38c2143505cd420e"
+    },
+    {
+      "taskId": "coverage-20261029-oge-biology-18-nervous-parts",
+      "modelId": "oge-biology",
+      "number": 18,
+      "active": true,
+      "topicId": "biology-topic-e6551d66a325",
+      "subtopicId": "biology-subtopic-b8450158cf08",
+      "subtypeId": "biology-subtype-human-systems-matching",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Соответствие структуры и системы",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-biology-18-nervous-parts",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/bi-9-oge-2027-spec.pdf",
+          "pdfPage": 9
+        }
+      },
+      "sourceContentSha256": "ca1864b512c9bec262d544460d1d6f4f9805c620e324d8d87fbc26fdd6f26381"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-4-culture-scientific-test",
+      "modelId": "oge-social-studies",
+      "number": 4,
+      "active": true,
+      "topicId": "social-studies-topic-e93fe2c28b06",
+      "subtopicId": "social-studies-subtopic-8f5c47b3f3e9",
+      "subtypeId": "social-studies-subtype-science-identification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание признаков науки",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-4-culture-scientific-test",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 11
+        }
+      },
+      "sourceContentSha256": "d8b9c073d00beaa5cb4f73c076bc37918ac7f8104b449c0249ffa57b5af8eb86"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-4-culture-art",
+      "modelId": "oge-social-studies",
+      "number": 4,
+      "active": true,
+      "topicId": "social-studies-topic-e93fe2c28b06",
+      "subtopicId": "social-studies-subtopic-134d4511eb98",
+      "subtypeId": "social-studies-subtype-art-identification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание форм духовной культуры",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-4-culture-art",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 11
+        }
+      },
+      "sourceContentSha256": "02c28b804a0eb98bdf05043bad22dee828831d2c03ab0ed11bd43fd7bea29190"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-5-socialization-responsibility",
+      "modelId": "oge-social-studies",
+      "number": 5,
+      "active": true,
+      "topicId": "social-studies-topic-e679d5a8a156",
+      "subtopicId": "social-studies-subtopic-f52144d7174d",
+      "subtypeId": "social-studies-subtype-personality-socialization",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Социальные качества личности",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-5-socialization-responsibility",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 11
+        }
+      },
+      "sourceContentSha256": "bff05803227560f5f78463cc07723ca87a878fcab78b9d534a4ee906ba3cdb88"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-5-social-role",
+      "modelId": "oge-social-studies",
+      "number": 5,
+      "active": true,
+      "topicId": "social-studies-topic-e679d5a8a156",
+      "subtopicId": "social-studies-subtopic-016429f04ad5",
+      "subtypeId": "social-studies-subtype-social-role-identification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Социальные позиции и ожидаемое поведение",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-5-social-role",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 11
+        }
+      },
+      "sourceContentSha256": "c73f93722f00d9564cf858139dca3b8e469dee1f00073242cbbdb6670b9182a8"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-6-mobility-judgments",
+      "modelId": "oge-social-studies",
+      "number": 6,
+      "active": true,
+      "topicId": "social-studies-topic-61ca78d0cc90",
+      "subtopicId": "social-studies-subtopic-cfb236e279bb",
+      "subtypeId": "social-studies-subtype-social-judgments",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Оценка двух социальных суждений",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-6-mobility-judgments",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 11
+        }
+      },
+      "sourceContentSha256": "5fb5c97b2697cea7d928fee0f9ccd1b20141a667424347f8e583ca31c5620000"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-6-education-judgments",
+      "modelId": "oge-social-studies",
+      "number": 6,
+      "active": true,
+      "topicId": "social-studies-topic-e93fe2c28b06",
+      "subtopicId": "social-studies-subtopic-6fe76275467d",
+      "subtypeId": "social-studies-subtype-social-judgments",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Оценка двух социальных суждений",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-6-education-judgments",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 11
+        }
+      },
+      "sourceContentSha256": "183402b359cc269c5e0da91015e186d4d83bf4a7e13c9c02b4aef193a3d73c3a"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-10-market-price-signal",
+      "modelId": "oge-social-studies",
+      "number": 10,
+      "active": true,
+      "topicId": "social-studies-topic-e7b80a347084",
+      "subtopicId": "social-studies-subtopic-4fd41499d5e0",
+      "subtypeId": "social-studies-subtype-economic-judgments",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Оценка экономических суждений",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-10-market-price-signal",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 13
+        }
+      },
+      "sourceContentSha256": "634c978bc8ed6883c25201c7c0a58070f52ab50b8ad60512312fa5bf7f92a572"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-10-money-functions",
+      "modelId": "oge-social-studies",
+      "number": 10,
+      "active": true,
+      "topicId": "social-studies-topic-e7b80a347084",
+      "subtopicId": "social-studies-subtopic-ba91bad697ba",
+      "subtypeId": "social-studies-subtype-money-function-identification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание функций денег",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-10-money-functions",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 13
+        }
+      },
+      "sourceContentSha256": "a4f4408e89230e8dfd5e5fdf766a733e5b131cb0b0deba5b34d85eac8f00271c"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-11-democracy-signs",
+      "modelId": "oge-social-studies",
+      "number": 11,
+      "active": true,
+      "topicId": "social-studies-topic-8f6ee41d719a",
+      "subtopicId": "social-studies-subtopic-e763bbe40437",
+      "subtypeId": "social-studies-subtype-political-regime-identification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Режим по совокупности признаков",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-11-democracy-signs",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 13
+        }
+      },
+      "sourceContentSha256": "26d5144945a1590d6d6fea337285bdf4205d0257d481031591571a8990bea948"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-11-federation-sign",
+      "modelId": "oge-social-studies",
+      "number": 11,
+      "active": true,
+      "topicId": "social-studies-topic-8f6ee41d719a",
+      "subtopicId": "social-studies-subtopic-7c6e2b3bc8bb",
+      "subtypeId": "social-studies-subtype-territorial-structure-identification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Различение характеристик государства",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-11-federation-sign",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 13
+        }
+      },
+      "sourceContentSha256": "ec8e374b6cad8044166c4fbd8bfe186faac17719fd2c6cef46a29d372aa831f7"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-13-personal-right",
+      "modelId": "oge-social-studies",
+      "number": 13,
+      "active": true,
+      "topicId": "social-studies-topic-e9aff3fcdda3",
+      "subtopicId": "social-studies-subtopic-2b754190b894",
+      "subtypeId": "social-studies-subtype-rights-classification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Классификация прав",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-13-personal-right",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 14
+        }
+      },
+      "sourceContentSha256": "c2ea77acc248f9adfae50908105af6aa71aea85556a9639cffbd1a04ed4a7be0"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-13-political-right",
+      "modelId": "oge-social-studies",
+      "number": 13,
+      "active": true,
+      "topicId": "social-studies-topic-e9aff3fcdda3",
+      "subtopicId": "social-studies-subtopic-2b754190b894",
+      "subtypeId": "social-studies-subtype-rights-classification",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Классификация прав",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-13-political-right",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 14
+        }
+      },
+      "sourceContentSha256": "a51521cd883096e9e54da7dd229807ff5d1c83000180be13a36d5e9dd36e4a87"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-15-civil-situation",
+      "modelId": "oge-social-studies",
+      "number": 15,
+      "active": true,
+      "topicId": "social-studies-topic-e9aff3fcdda3",
+      "subtopicId": "social-studies-subtopic-f5de9e428017",
+      "subtypeId": "social-studies-subtype-legal-branch-situation",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Правовая ситуация и отрасль",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-15-civil-situation",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 14
+        }
+      },
+      "sourceContentSha256": "53d9325779da207c8f9fbd3a540cd15894d89cad26c449fa693e4d2eaefdf2e7"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-15-labour-situation",
+      "modelId": "oge-social-studies",
+      "number": 15,
+      "active": true,
+      "topicId": "social-studies-topic-e9aff3fcdda3",
+      "subtopicId": "social-studies-subtopic-f5de9e428017",
+      "subtypeId": "social-studies-subtype-legal-branch-situation",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Правовая ситуация и отрасль",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-15-labour-situation",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 14
+        }
+      },
+      "sourceContentSha256": "f38e571a0f639d31c52fde7520219c34cea0f144b2832bb6136a1f9d36a5855f"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-16-executive-body",
+      "modelId": "oge-social-studies",
+      "number": 16,
+      "active": true,
+      "topicId": "social-studies-topic-8f6ee41d719a",
+      "subtopicId": "social-studies-subtopic-f870f7504fa2",
+      "subtypeId": "social-studies-subtype-state-power-branches",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Разделение властей",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-16-executive-body",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 15
+        }
+      },
+      "sourceContentSha256": "6c9e26d9fc88fa901ab637f8761564c956066862e6bba1730ae2b27715387b57"
+    },
+    {
+      "taskId": "coverage-20261029-oge-social-studies-16-constitution-supremacy",
+      "modelId": "oge-social-studies",
+      "number": 16,
+      "active": true,
+      "topicId": "social-studies-topic-e9aff3fcdda3",
+      "subtopicId": "social-studies-subtopic-51c0d75a3b13",
+      "subtypeId": "social-studies-subtype-constitution-hierarchy",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Место Конституции в системе права",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-oge-social-studies-16-constitution-supremacy",
+        "sourceFiles": [
+          "scripts/coverage-editorial-20261029.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/oge/spec/2027/ob-9-oge-2027-spec.pdf",
+          "pdfPage": 15
+        }
+      },
+      "sourceContentSha256": "bf8790b8ac97d18442768759282df0efd34cbd18676e44e89dd6d356595cba9d"
+    },
+    {
+      "taskId": "coverage-20261029-ege-informatics-17-adjacent-file-1",
+      "modelId": "ege-informatics",
+      "number": 17,
+      "active": true,
+      "topicId": "informatics-topic-2f43186d9890",
+      "subtopicId": "informatics-subtopic-8ae0dd0c37fa",
+      "subtypeId": "informatics-subtype-adjacent-file",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Отбор пар числового файла",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-ege-informatics-17-adjacent-file-1",
+        "sourceFiles": [
+          "scripts/coverage-file-generators.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/ege/spec/2027/inf-11-ege-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "fc7f98aa2e617947db33c2e25b7885624c601dfa21a4b983e607af28ffdbf5ca"
+    },
+    {
+      "taskId": "coverage-20261029-ege-informatics-17-adjacent-file-2",
+      "modelId": "ege-informatics",
+      "number": 17,
+      "active": true,
+      "topicId": "informatics-topic-2f43186d9890",
+      "subtopicId": "informatics-subtopic-8ae0dd0c37fa",
+      "subtypeId": "informatics-subtype-adjacent-file",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Отбор пар числового файла",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-ege-informatics-17-adjacent-file-2",
+        "sourceFiles": [
+          "scripts/coverage-file-generators.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/ege/spec/2027/inf-11-ege-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "85231ba59670967d414df7be053d77464f40b5a5b4a93bb82104f42728c08c38"
+    },
+    {
+      "taskId": "coverage-20261029-ege-informatics-22-process-file-1",
+      "modelId": "ege-informatics",
+      "number": 22,
+      "active": true,
+      "topicId": "informatics-topic-2f43186d9890",
+      "subtopicId": "informatics-subtopic-f0c5d22ea4ff",
+      "subtypeId": "informatics-subtype-process-file",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Количество одновременно работающих процессов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-ege-informatics-22-process-file-1",
+        "sourceFiles": [
+          "scripts/coverage-file-generators.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/ege/spec/2027/inf-11-ege-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "1c119d7d24f981ddb6ca0aea3c8eb3365cc18a42b7631ee42f4f40c81261fc3b"
+    },
+    {
+      "taskId": "coverage-20261029-ege-informatics-22-process-file-2",
+      "modelId": "ege-informatics",
+      "number": 22,
+      "active": true,
+      "topicId": "informatics-topic-2f43186d9890",
+      "subtopicId": "informatics-subtopic-f0c5d22ea4ff",
+      "subtypeId": "informatics-subtype-process-file",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Количество одновременно работающих процессов",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-ege-informatics-22-process-file-2",
+        "sourceFiles": [
+          "scripts/coverage-file-generators.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/ege/spec/2027/inf-11-ege-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "6d111e592f31b39be62292f3bee1556badc59780c3699a5ec5ef9e23b712b5ce"
+    },
+    {
+      "taskId": "coverage-20261029-ege-informatics-24-expression-file-1",
+      "modelId": "ege-informatics",
+      "number": 24,
+      "active": true,
+      "topicId": "informatics-topic-2f43186d9890",
+      "subtopicId": "informatics-subtopic-acc428328299",
+      "subtypeId": "informatics-subtype-expression-file",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание арифметического выражения",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-ege-informatics-24-expression-file-1",
+        "sourceFiles": [
+          "scripts/coverage-file-generators.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/ege/spec/2027/inf-11-ege-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "2f4f9083c71314afe25023c6ae639117a7160846581a19591ea9888d6fa7f179"
+    },
+    {
+      "taskId": "coverage-20261029-ege-informatics-24-expression-file-2",
+      "modelId": "ege-informatics",
+      "number": 24,
+      "active": true,
+      "topicId": "informatics-topic-2f43186d9890",
+      "subtopicId": "informatics-subtopic-acc428328299",
+      "subtypeId": "informatics-subtype-expression-file",
+      "reviewStatus": "authored-family-reviewed",
+      "evidence": "docs/coverage-cycle-verification.json",
+      "skill": "Распознавание арифметического выражения",
+      "difficulty": {
+        "value": "standard",
+        "status": "author-level-not-official-difficulty"
+      },
+      "source": {
+        "category": "tochka-original",
+        "sourceIds": [
+          "tochka-project-original"
+        ],
+        "originYear": null,
+        "requirementsYear": 2027,
+        "identifier": "coverage-20261029-ege-informatics-24-expression-file-2",
+        "sourceFiles": [
+          "scripts/coverage-file-generators.mjs"
+        ],
+        "evidenceSourceIds": [
+          "tochka-project-original"
+        ],
+        "rightsStatus": "project-authorship-declared-not-independent-legal-opinion"
+      },
+      "codifier": {
+        "status": "pending-individual-mapping",
+        "requirementsReference": {
+          "url": "https://pro-schools.ru/fipi/ege/spec/2027/inf-11-ege-2027-spec.pdf",
+          "pdfPage": 8
+        }
+      },
+      "sourceContentSha256": "e5437cfdfd16475d500e8051211a1dfb4404c8d7be8c154568dfaa8466793b35"
     }
   ],
   "directions": [
@@ -330142,13 +334125,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-element-substance",
+              "topicId": "chemistry-topic-228aba4011ef",
+              "subtopicId": "chemistry-subtopic-d16c266c7a36",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330168,13 +334159,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 1,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-atomic-shell-period-charge",
+              "topicId": "chemistry-topic-865b80fa5454",
+              "subtopicId": "chemistry-subtopic-4222acf044dc",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330229,13 +334228,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-oxidation-state-matching",
+              "topicId": "chemistry-topic-865b80fa5454",
+              "subtopicId": "chemistry-subtopic-59b8756b87f2",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330255,13 +334262,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-bond-type-selection",
+              "topicId": "chemistry-topic-865b80fa5454",
+              "subtopicId": "chemistry-subtopic-f0e27fe080c7",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330281,13 +334296,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-element-comparison",
+              "topicId": "chemistry-topic-9a0e741e3cad",
+              "subtopicId": "chemistry-subtopic-25affd0b734b",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330307,13 +334330,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-inorganic-class-ordered",
+              "topicId": "chemistry-topic-5fb96e7c8941",
+              "subtopicId": "chemistry-subtopic-e67abf197558",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330333,13 +334364,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-oxide-reactivity",
+              "topicId": "chemistry-topic-5fb96e7c8941",
+              "subtopicId": "chemistry-subtopic-b8763a13046b",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330359,13 +334398,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-reaction-product-matching",
+              "topicId": "chemistry-topic-7bb978e0fd05",
+              "subtopicId": "chemistry-subtopic-0d9a673ae349",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330385,13 +334432,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-reagent-pair-matching",
+              "topicId": "chemistry-topic-7bb978e0fd05",
+              "subtopicId": "chemistry-subtopic-13b8ca815d5d",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330411,13 +334466,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-redox-recognition",
+              "topicId": "chemistry-topic-7bb978e0fd05",
+              "subtopicId": "chemistry-subtopic-1fa3cc5180d6",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330437,13 +334500,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-reaction-sign-matching",
+              "topicId": "chemistry-topic-7bb978e0fd05",
+              "subtopicId": "chemistry-subtopic-22fd2ea79ec9",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330463,13 +334534,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-dissociation-amounts",
+              "topicId": "chemistry-topic-5a8d783c408d",
+              "subtopicId": "chemistry-subtopic-8a15fc855ac9",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330489,13 +334568,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-net-ionic-reactants",
+              "topicId": "chemistry-topic-5a8d783c408d",
+              "subtopicId": "chemistry-subtopic-fb71d71fcc4c",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330515,13 +334602,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-electron-transfer-classification",
+              "topicId": "chemistry-topic-7bb978e0fd05",
+              "subtopicId": "chemistry-subtopic-1fa3cc5180d6",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330541,13 +334636,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-school-lab-safety",
+              "topicId": "chemistry-topic-0c9499436959",
+              "subtopicId": "chemistry-subtopic-f3208d820bc9",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330567,13 +334670,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "chemistry-subtype-qualitative-reagent-matching",
+              "topicId": "chemistry-topic-0c9499436959",
+              "subtopicId": "chemistry-subtopic-8c5070cee41f",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330818,13 +334929,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-organism-kingdom-matching",
+              "topicId": "biology-topic-1023af0f33e6",
+              "subtopicId": "biology-subtopic-accac3d60fbc",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -330998,13 +335117,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-biological-table-gap",
+              "topicId": "biology-topic-ace91239d1cc",
+              "subtopicId": "biology-subtopic-b6ed789a972b",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "biology-subtype-biological-table-gap",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-61623ee9402c",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -331074,13 +335209,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-biological-text-gaps",
+              "topicId": "biology-topic-faecd6908e5c",
+              "subtopicId": "biology-subtopic-54574266488c",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "biology-subtype-biological-text-gaps",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-1fa4a97a4304",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -331100,13 +335251,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-animal-development-matching",
+              "topicId": "biology-topic-274370720c47",
+              "subtopicId": "biology-subtopic-7a78c2a289e7",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "biology-subtype-plant-division-matching",
+              "topicId": "biology-topic-faecd6908e5c",
+              "subtopicId": "biology-subtopic-17e1e984bd99",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -331126,13 +335293,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-biological-judgments",
+              "topicId": "biology-topic-ace91239d1cc",
+              "subtopicId": "biology-subtopic-5c56906c980b",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "biology-subtype-biological-judgments",
+              "topicId": "biology-topic-1023af0f33e6",
+              "subtopicId": "biology-subtopic-b52742b640ba",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -331204,13 +335387,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-physiological-explanation-choice",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-cd6e6e3e338e",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "biology-subtype-physiological-explanation-choice",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-4293f8f0be8e",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -331256,13 +335455,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-human-blood-cell-traits",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-761d2852dbe5",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "biology-subtype-human-muscle-tissue-traits",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-046854a65527",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -331282,13 +335497,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "biology-subtype-human-systems-matching",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-b1ae1d449cdb",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "biology-subtype-human-systems-matching",
+              "topicId": "biology-topic-e6551d66a325",
+              "subtopicId": "biology-subtopic-b8450158cf08",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333066,13 +337297,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-science-identification",
+              "topicId": "social-studies-topic-e93fe2c28b06",
+              "subtopicId": "social-studies-subtopic-8f5c47b3f3e9",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "social-studies-subtype-art-identification",
+              "topicId": "social-studies-topic-e93fe2c28b06",
+              "subtopicId": "social-studies-subtopic-134d4511eb98",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333092,13 +337339,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-personality-socialization",
+              "topicId": "social-studies-topic-e679d5a8a156",
+              "subtopicId": "social-studies-subtopic-f52144d7174d",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "social-studies-subtype-social-role-identification",
+              "topicId": "social-studies-topic-e679d5a8a156",
+              "subtopicId": "social-studies-subtopic-016429f04ad5",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333118,13 +337381,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-social-judgments",
+              "topicId": "social-studies-topic-61ca78d0cc90",
+              "subtopicId": "social-studies-subtopic-cfb236e279bb",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "social-studies-subtype-social-judgments",
+              "topicId": "social-studies-topic-e93fe2c28b06",
+              "subtopicId": "social-studies-subtopic-6fe76275467d",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333239,13 +337518,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-economic-judgments",
+              "topicId": "social-studies-topic-e7b80a347084",
+              "subtopicId": "social-studies-subtopic-4fd41499d5e0",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "social-studies-subtype-money-function-identification",
+              "topicId": "social-studies-topic-e7b80a347084",
+              "subtopicId": "social-studies-subtopic-ba91bad697ba",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333265,13 +337560,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-political-regime-identification",
+              "topicId": "social-studies-topic-8f6ee41d719a",
+              "subtopicId": "social-studies-subtopic-e763bbe40437",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "social-studies-subtype-territorial-structure-identification",
+              "topicId": "social-studies-topic-8f6ee41d719a",
+              "subtopicId": "social-studies-subtopic-7c6e2b3bc8bb",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333317,13 +337628,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-rights-classification",
+              "topicId": "social-studies-topic-e9aff3fcdda3",
+              "subtopicId": "social-studies-subtopic-2b754190b894",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333377,13 +337696,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-legal-branch-situation",
+              "topicId": "social-studies-topic-e9aff3fcdda3",
+              "subtopicId": "social-studies-subtopic-f5de9e428017",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -333403,13 +337730,29 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "social-studies-subtype-state-power-branches",
+              "topicId": "social-studies-topic-8f6ee41d719a",
+              "subtopicId": "social-studies-subtopic-f870f7504fa2",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            },
+            {
+              "subtypeId": "social-studies-subtype-constitution-hierarchy",
+              "topicId": "social-studies-topic-e9aff3fcdda3",
+              "subtopicId": "social-studies-subtopic-51c0d75a3b13",
+              "sourceCategory": "tochka-original",
+              "count": 1,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -346991,13 +351334,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "informatics-subtype-adjacent-file",
+              "topicId": "informatics-topic-2f43186d9890",
+              "subtopicId": "informatics-subtopic-8ae0dd0c37fa",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -347148,13 +351499,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "informatics-subtype-process-file",
+              "topicId": "informatics-topic-2f43186d9890",
+              "subtopicId": "informatics-subtopic-f0c5d22ea4ff",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -347209,13 +351568,21 @@
             "contentCodes": [],
             "requirementCodes": []
           },
-          "status": "BLOCKED",
+          "status": "PARTIAL",
           "complete": false,
-          "taskCount": 0,
-          "groups": [],
+          "taskCount": 2,
+          "groups": [
+            {
+              "subtypeId": "informatics-subtype-expression-file",
+              "topicId": "informatics-topic-2f43186d9890",
+              "subtopicId": "informatics-subtopic-acc428328299",
+              "sourceCategory": "tochka-original",
+              "count": 2,
+              "status": "authored-family-reviewed"
+            }
+          ],
           "manualReviewReasons": [
-            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены",
-            "Нет опубликованных совместимых заданий"
+            "Полный каталог существенных подтипов и индивидуальные связи с кодификатором не подтверждены"
           ]
         },
         {
@@ -355292,15 +359659,15 @@
   "counts": {
     "directions": 30,
     "numbers": 825,
-    "numbersWithTasks": 218,
-    "numbersWithReviewedSubtypes": 130,
+    "numbersWithTasks": 253,
+    "numbersWithReviewedSubtypes": 165,
     "fullyClassifiedNumbers": 0,
-    "subtypes": 198,
-    "topics": 153,
-    "subtopics": 91,
-    "sourceTasks": 6210,
-    "activeTasks": 6189,
-    "reviewedDetailedTasks": 4956,
+    "subtypes": 240,
+    "topics": 168,
+    "subtopics": 138,
+    "sourceTasks": 6279,
+    "activeTasks": 6258,
+    "reviewedDetailedTasks": 5025,
     "broadTopicOnlyTasks": 1233,
     "unconfirmedOriginTasks": 0,
     "individualCodifierMappingsConfirmed": 0,

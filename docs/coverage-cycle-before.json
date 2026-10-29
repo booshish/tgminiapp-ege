@@ -1,0 +1,4523 @@
+[
+  {
+    "id": "oge-math",
+    "tasks": 485,
+    "model": "oge-math-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-1-plan-perimeter"
+        ],
+        "topics": [
+          "math-topic-0ef20f823da7"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-2-plan-house-area"
+        ],
+        "topics": [
+          "math-topic-0ef20f823da7"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-3-plan-lawn-area"
+        ],
+        "topics": [
+          "math-topic-0ef20f823da7"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-4-plan-tiles"
+        ],
+        "topics": [
+          "math-topic-0ef20f823da7"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-5-plan-fence-cost"
+        ],
+        "topics": [
+          "math-topic-0ef20f823da7"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 118,
+        "subtypes": [
+          "math-subtype-oge-6-fraction-sum",
+          "math-subtype-oge-6-multi-step-fractions",
+          "math-subtype-fraction-combination"
+        ],
+        "topics": [
+          "math-topic-03dab3bbd99d"
+        ],
+        "difficulty": {
+          "standard": 115,
+          "advanced": 3
+        },
+        "withAnswersAndSolutions": 118,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 118
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 10,
+        "subtypes": [],
+        "topics": [
+          "math-topic-0324aa7c6e49"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 13,
+        "subtypes": [
+          "math-subtype-oge-8-difference-squares"
+        ],
+        "topics": [
+          "math-topic-06c31ff0a0e3",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 13
+        },
+        "withAnswersAndSolutions": 13,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 13
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 157,
+        "subtypes": [
+          "math-subtype-oge-9-quadratic-larger-root",
+          "math-subtype-oge-9-rational-domain",
+          "math-subtype-linear-both-sides"
+        ],
+        "topics": [
+          "math-topic-371009885215",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 154,
+          "advanced": 3
+        },
+        "withAnswersAndSolutions": 157,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 157
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 13,
+        "subtypes": [
+          "math-subtype-oge-10-not-red-ball"
+        ],
+        "topics": [
+          "math-topic-d958bcca6b73"
+        ],
+        "difficulty": {
+          "standard": 13
+        },
+        "withAnswersAndSolutions": 13,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 13
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-11-line-through-points"
+        ],
+        "topics": [
+          "math-topic-c59c2f594517"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-12-kinetic-energy"
+        ],
+        "topics": [
+          "math-topic-717cfa84c504"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-13-integer-in-system"
+        ],
+        "topics": [
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-14-arithmetic-term"
+        ],
+        "topics": [
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 13,
+        "subtypes": [
+          "math-subtype-oge-15-isosceles-angle"
+        ],
+        "topics": [
+          "math-topic-feacf3291f17",
+          "math-topic-383f24ddaa61"
+        ],
+        "difficulty": {
+          "standard": 13
+        },
+        "withAnswersAndSolutions": 13,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 13
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-16-circle-chord"
+        ],
+        "topics": [
+          "math-topic-383f24ddaa61"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 10,
+        "subtypes": [
+          "math-subtype-oge-17-rhombus-area"
+        ],
+        "topics": [
+          "math-topic-383f24ddaa61"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 10,
+        "subtypes": [],
+        "topics": [
+          "math-topic-feacf3291f17"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 10,
+        "subtypes": [],
+        "topics": [
+          "math-topic-f02623780dcc"
+        ],
+        "difficulty": {
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 10,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 10
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 6,
+        "subtypes": [
+          "math-subtype-oge-20-rational-equation"
+        ],
+        "topics": [
+          "math-topic-c4173603dc20",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "advanced": 6
+        },
+        "withAnswersAndSolutions": 6,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 6
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 6,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 21,
+        "count": 5,
+        "subtypes": [
+          "math-subtype-oge-21-joint-work"
+        ],
+        "topics": [
+          "math-topic-273ef3a8d148",
+          "math-topic-9fea2fbc958c"
+        ],
+        "difficulty": {
+          "advanced": 5
+        },
+        "withAnswersAndSolutions": 5,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 5
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 5,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 22,
+        "count": 5,
+        "subtypes": [
+          "math-subtype-oge-22-line-with-hole"
+        ],
+        "topics": [
+          "math-topic-c59c2f594517",
+          "math-topic-09e646fdec2c"
+        ],
+        "difficulty": {
+          "advanced": 5
+        },
+        "withAnswersAndSolutions": 5,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 5
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 5,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 23,
+        "count": 5,
+        "subtypes": [
+          "math-subtype-oge-23-altitude-projections"
+        ],
+        "topics": [
+          "math-topic-383f24ddaa61",
+          "math-topic-feacf3291f17"
+        ],
+        "difficulty": {
+          "advanced": 5
+        },
+        "withAnswersAndSolutions": 5,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 5
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 5,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 24,
+        "count": 5,
+        "subtypes": [
+          "math-subtype-oge-24-trapezoid-midpoints",
+          "math-subtype-oge-24-two-tangents",
+          "math-subtype-oge-24-acute-altitudes",
+          "math-subtype-oge-24-incircle-tangents"
+        ],
+        "topics": [
+          "math-topic-383f24ddaa61",
+          "math-topic-308bb09e7d47"
+        ],
+        "difficulty": {
+          "advanced": 5
+        },
+        "withAnswersAndSolutions": 5,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 5
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 5,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 25,
+        "count": 5,
+        "subtypes": [
+          "math-subtype-oge-25-right-incircle-area"
+        ],
+        "topics": [
+          "math-topic-383f24ddaa61",
+          "math-topic-20f3bfec9eb3"
+        ],
+        "difficulty": {
+          "advanced": 5
+        },
+        "withAnswersAndSolutions": 5,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 5
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 5,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "oge-russian",
+    "tasks": 460,
+    "model": "oge-russian-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 42,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-ad8d1023b4d9"
+        ],
+        "difficulty": {
+          "standard": 42
+        },
+        "withAnswersAndSolutions": 42,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 42
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 41,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-f3e99be63cc2"
+        ],
+        "difficulty": {
+          "standard": 41
+        },
+        "withAnswersAndSolutions": 41,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 41
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 41,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-32d3e06b65be"
+        ],
+        "difficulty": {
+          "standard": 41
+        },
+        "withAnswersAndSolutions": 41,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 41
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 42,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-9e13fa7bde92"
+        ],
+        "difficulty": {
+          "standard": 42
+        },
+        "withAnswersAndSolutions": 42,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 42
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 41,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-4657ddedf1e7"
+        ],
+        "difficulty": {
+          "standard": 41
+        },
+        "withAnswersAndSolutions": 41,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 41
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 42,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-4d114a6d8fd9"
+        ],
+        "difficulty": {
+          "standard": 42
+        },
+        "withAnswersAndSolutions": 42,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 42
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 47,
+        "subtypes": [
+          "russian-subtype-inflection-context-review"
+        ],
+        "topics": [
+          "russian-topic-4b1840e8fd2e"
+        ],
+        "difficulty": {
+          "standard": 47
+        },
+        "withAnswersAndSolutions": 47,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 47
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 41,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-b6ddc4d0ec5f"
+        ],
+        "difficulty": {
+          "standard": 41
+        },
+        "withAnswersAndSolutions": 41,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 41
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 41,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-3da614cceea2"
+        ],
+        "difficulty": {
+          "standard": 41
+        },
+        "withAnswersAndSolutions": 41,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 41
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 41,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-c5cd06031a9d"
+        ],
+        "difficulty": {
+          "standard": 41
+        },
+        "withAnswersAndSolutions": 41,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 41
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 41,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-c7602b663d1d"
+        ],
+        "difficulty": {
+          "standard": 41
+        },
+        "withAnswersAndSolutions": 41,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 41
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "oge-chemistry",
+    "tasks": 44,
+    "model": "oge-chemistry-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "chemistry-topic-925bfc47f562"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 22,
+        "subtypes": [
+          "chemistry-subtype-dilution-mass-fraction"
+        ],
+        "topics": [
+          "chemistry-topic-92b5a222a68b",
+          "chemistry-topic-5a8d783c408d"
+        ],
+        "difficulty": {
+          "standard": 22
+        },
+        "withAnswersAndSolutions": 22,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 22
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 21,
+        "subtypes": [
+          "chemistry-subtype-sodium-in-carbonate-mixture"
+        ],
+        "topics": [
+          "chemistry-topic-22cd9b42bc5a",
+          "chemistry-topic-8c1fa4b09adb"
+        ],
+        "difficulty": {
+          "standard": 21
+        },
+        "withAnswersAndSolutions": 21,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 21
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 21,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 22,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 23,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "oge-biology",
+    "tasks": 8,
+    "model": "oge-biology-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 2,
+        "subtypes": [
+          "biology-subtype-taxonomic-rank-order"
+        ],
+        "topics": [
+          "biology-topic-47261e7a6541"
+        ],
+        "difficulty": {
+          "foundation": 2
+        },
+        "withAnswersAndSolutions": 2,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 2
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 1,
+        "subtypes": [
+          "biology-subtype-germination-lab-sequence"
+        ],
+        "topics": [
+          "biology-topic-6f85f6003966"
+        ],
+        "difficulty": {
+          "foundation": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 2,
+        "subtypes": [
+          "biology-subtype-organism-traits-from-description"
+        ],
+        "topics": [
+          "biology-topic-184d7df1ff6a"
+        ],
+        "difficulty": {
+          "foundation": 1,
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 2,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 2
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 3,
+        "subtypes": [
+          "biology-subtype-plant-animal-cell-comparison",
+          "biology-subtype-plant-animal-shared-cell-structures",
+          "biology-subtype-plant-animal-shared-cell-processes"
+        ],
+        "topics": [
+          "biology-topic-ace91239d1cc"
+        ],
+        "difficulty": {
+          "foundation": 1,
+          "standard": 2
+        },
+        "withAnswersAndSolutions": 3,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 3
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 21,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 22,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 23,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 24,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 25,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 26,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "oge-social-studies",
+    "tasks": 144,
+    "model": "oge-social-studies-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "social-studies-topic-cec95bd23d6d"
+        ],
+        "difficulty": {
+          "foundation": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 142,
+        "subtypes": [
+          "social-studies-subtype-limited-budget-choice"
+        ],
+        "topics": [
+          "social-studies-topic-e7b80a347084"
+        ],
+        "difficulty": {
+          "foundation": 3,
+          "standard": 139
+        },
+        "withAnswersAndSolutions": 142,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 142
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 1,
+        "subtypes": [
+          "social-studies-subtype-short-run-fixed-variable-costs"
+        ],
+        "topics": [
+          "social-studies-topic-e7b80a347084"
+        ],
+        "difficulty": {
+          "foundation": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "oge-informatics",
+    "tasks": 183,
+    "model": "oge-informatics-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 4,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-bcaa874e9bcd"
+        ],
+        "difficulty": {
+          "standard": 4
+        },
+        "withAnswersAndSolutions": 4,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 4
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-df0c0d8465df"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 4,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-48d4a77421d9"
+        ],
+        "difficulty": {
+          "standard": 4
+        },
+        "withAnswersAndSolutions": 4,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 4
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-a5b4ec1162f4"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 26,
+        "subtypes": [
+          "informatics-subtype-executor-two-operations"
+        ],
+        "topics": [
+          "informatics-topic-c4daade9a7df",
+          "informatics-topic-1f55f3ef7592"
+        ],
+        "difficulty": {
+          "standard": 26
+        },
+        "withAnswersAndSolutions": 26,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 26
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 4,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-2cb6659a58d5"
+        ],
+        "difficulty": {
+          "standard": 4
+        },
+        "withAnswersAndSolutions": 4,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 4
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-752939838428"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-a3ae6d007660"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 3,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-e438a32cda5d"
+        ],
+        "difficulty": {
+          "standard": 3
+        },
+        "withAnswersAndSolutions": 3,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 3
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 136,
+        "subtypes": [
+          "informatics-subtype-positional-integer-value"
+        ],
+        "topics": [
+          "informatics-topic-8e4c4eb59fdb"
+        ],
+        "difficulty": {
+          "standard": 136
+        },
+        "withAnswersAndSolutions": 136,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 136
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-e195ed3284b0"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-408dc078674b"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "ege-math-base",
+    "tasks": 529,
+    "model": "ege-math-base-2027-draft",
+    "fullMock": true,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 6,
+        "subtypes": [
+          "math-subtype-fraction-product"
+        ],
+        "topics": [
+          "math-topic-03dab3bbd99d",
+          "math-topic-4e2f462ef7df"
+        ],
+        "difficulty": {
+          "standard": 6
+        },
+        "withAnswersAndSolutions": 6,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 6
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 35,
+        "subtypes": [],
+        "topics": [
+          "math-topic-717cfa84c504"
+        ],
+        "difficulty": {
+          "standard": 30,
+          "foundation": 5
+        },
+        "withAnswersAndSolutions": 35,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 35
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-table-ratio",
+          "math-subtype-frequency-table",
+          "math-subtype-table-maximum",
+          "math-subtype-table-mean"
+        ],
+        "topics": [
+          "math-topic-ef4de1b2ac38"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-braking-formula",
+          "math-subtype-temperature-formula",
+          "math-subtype-tariff-formula",
+          "math-subtype-power-time"
+        ],
+        "topics": [
+          "math-topic-717cfa84c504"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 21,
+        "subtypes": [
+          "math-subtype-exactly-one-success",
+          "math-subtype-at-least-one-success"
+        ],
+        "topics": [
+          "math-topic-d958bcca6b73"
+        ],
+        "difficulty": {
+          "standard": 21
+        },
+        "withAnswersAndSolutions": 21,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 21
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-conditions-table",
+          "math-subtype-tariff-table"
+        ],
+        "topics": [
+          "math-topic-ef4de1b2ac38",
+          "math-topic-3b02d12b4f60"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-derivative-signs",
+          "math-subtype-line-value",
+          "math-subtype-piecewise-graph",
+          "math-subtype-tangent-slope"
+        ],
+        "topics": [
+          "math-topic-73460b7c7b54",
+          "math-topic-c59c2f594517"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-logical-counterexample"
+        ],
+        "topics": [
+          "math-topic-6562c068a2d1",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-floor-tiles"
+        ],
+        "topics": [
+          "math-topic-96f3b79af06f",
+          "math-topic-0ef20f823da7"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-circle-area",
+          "math-subtype-hypotenuse",
+          "math-subtype-trapezoid-area"
+        ],
+        "topics": [
+          "math-topic-383f24ddaa61",
+          "math-topic-adcd270372b2"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 21,
+        "subtypes": [
+          "math-subtype-cube-surface",
+          "math-subtype-box-volume"
+        ],
+        "topics": [
+          "math-topic-afa68a3eef99"
+        ],
+        "difficulty": {
+          "standard": 16,
+          "foundation": 5
+        },
+        "withAnswersAndSolutions": 21,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 21
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-isosceles-angle",
+          "math-subtype-similarity-side"
+        ],
+        "topics": [
+          "math-topic-adcd270372b2",
+          "math-topic-383f24ddaa61"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-cube-cutting",
+          "math-subtype-pyramid-volume",
+          "math-subtype-box-diagonal"
+        ],
+        "topics": [
+          "math-topic-afa68a3eef99"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-fraction-division",
+          "math-subtype-fraction-sum",
+          "math-subtype-decimal-difference"
+        ],
+        "topics": [
+          "math-topic-03dab3bbd99d",
+          "math-topic-247e57306bfb"
+        ],
+        "difficulty": {
+          "standard": 15,
+          "foundation": 5
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 21,
+        "subtypes": [
+          "math-subtype-sequential-percent",
+          "math-subtype-percent-comparison",
+          "math-subtype-discount",
+          "math-subtype-whole-from-percent"
+        ],
+        "topics": [
+          "math-topic-03dab3bbd99d",
+          "math-topic-9f66ec698b07"
+        ],
+        "difficulty": {
+          "standard": 21
+        },
+        "withAnswersAndSolutions": 21,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 21
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-logarithm-value",
+          "math-subtype-algebraic-fraction",
+          "math-subtype-radical-sum",
+          "math-subtype-power-quotient"
+        ],
+        "topics": [
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 15,
+          "foundation": 5
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 125,
+        "subtypes": [
+          "math-subtype-radical-root",
+          "math-subtype-rational-root",
+          "math-subtype-quadratic-root",
+          "math-subtype-exponential-root",
+          "math-subtype-quadratic-greater-root"
+        ],
+        "topics": [
+          "math-topic-2b6f5d8e49d5",
+          "math-topic-371009885215"
+        ],
+        "difficulty": {
+          "standard": 125
+        },
+        "withAnswersAndSolutions": 125,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 125
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-exponential-count",
+          "math-subtype-integer-interval",
+          "math-subtype-quadratic-integers"
+        ],
+        "topics": [
+          "math-topic-de262f6bb853",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-last-digit",
+          "math-subtype-digits",
+          "math-subtype-remainder-search"
+        ],
+        "topics": [
+          "math-topic-9e81ab22e8f5",
+          "math-topic-2b6f5d8e49d5",
+          "math-topic-018f4ddaba17"
+        ],
+        "difficulty": {
+          "standard": 15,
+          "advanced": 5
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-catch-up",
+          "math-subtype-mixture",
+          "math-subtype-meeting",
+          "math-subtype-joint-work"
+        ],
+        "topics": [
+          "math-topic-273ef3a8d148"
+        ],
+        "difficulty": {
+          "standard": 15,
+          "advanced": 5
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 21,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-coin-search",
+          "math-subtype-pigeonhole"
+        ],
+        "topics": [
+          "math-topic-018f4ddaba17",
+          "math-topic-92b741a7423b"
+        ],
+        "difficulty": {
+          "advanced": 10,
+          "standard": 10
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "ege-math-profile",
+    "tasks": 3603,
+    "model": "ege-math-profile-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 213,
+        "subtypes": [
+          "math-subtype-right-triangle-area",
+          "math-subtype-trapezoid-area"
+        ],
+        "topics": [
+          "math-topic-adcd270372b2",
+          "math-topic-383f24ddaa61"
+        ],
+        "difficulty": {
+          "standard": 213
+        },
+        "withAnswersAndSolutions": 213,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 213
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 194,
+        "subtypes": [
+          "math-subtype-dot-product",
+          "math-subtype-vector-length"
+        ],
+        "topics": [
+          "math-topic-51a285e3806b"
+        ],
+        "difficulty": {
+          "standard": 194
+        },
+        "withAnswersAndSolutions": 194,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 194
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 203,
+        "subtypes": [
+          "math-subtype-prism-diagonal",
+          "math-subtype-pyramid-volume",
+          "math-subtype-rectangular-prism-volume",
+          "math-subtype-cone-volume-coefficient"
+        ],
+        "topics": [
+          "math-topic-afa68a3eef99"
+        ],
+        "difficulty": {
+          "standard": 203
+        },
+        "withAnswersAndSolutions": 203,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 203
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 195,
+        "subtypes": [
+          "math-subtype-one-draw",
+          "math-subtype-complement",
+          "math-subtype-grid-rectangle",
+          "math-subtype-interval-union",
+          "math-subtype-grid-diagonal-region"
+        ],
+        "topics": [
+          "math-topic-d958bcca6b73"
+        ],
+        "difficulty": {
+          "standard": 195
+        },
+        "withAnswersAndSolutions": 195,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 195
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 335,
+        "subtypes": [
+          "math-subtype-exactly-one",
+          "math-subtype-at-least-one",
+          "math-subtype-total-probability-production",
+          "math-subtype-series-parallel-reliability",
+          "math-subtype-without-replacement-same-colour",
+          "math-subtype-three-trials-exactly-two",
+          "math-subtype-posterior-from-two-groups"
+        ],
+        "topics": [
+          "math-topic-d958bcca6b73"
+        ],
+        "difficulty": {
+          "standard": 335
+        },
+        "withAnswersAndSolutions": 335,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 335
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 278,
+        "subtypes": [
+          "math-subtype-finite-distribution-expectation",
+          "math-subtype-two-point-variance",
+          "math-subtype-two-point-standard-deviation"
+        ],
+        "topics": [
+          "math-topic-8d62fbf03e41"
+        ],
+        "difficulty": {
+          "standard": 278
+        },
+        "withAnswersAndSolutions": 278,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 278
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 218,
+        "subtypes": [
+          "math-subtype-exponential",
+          "math-subtype-logarithmic",
+          "math-subtype-ege-6-logarithm-domain",
+          "math-subtype-linear-logarithmic-equation",
+          "math-subtype-affine-exponential-equation"
+        ],
+        "topics": [
+          "math-topic-371009885215",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 215,
+          "advanced": 3
+        },
+        "withAnswersAndSolutions": 218,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 218
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 205,
+        "subtypes": [
+          "math-subtype-radical-identity",
+          "math-subtype-power-rules",
+          "math-subtype-ege-7-conjugate-fractions",
+          "math-subtype-radical-conjugate-product",
+          "math-subtype-radical-reciprocal-sum"
+        ],
+        "topics": [
+          "math-topic-06c31ff0a0e3",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "standard": 202,
+          "advanced": 3
+        },
+        "withAnswersAndSolutions": 205,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 205
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 223,
+        "subtypes": [
+          "math-subtype-derivative-point",
+          "math-subtype-parallel-tangent",
+          "math-subtype-quadratic-maximum",
+          "math-subtype-cubic-minimum",
+          "math-subtype-cubic-local-minimum"
+        ],
+        "topics": [
+          "math-topic-73460b7c7b54"
+        ],
+        "difficulty": {
+          "standard": 223
+        },
+        "withAnswersAndSolutions": 223,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 223
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 184,
+        "subtypes": [
+          "math-subtype-accelerated-motion",
+          "math-subtype-joule-law"
+        ],
+        "topics": [
+          "math-topic-717cfa84c504"
+        ],
+        "difficulty": {
+          "standard": 184
+        },
+        "withAnswersAndSolutions": 184,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 184
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 415,
+        "subtypes": [
+          "math-subtype-catch-up",
+          "math-subtype-joint-work",
+          "math-subtype-river-round-trip",
+          "math-subtype-mixture-concentration",
+          "math-subtype-catch-up-distance",
+          "math-subtype-river-unknown-own-speed"
+        ],
+        "topics": [
+          "math-topic-273ef3a8d148"
+        ],
+        "difficulty": {
+          "standard": 415
+        },
+        "withAnswersAndSolutions": 415,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 415
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 192,
+        "subtypes": [
+          "math-subtype-linear-function",
+          "math-subtype-inverse-function",
+          "math-subtype-quadratic-function-point"
+        ],
+        "topics": [
+          "math-topic-c59c2f594517"
+        ],
+        "difficulty": {
+          "standard": 192
+        },
+        "withAnswersAndSolutions": 192,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 192
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 605,
+        "subtypes": [
+          "math-subtype-equal-principal-loan-total",
+          "math-subtype-compound-deposit",
+          "math-subtype-deposit-with-cashflows",
+          "math-subtype-progressive-charge",
+          "math-subtype-two-year-changing-rate-loan"
+        ],
+        "topics": [
+          "math-topic-626a488dbaa3"
+        ],
+        "difficulty": {
+          "standard": 605
+        },
+        "withAnswersAndSolutions": 605,
+        "expertReviewed": 0,
+        "criteriaStatus": "exact-item-key-not-expert",
+        "validationStatuses": {
+          "automated-reviewed": 605
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 22,
+        "subtypes": [
+          "math-subtype-trig-roots-selection",
+          "math-subtype-exponential-two-roots-selection"
+        ],
+        "topics": [
+          "math-topic-e280e2802b85",
+          "math-topic-2b6f5d8e49d5"
+        ],
+        "difficulty": {
+          "advanced": 22
+        },
+        "withAnswersAndSolutions": 22,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 22
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 22,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 21,
+        "subtypes": [
+          "math-subtype-prism-line-plane-angle",
+          "math-subtype-prism-line-plane-tangent",
+          "math-subtype-triorthogonal-tetrahedron-section"
+        ],
+        "topics": [
+          "math-topic-afa68a3eef99"
+        ],
+        "difficulty": {
+          "advanced": 21
+        },
+        "withAnswersAndSolutions": 21,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 21
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 21,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 23,
+        "subtypes": [
+          "math-subtype-rational-inequality",
+          "math-subtype-rational-three-points",
+          "math-subtype-logarithmic-quadratic-inequality"
+        ],
+        "topics": [
+          "math-topic-2b6f5d8e49d5",
+          "math-topic-de262f6bb853"
+        ],
+        "difficulty": {
+          "advanced": 23
+        },
+        "withAnswersAndSolutions": 23,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 23
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 23,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 20,
+        "subtypes": [
+          "math-subtype-quadratic-profit-optimization",
+          "math-subtype-inventory-cost-optimization"
+        ],
+        "topics": [
+          "math-topic-c46508c5612b"
+        ],
+        "difficulty": {
+          "advanced": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 20,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 19,
+        "subtypes": [
+          "math-subtype-two-tangents-area",
+          "math-subtype-right-triangle-altitude-proof",
+          "math-subtype-tangent-chord-similarity"
+        ],
+        "topics": [
+          "math-topic-adcd270372b2",
+          "math-topic-383f24ddaa61"
+        ],
+        "difficulty": {
+          "advanced": 19
+        },
+        "withAnswersAndSolutions": 19,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 19
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 19,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 23,
+        "subtypes": [
+          "math-subtype-parameter-positive-roots",
+          "math-subtype-parameter-absolute-value-level",
+          "math-subtype-parameter-two-positive-roots"
+        ],
+        "topics": [
+          "math-topic-2b6f5d8e49d5",
+          "math-topic-4b7dfd323437"
+        ],
+        "difficulty": {
+          "advanced": 23
+        },
+        "withAnswersAndSolutions": 23,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 23
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 23,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 15,
+        "subtypes": [
+          "math-subtype-integer-product-shift",
+          "math-subtype-integer-shifted-factorization",
+          "math-subtype-integer-consecutive-sum"
+        ],
+        "topics": [
+          "math-topic-ba015dbfaa20",
+          "math-topic-018f4ddaba17"
+        ],
+        "difficulty": {
+          "advanced": 15
+        },
+        "withAnswersAndSolutions": 15,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 15
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 15,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "ege-russian",
+    "tasks": 460,
+    "model": "ege-russian-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-ff766d425a99"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-21457e23f28c"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-91c6e2ee854d"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-772c28b3fcc3"
+        ],
+        "difficulty": {
+          "standard": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-47165ea76836"
+        ],
+        "difficulty": {
+          "standard": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-9d40da800e42"
+        ],
+        "difficulty": {
+          "standard": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 23,
+        "subtypes": [
+          "russian-subtype-inflection-context-review"
+        ],
+        "topics": [
+          "russian-topic-4b1840e8fd2e"
+        ],
+        "difficulty": {
+          "standard": 23
+        },
+        "withAnswersAndSolutions": 23,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 23
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-525e64d03f55"
+        ],
+        "difficulty": {
+          "advanced": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-69a61e459143"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-d07d62a0a59e"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-cfdcb5086ad0"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-14db1d7051b4"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-4e4ad8412dea"
+        ],
+        "difficulty": {
+          "standard": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-f13e9049040e"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-1e2789528a1a"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 19,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-3fbd0fcae4b1"
+        ],
+        "difficulty": {
+          "standard": 19
+        },
+        "withAnswersAndSolutions": 19,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 19
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-8b659ac38c85"
+        ],
+        "difficulty": {
+          "standard": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-2f9f0a17fc36"
+        ],
+        "difficulty": {
+          "standard": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-46c466eb0516"
+        ],
+        "difficulty": {
+          "standard": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-4829e2dfdf8a"
+        ],
+        "difficulty": {
+          "advanced": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 21,
+        "count": 18,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-96ac504a1e1d"
+        ],
+        "difficulty": {
+          "advanced": 18
+        },
+        "withAnswersAndSolutions": 18,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 18
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 22,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-d0d2e23a40ea"
+        ],
+        "difficulty": {
+          "advanced": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 23,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-3da614cceea2"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 24,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-d8dd32c618c6"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 25,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-1081e8ba4ac3"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 26,
+        "count": 17,
+        "subtypes": [],
+        "topics": [
+          "russian-topic-0c7aedf6dc3e"
+        ],
+        "difficulty": {
+          "standard": 17
+        },
+        "withAnswersAndSolutions": 17,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 17
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 27,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  },
+  {
+    "id": "ege-informatics",
+    "tasks": 173,
+    "model": "ege-informatics-2027-draft",
+    "fullMock": false,
+    "numbers": [
+      {
+        "number": 1,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-2bc9057f0f0b"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 2,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-cf94dfa57827"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 3,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 4,
+        "count": 2,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-9d836feac83d"
+        ],
+        "difficulty": {
+          "standard": 2
+        },
+        "withAnswersAndSolutions": 2,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 2
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 5,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-545eace1dd61"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 6,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-b938b3af361f"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 7,
+        "count": 2,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-387b6d1adedc"
+        ],
+        "difficulty": {
+          "standard": 2
+        },
+        "withAnswersAndSolutions": 2,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 2
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 8,
+        "count": 2,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-3ea657936d5d"
+        ],
+        "difficulty": {
+          "standard": 2
+        },
+        "withAnswersAndSolutions": 2,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 2
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 9,
+        "count": 20,
+        "subtypes": [
+          "informatics-subtype-spreadsheet-one-pair-sum"
+        ],
+        "topics": [
+          "informatics-topic-d06e9a5aac2e"
+        ],
+        "difficulty": {
+          "standard": 20
+        },
+        "withAnswersAndSolutions": 20,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 20
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 10,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-b7a8ad147921"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 11,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-5c10de9b7871"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 12,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-5274217e5740"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 13,
+        "count": 2,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-8ba6bbe47dce"
+        ],
+        "difficulty": {
+          "standard": 1,
+          "advanced": 1
+        },
+        "withAnswersAndSolutions": 2,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 2
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 14,
+        "count": 131,
+        "subtypes": [
+          "informatics-subtype-difference-of-powers-digits"
+        ],
+        "topics": [
+          "informatics-topic-fc3c827d731f",
+          "informatics-topic-8e4c4eb59fdb"
+        ],
+        "difficulty": {
+          "standard": 131
+        },
+        "withAnswersAndSolutions": 131,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 131
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 15,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-2b2cec8e8701"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 16,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-aa510e44dba1"
+        ],
+        "difficulty": {
+          "standard": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 17,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 18,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 19,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-a9f75683bb94"
+        ],
+        "difficulty": {
+          "advanced": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 20,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-99906a19b836"
+        ],
+        "difficulty": {
+          "advanced": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 21,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-6d045aa9832a"
+        ],
+        "difficulty": {
+          "advanced": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 22,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 23,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-98145e299cb1"
+        ],
+        "difficulty": {
+          "advanced": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 24,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 25,
+        "count": 1,
+        "subtypes": [],
+        "topics": [
+          "informatics-topic-997d83193f77"
+        ],
+        "difficulty": {
+          "advanced": 1
+        },
+        "withAnswersAndSolutions": 1,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {
+          "automated-reviewed": 1
+        },
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 26,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      },
+      {
+        "number": 27,
+        "count": 0,
+        "subtypes": [],
+        "topics": [],
+        "difficulty": {},
+        "withAnswersAndSolutions": 0,
+        "expertReviewed": 0,
+        "criteriaStatus": "task-specific-review-required",
+        "validationStatuses": {},
+        "missingAnswersOrSolutions": 0,
+        "extendedWithoutConfirmedRubric": 0,
+        "missingDeclaredResource": 0,
+        "resourceReview": "Resource presence is structural only; not certification of every required format"
+      }
+    ]
+  }
+]

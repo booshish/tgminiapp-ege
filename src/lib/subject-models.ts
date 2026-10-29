@@ -58,3 +58,9 @@ subjectExamDefinitions.push({
 // Append new models after every existing entry: preserve historical first-match/order consumers.
 subjectExamDefinitions.push(...scienceModels);
 subjectExamDefinitions.push(...remainingModels);
+// Bounded original file formats verified against draft demo, printed pp.16/19/21.
+for(const [number,format,rule] of [[17,"text","text"],[22,"number","number"],[24,"number","number"]] as const){
+  const slot=subjectExamDefinitions.find(m=>m.id==="ege-informatics")!.numbers[number-1];
+  slot.practiceAnswerFormat=format;slot.answerRuleTypes=[rule];
+  slot.requiredResources=[number===22?"Оригинальная таблица процессов TSV":"Оригинальный текстовый файл данных"];
+}

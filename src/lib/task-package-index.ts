@@ -57822,5 +57822,1112 @@ export const taskPackageIndex: {file: string; sha256: string; tasks: (Pick<Task,
         "examYear": 2027
       }
     ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n1-5bcdcb8588d282fd.json",
+    "sha256": "5bcdcb8588d282fdccd77d0ddbd3791ae824df66e4151341a1117b7dc405f872",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-1-sulfur-substance",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "oge-chemistry-n1",
+        "prototypeId": "oge-chemistry-n1-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-1-iron-substance",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 1,
+        "topicId": "oge-chemistry-n1",
+        "prototypeId": "oge-chemistry-n1-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n2-e784945b5bfab4ec.json",
+    "sha256": "e784945b5bfab4ecc255f0e612df32ebbc9c5360e343a1a22df2e1a74c713d5d",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-2-shells-magnesium",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "oge-chemistry-n2",
+        "prototypeId": "oge-chemistry-n2-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n4-0932bbfa42dab809.json",
+    "sha256": "0932bbfa42dab80958d9decfd5beb623b0c0c033e5488689aa496a292a5ffa1d",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-4-sulfur-oxidation",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "oge-chemistry-n4",
+        "prototypeId": "oge-chemistry-n4-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-4-nitrogen-oxidation",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "oge-chemistry-n4",
+        "prototypeId": "oge-chemistry-n4-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n5-85dc8ca90a564a0a.json",
+    "sha256": "85dc8ca90a564a0a04cb4c849a0af84df99498d4ac4602d0dd93a22e36d24ce8",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-5-ionic-compounds",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-chemistry-n5",
+        "prototypeId": "oge-chemistry-n5-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-5-nonpolar-molecules",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-chemistry-n5",
+        "prototypeId": "oge-chemistry-n5-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n6-1cbd1335a71d8cb6.json",
+    "sha256": "1cbd1335a71d8cb6ce28537e1f871055ad37992a0194e976c2997daade1c8296",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-6-magnesium-argon",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "oge-chemistry-n6",
+        "prototypeId": "oge-chemistry-n6-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-6-potassium-calcium",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "oge-chemistry-n6",
+        "prototypeId": "oge-chemistry-n6-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n7-9f68e56467555ba9.json",
+    "sha256": "9f68e56467555ba917be891fe9ae3fea8da8bf229fca54fa7f5561d0e74fa446",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-7-acid-oxide-salt",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "oge-chemistry-n7",
+        "prototypeId": "oge-chemistry-n7-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-7-base-acid",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 7,
+        "topicId": "oge-chemistry-n7",
+        "prototypeId": "oge-chemistry-n7-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n8-48b2f41033e12b37.json",
+    "sha256": "48b2f41033e12b373d1eacf768bde38199a138562825a170fd9ccf54b44965fe",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-8-sodium-oxide-properties",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-chemistry-n8",
+        "prototypeId": "oge-chemistry-n8-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-8-copper-oxide-properties",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-chemistry-n8",
+        "prototypeId": "oge-chemistry-n8-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n9-eab9d418d5130e3b.json",
+    "sha256": "eab9d418d5130e3bfbbc2f9d508647469d7e64a008895a4d4db6ef0e070197cb",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-9-reaction-products-a",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-chemistry-n9",
+        "prototypeId": "oge-chemistry-n9-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-9-reaction-products-b",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 9,
+        "topicId": "oge-chemistry-n9",
+        "prototypeId": "oge-chemistry-n9-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n10-8d569cafac43df34.json",
+    "sha256": "8d569cafac43df342bab6624696e4a5965e7277d892f652703880fd2601eb9b6",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-10-reagent-pairs-a",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-chemistry-n10",
+        "prototypeId": "oge-chemistry-n10-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-10-reagent-pairs-b",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-chemistry-n10",
+        "prototypeId": "oge-chemistry-n10-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n11-8c55f7ac80b94afc.json",
+    "sha256": "8c55f7ac80b94afc4c98974f3c0e2cfdbcae6434122717a060240f5f0a07ce17",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-a",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 11,
+        "topicId": "oge-chemistry-n11",
+        "prototypeId": "oge-chemistry-n11-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-11-redox-reaction-selection-b",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 11,
+        "topicId": "oge-chemistry-n11",
+        "prototypeId": "oge-chemistry-n11-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n12-d1c0880e92c57ae1.json",
+    "sha256": "d1c0880e92c57ae110df337c361a6f763a24d0ee76262a0a5161c5d75d8f431f",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-12-reaction-signs-a",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 12,
+        "topicId": "oge-chemistry-n12",
+        "prototypeId": "oge-chemistry-n12-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-12-reaction-signs-b",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 12,
+        "topicId": "oge-chemistry-n12",
+        "prototypeId": "oge-chemistry-n12-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n13-8792e93d6bff9f26.json",
+    "sha256": "8792e93d6bff9f26940e9980220dd1635cb4d3c5774975319ce9ff04e81a3559",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-13-calcium-dissociation",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 13,
+        "topicId": "oge-chemistry-n13",
+        "prototypeId": "oge-chemistry-n13-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-13-potassium-sulfate-dissociation",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 13,
+        "topicId": "oge-chemistry-n13",
+        "prototypeId": "oge-chemistry-n13-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n14-77220885974221bc.json",
+    "sha256": "77220885974221bc98020d7bb60e57e2d3368d087e03c072a5b3c6e1df7d962e",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-14-carbonate-net-ionic",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "oge-chemistry-n14",
+        "prototypeId": "oge-chemistry-n14-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-14-silver-net-ionic",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 14,
+        "topicId": "oge-chemistry-n14",
+        "prototypeId": "oge-chemistry-n14-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n15-0548e6a130f6cb7e.json",
+    "sha256": "0548e6a130f6cb7e1347a61a00c85ca91fcfccb1483f4738ea79536a3a22b139",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-15-electron-process-a",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "oge-chemistry-n15",
+        "prototypeId": "oge-chemistry-n15-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-15-electron-process-b",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "oge-chemistry-n15",
+        "prototypeId": "oge-chemistry-n15-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n16-e5ca306301a56828.json",
+    "sha256": "e5ca306301a568289226f3a78bd2e9d6a247c2f1036cdac0d0adceee5de86f8d",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-16-lab-safety-a",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "oge-chemistry-n16",
+        "prototypeId": "oge-chemistry-n16-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-16-lab-safety-b",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "oge-chemistry-n16",
+        "prototypeId": "oge-chemistry-n16-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-chemistry-2027-draft-n17-64b27c3875bb7485.json",
+    "sha256": "64b27c3875bb7485df7bf6941e292511b35f006c502ee942133d260e862cad3c",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-chemistry-17-identify-solutions-a",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 17,
+        "topicId": "oge-chemistry-n17",
+        "prototypeId": "oge-chemistry-n17-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-chemistry-17-identify-solutions-b",
+        "subjectId": "chemistry",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 17,
+        "topicId": "oge-chemistry-n17",
+        "prototypeId": "oge-chemistry-n17-original",
+        "examVersionId": "oge-chemistry-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n2-51a490fae7a0d379.json",
+    "sha256": "51a490fae7a0d379cd717ec4072b36395c4ab659cd23d558379b8be4da34a1d6",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-2-kingdom-organisms-a",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "oge-biology-n2",
+        "prototypeId": "oge-biology-n2-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-2-kingdom-organisms-b",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 2,
+        "topicId": "oge-biology-n2",
+        "prototypeId": "oge-biology-n2-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n8-ae3dd28523b08a1b.json",
+    "sha256": "ae3dd28523b08a1b1a7998478c6ed5665aa7ea87c07d39278371dfc51fb4e786",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-8-table-organelle",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-biology-n8",
+        "prototypeId": "oge-biology-n8-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-8-table-tissue",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 8,
+        "topicId": "oge-biology-n8",
+        "prototypeId": "oge-biology-n8-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n10-2129af964b4cd802.json",
+    "sha256": "2129af964b4cd802a9215ca2c03226ab18ade0df4f8a03f752c787e0e14e3447",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-10-leaf-text",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-biology-n10",
+        "prototypeId": "oge-biology-n10-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-10-digestion-text",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-biology-n10",
+        "prototypeId": "oge-biology-n10-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n11-2a0aa146e31649ac.json",
+    "sha256": "2a0aa146e31649acdb82d94ab94a4666caca12e80467d54df5dd16d3fc0905ae",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-11-development-types",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 11,
+        "topicId": "oge-biology-n11",
+        "prototypeId": "oge-biology-n11-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-11-plant-groups",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 11,
+        "topicId": "oge-biology-n11",
+        "prototypeId": "oge-biology-n11-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n12-1df005d9ba4e79d3.json",
+    "sha256": "1df005d9ba4e79d3c95c07647db3b187fb83a654d884541d1afa5d3bb2a6f17a",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-12-bacteria-judgments",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 12,
+        "topicId": "oge-biology-n12",
+        "prototypeId": "oge-biology-n12-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-12-fungi-judgments",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 12,
+        "topicId": "oge-biology-n12",
+        "prototypeId": "oge-biology-n12-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n15-d4e49784e3e44c8e.json",
+    "sha256": "d4e49784e3e44c8e44b9d55aa769e03a5ed1044b04fad67c786574327c9730f7",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-15-sweating-function",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "oge-biology-n15",
+        "prototypeId": "oge-biology-n15-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-15-breathing-exercise",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "oge-biology-n15",
+        "prototypeId": "oge-biology-n15-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n17-098a76828afb1280.json",
+    "sha256": "098a76828afb128020ec1c1173a2c68b740c43779ae6ec6e9138027976dfb930",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-17-erythrocyte-traits",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 17,
+        "topicId": "oge-biology-n17",
+        "prototypeId": "oge-biology-n17-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-17-skeletal-muscle-traits",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 17,
+        "topicId": "oge-biology-n17",
+        "prototypeId": "oge-biology-n17-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-biology-2027-draft-n18-7cc203db9b758768.json",
+    "sha256": "7cc203db9b758768676e0808a0524c26d1c686afa13b0cefd196a225bcac6ae7",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-biology-18-circulation-types",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 18,
+        "topicId": "oge-biology-n18",
+        "prototypeId": "oge-biology-n18-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-biology-18-nervous-parts",
+        "subjectId": "biology",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 18,
+        "topicId": "oge-biology-n18",
+        "prototypeId": "oge-biology-n18-original",
+        "examVersionId": "oge-biology-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n4-f857795172ebf9b0.json",
+    "sha256": "f857795172ebf9b00b2ba8acd14f3a28309fb3abba496dd3ab4b74cd47f44b8d",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-4-culture-scientific-test",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "oge-social-studies-n4",
+        "prototypeId": "oge-social-studies-n4-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-4-culture-art",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 4,
+        "topicId": "oge-social-studies-n4",
+        "prototypeId": "oge-social-studies-n4-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n5-32962bba59e19ab5.json",
+    "sha256": "32962bba59e19ab56d8b71198e691d036479ab29948b64e8c5e538f45bad8183",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-5-socialization-responsibility",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-social-studies-n5",
+        "prototypeId": "oge-social-studies-n5-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-5-social-role",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 5,
+        "topicId": "oge-social-studies-n5",
+        "prototypeId": "oge-social-studies-n5-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n6-25f881f8db30237a.json",
+    "sha256": "25f881f8db30237a923ed490e9ac7104c81a7b13c439005a1aaf92392c8213f6",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-6-mobility-judgments",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "oge-social-studies-n6",
+        "prototypeId": "oge-social-studies-n6-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-6-education-judgments",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 6,
+        "topicId": "oge-social-studies-n6",
+        "prototypeId": "oge-social-studies-n6-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n10-ebb48987a7951d13.json",
+    "sha256": "ebb48987a7951d13a584f06f4a395f202f6627ed1ce773f3f8931976aecc8be8",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-10-market-price-signal",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-social-studies-n10",
+        "prototypeId": "oge-social-studies-n10-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-10-money-functions",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 10,
+        "topicId": "oge-social-studies-n10",
+        "prototypeId": "oge-social-studies-n10-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n11-dc53effa61d0c41a.json",
+    "sha256": "dc53effa61d0c41a8ccbea5ab007bd2d5ee0b595c12be1529b1549c828ab8f27",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-11-democracy-signs",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 11,
+        "topicId": "oge-social-studies-n11",
+        "prototypeId": "oge-social-studies-n11-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-11-federation-sign",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 11,
+        "topicId": "oge-social-studies-n11",
+        "prototypeId": "oge-social-studies-n11-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n13-5112e208e21d4e81.json",
+    "sha256": "5112e208e21d4e81b374e2f2e9d3d9b7cb6a7595c3726114d7ad73915d7658db",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-13-personal-right",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 13,
+        "topicId": "oge-social-studies-n13",
+        "prototypeId": "oge-social-studies-n13-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-13-political-right",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 13,
+        "topicId": "oge-social-studies-n13",
+        "prototypeId": "oge-social-studies-n13-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n15-a8bfff7e9af4a52b.json",
+    "sha256": "a8bfff7e9af4a52bd88c34a0f6d0ded9b9173811658b116af2e5c0640d37a47c",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-15-civil-situation",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "oge-social-studies-n15",
+        "prototypeId": "oge-social-studies-n15-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-15-labour-situation",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 15,
+        "topicId": "oge-social-studies-n15",
+        "prototypeId": "oge-social-studies-n15-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "oge-social-studies-2027-draft-n16-46ce47622d33ec89.json",
+    "sha256": "46ce47622d33ec892fc69f8c6ea2fe5a0a57fbd5960fbfeaac51d2bc2a7ed731",
+    "tasks": [
+      {
+        "id": "coverage-20261029-oge-social-studies-16-executive-body",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "oge-social-studies-n16",
+        "prototypeId": "oge-social-studies-n16-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-oge-social-studies-16-constitution-supremacy",
+        "subjectId": "social-studies",
+        "examType": [
+          "ОГЭ"
+        ],
+        "level": null,
+        "examNumber": 16,
+        "topicId": "oge-social-studies-n16",
+        "prototypeId": "oge-social-studies-n16-original",
+        "examVersionId": "oge-social-studies-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n17-b1eda19d3dac90db.json",
+    "sha256": "b1eda19d3dac90db24b2682aef78402d72b7fa7d12739f993da7692ab8d1426f",
+    "tasks": [
+      {
+        "id": "coverage-20261029-ege-informatics-17-adjacent-file-1",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 17,
+        "topicId": "ege-informatics-n17",
+        "prototypeId": "ege-informatics-n17-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-ege-informatics-17-adjacent-file-2",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 17,
+        "topicId": "ege-informatics-n17",
+        "prototypeId": "ege-informatics-n17-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n22-47d044660a5fc27f.json",
+    "sha256": "47d044660a5fc27f319cdf3f2b7ac9d07b9cb71945a564d2ad46dd57a3ccf8c0",
+    "tasks": [
+      {
+        "id": "coverage-20261029-ege-informatics-22-process-file-1",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "ege-informatics-n22",
+        "prototypeId": "ege-informatics-n22-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-ege-informatics-22-process-file-2",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 22,
+        "topicId": "ege-informatics-n22",
+        "prototypeId": "ege-informatics-n22-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      }
+    ]
+  },
+  {
+    "file": "ege-informatics-2027-draft-n24-83af474673b041c9.json",
+    "sha256": "83af474673b041c9793a73ebb60d678d5ebdd35162d983990109e4acf9697418",
+    "tasks": [
+      {
+        "id": "coverage-20261029-ege-informatics-24-expression-file-1",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "ege-informatics-n24",
+        "prototypeId": "ege-informatics-n24-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      },
+      {
+        "id": "coverage-20261029-ege-informatics-24-expression-file-2",
+        "subjectId": "informatics",
+        "examType": [
+          "ЕГЭ"
+        ],
+        "level": null,
+        "examNumber": 24,
+        "topicId": "ege-informatics-n24",
+        "prototypeId": "ege-informatics-n24-original",
+        "examVersionId": "ege-informatics-2027-draft",
+        "examYear": 2027
+      }
+    ]
   }
 ];
