@@ -167,8 +167,8 @@
 .app-shell.focus-mode .practice-content {
   grid-column: 1;
 }
-.practice-heading-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; min-width: 0; min-height: 64px; margin-bottom: 12px; }
-.practice-heading-row > .back-link { flex: 0 0 auto; white-space: nowrap; }
+.practice-heading-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; min-width: 0; min-height: 64px; margin-bottom: 12px; line-height: 1.5; }
+.app-shell .practice-heading-row > .back-link { flex: 0 0 auto; white-space: nowrap; margin: 0; font-size: inherit; line-height: inherit; }
 .practice-heading-row > span { flex: 0 1 auto; min-width: 0; overflow-wrap: anywhere; color: var(--muted); }
 .practice-workspace > .practice-view-controls { align-items: center; gap: 10px 16px; margin: 0 0 16px; min-width: 0; }
 .practice-view-controls .number-training-filters,
