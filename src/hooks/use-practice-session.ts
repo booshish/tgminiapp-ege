@@ -7,6 +7,7 @@ import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
 import { ensureTaskIds } from "@/lib/task-packages";
 import { useTaskPackages } from "@/hooks/use-task-packages";
 import { orderPracticeTasks } from "@/lib/practice-order";
+import { practiceViewStorageKey } from "@/lib/practice-view";
 import {
   createPracticeSession,
   findRecentPracticeSession,
@@ -393,16 +394,17 @@ export function usePracticeSession({
   );
 
   const openTask = useCallback(async (taskId:string) => {
-    if(!session?.taskIds.includes(taskId)||starting.current)return;
+    if(!session?.taskIds.includes(taskId)||starting.current)return false;
     starting.current=true;
     const origin=latestRoute.current;
     setPackageError("");
     try {
       await ensureTaskIds([taskId]);
-      if(latestRoute.current!==origin)return;
+      if(latestRoute.current!==origin)return false;
       navigate("tasks",{...catalogRoute(session.selection),taskId,
         taskIndex:getPracticeBankView().findIndex(task=>task.id===taskId),sessionId:session.id});
-    } catch {setPackageError("Не удалось загрузить задание. Повторите выбор. Черновики сохранены.");}
+      return true;
+    } catch {setPackageError("Не удалось загрузить задание. Повторите выбор. Черновики сохранены.");return false;}
     finally {starting.current=false;}
   },[session,navigate]);
 
@@ -452,6 +454,7 @@ export function usePracticeSession({
   const reset = useCallback(() => {
     try {
       window.localStorage.removeItem(practiceStorageKey);
+      window.localStorage.removeItem(practiceViewStorageKey);
       canPersist.current = true;
       setStorageWarning(false);
     } catch {

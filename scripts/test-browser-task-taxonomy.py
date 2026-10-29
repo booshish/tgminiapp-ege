@@ -5,6 +5,7 @@ import re
 import subprocess
 from pathlib import Path
 from playwright.sync_api import sync_playwright,expect
+expect.set_options(timeout=15000)  # Bounded wait for shard-backed reload/bootstrap, not just DOM hydration.
 
 root=Path(__file__).resolve().parents[1]
 base=os.environ.get("TOCHKA_QA_BASE_URL","http://127.0.0.1:3002/tgminiapp-ege").rstrip("/")
@@ -49,6 +50,9 @@ with sync_playwright() as p:
     assert not requests
     page.locator('[data-catalog-number="9"]').click()
     expect(page.locator("#task-heading")).to_have_text("Задание №9")
+    # This regression suite deliberately revisits checked cards; practice now
+    # defaults to hiding them, so explicitly opt into the existing full bank.
+    page.get_by_label("Скрыть решённые",exact=True).uncheck()
     original=page.evaluate("JSON.parse(localStorage.getItem('tochka-practice-v1'))")
     old_id=original["sessions"][original["activeId"]]["lastTaskId"]
     page.locator("#task-answer").fill("123")

@@ -257,7 +257,13 @@
 
 .task-sequence-navigation {
   margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px;
 }
+.task-sequence-navigation .button{min-height:48px;white-space:normal}
+.task-skip-button{width:100%}
+@media(max-width:380px){.task-sequence-navigation{grid-template-columns:minmax(0,1fr)}}
 
 .task-previous-button {
   width: 100%;

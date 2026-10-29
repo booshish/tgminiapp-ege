@@ -69,7 +69,7 @@ async function loadSourceModule(fileUrl) {
   return loading;
 }
 
-const { tasks, prototypes, getPracticeTasks, getPracticeBankView, checkTaskAnswer, taskTopicLabels } = await import(
+const { tasks, prototypes, getPracticeTasks, getPracticeTaskIds, getPracticeBankView, checkTaskAnswer, taskTopicLabels } = await import(
   await loadSourceModule(new URL("src/lib/tasks.ts", projectRoot))
 );
 const {
@@ -953,12 +953,13 @@ test("Практика сохраняет исходную подборку, а 
     mode: "number",
     examNumber: 9,
   };
-  const expected = getPracticeTasks({ examType: "ОГЭ", examNumber: 9 });
-  const initialId = expected[1].id;
+  // Keep unloaded shard identities; rendering fetches only the current page.
+  const expected = getPracticeTaskIds({ examType: "ОГЭ", subjectId: "math", examNumber: 9 });
+  const initialId = expected[1];
   const session = createPracticeSession("session-1", selection, initialId);
   assert.deepEqual(
     session.taskIds,
-    expected.map((task) => task.id),
+    expected,
   );
   assert.equal(session.lastPosition, 1);
   assert.deepEqual(session.selection, selection);

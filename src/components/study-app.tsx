@@ -44,7 +44,7 @@ import { useStudyNavigation } from "@/hooks/use-study-navigation";
 import { useTaskPackages } from "@/hooks/use-task-packages";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import { usePracticeSession } from "@/hooks/use-practice-session";
-import { NumberTrainingFilters } from "@/components/number-training-filters";
+import { PracticeWorkspace } from "@/components/practice-workspace";
 import { taxonomyFilterKeys } from "@/lib/task-taxonomy";
 import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
 import { useBreakReminder } from "@/hooks/use-break-reminder";
@@ -64,6 +64,7 @@ import { getTaskXPScoringRule } from "@/lib/exam-scores";
 import {
   catalogListKey,
   emptyTaskState,
+  practiceTaskIds,
   type CatalogSelection,
 } from "@/lib/practice";
 import { historicalExamDefinitions as examDefinitions, getExamDefinition, getExamLevelLabel, type ExamLevel } from "@/lib/exams";
@@ -653,9 +654,11 @@ export function StudyApp() {
               <section className="empty-state" role="status">
                 <h1>Открываем подборку</h1>
               </section>
-            ) : currentTask ? (<>
-              {!session.historicalContext&&<NumberTrainingFilters key={`${session.selection.exam}:${session.selection.subjectId}:${session.selection.level}:${session.selection.examNumber}`} selection={session.selection} onApply={selected=>practice.start(selected)} />}
-              <TaskScreen
+            ) : !session.invalidContext ? (
+              <PracticeWorkspace selection={session.selection} taskIds={session.taskIds} task={currentTask}
+                drafts={session.states} learning={state} historical={session.historicalContext}
+                onApply={selected=>practice.start(selected,practiceTaskIds(selected)[0])} onOpenTask={practice.openTask} onBack={practice.returnToCatalog}>
+              {nav=>currentTask?<TaskScreen
                 key={`${session.id}:${currentTask.id}`}
                 task={currentTask}
                 bookmarked={studyTools.isBookmarked("task", currentTask.id)}
@@ -685,18 +688,12 @@ export function StudyApp() {
                 onSelfAssessment={confirmSelfAssessment}
                 onSolutionViewed={recordSolutionViewed}
                 focusMode={concentrating}
-                onNext={() => practice.move(1)}
-                canNext={
-                  practice.position >= 0 &&
-                  practice.position + 1 < session.taskIds.length
-                }
-                onPrevious={() => practice.move(-1)}
-                canPrevious={practice.position > 0}
+                {...nav}
                 onBack={practice.returnToCatalog}
-              /></>
+              />:null}
+              </PracticeWorkspace>
             ) : (
               <section className="empty-state">
-                {!session.invalidContext&&<NumberTrainingFilters key={`${session.selection.exam}:${session.selection.subjectId}:${session.selection.level}:${session.selection.examNumber}`} selection={session.selection} onApply={selected=>practice.start(selected)} />}
                 <h1>
                   {session.invalidContext
                     ? "Подборка недоступна"

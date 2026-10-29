@@ -170,7 +170,7 @@ test("pack 4: all 628 previous tasks and old attempt survive append/reload",()=>
  const raw=oldLoad("src/lib/practice-storage.ts").serializeStoredPractice({version:2,catalog:selection,activeId:saved.id,sessions:{[saved.id]:saved},taskStates:{[saved.lastTaskId]:answerState}});
  const restored=load("src/lib/practice-storage.ts").parseStoredPractice(raw);
  assert.equal(restored.activeId,saved.id);assert.equal(restored.sessions[saved.id].lastTaskId,saved.lastTaskId);
- assert.equal(restored.sessions[saved.id].taskIds.length,41);assert.deepEqual(restored.sessions[saved.id].taskIds.slice(0,28),saved.taskIds);
+ assert.equal(restored.sessions[saved.id].taskIds.length,load("src/lib/practice.ts").practiceTaskIds(selection).length);assert.deepEqual(restored.sessions[saved.id].taskIds.slice(0,28),saved.taskIds);
  assert.equal(restored.taskStates[saved.lastTaskId].attempt.id,"pre-pack4-attempt");
 });
 test("pack 4: optional ё/е equivalence is scoped, other answer rules unchanged",()=>{

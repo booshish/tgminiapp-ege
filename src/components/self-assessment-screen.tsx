@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ClipboardCheck } from "lucide-react";
 import { MathFormula } from "@/components/math-formula";
 import type { TaskScreenProps } from "./task-screen";
 import { BookmarkButton } from "./bookmark-button";
+import { TaskCondition } from "./task-condition";
 import { subjectTitle } from "@/lib/subjects";
 import "./self-assessment-screen.css";
 
@@ -95,12 +96,7 @@ export function SelfAssessmentScreen({
       </header>
 
       <div className="task-card">
-        <p className="task-prompt">{task.prompt}</p>
-        {task.conditionLatex && (
-          <div className="task-formula">
-            <MathFormula latex={task.conditionLatex} block />
-          </div>
-        )}
+        <TaskCondition task={task}/>
         <div className="self-work-field">
           <label htmlFor="self-work">Твоё решение (необязательно)</label>
           <textarea
@@ -275,21 +271,20 @@ export function SelfAssessmentScreen({
         <button
           type="button"
           className="button button-secondary task-previous-button"
+          aria-label="Предыдущее задание"
           onClick={onPrevious}
           disabled={!canPrevious}
         >
-          <ArrowLeft size={20} aria-hidden="true" />Предыдущее задание
+          <ArrowLeft size={20} aria-hidden="true" />Назад
         </button>
-        {sampleVisible && (
           <button
             type="button"
-            className="button button-primary task-next-button"
+            className="button button-secondary task-skip-button"
             onClick={onNext}
             disabled={!canNext}
           >
-            Следующее задание<ArrowRight size={20} aria-hidden="true" />
+            Пропустить / Следующее<ArrowRight size={20} aria-hidden="true" />
           </button>
-        )}
       </nav>
       <p className="self-local-note">
         Самопроверка и XP сохраняются только в этом браузере. Это локальная демоверсия.

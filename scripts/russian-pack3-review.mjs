@@ -151,7 +151,7 @@ test("pack 3: all previous 362 Russian entries preserve contents and indices",()
  const serialized=serializeStoredPractice({version:2,catalog:selection,activeId:saved.id,sessions:{[saved.id]:saved},taskStates:{[saved.lastTaskId]:{...oldPractice.emptyTaskState(),answer:"сапог",attempt:{id:"old-russian-attempt",correct:false}}}});
  const restored=parseStoredPractice(serialized);
  assert.equal(restored.sessions[saved.id].lastTaskId,saved.lastTaskId);
- assert.equal(restored.sessions[saved.id].taskIds.length,41);
+ assert.equal(restored.sessions[saved.id].taskIds.length,load("src/lib/practice.ts").practiceTaskIds(selection).length);
  assert.deepEqual(restored.sessions[saved.id].taskIds.slice(0,oldIds.length),oldIds);
  assert.equal(restored.taskStates[saved.lastTaskId].attempt.id,"old-russian-attempt");
 });

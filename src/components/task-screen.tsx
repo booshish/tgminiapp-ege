@@ -9,7 +9,7 @@ import {
   CircleX,
   PencilLine,
 } from "lucide-react";
-import { TriangleDiagram } from "@/components/illustrations";
+import { TaskCondition } from "./task-condition";
 import { MathFormula } from "@/components/math-formula";
 import { checkTaskAnswer, type Task } from "@/lib/tasks";
 import type { Exam } from "@/lib/navigation";
@@ -173,26 +173,7 @@ function TaskAttempt({
         <p className="task-prompt">{sourceText}</p>
       </article>}
       <div className="task-card">
-        <p className="task-prompt">{question}</p>
-        {task.resources && <section aria-label="Материалы задания"><h2>Материалы задания</h2><ul>
-          {task.resources.map((resource) => <li key={resource.name}><a download={resource.name} href={`data:text/plain;charset=utf-8,${encodeURIComponent(resource.content)}`}>{resource.name} · скачать</a></li>)}
-        </ul></section>}
-
-        {task.diagram?.type === "right-triangle" && (
-          <div className="task-diagram-wrap">
-            <TriangleDiagram
-              adjacent={task.diagram.adjacent}
-              opposite={task.diagram.opposite}
-            />
-            <span className="task-diagram-caption">Рисунок к условию</span>
-          </div>
-        )}
-
-        {task.conditionLatex && (
-          <div className="task-formula">
-            <MathFormula latex={task.conditionLatex} block />
-          </div>
-        )}
+        <TaskCondition task={task} prompt={question}/>
 
         <form className="task-answer-form" onSubmit={checkAnswer} noValidate>
           <label htmlFor="task-answer">Твой ответ</label>
@@ -329,20 +310,24 @@ function TaskAttempt({
 
       </div>
 
-      {(!phoneLayout || !solutionVisible) && <nav
+      <nav
         className="task-sequence-navigation"
         aria-label="Переходы между заданиями"
       >
         <button
           type="button"
           className="button button-secondary task-previous-button"
+          aria-label="Предыдущее задание"
           onClick={onPrevious}
           disabled={!canPrevious}
         >
           <ArrowLeft size={20} aria-hidden="true" />
-          Предыдущее задание
+          Назад
         </button>
-      </nav>}
+        <button type="button" className="button button-secondary task-skip-button" onClick={onNext} disabled={!canNext}>
+          Пропустить / Следующее<ArrowRight size={20} aria-hidden="true"/>
+        </button>
+      </nav>
 
       {solutionVisible && (
         <section
