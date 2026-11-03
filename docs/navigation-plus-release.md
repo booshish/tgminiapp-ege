@@ -33,3 +33,7 @@ Production Chromium: 12 сочетаний темы/viewport (320×1000,390×100
 Физический Safari/iPad/экранная клавиатура не доступны: проверен Chromium с touch и мобильной эмуляцией. Широкий landscape следует существующему viewport breakpoint; не утверждается аппаратное определение iPhone. Прямой remote browser smoke github.io ограничен сетевой политикой; проверяется точный локальный export и native Pages отдельно.
 
 Изменены: StudyApp, HomeScreen, SubscriptionStatusCard; новые navigation-release.css и presentation policy navigation-layout.ts; обновлены test-mobile-learning-layout.mjs/test-subscription-ui.mjs/test-browser-practice-taps.py, добавлены test-navigation-release.mjs и test-browser-navigation-release.py. Этот документ — контрольная точка. Дальнейшая работа по реальным платным пользователям начинается с trusted server subscription adapter, а не с client-side grant.
+
+## Публикация подтверждена
+
+Source: 108ea81e01a93afe0b5b456e224424f3890ca026 в main. Точный проверенный export: gh-pages 0c2a5269d816b517827d488b366a3292002fc22c, tree 14e7838426e489c2cf88f80be899dcc203b9b54c. [Native Pages 41690731035](https://github.com/booshish/tgminiapp-ege/actions/runs/41690731035): completed/success, build/deploy/report-build-status — success. Конфигурация Actions и Pages не менялась. Это публикация UI/layout, не запуск настоящих платежей и не проверка физического Safari.
