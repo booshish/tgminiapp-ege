@@ -27,15 +27,14 @@ function ordered(html, labels) {
   }
 }
 
-test("phone More keeps study tools; workspace has eight core sections and no standalone review", () => {
+test("drawer and sidebar share six grouped sections, with home only in the logo", () => {
   const menu = (phone) => render(StudyApp, {}, phone).split('aria-label="Дополнительные разделы"')[1].split('</nav>')[0];
-  ordered(menu(true), ["Мои ошибки", "Избранное", "Учебный вариант", "Профиль", "Мой тренер", "Помощь и объяснения", "Плюс"]);
-  ordered(menu(false), ["Мой тренер", "Профиль", "Избранное", "Мои ошибки", "Учебный вариант", "Помощь и объяснения", "Плюс"]);
-  assert.equal((menu(true).match(/class="menu-premium-label"/g) ?? []).length, 1);
+  for (const phone of [true, false]) ordered(menu(phone), ["Учёба", "Задания", "Теория", "Конспекты", "Развитие", "Мой тренер", "Мои ошибки", "Аккаунт", "Профиль"]);
   const html = render(StudyApp, {}, false);
   const desktop = html.split('aria-label="Основная навигация"')[1].split('</nav>')[0];
-  ordered(desktop, ["Главная", "Задания", "Теория", "Конспекты", "Мой тренер", "Мои ошибки", "Профиль", "Плюс"]);
-  assert.equal((desktop.match(/<button /g) ?? []).length, 8);
+  ordered(desktop, ["Учёба", "Задания", "Теория", "Конспекты", "Развитие", "Мой тренер", "Мои ошибки", "Аккаунт", "Профиль"]);
+  assert.equal((desktop.match(/<button /g) ?? []).length, 6);
+  assert.doesNotMatch(desktop + menu(true), /aria-label="(?:Главная|Плюс)"|menu-premium-label/);
   assert.doesNotMatch(desktop + menu(true), /Умное повторение/);
 });
 

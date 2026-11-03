@@ -113,25 +113,6 @@ export function HomeScreen({ exam, subjectId = "math", onSubjectChange, onExamCh
           <FeatureCard icon={ClipboardCheck} label="Учебный вариант" description="Таймер, задания и сохранение ответов" onClick={() => onNavigate("mock")} />
         </div>
       </section>
-      <section className="premium-summary">
-        <div>
-          <span className="eyebrow">ПЛЮС</span>
-          <h2>Больше информации о подготовке</h2>
-          <p>
-            Результаты, история ошибок и инструменты повторения. Бесплатная
-            теория и доступные задания остаются открытыми.
-          </p>
-        </div>
-        <button
-          className="button button-secondary"
-          onClick={() => onNavigate("premium")}
-        >
-          Подключить Плюс <ArrowRight size={18} />
-        </button>
-      </section>
-      <button type="button" className="text-button home-premium-link" onClick={() => onNavigate("premium")}>
-        Возможности Плюса <ArrowRight size={17} aria-hidden="true" />
-      </button>
     </div>
   );
 }

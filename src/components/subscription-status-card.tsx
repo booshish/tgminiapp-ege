@@ -77,7 +77,7 @@ export function SubscriptionStatusCard({ onPremium, subscription = null, now = n
       )}
       {developerPreview && <p className="subscription-developer-note">Открыт демонстрационный интерфейс Плюса для разработки. Он не изменяет статус подписки и не является пробным периодом или покупкой.</p>}
       <p>После окончания подписки «Плюс» история решений, XP и выбранные предметы не удаляются. Сейчас данные хранятся только в этом браузере.</p>
-      <button type="button" className="text-button" onClick={onPremium}>Подключить Плюс <ArrowRight size={18} aria-hidden="true" /></button>
+      {!status.isPremium && !developerPreview && <button type="button" className="text-button" onClick={onPremium}>Подключить Плюс <ArrowRight size={18} aria-hidden="true" /></button>}
     </section>
   );
 }

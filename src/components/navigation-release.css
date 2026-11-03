@@ -1,0 +1,60 @@
+/* One binary layout preference, shared with the dock's inset. */
+.app-shell { --sidebar-width: 0px; }
+.app-shell .desktop-menu-controls { display: flex; }
+.app-shell .workspace { display: flex; flex-direction: column; height: 100dvh; min-height: 0; padding-bottom: 0; transition: margin-left .18s ease; }
+.app-shell .workspace > .topbar { flex: 0 0 auto; }
+.app-shell .workspace > .main-content { flex: 1; min-height: 0; overflow: auto; }
+/* Practice focus has no header: keep the safe area outside its scrollport.
+   The exit then uses a zero sticky inset, not the old window inset twice. */
+.app-shell.focus-mode:has(.practice-workspace) .workspace { padding-top: env(safe-area-inset-top, 0px); }
+.app-shell.focus-mode .main-content.view-tasks { padding-top: 10px; }
+.app-shell .workspace .practice-focus-exit { top: 0; }
+.app-shell .brand-button { min-width: 44px; min-height: 44px; border-radius: 12px; }
+.app-shell .brand-button:hover { background: var(--light-green); }
+.app-shell :is(.brand-button, .desktop-nav > button, .navigation-dialog nav > button):focus-visible { outline: 3px solid var(--sage); outline-offset: 2px; }
+.app-shell :is(.brand-button, .desktop-nav > button, .navigation-dialog nav > button):active { background: var(--light-green); filter: brightness(.94); }
+.nav-group-label { margin: 16px 10px 6px; color: var(--muted); font-size: 13px; font-weight: 600; }
+.app-shell :is(.desktop-nav, .navigation-dialog nav) > button {
+  position: relative; display: flex; align-items: center; gap: 12px;
+  width: 100%; min-height: 44px; min-width: 44px; text-align: left;
+  padding: 10px 12px; border-radius: 12px; touch-action: manipulation;
+}
+.app-shell :is(.desktop-nav, .navigation-dialog nav) > button:hover { background: var(--light-green); }
+.app-shell :is(.desktop-nav, .navigation-dialog nav) > button[aria-current="page"] { background: var(--light-green); color: var(--sage-dark); }
+.app-shell :is(.desktop-nav, .navigation-dialog nav) > button[aria-current="page"]::before {
+  content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px;
+  border-radius: 3px; background: var(--sage); pointer-events: none;
+}
+.app-shell .plus-dock {
+  flex: 0 0 auto;
+  display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 64px;
+  padding: 10px max(12px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  background: var(--surface, #fff); color: var(--ink); border-top: 1px solid var(--line);
+}
+.app-shell .plus-dock[aria-hidden="true"] { visibility: hidden; pointer-events: none; }
+.plus-dock > div { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.plus-dock strong { font-size: 16px; }
+.plus-dock span { font-size: 13px; line-height: 1.2; color: var(--muted); overflow-wrap: anywhere; }
+.plus-dock .button { flex: 0 0 auto; min-height: 44px; }
+.plus-dock .icon-button { flex: 0 0 44px; min-width: 44px; min-height: 44px; }
+@media (min-width: 768px) {
+  .app-shell { --sidebar-width: 208px; }
+  .app-shell[data-sidebar="hidden"] { --sidebar-width: 0px; }
+  .app-shell .sidebar { width: var(--sidebar-width); }
+  .app-shell[data-sidebar="hidden"] .mobile-brand { display: inline-flex; }
+}
+@media (max-width: 767px) {
+  .app-shell .sidebar { display: none; }
+  .app-shell .topbar { gap: 10px; }
+  .app-shell .navigation-dialog {
+    position: fixed; inset: var(--navigation-header-height, 82px) auto 0 0;
+    width: min(320px, calc(100% - 16px)); max-height: none; margin: 0;
+    padding: 16px 12px max(16px, env(safe-area-inset-bottom));
+    border-radius: 0 18px 18px 0; overflow-y: auto;
+  }
+  .app-shell .plus-dock { gap: 8px; }
+  .plus-dock .button { max-width: 100px; padding: 8px; line-height: 1.2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell .workspace { transition: none; }
+}

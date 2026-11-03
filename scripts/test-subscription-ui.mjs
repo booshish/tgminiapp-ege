@@ -98,6 +98,7 @@ test("profile renders trusted active, expiring and expired states without deleti
   for (const [now, status] of [["2027-01-10T12:00:00Z", "active"], ["2027-01-30T12:00:00Z", "expiring"], ["2027-02-01T09:00:00Z", "expired"]]) {
     const html = render(SubscriptionStatusCard, { onPremium: noop, subscription: record, now: new Date(now) });
     assert.match(html, new RegExp(`data-subscription-status="${status}"`));
+    if (status === "active" || status === "expiring") assert.doesNotMatch(plain(html), /Подключить Плюс/);
     assert.match(plain(html), /Математика/);
     assert.match(plain(html), /1 февраля 2027 г\./);
     assert.match(plain(html), /12:00 МСК/);

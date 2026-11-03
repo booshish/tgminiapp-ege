@@ -1,22 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   BookOpen,
-  BadgePlus,
   Bookmark,
   CircleX,
   ClipboardCheck,
-  ChevronRight,
-  Grid2X2,
   House,
   Focus,
-  CircleHelp,
   Coffee,
   ListChecks,
   Menu,
   NotebookPen,
-  PanelLeftClose,
   ShieldCheck,
   Sparkles,
   TrendingUp,
@@ -74,6 +69,8 @@ import { getGameSummary, getSelfAssessment } from "@/lib/gamification";
 import "./appearance.css";
 import "./learning-features.css";
 import "./workspace-layout.css";
+import { restoredSidebar, showPlusOffer, type SidebarMode } from "@/lib/navigation-layout";
+import "./navigation-release.css";
 
 const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "home", label: "Главная", icon: House },
@@ -86,22 +83,17 @@ const navigation: { view: View; label: string; icon: LucideIcon }[] = [
   { view: "mistakes", label: "Мои ошибки", icon: CircleX },
   { view: "mock", label: "Учебный вариант", icon: ClipboardCheck },
 ];
-const plusMenuItem = { view: "premium" as const, label: "Плюс", icon: BadgePlus };
 const desktopNavigation = [
-  navigation[0], navigation[2], navigation[1],
+  { ...navigation[2], group: "Учёба" }, navigation[1],
   { view: "favorites" as const, label: "Конспекты", icon: NotebookPen, bookmarkKind: "theory" as const },
-  navigation[4], navigation[7], navigation[5],
-  plusMenuItem,
+  { ...navigation[4], group: "Развитие" }, navigation[7],
+  { ...navigation[5], group: "Аккаунт" },
 ];
 const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
-const phoneMoreOrder: View[] = ["mistakes", "favorites", "mock", "profile", "trainer"];
 
 export function StudyApp() {
   const tasks=getPracticeBankView();
   const phoneLayout = usePhoneLayout();
-  const moreNavigation = phoneLayout
-    ? phoneMoreOrder.map((view) => navigation.find((item) => item.view === view)!)
-    : navigation.slice(4);
   const { route, navigate, back } = useStudyNavigation();
   const bootstrapPackages = useTaskPackages(route, true);
   const {
@@ -130,7 +122,9 @@ export function StudyApp() {
   }, ready);
   const [demoPremium, setDemoPremium] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
-  const [sidebarMode, setSidebarMode] = useState<"compact" | "expanded" | "hidden">("compact");
+  const [sidebarMode, setSidebarMode] = useState<SidebarMode>("expanded");
+  const [offerDismissed, setOfferDismissed] = useState(false);
+  const [editing, setEditing] = useState(false);
   const [sidebarReady, setSidebarReady] = useState(false);
   const [now, setNow] = useState(() => new Date());
   const game = getGameSummary(state.game, now);
@@ -140,7 +134,7 @@ export function StudyApp() {
     setMoreOpen(false);
   }, []);
   const showMoreMenu = useCallback(() => {
-    if (menuDialog.current && !menuDialog.current.open) menuDialog.current.showModal();
+    if (menuDialog.current && !menuDialog.current.open) menuDialog.current.show();
     setMoreOpen(true);
   }, []);
   const catalogRef = useRef<HTMLDivElement>(null);
@@ -174,6 +168,27 @@ export function StudyApp() {
   const canConcentrate = route.view === "tasks"
     || (route.view === "theory" && Boolean(route.topicId));
   const concentrating = state.focusMode && canConcentrate;
+  const offerVisible = ready && sidebarReady && !(phoneLayout && moreOpen) && showPlusOffer(isPremium, route.view, concentrating, offerDismissed, editing);
+  const reserveOfferDuringEdit = editing && !(phoneLayout && moreOpen) && showPlusOffer(isPremium, route.view, concentrating, offerDismissed, false);
+  useEffect(() => {
+    const update = () => setEditing(document.activeElement instanceof HTMLElement &&
+      document.activeElement.matches('input:not([type="checkbox"]):not([type="radio"]),textarea,[contenteditable="true"]'));
+    const out = () => queueMicrotask(update);
+    document.addEventListener("focusin", update);
+    document.addEventListener("focusout", out);
+    return () => { document.removeEventListener("focusin", update); document.removeEventListener("focusout", out); };
+  }, []);
+  useLayoutEffect(() => {
+    const shell = document.querySelector<HTMLElement>(".app-shell");
+    const header = document.querySelector<HTMLElement>(".topbar");
+    const measure = () => {
+      shell?.style.setProperty("--navigation-header-height", `${header?.getBoundingClientRect().height ?? 82}px`);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    if (header) observer.observe(header);
+    return () => observer.disconnect();
+  }, [offerVisible, reserveOfferDuringEdit]);
   const activeView = route.view === "tasks" || route.view === "mock" || (route.view === "favorites" && route.bookmarkKind === "task") ? "catalog" : route.view === "review" ? "trainer" : route.view;
   const { currentTask, session } = practice;
   const openMockAttempt = mock.open;
@@ -196,7 +211,8 @@ export function StudyApp() {
   useEffect(() => {
     try {
       const saved = localStorage.getItem("tochka-sidebar-v1");
-      if (saved === "compact" || saved === "expanded" || saved === "hidden") setSidebarMode(saved);
+      setSidebarMode(restoredSidebar(saved));
+      setOfferDismissed(sessionStorage.getItem("tochka-plus-dismissed-v1") === "true");
     } catch { /* Navigation remains usable without browser storage. */ }
     setSidebarReady(true);
   }, []);
@@ -246,10 +262,10 @@ export function StudyApp() {
   }, []);
 
   // History/query changes and phone/tablet transitions can bypass open(view).
-  // Remove the native modal's inert layer before focusing the new page.
+  // Close the drawer on navigation, breakpoint changes, or concentration.
   useLayoutEffect(() => {
     closeMoreMenu();
-  }, [route, phoneLayout, closeMoreMenu]);
+  }, [route, phoneLayout, concentrating, closeMoreMenu]);
 
   useLayoutEffect(() => {
     if (!ready) return;
@@ -424,6 +440,18 @@ export function StudyApp() {
       }}>Выбрать направление</button>
     </main>
   );
+  const navLinks = desktopNavigation.map((item) => {
+    const { view, label, icon: Icon } = item;
+    const bookmarkKind = "bookmarkKind" in item ? item.bookmarkKind : undefined;
+    const active = activeView === view && (view !== "favorites" || route.bookmarkKind === "theory");
+    return <Fragment key={view}>
+      {"group" in item && <h2 className="nav-group-label">{item.group}</h2>}
+      <button type="button" aria-label={label} className={active ? "active" : ""} aria-current={active ? "page" : undefined}
+        onClick={() => { closeMoreMenu(); if (bookmarkKind) navigate("favorites", { bookmarkKind }); else open(view); }}>
+        <Icon size={21} aria-hidden="true"/><span className="desktop-nav-label">{label}</span>
+      </button>
+    </Fragment>;
+  });
   return (
     <div
       className={`app-shell font-${state.fontScale}${concentrating ? " focus-mode" : ""}`}
@@ -445,55 +473,28 @@ export function StudyApp() {
         <button
           className="brand-button"
           onClick={() => open("home")}
-          aria-label="Точка — главная"
+          aria-label="Перейти на главную" title="На главную"
         >
           <Brand />
         </button>
         <nav className="desktop-nav" aria-label="Основная навигация">
-          {desktopNavigation.map((item) => {
-            const { view, label, icon: Icon } = item;
-            const bookmarkKind = "bookmarkKind" in item ? item.bookmarkKind : undefined;
-            const active = activeView === view && (view !== "favorites" || route.bookmarkKind === "theory");
-            return (
-            <button
-              key={view}
-              type="button"
-              aria-label={label}
-              title={sidebarMode === "compact" ? label : undefined}
-              className={active ? "active" : ""}
-              aria-current={active ? "page" : undefined}
-              onClick={() => bookmarkKind ? navigate("favorites", { bookmarkKind }) : open(view)}
-            >
-              <Icon size={21} aria-hidden="true" />
-              <span className="desktop-nav-label">{label}</span>
-              {active && <span className="active-dot" />}
-            </button>
-          );})}
+          {navLinks}
         </nav>
-        <div className="sidebar-bottom">
-          <button className="sidebar-plan" aria-label="Помощь и объяснения" title="Помощь и объяснения" onClick={openHelp}>
-            <CircleHelp size={21} aria-hidden="true" />
-            <span className="desktop-nav-label">Помощь</span>
-          </button>
-        </div>
       </aside>
       <div className="workspace">
         <header className="topbar">
           <div className="desktop-menu-controls">
-            <button type="button" className="icon-button" aria-controls="desktop-sidebar"
-              aria-expanded={sidebarMode === "expanded"}
-              aria-label={sidebarMode === "expanded" ? "Свернуть меню" : sidebarMode === "hidden" ? "Показать меню" : "Развернуть меню"}
-              title={sidebarMode === "expanded" ? "Свернуть меню" : "Развернуть меню"}
-              onClick={() => setSidebarMode(sidebarMode === "expanded" ? "compact" : "expanded")}>
+            <button type="button" className="icon-button" aria-controls={phoneLayout ? "mobile-menu" : "desktop-sidebar"}
+              aria-expanded={phoneLayout ? moreOpen : sidebarMode === "expanded"}
+              aria-label="Меню" title="Открыть или скрыть меню"
+              onClick={() => phoneLayout ? (moreOpen ? closeMoreMenu() : showMoreMenu()) : setSidebarMode(value => value === "expanded" ? "hidden" : "expanded")}>
               <Menu size={22} aria-hidden="true" />
             </button>
-            {sidebarMode !== "hidden" && <button type="button" className="icon-button" aria-label="Скрыть боковую панель"
-              title="Скрыть боковую панель" onClick={() => setSidebarMode("hidden")}><PanelLeftClose size={21} aria-hidden="true" /></button>}
           </div>
           <button
             className="mobile-brand brand-button"
             onClick={() => open("home")}
-            aria-label="Точка — главная"
+            aria-label="Перейти на главную" title="На главную"
           >
             <Brand />
           </button>
@@ -777,7 +778,10 @@ export function StudyApp() {
               onPremium={openPremium}
             />
           )}
-          {route.view === "premium" && <PremiumScreen onBack={back} onProfile={() => open("profile")} />}
+          {route.view === "premium" && (isPremium ? <section className="settings-card">
+            <h1>Точка Плюс</h1><p>Инструменты Плюса доступны. Информация о подписке находится в профиле.</p>
+            <button type="button" className="button button-secondary" onClick={() => open("profile")}>Подписка «Плюс» в профиле</button>
+          </section> : <PremiumScreen onBack={back} onProfile={() => open("profile")} />)}
           {route.view === "help" && <HelpScreen onBack={returnFromHelp} />}
           {(["favorites", "mistakes", "review"] as const).map((view) => route.view === view && (
             <StudyToolsScreen key={`${view}-${route.bookmarkKind ?? "all"}`} mode={view} bookmarkKind={route.bookmarkKind} events={state.events} tools={studyTools}
@@ -811,42 +815,20 @@ export function StudyApp() {
             </aside>
           )}
         </main>
+        {(offerVisible || reserveOfferDuringEdit) && <aside className="plus-dock" aria-label="Точка Плюс" aria-hidden={!offerVisible} inert={!offerVisible}>
+          <div><strong>Точка Плюс</strong><span>Тренер, аналитика и повторение ошибок</span></div>
+          <button type="button" className="button button-secondary" onClick={openPremium}>Узнать больше</button>
+          <button type="button" className="icon-button" aria-label="Скрыть предложение Плюса на эту сессию" onClick={() => {
+            setOfferDismissed(true); try { sessionStorage.setItem("tochka-plus-dismissed-v1", "true"); } catch { /* In-memory dismissal still works. */ }
+          }}><X size={18} aria-hidden="true"/></button>
+        </aside>}
       </div>
-      <nav className="mobile-nav" aria-label="Нижняя навигация">
-        {navigation.slice(0, 4).map(({ view, label, icon: Icon }) => (
-          <button
-            key={view}
-            className={activeView === view ? "active" : ""}
-            aria-current={activeView === view ? "page" : undefined}
-            onClick={() => open(view)}
-          >
-            <Icon size={22} aria-hidden="true" />
-            <span>{label}</span>
-          </button>
-        ))}
-        <button
-          className={
-            activeView === "trainer" ||
-            activeView === "profile" ||
-            activeView === "premium" ||
-            activeView === "help" ||
-            ["favorites", "mistakes", "review", "mock"].includes(activeView)
-              ? "active"
-              : ""
-          }
-          aria-haspopup="dialog"
-          aria-controls="mobile-menu"
-          aria-expanded={moreOpen}
-          onClick={showMoreMenu}
-        >
-          <Menu size={22} />
-          <span>Ещё</span>
-        </button>
-      </nav>
       <dialog
         id="mobile-menu"
         ref={menuDialog}
         className="navigation-dialog"
+        aria-modal="false"
+        onKeyDown={event => { if (event.key === "Escape") { event.preventDefault(); closeMoreMenu(); document.querySelector<HTMLButtonElement>('.desktop-menu-controls button')?.focus(); } }}
         aria-labelledby="menu-title"
         onClose={(event) => {
           // A queued close event may arrive after a quick reopen in Safari.
@@ -861,38 +843,9 @@ export function StudyApp() {
       >
         <div className="dialog-title">
           <h2 id="menu-title">Разделы</h2>
-          <button
-            className="icon-button"
-            onClick={closeMoreMenu}
-            aria-label="Закрыть меню"
-          >
-            <X size={22} aria-hidden="true" />
-          </button>
         </div>
         <nav aria-label="Дополнительные разделы">
-          {moreNavigation.map(({ view, label, icon: Icon }) => (
-            <button
-              key={view}
-              className={phoneLayout && view === "trainer" ? "menu-secondary-start" : undefined}
-              aria-current={activeView === view ? "page" : undefined}
-              onClick={() => open(view)}
-            >
-              <Icon size={23} aria-hidden="true" />
-              {phoneLayout ? <span className="menu-item-label">{label}</span> : label}
-              {phoneLayout && view === "trainer" && <span className="menu-premium-label">{plusMenuItem.label}</span>}
-              <ChevronRight size={18} aria-hidden="true" />
-            </button>
-          ))}
-          <button onClick={openHelp}>
-            <CircleHelp size={23} aria-hidden="true" />
-            Помощь и объяснения
-            <ChevronRight size={18} aria-hidden="true" />
-          </button>
-          <button type="button" aria-label={plusMenuItem.label} onClick={() => open(plusMenuItem.view)}>
-            <Grid2X2 size={23} aria-hidden="true" />
-            <span className="menu-item-label">{plusMenuItem.label}</span>
-            <ChevronRight size={18} aria-hidden="true" />
-          </button>
+          {navLinks}
         </nav>
       </dialog>
     </div>

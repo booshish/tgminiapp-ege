@@ -56,7 +56,9 @@ with sync_playwright() as p:
                 aligned()
                 answer.focus()
                 page.get_by_role('button', name='Фокус: включить режим концентрации', exact=True).tap()
-                page.evaluate('window.scrollTo(0,0)')
+                # Sidebar width transitions are deliberate; measure final layout.
+                page.wait_for_function('document.querySelector(".workspace").getBoundingClientRect().left < 1')
+                page.evaluate('window.scrollTo(0,0);document.querySelector(".main-content").scrollTop=0')
                 aligned()
                 expect(page.locator('.task-topbar .bookmark-button')).to_be_visible()
                 assert page.evaluate('''() => {
@@ -65,11 +67,13 @@ with sync_playwright() as p:
                     const exit=document.querySelector('.practice-focus-exit').getBoundingClientRect();
                     const heading=document.querySelector('.practice-heading-row').getBoundingClientRect();
                     return content.top>=row.bottom-1 && exit.left>=content.right && (innerWidth<=600 || Math.abs((exit.top+exit.bottom-heading.top-heading.bottom)/2)<2);
-                }''')
+                }'''), page.evaluate('''() => Object.fromEntries(['.practice-heading-row','.practice-view-controls','.practice-content','.practice-focus-exit'].map(s=>[s,document.querySelector(s).getBoundingClientRect().toJSON()]))''')
                 for fraction in [0, .5, 1]:
                     assert page.evaluate('''fraction => {
                         const content=document.querySelector('.practice-content');
-                        window.scrollTo(0,(document.documentElement.scrollHeight-innerHeight)*fraction);
+                        const main=document.querySelector('.main-content');
+                        if(main.scrollHeight>main.clientHeight) main.scrollTop=(main.scrollHeight-main.clientHeight)*fraction;
+                        else window.scrollTo(0,(document.documentElement.scrollHeight-innerHeight)*fraction);
                         const r=document.querySelector('.practice-focus-exit').getBoundingClientRect();
                         return r.top>=0 && r.left>=content.getBoundingClientRect().right;
                     }''', fraction)
