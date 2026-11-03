@@ -8,13 +8,18 @@ rows = []
 with sync_playwright() as p:
     browser = p.chromium.launch(executable_path='/usr/bin/chromium', args=['--no-sandbox'])
     for theme in ['light', 'dark']:
-        for width, height in [(320, 1000), (390, 1000), (820, 1180), (1180, 820), (1440, 900), (844, 390)]:
+        # Phone tabs have their own regression; these are the unchanged wide UI.
+        for width, height in [(820, 1180), (1180, 820), (1440, 900)]:
             ctx = browser.new_context(viewport={'width': width, 'height': height}, has_touch=True)
             page = ctx.new_page()
             page.on('pageerror', lambda e: errors.append(str(e)))
             page.goto('http://127.0.0.1:3002/tgminiapp-ege/#catalog?exam=ОГЭ&subject=math&mode=number', wait_until='networkidle')
             expect(page.locator('[data-catalog-number="9"]')).to_be_visible()
-            page.evaluate('(t)=>document.documentElement.dataset.theme=t', theme)
+            if theme == 'dark':
+                page.goto('http://127.0.0.1:3002/tgminiapp-ege/#profile', wait_until='networkidle')
+                page.get_by_role('button', name='Тёмная', exact=True).click()
+                page.goto('http://127.0.0.1:3002/tgminiapp-ege/#catalog?exam=ОГЭ&subject=math&mode=number', wait_until='networkidle')
+            expect(page.locator('html')).to_have_attribute('data-theme', theme)
             dock = page.locator('.plus-dock')
             expect(dock).to_be_visible()
             rows.append({'theme': theme, 'viewport': [width, height], 'dock': dock.bounding_box()})

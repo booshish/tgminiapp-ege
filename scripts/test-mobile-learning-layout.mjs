@@ -27,9 +27,13 @@ function ordered(html, labels) {
   }
 }
 
-test("drawer and sidebar share six grouped sections, with home only in the logo", () => {
+test("phone restores original secondary routes; desktop retains six groups and no home/plus", () => {
   const menu = (phone) => render(StudyApp, {}, phone).split('aria-label="Дополнительные разделы"')[1].split('</nav>')[0];
-  for (const phone of [true, false]) ordered(menu(phone), ["Учёба", "Задания", "Теория", "Конспекты", "Развитие", "Мой тренер", "Мои ошибки", "Аккаунт", "Профиль"]);
+  for (const phone of [true, false]) ordered(menu(phone), ["Мои ошибки", "Избранное", "Учебный вариант", "Профиль", "Мой тренер", "Помощь и объяснения"]);
+  const bottom=render(StudyApp,{},true).split('aria-label="Нижняя навигация"')[1].split('</nav>')[0];
+  ordered(bottom,["Теория","Задания","Прогресс","Плюс","Ещё"]);
+  assert.equal((bottom.match(/<button /g)??[]).length,5);
+  assert.doesNotMatch(bottom,/Главная/);
   const html = render(StudyApp, {}, false);
   const desktop = html.split('aria-label="Основная навигация"')[1].split('</nav>')[0];
   ordered(desktop, ["Учёба", "Задания", "Теория", "Конспекты", "Развитие", "Мой тренер", "Мои ошибки", "Аккаунт", "Профиль"]);

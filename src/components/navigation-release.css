@@ -1,6 +1,7 @@
 /* One binary layout preference, shared with the dock's inset. */
 .app-shell { --sidebar-width: 0px; }
 .app-shell .desktop-menu-controls { display: flex; }
+.app-shell .mobile-nav { display: none; position: static; }
 .app-shell .workspace { display: flex; flex-direction: column; height: 100dvh; min-height: 0; padding-bottom: 0; transition: margin-left .18s ease; }
 .app-shell .workspace > .topbar { flex: 0 0 auto; }
 .app-shell .workspace > .main-content { flex: 1; min-height: 0; overflow: auto; }
@@ -58,3 +59,35 @@
 @media (prefers-reduced-motion: reduce) {
   .app-shell .workspace { transition: none; }
 }
+
+/* A single navigation snapshot drives phone portrait AND phone landscape.
+   The existing content breakpoints and wide layout remain unchanged. */
+.app-shell[data-navigation-layout="phone"] { --sidebar-width: 0px; min-height: 0; }
+.app-shell[data-navigation-layout="phone"] .workspace { margin-left: 0; min-height: 0; height: var(--phone-visible-height, 100dvh); }
+.app-shell[data-navigation-layout="phone"] :is(.sidebar, .desktop-menu-controls, .desktop-breadcrumb, .topbar-right, .plus-dock) { display: none; }
+.app-shell[data-navigation-layout="phone"] .mobile-brand { display: inline-flex; }
+.app-shell[data-navigation-layout="phone"] .mobile-nav {
+  display: flex; flex: 0 0 auto; align-items: stretch; justify-content: space-around;
+  inset: auto; width: 100%; z-index: auto;
+  padding: 8px 6px max(9px, env(safe-area-inset-bottom));
+  background: var(--surface-raised); border-top: 1px solid var(--line);
+}
+.app-shell[data-navigation-layout="phone"] .mobile-nav > button {
+  display: flex; flex: 1 1 0; min-width: 44px; min-height: 48px;
+  flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  padding: 5px 0; border-radius: 10px; font-size: var(--secondary-size, 13px); line-height: 1.3;
+  color: var(--muted); touch-action: manipulation;
+}
+.app-shell[data-navigation-layout="phone"] .mobile-nav > button > :is(svg, span) { pointer-events: none; }
+.app-shell[data-navigation-layout="phone"] .mobile-nav > button.active { background: var(--light-green); color: var(--sage-dark); }
+.app-shell[data-navigation-layout="phone"] .mobile-nav > button:active { filter: brightness(.92); background: var(--light-green); }
+.app-shell[data-navigation-layout="phone"] .navigation-dialog {
+  position: fixed; inset: var(--navigation-header-height, 82px) auto var(--phone-nav-height, 74px) 0;
+  width: min(320px, calc(100% - 16px)); max-height: none; margin: 0;
+  padding: 16px 12px; border-radius: 0 18px 18px 0; overflow: auto;
+}
+.app-shell.focus-mode .mobile-nav { display: none; }
+.premium-phone-trial-label { display: none; }
+.app-shell[data-navigation-layout="phone"] .premium-plan-footer .premium-unavailable-button { display: none; }
+.app-shell[data-navigation-layout="phone"] .premium-default-trial-label { display: none; }
+.app-shell[data-navigation-layout="phone"] .premium-phone-trial-label { display: inline; }

@@ -194,7 +194,7 @@ export function PremiumScreen({ onBack, onProfile, previewNow, seasons }: Premiu
             <p className="premium-secondary">По текущей модели привязка карты не требуется. Доступ заканчивается через {subscriptionPrices.trial.days} суток после активации, без списаний и автоматического продления. Сейчас активировать пробный период нельзя.</p>
           </details>
         </div>
-        <button type="button" className="button premium-unavailable-button" disabled>Пробный период скоро</button>
+        <button type="button" className="button premium-unavailable-button" disabled title="Активация пробного периода пока недоступна"><span className="premium-phone-trial-label">Подключить Плюс</span><span className="premium-default-trial-label">Пробный период скоро</span></button>
       </section>
 
       <section className="premium-rules" aria-label="Как будет работать подписка">

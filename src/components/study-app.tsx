@@ -3,6 +3,7 @@
 import { Fragment, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   BookOpen,
+  BadgePlus,
   Bookmark,
   CircleX,
   ClipboardCheck,
@@ -89,11 +90,14 @@ const desktopNavigation = [
   { ...navigation[4], group: "Развитие" }, navigation[7],
   { ...navigation[5], group: "Аккаунт" },
 ];
+// Restore the original bottom-tab order, replacing only Home with Plus.
+const mobileNavigation = [navigation[1], navigation[2], navigation[3], { view: "premium" as const, label: "Плюс", icon: BadgePlus }];
+const mobileMoreNavigation = [navigation[7], navigation[6], navigation[8], navigation[5], navigation[4]];
 const demoAllowed = process.env.NEXT_PUBLIC_ENABLE_PREMIUM_DEMO === "true";
 
 export function StudyApp() {
   const tasks=getPracticeBankView();
-  const phoneLayout = usePhoneLayout();
+  const phoneLayout = usePhoneLayout("navigation");
   const { route, navigate, back } = useStudyNavigation();
   const bootstrapPackages = useTaskPackages(route, true);
   const {
@@ -168,8 +172,19 @@ export function StudyApp() {
   const canConcentrate = route.view === "tasks"
     || (route.view === "theory" && Boolean(route.topicId));
   const concentrating = state.focusMode && canConcentrate;
-  const offerVisible = ready && sidebarReady && !(phoneLayout && moreOpen) && showPlusOffer(isPremium, route.view, concentrating, offerDismissed, editing);
-  const reserveOfferDuringEdit = editing && !(phoneLayout && moreOpen) && showPlusOffer(isPremium, route.view, concentrating, offerDismissed, false);
+  const offerVisible = ready && sidebarReady && showPlusOffer(isPremium, route.view, concentrating, offerDismissed, editing, phoneLayout);
+  const reserveOfferDuringEdit = editing && showPlusOffer(isPremium, route.view, concentrating, offerDismissed, false, phoneLayout);
+  useLayoutEffect(() => {
+    const shell = document.querySelector<HTMLElement>(".app-shell");
+    const viewport = window.visualViewport;
+    const update = () => {
+      if (phoneLayout && viewport && viewport.scale === 1) shell?.style.setProperty("--phone-visible-height", `${viewport.height}px`);
+      else shell?.style.removeProperty("--phone-visible-height");
+    };
+    update();
+    viewport?.addEventListener("resize", update);
+    return () => { viewport?.removeEventListener("resize", update); shell?.style.removeProperty("--phone-visible-height"); };
+  }, [phoneLayout]);
   useEffect(() => {
     const update = () => setEditing(document.activeElement instanceof HTMLElement &&
       document.activeElement.matches('input:not([type="checkbox"]):not([type="radio"]),textarea,[contenteditable="true"]'));
@@ -181,14 +196,17 @@ export function StudyApp() {
   useLayoutEffect(() => {
     const shell = document.querySelector<HTMLElement>(".app-shell");
     const header = document.querySelector<HTMLElement>(".topbar");
+    const mobileNav = document.querySelector<HTMLElement>(".mobile-nav");
     const measure = () => {
       shell?.style.setProperty("--navigation-header-height", `${header?.getBoundingClientRect().height ?? 82}px`);
+      shell?.style.setProperty("--phone-nav-height", `${mobileNav?.getBoundingClientRect().height ?? 0}px`);
     };
     measure();
     const observer = new ResizeObserver(measure);
     if (header) observer.observe(header);
+    if (mobileNav) observer.observe(mobileNav);
     return () => observer.disconnect();
-  }, [offerVisible, reserveOfferDuringEdit]);
+  }, [offerVisible, reserveOfferDuringEdit, phoneLayout, concentrating, ready]);
   const activeView = route.view === "tasks" || route.view === "mock" || (route.view === "favorites" && route.bookmarkKind === "task") ? "catalog" : route.view === "review" ? "trainer" : route.view;
   const { currentTask, session } = practice;
   const openMockAttempt = mock.open;
@@ -456,6 +474,7 @@ export function StudyApp() {
     <div
       className={`app-shell font-${state.fontScale}${concentrating ? " focus-mode" : ""}`}
       data-view={route.view}
+      data-navigation-layout={phoneLayout ? "phone" : "wide"}
       data-sidebar={sidebarMode}
       data-can-concentrate={canConcentrate}
     >
@@ -822,13 +841,25 @@ export function StudyApp() {
             setOfferDismissed(true); try { sessionStorage.setItem("tochka-plus-dismissed-v1", "true"); } catch { /* In-memory dismissal still works. */ }
           }}><X size={18} aria-hidden="true"/></button>
         </aside>}
+        <nav className="mobile-nav" aria-label="Нижняя навигация">
+          {mobileNavigation.map(({ view, label, icon: Icon }) => {
+            const active = activeView === view && route.view !== "mock";
+            return <button key={view} type="button" className={active && !moreOpen ? "active" : ""} aria-current={active ? "page" : undefined} onClick={() => open(view)}>
+              <Icon size={22} aria-hidden="true"/><span>{label}</span>
+            </button>;
+          })}
+          <button type="button" className={moreOpen || ["trainer", "profile", "favorites", "mistakes", "help", "mock"].includes(activeView) || route.view === "mock" ? "active" : ""}
+            aria-haspopup="dialog" aria-controls="mobile-menu" aria-expanded={moreOpen} onClick={() => moreOpen ? closeMoreMenu() : showMoreMenu()}>
+            <Menu size={22} aria-hidden="true"/><span>Ещё</span>
+          </button>
+        </nav>
       </div>
       <dialog
         id="mobile-menu"
         ref={menuDialog}
         className="navigation-dialog"
         aria-modal="false"
-        onKeyDown={event => { if (event.key === "Escape") { event.preventDefault(); closeMoreMenu(); document.querySelector<HTMLButtonElement>('.desktop-menu-controls button')?.focus(); } }}
+        onKeyDown={event => { if (event.key === "Escape") { event.preventDefault(); closeMoreMenu(); document.querySelector<HTMLButtonElement>(phoneLayout ? '.mobile-nav button[aria-controls="mobile-menu"]' : '.desktop-menu-controls button')?.focus(); } }}
         aria-labelledby="menu-title"
         onClose={(event) => {
           // A queued close event may arrive after a quick reopen in Safari.
@@ -845,7 +876,10 @@ export function StudyApp() {
           <h2 id="menu-title">Разделы</h2>
         </div>
         <nav aria-label="Дополнительные разделы">
-          {navLinks}
+          {mobileMoreNavigation.map(({ view, label, icon: Icon }) => <button key={view} type="button" aria-current={activeView === view ? "page" : undefined} onClick={() => open(view)}>
+            <Icon size={23} aria-hidden="true"/><span>{label}</span>
+          </button>)}
+          <button type="button" onClick={openHelp}>Помощь и объяснения</button>
         </nav>
       </dialog>
     </div>
