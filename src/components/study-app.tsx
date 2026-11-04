@@ -134,8 +134,10 @@ export function StudyApp() {
   const game = getGameSummary(state.game, now);
   const menuDialog = useRef<HTMLDialogElement>(null);
   const closeMoreMenu = useCallback(() => {
-    if (menuDialog.current?.open) menuDialog.current.close();
+    const wasOpen = menuDialog.current?.open;
+    if (wasOpen) menuDialog.current?.close();
     setMoreOpen(false);
+    if (wasOpen) document.querySelector<HTMLButtonElement>('.mobile-nav button[aria-controls="mobile-menu"]')?.focus({ preventScroll: true });
   }, []);
   const showMoreMenu = useCallback(() => {
     if (menuDialog.current && !menuDialog.current.open) menuDialog.current.show();
@@ -284,6 +286,23 @@ export function StudyApp() {
   useLayoutEffect(() => {
     closeMoreMenu();
   }, [route, phoneLayout, concentrating, closeMoreMenu]);
+
+  useLayoutEffect(() => {
+    if (!moreOpen || !phoneLayout) return;
+    const bodyOverflow = document.body.style.overflow;
+    const htmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { event.preventDefault(); closeMoreMenu(); }
+    };
+    document.addEventListener("keydown", escape);
+    return () => {
+      document.body.style.overflow = bodyOverflow;
+      document.documentElement.style.overflow = htmlOverflow;
+      document.removeEventListener("keydown", escape);
+    };
+  }, [moreOpen, phoneLayout, closeMoreMenu]);
 
   useLayoutEffect(() => {
     if (!ready) return;
@@ -475,6 +494,7 @@ export function StudyApp() {
       className={`app-shell font-${state.fontScale}${concentrating ? " focus-mode" : ""}`}
       data-view={route.view}
       data-navigation-layout={phoneLayout ? "phone" : "wide"}
+      data-more-open={moreOpen && phoneLayout}
       data-sidebar={sidebarMode}
       data-can-concentrate={canConcentrate}
     >
@@ -501,7 +521,7 @@ export function StudyApp() {
         </nav>
       </aside>
       <div className="workspace">
-        <header className="topbar">
+        <header className="topbar" inert={moreOpen && phoneLayout}>
           <div className="desktop-menu-controls">
             <button type="button" className="icon-button" aria-controls={phoneLayout ? "mobile-menu" : "desktop-sidebar"}
               aria-expanded={phoneLayout ? moreOpen : sidebarMode === "expanded"}
@@ -551,6 +571,7 @@ export function StudyApp() {
           )}
         </header>
         <main
+          inert={moreOpen && phoneLayout}
           id="main-content"
           aria-busy={!ready || !practice.initialized}
           tabIndex={-1}
@@ -836,13 +857,20 @@ export function StudyApp() {
           )}
         </main>
         {(offerVisible || reserveOfferDuringEdit) && <aside className="plus-dock" aria-label="Точка Плюс" aria-hidden={!offerVisible} inert={!offerVisible}>
-          <div><strong>Точка Плюс</strong><span>Тренер, аналитика и повторение ошибок</span></div>
-          <button type="button" className="button button-secondary" onClick={openPremium}>Узнать больше</button>
+          <strong>Точка Плюс</strong>
+          <span className="plus-dock-copy">Тренер, аналитика и повторение ошибок</span>
+          <span className="plus-dock-trial">7 дней бесплатно</span>
+          <button type="button" className="button button-primary" onClick={openPremium}>Узнать больше</button>
           <button type="button" className="icon-button" aria-label="Скрыть предложение Плюса на эту сессию" onClick={() => {
             setOfferDismissed(true); try { sessionStorage.setItem("tochka-plus-dismissed-v1", "true"); } catch { /* In-memory dismissal still works. */ }
           }}><X size={18} aria-hidden="true"/></button>
         </aside>}
-        <nav className="mobile-nav" aria-label="Нижняя навигация">
+        <nav className="mobile-nav" aria-label="Нижняя навигация" onPointerDown={event => {
+          // Do not let keyboard dismissal move the target between press and click.
+          // Only click navigates; keyboard activation keeps its native behaviour.
+          if (event.isPrimary && event.button === 0 && document.activeElement instanceof HTMLElement &&
+            document.activeElement.matches('input,textarea,[contenteditable="true"]')) event.preventDefault();
+        }}>
           {mobileNavigation.map(({ view, label, icon: Icon }) => {
             const active = activeView === view && route.view !== "mock";
             return <button key={view} type="button" className={active && !moreOpen ? "active" : ""} aria-current={active ? "page" : undefined} onClick={() => open(view)}>
@@ -855,12 +883,12 @@ export function StudyApp() {
           </button>
         </nav>
       </div>
+      {moreOpen && phoneLayout && <button type="button" className="mobile-menu-backdrop" tabIndex={-1} aria-label="Закрыть меню" onClick={closeMoreMenu} />}
       <dialog
         id="mobile-menu"
         ref={menuDialog}
         className="navigation-dialog"
         aria-modal="false"
-        onKeyDown={event => { if (event.key === "Escape") { event.preventDefault(); closeMoreMenu(); document.querySelector<HTMLButtonElement>(phoneLayout ? '.mobile-nav button[aria-controls="mobile-menu"]' : '.desktop-menu-controls button')?.focus(); } }}
         aria-labelledby="menu-title"
         onClose={(event) => {
           // A queued close event may arrive after a quick reopen in Safari.

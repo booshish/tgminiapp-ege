@@ -2,9 +2,9 @@
 .app-shell { --sidebar-width: 0px; }
 .app-shell .desktop-menu-controls { display: flex; }
 .app-shell .mobile-nav { display: none; position: static; }
-.app-shell .workspace { display: flex; flex-direction: column; height: 100dvh; min-height: 0; padding-bottom: 0; transition: margin-left .18s ease; }
+.app-shell .workspace { display: flex; flex-direction: column; height: 100dvh; min-height: 0; padding-bottom: 0; transition: margin-left .18s ease; isolation: isolate; }
 .app-shell .workspace > .topbar { flex: 0 0 auto; }
-.app-shell .workspace > .main-content { flex: 1; min-height: 0; overflow: auto; }
+.app-shell .workspace > .main-content { flex: 1; min-height: 0; overflow: auto; position: relative; isolation: isolate; z-index: 0; }
 /* Practice focus has no header: keep the safe area outside its scrollport.
    The exit then uses a zero sticky inset, not the old window inset twice. */
 .app-shell.focus-mode:has(.practice-workspace) .workspace { padding-top: env(safe-area-inset-top, 0px); }
@@ -28,15 +28,16 @@
 }
 .app-shell .plus-dock {
   flex: 0 0 auto;
-  display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 64px;
-  padding: 10px max(12px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
-  background: var(--surface, #fff); color: var(--ink); border-top: 1px solid var(--line);
+  display: flex; align-items: center; gap: 4px; min-width: 0; min-height: 64px;
+  margin: 8px max(12px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  padding: 8px; border: 1px solid var(--line); border-radius: 14px;
+  background: linear-gradient(110deg, var(--surface), var(--light-green)); color: var(--ink);
 }
 .app-shell .plus-dock[aria-hidden="true"] { visibility: hidden; pointer-events: none; }
-.plus-dock > div { flex: 1; min-width: 0; display: grid; gap: 2px; }
-.plus-dock strong { font-size: 16px; }
-.plus-dock span { font-size: 13px; line-height: 1.2; color: var(--muted); overflow-wrap: anywhere; }
-.plus-dock .button { flex: 0 0 auto; min-height: 44px; }
+.plus-dock strong { flex: 0 0 auto; font-size: 16px; white-space: nowrap; }
+.plus-dock-copy { flex: 1 1 auto; min-width: 0; padding-inline: 4px; border-inline: 1px solid var(--line); font-size: 13px; line-height: 1.35; color: var(--muted); }
+.plus-dock-trial { flex: 0 0 auto; padding: 5px 4px; border-radius: 8px; background: var(--light-green); color: var(--sage-dark); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.plus-dock .button { flex: 0 0 auto; min-height: 44px; padding: 8px 6px; font-size: 14px; white-space: nowrap; border-inline-start: 1px solid var(--line); }
 .plus-dock .icon-button { flex: 0 0 44px; min-width: 44px; min-height: 44px; }
 @media (min-width: 768px) {
   .app-shell { --sidebar-width: 208px; }
@@ -47,14 +48,6 @@
 @media (max-width: 767px) {
   .app-shell .sidebar { display: none; }
   .app-shell .topbar { gap: 10px; }
-  .app-shell .navigation-dialog {
-    position: fixed; inset: var(--navigation-header-height, 82px) auto 0 0;
-    width: min(320px, calc(100% - 16px)); max-height: none; margin: 0;
-    padding: 16px 12px max(16px, env(safe-area-inset-bottom));
-    border-radius: 0 18px 18px 0; overflow-y: auto;
-  }
-  .app-shell .plus-dock { gap: 8px; }
-  .plus-dock .button { max-width: 100px; padding: 8px; line-height: 1.2; }
 }
 @media (prefers-reduced-motion: reduce) {
   .app-shell .workspace { transition: none; }
@@ -68,7 +61,7 @@
 .app-shell[data-navigation-layout="phone"] .mobile-brand { display: inline-flex; }
 .app-shell[data-navigation-layout="phone"] .mobile-nav {
   display: flex; flex: 0 0 auto; align-items: stretch; justify-content: space-around;
-  inset: auto; width: 100%; z-index: auto;
+  position: relative; inset: auto; width: 100%; z-index: 1;
   padding: 8px 6px max(9px, env(safe-area-inset-bottom));
   background: var(--surface-raised); border-top: 1px solid var(--line);
 }
@@ -82,10 +75,15 @@
 .app-shell[data-navigation-layout="phone"] .mobile-nav > button.active { background: var(--light-green); color: var(--sage-dark); }
 .app-shell[data-navigation-layout="phone"] .mobile-nav > button:active { filter: brightness(.92); background: var(--light-green); }
 .app-shell[data-navigation-layout="phone"] .navigation-dialog {
-  position: fixed; inset: var(--navigation-header-height, 82px) auto var(--phone-nav-height, 74px) 0;
-  width: min(320px, calc(100% - 16px)); max-height: none; margin: 0;
-  padding: 16px 12px; border-radius: 0 18px 18px 0; overflow: auto;
+  position: fixed; inset: auto max(12px, env(safe-area-inset-right)) calc(var(--phone-nav-height, 74px) + 8px) max(12px, env(safe-area-inset-left));
+  width: auto; max-width: 420px; margin: 0 auto; z-index: 2;
+  max-height: calc(var(--phone-visible-height, 100dvh) - var(--phone-nav-height, 74px) - env(safe-area-inset-top, 0px) - 24px);
+  padding: 16px 12px; border-radius: 18px; overflow: auto; overscroll-behavior: contain;
+  background: var(--surface); color: var(--ink);
 }
+.mobile-menu-backdrop { position: fixed; inset: 0 0 var(--phone-nav-height, 74px); z-index: 1; background: #14251c66; cursor: default; touch-action: none; }
+.app-shell[data-more-open="true"] .main-content { overflow: hidden; }
+.app-shell[data-navigation-layout="wide"] .mobile-menu-backdrop { display: none; }
 .app-shell.focus-mode .mobile-nav { display: none; }
 .premium-phone-trial-label { display: none; }
 .app-shell[data-navigation-layout="phone"] .premium-plan-footer .premium-unavailable-button { display: none; }
