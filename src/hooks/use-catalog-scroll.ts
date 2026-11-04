@@ -34,6 +34,7 @@ type CatalogScrollOptions = {
   listKey: string;
   ready: boolean;
   rootRef: RefObject<HTMLDivElement | null>;
+  storageKey?: string;
 };
 
 const restoreWindowMs = 2500;
@@ -194,6 +195,7 @@ export function useCatalogScroll({
   listKey,
   ready,
   rootRef,
+  storageKey = catalogScrollStorageKey,
 }: CatalogScrollOptions) {
   const snapshotRef = useRef<ScrollSnapshot | null>(null);
   const listKeyRef = useRef(listKey);
@@ -217,11 +219,11 @@ export function useCatalogScroll({
       }), ...(snapshot.pendingEntries ?? [])],
     };
     try {
-      window.localStorage.setItem(catalogScrollStorageKey, JSON.stringify(stored));
+      window.localStorage.setItem(storageKey, JSON.stringify(stored));
     } catch {
       setStorageWarning(true);
     }
-  }, [rootRef]);
+  }, [rootRef, storageKey]);
 
   useEffect(() => {
     const previous = window.history.scrollRestoration;
@@ -243,7 +245,7 @@ export function useCatalogScroll({
     if (persistTimer.current !== null) clearTimeout(persistTimer.current);
     persistTimer.current = null;
     try {
-      window.localStorage.removeItem(catalogScrollStorageKey);
+      window.localStorage.removeItem(storageKey);
       canPersist.current = true;
       setStorageWarning(false);
     } catch {
@@ -256,7 +258,7 @@ export function useCatalogScroll({
     snapshotRef.current = snapshot;
     applySnapshot(snapshot);
     return true;
-  }, [visible, ready, rootRef, listKey]);
+  }, [visible, ready, rootRef, listKey, storageKey]);
 
   useEffect(() => {
     const persist = () => persistSnapshot(snapshotRef.current);
@@ -277,7 +279,7 @@ export function useCatalogScroll({
     if (ready && root && !initialRead.current) {
       initialRead.current = true;
       try {
-        const stored = parseStoredScroll(window.localStorage.getItem(catalogScrollStorageKey));
+        const stored = parseStoredScroll(window.localStorage.getItem(storageKey));
         if (stored?.key === listKey) snapshotRef.current = hydrateSnapshot(root, stored);
         canPersist.current = true;
       } catch {
@@ -417,7 +419,7 @@ export function useCatalogScroll({
       if (cancelRestoreRef.current === cancelRestore)
         cancelRestoreRef.current = null;
     };
-  }, [visible, ready, listKey, rootRef, persistSnapshot]);
+  }, [visible, ready, listKey, rootRef, persistSnapshot, storageKey]);
 
   const dismissStorageWarning = useCallback(() => setStorageWarning(false), []);
   return { capture, reset, storageWarning, dismissStorageWarning };

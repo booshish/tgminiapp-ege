@@ -37,7 +37,53 @@ export type TheoryTopic = {
   }[];
   difficulties: string[];
   materialId: string;
+  examSections?: { exam: Exam; level?: "base" | "profile"; title: string; body: string[] }[];
 };
+
+export type TheoryApplication = { exam: Exam; level?: "base" | "profile"; numbers: number[] };
+const foundationSections: Record<string, { id: string; title: string }> = {
+  fractions: {id:"arithmetic",title:"Арифметика"}, decimals: {id:"arithmetic",title:"Арифметика"}, percentages: {id:"arithmetic",title:"Арифметика"},
+  "linear-equations": {id:"algebra",title:"Алгебра"}, "quadratic-equations": {id:"algebra",title:"Алгебра"}, "powers-roots": {id:"algebra",title:"Алгебра"},
+  geometry: {id:"geometry",title:"Геометрия"}, probability: {id:"probability",title:"Вероятность"},
+};
+// Original study guidance, not official scoring criteria or copied tasks.
+const sharedApplicationNotes: Record<string, [string,string]> = {
+  fractions:["В вычислениях и прикладных условиях сначала приведите величины к одинаковым единицам, затем выполняйте действия с дробями.","Сохраняйте точные дроби в промежуточных преобразованиях. Округление делайте только тогда, когда его требует условие."],
+  decimals:["При записи десятичного результата проверьте разрядность и положение запятой, особенно после перевода единиц.","Отличайте точное десятичное число от приближения. Не заменяйте точный ответ округлённым без требования задачи."],
+  percentages:["Определите величину, принятую за 100%. Увеличение на процент и нахождение процента от числа — разные действия.","Последовательные изменения описывайте произведением коэффициентов. Рост и последующее снижение на один процент не возвращают исходную величину."],
+  "linear-equations":["После переноса слагаемых проверьте знаки и подставьте корень в исходное равенство.","Если уравнение получено из прикладной модели, дополнительно проверьте смысл корня и ограничения величин."],
+  "quadratic-equations":["Проверяйте дискриминант, оба корня и их подстановку. Отрицательный дискриминант означает отсутствие действительных корней.","В более сложном уравнении квадратный трёхчлен может быть промежуточным этапом. Проверяйте ограничения исходного выражения, а не только найденные корни."],
+  "powers-roots":["При извлечении арифметического квадратного корня выбирайте неотрицательное значение. Для √(a²) используйте |a|.","При преобразовании степеней и корней сохраняйте область допустимых значений: формальное сокращение не отменяет исходных ограничений."],
+  geometry:["Отделяйте данные условия от впечатления по рисунку. Перед вычислением площади или длины запишите используемые геометрические свойства.","Согласуйте единицы измерения. В задачах с обоснованием вычисление дополняйте объяснением применимости теоремы."],
+  probability:["Долю благоприятных исходов используйте только при равновозможных элементарных исходах. Сначала опишите пространство исходов.","Уточняйте, являются ли события независимыми и совместимыми. Формулы сложения и умножения применяются при разных условиях."],
+};
+/** A view over the single approved material, not copies of its body or IDs. */
+export function getTheoryMetadata(topic: TheoryTopic) {
+  const applications: TheoryApplication[] = topic.examType.flatMap(exam => exam === "ЕГЭ" && topic.subjectId === "math"
+    ? (topic.coverage === "foundation" ? ["base", "profile"] as const : [topic.level ?? "profile"] as const).map(level => ({exam,level,numbers:topic.examNumbers ?? []}))
+    : [{exam,numbers:topic.examNumbers ?? []}]);
+  return {subjectId:topic.subjectId, section:foundationSections[topic.id] ?? {id:"exam-topics",title:"Экзаменационные темы"},
+    subsection:{id:topic.id,title:topic.title}, applications, commonSections:topic.sections,
+    examSections:topic.examSections ?? (sharedApplicationNotes[topic.id] ? applications.map(a=>({exam:a.exam,level:a.level,title:`Особенности применения: ${theoryApplicationLabel(a)}`,body:[sharedApplicationNotes[topic.id][a.exam === "ОГЭ" ? 0 : 1]]})) : []),
+    relatedPracticeTopicId:topic.id};
+}
+export function theoryAppliesTo(topic: TheoryTopic, exam: Exam, subjectId: SubjectId, level?: "base" | "profile" | null) {
+  return topic.subjectId === subjectId && getTheoryMetadata(topic).applications.some(a => a.exam === exam &&
+    (exam !== "ЕГЭ" || subjectId !== "math" || a.level === (level ?? "profile")));
+}
+export function theoryApplicationLabel(a: TheoryApplication) {
+  return a.exam + (a.level === "base" ? " база" : a.level === "profile" ? " профиль" : "");
+}
+export type TheoryListFilters = { query: string; part: 1 | 2; number: string; section: string };
+export function parseTheoryList(raw: string | null): TheoryListFilters {
+  if (!raw) return {query:"",part:1,number:"",section:""};
+  if (raw.length > 5000) throw Error("Unsupported theory filters");
+  const value = JSON.parse(raw);
+  if (value.version !== 1) throw Error("Unsupported theory filter version");
+  return {query:typeof value.query === "string" ? value.query.slice(0,120) : "",part:value.part === 2 ? 2 : 1,
+    number:typeof value.number === "string" && /^\d{0,3}$/.test(value.number) ? value.number : "",
+    section:typeof value.section === "string" && /^[a-z0-9-]{0,32}$/.test(value.section) ? value.section : ""};
+}
 
 /** Общая математическая база для обоих экзаменов, не полный курс ОГЭ или ЕГЭ. */
 const originalTheoryTopics: Omit<TheoryTopic, "publication" | "learningChecks">[] = [

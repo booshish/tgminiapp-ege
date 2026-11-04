@@ -334,7 +334,7 @@ export function StudyApp() {
   function startPractice(topicId?: string, prototypeId?: string) {
     if (route.view === "catalog") catalogScroll.capture();
     const topic = topicId ? getTheoryTopic(topicId) : undefined;
-    const exam = topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam;
+    const exam = route.view === "theory" ? theoryExam : topic && !topic.examType.includes(state.exam) ? topic.examType[0] : state.exam;
     practice.start({
       ...practice.catalog,
       exam,
@@ -646,6 +646,7 @@ export function StudyApp() {
               focusMode={concentrating}
               topicId={route.topicId}
               materialId={route.materialId}
+              onBrowse={() => navigate("theory", {exam:theoryExam,subjectId:theorySubject,level:theorySubject === "math" && theoryExam === "ЕГЭ" ? theoryLevel : undefined})}
               bookmarked={Boolean(route.topicId && studyTools.isBookmarked("theory", getTheoryTopic(route.topicId)?.id ?? route.topicId))}
               onBookmark={route.topicId && studyTools.ready ? () => studyTools.toggleBookmark({
                 kind: "theory", itemId: getTheoryTopic(route.topicId!)?.id ?? route.topicId!, examType: theoryExam,

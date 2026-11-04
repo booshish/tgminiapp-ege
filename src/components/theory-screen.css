@@ -494,3 +494,17 @@
   outline: 2px solid var(--sage);
   outline-offset: 3px;
 }
+.lesson-breadcrumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; list-style: none; padding: 0; margin: 0; }
+.lesson-breadcrumbs li { min-width: 0; overflow-wrap: anywhere; }
+.lesson-breadcrumbs li + li::before { content: "›"; margin-right: 10px; color: var(--muted); }
+.lesson-breadcrumbs button { min-width: 44px; min-height: 44px; color: var(--sage-dark); font: inherit; text-align: left; }
+.lesson-breadcrumbs button:hover { text-decoration: underline; }
+.lesson-breadcrumbs button:focus-visible { outline: 3px solid var(--sage); outline-offset: 2px; border-radius: 4px; }
+.crumb-phone { display: none; }
+.theory-applicability { display: grid; gap: 4px; margin: 8px 0 18px; color: var(--muted); font-size: var(--secondary-size); line-height: 1.5; }
+.theory-applicability-compact { margin: 8px 0 0; }
+@media (max-width: 767px) {
+  .lesson-breadcrumbs .crumb-wide, .lesson-breadcrumbs .crumb-current { display: none; }
+  .lesson-breadcrumbs li + li::before { content: none; }
+  .crumb-phone { display: inline; }
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   Search,
   ArrowLeft,
@@ -16,7 +16,8 @@ import { MathFormula } from "@/components/math-formula";
 import { ExamPicker, PageIntro } from "@/components/ui";
 import { usePhoneLayout } from "@/hooks/use-phone-layout";
 import type { Exam } from "@/lib/navigation";
-import { getTheoryTopic, getPublishedTheoryTopics } from "@/lib/theory";
+import { getTheoryTopic, getPublishedTheoryTopics, getTheoryMetadata, theoryAppliesTo, theoryApplicationLabel, parseTheoryList } from "@/lib/theory";
+import { useCatalogScroll } from "@/hooks/use-catalog-scroll";
 import { getExamDefinition, type ExamLevel } from "@/lib/exams";
 import { getPracticeTasks } from "@/lib/tasks";
 import { subjectTitle, type SubjectId } from "@/lib/subjects";
@@ -36,6 +37,7 @@ type TheoryScreenProps = {
   onOpenMaterial: (topicId: string, materialId: string) => void;
   onPractice: (topicId: string) => void;
   onBack: () => void;
+  onBrowse?: () => void;
   bookmarked?: boolean;
   onBookmark?: () => void;
 };
@@ -54,6 +56,7 @@ export function TheoryScreen({
   onOpenMaterial,
   onPractice,
   onBack,
+  onBrowse,
   bookmarked = false,
   onBookmark,
 }: TheoryScreenProps) {
@@ -61,6 +64,27 @@ export function TheoryScreen({
   const [query, setQuery] = useState("");
   const [part, setPart] = useState<1 | 2>(1);
   const [number, setNumber] = useState("");
+  const [section, setSection] = useState("");
+  const [restoredScope, setRestoredScope] = useState("");
+  const [filterWarning, setFilterWarning] = useState(false);
+  const canSaveFilters = useRef(true);
+  const listRoot = useRef<HTMLDivElement>(null);
+  const scope = `tochka-theory-list-v1:${exam}:${subjectId}:${exam === "ЕГЭ" && subjectId === "math" ? level : "all"}`;
+  useLayoutEffect(() => {
+    canSaveFilters.current = true;
+    try {
+      const saved = parseTheoryList(sessionStorage.getItem(scope));
+      setQuery(saved.query); setPart(saved.part); setNumber(saved.number); setSection(saved.section);
+    } catch { canSaveFilters.current = false; setFilterWarning(true); setQuery(""); setPart(1); setNumber(""); setSection(""); }
+    setRestoredScope(scope);
+  }, [scope]);
+  useEffect(() => {
+    if (restoredScope !== scope || !canSaveFilters.current) return;
+    try { sessionStorage.setItem(scope, JSON.stringify({version:1,query,part,number,section})); }
+    catch { setFilterWarning(true); }
+  }, [scope,restoredScope,query,part,number,section]);
+  const listScroll = useCatalogScroll({visible:!topicId,ready:restoredScope === scope,
+    listKey:[scope,query,part,number,section].join("\u001f"),rootRef:listRoot,storageKey:"tochka-theory-scroll-v1"});
   const definition = getExamDefinition({
     examType: exam,
     subjectId,
@@ -80,11 +104,11 @@ export function TheoryScreen({
         }).map((task) => getTheoryTopic(task.activeTheoryTopicId ?? task.topicId)?.id ?? task.topicId),
       )
     : undefined;
-  const visibleTopics = getPublishedTheoryTopics().filter(
+  const applicableTopics = getPublishedTheoryTopics().filter(t=>theoryAppliesTo(t,exam,subjectId,level));
+  const sectionOptions = [...new Map(applicableTopics.map(t=>{const s=getTheoryMetadata(t).section;return [s.id,s] as const;})).values()];
+  const visibleTopics = applicableTopics.filter(
     (item) =>
-      item.examType.includes(exam) &&
-      item.subjectId === subjectId &&
-      (subjectId !== "math" || item.coverage === "foundation" || exam !== "ЕГЭ" || (item.level ?? "profile") === (level ?? "profile")) &&
+      (!section || getTheoryMetadata(item).section.id === section) &&
       item.part === part &&
       (!matchingTaskTopics || item.examNumbers?.includes(Number(number)) || (item.coverage === "foundation" && matchingTaskTopics.has(item.id))) &&
       (!normalizedQuery ||
@@ -95,10 +119,11 @@ export function TheoryScreen({
           .includes(normalizedQuery)),
   );
   const topic = topicId ? getTheoryTopic(topicId) : undefined;
+  const metadata = topic ? getTheoryMetadata(topic) : undefined;
+  const browse = (sectionId?: string) => { if (sectionId !== undefined) setSection(sectionId); (onBrowse ?? onBack)(); };
   const isMaterial = Boolean(topic && materialId === topic.materialId);
   const unavailable = Boolean(
-    (topicId && (!topic || topic.subjectId !== subjectId || !topic.examType.includes(exam) ||
-      (subjectId === "math" && topic.coverage !== "foundation" && exam === "ЕГЭ" && (topic.level ?? "profile") !== (level ?? "profile")))) || (materialId && !isMaterial),
+    (topicId && (!topic || !theoryAppliesTo(topic, exam, subjectId, level))) || (materialId && !isMaterial),
   );
   const levelCaption = subjectId === "math" && exam === "ЕГЭ" ? level === "base" ? " · база" : " · профиль" : "";
 
@@ -109,6 +134,7 @@ export function TheoryScreen({
         <Search size={20} aria-hidden="true" />
         <input
           type="search"
+          maxLength={120}
           placeholder={subjectId === "math" ? "Например, дроби или уравнения" : "Название темы или метода"}
           value={query}
           onChange={(event) => setQuery(event.target.value)}
@@ -184,7 +210,7 @@ export function TheoryScreen({
   }
 
   return (
-    <section
+    <div ref={listRoot}><section
       className={`theory-page${topic ? " theory-reading-page" : " theory-catalog-page"}${focusMode && topic ? " theory-reading-focus" : ""}`}
     >
       <button type="button" className="back-link" onClick={onBack}>
@@ -209,6 +235,13 @@ export function TheoryScreen({
             }}
           />
           <div className="theory-tools">
+            <label className="theory-number-filter">Раздел
+              <select aria-label="Раздел теории" value={section} onChange={event => setSection(event.target.value)}>
+                <option value="">Все разделы</option>
+                {section && !sectionOptions.some(s=>s.id===section) && <option value={section} disabled>Раздел недоступен</option>}
+                {sectionOptions.map(s=><option key={s.id} value={s.id}>{s.title}</option>)}
+              </select>
+            </label>
             {subjectId === "math" && exam === "ЕГЭ" && onLevelChange && <label className="theory-number-filter">
               <span>Уровень математики</span>
               <select aria-label="Уровень математики в теории" value={level ?? "profile"} onChange={(event) => {
@@ -271,7 +304,7 @@ export function TheoryScreen({
                   type="button"
                   className="theory-topic-card"
                   key={item.id}
-                  onClick={() => onOpenTopic(item.id)}
+                  onClick={() => { listScroll.capture(); onOpenTopic(item.id); }}
                 >
                   {isPhone ? <>
                     <BookOpen className="theory-topic-book" size={22} aria-hidden="true" />
@@ -281,6 +314,7 @@ export function TheoryScreen({
                         {item.examNumbers?.[0] ? `№${item.examNumbers[0]} · ` : "Школьная база · "}
                         ≈{item.readMinutes} мин
                       </span>
+                      <TheoryApplicability topic={item} compact />
                     </span>
                     <ChevronRight size={19} aria-hidden="true" />
                   </> : <>
@@ -298,6 +332,7 @@ export function TheoryScreen({
                     <BookOpen size={15} aria-hidden="true" /> Конспект и{" "}
                     {item.examples.length} разбора · ≈{item.readMinutes} мин
                   </span>
+                  <TheoryApplicability topic={item} compact />
                   </>}
                 </button>
               ))}
@@ -319,6 +354,7 @@ export function TheoryScreen({
                   setPart(1);
                   setNumber("");
                   setQuery("");
+                  setSection("");
                 }}
               >
                 К базовым темам
@@ -332,27 +368,13 @@ export function TheoryScreen({
         </>
       ) : (
         <>
-          <nav className="lesson-breadcrumbs" aria-label="Путь к материалу">
-            {isPhone ? <span>
-              {exam} · {subjectTitle(subjectId)}{levelCaption} · Часть {topic.part}
-              {topic.examNumbers?.[0] ? ` · №${topic.examNumbers[0]}` : " · Школьная база"}
-            </span> : <>
-            <span>{exam}</span>
-            <ChevronRight size={13} aria-hidden="true" />
-            <span>{subjectTitle(subjectId)}{levelCaption}</span>
-            <ChevronRight size={13} aria-hidden="true" />
-            <span>{topic.coverage === "foundation" ? "Школьная база" : `№${topic.examNumbers?.[0]}`} · часть {topic.part}</span>
-            <ChevronRight size={13} aria-hidden="true" />
-            <span aria-current={!isMaterial ? "page" : undefined}>
-              {topic.title}
-            </span>
-            {isMaterial && (
-              <>
-                <ChevronRight size={13} aria-hidden="true" />
-                <span aria-current="page">Конспект</span>
-              </>
-            )}
-            </>}
+          <nav className="lesson-breadcrumbs" aria-label="Хлебные крошки">
+            <ol>
+              <li className="crumb-wide"><button type="button" onClick={()=>browse()}>Теория</button></li>
+              <li className="crumb-wide"><button type="button" onClick={()=>browse()}>{subjectTitle(subjectId)}</button></li>
+              <li><button type="button" onClick={()=>browse(metadata!.section.id)}><span className="crumb-phone" aria-hidden="true">← </span>{metadata!.section.title}</button></li>
+              <li aria-current="page" className="crumb-current">{topic.title}</li>
+            </ol>
           </nav>
           {!isPhone && (
           <PageIntro
@@ -364,6 +386,7 @@ export function TheoryScreen({
             {topic.description}
           </PageIntro>
           )}
+          {!isPhone && <TheoryApplicability topic={topic} />}
 
           {isMaterial ? (
             <article
@@ -371,9 +394,9 @@ export function TheoryScreen({
               aria-label={`Конспект: ${topic.title}`}
             >
               <TheoryCardHeader full readMinutes={topic.readMinutes} bookmarked={bookmarked} onBookmark={onBookmark} />
-              {isPhone && <TheoryMobileTitle title={topic.title} description={topic.description} />}
+              {isPhone && <TheoryMobileTitle title={topic.title} description={topic.description} topic={topic} />}
               {!isPhone && sourceDetails}
-              {topic.sections.map((section, index) => (
+              {metadata!.commonSections.map((section, index) => (
                 <section className="lesson-section" key={section.title}>
                   <span className="eyebrow">ШАГ {index + 1}</span>
                   <h2>{section.title}</h2>
@@ -385,6 +408,7 @@ export function TheoryScreen({
                   ))}
                 </section>
               ))}
+              {metadata!.examSections.filter(s=>s.exam===exam&&(!s.level||s.level===level)).map(s=><section className="lesson-section" key={s.title}><h2>{s.title}</h2>{s.body.map(p=><p key={p}>{p}</p>)}<p className="muted">Учебное применение, не официальные критерии оценивания.</p></section>)}
 
               <section
                 className="lesson-examples"
@@ -482,7 +506,7 @@ export function TheoryScreen({
             <div className="topic-overview">
               <section className="topic-overview-card">
                 <TheoryCardHeader readMinutes={topic.readMinutes} bookmarked={bookmarked} onBookmark={onBookmark} />
-                {isPhone && <TheoryMobileTitle title={topic.title} description={topic.description} />}
+                {isPhone && <TheoryMobileTitle title={topic.title} description={topic.description} topic={topic} />}
                 <h2>Коротко о главном</h2>
                 <p>{topic.sections[0]?.body[0]}</p>
                 {topic.sections[0]?.formulas?.slice(0, 1).map((latex) => (
@@ -525,17 +549,28 @@ export function TheoryScreen({
           )}
         </>
       )}
-    </section>
+      {(filterWarning || listScroll.storageWarning) && <p role="status">Не удалось сохранить настройки списка теории в этом браузере.</p>}
+    </section></div>
   );
 }
 
-function TheoryMobileTitle({ title, description }: { title: string; description: string }) {
+function TheoryMobileTitle({ title, description, topic }: { title: string; description: string; topic?: import("@/lib/theory").TheoryTopic }) {
   return (
     <div className="theory-mobile-title">
       <h1>{title}</h1>
+      {topic && <TheoryApplicability topic={topic} />}
       <p>{description}</p>
     </div>
   );
+}
+
+function TheoryApplicability({topic,compact=false}:{topic:import("@/lib/theory").TheoryTopic;compact?:boolean}) {
+  const meta=getTheoryMetadata(topic);
+  return <span className={`theory-applicability${compact ? " theory-applicability-compact" : ""}`}>
+    {compact && <span>{meta.section.title}</span>}
+    <span>Применяется: {meta.applications.map(theoryApplicationLabel).join(" · ")}</span>
+    {meta.applications.some(a=>a.numbers.length>0) && <span>В заданиях: {meta.applications.filter(a=>a.numbers.length).map(a=>`${theoryApplicationLabel(a)} №${a.numbers.join(", ")}`).join(" · ")}</span>}
+  </span>;
 }
 
 function TheoryCardHeader({ full = false, readMinutes, bookmarked, onBookmark }: {
