@@ -11,6 +11,7 @@ artifacts = Path(os.environ.get("TOCHKA_QA_ARTIFACTS", "/workspace/scratch/navig
 artifacts.mkdir(parents=True, exist_ok=True)
 errors, checks, measurements = [], [], []
 scope = os.environ.get("TOCHKA_QA_SCOPE", "all")
+themes = [os.environ["TOCHKA_QA_THEME"]] if "TOCHKA_QA_THEME" in os.environ else ["light", "dark"]
 expect.set_options(timeout=15000)
 
 with sync_playwright() as p:
@@ -41,6 +42,12 @@ with sync_playwright() as p:
     def has_route(page, route):
         page.wait_for_function("v=>location.hash.split('?')[0].split('/')[1]===v", arg=route)
 
+    def set_theme(page, theme):
+        goto(page, "#profile")
+        page.get_by_role("button", name="Тёмная" if theme=="dark" else "Светлая", exact=True).click()
+        page.get_by_role("button", name="Перейти на главную", exact=True).filter(visible=True).click()
+        expect(page.locator("html")).to_have_attribute("data-theme",theme)
+
     def enter_task(page):
         goto(page, "#catalog?exam=ОГЭ&subject=math&mode=number")
         page.locator('[data-catalog-number="9"]').tap()
@@ -50,12 +57,12 @@ with sync_playwright() as p:
     for width in ([] if scope == "wide" else [320,375,390,430]):
         cfg = dict(p.devices["iPhone 13"])
         cfg["viewport"] = {"width":width,"height":844}
-        for theme in ["light", "dark"]:
+        for theme in themes:
             ctx = browser.new_context(**cfg)
             page = ctx.new_page()
             page.on("pageerror", lambda error: errors.append(str(error)))
             goto(page)
-            page.evaluate("t=>document.documentElement.dataset.theme=t", theme)
+            set_theme(page,theme)
             expect(page.locator(".plus-dock")).to_have_count(0)
             expect(page.locator(".sidebar")).to_be_hidden()
             assert page.locator(".mobile-nav > button").all_text_contents() == ["Теория","Задания","Прогресс","Плюс","Ещё"]
@@ -146,8 +153,8 @@ with sync_playwright() as p:
         ctx=browser.new_context(viewport={"width":width,"height":height},has_touch=True)
         page=ctx.new_page();page.on("pageerror",lambda error:errors.append(str(error)))
         goto(page)
-        for theme in ["light","dark"]:
-            page.evaluate("t=>document.documentElement.dataset.theme=t",theme)
+        for theme in themes:
+            set_theme(page,theme)
             for state in ["expanded","hidden"]:
                 if page.locator(".app-shell").get_attribute("data-sidebar") != state:
                     tap(page,page.get_by_role("button",name="Меню",exact=True))
